@@ -1,0 +1,122 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338046,
+  "lastModifiedIso": "2026-01-03T20:15:38.046Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/StringBuilder.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 481
+    },
+    "end": {
+      "line": 49,
+      "column": 3,
+      "index": 1242
+    }
+  },
+  "className": "qx.test.util.StringBuilder",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (wittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 579
+        },
+        "end": {
+          "line": 24,
+          "column": 5,
+          "index": 641
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddGet": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 648
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 843
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 850
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1017
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmptyClear": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 1024
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1234
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,247 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337627,
+  "lastModifiedIso": "2026-01-03T20:15:37.627Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/compiler/jsdoc/Parser.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 418
+    },
+    "end": {
+      "line": 377,
+      "column": 3,
+      "index": 12909
+    }
+  },
+  "className": "qx.test.compiler.jsdoc.Parser",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * test the parser",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>test the parser</p>"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testCheckConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 519
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 787
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckParams": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 794
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1253
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckIssue633": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1260
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1897
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckRpc": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1904
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 5383
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckInlineMarkdown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 152,
+          "column": 4,
+          "index": 5390
+        },
+        "end": {
+          "line": 165,
+          "column": 5,
+          "index": 5896
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHiResSyntax": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 167,
+          "column": 4,
+          "index": 5903
+        },
+        "end": {
+          "line": 179,
+          "column": 5,
+          "index": 6422
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIgnore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 181,
+          "column": 4,
+          "index": 6429
+        },
+        "end": {
+          "line": 194,
+          "column": 5,
+          "index": 6804
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckMarkdown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 196,
+          "column": 4,
+          "index": 6811
+        },
+        "end": {
+          "line": 241,
+          "column": 5,
+          "index": 9367
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckInlineCode": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 243,
+          "column": 4,
+          "index": 9374
+        },
+        "end": {
+          "line": 255,
+          "column": 5,
+          "index": 9947
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChecksJsdocParamParser": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 257,
+          "column": 4,
+          "index": 9954
+        },
+        "end": {
+          "line": 295,
+          "column": 5,
+          "index": 11254
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChecksJsdocInlineCommentsAndUrls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 297,
+          "column": 4,
+          "index": 11261
+        },
+        "end": {
+          "line": 375,
+          "column": 5,
+          "index": 12901
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,104 @@
+{
+  "version": 0.3,
+  "lastModified": 1769557093000,
+  "lastModifiedIso": "2026-01-27T23:38:13.000Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/Dashboard.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 29
+    },
+    "end": {
+      "line": 39,
+      "column": 3,
+      "index": 716
+    }
+  },
+  "className": "qxapp.pages.Dashboard",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Dashboard page",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Dashboard page</p>"
+      }
+    ]
+  },
+  "superClass": "ville.ui.layout.Flex",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 2,
+        "index": 108
+      },
+      "end": {
+        "line": 23,
+        "column": 3,
+        "index": 498
+      }
+    }
+  },
+  "properties": {
+    "pageUrl": {
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 571
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 627
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's url made externally available "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's url made externally available</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 634
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 707
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "Dashboard"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

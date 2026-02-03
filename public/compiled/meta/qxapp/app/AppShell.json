@@ -1,0 +1,83 @@
+{
+  "version": 0.3,
+  "lastModified": 1769806348095,
+  "lastModifiedIso": "2026-01-30T20:52:28.095Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/app/AppShell.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 6,
+      "column": 0,
+      "index": 116
+    },
+    "end": {
+      "line": 212,
+      "column": 3,
+      "index": 7567
+    }
+  },
+  "className": "qxapp.app.AppShell",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * AppShell",
+      " * @external(mantine/core/styles/AppShell.css)",
+      " * @external(qxapp/appshell-qxvui-inline-01.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>AppShell</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/AppShell.css"
+      },
+      {
+        "name": "@external",
+        "body": "qxapp/appshell-qxvui-inline-01.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.layout.Container",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 10,
+        "column": 2,
+        "index": 196
+      },
+      "end": {
+        "line": 206,
+        "column": 3,
+        "index": 7524
+      }
+    }
+  },
+  "members": {
+    "__stack": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 7544
+        },
+        "end": {
+          "line": 209,
+          "column": 18,
+          "index": 7558
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,194 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335794,
+  "lastModifiedIso": "2026-01-03T20:15:35.794Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Color.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 148,
+      "column": 3,
+      "index": 3701
+    }
+  },
+  "className": "qx.test.theme.manager.Color",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (wittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__formerTheme": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 576
+        },
+        "end": {
+          "line": 23,
+          "column": 23,
+          "index": 595
+        }
+      },
+      "appearsIn": []
+    },
+    "__savedListeners": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 601
+        },
+        "end": {
+          "line": 24,
+          "column": 26,
+          "index": 623
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 630
+        },
+        "end": {
+          "line": 37,
+          "column": 5,
+          "index": 1051
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 1058
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1594
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInclude": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1601
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2085
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResolve": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2092
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 2613
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResolveSelfReference": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2620
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 3085
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResolveException": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 3092
+        },
+        "end": {
+          "line": 146,
+          "column": 5,
+          "index": 3693
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

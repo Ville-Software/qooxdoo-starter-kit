@@ -1,0 +1,130 @@
+{
+  "version": 0.3,
+  "lastModified": 1769806616635,
+  "lastModifiedIso": "2026-01-30T20:56:56.635Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/Welcome.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 7,
+      "column": 0,
+      "index": 71
+    },
+    "end": {
+      "line": 74,
+      "column": 3,
+      "index": 2048
+    }
+  },
+  "className": "qxapp.pages.Welcome",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Welcome page",
+      " *",
+      " * @external(qxapp/welcome-qxvui-01.css)",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Welcome page</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "qxapp/welcome-qxvui-01.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.layout.Flex",
+  "mixins": [
+    "qxapp.pages.MPage"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 13,
+        "column": 2,
+        "index": 180
+      },
+      "end": {
+        "line": 73,
+        "column": 3,
+        "index": 2044
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {
+    "pageUrl": {
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 111
+        },
+        "end": {
+          "line": 9,
+          "column": 5,
+          "index": 167
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's url made externally available "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's url made externally available</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 12,
+          "column": 4,
+          "index": 219
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 285
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Associated Inertia component name "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Associated Inertia component name</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    }
+  }
+}

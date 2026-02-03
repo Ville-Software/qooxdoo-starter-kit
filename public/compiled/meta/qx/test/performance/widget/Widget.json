@@ -1,0 +1,48 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338328,
+  "lastModifiedIso": "2026-01-03T20:15:38.328Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/performance/widget/Widget.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 3,
+      "index": 195
+    }
+  },
+  "className": "qx.test.performance.widget.Widget",
+  "jsdoc": null,
+  "superClass": "qx.test.performance.widget.AbstractWidget",
+  "members": {
+    "_createWidget": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 126
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 187
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.performance.widget.AbstractWidget",
+      "appearsIn": [
+        "qx.test.performance.widget.AbstractWidget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

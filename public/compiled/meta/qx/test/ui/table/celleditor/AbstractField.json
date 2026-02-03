@@ -1,0 +1,210 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471334953,
+  "lastModifiedIso": "2026-01-03T20:15:34.953Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/celleditor/AbstractField.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 92,
+      "column": 3,
+      "index": 2382
+    }
+  },
+  "className": "qx.test.ui.table.celleditor.AbstractField",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 615
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 678
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 685
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 723
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getCellInfo": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 730
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 788
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testCreateCellEditor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 795
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1024
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateCellEditorWithValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1031
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetCellEditorValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1231
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1471
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testValidationFunction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1478
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2062
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAutoconvertToNumber": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2069
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2374
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

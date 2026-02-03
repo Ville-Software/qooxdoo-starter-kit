@@ -1,0 +1,232 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335703,
+  "lastModifiedIso": "2026-01-03T20:15:35.703Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/ChildrenHandling.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 518
+    },
+    "end": {
+      "line": 373,
+      "column": 3,
+      "index": 9291
+    }
+  },
+  "className": "qx.test.ui.ChildrenHandling",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Test widget children handling",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Test widget children handling</p>"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "assertArrayEquals": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 622
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 922
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        },
+        {
+          "name": "found"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "overriddenFrom": "qx.dev.unit.TestCase",
+      "appearsIn": [
+        "qx.dev.unit.TestCase",
+        "qx.core.MAssert",
+        "qx.core.Object",
+        "qx.core.MAssert"
+      ]
+    },
+    "_setChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 929
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1168
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "parent"
+        },
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1175
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 1997
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 2004
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 2667
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveNonChild": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2674
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2942
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2949
+        },
+        "end": {
+          "line": 162,
+          "column": 5,
+          "index": 4354
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddBefore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4361
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 6531
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddAfter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 258,
+          "column": 4,
+          "index": 6538
+        },
+        "end": {
+          "line": 350,
+          "column": 5,
+          "index": 8695
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDoubleAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 352,
+          "column": 4,
+          "index": 8702
+        },
+        "end": {
+          "line": 371,
+          "column": 5,
+          "index": 9283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

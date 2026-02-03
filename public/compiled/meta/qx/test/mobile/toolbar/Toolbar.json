@@ -1,0 +1,129 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338165,
+  "lastModifiedIso": "2026-01-03T20:15:38.165Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/toolbar/Toolbar.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 465
+    },
+    "end": {
+      "line": 92,
+      "column": 3,
+      "index": 2645
+    }
+  },
+  "className": "qx.test.mobile.toolbar.Toolbar",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tino Butz (tbtz)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "__createToolbar": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 576
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 714
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__assertChildNodesLength": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 721
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 915
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "toolBar"
+        },
+        {
+          "name": "toolbarKidsNumber"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 922
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1892
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1899
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2637
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

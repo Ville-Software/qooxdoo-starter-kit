@@ -1,0 +1,350 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338157,
+  "lastModifiedIso": "2026-01-03T20:15:38.157Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/ToggleButton.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 133,
+      "column": 3,
+      "index": 2969
+    }
+  },
+  "className": "qx.test.ui.form.ToggleButton",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tristan Koch (tristankoch)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__button": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 585
+        },
+        "end": {
+          "line": 23,
+          "column": 18,
+          "index": 599
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 606
+        },
+        "end": {
+          "line": 29,
+          "column": 5,
+          "index": 743
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testInitial": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 787
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 889
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheck": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 896
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1022
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUncheck": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1029
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1161
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImplicitCheckTri": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1205
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 1472
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImplicitCheckTriLater": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1479
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 1751
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckTri": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 1758
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2046
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUncheckTri": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2053
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 2347
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertState": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 109,
+          "column": 4,
+          "index": 2391
+        },
+        "end": {
+          "line": 111,
+          "column": 5,
+          "index": 2503
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "state"
+        }
+      ],
+      "appearsIn": []
+    },
+    "assertNotState": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 2510
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 2625
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "state"
+        }
+      ],
+      "appearsIn": []
+    },
+    "executeOn": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 2632
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 2769
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "immediateExecuteOn": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 4,
+          "index": 2776
+        },
+        "end": {
+          "line": 126,
+          "column": 5,
+          "index": 2881
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 128,
+          "column": 4,
+          "index": 2888
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 2961
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

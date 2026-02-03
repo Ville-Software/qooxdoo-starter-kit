@@ -1,0 +1,107 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337538,
+  "lastModifiedIso": "2026-01-03T20:15:37.538Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/NumberFormat.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 73,
+      "column": 3,
+      "index": 1835
+    }
+  },
+  "className": "qx.test.ui.form.NumberFormat",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__test": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 592
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1683
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSpinner": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1690
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1756
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlider": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1763
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1827
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

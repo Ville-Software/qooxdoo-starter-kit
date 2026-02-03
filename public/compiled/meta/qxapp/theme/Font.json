@@ -1,0 +1,37 @@
+{
+  "version": 0.3,
+  "lastModified": 1767539332736,
+  "lastModifiedIso": "2026-01-04T15:08:52.736Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/theme/Font.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 11,
+      "column": 0,
+      "index": 228
+    },
+    "end": {
+      "line": 18,
+      "column": 3,
+      "index": 321
+    }
+  },
+  "className": "qxapp.theme.Font",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   Copyright: 2026 sqville",
+      "",
+      "   License: MIT license",
+      "",
+      "   Authors: sqville",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.theme.indigo.Font",
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

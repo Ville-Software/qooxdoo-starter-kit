@@ -1,0 +1,75 @@
+{
+  "version": 0.3,
+  "lastModified": 1769806348027,
+  "lastModifiedIso": "2026-01-30T20:52:28.027Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/app/SettingsView.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 31
+    },
+    "end": {
+      "line": 72,
+      "column": 3,
+      "index": 1987
+    }
+  },
+  "className": "qxapp.app.SettingsView",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Settings TabView",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Settings TabView</p>"
+      }
+    ]
+  },
+  "superClass": "ville.ui.layout.VStack",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 2,
+        "index": 112
+      },
+      "end": {
+        "line": 62,
+        "column": 3,
+        "index": 1881
+      }
+    }
+  },
+  "properties": {
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1906
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 1978
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "settings"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

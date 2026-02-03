@@ -1,0 +1,31 @@
+{
+ "$schema": "https://qooxdoo.org/schema/Manifest-2-0-0.json",
+  "info" :
+  {
+    "name" : "qxapp",
+    "summary" : "",
+    "description" : "",
+    "homepage" : "",
+    "license" : "MIT license",
+    "authors" : [
+  {
+    "name": "Chris Eskew",
+    "email": "sqville@gmail.com"
+  }
+],
+    "version" : "1.0.0"
+  },
+
+  "provides" :
+  {
+    "namespace"   : "qxapp",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation"
+  },
+
+  "requires": {
+    "@qooxdoo/framework": "^7.9.2"
+  }
+}

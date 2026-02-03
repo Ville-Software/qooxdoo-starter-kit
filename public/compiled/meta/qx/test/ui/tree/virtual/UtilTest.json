@@ -1,0 +1,234 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338255,
+  "lastModifiedIso": "2026-01-03T20:15:38.255Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/tree/virtual/UtilTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 484
+    },
+    "end": {
+      "line": 138,
+      "column": 3,
+      "index": 3843
+    }
+  },
+  "className": "qx.test.ui.tree.virtual.UtilTest",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2013 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "model": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 588
+        },
+        "end": {
+          "line": 23,
+          "column": 15,
+          "index": 599
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 606
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 958
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 965
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1036
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test isNode with nodes and leafs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1043
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1538
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test isNode with invalid child property": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1545
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1696
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test isNode with null calls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1703
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 1945
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test hasChildren with leafs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 1952
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 2650
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test hasChildren and ignore leafs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 2657
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 3398
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test hasChildren with invalid child property": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 3405
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 3566
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test hasChildren with null calls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 3573
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 3835
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

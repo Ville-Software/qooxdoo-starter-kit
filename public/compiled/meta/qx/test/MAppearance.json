@@ -1,0 +1,37 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337323,
+  "lastModifiedIso": "2026-01-03T20:15:37.323Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/MAppearance.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 623
+    },
+    "end": {
+      "line": 48,
+      "column": 3,
+      "index": 1038
+    }
+  },
+  "className": "qx.test.MAppearance",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This mixin must be included into themes appearance if you want to use that",
+      " * theme with the testrunner",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This mixin must be included into themes appearance if you want to use that\n theme with the testrunner</p>"
+      }
+    ]
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

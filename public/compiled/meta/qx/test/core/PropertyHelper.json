@@ -1,0 +1,385 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337748,
+  "lastModifiedIso": "2026-01-03T20:15:37.748Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/PropertyHelper.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 107,
+      "column": 3,
+      "index": 1803
+    }
+  },
+  "className": "qx.test.core.PropertyHelper",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.core.Object",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "delegate"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 555
+      },
+      "end": {
+        "line": 28,
+        "column": 3,
+        "index": 642
+      }
+    }
+  },
+  "properties": {
+    "publicProp": {
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 683
+        },
+        "end": {
+          "line": 32,
+          "column": 34,
+          "index": 713
+        }
+      },
+      "json": {
+        "nullable": true
+      },
+      "jsdoc": {
+        "raw": [
+          " protection"
+        ]
+      },
+      "appearsIn": []
+    },
+    "stringProp": {
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 733
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 796
+        }
+      },
+      "json": {
+        "check": "String",
+        "nullable": true
+      },
+      "jsdoc": {
+        "raw": [
+          " types"
+        ]
+      },
+      "appearsIn": []
+    },
+    "booleanProp": {
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 803
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 868
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "numberProp": {
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 875
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 938
+        }
+      },
+      "json": {
+        "check": "Number",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "objectProp": {
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 945
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1008
+        }
+      },
+      "json": {
+        "check": "Object",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "arrayProp": {
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1015
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1076
+        }
+      },
+      "json": {
+        "check": "Array",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "mapProp": {
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1083
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1140
+        }
+      },
+      "json": {
+        "check": "Map",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "noProp": {
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1167
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 1226
+        }
+      },
+      "json": {
+        "check": "String",
+        "nullable": true
+      },
+      "jsdoc": {
+        "raw": [
+          " multi values"
+        ]
+      },
+      "appearsIn": []
+    },
+    "initProp": {
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 4,
+          "index": 1233
+        },
+        "end": {
+          "line": 71,
+          "column": 29,
+          "index": 1258
+        }
+      },
+      "json": {
+        "init": "foo"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "initApplyProp1": {
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1265
+        },
+        "end": {
+          "line": 77,
+          "column": 5,
+          "index": 1366
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "juhu",
+        "apply": "_applyInitApplyProp"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "initApplyProp2": {
+      "location": {
+        "start": {
+          "line": 79,
+          "column": 4,
+          "index": 1373
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 1494
+        }
+      },
+      "json": {
+        "check": "String",
+        "nullable": true,
+        "apply": "_applyInitApplyProp"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "nullProp": {
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 1501
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 1558
+        }
+      },
+      "json": {
+        "init": "bar",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "appearanceProp": {
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 1565
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 1632
+        }
+      },
+      "json": {
+        "themeable": true,
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "fullProp": {
+      "location": {
+        "start": {
+          "line": 96,
+          "column": 4,
+          "index": 1639
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 1695
+        }
+      },
+      "json": {
+        "init": 100,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_applyInitApplyProp": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 1719
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 1795
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

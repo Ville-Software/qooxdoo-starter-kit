@@ -1,0 +1,300 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337899,
+  "lastModifiedIso": "2026-01-03T20:15:37.899Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/Scroller.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 475
+    },
+    "end": {
+      "line": 214,
+      "column": 3,
+      "index": 6237
+    }
+  },
+  "className": "qx.test.ui.virtual.Scroller",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 579
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 773
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 780
+        },
+        "end": {
+          "line": 37,
+          "column": 5,
+          "index": 873
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "assertScrollbars": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 880
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1198
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "hasScrollX"
+        },
+        {
+          "name": "hasScrollY"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "configureScroller": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1205
+        },
+        "end": {
+          "line": 65,
+          "column": 5,
+          "index": 1604
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "scrollWidth"
+        },
+        {
+          "name": "scrollHeight"
+        },
+        {
+          "name": "width"
+        },
+        {
+          "name": "height"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 67,
+          "column": 4,
+          "index": 1611
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 1682
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollX": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 4,
+          "index": 1689
+        },
+        "end": {
+          "line": 93,
+          "column": 5,
+          "index": 2532
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollY": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 95,
+          "column": 4,
+          "index": 2539
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 3381
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxScrollPosition": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 3388
+        },
+        "end": {
+          "line": 141,
+          "column": 5,
+          "index": 4105
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollbarYAuto": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 4,
+          "index": 4112
+        },
+        "end": {
+          "line": 162,
+          "column": 5,
+          "index": 4753
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollbarXAuto": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4760
+        },
+        "end": {
+          "line": 183,
+          "column": 5,
+          "index": 5401
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollbarXYAuto": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 185,
+          "column": 4,
+          "index": 5408
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 6182
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 211,
+        "column": 2,
+        "index": 6191
+      },
+      "end": {
+        "line": 213,
+        "column": 3,
+        "index": 6233
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

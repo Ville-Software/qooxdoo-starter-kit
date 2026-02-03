@@ -1,0 +1,89 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338123,
+  "lastModifiedIso": "2026-01-03T20:15:38.123Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/html/jsx/TestWidget.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 469
+    },
+    "end": {
+      "line": 50,
+      "column": 3,
+      "index": 1143
+    }
+  },
+  "className": "qx.test.html.jsx.TestWidget",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2019-2021 Zenesis Ltd, https://zenesis.com",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * John Spackman (johnspackman)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.html.Element",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 548
+      },
+      "end": {
+        "line": 26,
+        "column": 3,
+        "index": 660
+      }
+    }
+  },
+  "members": {
+    "_createQxObjectImpl": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 680
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 1135
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        }
+      ],
+      "overriddenFrom": "qx.core.Object",
+      "appearsIn": [
+        "qx.core.Object",
+        "qx.core.MObjectId"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

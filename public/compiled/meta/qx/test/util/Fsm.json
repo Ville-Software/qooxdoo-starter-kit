@@ -1,0 +1,78 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336746,
+  "lastModifiedIso": "2026-01-03T20:15:36.746Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/Fsm.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 442
+    },
+    "end": {
+      "line": 200,
+      "column": 3,
+      "index": 6654
+    }
+  },
+  "className": "qx.test.util.Fsm",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2012 Derrell Lipman",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Derrell Lipman (derrell)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testAddRemoveObject": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Ensure that objects added with fsm.addObject() get cleaned up properly",
+          "     * by fsm.removeObject()",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Ensure that objects added with fsm.addObject() get cleaned up properly\n by fsm.removeObject()</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 653
+        },
+        "end": {
+          "line": 198,
+          "column": 5,
+          "index": 6646
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

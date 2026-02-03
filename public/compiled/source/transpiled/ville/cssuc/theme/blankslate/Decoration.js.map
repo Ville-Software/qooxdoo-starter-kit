@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "aliases",
+    "decorations",
+    "ville",
+    "cssuc",
+    "theme",
+    "blankslate",
+    "Decoration"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/cssuc/theme/blankslate/Decoration.js"
+  ],
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n   * Martin Wittemann (martinwittemann)\n\n************************************************************************* */\n\n/**\n * The simple qooxdoo decoration theme.\n */\nqx.Theme.define(\"ville.cssuc.theme.blankslate.Decoration\", {\n\n  aliases: {},\n\n  decorations: {}\n});\n"
+  ],
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;EAEA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,yCAAyC,EAAE;IAEzDC,OAAO,EAAE,CAAC,CAAC;IAEXC,WAAW,EAAE,CAAC;EAChB,CAAC,CAAC;EA1BFC,KAAK,CAACC,KAAK,CAACC,KAAK,CAACC,UAAU,CAACC,UAAU,CAACT,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

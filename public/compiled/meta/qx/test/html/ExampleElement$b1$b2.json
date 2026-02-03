@@ -1,0 +1,69 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336382,
+  "lastModifiedIso": "2026-01-03T20:15:36.382Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/html/ExampleElement$b1$b2.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 17,
+      "column": 3,
+      "index": 363
+    }
+  },
+  "className": "qx.test.html.ExampleElement$b1$b2",
+  "jsdoc": null,
+  "superClass": "qx.html.Element",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 3,
+        "column": 2,
+        "index": 84
+      },
+      "end": {
+        "line": 7,
+        "column": 3,
+        "index": 192
+      }
+    }
+  },
+  "members": {
+    "_createQxObjectImpl": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 211
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 355
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        }
+      ],
+      "overriddenFrom": "qx.core.Object",
+      "appearsIn": [
+        "qx.core.Object",
+        "qx.core.MObjectId"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

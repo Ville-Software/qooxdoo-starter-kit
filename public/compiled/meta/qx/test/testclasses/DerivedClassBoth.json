@@ -1,0 +1,66 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336179,
+  "lastModifiedIso": "2026-01-03T20:15:36.179Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/DerivedClassBoth.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 3,
+      "index": 266
+    }
+  },
+  "className": "qx.test.testclasses.DerivedClassBoth",
+  "jsdoc": null,
+  "superClass": "qx.test.testclasses.BaseClassBoth",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 106
+      },
+      "end": {
+        "line": 7,
+        "column": 3,
+        "index": 168
+      }
+    }
+  },
+  "members": {
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 10,
+          "column": 4,
+          "index": 188
+        },
+        "end": {
+          "line": 12,
+          "column": 5,
+          "index": 258
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.testclasses.BaseClassBoth",
+      "appearsIn": [
+        "qx.test.testclasses.BaseClassBoth",
+        "qx.test.testclasses.MMixinOne",
+        "qx.test.testclasses.RootClass"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,358 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335490,
+  "lastModifiedIso": "2026-01-03T20:15:35.490Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Bootstrap.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 25,
+      "column": 0,
+      "index": 747
+    },
+    "end": {
+      "line": 391,
+      "column": 3,
+      "index": 9865
+    }
+  },
+  "className": "qx.test.Bootstrap",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.Construct.*, qx.test.ExtendError, qx.test.ExtendNull)",
+      " * @ignore(qx.test.ExtendQxObject, qx.test.ExtendSuper.*, qx.test.Super.*)",
+      " * @ignore(qx.test.ROOT, qx.test.MyClass.*, qx.test.Car, qx.test.Bmw.*)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.Construct.*, qx.test.ExtendError, qx.test.ExtendNull"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.ExtendQxObject, qx.test.ExtendSuper.*, qx.test.Super.*"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.ROOT, qx.test.MyClass.*, qx.test.Car, qx.test.Bmw.*"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testDefineAnonymous": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 836
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1226
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassnameProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1233
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1560
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAlternativeRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1567
+        },
+        "end": {
+          "line": 81,
+          "column": 5,
+          "index": 2202
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: merge methods of same class (statics optimization)": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 83,
+          "column": 4,
+          "index": 2209
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2726
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: merge methods of same class (statics optimization) respect defer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2733
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3401
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: define class with constructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 4,
+          "index": 3408
+        },
+        "end": {
+          "line": 154,
+          "column": 5,
+          "index": 3919
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: define bootstrap class, which extends 'Error'": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 4,
+          "index": 3926
+        },
+        "end": {
+          "line": 165,
+          "column": 5,
+          "index": 4204
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: extend from qx.core.Object": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 167,
+          "column": 4,
+          "index": 4211
+        },
+        "end": {
+          "line": 178,
+          "column": 5,
+          "index": 4519
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: extend from null should extend Object": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 180,
+          "column": 4,
+          "index": 4526
+        },
+        "end": {
+          "line": 190,
+          "column": 5,
+          "index": 4814
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: extend from Bootstrap class": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 192,
+          "column": 4,
+          "index": 4821
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 5330
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: extended Bootstap class should append members to the prototype": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 212,
+          "column": 4,
+          "index": 5337
+        },
+        "end": {
+          "line": 238,
+          "column": 5,
+          "index": 6085
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: superclass calls aka basecalls (constructor and methods)": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 240,
+          "column": 4,
+          "index": 6092
+        },
+        "end": {
+          "line": 311,
+          "column": 5,
+          "index": 7817
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFunctionWrap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 313,
+          "column": 4,
+          "index": 7824
+        },
+        "end": {
+          "line": 339,
+          "column": 5,
+          "index": 8474
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindWithUndefinedArguments": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 341,
+          "column": 4,
+          "index": 8481
+        },
+        "end": {
+          "line": 348,
+          "column": 5,
+          "index": 8703
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDefineShadowedMembers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 350,
+          "column": 4,
+          "index": 8710
+        },
+        "end": {
+          "line": 370,
+          "column": 5,
+          "index": 9312
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDefineShadowedStatics": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 372,
+          "column": 4,
+          "index": 9319
+        },
+        "end": {
+          "line": 389,
+          "column": 5,
+          "index": 9857
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

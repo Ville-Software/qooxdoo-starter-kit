@@ -1,0 +1,120 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337187,
+  "lastModifiedIso": "2026-01-03T20:15:37.187Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/layer/LayerSimple.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 510
+    },
+    "end": {
+      "line": 84,
+      "column": 3,
+      "index": 1983
+    }
+  },
+  "className": "qx.test.ui.virtual.layer.LayerSimple",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "   * Jonathan Weiß (jonathan_rass)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.ui.virtual.layer.Abstract",
+  "members": {
+    "getCellHtml": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 810
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1221
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "row"
+        },
+        {
+          "name": "column"
+        },
+        {
+          "name": "left"
+        },
+        {
+          "name": "top"
+        },
+        {
+          "name": "width"
+        },
+        {
+          "name": "height"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_fullUpdate": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1228
+        },
+        "end": {
+          "line": 82,
+          "column": 5,
+          "index": 1975
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "columnSizes"
+        }
+      ],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

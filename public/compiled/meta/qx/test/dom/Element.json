@@ -1,0 +1,120 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336287,
+  "lastModifiedIso": "2026-01-03T20:15:36.287Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/dom/Element.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 17,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 53,
+      "column": 3,
+      "index": 1203
+    }
+  },
+  "className": "qx.test.dom.Element",
+  "jsdoc": {
+    "raw": [
+      "******************************************************************************",
+      " *",
+      " * qooxdoo - the new era of web development",
+      " *",
+      " * http://qooxdoo.org",
+      " *",
+      " * Copyright: 2007-2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      " *",
+      " * License:",
+      " *    MIT: https://opensource.org/licenses/MIT",
+      " *    See the LICENSE file in the project's top-level directory for details.",
+      " *",
+      " * Authors: Fabian Jakobs (fjakobs)",
+      " *",
+      " *****************************************************************************"
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 580
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 724
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 731
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 792
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 799
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1047
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1054
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1195
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

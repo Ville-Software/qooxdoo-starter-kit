@@ -1,0 +1,17 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "predev": "cd resources/qxapp && echo 'Cleaning...' && npx qx clean && echo 'Cleaning done.' && echo 'Compiling CSS...' && npx lightningcss ./source/resource/qxapp/css/welcome.css -m --bundle -o ./source/resource/qxapp/welcome-qxvui-01.css && echo 'Compiling CSS done.'",
+        "dev": "cd resources/qxapp && npx qx compile --target='source' --watch",
+        "build": "cd resources/qxapp && npx qx compile --target='build' --watch"
+    },
+    "dependencies": {
+        "@inertiajs/core": "^2.3.6",
+        "@qooxdoo/framework": "^7.9.2"
+    },
+    "devDependencies": {
+        "lightningcss-cli": "^1.30.2"
+    }
+}

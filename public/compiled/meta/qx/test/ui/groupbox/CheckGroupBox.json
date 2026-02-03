@@ -1,0 +1,155 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335687,
+  "lastModifiedIso": "2026-01-03T20:15:35.687Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/groupbox/CheckGroupBox.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 15,
+      "column": 0,
+      "index": 401
+    },
+    "end": {
+      "line": 66,
+      "column": 3,
+      "index": 2138
+    }
+  },
+  "className": "qx.test.ui.groupbox.CheckGroupBox",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2018 The Qooxdoo Project",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "_checkGroupBox": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 511
+        },
+        "end": {
+          "line": 19,
+          "column": 24,
+          "index": 531
+        }
+      },
+      "appearsIn": []
+    },
+    "_label": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 20,
+          "column": 4,
+          "index": 537
+        },
+        "end": {
+          "line": 20,
+          "column": 16,
+          "index": 549
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 556
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 860
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 867
+        },
+        "end": {
+          "line": 37,
+          "column": 5,
+          "index": 955
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testEnabledConsistencyBetweenContentAndParent": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Tests whether 'enabled' is in consistent state for both groupbox content widgets",
+          "     * and groupbox parent, i.e. after groupbox legend is unchecked and then checked",
+          "     * again, disabling groupbox parent must disable groupbox content widgets (see [1]).",
+          "     * 1. https://github.com/qooxdoo/qooxdoo/issues/9350",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Tests whether 'enabled' is in consistent state for both groupbox content widgets\n and groupbox parent, i.e. after groupbox legend is unchecked and then checked\n again, disabling groupbox parent must disable groupbox content widgets (see [1]).</p>\n<ol>\n<li>https://github.com/qooxdoo/qooxdoo/issues/9350</li>\n</ol>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1297
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 2130
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

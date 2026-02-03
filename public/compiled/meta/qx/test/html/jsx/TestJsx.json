@@ -1,0 +1,237 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338110,
+  "lastModifiedIso": "2026-01-03T20:15:38.110Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/html/jsx/TestJsx.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 507
+    },
+    "end": {
+      "line": 184,
+      "column": 3,
+      "index": 5310
+    }
+  },
+  "className": "qx.test.html.jsx.TestJsx",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2019-2021 Zenesis Ltd, https://zenesis.com",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * John Spackman (johnspackman)",
+      "     * Will Johnson (WillsterJohnson)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testBasics": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 603
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 1331
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRefs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1338
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1555
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCustomElements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1562
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1826
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassElements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1833
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 2346
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpreadAttrs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 2353
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2579
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAnonFragments": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2586
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 2977
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testComments": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 2984
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3181
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlots": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 3188
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 3881
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlotFallbackContent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 138,
+          "column": 4,
+          "index": 3888
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 4413
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCssCustomProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4,
+          "index": 4420
+        },
+        "end": {
+          "line": 182,
+          "column": 5,
+          "index": 5302
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

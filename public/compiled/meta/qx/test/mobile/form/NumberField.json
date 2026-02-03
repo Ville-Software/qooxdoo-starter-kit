@@ -1,0 +1,160 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337534,
+  "lastModifiedIso": "2026-01-03T20:15:37.534Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/form/NumberField.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 481
+    },
+    "end": {
+      "line": 128,
+      "column": 3,
+      "index": 3349
+    }
+  },
+  "className": "qx.test.mobile.form.NumberField",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christopher Zuendorf (czuendorf)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 593
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1221
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinimum": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1228
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1532
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaximum": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1539
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1843
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStep": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1850
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2142
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2149
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2789
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEnabled": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2796
+        },
+        "end": {
+          "line": 126,
+          "column": 5,
+          "index": 3341
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

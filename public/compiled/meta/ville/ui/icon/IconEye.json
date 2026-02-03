@@ -1,0 +1,87 @@
+{
+  "version": 0.3,
+  "lastModified": 1768424516522,
+  "lastModifiedIso": "2026-01-14T21:01:56.522Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/icon/IconEye.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 39,
+      "column": 5,
+      "index": 1402
+    }
+  },
+  "className": "ville.ui.icon.IconEye",
+  "jsdoc": null,
+  "superClass": "ville.ui.icon.Abstract",
+  "statics": {
+    "PATHD": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "index": 108
+        },
+        "end": {
+          "line": 6,
+          "column": 576,
+          "index": 676
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 689
+      },
+      "end": {
+        "line": 27,
+        "column": 5,
+        "index": 1128
+      }
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 8,
+          "index": 1177
+        },
+        "end": {
+          "line": 37,
+          "column": 9,
+          "index": 1390
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,66 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336180,
+  "lastModifiedIso": "2026-01-03T20:15:36.180Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/DerivedClassIncluded.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 3,
+      "index": 274
+    }
+  },
+  "className": "qx.test.testclasses.DerivedClassIncluded",
+  "jsdoc": null,
+  "superClass": "qx.test.testclasses.BaseClassIncluded",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 114
+      },
+      "end": {
+        "line": 7,
+        "column": 3,
+        "index": 176
+      }
+    }
+  },
+  "members": {
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 10,
+          "column": 4,
+          "index": 196
+        },
+        "end": {
+          "line": 12,
+          "column": 5,
+          "index": 266
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.testclasses.BaseClassIncluded",
+      "appearsIn": [
+        "qx.test.testclasses.BaseClassIncluded",
+        "qx.test.testclasses.MMixinOne",
+        "qx.test.testclasses.RootClass"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

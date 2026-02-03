@@ -1,0 +1,495 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335009,
+  "lastModifiedIso": "2026-01-03T20:15:35.009Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/AbstractSingleSelectonTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 324,
+      "column": 3,
+      "index": 8353
+    }
+  },
+  "className": "qx.test.ui.selection.AbstractSingleSelectonTest",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "_widget": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 633
+        },
+        "end": {
+          "line": 24,
+          "column": 17,
+          "index": 646
+        }
+      },
+      "appearsIn": []
+    },
+    "_mode": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 653
+        },
+        "end": {
+          "line": 26,
+          "column": 15,
+          "index": 664
+        }
+      },
+      "appearsIn": []
+    },
+    "_selection": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 671
+        },
+        "end": {
+          "line": 28,
+          "column": 20,
+          "index": 687
+        }
+      },
+      "appearsIn": []
+    },
+    "_notInSelection": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 694
+        },
+        "end": {
+          "line": 30,
+          "column": 25,
+          "index": 715
+        }
+      },
+      "appearsIn": []
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 722
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 807
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_createTestElement": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 814
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 915
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_assertArrayEquals": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 922
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1073
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        },
+        {
+          "name": "found"
+        },
+        {
+          "name": "message"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testGetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1080
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1282
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1289
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1372
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledSetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1379
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1508
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_testSetSelection": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1515
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 2433
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "selection"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSameSetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2440
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 2900
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetSelectionWithNotChildElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 2907
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3323
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetSelectionWithTooMuchElements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 4,
+          "index": 3330
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 3854
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 3861
+        },
+        "end": {
+          "line": 196,
+          "column": 5,
+          "index": 5017
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledResetSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 198,
+          "column": 4,
+          "index": 5024
+        },
+        "end": {
+          "line": 201,
+          "column": 5,
+          "index": 5131
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetSelectionWithEmptySelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 203,
+          "column": 4,
+          "index": 5138
+        },
+        "end": {
+          "line": 244,
+          "column": 5,
+          "index": 6312
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsSelected": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 246,
+          "column": 4,
+          "index": 6319
+        },
+        "end": {
+          "line": 253,
+          "column": 5,
+          "index": 6635
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsSelectedWithNotChildElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 255,
+          "column": 4,
+          "index": 6642
+        },
+        "end": {
+          "line": 270,
+          "column": 5,
+          "index": 7061
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsSelectionEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 272,
+          "column": 4,
+          "index": 7068
+        },
+        "end": {
+          "line": 285,
+          "column": 5,
+          "index": 7497
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetSelectables": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 287,
+          "column": 4,
+          "index": 7504
+        },
+        "end": {
+          "line": 296,
+          "column": 5,
+          "index": 7754
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledGetSelectables": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 298,
+          "column": 4,
+          "index": 7761
+        },
+        "end": {
+          "line": 301,
+          "column": 5,
+          "index": 7868
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetUserSelectables": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 303,
+          "column": 4,
+          "index": 7875
+        },
+        "end": {
+          "line": 322,
+          "column": 5,
+          "index": 8345
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

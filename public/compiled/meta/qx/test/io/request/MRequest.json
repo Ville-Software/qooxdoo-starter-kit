@@ -1,0 +1,1034 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337469,
+  "lastModifiedIso": "2026-01-03T20:15:37.469Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/request/MRequest.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 35,
+      "column": 0,
+      "index": 963
+    },
+    "end": {
+      "line": 589,
+      "column": 3,
+      "index": 13409
+    }
+  },
+  "className": "qx.test.io.request.MRequest",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Tests asserting shared behavior of io.request.* classes. Also provides",
+      " * common helpers.",
+      " *",
+      " * It should be noted that tests defined here fake an ideal transport. The",
+      " * transport itself is tested elsewhere (see {@link qx.test.bom.request}).",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Tests asserting shared behavior of io.request.* classes. Also provides\n common helpers.\n It should be noted that tests defined here fake an ideal transport. The\n transport itself is tested elsewhere (see {@link qx.test.bom.request}).</p>"
+      }
+    ]
+  },
+  "members": {
+    "setUpKlass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1029
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1210
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: dispose transport on destruct": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1247
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1459
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: getTransport()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1466
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1564
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send() GET": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1598
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 1760
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: drop fragment from URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 1767
+        },
+        "end": {
+          "line": 85,
+          "column": 5,
+          "index": 1950
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: abort request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 1985
+        },
+        "end": {
+          "line": 95,
+          "column": 5,
+          "index": 2088
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: not send data with GET request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2122
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2282
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: append string data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 2289
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 2479
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: append obj data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 2486
+        },
+        "end": {
+          "line": 120,
+          "column": 5,
+          "index": 2688
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: append qooxdoo obj data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 122,
+          "column": 4,
+          "index": 2695
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 2969
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: append FormData to URL with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 2976
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 3503
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set request header": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 4,
+          "index": 3550
+        },
+        "end": {
+          "line": 161,
+          "column": 5,
+          "index": 3737
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set request header does not append": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 163,
+          "column": 4,
+          "index": 3744
+        },
+        "end": {
+          "line": 171,
+          "column": 5,
+          "index": 4054
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get request header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 4,
+          "index": 4061
+        },
+        "end": {
+          "line": 177,
+          "column": 5,
+          "index": 4215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: remove request header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 179,
+          "column": 4,
+          "index": 4222
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 4500
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get all request headers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 4507
+        },
+        "end": {
+          "line": 197,
+          "column": 5,
+          "index": 4807
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get all request headers includes configuration dependent headers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 4,
+          "index": 4814
+        },
+        "end": {
+          "line": 207,
+          "column": 5,
+          "index": 5208
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: not append cache parameter to URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5215
+        },
+        "end": {
+          "line": 214,
+          "column": 5,
+          "index": 5422
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: append nocache parameter to URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 216,
+          "column": 4,
+          "index": 5429
+        },
+        "end": {
+          "line": 225,
+          "column": 5,
+          "index": 5703
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire readyStateChange": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 231,
+          "column": 4,
+          "index": 5739
+        },
+        "end": {
+          "line": 239,
+          "column": 5,
+          "index": 5975
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire success": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 241,
+          "column": 4,
+          "index": 5982
+        },
+        "end": {
+          "line": 249,
+          "column": 5,
+          "index": 6173
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: not fire success on erroneous status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 6180
+        },
+        "end": {
+          "line": 259,
+          "column": 5,
+          "index": 6397
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire load": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 261,
+          "column": 4,
+          "index": 6404
+        },
+        "end": {
+          "line": 269,
+          "column": 5,
+          "index": 6580
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire loadEnd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 271,
+          "column": 4,
+          "index": 6587
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 6778
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire abort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 281,
+          "column": 4,
+          "index": 6785
+        },
+        "end": {
+          "line": 289,
+          "column": 5,
+          "index": 6976
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 291,
+          "column": 4,
+          "index": 6983
+        },
+        "end": {
+          "line": 304,
+          "column": 5,
+          "index": 7312
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire error": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 306,
+          "column": 4,
+          "index": 7319
+        },
+        "end": {
+          "line": 314,
+          "column": 5,
+          "index": 7505
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire statusError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 316,
+          "column": 4,
+          "index": 7512
+        },
+        "end": {
+          "line": 324,
+          "column": 5,
+          "index": 7726
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire fail on erroneous status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 326,
+          "column": 4,
+          "index": 7733
+        },
+        "end": {
+          "line": 334,
+          "column": 5,
+          "index": 7932
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire fail on network error": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 336,
+          "column": 4,
+          "index": 7939
+        },
+        "end": {
+          "line": 344,
+          "column": 5,
+          "index": 8137
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire fail on timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 346,
+          "column": 4,
+          "index": 8144
+        },
+        "end": {
+          "line": 354,
+          "column": 5,
+          "index": 8331
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: fire changePhase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 356,
+          "column": 4,
+          "index": 8338
+        },
+        "end": {
+          "line": 370,
+          "column": 5,
+          "index": 8647
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is unsent": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 376,
+          "column": 4,
+          "index": 8682
+        },
+        "end": {
+          "line": 378,
+          "column": 5,
+          "index": 8771
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase was open before send": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 380,
+          "column": 4,
+          "index": 8778
+        },
+        "end": {
+          "line": 392,
+          "column": 5,
+          "index": 9072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is sent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 394,
+          "column": 4,
+          "index": 9079
+        },
+        "end": {
+          "line": 401,
+          "column": 5,
+          "index": 9231
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is loading": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 403,
+          "column": 4,
+          "index": 9238
+        },
+        "end": {
+          "line": 411,
+          "column": 5,
+          "index": 9458
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is load intermediately": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 413,
+          "column": 4,
+          "index": 9465
+        },
+        "end": {
+          "line": 427,
+          "column": 5,
+          "index": 9851
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is success": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 429,
+          "column": 4,
+          "index": 9858
+        },
+        "end": {
+          "line": 434,
+          "column": 5,
+          "index": 9993
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is statusError": {
+      "jsdoc": {
+        "raw": [
+          " Error handling"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 438,
+          "column": 4,
+          "index": 10023
+        },
+        "end": {
+          "line": 443,
+          "column": 5,
+          "index": 10169
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is abort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 445,
+          "column": 4,
+          "index": 10176
+        },
+        "end": {
+          "line": 457,
+          "column": 5,
+          "index": 10495
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is abort when from cache": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 459,
+          "column": 4,
+          "index": 10502
+        },
+        "end": {
+          "line": 474,
+          "column": 5,
+          "index": 10910
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is abort on readyState DONE when aborted before": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 476,
+          "column": 4,
+          "index": 10917
+        },
+        "end": {
+          "line": 494,
+          "column": 5,
+          "index": 11408
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is abort on readyState DONE when aborting loading": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 496,
+          "column": 4,
+          "index": 11415
+        },
+        "end": {
+          "line": 519,
+          "column": 5,
+          "index": 12019
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is abort on loadEnd when aborted before": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 521,
+          "column": 4,
+          "index": 12026
+        },
+        "end": {
+          "line": 537,
+          "column": 5,
+          "index": 12429
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: phase is timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 539,
+          "column": 4,
+          "index": 12436
+        },
+        "end": {
+          "line": 544,
+          "column": 5,
+          "index": 12571
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getFakeReq": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 546,
+          "column": 4,
+          "index": 12578
+        },
+        "end": {
+          "line": 548,
+          "column": 5,
+          "index": 12644
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "noCache": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 550,
+          "column": 4,
+          "index": 12651
+        },
+        "end": {
+          "line": 555,
+          "column": 5,
+          "index": 12779
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "url"
+        }
+      ],
+      "appearsIn": []
+    },
+    "respond": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 557,
+          "column": 4,
+          "index": 12786
+        },
+        "end": {
+          "line": 579,
+          "column": 5,
+          "index": 13280
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "status"
+        },
+        {
+          "name": "error"
+        }
+      ],
+      "appearsIn": []
+    },
+    "respondError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 581,
+          "column": 4,
+          "index": 13287
+        },
+        "end": {
+          "line": 583,
+          "column": 5,
+          "index": 13343
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 585,
+          "column": 4,
+          "index": 13350
+        },
+        "end": {
+          "line": 587,
+          "column": 5,
+          "index": 13401
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

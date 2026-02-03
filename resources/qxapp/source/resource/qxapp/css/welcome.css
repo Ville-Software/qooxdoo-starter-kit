@@ -1,0 +1,83 @@
+.WelcomeBanner_wrapper__AZDUt {
+    display: flex;
+    align-items: center;
+    padding: calc(var(--mantine-spacing-xl) * 2);
+    border-radius: var(--mantine-radius-md);
+    background-color: var(--mantine-color-white)
+}
+
+[data-mantine-color-scheme=dark] .WelcomeBanner_wrapper__AZDUt {
+    background-color: var(--mantine-color-dark-8)
+}
+
+.WelcomeBanner_wrapper__AZDUt {
+    border: 1px solid var(--mantine-color-gray-3)
+}
+
+[data-mantine-color-scheme=dark] .WelcomeBanner_wrapper__AZDUt {
+    border: 1px solid var(--mantine-color-dark-8)
+}
+
+@media (max-width: 48em) {
+    .WelcomeBanner_wrapper__AZDUt {
+        flex-direction:column-reverse;
+        padding: var(--mantine-spacing-xl)
+    }
+}
+
+.WelcomeBanner_image__1VVN6 {
+    max-width: 40%
+}
+
+@media (max-width: 48em) {
+    .WelcomeBanner_image__1VVN6 {
+        max-width:100%
+    }
+}
+
+.WelcomeBanner_body__91hpy {
+    padding-right: calc(var(--mantine-spacing-xl) * 4)
+}
+
+@media (max-width: 48em) {
+    .WelcomeBanner_body__91hpy {
+        padding-right:0;
+        margin-top: var(--mantine-spacing-xl)
+    }
+}
+
+.WelcomeBanner_title__EmBUH {
+    color: var(--mantine-color-black)
+}
+
+[data-mantine-color-scheme=dark] .WelcomeBanner_title__EmBUH {
+    color: var(--mantine-color-white)
+}
+
+.WelcomeBanner_title__EmBUH {
+    font-family: Outfit,var(--mantine-font-family);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: var(--mantine-spacing-md)
+}
+
+.WelcomeBanner_controls__YYmYS {
+    display: flex;
+    margin-top: var(--mantine-spacing-xl)
+}
+
+.WelcomeBanner_inputWrapper__h6NQA {
+    width: 100%;
+    flex: 1
+}
+
+.WelcomeBanner_input__SMRgZ {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0
+}
+
+.WelcomeBanner_control__MhtaQ {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}

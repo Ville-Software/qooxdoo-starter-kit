@@ -1,0 +1,129 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337953,
+  "lastModifiedIso": "2026-01-03T20:15:37.953Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/model/Simple.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 518
+    },
+    "end": {
+      "line": 196,
+      "column": 3,
+      "index": 5963
+    }
+  },
+  "className": "qx.test.ui.table.model.Simple",
+  "jsdoc": {
+    "raw": [
+      " eslint-disable no-caller "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "testGetRowDataAsMap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 624
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1473
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getStringValues": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1480
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1568
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "createRandomRows": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1575
+        },
+        "end": {
+          "line": 65,
+          "column": 5,
+          "index": 1820
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "rowCount"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testCustomSortFunction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 67,
+          "column": 4,
+          "index": 1827
+        },
+        "end": {
+          "line": 128,
+          "column": 5,
+          "index": 3803
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCustomSortFunctionArgumentsCalleeColumnIndexDeprecated": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 3810
+        },
+        "end": {
+          "line": 194,
+          "column": 5,
+          "index": 5955
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,573 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335345,
+  "lastModifiedIso": "2026-01-03T20:15:35.345Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/Axis.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 475
+    },
+    "end": {
+      "line": 447,
+      "column": 3,
+      "index": 12161
+    }
+  },
+  "className": "qx.test.ui.virtual.Axis",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 570
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 716
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 723
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 768
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 775
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1087
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expectedItemIndex"
+        },
+        {
+          "name": "expectedOffset"
+        },
+        {
+          "name": "cellData"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testDefaultItemSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1094
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1300
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testItemCount": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1307
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1507
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testItemSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1514
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2137
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testItemAtPosition": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 2144
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 2875
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmptyAxis": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 107,
+          "column": 4,
+          "index": 2882
+        },
+        "end": {
+          "line": 111,
+          "column": 5,
+          "index": 3028
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItemAtPositionCustomSizes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 3035
+        },
+        "end": {
+          "line": 166,
+          "column": 5,
+          "index": 4708
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "ITEM_POS_ITER": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 168,
+          "column": 4,
+          "index": 4715
+        },
+        "end": {
+          "line": 168,
+          "column": 20,
+          "index": 4731
+        }
+      },
+      "appearsIn": []
+    },
+    "ITEM_POS_COUNT": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 169,
+          "column": 4,
+          "index": 4737
+        },
+        "end": {
+          "line": 169,
+          "column": 25,
+          "index": 4758
+        }
+      },
+      "appearsIn": []
+    },
+    "testGetItemAtPositionStress": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 171,
+          "column": 4,
+          "index": 4765
+        },
+        "end": {
+          "line": 192,
+          "column": 5,
+          "index": 5367
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetTotalSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 194,
+          "column": 4,
+          "index": 5374
+        },
+        "end": {
+          "line": 207,
+          "column": 5,
+          "index": 5753
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "TOTAL_SIZE_ITER": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5760
+        },
+        "end": {
+          "line": 209,
+          "column": 22,
+          "index": 5778
+        }
+      },
+      "appearsIn": []
+    },
+    "TOTAL_SIZE_ITEMS": {
+      "jsdoc": {
+        "raw": [
+          " was 50"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 5794
+        },
+        "end": {
+          "line": 210,
+          "column": 25,
+          "index": 5815
+        }
+      },
+      "appearsIn": []
+    },
+    "testGetTotalSizeStress": {
+      "jsdoc": {
+        "raw": [
+          " was 1000"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 212,
+          "column": 4,
+          "index": 5834
+        },
+        "end": {
+          "line": 225,
+          "column": 5,
+          "index": 6274
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItemSizes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 227,
+          "column": 4,
+          "index": 6281
+        },
+        "end": {
+          "line": 251,
+          "column": 5,
+          "index": 7149
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItemPosition": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 253,
+          "column": 4,
+          "index": 7156
+        },
+        "end": {
+          "line": 270,
+          "column": 5,
+          "index": 7751
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItemPositionCustomSizes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 272,
+          "column": 4,
+          "index": 7758
+        },
+        "end": {
+          "line": 287,
+          "column": 5,
+          "index": 8375
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeEvents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 289,
+          "column": 4,
+          "index": 8382
+        },
+        "end": {
+          "line": 373,
+          "column": 5,
+          "index": 9986
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "SETUP_ITER": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 375,
+          "column": 4,
+          "index": 9993
+        },
+        "end": {
+          "line": 375,
+          "column": 18,
+          "index": 10007
+        }
+      },
+      "appearsIn": []
+    },
+    "testPerformanceSetupBestCase": {
+      "jsdoc": {
+        "raw": [
+          " was 100"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 377,
+          "column": 4,
+          "index": 10025
+        },
+        "end": {
+          "line": 388,
+          "column": 5,
+          "index": 10444
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPerformanceSetupWorstCase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 390,
+          "column": 4,
+          "index": 10451
+        },
+        "end": {
+          "line": 406,
+          "column": 5,
+          "index": 11031
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "FIND_ITER": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 408,
+          "column": 4,
+          "index": 11038
+        },
+        "end": {
+          "line": 408,
+          "column": 18,
+          "index": 11052
+        }
+      },
+      "appearsIn": []
+    },
+    "testPerformanceFindBestCase": {
+      "jsdoc": {
+        "raw": [
+          " was 10000"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 410,
+          "column": 4,
+          "index": 11072
+        },
+        "end": {
+          "line": 422,
+          "column": 5,
+          "index": 11507
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPerformanceFindWorstCase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 424,
+          "column": 4,
+          "index": 11514
+        },
+        "end": {
+          "line": 441,
+          "column": 5,
+          "index": 12110
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 444,
+        "column": 2,
+        "index": 12119
+      },
+      "end": {
+        "line": 446,
+        "column": 3,
+        "index": 12157
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "layout",
+    "VStack",
+    "construct",
+    "constructor",
+    "call",
+    "pagenameroot",
+    "pageName",
+    "lang",
+    "String",
+    "firstUp",
+    "SettingsConfigLocal",
+    "routing",
+    "core",
+    "Init",
+    "getApplication",
+    "getRouting",
+    "SettingsViewHeader",
+    "ViewTitle",
+    "typography",
+    "Title",
+    "ViewDesc",
+    "Text",
+    "add",
+    "properties",
+    "componentName",
+    "check",
+    "init",
+    "qxapp",
+    "app",
+    "SettingsView"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/app/SettingsView.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Settings TabView\n *\n */\nqx.Class.define(\"qxapp.app.SettingsView\",\n{\n  extend: ville.ui.layout.VStack,\n\n  construct() {\n    super();\n\n    const pagenameroot = \"settings\";\n    const pageName = qx.lang.String.firstUp(pagenameroot);\n\n    // Set up the page\n    //this.addListener(\"appear\", () => {document.title = `${pageName} - Laravel`});\n\n    const SettingsConfigLocal = {\n        \"pages\":[\n            {\"objname\":\"Profile\",\"uris\":[{\"uri\":\"settings/profile\"}]},\n            {\"objname\":\"Password\",\"uris\":[{\"uri\":\"settings/password\"}]},\n            {\"objname\":\"TwoFactorAuth\",\"uris\":[{\"uri\":\"settings/two-factor\"}]},\n            {\"objname\":\"Appearance\",\"uris\":[{\"uri\":\"settings/appearance\"}]}\n        ]\n      };\n\n      var routing = qx.core.Init.getApplication().getRouting();\n\n      // Header\n      var SettingsViewHeader = new ville.ui.layout.VStack();\n      var ViewTitle = new ville.ui.typography.Title(\"2\", \"Settings\");\n      var ViewDesc = new ville.ui.typography.Text(\"Manage your profile and account settings\");\n      SettingsViewHeader.add(ViewTitle);\n      SettingsViewHeader.add(ViewDesc);\n      this.add(SettingsViewHeader);\n\n      // Settings Nav\n\n      // Settings Stack\n\n\n\n      //const SettingsConfig = SettingsConfigLocal; //JSON.parse(routing.getCurrentPage().props.auth.user.qxappconfig);\n      /*SettingsConfig.pages.forEach(page => {\n        var clazz = qx.Class.getByName(`qxapp.pages.${page.objname}`);\n        var tabpage = new clazz(page);\n        page.uris.forEach(uri => {\n            //populate routes\n            var onuri = uri.uri;\n            //if (uri.type == \"regex\") {\n              //  onuri = new RegExp(uri.uri);\n            //}\n            routing.on(onuri, () => {\n                this.setSelection([tabpage]);\n            }, this);\n          }\n        );\n        // Add TabPage to the TabView\n        this.add(tabpage);\n      });*/\n\n  },\n\n  properties : {\n\n    componentName: {\n        check: \"String\",\n        init: \"settings\"\n    }\n\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,wBAAwB,EACxC;IACEC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,MAAM,CAACC,MAAM;IAE9BC,SAASA,CAAA,EAAG;MACVJ,KAAA,CAAAC,EAAA,CAAAC,MAAA,CAAAC,MAAA,CAAAE,WAAA,CAAAC,IAAA;MAEA,MAAMC,YAAY,GAAG,UAAU;MAC/B,MAAMC,QAAQ,GAAGf,EAAE,CAACgB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACJ,YAAY,CAAC;;MAErD;MACA;;MAEA,MAAMK,mBAAmB,GAAG;QACxB,OAAO,EAAC,CACJ;UAAC,SAAS,EAAC,SAAS;UAAC,MAAM,EAAC,CAAC;YAAC,KAAK,EAAC;UAAkB,CAAC;QAAC,CAAC,EACzD;UAAC,SAAS,EAAC,UAAU;UAAC,MAAM,EAAC,CAAC;YAAC,KAAK,EAAC;UAAmB,CAAC;QAAC,CAAC,EAC3D;UAAC,SAAS,EAAC,eAAe;UAAC,MAAM,EAAC,CAAC;YAAC,KAAK,EAAC;UAAqB,CAAC;QAAC,CAAC,EAClE;UAAC,SAAS,EAAC,YAAY;UAAC,MAAM,EAAC,CAAC;YAAC,KAAK,EAAC;UAAqB,CAAC;QAAC,CAAC;MAErE,CAAC;MAED,IAAIC,OAAO,GAAGpB,EAAE,CAACqB,IAAI,CAACC,IAAI,CAACC,cAAc,CAAC,CAAC,CAACC,UAAU,CAAC,CAAC;;MAExD;MACA,IAAIC,kBAAkB,GAAG,IAAIlB,KAAK,CAACC,EAAE,CAACC,MAAM,CAACC,MAAM,CAAC,CAAC;MACrD,IAAIgB,SAAS,GAAG,IAAInB,KAAK,CAACC,EAAE,CAACmB,UAAU,CAACC,KAAK,CAAC,GAAG,EAAE,UAAU,CAAC;MAC9D,IAAIC,QAAQ,GAAG,IAAItB,KAAK,CAACC,EAAE,CAACmB,UAAU,CAACG,IAAI,CAAC,0CAA0C,CAAC;MACvFL,kBAAkB,CAACM,GAAG,CAACL,SAAS,CAAC;MACjCD,kBAAkB,CAACM,GAAG,CAACF,QAAQ,CAAC;MAChC,IAAI,CAACE,GAAG,CAACN,kBAAkB,CAAC;;MAE5B;;MAEA;;MAIA;MACA;AACN;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;IAEE,CAAC;IAEDO,UAAU,EAAG;MAEXC,aAAa,EAAE;QACXC,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACV;IAEF;EACF,CAAC,CAAC;EAvEFC,KAAK,CAACC,GAAG,CAACC,YAAY,CAACnC,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

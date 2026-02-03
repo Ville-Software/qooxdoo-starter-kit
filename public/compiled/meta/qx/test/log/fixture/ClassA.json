@@ -1,0 +1,193 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335728,
+  "lastModifiedIso": "2026-01-03T20:15:35.728Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/log/fixture/ClassA.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 47,
+      "column": 3,
+      "index": 925
+    }
+  },
+  "className": "qx.test.log.fixture.ClassA",
+  "jsdoc": null,
+  "superClass": "qx.core.Object",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 77
+      },
+      "end": {
+        "line": 13,
+        "column": 3,
+        "index": 301
+      }
+    }
+  },
+  "properties": {
+    "oldProperty": {
+      "location": {
+        "start": {
+          "line": 16,
+          "column": 4,
+          "index": 324
+        },
+        "end": {
+          "line": 19,
+          "column": 5,
+          "index": 404
+        }
+      },
+      "json": {
+        "init": "oldProperty",
+        "apply": "_applyOldProperty"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "newProperty": {
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 411
+        },
+        "end": {
+          "line": 24,
+          "column": 5,
+          "index": 491
+        }
+      },
+      "json": {
+        "init": "newProperty",
+        "apply": "_applyNewProperty"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_callCountApplyOldProperty": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 515
+        },
+        "end": {
+          "line": 28,
+          "column": 36,
+          "index": 547
+        }
+      },
+      "appearsIn": []
+    },
+    "_callCountApplyNewProperty": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 553
+        },
+        "end": {
+          "line": 29,
+          "column": 36,
+          "index": 585
+        }
+      },
+      "appearsIn": []
+    },
+    "_applyOldProperty": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 592
+        },
+        "end": {
+          "line": 33,
+          "column": 5,
+          "index": 660
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_applyNewProperty": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 667
+        },
+        "end": {
+          "line": 37,
+          "column": 5,
+          "index": 735
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getCallCountApplyOldProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 742
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 826
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getCallCountApplyNewProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 833
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 917
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

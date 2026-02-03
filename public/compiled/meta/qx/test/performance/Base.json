@@ -1,0 +1,55 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335367,
+  "lastModifiedIso": "2026-01-03T20:15:35.367Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/performance/Base.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 7,
+      "column": 3,
+      "index": 118
+    }
+  },
+  "className": "qx.test.performance.Base",
+  "jsdoc": null,
+  "superClass": "qx.core.Object",
+  "members": {
+    "foo_base": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 90
+        },
+        "end": {
+          "line": 5,
+          "column": 24,
+          "index": 110
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        },
+        {
+          "name": "c"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

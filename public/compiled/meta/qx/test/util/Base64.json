@@ -1,0 +1,160 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335370,
+  "lastModifiedIso": "2026-01-03T20:15:35.370Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/Base64.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 62,
+      "column": 3,
+      "index": 2181
+    }
+  },
+  "className": "qx.test.util.Base64",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Adrian Olaru (adrianolaru)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testEncodeDecode": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 571
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 769
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChineseChars": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 776
+        },
+        "end": {
+          "line": 33,
+          "column": 5,
+          "index": 953
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChineseCharsExplicitNot8bit": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 960
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1166
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChineseCharsExplicit8bit": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 1173
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1378
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGermanChars": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1385
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1865
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testKnownEncoding": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1872
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 2173
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

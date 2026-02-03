@@ -1,0 +1,353 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336744,
+  "lastModifiedIso": "2026-01-03T20:15:36.744Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/controller/FormWithArrayAndModel.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 563
+    },
+    "end": {
+      "line": 257,
+      "column": 3,
+      "index": 7542
+    }
+  },
+  "className": "qx.test.data.controller.FormWithArrayAndModel",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.data.controller.fixture.ArrayField, qx.test.data.controller.fixture.ModelField)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.data.controller.fixture.ArrayField, qx.test.data.controller.fixture.ModelField"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__arrayField": {
+      "jsdoc": {
+        "raw": [
+          "* @type {qx.test.data.controller.fixture.ArrayField} "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.test.data.controller.fixture.ArrayField}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 742
+        },
+        "end": {
+          "line": 28,
+          "column": 22,
+          "index": 760
+        }
+      },
+      "appearsIn": []
+    },
+    "__modelField": {
+      "jsdoc": {
+        "raw": [
+          "* @type {qx.test.data.controller.fixture.ModelField} "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.test.data.controller.fixture.ModelField}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 829
+        },
+        "end": {
+          "line": 31,
+          "column": 22,
+          "index": 847
+        }
+      },
+      "appearsIn": []
+    },
+    "__form": {
+      "jsdoc": {
+        "raw": [
+          "* @type {qx.ui.form.Form} "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.ui.form.Form}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 889
+        },
+        "end": {
+          "line": 34,
+          "column": 16,
+          "index": 901
+        }
+      },
+      "appearsIn": []
+    },
+    "__model": {
+      "jsdoc": {
+        "raw": [
+          "* @type {qx.core.Object} "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.core.Object}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 942
+        },
+        "end": {
+          "line": 37,
+          "column": 17,
+          "index": 955
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 962
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3541
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 4,
+          "index": 3548
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3789
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__makeAddressForm": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Reusable address form.",
+          "     *",
+          "     * @return {qx.ui.form.Form} Address form.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Reusable address form.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.form.Form} Address form.",
+            "type": "qx.ui.form.Form",
+            "description": "Address form."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 147,
+          "column": 4,
+          "index": 3896
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 4326
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qx.ui.form.Form"
+      },
+      "appearsIn": []
+    },
+    "test self update: array": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4,
+          "index": 4333
+        },
+        "end": {
+          "line": 179,
+          "column": 5,
+          "index": 5039
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test self update: model": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 181,
+          "column": 4,
+          "index": 5046
+        },
+        "end": {
+          "line": 200,
+          "column": 5,
+          "index": 5880
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test updating view": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 202,
+          "column": 4,
+          "index": 5887
+        },
+        "end": {
+          "line": 222,
+          "column": 5,
+          "index": 6556
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test updating model: array field": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 224,
+          "column": 4,
+          "index": 6563
+        },
+        "end": {
+          "line": 240,
+          "column": 5,
+          "index": 7028
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test updating model: model field": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 242,
+          "column": 4,
+          "index": 7035
+        },
+        "end": {
+          "line": 255,
+          "column": 5,
+          "index": 7534
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,649 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337798,
+  "lastModifiedIso": "2026-01-03T20:15:37.798Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/graphql/Request.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 4,
+      "column": 0,
+      "index": 41
+    },
+    "end": {
+      "line": 41,
+      "column": 3,
+      "index": 1383
+    }
+  },
+  "className": "qx.test.io.graphql.Request",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @require(qx.io.transport.Xhr)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@require": [
+      {
+        "name": "@require",
+        "body": "qx.io.transport.Xhr"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "mixins": [
+    "qx.test.io.MAssert"
+  ],
+  "members": {
+    "test: request can be converted to json": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 172
+        },
+        "end": {
+          "line": 19,
+          "column": 5,
+          "index": 594
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: no variables in the final string": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 601
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 888
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: variables can be bound": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 895
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1375
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertDeepEquals": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Deep equal comparison, using Sinon's `deepEqual` comparison.",
+          "     * Two values are \"deep equal\" if:",
+          "     *",
+          "     *   - They are equal, according to samsam.identical",
+          "     *   (https://sinonjs.github.io/samsam/)",
+          "     *   - They are both date objects representing the same time",
+          "     *   - They are both arrays containing elements that are all deepEqual",
+          "     *   - They are objects with the same set of properties, and each property",
+          "     *     in obj1 is deepEqual to the corresponding property in obj2",
+          "     *",
+          "     * Supports cyclic objects.",
+          "     * @param {*} expected",
+          "     * @param {*} actual",
+          "     * @param {String?} msg",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Deep equal comparison, using Sinon's <code>deepEqual</code> comparison.\n Two values are \"deep equal\" if:</p>\n<ul>\n<li>They are equal, according to samsam.identical\n(https://sinonjs.github.io/samsam/)</li>\n<li>They are both date objects representing the same time</li>\n<li>They are both arrays containing elements that are all deepEqual</li>\n<li>They are objects with the same set of properties, and each property\n in obj1 is deepEqual to the corresponding property in obj2\nSupports cyclic objects.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{*} expected",
+            "paramName": "expected",
+            "description": "",
+            "type": "*"
+          },
+          {
+            "name": "@param",
+            "body": "{*} actual",
+            "paramName": "actual",
+            "description": "",
+            "type": "*"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg",
+            "paramName": "msg",
+            "description": "",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 748
+        },
+        "end": {
+          "line": 29,
+          "column": 5,
+          "index": 1030
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected",
+          "type": "*"
+        },
+        {
+          "name": "actual",
+          "type": "*"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "assertContains": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Asserts that a string fragment is contained in a result",
+          "     * @param {String} expectedFragment",
+          "     * @param {String} actual",
+          "     * @param {String?} msg",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Asserts that a string fragment is contained in a result</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{String} expectedFragment",
+            "paramName": "expectedFragment",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "{String} actual",
+            "paramName": "actual",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg",
+            "paramName": "msg",
+            "description": "",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1214
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1511
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expectedFragment",
+          "type": "string"
+        },
+        {
+          "name": "actual",
+          "type": "string"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "PROMISE": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1518
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1634
+        }
+      },
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "observePromise": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Observes a promise so that its state can later be determined for the assertPromise*()",
+          "     * methods.",
+          "     * @param {Promise} promise",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Observes a promise so that its state can later be determined for the assertPromise*()\n methods.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1798
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 2152
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "getPromiseState": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the state of the given promise, which is either \"pending\", \"fulfilled\", or \"rejected\".",
+          "     * Requires that the observePromise() method has previously been called with given promise.",
+          "     * @param {Promise} promise",
+          "     * @returns {String}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the state of the given promise, which is either \"pending\", \"fulfilled\", or \"rejected\".\n Requires that the observePromise() method has previously been called with given promise.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String}",
+            "type": "string",
+            "description": ""
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 77,
+          "column": 4,
+          "index": 2430
+        },
+        "end": {
+          "line": 85,
+          "column": 5,
+          "index": 2695
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        }
+      ],
+      "returnType": {
+        "type": "string"
+      },
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "assertPromisePending": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Asserts that the given promise object is still pending",
+          "     * @param {Promise} promise",
+          "     * @param {String?} msg Optional failure message",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Asserts that the given promise object is still pending</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg Optional failure message",
+            "paramName": "msg",
+            "description": "Optional failure message",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 2865
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 3084
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "assertPromiseSettled": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Asserts that the given promise object is settled, i.e. has either",
+          "     * been fulfilled or rejected",
+          "     * @param {Promise} promise",
+          "     * @param {String?} msg Optional failure message",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Asserts that the given promise object is settled, i.e. has either\n been fulfilled or rejected</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg Optional failure message",
+            "paramName": "msg",
+            "description": "Optional failure message",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 3299
+        },
+        "end": {
+          "line": 112,
+          "column": 5,
+          "index": 3517
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "assertPromiseFulfilled": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Asserts that the given promise object has been fulfilled",
+          "     * @param {Promise} promise",
+          "     * @param {String?} msg Optional failure message",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Asserts that the given promise object has been fulfilled</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg Optional failure message",
+            "paramName": "msg",
+            "description": "Optional failure message",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 3689
+        },
+        "end": {
+          "line": 125,
+          "column": 5,
+          "index": 3914
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    },
+    "assertPromiseRejected": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Asserts that the given promise object has been rejected",
+          "     * @param {Promise} promise",
+          "     * @param {String?} msg Optional failure message",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Asserts that the given promise object has been rejected</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{Promise} promise",
+            "paramName": "promise",
+            "description": "",
+            "type": "Promise<any>"
+          },
+          {
+            "name": "@param",
+            "body": "{String?} msg Optional failure message",
+            "paramName": "msg",
+            "description": "Optional failure message",
+            "optional": true,
+            "type": "String"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 4085
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 4307
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "promise",
+          "type": "Promise<any>"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "optional": true
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.MAssert"
+      ],
+      "mixin": "qx.test.io.MAssert"
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

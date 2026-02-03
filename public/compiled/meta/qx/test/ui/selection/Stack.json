@@ -1,0 +1,181 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338024,
+  "lastModifiedIso": "2026-01-03T20:15:38.024Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/Stack.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 96,
+      "column": 3,
+      "index": 2475
+    }
+  },
+  "className": "qx.test.ui.selection.Stack",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.selection.AbstractSingleSelectonTest",
+  "members": {
+    "__radioButtons": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 614
+        },
+        "end": {
+          "line": 23,
+          "column": 24,
+          "index": 634
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 641
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1724
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1731
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 1915
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1922
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 2063
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "_createTestElement": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 2070
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2145
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "__createItem": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2152
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2467
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        },
+        {
+          "name": "colors"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

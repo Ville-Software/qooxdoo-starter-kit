@@ -1,0 +1,294 @@
+{
+  "version": 0.3,
+  "lastModified": 1768318046315,
+  "lastModifiedIso": "2026-01-13T15:27:26.315Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/patch/MWidget.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 137,
+      "column": 3,
+      "index": 3386
+    }
+  },
+  "className": "ville.cssuc.patch.MWidget",
+  "jsdoc": null,
+  "properties": {
+    "cssUtilityClass": {
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 71
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 218
+        }
+      },
+      "json": {
+        "check": "String",
+        "nullable": true,
+        "apply": "_applyCssUtilityClass",
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "excludeInlineStyles": {
+      "location": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "index": 225
+        },
+        "end": {
+          "line": 19,
+          "column": 5,
+          "index": 379
+        }
+      },
+      "json": {
+        "check": "Array",
+        "nullable": true,
+        "apply": "_applyExcludeInlineStyles",
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "clearAllInlineStyles": {
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 386
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 523
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": false,
+        "apply": "_applyClearAllInlineStyles",
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "removeCssClasses": {
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 530
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 678
+        }
+      },
+      "json": {
+        "check": "Array",
+        "nullable": true,
+        "apply": "_applyRemoveCssClasses",
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_applyCssUtilityClass": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 725
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 931
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyExcludeInlineStyles": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 960
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1130
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyClearAllInlineStyles": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1159
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1416
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyRemoveCssClasses": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1449
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 1626
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyFocusable": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 1655
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2670
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyCursor": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 2695
+        },
+        "end": {
+          "line": 135,
+          "column": 5,
+          "index": 3378
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

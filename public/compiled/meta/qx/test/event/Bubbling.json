@@ -1,0 +1,241 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335505,
+  "lastModifiedIso": "2026-01-03T20:15:35.505Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/event/Bubbling.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 529
+    },
+    "end": {
+      "line": 483,
+      "column": 3,
+      "index": 11705
+    }
+  },
+  "className": "qx.test.event.Bubbling",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @use(qx.test.event.MockBubblingHandler)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@use": [
+      {
+        "name": "@use",
+        "body": "qx.test.event.MockBubblingHandler"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "events": {
+    "nonBubble": {
+      "type": "qx.event.type.Event",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 622
+        },
+        "end": {
+          "line": 27,
+          "column": 36,
+          "index": 654
+        }
+      }
+    }
+  },
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 678
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1142
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1149
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1396
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBubbling": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1403
+        },
+        "end": {
+          "line": 133,
+          "column": 5,
+          "index": 2924
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 2931
+        },
+        "end": {
+          "line": 168,
+          "column": 5,
+          "index": 3835
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCapture": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 170,
+          "column": 4,
+          "index": 3842
+        },
+        "end": {
+          "line": 245,
+          "column": 5,
+          "index": 5404
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_stopPropagation": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 247,
+          "column": 4,
+          "index": 5411
+        },
+        "end": {
+          "line": 249,
+          "column": 5,
+          "index": 5465
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testStopPropagation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 5472
+        },
+        "end": {
+          "line": 374,
+          "column": 5,
+          "index": 8716
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_preventDefault": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 376,
+          "column": 4,
+          "index": 8723
+        },
+        "end": {
+          "line": 378,
+          "column": 5,
+          "index": 8775
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testPreventDefault": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 380,
+          "column": 4,
+          "index": 8782
+        },
+        "end": {
+          "line": 481,
+          "column": 5,
+          "index": 11697
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,147 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335018,
+  "lastModifiedIso": "2026-01-03T20:15:35.018Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/AbstractVirtualBox.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 103,
+      "column": 3,
+      "index": 2968
+    }
+  },
+  "className": "qx.test.ui.form.AbstractVirtualBox",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Alexander Steitz (aback)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 588
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 830
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 837
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1008
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testStatePopupOpen": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 1015
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1502
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListLengthAfterModelChangeSelectBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1509
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2234
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListLengthAfterModelChangeComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2241
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2960
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

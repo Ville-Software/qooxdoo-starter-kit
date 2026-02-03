@@ -1,0 +1,63 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338088,
+  "lastModifiedIso": "2026-01-03T20:15:38.088Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/Target.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 507
+    },
+    "end": {
+      "line": 38,
+      "column": 3,
+      "index": 864
+    }
+  },
+  "className": "qx.test.core.Target",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.Event)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.Event"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testEvents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 598
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 856
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

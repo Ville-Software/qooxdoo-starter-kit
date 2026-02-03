@@ -1,0 +1,276 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337381,
+  "lastModifiedIso": "2026-01-03T20:15:37.381Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Meta.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 25,
+      "column": 0,
+      "index": 659
+    },
+    "end": {
+      "line": 241,
+      "column": 3,
+      "index": 7233
+    }
+  },
+  "className": "qx.test.theme.manager.Meta",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.theme.manager.MockAll)",
+      " * @ignore(qx.test.theme.manager.MockAppearance)",
+      " * @ignore(qx.test.theme.manager.MockDecoration)",
+      " * @ignore(qx.test.theme.manager.MockColor)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.theme.manager.MockAll"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.theme.manager.MockAppearance"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.theme.manager.MockDecoration"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.theme.manager.MockColor"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 28,
+        "column": 2,
+        "index": 747
+      },
+      "end": {
+        "line": 81,
+        "column": 3,
+        "index": 2439
+      }
+    }
+  },
+  "members": {
+    "__formerTheme": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 4,
+          "index": 2459
+        },
+        "end": {
+          "line": 84,
+          "column": 23,
+          "index": 2478
+        }
+      },
+      "appearsIn": []
+    },
+    "__savedListeners": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2484
+        },
+        "end": {
+          "line": 85,
+          "column": 26,
+          "index": 2506
+        }
+      },
+      "appearsIn": []
+    },
+    "__linerGradientRegExp": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 87,
+          "column": 4,
+          "index": 2513
+        },
+        "end": {
+          "line": 88,
+          "column": 96,
+          "index": 2632
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 2639
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 3476
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 3483
+        },
+        "end": {
+          "line": 139,
+          "column": 5,
+          "index": 4015
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testAllThemeManagerChanged": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 141,
+          "column": 4,
+          "index": 4022
+        },
+        "end": {
+          "line": 179,
+          "column": 5,
+          "index": 5237
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testColorThemeManagerChanged": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 181,
+          "column": 4,
+          "index": 5244
+        },
+        "end": {
+          "line": 196,
+          "column": 5,
+          "index": 5783
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAppearanceThemeManagerChanged": {
+      "jsdoc": {
+        "raw": [
+          "",
+          "        testDecoratorThemeManagerChanged : function()",
+          "        {",
+          "          qx.theme.manager.Meta.getInstance().setTheme(qx.test.theme.manager.MockDecoration);",
+          "          qx.ui.core.queue.Manager.flush();",
+          "    ",
+          "          // mocked decoration theme defines a border radius of 10 pixel",
+          "          var elem = this.__button.getContentElement().getDomElement();",
+          "          this.assertEquals(qx.bom.element.Style.get(elem, \"borderTopLeftRadius\"), \"10px\");",
+          "        },",
+          "    "
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 6260
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 6666
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testColorThemeChanged": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 222,
+          "column": 4,
+          "index": 6673
+        },
+        "end": {
+          "line": 237,
+          "column": 5,
+          "index": 7207
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 240,
+        "column": 2,
+        "index": 7216
+      },
+      "end": {
+        "line": 240,
+        "column": 15,
+        "index": 7229
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

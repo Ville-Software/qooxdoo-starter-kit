@@ -1,0 +1,240 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335412,
+  "lastModifiedIso": "2026-01-03T20:15:35.412Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/columnmodel/Basic.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 482
+    },
+    "end": {
+      "line": 205,
+      "column": 3,
+      "index": 5428
+    }
+  },
+  "className": "qx.test.ui.table.columnmodel.Basic",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Jonathan Weiß (jonathan_rass)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "createModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 593
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 827
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "createRandomRows": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 834
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1212
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "rowCount"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSetColumnWidth": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1219
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1713
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetColumnWidth": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1720
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2214
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetHeaderCellRenderer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2221
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 2809
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetHeaderCellRenderer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 2816
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3320
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetDataCellRenderer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3327
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 3861
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetDataCellRenderer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 3868
+        },
+        "end": {
+          "line": 163,
+          "column": 5,
+          "index": 4368
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetCellEditorFactory": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 165,
+          "column": 4,
+          "index": 4375
+        },
+        "end": {
+          "line": 183,
+          "column": 5,
+          "index": 4911
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetCellEditorFactory": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 185,
+          "column": 4,
+          "index": 4918
+        },
+        "end": {
+          "line": 203,
+          "column": 5,
+          "index": 5420
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

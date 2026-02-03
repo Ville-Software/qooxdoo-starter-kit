@@ -1,0 +1,223 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338166,
+  "lastModifiedIso": "2026-01-03T20:15:38.166Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/toolbar/ToolBar.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 481
+    },
+    "end": {
+      "line": 181,
+      "column": 3,
+      "index": 5228
+    }
+  },
+  "className": "qx.test.ui.toolbar.ToolBar",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (wittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 584
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 822
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 829
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 984
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testShowSyncing": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 991
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1498
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPositionStates": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1505
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 1932
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPositionStatesAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1939
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2499
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPositionStatesRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 2506
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 3094
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testShowUserValueShouldTakePrecedence": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 3101
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 4089
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveChildByIndex": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 4096
+        },
+        "end": {
+          "line": 163,
+          "column": 5,
+          "index": 4761
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAllChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 165,
+          "column": 4,
+          "index": 4768
+        },
+        "end": {
+          "line": 179,
+          "column": 5,
+          "index": 5220
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,520 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338285,
+  "lastModifiedIso": "2026-01-03T20:15:38.285Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/virtual/VirtualDropDownList.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 549
+    },
+    "end": {
+      "line": 285,
+      "column": 3,
+      "index": 6811
+    }
+  },
+  "className": "qx.test.ui.form.virtual.VirtualDropDownList",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.ui.form.core.AbstractVirtualBoxMock)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.ui.form.core.AbstractVirtualBoxMock"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "mixins": [
+    "qx.test.ui.list.MAssert"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 27,
+        "column": 2,
+        "index": 690
+      },
+      "end": {
+        "line": 39,
+        "column": 3,
+        "index": 926
+      }
+    }
+  },
+  "members": {
+    "__target": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 946
+        },
+        "end": {
+          "line": 42,
+          "column": 18,
+          "index": 960
+        }
+      },
+      "appearsIn": []
+    },
+    "__dropdown": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 967
+        },
+        "end": {
+          "line": 44,
+          "column": 20,
+          "index": 983
+        }
+      },
+      "appearsIn": []
+    },
+    "__model": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 990
+        },
+        "end": {
+          "line": 46,
+          "column": 17,
+          "index": 1003
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1010
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1355
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1362
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 1584
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testException": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 4,
+          "index": 1591
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 2223
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 2230
+        },
+        "end": {
+          "line": 107,
+          "column": 5,
+          "index": 2467
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreationWithSorter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 109,
+          "column": 4,
+          "index": 2474
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 2642
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreationWithFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 2649
+        },
+        "end": {
+          "line": 119,
+          "column": 5,
+          "index": 2824
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testCreation": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 4,
+          "index": 2831
+        },
+        "end": {
+          "line": 127,
+          "column": 5,
+          "index": 3017
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3024
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 3089
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithSorter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 133,
+          "column": 4,
+          "index": 3096
+        },
+        "end": {
+          "line": 137,
+          "column": 5,
+          "index": 3266
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 139,
+          "column": 4,
+          "index": 3273
+        },
+        "end": {
+          "line": 160,
+          "column": 5,
+          "index": 3855
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testSelection": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 162,
+          "column": 4,
+          "index": 3862
+        },
+        "end": {
+          "line": 188,
+          "column": 5,
+          "index": 4424
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__createModelData": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 190,
+          "column": 4,
+          "index": 4431
+        },
+        "end": {
+          "line": 198,
+          "column": 5,
+          "index": 4598
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__checkSelection": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 4605
+        },
+        "end": {
+          "line": 236,
+          "column": 5,
+          "index": 5566
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "item"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__checkEvent": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 238,
+          "column": 4,
+          "index": 5573
+        },
+        "end": {
+          "line": 248,
+          "column": 5,
+          "index": 5853
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "target"
+        },
+        {
+          "name": "callback"
+        },
+        {
+          "name": "fired"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__applySortingAndReturnSortedModel": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 250,
+          "column": 4,
+          "index": 5860
+        },
+        "end": {
+          "line": 261,
+          "column": 5,
+          "index": 6178
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__applyFilterAndReturnFilteredModel": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 263,
+          "column": 4,
+          "index": 6185
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 6717
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertModelEqualsRowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 551
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 729
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        },
+        {
+          "name": "list"
+        }
+      ],
+      "mixin": "qx.test.ui.list.MAssert",
+      "appearsIn": [
+        "qx.test.ui.list.MAssert"
+      ]
+    },
+    "assertDataArrayEquals": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 736
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1147
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "mixin": "qx.test.ui.list.MAssert",
+      "appearsIn": [
+        "qx.test.ui.list.MAssert"
+      ]
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 282,
+        "column": 2,
+        "index": 6726
+      },
+      "end": {
+        "line": 284,
+        "column": 3,
+        "index": 6807
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

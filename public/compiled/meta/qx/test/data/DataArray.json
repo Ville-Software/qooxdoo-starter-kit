@@ -1,0 +1,1188 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335922,
+  "lastModifiedIso": "2026-01-03T20:15:35.922Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/DataArray.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 1575,
+      "column": 3,
+      "index": 38847
+    }
+  },
+  "className": "qx.test.data.DataArray",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__a": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 581
+        },
+        "end": {
+          "line": 22,
+          "column": 13,
+          "index": 590
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 597
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 671
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 678
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 722
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 729
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2205
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 2212
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 2897
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 2904
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 3246
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJoin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 4,
+          "index": 3253
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3390
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReverse": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3397
+        },
+        "end": {
+          "line": 178,
+          "column": 5,
+          "index": 4225
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 180,
+          "column": 4,
+          "index": 4232
+        },
+        "end": {
+          "line": 229,
+          "column": 5,
+          "index": 5296
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConcat": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 231,
+          "column": 4,
+          "index": 5303
+        },
+        "end": {
+          "line": 249,
+          "column": 5,
+          "index": 5723
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlice": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 5730
+        },
+        "end": {
+          "line": 264,
+          "column": 5,
+          "index": 6281
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReplace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 266,
+          "column": 4,
+          "index": 6288
+        },
+        "end": {
+          "line": 282,
+          "column": 5,
+          "index": 6864
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 284,
+          "column": 4,
+          "index": 6871
+        },
+        "end": {
+          "line": 290,
+          "column": 5,
+          "index": 7242
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPush": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 292,
+          "column": 4,
+          "index": 7249
+        },
+        "end": {
+          "line": 314,
+          "column": 5,
+          "index": 7813
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testShift": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 316,
+          "column": 4,
+          "index": 7820
+        },
+        "end": {
+          "line": 326,
+          "column": 5,
+          "index": 8171
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testShiftWithEventPropagation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 8178
+        },
+        "end": {
+          "line": 336,
+          "column": 5,
+          "index": 8414
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnshift": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 338,
+          "column": 4,
+          "index": 8421
+        },
+        "end": {
+          "line": 362,
+          "column": 5,
+          "index": 8969
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplice": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 364,
+          "column": 4,
+          "index": 8976
+        },
+        "end": {
+          "line": 391,
+          "column": 5,
+          "index": 10115
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 393,
+          "column": 4,
+          "index": 10122
+        },
+        "end": {
+          "line": 401,
+          "column": 5,
+          "index": 10354
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLengthEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 403,
+          "column": 4,
+          "index": 10361
+        },
+        "end": {
+          "line": 421,
+          "column": 5,
+          "index": 10791
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 423,
+          "column": 4,
+          "index": 10798
+        },
+        "end": {
+          "line": 429,
+          "column": 5,
+          "index": 10956
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContains": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 431,
+          "column": 4,
+          "index": 10963
+        },
+        "end": {
+          "line": 435,
+          "column": 5,
+          "index": 11215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 437,
+          "column": 4,
+          "index": 11222
+        },
+        "end": {
+          "line": 441,
+          "column": 5,
+          "index": 11482
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLastIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 443,
+          "column": 4,
+          "index": 11489
+        },
+        "end": {
+          "line": 464,
+          "column": 5,
+          "index": 11961
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCopy": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 466,
+          "column": 4,
+          "index": 11968
+        },
+        "end": {
+          "line": 479,
+          "column": 5,
+          "index": 12409
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testInsertAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 481,
+          "column": 4,
+          "index": 12416
+        },
+        "end": {
+          "line": 491,
+          "column": 5,
+          "index": 12935
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInsertBefore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 493,
+          "column": 4,
+          "index": 12942
+        },
+        "end": {
+          "line": 527,
+          "column": 5,
+          "index": 13667
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInsertAfter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 529,
+          "column": 4,
+          "index": 13674
+        },
+        "end": {
+          "line": 563,
+          "column": 5,
+          "index": 14389
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 565,
+          "column": 4,
+          "index": 14396
+        },
+        "end": {
+          "line": 572,
+          "column": 5,
+          "index": 14705
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 574,
+          "column": 4,
+          "index": 14712
+        },
+        "end": {
+          "line": 626,
+          "column": 5,
+          "index": 16046
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAppend": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 628,
+          "column": 4,
+          "index": 16053
+        },
+        "end": {
+          "line": 645,
+          "column": 5,
+          "index": 16808
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExclude": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 647,
+          "column": 4,
+          "index": 16815
+        },
+        "end": {
+          "line": 655,
+          "column": 5,
+          "index": 17222
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 657,
+          "column": 4,
+          "index": 17229
+        },
+        "end": {
+          "line": 663,
+          "column": 5,
+          "index": 17465
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEquals": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 665,
+          "column": 4,
+          "index": 17472
+        },
+        "end": {
+          "line": 674,
+          "column": 5,
+          "index": 17750
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSum": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 676,
+          "column": 4,
+          "index": 17757
+        },
+        "end": {
+          "line": 682,
+          "column": 5,
+          "index": 17896
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMax": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 684,
+          "column": 4,
+          "index": 17903
+        },
+        "end": {
+          "line": 690,
+          "column": 5,
+          "index": 18042
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 692,
+          "column": 4,
+          "index": 18049
+        },
+        "end": {
+          "line": 698,
+          "column": 5,
+          "index": 18190
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPopEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 700,
+          "column": 4,
+          "index": 18197
+        },
+        "end": {
+          "line": 739,
+          "column": 5,
+          "index": 19060
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPushEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 741,
+          "column": 4,
+          "index": 19067
+        },
+        "end": {
+          "line": 780,
+          "column": 5,
+          "index": 19925
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAppendEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 782,
+          "column": 4,
+          "index": 19932
+        },
+        "end": {
+          "line": 827,
+          "column": 5,
+          "index": 20936
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testShiftEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 829,
+          "column": 4,
+          "index": 20943
+        },
+        "end": {
+          "line": 868,
+          "column": 5,
+          "index": 21801
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnshiftEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 870,
+          "column": 4,
+          "index": 21808
+        },
+        "end": {
+          "line": 909,
+          "column": 5,
+          "index": 22666
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 911,
+          "column": 4,
+          "index": 22673
+        },
+        "end": {
+          "line": 1154,
+          "column": 5,
+          "index": 28538
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceBubbleEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1156,
+          "column": 4,
+          "index": 28545
+        },
+        "end": {
+          "line": 1256,
+          "column": 5,
+          "index": 31073
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceEventNoChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1258,
+          "column": 4,
+          "index": 31080
+        },
+        "end": {
+          "line": 1270,
+          "column": 5,
+          "index": 31344
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceEventEqualContent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1272,
+          "column": 4,
+          "index": 31351
+        },
+        "end": {
+          "line": 1284,
+          "column": 5,
+          "index": 31625
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceBubbleEventNoChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1286,
+          "column": 4,
+          "index": 31632
+        },
+        "end": {
+          "line": 1298,
+          "column": 5,
+          "index": 31915
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceBubbleEventEqualContent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1300,
+          "column": 4,
+          "index": 31922
+        },
+        "end": {
+          "line": 1312,
+          "column": 5,
+          "index": 32215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetItemEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1314,
+          "column": 4,
+          "index": 32222
+        },
+        "end": {
+          "line": 1382,
+          "column": 5,
+          "index": 33726
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testForEach": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1384,
+          "column": 4,
+          "index": 33733
+        },
+        "end": {
+          "line": 1420,
+          "column": 5,
+          "index": 34750
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNotAutoDisposeItems": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1422,
+          "column": 4,
+          "index": 34757
+        },
+        "end": {
+          "line": 1428,
+          "column": 5,
+          "index": 34935
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAutoDisposeItems": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1430,
+          "column": 4,
+          "index": 34942
+        },
+        "end": {
+          "line": 1436,
+          "column": 5,
+          "index": 35139
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1438,
+          "column": 4,
+          "index": 35146
+        },
+        "end": {
+          "line": 1453,
+          "column": 5,
+          "index": 35629
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFind": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1455,
+          "column": 4,
+          "index": 35636
+        },
+        "end": {
+          "line": 1466,
+          "column": 5,
+          "index": 35991
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFindNonExistingElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1468,
+          "column": 4,
+          "index": 35998
+        },
+        "end": {
+          "line": 1479,
+          "column": 5,
+          "index": 36364
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1481,
+          "column": 4,
+          "index": 36371
+        },
+        "end": {
+          "line": 1497,
+          "column": 5,
+          "index": 36875
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSome": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1499,
+          "column": 4,
+          "index": 36882
+        },
+        "end": {
+          "line": 1516,
+          "column": 5,
+          "index": 37363
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEvery": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1518,
+          "column": 4,
+          "index": 37370
+        },
+        "end": {
+          "line": 1535,
+          "column": 5,
+          "index": 37883
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReduce": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1537,
+          "column": 4,
+          "index": 37890
+        },
+        "end": {
+          "line": 1554,
+          "column": 5,
+          "index": 38356
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReduceRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1556,
+          "column": 4,
+          "index": 38363
+        },
+        "end": {
+          "line": 1573,
+          "column": 5,
+          "index": 38839
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

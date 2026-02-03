@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "form",
+    "Button",
+    "include",
+    "core",
+    "MChildrenHandling",
+    "ville",
+    "MWidget",
+    "construct",
+    "component",
+    "label",
+    "__componenttag",
+    "constructor",
+    "call",
+    "_setLayout",
+    "layout",
+    "Basic",
+    "setExcludeBoundsFromDom",
+    "setClearAllInlineStyles",
+    "setCssUtilityClass",
+    "getContentElement",
+    "removeAttribute",
+    "setAttribute",
+    "members",
+    "_createContentElement",
+    "html",
+    "Element",
+    "UnstyledButton"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/form/UnstyledButton.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Unstyled Button\n * @external(mantine/core/styles/UnstyledButton.css)\n */\nqx.Class.define(\"ville.ui.form.UnstyledButton\", {\n    \n    extend: qx.ui.form.Button,\n\n    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],\n\n    construct(component, label) {\n        \n        if (component != null)\n            this.__componenttag = component;\n\n        super();\n\n        this._setLayout(new qx.ui.layout.Basic());\n\n        this.setExcludeBoundsFromDom(true);\n        this.setClearAllInlineStyles(true);\n        this.setCssUtilityClass(\"m_87cf2631 mantine-UnstyledButton-root\");\n\n        if (this.__componenttag !== \"button\")\n            this.getContentElement().removeAttribute('type');\n\n        if (label != null)\n            this.getContentElement().setAttribute('html', label);\n\n    },\n\n    members: {\n\n        __componenttag: \"button\",\n\n        // overridden\n        _createContentElement() {\n            return new qx.html.Element(this.__componenttag);\n        }\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAAE;IAE5CC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,MAAM;IAEzBC,OAAO,EAAE,CAACV,EAAE,CAACO,EAAE,CAACI,IAAI,CAACC,iBAAiB,EAAEC,KAAK,CAACN,EAAE,CAACI,IAAI,CAACG,OAAO,CAAC;IAE9DC,SAASA,CAACC,SAAS,EAAEC,KAAK,EAAE;MAExB,IAAID,SAAS,IAAI,IAAI,EACjB,IAAI,CAACE,sBAAc,GAAGF,SAAS;MAEnChB,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAU,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,UAAU,CAAC,IAAIrB,EAAE,CAACO,EAAE,CAACe,MAAM,CAACC,KAAK,CAAC,CAAC,CAAC;MAEzC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,kBAAkB,CAAC,wCAAwC,CAAC;MAEjE,IAAI,IAAI,CAACR,sBAAc,KAAK,QAAQ,EAChC,IAAI,CAACS,iBAAiB,CAAC,CAAC,CAACC,eAAe,CAAC,MAAM,CAAC;MAEpD,IAAIX,KAAK,IAAI,IAAI,EACb,IAAI,CAACU,iBAAiB,CAAC,CAAC,CAACE,YAAY,CAAC,MAAM,EAAEZ,KAAK,CAAC;IAE5D,CAAC;IAEDa,OAAO,EAAE;MAELZ,sBAAc,EAAE,QAAQ;MAExB;MACAa,qBAAqBA,CAAA,EAAG;QACpB,OAAO,IAAI/B,EAAE,CAACgC,IAAI,CAACC,OAAO,CAAC,IAAI,CAACf,sBAAc,CAAC;MACnD;IACJ;EACF,CAAC,CAAC;EAxCJL,KAAK,CAACN,EAAE,CAACC,IAAI,CAAC0B,cAAc,CAAC/B,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

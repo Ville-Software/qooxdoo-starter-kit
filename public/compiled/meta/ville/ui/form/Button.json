@@ -1,0 +1,417 @@
+{
+  "version": 0.3,
+  "lastModified": 1766016252110,
+  "lastModifiedIso": "2025-12-18T00:04:12.110Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/Button.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 63
+    },
+    "end": {
+      "line": 182,
+      "column": 5,
+      "index": 5681
+    }
+  },
+  "className": "ville.ui.form.Button",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Button",
+      " * @external(mantine/core/styles/Button.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Button</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Button.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.form.UnstyledButton",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "label"
+      },
+      {
+        "name": "variant"
+      },
+      {
+        "name": "sectionLeft"
+      },
+      {
+        "name": "sectionRight"
+      },
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 157
+      },
+      "end": {
+        "line": 37,
+        "column": 5,
+        "index": 832
+      }
+    }
+  },
+  "properties": {
+    "variant": {
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 8,
+          "index": 862
+        },
+        "end": {
+          "line": 47,
+          "column": 9,
+          "index": 1107
+        }
+      },
+      "json": {
+        "init": "default",
+        "check": [
+          "default",
+          "filled",
+          "light",
+          "outline",
+          "subtle",
+          "transparent",
+          "white"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionLeft": {
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 8,
+          "index": 1118
+        },
+        "end": {
+          "line": 55,
+          "column": 9,
+          "index": 1318
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionLeft",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSectionLeft"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionRight": {
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 8,
+          "index": 1329
+        },
+        "end": {
+          "line": 63,
+          "column": 9,
+          "index": 1532
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionRight",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSectionRight"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "__componenttag": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 8,
+          "index": 1565
+        },
+        "end": {
+          "line": 68,
+          "column": 32,
+          "index": 1589
+        }
+      },
+      "overriddenFrom": "ville.ui.form.UnstyledButton",
+      "appearsIn": [
+        "ville.ui.form.UnstyledButton"
+      ]
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 8,
+          "index": 1622
+        },
+        "end": {
+          "line": 73,
+          "column": 9,
+          "index": 1718
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.form.UnstyledButton",
+      "appearsIn": [
+        "ville.ui.form.UnstyledButton",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 8,
+          "index": 1751
+        },
+        "end": {
+          "line": 116,
+          "column": 9,
+          "index": 3581
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 8,
+          "index": 3618
+        },
+        "end": {
+          "line": 123,
+          "column": 9,
+          "index": 3772
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyIcon": {
+      "jsdoc": {
+        "raw": [
+          " Replaced by Section Left and Right"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 127,
+          "column": 8,
+          "index": 3851
+        },
+        "end": {
+          "line": 127,
+          "column": 33,
+          "index": 3876
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyShow": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 8,
+          "index": 3909
+        },
+        "end": {
+          "line": 130,
+          "column": 33,
+          "index": 3934
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 133,
+          "column": 8,
+          "index": 3967
+        },
+        "end": {
+          "line": 141,
+          "column": 9,
+          "index": 4266
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applySectionLeft": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 8,
+          "index": 4277
+        },
+        "end": {
+          "line": 160,
+          "column": 9,
+          "index": 4965
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySectionRight": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 162,
+          "column": 8,
+          "index": 4976
+        },
+        "end": {
+          "line": 179,
+          "column": 9,
+          "index": 5668
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

@@ -1,0 +1,73 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335785,
+  "lastModifiedIso": "2026-01-03T20:15:35.785Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/graphql/ClientFetch.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 500
+    },
+    "end": {
+      "line": 34,
+      "column": 3,
+      "index": 869
+    }
+  },
+  "className": "qx.test.io.graphql.ClientFetch",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * GraphQL tests using the Fetch API",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>GraphQL tests using the Fetch API</p>"
+      }
+    ]
+  },
+  "superClass": "qx.test.io.graphql.Client",
+  "statics": {
+    "TEST_ENDPOINT": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 606
+        },
+        "end": {
+          "line": 25,
+          "column": 56,
+          "index": 658
+        }
+      },
+      "appearsIn": [
+        "qx.test.io.graphql.Client"
+      ]
+    }
+  },
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 28,
+        "column": 2,
+        "index": 667
+      },
+      "end": {
+        "line": 33,
+        "column": 3,
+        "index": 865
+      }
+    }
+  },
+  "members": {},
+  "properties": {}
+}

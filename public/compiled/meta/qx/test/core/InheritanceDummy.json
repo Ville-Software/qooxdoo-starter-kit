@@ -1,0 +1,223 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337029,
+  "lastModifiedIso": "2026-01-03T20:15:37.029Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/InheritanceDummy.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 66,
+      "column": 3,
+      "index": 1200
+    }
+  },
+  "className": "qx.test.core.InheritanceDummy",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.core.Object",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 557
+      },
+      "end": {
+        "line": 25,
+        "column": 3,
+        "index": 611
+      }
+    }
+  },
+  "properties": {
+    "enabled": {
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 634
+        },
+        "end": {
+          "line": 28,
+          "column": 34,
+          "index": 664
+        }
+      },
+      "json": {
+        "inheritable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "width_": {
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 671
+        },
+        "end": {
+          "line": 33,
+          "column": 5,
+          "index": 733
+        }
+      },
+      "json": {
+        "inheritable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "height_": {
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 740
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 803
+        }
+      },
+      "json": {
+        "inheritable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "left_": {
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 810
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 871
+        }
+      },
+      "json": {
+        "inheritable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "top_": {
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 878
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 938
+        }
+      },
+      "json": {
+        "inheritable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "add": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 962
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1077
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1084
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1134
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getLayoutParent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1141
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1192
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

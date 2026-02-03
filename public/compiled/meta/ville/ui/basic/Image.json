@@ -1,0 +1,109 @@
+{
+  "version": 0.3,
+  "lastModified": 1768853594442,
+  "lastModifiedIso": "2026-01-19T20:13:14.442Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/basic/Image.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 118
+    },
+    "end": {
+      "line": 28,
+      "column": 5,
+      "index": 579
+    }
+  },
+  "className": "ville.ui.basic.Image",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Used as a base component or as a replacement for HTML elements",
+      " * @external(mantine/core/styles/Image.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Used as a base component or as a replacement for HTML elements</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Image.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 200
+      },
+      "end": {
+        "line": 17,
+        "column": 5,
+        "index": 390
+      }
+    }
+  },
+  "members": {
+    "__componenttag": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 8,
+          "index": 417
+        },
+        "end": {
+          "line": 21,
+          "column": 29,
+          "index": 438
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 8,
+          "index": 471
+        },
+        "end": {
+          "line": 26,
+          "column": 9,
+          "index": 567
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

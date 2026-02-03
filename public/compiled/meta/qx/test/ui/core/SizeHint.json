@@ -1,0 +1,550 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337995,
+  "lastModifiedIso": "2026-01-03T20:15:37.995Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/core/SizeHint.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 164,
+      "column": 3,
+      "index": 3973
+    }
+  },
+  "className": "qx.test.ui.core.SizeHint",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 593
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 653
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 660
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 707
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getHint": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 714
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 814
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertHint": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 821
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 902
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "min"
+        },
+        {
+          "name": "size"
+        },
+        {
+          "name": "max"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getDefaultSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 909
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 980
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 987
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1065
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "min"
+        },
+        {
+          "name": "size"
+        },
+        {
+          "name": "max"
+        }
+      ],
+      "appearsIn": []
+    },
+    "setStretching": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1072
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1154
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "shrink"
+        },
+        {
+          "name": "grow"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testDefaultSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1161
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1245
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1252
+        },
+        "end": {
+          "line": 61,
+          "column": 5,
+          "index": 1386
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinLargerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 63,
+          "column": 4,
+          "index": 1393
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1541
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinSmallerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1548
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 1695
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxSmallerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 1702
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 1841
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxLargerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 1848
+        },
+        "end": {
+          "line": 85,
+          "column": 5,
+          "index": 1989
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoGrow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 87,
+          "column": 4,
+          "index": 1996
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2128
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoShrink": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2135
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2276
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoStretch": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2283
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 2421
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoGrowAndMaxLargerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 2428
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2579
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoGrowAndMaxSmallerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 2586
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 2735
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoGrowAndMinLargerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 2742
+        },
+        "end": {
+          "line": 121,
+          "column": 5,
+          "index": 2895
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoShrinkAndMinLargerSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 123,
+          "column": 4,
+          "index": 2902
+        },
+        "end": {
+          "line": 127,
+          "column": 5,
+          "index": 3058
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoShrinkAndMinSmallerSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3065
+        },
+        "end": {
+          "line": 133,
+          "column": 5,
+          "index": 3221
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoShrinkAndMaxSmallerSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 3228
+        },
+        "end": {
+          "line": 139,
+          "column": 5,
+          "index": 3376
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinLargerThanMax": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 141,
+          "column": 4,
+          "index": 3383
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 3654
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinAndMaxLargerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 152,
+          "column": 4,
+          "index": 3661
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 3809
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinAndMaxSmallerThanSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4,
+          "index": 3816
+        },
+        "end": {
+          "line": 162,
+          "column": 5,
+          "index": 3965
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

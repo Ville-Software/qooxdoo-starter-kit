@@ -1,0 +1,69 @@
+{
+  "version": 0.3,
+  "lastModified": 1767045627660,
+  "lastModifiedIso": "2025-12-29T22:00:27.660Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/icon/IconRadio.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 29,
+      "column": 5,
+      "index": 706
+    }
+  },
+  "className": "ville.ui.icon.IconRadio",
+  "jsdoc": null,
+  "superClass": "ville.ui.icon.Abstract",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 4,
+        "index": 86
+      },
+      "end": {
+        "line": 17,
+        "column": 5,
+        "index": 432
+      }
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 8,
+          "index": 481
+        },
+        "end": {
+          "line": 27,
+          "column": 9,
+          "index": 694
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

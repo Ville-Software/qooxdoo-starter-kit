@@ -1,0 +1,477 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337193,
+  "lastModifiedIso": "2026-01-03T20:15:37.193Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/layout/LayoutItem.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 264,
+      "column": 3,
+      "index": 5830
+    }
+  },
+  "className": "qx.test.ui.layout.LayoutItem",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.ui.core.LayoutItem",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "width"
+      },
+      {
+        "name": "height"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 563
+      },
+      "end": {
+        "line": 34,
+        "column": 3,
+        "index": 764
+      }
+    }
+  },
+  "properties": {
+    "visibility": {
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 787
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 942
+        }
+      },
+      "json": {
+        "check": [
+          "visible",
+          "hidden",
+          "excluded"
+        ],
+        "init": "visible",
+        "apply": "_applyVisibility",
+        "event": "changeVisibility"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "bounds": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 966
+        },
+        "end": {
+          "line": 46,
+          "column": 16,
+          "index": 978
+        }
+      },
+      "appearsIn": []
+    },
+    "__layout": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 985
+        },
+        "end": {
+          "line": 48,
+          "column": 18,
+          "index": 999
+        }
+      },
+      "appearsIn": []
+    },
+    "__children": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1005
+        },
+        "end": {
+          "line": 49,
+          "column": 20,
+          "index": 1021
+        }
+      },
+      "appearsIn": []
+    },
+    "renderLayout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1028
+        },
+        "end": {
+          "line": 77,
+          "column": 5,
+          "index": 1626
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "top"
+        },
+        {
+          "name": "width"
+        },
+        {
+          "name": "height"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.LayoutItem",
+      "appearsIn": [
+        "qx.ui.core.LayoutItem"
+      ]
+    },
+    "setLayout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 79,
+          "column": 4,
+          "index": 1633
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 1765
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "layout"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_getLayout": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 1772
+        },
+        "end": {
+          "line": 87,
+          "column": 5,
+          "index": 1820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.LayoutItem",
+      "appearsIn": [
+        "qx.ui.core.LayoutItem"
+      ]
+    },
+    "invalidateLayoutCache": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 1845
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 1996
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.LayoutItem",
+      "appearsIn": [
+        "qx.ui.core.LayoutItem"
+      ]
+    },
+    "invalidateLayoutChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2003
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 2183
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_applyVisibility": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 2212
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 2641
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_getContentHint": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 2648
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 2846
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_computeSizeHint": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 4,
+          "index": 2871
+        },
+        "end": {
+          "line": 191,
+          "column": 5,
+          "index": 4232
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.LayoutItem",
+      "appearsIn": [
+        "qx.ui.core.LayoutItem"
+      ]
+    },
+    "add": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 193,
+          "column": 4,
+          "index": 4239
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 4621
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child"
+        },
+        {
+          "name": "options"
+        }
+      ],
+      "appearsIn": []
+    },
+    "remove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 4628
+        },
+        "end": {
+          "line": 227,
+          "column": 5,
+          "index": 5038
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getLayoutChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 229,
+          "column": 4,
+          "index": 5045
+        },
+        "end": {
+          "line": 240,
+          "column": 5,
+          "index": 5368
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "checkAppearanceNeeds": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 242,
+          "column": 4,
+          "index": 5375
+        },
+        "end": {
+          "line": 242,
+          "column": 29,
+          "index": 5400
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "addChildrenToQueue": {
+      "jsdoc": {
+        "raw": [
+          " copied from qx.ui.core.Widget"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 245,
+          "column": 4,
+          "index": 5444
+        },
+        "end": {
+          "line": 258,
+          "column": 5,
+          "index": 5743
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "queue"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 261,
+        "column": 2,
+        "index": 5752
+      },
+      "end": {
+        "line": 263,
+        "column": 3,
+        "index": 5826
+      }
+    }
+  },
+  "statics": {}
+}

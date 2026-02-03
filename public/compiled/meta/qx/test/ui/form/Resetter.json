@@ -1,0 +1,326 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337811,
+  "lastModifiedIso": "2026-01-03T20:15:37.811Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/Resetter.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 296,
+      "column": 3,
+      "index": 9191
+    }
+  },
+  "className": "qx.test.ui.form.Resetter",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 21,
+        "column": 2,
+        "index": 573
+      },
+      "end": {
+        "line": 23,
+        "column": 3,
+        "index": 603
+      }
+    }
+  },
+  "members": {
+    "__username": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 623
+        },
+        "end": {
+          "line": 26,
+          "column": 20,
+          "index": 639
+        }
+      },
+      "appearsIn": []
+    },
+    "__password1": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 645
+        },
+        "end": {
+          "line": 27,
+          "column": 21,
+          "index": 662
+        }
+      },
+      "appearsIn": []
+    },
+    "__password2": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 668
+        },
+        "end": {
+          "line": 28,
+          "column": 21,
+          "index": 685
+        }
+      },
+      "appearsIn": []
+    },
+    "__resetter": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 691
+        },
+        "end": {
+          "line": 29,
+          "column": 20,
+          "index": 707
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 714
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 938
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 945
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1097
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testReset": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1104
+        },
+        "end": {
+          "line": 65,
+          "column": 5,
+          "index": 1882
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 67,
+          "column": 4,
+          "index": 1889
+        },
+        "end": {
+          "line": 87,
+          "column": 5,
+          "index": 2710
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetWithSelectBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 89,
+          "column": 4,
+          "index": 2717
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 3526
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDifferentWidgets": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 3533
+        },
+        "end": {
+          "line": 170,
+          "column": 5,
+          "index": 5097
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRedefine": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 172,
+          "column": 4,
+          "index": 5104
+        },
+        "end": {
+          "line": 199,
+          "column": 5,
+          "index": 6107
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRefineSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 201,
+          "column": 4,
+          "index": 6114
+        },
+        "end": {
+          "line": 230,
+          "column": 5,
+          "index": 6940
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetOneItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 232,
+          "column": 4,
+          "index": 6947
+        },
+        "end": {
+          "line": 259,
+          "column": 5,
+          "index": 7969
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRedefineOneItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 261,
+          "column": 4,
+          "index": 7976
+        },
+        "end": {
+          "line": 294,
+          "column": 5,
+          "index": 9183
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

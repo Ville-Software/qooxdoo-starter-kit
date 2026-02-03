@@ -1,0 +1,135 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338107,
+  "lastModifiedIso": "2026-01-03T20:15:38.107Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/event/dispatch/TestingWindow.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 472
+    },
+    "end": {
+      "line": 36,
+      "column": 3,
+      "index": 871
+    }
+  },
+  "className": "qx.test.event.dispatch.TestingWindow",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.core.Object",
+  "events": {
+    "unload": {
+      "type": "qx.event.type.Event",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 573
+        },
+        "end": {
+          "line": 23,
+          "column": 33,
+          "index": 602
+        }
+      }
+    },
+    "onunload": {
+      "type": "qx.event.type.Event",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 608
+        },
+        "end": {
+          "line": 24,
+          "column": 35,
+          "index": 639
+        }
+      }
+    }
+  },
+  "members": {
+    "addEventListener": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 663
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 774
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "type"
+        },
+        {
+          "name": "callback"
+        },
+        {
+          "name": "capture"
+        }
+      ],
+      "appearsIn": []
+    },
+    "attachEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 781
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 863
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "type"
+        },
+        {
+          "name": "callback"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

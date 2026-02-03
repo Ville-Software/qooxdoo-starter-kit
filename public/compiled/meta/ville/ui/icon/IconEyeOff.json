@@ -1,0 +1,87 @@
+{
+  "version": 0.3,
+  "lastModified": 1752097732437,
+  "lastModifiedIso": "2025-07-09T21:48:52.437Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/icon/IconEyeOff.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 38,
+      "column": 5,
+      "index": 1793
+    }
+  },
+  "className": "ville.ui.icon.IconEyeOff",
+  "jsdoc": null,
+  "superClass": "ville.ui.icon.Abstract",
+  "statics": {
+    "PATHD": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "index": 111
+        },
+        "end": {
+          "line": 6,
+          "column": 953,
+          "index": 1056
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 1069
+      },
+      "end": {
+        "line": 26,
+        "column": 5,
+        "index": 1519
+      }
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 8,
+          "index": 1568
+        },
+        "end": {
+          "line": 36,
+          "column": 9,
+          "index": 1781
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "properties": {}
+}

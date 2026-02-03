@@ -1,0 +1,294 @@
+{
+  "version": 0.3,
+  "lastModified": 1766459834612,
+  "lastModifiedIso": "2025-12-23T03:17:14.612Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/core/MWidget.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 48,
+      "column": 3,
+      "index": 1204
+    }
+  },
+  "className": "ville.ui.core.MWidget",
+  "jsdoc": null,
+  "members": {
+    "addClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 140
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": []
+    },
+    "removeClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 147
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 232
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": []
+    },
+    "setStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 279
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 380
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 427
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 512
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": []
+    },
+    "setStyles": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 559
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 650
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "styles"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": []
+    },
+    "removeStyle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 734
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        }
+      ],
+      "appearsIn": []
+    },
+    "setAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 741
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 858
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 865
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 966
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": []
+    },
+    "setAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 973
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": []
+    },
+    "removeAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1087
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1196
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

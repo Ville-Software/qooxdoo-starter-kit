@@ -1,0 +1,190 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338136,
+  "lastModifiedIso": "2026-01-03T20:15:38.136Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/singlevalue/TextFieldDummy.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 488
+    },
+    "end": {
+      "line": 64,
+      "column": 3,
+      "index": 1233
+    }
+  },
+  "className": "qx.test.data.singlevalue.TextFieldDummy",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.core.Object",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "value"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 578
+      },
+      "end": {
+        "line": 27,
+        "column": 3,
+        "index": 672
+      }
+    }
+  },
+  "properties": {
+    "appearance": {
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 695
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 785
+        }
+      },
+      "json": {
+        "check": "String",
+        "event": "changeAppearance",
+        "init": ""
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "enabled": {
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 792
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 879
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "event": "changeEnabled",
+        "init": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "zIndex": {
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 886
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 975
+        }
+      },
+      "json": {
+        "check": "Integer",
+        "event": "changeZIndex",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "floatt": {
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 982
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1025
+        }
+      },
+      "json": {
+        "event": "changeFloatt"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "value": {
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1032
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1118
+        }
+      },
+      "json": {
+        "check": "String",
+        "event": "changeValue",
+        "nullable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "backgroundColor": {
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1125
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1225
+        }
+      },
+      "json": {
+        "check": "String",
+        "event": "changeBackgroundColor",
+        "init": ""
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

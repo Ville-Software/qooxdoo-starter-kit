@@ -1,0 +1,92 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338133,
+  "lastModifiedIso": "2026-01-03T20:15:38.133Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/celleditor/TextField.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 32,
+      "column": 3,
+      "index": 770
+    }
+  },
+  "className": "qx.test.ui.table.celleditor.TextField",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.table.celleditor.AbstractField",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 607
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 683
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.table.celleditor.AbstractField",
+      "appearsIn": [
+        "qx.test.ui.table.celleditor.AbstractField",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 690
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 762
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.table.celleditor.AbstractField",
+      "appearsIn": [
+        "qx.test.ui.table.celleditor.AbstractField",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

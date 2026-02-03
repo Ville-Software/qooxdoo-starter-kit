@@ -1,0 +1,37 @@
+{
+  "version": 0.3,
+  "lastModified": 1767539332729,
+  "lastModifiedIso": "2026-01-04T15:08:52.729Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/theme/Appearance.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 11,
+      "column": 0,
+      "index": 228
+    },
+    "end": {
+      "line": 18,
+      "column": 3,
+      "index": 339
+    }
+  },
+  "className": "qxapp.theme.Appearance",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   Copyright: 2026 sqville",
+      "",
+      "   License: MIT license",
+      "",
+      "   Authors: sqville",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.theme.indigo.Appearance",
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

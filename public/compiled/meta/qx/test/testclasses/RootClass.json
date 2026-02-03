@@ -1,0 +1,78 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337864,
+  "lastModifiedIso": "2026-01-03T20:15:37.864Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/RootClass.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 17,
+      "column": 3,
+      "index": 278
+    }
+  },
+  "className": "qx.test.testclasses.RootClass",
+  "jsdoc": null,
+  "superClass": "qx.core.Object",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 80
+      },
+      "end": {
+        "line": 8,
+        "column": 3,
+        "index": 189
+      }
+    }
+  },
+  "members": {
+    "state": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 11,
+          "column": 4,
+          "index": 209
+        },
+        "end": {
+          "line": 11,
+          "column": 15,
+          "index": 220
+        }
+      },
+      "appearsIn": []
+    },
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "index": 227
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 270
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

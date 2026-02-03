@@ -1,0 +1,232 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337538,
+  "lastModifiedIso": "2026-01-03T20:15:37.538Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/NumberFormat.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 223,
+      "column": 3,
+      "index": 5587
+    }
+  },
+  "className": "qx.test.util.NumberFormat",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__nf": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 574
+        },
+        "end": {
+          "line": 23,
+          "column": 14,
+          "index": 584
+        }
+      },
+      "appearsIn": []
+    },
+    "__oldLocale": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 590
+        },
+        "end": {
+          "line": 24,
+          "column": 21,
+          "index": 607
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 614
+        },
+        "end": {
+          "line": 33,
+          "column": 5,
+          "index": 872
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 879
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 991
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberFormatConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 998
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2223
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberFormat": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 2230
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2908
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberParse": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2915
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 3866
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLocaleSwitch": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 152,
+          "column": 4,
+          "index": 3873
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4434
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberFormatChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 4441
+        },
+        "end": {
+          "line": 198,
+          "column": 5,
+          "index": 4948
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testParseWithPrefixOrPostfix": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 4955
+        },
+        "end": {
+          "line": 221,
+          "column": 5,
+          "index": 5579
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,829 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338207,
+  "lastModifiedIso": "2026-01-03T20:15:38.207Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/tree/virtual/Tree.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 575
+    },
+    "end": {
+      "line": 695,
+      "column": 3,
+      "index": 18855
+    }
+  },
+  "className": "qx.test.ui.tree.virtual.Tree",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.ui.tree.virtual.Leaf)",
+      " * @ignore(qx.test.ui.tree.virtual.Node)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.Leaf"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.Node"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.tree.virtual.AbstractTreeTest",
+  "members": {
+    "testCreation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 695
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 2665
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreationWithParams": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 2672
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 3304
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetItemHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 140,
+          "column": 4,
+          "index": 3311
+        },
+        "end": {
+          "line": 146,
+          "column": 5,
+          "index": 3483
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 148,
+          "column": 4,
+          "index": 3490
+        },
+        "end": {
+          "line": 151,
+          "column": 5,
+          "index": 3616
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 153,
+          "column": 4,
+          "index": 3623
+        },
+        "end": {
+          "line": 160,
+          "column": 5,
+          "index": 3817
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExceptionOnSetModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 162,
+          "column": 4,
+          "index": 3824
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4152
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTable": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 4159
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 4395
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableWithOpenNodes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 186,
+          "column": 4,
+          "index": 4402
+        },
+        "end": {
+          "line": 201,
+          "column": 5,
+          "index": 4846
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableWithRemovedNodes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 203,
+          "column": 4,
+          "index": 4853
+        },
+        "end": {
+          "line": 221,
+          "column": 5,
+          "index": 5390
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableWithClosedRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 223,
+          "column": 4,
+          "index": 5397
+        },
+        "end": {
+          "line": 228,
+          "column": 5,
+          "index": 5567
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableWithNoModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 230,
+          "column": 4,
+          "index": 5574
+        },
+        "end": {
+          "line": 235,
+          "column": 5,
+          "index": 5725
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableOnModelChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 237,
+          "column": 4,
+          "index": 5732
+        },
+        "end": {
+          "line": 252,
+          "column": 5,
+          "index": 6265
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupTableWithHiddenRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 254,
+          "column": 4,
+          "index": 6272
+        },
+        "end": {
+          "line": 261,
+          "column": 5,
+          "index": 6508
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuildLookupWithoutLeafs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 263,
+          "column": 4,
+          "index": 6515
+        },
+        "end": {
+          "line": 283,
+          "column": 5,
+          "index": 7125
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testBuildLookupTable": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 285,
+          "column": 4,
+          "index": 7132
+        },
+        "end": {
+          "line": 291,
+          "column": 5,
+          "index": 7367
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testChangeBubblesAddChild": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 293,
+          "column": 4,
+          "index": 7374
+        },
+        "end": {
+          "line": 304,
+          "column": 5,
+          "index": 7807
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeBubblesReplaceChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 306,
+          "column": 4,
+          "index": 7814
+        },
+        "end": {
+          "line": 326,
+          "column": 5,
+          "index": 8536
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeBubblesRemoveItems": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 8543
+        },
+        "end": {
+          "line": 339,
+          "column": 5,
+          "index": 8961
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeBubblesChangeProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 341,
+          "column": 4,
+          "index": 8968
+        },
+        "end": {
+          "line": 350,
+          "column": 5,
+          "index": 9272
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoChangeBubblesAddChild": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 352,
+          "column": 4,
+          "index": 9279
+        },
+        "end": {
+          "line": 366,
+          "column": 5,
+          "index": 9663
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetOpenNodes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 368,
+          "column": 4,
+          "index": 9670
+        },
+        "end": {
+          "line": 371,
+          "column": 5,
+          "index": 9809
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsNodeOpen": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 373,
+          "column": 4,
+          "index": 9816
+        },
+        "end": {
+          "line": 383,
+          "column": 5,
+          "index": 10191
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOpenNode": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 385,
+          "column": 4,
+          "index": 10198
+        },
+        "end": {
+          "line": 395,
+          "column": 5,
+          "index": 10552
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCloseNode": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 397,
+          "column": 4,
+          "index": 10559
+        },
+        "end": {
+          "line": 408,
+          "column": 5,
+          "index": 10940
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCloseNodeWithRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 410,
+          "column": 4,
+          "index": 10947
+        },
+        "end": {
+          "line": 421,
+          "column": 5,
+          "index": 11345
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOpenNodeWithParents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 423,
+          "column": 4,
+          "index": 11352
+        },
+        "end": {
+          "line": 446,
+          "column": 5,
+          "index": 12033
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsNode": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 448,
+          "column": 4,
+          "index": 12040
+        },
+        "end": {
+          "line": 482,
+          "column": 5,
+          "index": 12868
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetLevel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 484,
+          "column": 4,
+          "index": 12875
+        },
+        "end": {
+          "line": 528,
+          "column": 5,
+          "index": 13876
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetLevelWithHiddenRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 530,
+          "column": 4,
+          "index": 13883
+        },
+        "end": {
+          "line": 542,
+          "column": 5,
+          "index": 14359
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHasChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 544,
+          "column": 4,
+          "index": 14366
+        },
+        "end": {
+          "line": 551,
+          "column": 5,
+          "index": 14627
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHasChildrenHideLeafs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 553,
+          "column": 4,
+          "index": 14634
+        },
+        "end": {
+          "line": 568,
+          "column": 5,
+          "index": 15244
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetOpenModeWithTap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 570,
+          "column": 4,
+          "index": 15251
+        },
+        "end": {
+          "line": 576,
+          "column": 5,
+          "index": 15433
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetOpenModeWithNone": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 578,
+          "column": 4,
+          "index": 15440
+        },
+        "end": {
+          "line": 584,
+          "column": 5,
+          "index": 15625
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testOpenMode": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 586,
+          "column": 4,
+          "index": 15632
+        },
+        "end": {
+          "line": 599,
+          "column": 5,
+          "index": 16026
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "dbltap"
+        },
+        {
+          "name": "tap"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 601,
+          "column": 4,
+          "index": 16033
+        },
+        "end": {
+          "line": 629,
+          "column": 5,
+          "index": 16858
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOpenNodeWithoutScrolling": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 631,
+          "column": 4,
+          "index": 16865
+        },
+        "end": {
+          "line": 665,
+          "column": 5,
+          "index": 18034
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__getRowFrom": {
+      "jsdoc": {
+        "raw": [
+          "",
+          "    ---------------------------------------------------------------------------",
+          "      HELPER METHOD TO CALCULATE THE VISIBLE ITEMS",
+          "    ---------------------------------------------------------------------------",
+          "    "
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 673,
+          "column": 4,
+          "index": 18267
+        },
+        "end": {
+          "line": 675,
+          "column": 5,
+          "index": 18348
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "item"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__openNodes": {
+      "jsdoc": {
+        "raw": [
+          "",
+          "    ---------------------------------------------------------------------------",
+          "      HELPER METHOD TO OPEN NODES ON TREE",
+          "    ---------------------------------------------------------------------------",
+          "    "
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 683,
+          "column": 4,
+          "index": 18572
+        },
+        "end": {
+          "line": 687,
+          "column": 5,
+          "index": 18707
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "nodes"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__disposeChildren": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 689,
+          "column": 4,
+          "index": 18714
+        },
+        "end": {
+          "line": 693,
+          "column": 5,
+          "index": 18847
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "nativeArray"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

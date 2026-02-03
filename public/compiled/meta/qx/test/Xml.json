@@ -1,0 +1,240 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338379,
+  "lastModifiedIso": "2026-01-03T20:15:38.379Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Xml.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 276,
+      "column": 3,
+      "index": 8424
+    }
+  },
+  "className": "qx.test.Xml",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "serializeArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 560
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 742
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "arr"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testParseSerializeXml": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 749
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1278
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFromString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1285
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1506
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateDocument": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1513
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 2044
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testXPath": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2051
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3163
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testXPathNS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 3170
+        },
+        "end": {
+          "line": 176,
+          "column": 5,
+          "index": 5404
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetElementsByTagNameNS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 178,
+          "column": 4,
+          "index": 5411
+        },
+        "end": {
+          "line": 225,
+          "column": 5,
+          "index": 6836
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetAttributeNS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 227,
+          "column": 4,
+          "index": 6843
+        },
+        "end": {
+          "line": 241,
+          "column": 5,
+          "index": 7371
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetAttributeNS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 243,
+          "column": 4,
+          "index": 7378
+        },
+        "end": {
+          "line": 253,
+          "column": 5,
+          "index": 7773
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateSubElementNS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 255,
+          "column": 4,
+          "index": 7780
+        },
+        "end": {
+          "line": 274,
+          "column": 5,
+          "index": 8416
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

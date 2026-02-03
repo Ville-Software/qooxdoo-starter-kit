@@ -1,0 +1,278 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337172,
+  "lastModifiedIso": "2026-01-03T20:15:37.172Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/Label.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 478
+    },
+    "end": {
+      "line": 255,
+      "column": 3,
+      "index": 7839
+    }
+  },
+  "className": "qx.test.bom.Label",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Alexander Steitz (aback)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 567
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1543
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1550
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1805
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextNormal": {
+      "jsdoc": {
+        "raw": [
+          " to ensure the change of bug #5011 does not break anything"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1946
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 3179
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextBold": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 3186
+        },
+        "end": {
+          "line": 107,
+          "column": 5,
+          "index": 3661
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextItalic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 109,
+          "column": 4,
+          "index": 3668
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 4147
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextBoldItalic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 4154
+        },
+        "end": {
+          "line": 141,
+          "column": 5,
+          "index": 4641
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextFontSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 4,
+          "index": 4648
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 5126
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextFontFamily": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 160,
+          "column": 4,
+          "index": 5133
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 5616
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextPadding": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 5623
+        },
+        "end": {
+          "line": 192,
+          "column": 5,
+          "index": 6104
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextMargin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 194,
+          "column": 4,
+          "index": 6111
+        },
+        "end": {
+          "line": 209,
+          "column": 5,
+          "index": 6590
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMeasureSizeTextAllTogether": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 211,
+          "column": 4,
+          "index": 6597
+        },
+        "end": {
+          "line": 226,
+          "column": 5,
+          "index": 7087
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSanitizer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 228,
+          "column": 4,
+          "index": 7094
+        },
+        "end": {
+          "line": 253,
+          "column": 5,
+          "index": 7831
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

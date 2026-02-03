@@ -1,0 +1,178 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338149,
+  "lastModifiedIso": "2026-01-03T20:15:38.149Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/event/Timer.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 128,
+      "column": 3,
+      "index": 3223
+    }
+  },
+  "className": "qx.test.event.Timer",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 568
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 636
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGlobalErrorHandling": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 643
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 954
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStartStop": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test if timer can be started and stopped.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test if timer can be started and stopped.</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1026
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 2014
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoStartByDefault": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test if newly created timers don't start by default.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test if newly created timers don't start by default.</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 2097
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 2663
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStaticOnce": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Timer using static method once() should start automatically and fire",
+          "     * exactly a single time.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Timer using static method once() should start automatically and fire\n exactly a single time.</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 2792
+        },
+        "end": {
+          "line": 126,
+          "column": 5,
+          "index": 3215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

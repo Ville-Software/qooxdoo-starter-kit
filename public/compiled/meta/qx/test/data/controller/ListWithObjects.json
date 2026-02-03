@@ -1,0 +1,480 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337244,
+  "lastModifiedIso": "2026-01-03T20:15:37.244Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/controller/ListWithObjects.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 561
+    },
+    "end": {
+      "line": 663,
+      "column": 3,
+      "index": 16970
+    }
+  },
+  "className": "qx.test.data.controller.ListWithObjects",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.ListWithObject, qx.demo.Parent, qx.demo.Kid)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.ListWithObject, qx.demo.Parent, qx.demo.Kid"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 26,
+        "column": 2,
+        "index": 662
+      },
+      "end": {
+        "line": 46,
+        "column": 3,
+        "index": 1027
+      }
+    }
+  },
+  "members": {
+    "__list": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1047
+        },
+        "end": {
+          "line": 49,
+          "column": 16,
+          "index": 1059
+        }
+      },
+      "appearsIn": []
+    },
+    "__controller": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1065
+        },
+        "end": {
+          "line": 50,
+          "column": 22,
+          "index": 1083
+        }
+      },
+      "appearsIn": []
+    },
+    "__data": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1089
+        },
+        "end": {
+          "line": 51,
+          "column": 16,
+          "index": 1101
+        }
+      },
+      "appearsIn": []
+    },
+    "__model": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1107
+        },
+        "end": {
+          "line": 52,
+          "column": 17,
+          "index": 1120
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1127
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1506
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1513
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 1776
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testRead": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 1783
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2235
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeLablePath": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2242
+        },
+        "end": {
+          "line": 128,
+          "column": 5,
+          "index": 3039
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 3046
+        },
+        "end": {
+          "line": 169,
+          "column": 5,
+          "index": 4107
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionBackMultiple": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 171,
+          "column": 4,
+          "index": 4114
+        },
+        "end": {
+          "line": 198,
+          "column": 5,
+          "index": 4931
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeModelSmaller": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 4938
+        },
+        "end": {
+          "line": 237,
+          "column": 5,
+          "index": 5995
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 6002
+        },
+        "end": {
+          "line": 267,
+          "column": 5,
+          "index": 6788
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeIconPath": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 269,
+          "column": 4,
+          "index": 6795
+        },
+        "end": {
+          "line": 300,
+          "column": 5,
+          "index": 7630
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConversionLabelAndIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 302,
+          "column": 4,
+          "index": 7637
+        },
+        "end": {
+          "line": 347,
+          "column": 5,
+          "index": 8848
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetModelLate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 349,
+          "column": 4,
+          "index": 8855
+        },
+        "end": {
+          "line": 368,
+          "column": 5,
+          "index": 9356
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetTargetLate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 370,
+          "column": 4,
+          "index": 9363
+        },
+        "end": {
+          "line": 389,
+          "column": 5,
+          "index": 9866
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 391,
+          "column": 4,
+          "index": 9873
+        },
+        "end": {
+          "line": 421,
+          "column": 5,
+          "index": 10762
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOnUpdateLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 423,
+          "column": 4,
+          "index": 10769
+        },
+        "end": {
+          "line": 455,
+          "column": 5,
+          "index": 11668
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDeepSelection": {
+      "jsdoc": {
+        "raw": [
+          " [BUG #2088]"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 458,
+          "column": 4,
+          "index": 11694
+        },
+        "end": {
+          "line": 544,
+          "column": 5,
+          "index": 13781
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 546,
+          "column": 4,
+          "index": 13788
+        },
+        "end": {
+          "line": 599,
+          "column": 5,
+          "index": 15159
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelPropertyBinding": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 601,
+          "column": 4,
+          "index": 15166
+        },
+        "end": {
+          "line": 627,
+          "column": 5,
+          "index": 16032
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelInConverter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 629,
+          "column": 4,
+          "index": 16039
+        },
+        "end": {
+          "line": 661,
+          "column": 5,
+          "index": 16962
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

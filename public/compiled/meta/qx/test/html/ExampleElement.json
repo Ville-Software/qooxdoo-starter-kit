@@ -1,0 +1,41 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336381,
+  "lastModifiedIso": "2026-01-03T20:15:36.381Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/html/ExampleElement.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 25,
+      "column": 3,
+      "index": 507
+    }
+  },
+  "className": "qx.test.html.ExampleElement",
+  "jsdoc": null,
+  "superClass": "qx.html.Element",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 79
+      },
+      "end": {
+        "line": 8,
+        "column": 3,
+        "index": 185
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

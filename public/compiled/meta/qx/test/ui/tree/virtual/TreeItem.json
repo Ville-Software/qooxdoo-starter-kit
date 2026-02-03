@@ -1,0 +1,112 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338213,
+  "lastModifiedIso": "2026-01-03T20:15:38.213Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/tree/virtual/TreeItem.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 605
+    },
+    "end": {
+      "line": 122,
+      "column": 3,
+      "index": 3399
+    }
+  },
+  "className": "qx.test.ui.tree.virtual.TreeItem",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.ui.tree.virtual.Node)",
+      " * @ignore(qx.test.ui.tree.virtual.NodeDefered)",
+      " * @ignore(qx.test.ui.tree.virtual.Leaf)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.Node"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.NodeDefered"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.Leaf"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.tree.virtual.AbstractTreeTest",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 27,
+        "column": 2,
+        "index": 714
+      },
+      "end": {
+        "line": 54,
+        "column": 3,
+        "index": 1378
+      }
+    }
+  },
+  "members": {
+    "testChildrenSetDeferred": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1398
+        },
+        "end": {
+          "line": 111,
+          "column": 5,
+          "index": 3146
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__getWidgetForm": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 3153
+        },
+        "end": {
+          "line": 120,
+          "column": 5,
+          "index": 3391
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "modelItem"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

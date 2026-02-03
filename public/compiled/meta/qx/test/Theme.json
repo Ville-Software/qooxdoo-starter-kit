@@ -1,0 +1,234 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338139,
+  "lastModifiedIso": "2026-01-03T20:15:38.139Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Theme.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 505
+    },
+    "end": {
+      "line": 249,
+      "column": 3,
+      "index": 6192
+    }
+  },
+  "className": "qx.test.Theme",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.theme.Foo)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.theme.Foo"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 590
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 686
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 693
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 857
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExtendTheme": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 864
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1405
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIncludeTheme": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1412
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 1955
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIncludeInvalidTheme": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 1962
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2742
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchTheme": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 2749
+        },
+        "end": {
+          "line": 135,
+          "column": 5,
+          "index": 3349
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchInvalidTheme": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 137,
+          "column": 4,
+          "index": 3356
+        },
+        "end": {
+          "line": 166,
+          "column": 5,
+          "index": 4130
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIncludeThemeWithIncludes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 168,
+          "column": 4,
+          "index": 4137
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 4822
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDoubleExtend": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 195,
+          "column": 4,
+          "index": 4829
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 5496
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExtendThemeWithIncludes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 222,
+          "column": 4,
+          "index": 5503
+        },
+        "end": {
+          "line": 247,
+          "column": 5,
+          "index": 6184
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

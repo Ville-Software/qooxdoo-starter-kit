@@ -1,0 +1,188 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335750,
+  "lastModifiedIso": "2026-01-03T20:15:35.750Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/compiler/ClassFile.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 16,
+      "column": 0,
+      "index": 391
+    },
+    "end": {
+      "line": 97,
+      "column": 3,
+      "index": 2620
+    }
+  },
+  "className": "qx.test.compiler.ClassFile",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Henner Kollmann",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 19,
+        "column": 2,
+        "index": 474
+      },
+      "end": {
+        "line": 26,
+        "column": 3,
+        "index": 785
+      }
+    }
+  },
+  "members": {
+    "test issue 10591": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 805
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1156
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test issue 633": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1163
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1510
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test issue 519": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1517
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1864
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test issue 524": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1871
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2218
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test issue 726": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2225
+        },
+        "end": {
+          "line": 92,
+          "column": 5,
+          "index": 2572
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__lib": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 94,
+          "column": 4,
+          "index": 2579
+        },
+        "end": {
+          "line": 94,
+          "column": 15,
+          "index": 2590
+        }
+      },
+      "appearsIn": []
+    },
+    "__analyser": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 95,
+          "column": 4,
+          "index": 2596
+        },
+        "end": {
+          "line": 95,
+          "column": 20,
+          "index": 2612
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

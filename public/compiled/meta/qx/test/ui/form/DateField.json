@@ -1,0 +1,177 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335951,
+  "lastModifiedIso": "2026-01-03T20:15:35.951Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/DateField.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 65,
+      "column": 3,
+      "index": 1667
+    }
+  },
+  "className": "qx.test.ui.form.DateField",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tristan Koch (tristankoch)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 582
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 694
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 701
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 777
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "test: setting value sets date of chooser": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 784
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1040
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: choosing date fills in formatted date": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1047
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1487
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "formatDate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1494
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1578
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "date"
+        }
+      ],
+      "appearsIn": []
+    },
+    "skip": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1585
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1659
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "msg"
+        }
+      ],
+      "overriddenFrom": "qx.dev.unit.TestCase",
+      "appearsIn": [
+        "qx.dev.unit.TestCase"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

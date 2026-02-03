@@ -1,0 +1,183 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337750,
+  "lastModifiedIso": "2026-01-03T20:15:37.750Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/PropertyUtil.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 527
+    },
+    "end": {
+      "line": 115,
+      "column": 3,
+      "index": 2951
+    }
+  },
+  "className": "qx.test.util.PropertyUtil",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.propA, qx.test.propB)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.propA, qx.test.propB"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 629
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 748
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 755
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 826
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testGetUserValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 833
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1184
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetThemeValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1191
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1403
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetInitValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1410
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1618
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetThemed": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1625
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 2091
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2098
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 2943
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

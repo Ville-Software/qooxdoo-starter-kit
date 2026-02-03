@@ -1,0 +1,243 @@
+{
+  "version": 0.3,
+  "lastModified": 1768704335872,
+  "lastModifiedIso": "2026-01-18T02:45:35.872Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/FieldSet.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 67
+    },
+    "end": {
+      "line": 108,
+      "column": 5,
+      "index": 2694
+    }
+  },
+  "className": "ville.ui.form.FieldSet",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Fieldset",
+      " * @external(mantine/core/styles/FieldSet.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Fieldset</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/FieldSet.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Box",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "legend"
+      },
+      {
+        "name": "variant"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 152
+      },
+      "end": {
+        "line": 25,
+        "column": 5,
+        "index": 510
+      }
+    }
+  },
+  "statics": {
+    "fdsVariantClasses": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 8,
+          "index": 537
+        },
+        "end": {
+          "line": 33,
+          "column": 9,
+          "index": 671
+        }
+      },
+      "appearsIn": []
+    },
+    "fdsLegendClasses": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 8,
+          "index": 682
+        },
+        "end": {
+          "line": 37,
+          "column": 9,
+          "index": 746
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "properties": {
+    "variant": {
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 8,
+          "index": 791
+        },
+        "end": {
+          "line": 49,
+          "column": 9,
+          "index": 994
+        }
+      },
+      "json": {
+        "init": "default",
+        "check": [
+          "default",
+          "filled",
+          "unstyled"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "legend": {
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 8,
+          "index": 1005
+        },
+        "end": {
+          "line": 57,
+          "column": 9,
+          "index": 1179
+        }
+      },
+      "json": {
+        "check": "String",
+        "apply": "_applyLegend",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeLegend"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 63,
+          "column": 8,
+          "index": 1238
+        },
+        "end": {
+          "line": 80,
+          "column": 9,
+          "index": 1992
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLegend": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 8,
+          "index": 2003
+        },
+        "end": {
+          "line": 89,
+          "column": 9,
+          "index": 2239
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 8,
+          "index": 2272
+        },
+        "end": {
+          "line": 104,
+          "column": 9,
+          "index": 2680
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    }
+  }
+}

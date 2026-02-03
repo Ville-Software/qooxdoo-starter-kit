@@ -1,0 +1,457 @@
+{
+  "version": 0.3,
+  "lastModified": 1767819120908,
+  "lastModifiedIso": "2026-01-07T20:52:00.908Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/core/Divider.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 93
+    },
+    "end": {
+      "line": 157,
+      "column": 5,
+      "index": 4498
+    }
+  },
+  "className": "ville.ui.core.Divider",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This is the most basic ui component",
+      " * @external(mantine/core/styles/Divider.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This is the most basic ui component</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Divider.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 8,
+        "column": 4,
+        "index": 175
+      },
+      "end": {
+        "line": 23,
+        "column": 5,
+        "index": 645
+      }
+    }
+  },
+  "properties": {
+    "label": {
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 8,
+          "index": 675
+        },
+        "end": {
+          "line": 32,
+          "column": 9,
+          "index": 817
+        }
+      },
+      "json": {
+        "check": "String",
+        "apply": "_applyLabel",
+        "nullable": true,
+        "event": "changeLabel"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "labelPosition": {
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 8,
+          "index": 828
+        },
+        "end": {
+          "line": 41,
+          "column": 9,
+          "index": 1070
+        }
+      },
+      "json": {
+        "init": "center",
+        "check": [
+          "left",
+          "center",
+          "right"
+        ],
+        "apply": "_applyLabelPosition",
+        "themeable": true,
+        "nullable": true,
+        "event": "changeLabelPosition"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "orientation": {
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 8,
+          "index": 1081
+        },
+        "end": {
+          "line": 50,
+          "column": 9,
+          "index": 1321
+        }
+      },
+      "json": {
+        "init": "horizontal",
+        "check": [
+          "horizontal",
+          "vertical"
+        ],
+        "apply": "_applyOrientation",
+        "themeable": true,
+        "nullable": false,
+        "event": "changeOrientation"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "variant": {
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 8,
+          "index": 1332
+        },
+        "end": {
+          "line": 59,
+          "column": 9,
+          "index": 1545
+        }
+      },
+      "json": {
+        "check": [
+          "dashed",
+          "dotted"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "nullable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "size": {
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 8,
+          "index": 1556
+        },
+        "end": {
+          "line": 68,
+          "column": 9,
+          "index": 1770
+        }
+      },
+      "json": {
+        "init": "xs",
+        "check": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "apply": "_applySize",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSize"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "spacing": {
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 8,
+          "index": 1781
+        },
+        "end": {
+          "line": 77,
+          "column": 9,
+          "index": 2004
+        }
+      },
+      "json": {
+        "init": "xs",
+        "check": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "apply": "_applySpacing",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSpacing"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 83,
+          "column": 8,
+          "index": 2059
+        },
+        "end": {
+          "line": 85,
+          "column": 9,
+          "index": 2141
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 8,
+          "index": 2174
+        },
+        "end": {
+          "line": 101,
+          "column": 9,
+          "index": 2652
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 8,
+          "index": 2689
+        },
+        "end": {
+          "line": 118,
+          "column": 9,
+          "index": 3283
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLabelPosition": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 8,
+          "index": 3320
+        },
+        "end": {
+          "line": 126,
+          "column": 9,
+          "index": 3552
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyOrientation": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 8,
+          "index": 3589
+        },
+        "end": {
+          "line": 133,
+          "column": 9,
+          "index": 3751
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 8,
+          "index": 3788
+        },
+        "end": {
+          "line": 142,
+          "column": 9,
+          "index": 4037
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySize": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 8,
+          "index": 4048
+        },
+        "end": {
+          "line": 149,
+          "column": 9,
+          "index": 4297
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySpacing": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 151,
+          "column": 8,
+          "index": 4308
+        },
+        "end": {
+          "line": 155,
+          "column": 9,
+          "index": 4486
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

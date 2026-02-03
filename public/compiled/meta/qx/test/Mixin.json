@@ -1,0 +1,277 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337412,
+  "lastModifiedIso": "2026-01-03T20:15:37.412Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Mixin.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 25,
+      "column": 0,
+      "index": 660
+    },
+    "end": {
+      "line": 875,
+      "column": 3,
+      "index": 20635
+    }
+  },
+  "className": "qx.test.Mixin",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.ExtendUseLog1, qx.Mix, qx.MLogger, qx.MMix1, qx.MMix1.foo)",
+      " * @ignore(qx.MMix2, qx.MPatch, qx.Patch1, qx.Patch2, qx.UseLog1, qx.UseLog2)",
+      " * @ignore(qx.UseLog3)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.ExtendUseLog1, qx.Mix, qx.MLogger, qx.MMix1, qx.MMix1.foo"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.MMix2, qx.MPatch, qx.Patch1, qx.Patch2, qx.UseLog1, qx.UseLog2"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.UseLog3"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testMixinBasic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 745
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 2861
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInclude": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 2868
+        },
+        "end": {
+          "line": 191,
+          "column": 5,
+          "index": 4274
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchOverwritten": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 193,
+          "column": 4,
+          "index": 4281
+        },
+        "end": {
+          "line": 269,
+          "column": 5,
+          "index": 6025
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchConstructors": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 271,
+          "column": 4,
+          "index": 6032
+        },
+        "end": {
+          "line": 405,
+          "column": 5,
+          "index": 10241
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchDouble": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 407,
+          "column": 4,
+          "index": 10248
+        },
+        "end": {
+          "line": 446,
+          "column": 5,
+          "index": 11081
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchOverwrittenDerived": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 448,
+          "column": 4,
+          "index": 11088
+        },
+        "end": {
+          "line": 480,
+          "column": 5,
+          "index": 11811
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchOverwrittenDerivedInBaseClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 482,
+          "column": 4,
+          "index": 11818
+        },
+        "end": {
+          "line": 518,
+          "column": 5,
+          "index": 12647
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPatchMultiOverwrittenDerived": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 520,
+          "column": 4,
+          "index": 12654
+        },
+        "end": {
+          "line": 579,
+          "column": 5,
+          "index": 13844
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDoubleMixin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 581,
+          "column": 4,
+          "index": 13851
+        },
+        "end": {
+          "line": 613,
+          "column": 5,
+          "index": 14519
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDoubleMixinWithSuperStruct": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 615,
+          "column": 4,
+          "index": 14526
+        },
+        "end": {
+          "line": 668,
+          "column": 5,
+          "index": 15743
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLotsMixinLotsSuper": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * tests a large structure to ensure that combinations of patch order,",
+          "     * presence of given method, nor patched class count have an impact on",
+          "     * the behavior of `super` in mixin methods.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>tests a large structure to ensure that combinations of patch order,\n presence of given method, nor patched class count have an impact on\n the behavior of <code>super</code> in mixin methods.</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 675,
+          "column": 4,
+          "index": 15965
+        },
+        "end": {
+          "line": 873,
+          "column": 5,
+          "index": 20627
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

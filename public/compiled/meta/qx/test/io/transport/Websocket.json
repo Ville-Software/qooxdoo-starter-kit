@@ -1,0 +1,147 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338322,
+  "lastModifiedIso": "2026-01-03T20:15:38.322Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/transport/Websocket.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 580
+    },
+    "end": {
+      "line": 64,
+      "column": 3,
+      "index": 1719
+    }
+  },
+  "className": "qx.test.io.transport.Websocket",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Tests for the websocket transport",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Tests for the websocket transport</p>"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "statics": {
+    "TEST_ENDPOINT": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 682
+        },
+        "end": {
+          "line": 27,
+          "column": 45,
+          "index": 723
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "__hasEndpoint": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 747
+        },
+        "end": {
+          "line": 31,
+          "column": 24,
+          "index": 767
+        }
+      },
+      "appearsIn": []
+    },
+    "__skipMsg": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 773
+        },
+        "end": {
+          "line": 32,
+          "column": 60,
+          "index": 829
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 836
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 964
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: check endpoint": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 971
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1248
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send message to public websocket echo server and check response": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1255
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1711
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "properties": {}
+}

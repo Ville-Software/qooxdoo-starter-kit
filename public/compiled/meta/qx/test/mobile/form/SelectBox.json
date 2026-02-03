@@ -1,0 +1,161 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337916,
+  "lastModifiedIso": "2026-01-03T20:15:37.916Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/form/SelectBox.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 510
+    },
+    "end": {
+      "line": 197,
+      "column": 3,
+      "index": 6007
+    }
+  },
+  "className": "qx.test.mobile.form.SelectBox",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2011-2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tino Butz (tbtz)",
+      "     * Christopher Zuendorf (czuendorf)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 620
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1667
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNullable": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1674
+        },
+        "end": {
+          "line": 92,
+          "column": 5,
+          "index": 2796
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionNoModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 94,
+          "column": 4,
+          "index": 2803
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 3159
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 3166
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3650
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetValueNotNullable": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3657
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 4150
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 4157
+        },
+        "end": {
+          "line": 195,
+          "column": 5,
+          "index": 5999
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

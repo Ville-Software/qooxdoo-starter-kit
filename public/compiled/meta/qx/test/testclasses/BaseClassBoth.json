@@ -1,0 +1,68 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335390,
+  "lastModifiedIso": "2026-01-03T20:15:35.390Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/BaseClassBoth.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 16,
+      "column": 3,
+      "index": 328
+    }
+  },
+  "className": "qx.test.testclasses.BaseClassBoth",
+  "jsdoc": null,
+  "superClass": "qx.test.testclasses.RootClass",
+  "mixins": [
+    "qx.test.testclasses.MMixinOne"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 5,
+        "column": 2,
+        "index": 143
+      },
+      "end": {
+        "line": 8,
+        "column": 3,
+        "index": 202
+      }
+    }
+  },
+  "members": {
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "index": 176
+        },
+        "end": {
+          "line": 10,
+          "column": 5,
+          "index": 224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "mixin": "qx.test.testclasses.MMixinOne",
+      "appearsIn": [
+        "qx.test.testclasses.MMixinOne",
+        "qx.test.testclasses.RootClass"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

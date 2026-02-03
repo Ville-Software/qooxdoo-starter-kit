@@ -1,0 +1,160 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336820,
+  "lastModifiedIso": "2026-01-03T20:15:36.820Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/dom/Hierarchy.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 478
+    },
+    "end": {
+      "line": 140,
+      "column": 3,
+      "index": 4126
+    }
+  },
+  "className": "qx.test.dom.Hierarchy",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Alexander Steitz (aback)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 571
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 1128
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1135
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1789
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsRendered": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1796
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 2158
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsRenderedIframe": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 4,
+          "index": 2165
+        },
+        "end": {
+          "line": 93,
+          "column": 5,
+          "index": 2775
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContains": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 95,
+          "column": 4,
+          "index": 2782
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 3486
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetCommonParent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 3493
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 4118
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

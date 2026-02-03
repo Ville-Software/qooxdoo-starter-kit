@@ -1,0 +1,83 @@
+{
+  "version": 0.3,
+  "lastModified": 1769800208102,
+  "lastModifiedIso": "2026-01-30T19:10:08.102Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/MPage.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 18,
+      "column": 3,
+      "index": 294
+    }
+  },
+  "className": "qxapp.pages.MPage",
+  "jsdoc": null,
+  "properties": {
+    "pageUrl": {
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 111
+        },
+        "end": {
+          "line": 9,
+          "column": 5,
+          "index": 167
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's url made externally available "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's url made externally available</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 12,
+          "column": 4,
+          "index": 219
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 285
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Associated Inertia component name "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Associated Inertia component name</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

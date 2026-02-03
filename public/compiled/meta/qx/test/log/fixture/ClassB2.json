@@ -1,0 +1,48 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335733,
+  "lastModifiedIso": "2026-01-03T20:15:35.733Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/log/fixture/ClassB2.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 11,
+      "column": 3,
+      "index": 215
+    }
+  },
+  "className": "qx.test.log.fixture.ClassB2",
+  "jsdoc": null,
+  "superClass": "qx.test.log.fixture.ClassA",
+  "members": {
+    "_applyNewProperty": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 105
+        },
+        "end": {
+          "line": 9,
+          "column": 5,
+          "index": 207
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.log.fixture.ClassA",
+      "appearsIn": [
+        "qx.test.log.fixture.ClassA"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

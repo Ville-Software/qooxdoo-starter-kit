@@ -1,0 +1,351 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337692,
+  "lastModifiedIso": "2026-01-03T20:15:37.692Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/core/Placement.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 178,
+      "column": 3,
+      "index": 4461
+    }
+  },
+  "className": "qx.test.ui.core.Placement",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__nogo": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 589
+        },
+        "end": {
+          "line": 22,
+          "column": 16,
+          "index": 601
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 608
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 911
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 918
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 1042
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "__testAlwaysVisibleElement": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1049
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1594
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "w"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testVisibleWithPopoup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1601
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 1732
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVisibleWithMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1739
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 1866
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testAlwaysVisibleElementTooBig": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 4,
+          "index": 1873
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 2467
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "w"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testVisibleWithPopoupTooBig": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2474
+        },
+        "end": {
+          "line": 102,
+          "column": 5,
+          "index": 2617
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVisibleWithMenuTooBig": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2624
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2763
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testAlwaysVisibleElementAbove": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2770
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 3342
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "w"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testVisibleWithPopoupAbove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 133,
+          "column": 4,
+          "index": 3349
+        },
+        "end": {
+          "line": 137,
+          "column": 5,
+          "index": 3490
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVisibleWithMenuAbove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 139,
+          "column": 4,
+          "index": 3497
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 3634
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testAlwaysVisibleElementBelow": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 3641
+        },
+        "end": {
+          "line": 164,
+          "column": 5,
+          "index": 4161
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "w"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testVisibleWithPopoupBelow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 166,
+          "column": 4,
+          "index": 4168
+        },
+        "end": {
+          "line": 170,
+          "column": 5,
+          "index": 4309
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVisibleWithMenuBelow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 172,
+          "column": 4,
+          "index": 4316
+        },
+        "end": {
+          "line": 176,
+          "column": 5,
+          "index": 4453
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

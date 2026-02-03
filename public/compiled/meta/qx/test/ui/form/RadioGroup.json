@@ -1,0 +1,146 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337771,
+  "lastModifiedIso": "2026-01-03T20:15:37.771Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/RadioGroup.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 156,
+      "column": 3,
+      "index": 4545
+    }
+  },
+  "className": "qx.test.ui.form.RadioGroup",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Alexander Steitz (aback)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 580
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 1012
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1019
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 1370
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testHiddenRadioButtons": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1377
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2751
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAlteredGroupProperty": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @ignore(qx.test.ui.form.RadioGroupTest)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "qx.test.ui.form.RadioGroupTest"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 95,
+          "column": 4,
+          "index": 2821
+        },
+        "end": {
+          "line": 154,
+          "column": 5,
+          "index": 4537
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

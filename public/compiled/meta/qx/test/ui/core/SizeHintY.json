@@ -1,0 +1,161 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337998,
+  "lastModifiedIso": "2026-01-03T20:15:37.998Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/core/SizeHintY.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 46,
+      "column": 3,
+      "index": 1128
+    }
+  },
+  "className": "qx.test.ui.core.SizeHintY",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.core.SizeHint",
+  "members": {
+    "assertHint": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 578
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 819
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "min"
+        },
+        {
+          "name": "size"
+        },
+        {
+          "name": "max"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.core.SizeHint",
+      "appearsIn": [
+        "qx.test.ui.core.SizeHint"
+      ]
+    },
+    "getDefaultSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 826
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 867
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.core.SizeHint",
+      "appearsIn": [
+        "qx.test.ui.core.SizeHint"
+      ]
+    },
+    "setSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 874
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1008
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "min"
+        },
+        {
+          "name": "size"
+        },
+        {
+          "name": "max"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.core.SizeHint",
+      "appearsIn": [
+        "qx.test.ui.core.SizeHint"
+      ]
+    },
+    "setStretching": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1015
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1120
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "allowShrink"
+        },
+        {
+          "name": "allowGrow"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.core.SizeHint",
+      "appearsIn": [
+        "qx.test.ui.core.SizeHint"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

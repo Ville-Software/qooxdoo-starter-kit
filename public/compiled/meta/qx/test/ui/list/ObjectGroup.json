@@ -1,0 +1,284 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337555,
+  "lastModifiedIso": "2026-01-03T20:15:37.555Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/list/ObjectGroup.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 290,
+      "column": 3,
+      "index": 7239
+    }
+  },
+  "className": "qx.test.ui.list.ObjectGroup",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.list.AbstractListTest",
+  "members": {
+    "__names": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 600
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 991
+        }
+      },
+      "appearsIn": []
+    },
+    "__groups": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 998
+        },
+        "end": {
+          "line": 42,
+          "column": 18,
+          "index": 1012
+        }
+      },
+      "appearsIn": []
+    },
+    "createModelData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1019
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1661
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.list.AbstractListTest",
+      "appearsIn": [
+        "qx.test.ui.list.AbstractListTest"
+      ]
+    },
+    "configureList": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1668
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1774
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.list.AbstractListTest",
+      "appearsIn": [
+        "qx.test.ui.list.AbstractListTest"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1781
+        },
+        "end": {
+          "line": 82,
+          "column": 5,
+          "index": 1998
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.list.AbstractListTest",
+      "appearsIn": [
+        "qx.test.ui.list.AbstractListTest",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 4,
+          "index": 2005
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 3033
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixWithObjectsAndDefaultGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 3040
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3529
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixWithObjectsAndDefaultGroupAsFirstItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3536
+        },
+        "end": {
+          "line": 161,
+          "column": 5,
+          "index": 4011
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixWithObjectsAndStrings": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 163,
+          "column": 4,
+          "index": 4018
+        },
+        "end": {
+          "line": 183,
+          "column": 5,
+          "index": 4513
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixWithObjectsStringsAndDefaultGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 185,
+          "column": 4,
+          "index": 4520
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 5124
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGroupWithSorter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 5131
+        },
+        "end": {
+          "line": 258,
+          "column": 5,
+          "index": 6556
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__convertModel": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 260,
+          "column": 4,
+          "index": 6563
+        },
+        "end": {
+          "line": 288,
+          "column": 5,
+          "index": 7231
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

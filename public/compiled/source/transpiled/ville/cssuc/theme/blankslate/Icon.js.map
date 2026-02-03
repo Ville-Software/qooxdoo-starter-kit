@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "title",
+    "aliases",
+    "icon",
+    "ville",
+    "cssuc",
+    "theme",
+    "blankslate",
+    "Icon"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/cssuc/theme/blankslate/Icon.js"
+  ],
+  "sourcesContent": [
+    "qx.Theme.define(\"ville.cssuc.theme.blankslate.Icon\", {\n  title: \"Blankslate\",\n  aliases: {\n    icon: \"\"\n  }\n});"
+  ],
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,mCAAmC,EAAE;IACnDC,KAAK,EAAE,YAAY;IACnBC,OAAO,EAAE;MACPC,IAAI,EAAE;IACR;EACF,CAAC,CAAC;EALFC,KAAK,CAACC,KAAK,CAACC,KAAK,CAACC,UAAU,CAACC,IAAI,CAACV,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

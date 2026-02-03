@@ -1,0 +1,1451 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337279,
+  "lastModifiedIso": "2026-01-03T20:15:37.279Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/locale/LocalizedString.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 483
+    },
+    "end": {
+      "line": 41,
+      "column": 3,
+      "index": 1124
+    }
+  },
+  "className": "qx.test.locale.LocalizedString",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2006-2012 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Thomas Herchenroeder (thron7)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "mixins": [
+    "qx.locale.MTranslation",
+    "qx.dev.unit.MRequirements"
+  ],
+  "members": {
+    "testTranslation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 649
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 851
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLocalizeVsTranslate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 858
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1116
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tr": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a message",
+          "     * Mark the message for translation.",
+          "     *",
+          "     * @param messageId {String} message id (may contain format strings)",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a message\n Mark the message for translation.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "messageId {String} message id (may contain format strings)",
+            "paramName": "messageId",
+            "description": " message id (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1068
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1347
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "messageId",
+          "type": "string"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trn": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a plural message",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * Depending on the third argument the plural or the singular form is chosen.",
+          "     *",
+          "     * @param singularMessageId {String} message id of the singular form (may contain format strings)",
+          "     * @param pluralMessageId {String} message id of the plural form (may contain format strings)",
+          "     * @param count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a plural message\n Mark the messages for translation.\n Depending on the third argument the plural or the singular form is chosen.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "singularMessageId {String} message id of the singular form (may contain format strings)",
+            "paramName": "singularMessageId",
+            "description": " message id of the singular form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "pluralMessageId {String} message id of the plural form (may contain format strings)",
+            "paramName": "pluralMessageId",
+            "description": " message id of the plural form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+            "paramName": "count",
+            "description": " if greater than 1 the plural form otherwise the singular form is returned.",
+            "type": "Integer"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 2020
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 2333
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "singularMessageId",
+          "type": "string"
+        },
+        {
+          "name": "pluralMessageId",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "Integer"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trc": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a message with translation hint",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * @param hint {String} hint for the translator of the message. Will be included in the .po file.",
+          "     * @param messageId {String} message id (may contain format strings)",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a message with translation hint\n Mark the messages for translation.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "hint {String} hint for the translator of the message. Will be included in the .po file.",
+            "paramName": "hint",
+            "description": " hint for the translator of the message. Will be included in the .po file.",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "messageId {String} message id (may contain format strings)",
+            "paramName": "messageId",
+            "description": " message id (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 2802
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 3089
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "messageId",
+          "type": "string"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trnc": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a plural message with translation hint",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * Depending on the third argument the plural or the singular form is chosen.",
+          "     *",
+          "     * @param hint {String} hint for the translator of the message. Will be included in the .po file.",
+          "     * @param singularMessageId {String} message id of the singular form (may contain format strings)",
+          "     * @param pluralMessageId {String} message id of the plural form (may contain format strings)",
+          "     * @param count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a plural message with translation hint\n Mark the messages for translation.\n Depending on the third argument the plural or the singular form is chosen.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "hint {String} hint for the translator of the message. Will be included in the .po file.",
+            "paramName": "hint",
+            "description": " hint for the translator of the message. Will be included in the .po file.",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "singularMessageId {String} message id of the singular form (may contain format strings)",
+            "paramName": "singularMessageId",
+            "description": " message id of the singular form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "pluralMessageId {String} message id of the plural form (may contain format strings)",
+            "paramName": "pluralMessageId",
+            "description": " message id of the plural form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+            "paramName": "count",
+            "description": " if greater than 1 the plural form otherwise the singular form is returned.",
+            "type": "Integer"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 3886
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 4207
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "singularMessageId",
+          "type": "string"
+        },
+        {
+          "name": "pluralMessageId",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "Integer"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "marktr": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Mark the message for translation but return the original message.",
+          "     *",
+          "     * @param messageId {String} the message ID",
+          "     * @return {String} messageId",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Mark the message for translation but return the original message.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "messageId {String} the message ID",
+            "paramName": "messageId",
+            "description": " the message ID",
+            "type": "string"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String} messageId",
+            "type": "string",
+            "description": "messageId"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 4,
+          "index": 4392
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 4670
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "messageId",
+          "type": "string"
+        }
+      ],
+      "returnType": {
+        "type": "string"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "hasHttp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application has been loaded over HTTP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if HTTP is currently used",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application has been loaded over HTTP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if HTTP is currently used",
+            "type": "boolean",
+            "description": "<code>true</code> if HTTP is currently used"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1851
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1930
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the server supports PHP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if PHP is supported by the backend",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the server supports PHP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if PHP is supported by the backend",
+            "type": "boolean",
+            "description": "<code>true</code> if PHP is supported by the backend"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2080
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2978
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGuiApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Standalone",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a standalone (GUI)",
+          "     * application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Standalone</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a standalone (GUI)\n application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a standalone (GUI)\n application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 3178
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 3365
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasInlineApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Inline",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is an inline application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Inline</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is an inline application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is an inline application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3545
+        },
+        "end": {
+          "line": 135,
+          "column": 5,
+          "index": 3709
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNativeApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Native",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a native application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Native</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a native application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a native application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3888
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 4052
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasChrome": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Google Chrome",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Google Chrome",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Google Chrome</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Google Chrome",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Google Chrome"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 4218
+        },
+        "end": {
+          "line": 157,
+          "column": 5,
+          "index": 4304
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasFirefox": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Firefox",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Firefox",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Firefox</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Firefox",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Firefox"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4458
+        },
+        "end": {
+          "line": 166,
+          "column": 5,
+          "index": 4546
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGecko": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Gecko engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Gecko engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Mozilla Gecko"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 4,
+          "index": 4738
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasIe": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Internet Explorer",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Internet Explorer",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Internet Explorer</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Internet Explorer",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Internet Explorer"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 182,
+          "column": 4,
+          "index": 4994
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 5072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasMshtml": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the MSHTML engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is MSHTML",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the MSHTML engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is MSHTML",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is MSHTML"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 5258
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 5342
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasOpera": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Opera engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Opera",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Opera engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Opera",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Opera"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 5526
+        },
+        "end": {
+          "line": 202,
+          "column": 5,
+          "index": 5608
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasWebkit": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Webkit engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Webkit",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Webkit engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Webkit",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Webkit"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5794
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5878
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoOsx": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is NOT running on OS X",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the operating system is NOT OX X",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is NOT running on OS X</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the operating system is NOT OX X",
+            "type": "boolean",
+            "description": "<code>true</code> if the operating system is NOT OX X"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 218,
+          "column": 4,
+          "index": 6043
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 6135
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin7": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 7",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 7",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 7</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 7",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 7"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 227,
+          "column": 4,
+          "index": 6299
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6484
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin10": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 10",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 10",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 10</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 10",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 10"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 6650
+        },
+        "end": {
+          "line": 244,
+          "column": 5,
+          "index": 6839
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoChromeOnLinux": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is not running in a Google Chrome browser on Linux",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is not running in a Google Chrome browser on Linux</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is not Google Chrome on Linux"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 7041
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 7225
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasAsyncFunctions": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on a client supporting async functions",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the client supports async functions",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on a client supporting async functions</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the client supports async functions",
+            "type": "boolean",
+            "description": "<code>true</code> if the client supports async functions"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 263,
+          "column": 4,
+          "index": 7420
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 7514
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "require": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Verifies a list of infrastructure requirements by checking for",
+          "     * corresponding \"has\" methods. If no such method was found,",
+          "     * {@link qx.core.Environment} will be checked for a key matching the given",
+          "     * feature name. Note that asynchronous environment checks are not supported!",
+          "     *",
+          "     * @throws {qx.dev.unit.RequirementError} if any requirement check returned",
+          "     *   <code>false</code>",
+          "     * @throws {Error} if no valid check was found for a feature.",
+          "     *",
+          "     * @param featureList {String[]} List of infrastructure requirements",
+          "     * @lint environmentNonLiteralKey(feature)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Verifies a list of infrastructure requirements by checking for\n corresponding \"has\" methods. If no such method was found,\n {@link qx.core.Environment} will be checked for a key matching the given\n feature name. Note that asynchronous environment checks are not supported!</p>"
+          }
+        ],
+        "@throws": [
+          {
+            "name": "@throws",
+            "body": "{qx.dev.unit.RequirementError} if any requirement check returned\n   <code>false</code>",
+            "type": "qx.dev.unit.RequirementError",
+            "description": " if any requirement check returned\n   <code>false</code>"
+          },
+          {
+            "name": "@throws",
+            "body": "{Error} if no valid check was found for a feature.",
+            "type": "Error",
+            "description": " if no valid check was found for a feature."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "featureList {String[]} List of infrastructure requirements",
+            "paramName": "featureList",
+            "description": " List of infrastructure requirements",
+            "type": "String[]"
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "environmentNonLiteralKey(feature)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1452
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2994
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "featureList",
+          "type": "String[]"
+        }
+      ],
+      "mixin": "qx.dev.unit.MRequirements",
+      "appearsIn": [
+        "qx.dev.unit.MRequirements",
+        "qx.dev.unit.MRequirementsBasic"
+      ]
+    }
+  },
+  "statics": {
+    "__hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "* @type {Boolean} Result of {@link #hasPhp}. Stored as class member to avoid",
+          "     * repeating the check. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{Boolean} Result of {@link #hasPhp}. Stored as class member to avoid\n repeating the check."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1478
+        },
+        "end": {
+          "line": 51,
+          "column": 18,
+          "index": 1492
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,1077 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336742,
+  "lastModifiedIso": "2026-01-03T20:15:36.742Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/FormValidator.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 1172,
+      "column": 3,
+      "index": 35817
+    }
+  },
+  "className": "qx.test.ui.form.FormValidator",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 21,
+        "column": 2,
+        "index": 578
+      },
+      "end": {
+        "line": 23,
+        "column": 3,
+        "index": 608
+      }
+    }
+  },
+  "members": {
+    "__username": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 628
+        },
+        "end": {
+          "line": 26,
+          "column": 20,
+          "index": 644
+        }
+      },
+      "appearsIn": []
+    },
+    "__password1": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 650
+        },
+        "end": {
+          "line": 27,
+          "column": 21,
+          "index": 667
+        }
+      },
+      "appearsIn": []
+    },
+    "__password2": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 673
+        },
+        "end": {
+          "line": 28,
+          "column": 21,
+          "index": 690
+        }
+      },
+      "appearsIn": []
+    },
+    "__manager": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 696
+        },
+        "end": {
+          "line": 29,
+          "column": 19,
+          "index": 711
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 718
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 951
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 958
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1109
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "__notEmptyValidator": {
+      "jsdoc": {
+        "raw": [
+          " validator"
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1133
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1395
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "formItem"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__notEmptyValidatorError": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1402
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1595
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__asyncValidator": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1602
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1795
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "validator"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSyncContext": {
+      "jsdoc": {
+        "raw": [
+          " context //////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 1840
+        },
+        "end": {
+          "line": 81,
+          "column": 5,
+          "index": 2087
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSync2Context": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 83,
+          "column": 4,
+          "index": 2094
+        },
+        "end": {
+          "line": 102,
+          "column": 5,
+          "index": 2509
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2516
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 2871
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsync2Context": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 2878
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 3509
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncFormContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 3516
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 3741
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncFormContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 3748
+        },
+        "end": {
+          "line": 168,
+          "column": 5,
+          "index": 4112
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncSelfContained1NotNull": {
+      "jsdoc": {
+        "raw": [
+          "  sync self contained ///////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 172,
+          "column": 4,
+          "index": 4201
+        },
+        "end": {
+          "line": 199,
+          "column": 5,
+          "index": 5188
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncSelfContained1NotNullRadioButtonGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 201,
+          "column": 4,
+          "index": 5195
+        },
+        "end": {
+          "line": 224,
+          "column": 5,
+          "index": 5985
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncSelfContained1NotNullEvents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 226,
+          "column": 4,
+          "index": 5992
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 6755
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testSyncSelfContained3NotNull": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 258,
+          "column": 4,
+          "index": 6762
+        },
+        "end": {
+          "line": 312,
+          "column": 5,
+          "index": 9163
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "validator"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSyncSelfContained3NotNull": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 314,
+          "column": 4,
+          "index": 9170
+        },
+        "end": {
+          "line": 316,
+          "column": 5,
+          "index": 9279
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncSelfContained3NotNullError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 318,
+          "column": 4,
+          "index": 9286
+        },
+        "end": {
+          "line": 320,
+          "column": 5,
+          "index": 9405
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testSyncRelatedNoIndividual": {
+      "jsdoc": {
+        "raw": [
+          " sync related //////////////"
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 326,
+          "column": 4,
+          "index": 9487
+        },
+        "end": {
+          "line": 347,
+          "column": 5,
+          "index": 10217
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "validator"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSyncRelatedNoIndividual": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 349,
+          "column": 4,
+          "index": 10224
+        },
+        "end": {
+          "line": 357,
+          "column": 5,
+          "index": 10515
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncRelatedNoIndividualError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 359,
+          "column": 4,
+          "index": 10522
+        },
+        "end": {
+          "line": 365,
+          "column": 5,
+          "index": 10776
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncRelatedWithIndividual": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 367,
+          "column": 4,
+          "index": 10783
+        },
+        "end": {
+          "line": 421,
+          "column": 5,
+          "index": 12931
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRequired": {
+      "jsdoc": {
+        "raw": [
+          " required /////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 426,
+          "column": 4,
+          "index": 13015
+        },
+        "end": {
+          "line": 461,
+          "column": 5,
+          "index": 14327
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRequiredFieldMessage": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 463,
+          "column": 4,
+          "index": 14334
+        },
+        "end": {
+          "line": 482,
+          "column": 5,
+          "index": 15058
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRequiredNumberZero": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 484,
+          "column": 4,
+          "index": 15065
+        },
+        "end": {
+          "line": 500,
+          "column": 5,
+          "index": 15607
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained1NotNullFail": {
+      "jsdoc": {
+        "raw": [
+          " Async self contained //////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 506,
+          "column": 4,
+          "index": 15693
+        },
+        "end": {
+          "line": 525,
+          "column": 5,
+          "index": 16308
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained1NotNull": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 527,
+          "column": 4,
+          "index": 16315
+        },
+        "end": {
+          "line": 546,
+          "column": 5,
+          "index": 16890
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained3NotNullFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 548,
+          "column": 4,
+          "index": 16897
+        },
+        "end": {
+          "line": 585,
+          "column": 5,
+          "index": 18315
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained3NotNull": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 587,
+          "column": 4,
+          "index": 18322
+        },
+        "end": {
+          "line": 620,
+          "column": 5,
+          "index": 19361
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained2NotNullFailMixed": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 622,
+          "column": 4,
+          "index": 19368
+        },
+        "end": {
+          "line": 668,
+          "column": 5,
+          "index": 20796
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncSelfContained3NotNullHalfFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 670,
+          "column": 4,
+          "index": 20803
+        },
+        "end": {
+          "line": 706,
+          "column": 5,
+          "index": 22043
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncRelated3NotNullFail": {
+      "jsdoc": {
+        "raw": [
+          " Async related //////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 712,
+          "column": 4,
+          "index": 22122
+        },
+        "end": {
+          "line": 759,
+          "column": 5,
+          "index": 23568
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAsyncRelated3NotNull": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 761,
+          "column": 4,
+          "index": 23575
+        },
+        "end": {
+          "line": 808,
+          "column": 5,
+          "index": 25016
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedSelfContained3NotNullAsyncFail": {
+      "jsdoc": {
+        "raw": [
+          " Mixed self contained //////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 813,
+          "column": 4,
+          "index": 25101
+        },
+        "end": {
+          "line": 838,
+          "column": 5,
+          "index": 25978
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedSelfContained3NotNullSyncFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 840,
+          "column": 4,
+          "index": 25985
+        },
+        "end": {
+          "line": 865,
+          "column": 5,
+          "index": 26860
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedSelfContained3NotNullSync": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 867,
+          "column": 4,
+          "index": 26867
+        },
+        "end": {
+          "line": 893,
+          "column": 5,
+          "index": 27774
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedSelfContained2SyncRequired": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 895,
+          "column": 4,
+          "index": 27781
+        },
+        "end": {
+          "line": 918,
+          "column": 5,
+          "index": 28514
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testMixedRelated3NotNull": {
+      "jsdoc": {
+        "raw": [
+          " Mixed related //////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 922,
+          "column": 4,
+          "index": 28591
+        },
+        "end": {
+          "line": 965,
+          "column": 5,
+          "index": 29931
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedRelated3NotNullSyncFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 967,
+          "column": 4,
+          "index": 29938
+        },
+        "end": {
+          "line": 1009,
+          "column": 5,
+          "index": 31250
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedRelated3NotNullAsyncFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1011,
+          "column": 4,
+          "index": 31257
+        },
+        "end": {
+          "line": 1053,
+          "column": 5,
+          "index": 32571
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMixedRelated3NotNullAsyncFormFail": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1055,
+          "column": 4,
+          "index": 32578
+        },
+        "end": {
+          "line": 1098,
+          "column": 5,
+          "index": 33932
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddWrong": {
+      "jsdoc": {
+        "raw": [
+          " add error ////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1103,
+          "column": 4,
+          "index": 34016
+        },
+        "end": {
+          "line": 1113,
+          "column": 5,
+          "index": 34306
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddSelectBoxWithValidator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1115,
+          "column": 4,
+          "index": 34313
+        },
+        "end": {
+          "line": 1121,
+          "column": 5,
+          "index": 34517
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": {
+        "raw": [
+          " remove ///////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1125,
+          "column": 4,
+          "index": 34600
+        },
+        "end": {
+          "line": 1140,
+          "column": 5,
+          "index": 34945
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItems": {
+      "jsdoc": {
+        "raw": [
+          " get items ////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1144,
+          "column": 4,
+          "index": 35028
+        },
+        "end": {
+          "line": 1151,
+          "column": 5,
+          "index": 35284
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testValidateDataBindingSelection": {
+      "jsdoc": {
+        "raw": [
+          " validate //////////////////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1155,
+          "column": 4,
+          "index": 35368
+        },
+        "end": {
+          "line": 1170,
+          "column": 5,
+          "index": 35809
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

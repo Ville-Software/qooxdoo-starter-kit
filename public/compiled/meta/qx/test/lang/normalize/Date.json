@@ -1,0 +1,63 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335937,
+  "lastModifiedIso": "2026-01-03T20:15:35.937Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/lang/normalize/Date.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 552
+    },
+    "end": {
+      "line": 282,
+      "column": 3,
+      "index": 7445
+    }
+  },
+  "className": "qx.test.lang.normalize.Date",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @require(qx.lang.normalize.Date)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@require": [
+      {
+        "name": "@require",
+        "body": "qx.lang.normalize.Date"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "test parse()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 651
+        },
+        "end": {
+          "line": 280,
+          "column": 5,
+          "index": 7437
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

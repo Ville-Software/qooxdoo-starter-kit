@@ -1,0 +1,93 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337726,
+  "lastModifiedIso": "2026-01-03T20:15:37.726Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/transport/PostMessage.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 26,
+      "column": 0,
+      "index": 634
+    },
+    "end": {
+      "line": 56,
+      "column": 3,
+      "index": 1617
+    }
+  },
+  "className": "qx.test.io.transport.PostMessage",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Tests for the postMessage transport",
+      " * @ignore(URL)",
+      " * @ignore(Worker)",
+      " * @ignore(self)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Tests for the postMessage transport</p>"
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "URL"
+      },
+      {
+        "name": "@ignore",
+        "body": "Worker"
+      },
+      {
+        "name": "@ignore",
+        "body": "self"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 738
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1251
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send message to worker and check response": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1258
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1609
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

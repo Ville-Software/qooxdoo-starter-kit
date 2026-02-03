@@ -1,0 +1,68 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335079,
+  "lastModifiedIso": "2026-01-03T20:15:35.079Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Annotation.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 537
+    },
+    "end": {
+      "line": 298,
+      "column": 3,
+      "index": 7256
+    }
+  },
+  "className": "qx.test.Annotation",
+  "jsdoc": {
+    "raw": [
+      " eslint-disable @qooxdoo/qx/no-refs-in-members "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testBasic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 627
+        },
+        "end": {
+          "line": 238,
+          "column": 5,
+          "index": 5833
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testByType": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 240,
+          "column": 4,
+          "index": 5840
+        },
+        "end": {
+          "line": 296,
+          "column": 5,
+          "index": 7248
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

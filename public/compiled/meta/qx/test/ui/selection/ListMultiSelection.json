@@ -1,0 +1,138 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337241,
+  "lastModifiedIso": "2026-01-03T20:15:37.241Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/ListMultiSelection.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 80,
+      "column": 3,
+      "index": 1889
+    }
+  },
+  "className": "qx.test.ui.selection.ListMultiSelection",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.selection.AbstractMultiSelectonTest",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 626
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1459
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1466
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1650
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1657
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 1798
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "_createTestElement": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 4,
+          "index": 1805
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 1881
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

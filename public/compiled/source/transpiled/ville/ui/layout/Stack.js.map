@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "container",
+    "Stack",
+    "include",
+    "ville",
+    "core",
+    "MWidget",
+    "construct",
+    "component",
+    "__componenttag",
+    "constructor",
+    "call",
+    "setExcludeBoundsFromDom",
+    "setClearAllInlineStyles",
+    "members",
+    "_createContentElement",
+    "html",
+    "Element",
+    "layout"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/layout/Stack.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Stack Container - created specifically for TabView panes\n */\nqx.Class.define(\"ville.ui.layout.Stack\", {\n    \n    extend: qx.ui.container.Stack,\n\n    include: ville.ui.core.MWidget,\n\n    construct(component) {\n        \n        if (component) {\n            this.__componenttag = component;\n        }\n        super();\n\n        //this._setLayout(new qx.ui.layout.Basic());\n        this.setExcludeBoundsFromDom(true);\n        this.setClearAllInlineStyles(true);\n        //this.setCssUtilityClass(\"m_7485cace mantine-Container-root\");\n\n    },\n\n    members: {\n\n        __componenttag: \"div\",\n\n        // overridden\n        _createContentElement() {\n            return new qx.html.Element(this.__componenttag);\n        }\n\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,uBAAuB,EAAE;IAErCC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,SAAS,CAACC,KAAK;IAE7BC,OAAO,EAAEC,KAAK,CAACJ,EAAE,CAACK,IAAI,CAACC,OAAO;IAE9BC,SAASA,CAACC,SAAS,EAAE;MAEjB,IAAIA,SAAS,EAAE;QACX,IAAI,CAACC,qBAAc,GAAGD,SAAS;MACnC;MACAf,EAAA,CAAAO,EAAA,CAAAC,SAAA,CAAAC,KAAA,CAAAQ,WAAA,CAAAC,IAAA;;MAEA;MACA,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC;IAEJ,CAAC;IAEDC,OAAO,EAAE;MAELL,qBAAc,EAAE,KAAK;MAErB;MACAM,qBAAqBA,CAAA,EAAG;QACpB,OAAO,IAAItB,EAAE,CAACuB,IAAI,CAACC,OAAO,CAAC,IAAI,CAACR,qBAAc,CAAC;MACnD;IAEJ;EACF,CAAC,CAAC;EAjCJL,KAAK,CAACJ,EAAE,CAACkB,MAAM,CAAChB,KAAK,CAACN,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

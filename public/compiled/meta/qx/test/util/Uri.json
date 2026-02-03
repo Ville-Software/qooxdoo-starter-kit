@@ -1,0 +1,350 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338228,
+  "lastModifiedIso": "2026-01-03T20:15:38.228Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/Uri.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 165,
+      "column": 3,
+      "index": 5446
+    }
+  },
+  "className": "qx.test.util.Uri",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tristan Koch (tristankoch)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 568
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 613
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: appendParamsToUrl() with string": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 620
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 922
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToParameter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 929
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1099
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToParameterUmlauts": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1106
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1301
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToParameterSpaces": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1308
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1474
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToParameterSpacesPost": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1481
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1653
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToParameterArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1660
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1819
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: appendParamsToUrl() with string when existing query": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1826
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 2174
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: appendParamsToUrl() with map": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 2181
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2538
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: appendParamsToUrl() with undefined": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2545
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2757
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: appendParamsToUrl() with empty map": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2764
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 2977
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseUri()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2984
+        },
+        "end": {
+          "line": 112,
+          "column": 5,
+          "index": 3508
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseUri() with ipv6 loopback address": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 3515
+        },
+        "end": {
+          "line": 125,
+          "column": 5,
+          "index": 4046
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseUri() with ipv6 address": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 127,
+          "column": 4,
+          "index": 4053
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 4682
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseUri() with at-sign in query": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 4689
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 5070
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseUri() with user name in domain": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 5077
+        },
+        "end": {
+          "line": 163,
+          "column": 5,
+          "index": 5438
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,225 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471334984,
+  "lastModifiedIso": "2026-01-03T20:15:34.984Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/list/AbstractListTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 57,
+      "column": 3,
+      "index": 1205
+    }
+  },
+  "className": "qx.test.ui.list.AbstractListTest",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "isSingleton": false,
+  "abstract": true,
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "mixins": [
+    "qx.test.ui.list.MAssert"
+  ],
+  "members": {
+    "_model": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 656
+        },
+        "end": {
+          "line": 25,
+          "column": 16,
+          "index": 668
+        }
+      },
+      "appearsIn": []
+    },
+    "_list": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 675
+        },
+        "end": {
+          "line": 27,
+          "column": 15,
+          "index": 686
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 693
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 916
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 923
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1074
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "createModelData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1081
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1172
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "configureList": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1179
+        },
+        "end": {
+          "line": 55,
+          "column": 22,
+          "index": 1197
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "assertModelEqualsRowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 4,
+          "index": 551
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 729
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        },
+        {
+          "name": "list"
+        }
+      ],
+      "mixin": "qx.test.ui.list.MAssert",
+      "appearsIn": [
+        "qx.test.ui.list.MAssert"
+      ]
+    },
+    "assertDataArrayEquals": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 736
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1147
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "mixin": "qx.test.ui.list.MAssert",
+      "appearsIn": [
+        "qx.test.ui.list.MAssert"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

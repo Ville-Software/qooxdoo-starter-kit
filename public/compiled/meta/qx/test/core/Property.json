@@ -1,0 +1,642 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337746,
+  "lastModifiedIso": "2026-01-03T20:15:37.746Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/Property.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 597
+    },
+    "end": {
+      "line": 1169,
+      "column": 3,
+      "index": 30246
+    }
+  },
+  "className": "qx.test.core.Property",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.Node, qx.test.A, qx.test.B, qx.test.clName, qx.test.IForm)",
+      " * @ignore(qx.TestProperty, qx.Super)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.Node, qx.test.A, qx.test.B, qx.test.clName, qx.test.IForm"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.TestProperty, qx.Super"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testBasic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 690
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1372
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBuiltinTypes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1379
+        },
+        "end": {
+          "line": 137,
+          "column": 5,
+          "index": 3784
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInheritance": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 139,
+          "column": 4,
+          "index": 3791
+        },
+        "end": {
+          "line": 188,
+          "column": 5,
+          "index": 5467
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testParent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 190,
+          "column": 4,
+          "index": 5474
+        },
+        "end": {
+          "line": 223,
+          "column": 5,
+          "index": 6692
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMultiValues": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 225,
+          "column": 4,
+          "index": 6699
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 8324
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitApply": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 267,
+          "column": 4,
+          "index": 8331
+        },
+        "end": {
+          "line": 290,
+          "column": 5,
+          "index": 9200
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInit": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 292,
+          "column": 4,
+          "index": 9207
+        },
+        "end": {
+          "line": 306,
+          "column": 5,
+          "index": 9700
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDefinesThanSubClassWithInterface": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 308,
+          "column": 4,
+          "index": 9707
+        },
+        "end": {
+          "line": 339,
+          "column": 5,
+          "index": 10351
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPropertyNamedClassname": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 341,
+          "column": 4,
+          "index": 10358
+        },
+        "end": {
+          "line": 350,
+          "column": 5,
+          "index": 10564
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWrongPropertyDefinitions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 352,
+          "column": 4,
+          "index": 10571
+        },
+        "end": {
+          "line": 477,
+          "column": 5,
+          "index": 13392
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRecursive": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 479,
+          "column": 4,
+          "index": 13399
+        },
+        "end": {
+          "line": 508,
+          "column": 5,
+          "index": 14003
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEventWithInitOldData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 510,
+          "column": 4,
+          "index": 14010
+        },
+        "end": {
+          "line": 544,
+          "column": 5,
+          "index": 14834
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEventWithoutInitOldData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 546,
+          "column": 4,
+          "index": 14841
+        },
+        "end": {
+          "line": 580,
+          "column": 5,
+          "index": 15669
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEventWithInitAndInheritableOldData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 582,
+          "column": 4,
+          "index": 15676
+        },
+        "end": {
+          "line": 617,
+          "column": 5,
+          "index": 16545
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEventWithoutInitAndInheritableOldData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 619,
+          "column": 4,
+          "index": 16552
+        },
+        "end": {
+          "line": 654,
+          "column": 5,
+          "index": 17425
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__isNegativeZero": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Check whether the (numeric) value is negative zero (-0)",
+          "     *",
+          "     * @param value {number} Value to check",
+          "     * @return {Boolean} whether the value is <code>-0</code>",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Check whether the (numeric) value is negative zero (-0)</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "value {number} Value to check",
+            "paramName": "value",
+            "description": " Value to check",
+            "type": "number"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} whether the value is <code>-0</code>",
+            "type": "boolean",
+            "description": "whether the value is <code>-0</code>"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 668,
+          "column": 4,
+          "index": 17829
+        },
+        "end": {
+          "line": 670,
+          "column": 5,
+          "index": 17924
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value",
+          "type": "number"
+        }
+      ],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": []
+    },
+    "__isPositiveZero": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Check whether the (numeric) value is positive zero (+0)",
+          "     *",
+          "     * @param value {number} Value to check",
+          "     * @return {Boolean} whether the value is <code>+0</code>",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Check whether the (numeric) value is positive zero (+0)</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "value {number} Value to check",
+            "paramName": "value",
+            "description": " Value to check",
+            "type": "number"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} whether the value is <code>+0</code>",
+            "type": "boolean",
+            "description": "whether the value is <code>+0</code>"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 678,
+          "column": 4,
+          "index": 18123
+        },
+        "end": {
+          "line": 680,
+          "column": 5,
+          "index": 18218
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value",
+          "type": "number"
+        }
+      ],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": []
+    },
+    "testWrongIsEqualDefinitions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 682,
+          "column": 4,
+          "index": 18225
+        },
+        "end": {
+          "line": 723,
+          "column": 5,
+          "index": 19395
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualInline": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 725,
+          "column": 4,
+          "index": 19402
+        },
+        "end": {
+          "line": 777,
+          "column": 5,
+          "index": 20720
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualFunction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 779,
+          "column": 4,
+          "index": 20727
+        },
+        "end": {
+          "line": 833,
+          "column": 5,
+          "index": 22088
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualMember": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 835,
+          "column": 4,
+          "index": 22095
+        },
+        "end": {
+          "line": 893,
+          "column": 5,
+          "index": 23520
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualInlineContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 895,
+          "column": 4,
+          "index": 23527
+        },
+        "end": {
+          "line": 921,
+          "column": 5,
+          "index": 24104
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualFunctionContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 923,
+          "column": 4,
+          "index": 24111
+        },
+        "end": {
+          "line": 945,
+          "column": 5,
+          "index": 24614
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualMemberContext": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 947,
+          "column": 4,
+          "index": 24621
+        },
+        "end": {
+          "line": 973,
+          "column": 5,
+          "index": 25188
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsEqualBaseClassMember": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 975,
+          "column": 4,
+          "index": 25195
+        },
+        "end": {
+          "line": 1004,
+          "column": 5,
+          "index": 25835
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTransform": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1006,
+          "column": 4,
+          "index": 25842
+        },
+        "end": {
+          "line": 1063,
+          "column": 5,
+          "index": 27387
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPromises": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1065,
+          "column": 4,
+          "index": 27394
+        },
+        "end": {
+          "line": 1167,
+          "column": 5,
+          "index": 30238
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

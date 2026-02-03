@@ -1,0 +1,48 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337853,
+  "lastModifiedIso": "2026-01-03T20:15:37.853Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/performance/widget/RichLabel.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 3,
+      "index": 231
+    }
+  },
+  "className": "qx.test.performance.widget.RichLabel",
+  "jsdoc": null,
+  "superClass": "qx.test.performance.widget.AbstractWidget",
+  "members": {
+    "_createWidget": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 129
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 223
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.performance.widget.AbstractWidget",
+      "appearsIn": [
+        "qx.test.performance.widget.AbstractWidget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

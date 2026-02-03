@@ -1,0 +1,181 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337364,
+  "lastModifiedIso": "2026-01-03T20:15:37.364Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/MenuButton.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 488
+    },
+    "end": {
+      "line": 92,
+      "column": 3,
+      "index": 2338
+    }
+  },
+  "className": "qx.test.ui.form.MenuButton",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__menu": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 591
+        },
+        "end": {
+          "line": 22,
+          "column": 16,
+          "index": 603
+        }
+      },
+      "appearsIn": []
+    },
+    "__menuButton": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 610
+        },
+        "end": {
+          "line": 24,
+          "column": 22,
+          "index": 628
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 635
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1062
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1069
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1331
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testOpen": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1338
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1592
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOpenSelectFirst": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1599
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 1924
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOpenSelectFirstWithDisabledElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 1931
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2330
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

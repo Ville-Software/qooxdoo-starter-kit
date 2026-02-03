@@ -1,0 +1,321 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338206,
+  "lastModifiedIso": "2026-01-03T20:15:38.206Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/tree/Tree.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 520
+    },
+    "end": {
+      "line": 296,
+      "column": 3,
+      "index": 8867
+    }
+  },
+  "className": "qx.test.ui.tree.Tree",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Daniel Wagner (d_wagner)",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "_tree": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 617
+        },
+        "end": {
+          "line": 23,
+          "column": 15,
+          "index": 628
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 635
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 887
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 894
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 973
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testGetPreviousSiblingOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 980
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1495
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetNextSiblingOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1502
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 2005
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetNextNodeOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 2012
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2578
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetNextNodeOfInvisible": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2585
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 3168
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetPreviousNodeOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 3175
+        },
+        "end": {
+          "line": 119,
+          "column": 5,
+          "index": 3757
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetPreviousNodeOfInvisible": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 4,
+          "index": 3764
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 4359
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddBefore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 138,
+          "column": 4,
+          "index": 4366
+        },
+        "end": {
+          "line": 172,
+          "column": 5,
+          "index": 5400
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddAfter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 174,
+          "column": 4,
+          "index": 5407
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 6436
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeOrderWithAddBefore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 6443
+        },
+        "end": {
+          "line": 245,
+          "column": 5,
+          "index": 7520
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeOrderWithAddAfter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 247,
+          "column": 4,
+          "index": 7527
+        },
+        "end": {
+          "line": 282,
+          "column": 5,
+          "index": 8599
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__printChildren": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 284,
+          "column": 4,
+          "index": 8606
+        },
+        "end": {
+          "line": 294,
+          "column": 5,
+          "index": 8859
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

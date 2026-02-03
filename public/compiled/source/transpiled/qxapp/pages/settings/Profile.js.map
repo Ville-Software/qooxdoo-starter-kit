@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "tabview",
+    "Page",
+    "include",
+    "qxapp",
+    "pages",
+    "MPage",
+    "construct",
+    "pagenameroot",
+    "pageurl",
+    "pageName",
+    "lang",
+    "String",
+    "firstUp",
+    "constructor",
+    "call",
+    "setPageUrl",
+    "addListener",
+    "document",
+    "title",
+    "setAttribute",
+    "settings",
+    "Profile"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/settings/Profile.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Profile page\n *\n */\nqx.Class.define(\"qxapp.pages.settings.Profile\",\n{\n  extend : ville.ui.tabview.Page,\n\n  include : qxapp.pages.MPage,\n\n  construct() {\n\n    const pagenameroot = \"profile\";\n    const pageurl = `/settings/${pagenameroot}`;\n    const pageName = qx.lang.String.firstUp(pagenameroot);\n\n    super(pageName);\n\n    this.setPageUrl(pageurl);\n\n    // Set up the page\n    this.addListener(\"appear\", () => {document.title = `${pageName} - Laravel`});\n\n    this.setAttribute(\"html\", pagenameroot);\n\n  }\n\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAC9C;IACEC,MAAM,EAAGC,KAAK,CAACC,EAAE,CAACC,OAAO,CAACC,IAAI;IAE9BC,OAAO,EAAGC,KAAK,CAACC,KAAK,CAACC,KAAK;IAE3BC,SAASA,CAAA,EAAG;MAEV,MAAMC,YAAY,GAAG,SAAS;MAC9B,MAAMC,OAAO,GAAG,aAAaD,YAAY,EAAE;MAC3C,MAAME,QAAQ,GAAGlB,EAAE,CAACmB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACL,YAAY,CAAC;MAErDT,KAAA,CAAAC,EAAA,CAAAC,OAAA,CAAAC,IAAA,CAAAY,WAAA,CAAAC,IAAA,OAAML,QAAQ;MAEd,IAAI,CAACM,UAAU,CAACP,OAAO,CAAC;;MAExB;MACA,IAAI,CAACQ,WAAW,CAAC,QAAQ,EAAE,MAAM;QAACC,QAAQ,CAACC,KAAK,GAAG,GAAGT,QAAQ,YAAY;MAAA,CAAC,CAAC;MAE5E,IAAI,CAACU,YAAY,CAAC,MAAM,EAAEZ,YAAY,CAAC;IAEzC;EAEF,CAAC,CAAC;EA3BFJ,KAAK,CAACC,KAAK,CAACgB,QAAQ,CAACC,OAAO,CAAC3B,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

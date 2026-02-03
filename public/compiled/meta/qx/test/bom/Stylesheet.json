@@ -1,0 +1,235 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338064,
+  "lastModifiedIso": "2026-01-03T20:15:38.064Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/Stylesheet.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 26,
+      "column": 0,
+      "index": 672
+    },
+    "end": {
+      "line": 152,
+      "column": 3,
+      "index": 5182
+    }
+  },
+  "className": "qx.test.bom.Stylesheet",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/test/style.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/test/style.css"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 766
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1082
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddImport": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 1089
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1652
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddRule": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1659
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 2165
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 2172
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 2438
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateElementWithText": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 4,
+          "index": 2445
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2826
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIncludeFile": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2833
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 3325
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAllImports": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 3332
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 3904
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAllRules": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 3911
+        },
+        "end": {
+          "line": 125,
+          "column": 5,
+          "index": 4362
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveImport": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 127,
+          "column": 4,
+          "index": 4369
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 4892
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveRule": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 4899
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 5174
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

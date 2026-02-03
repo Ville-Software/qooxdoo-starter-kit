@@ -1,0 +1,1346 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338127,
+  "lastModifiedIso": "2026-01-03T20:15:38.127Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/TextArea.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 364,
+      "column": 3,
+      "index": 9529
+    }
+  },
+  "className": "qx.test.ui.form.TextArea",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tristan Koch (tristankoch)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "mixins": [
+    "qx.dev.unit.MRequirements"
+  ],
+  "members": {
+    "__textArea": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 620
+        },
+        "end": {
+          "line": 25,
+          "column": 20,
+          "index": 636
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 643
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 762
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "hasNoBuggyIe": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 769
+        },
+        "end": {
+          "line": 37,
+          "column": 5,
+          "index": 938
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea set value": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 984
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1166
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea set minimal line-height": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1173
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1648
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize grows when input would trigger scrollbar": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1687
+        },
+        "end": {
+          "line": 95,
+          "column": 5,
+          "index": 2360
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize shrinks when removal would hide scrollbar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 97,
+          "column": 4,
+          "index": 2367
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3129
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize does not shrink below original height": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3136
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 3854
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize shows scroll-bar when above maxHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 3861
+        },
+        "end": {
+          "line": 167,
+          "column": 5,
+          "index": 4364
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize shows scroll-bar when finally above maxHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 169,
+          "column": 4,
+          "index": 4371
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 4935
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize hides scroll-bar when finally below maxHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 4942
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5487
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize respects initial value": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 213,
+          "column": 4,
+          "index": 5494
+        },
+        "end": {
+          "line": 237,
+          "column": 5,
+          "index": 6210
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize respects initial wrap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 6217
+        },
+        "end": {
+          "line": 263,
+          "column": 5,
+          "index": 6829
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize shrinks when long line is unwrapped": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 265,
+          "column": 4,
+          "index": 6836
+        },
+        "end": {
+          "line": 289,
+          "column": 5,
+          "index": 7573
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: textarea with autoSize grows when long line is wrapped": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 291,
+          "column": 4,
+          "index": 7580
+        },
+        "end": {
+          "line": 338,
+          "column": 5,
+          "index": 8953
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__getLongValue": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 340,
+          "column": 4,
+          "index": 8960
+        },
+        "end": {
+          "line": 346,
+          "column": 5,
+          "index": 9130
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__supportsLiveWrap": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 348,
+          "column": 4,
+          "index": 9137
+        },
+        "end": {
+          "line": 352,
+          "column": 5,
+          "index": 9318
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "skip": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 354,
+          "column": 4,
+          "index": 9325
+        },
+        "end": {
+          "line": 356,
+          "column": 5,
+          "index": 9399
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "msg"
+        }
+      ],
+      "overriddenFrom": "qx.dev.unit.TestCase",
+      "appearsIn": [
+        "qx.dev.unit.TestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 358,
+          "column": 4,
+          "index": 9406
+        },
+        "end": {
+          "line": 362,
+          "column": 5,
+          "index": 9521
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "hasHttp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application has been loaded over HTTP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if HTTP is currently used",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application has been loaded over HTTP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if HTTP is currently used",
+            "type": "boolean",
+            "description": "<code>true</code> if HTTP is currently used"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1851
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1930
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the server supports PHP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if PHP is supported by the backend",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the server supports PHP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if PHP is supported by the backend",
+            "type": "boolean",
+            "description": "<code>true</code> if PHP is supported by the backend"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2080
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2978
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGuiApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Standalone",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a standalone (GUI)",
+          "     * application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Standalone</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a standalone (GUI)\n application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a standalone (GUI)\n application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 3178
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 3365
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasInlineApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Inline",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is an inline application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Inline</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is an inline application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is an inline application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3545
+        },
+        "end": {
+          "line": 135,
+          "column": 5,
+          "index": 3709
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNativeApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Native",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a native application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Native</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a native application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a native application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3888
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 4052
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasChrome": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Google Chrome",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Google Chrome",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Google Chrome</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Google Chrome",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Google Chrome"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 4218
+        },
+        "end": {
+          "line": 157,
+          "column": 5,
+          "index": 4304
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasFirefox": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Firefox",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Firefox",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Firefox</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Firefox",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Firefox"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4458
+        },
+        "end": {
+          "line": 166,
+          "column": 5,
+          "index": 4546
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGecko": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Gecko engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Gecko engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Mozilla Gecko"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 4,
+          "index": 4738
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasIe": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Internet Explorer",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Internet Explorer",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Internet Explorer</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Internet Explorer",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Internet Explorer"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 182,
+          "column": 4,
+          "index": 4994
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 5072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasMshtml": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the MSHTML engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is MSHTML",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the MSHTML engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is MSHTML",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is MSHTML"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 5258
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 5342
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasOpera": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Opera engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Opera",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Opera engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Opera",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Opera"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 5526
+        },
+        "end": {
+          "line": 202,
+          "column": 5,
+          "index": 5608
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasWebkit": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Webkit engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Webkit",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Webkit engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Webkit",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Webkit"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5794
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5878
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoOsx": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is NOT running on OS X",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the operating system is NOT OX X",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is NOT running on OS X</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the operating system is NOT OX X",
+            "type": "boolean",
+            "description": "<code>true</code> if the operating system is NOT OX X"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 218,
+          "column": 4,
+          "index": 6043
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 6135
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin7": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 7",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 7",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 7</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 7",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 7"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 227,
+          "column": 4,
+          "index": 6299
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6484
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin10": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 10",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 10",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 10</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 10",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 10"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 6650
+        },
+        "end": {
+          "line": 244,
+          "column": 5,
+          "index": 6839
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoChromeOnLinux": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is not running in a Google Chrome browser on Linux",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is not running in a Google Chrome browser on Linux</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is not Google Chrome on Linux"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 7041
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 7225
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasAsyncFunctions": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on a client supporting async functions",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the client supports async functions",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on a client supporting async functions</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the client supports async functions",
+            "type": "boolean",
+            "description": "<code>true</code> if the client supports async functions"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 263,
+          "column": 4,
+          "index": 7420
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 7514
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "require": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Verifies a list of infrastructure requirements by checking for",
+          "     * corresponding \"has\" methods. If no such method was found,",
+          "     * {@link qx.core.Environment} will be checked for a key matching the given",
+          "     * feature name. Note that asynchronous environment checks are not supported!",
+          "     *",
+          "     * @throws {qx.dev.unit.RequirementError} if any requirement check returned",
+          "     *   <code>false</code>",
+          "     * @throws {Error} if no valid check was found for a feature.",
+          "     *",
+          "     * @param featureList {String[]} List of infrastructure requirements",
+          "     * @lint environmentNonLiteralKey(feature)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Verifies a list of infrastructure requirements by checking for\n corresponding \"has\" methods. If no such method was found,\n {@link qx.core.Environment} will be checked for a key matching the given\n feature name. Note that asynchronous environment checks are not supported!</p>"
+          }
+        ],
+        "@throws": [
+          {
+            "name": "@throws",
+            "body": "{qx.dev.unit.RequirementError} if any requirement check returned\n   <code>false</code>",
+            "type": "qx.dev.unit.RequirementError",
+            "description": " if any requirement check returned\n   <code>false</code>"
+          },
+          {
+            "name": "@throws",
+            "body": "{Error} if no valid check was found for a feature.",
+            "type": "Error",
+            "description": " if no valid check was found for a feature."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "featureList {String[]} List of infrastructure requirements",
+            "paramName": "featureList",
+            "description": " List of infrastructure requirements",
+            "type": "String[]"
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "environmentNonLiteralKey(feature)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1452
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2994
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "featureList",
+          "type": "String[]"
+        }
+      ],
+      "mixin": "qx.dev.unit.MRequirements",
+      "appearsIn": [
+        "qx.dev.unit.MRequirements",
+        "qx.dev.unit.MRequirementsBasic"
+      ]
+    }
+  },
+  "statics": {
+    "__hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "* @type {Boolean} Result of {@link #hasPhp}. Stored as class member to avoid",
+          "     * repeating the check. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{Boolean} Result of {@link #hasPhp}. Stored as class member to avoid\n repeating the check."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1478
+        },
+        "end": {
+          "line": 51,
+          "column": 18,
+          "index": 1492
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,2585 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337223,
+  "lastModifiedIso": "2026-01-03T20:15:37.223Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/controller/List.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 537
+    },
+    "end": {
+      "line": 1641,
+      "column": 3,
+      "index": 43265
+    }
+  },
+  "className": "qx.test.data.controller.List",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.demo.Kid, qx.demo.Parent)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.demo.Kid, qx.demo.Parent"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "mixins": [
+    "qx.dev.unit.MMock"
+  ],
+  "members": {
+    "__list": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @type {qx.ui.form.List}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.ui.form.List}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 719
+        },
+        "end": {
+          "line": 31,
+          "column": 16,
+          "index": 731
+        }
+      },
+      "appearsIn": []
+    },
+    "__controller": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @type {qx.data.controller.List}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.data.controller.List}"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 792
+        },
+        "end": {
+          "line": 35,
+          "column": 22,
+          "index": 810
+        }
+      },
+      "appearsIn": []
+    },
+    "__data": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 816
+        },
+        "end": {
+          "line": 36,
+          "column": 16,
+          "index": 828
+        }
+      },
+      "appearsIn": []
+    },
+    "__model": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 834
+        },
+        "end": {
+          "line": 37,
+          "column": 17,
+          "index": 847
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 854
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1009
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1016
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1488
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "__setUpString": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1495
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 1793
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testChangeSelectionOnPush": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 1800
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2413
+        },
+        "end": {
+          "line": 112,
+          "column": 5,
+          "index": 2868
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelChangeCombobox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 2875
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3431
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStringArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 4,
+          "index": 3438
+        },
+        "end": {
+          "line": 144,
+          "column": 5,
+          "index": 3722
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmptyList": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 146,
+          "column": 4,
+          "index": 3729
+        },
+        "end": {
+          "line": 152,
+          "column": 5,
+          "index": 3921
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStringElementRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 3928
+        },
+        "end": {
+          "line": 172,
+          "column": 5,
+          "index": 4464
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStringElementAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 174,
+          "column": 4,
+          "index": 4471
+        },
+        "end": {
+          "line": 192,
+          "column": 5,
+          "index": 5014
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 194,
+          "column": 4,
+          "index": 5021
+        },
+        "end": {
+          "line": 206,
+          "column": 5,
+          "index": 5400
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeModelSmaller": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 208,
+          "column": 4,
+          "index": 5407
+        },
+        "end": {
+          "line": 228,
+          "column": 5,
+          "index": 6054
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeModelBigger": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 230,
+          "column": 4,
+          "index": 6061
+        },
+        "end": {
+          "line": 250,
+          "column": 5,
+          "index": 6717
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeTarget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 252,
+          "column": 4,
+          "index": 6724
+        },
+        "end": {
+          "line": 269,
+          "column": 5,
+          "index": 7256
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReverse": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 271,
+          "column": 4,
+          "index": 7263
+        },
+        "end": {
+          "line": 283,
+          "column": 5,
+          "index": 7630
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBooleanArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 285,
+          "column": 4,
+          "index": 7637
+        },
+        "end": {
+          "line": 306,
+          "column": 5,
+          "index": 8252
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNumberArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 308,
+          "column": 4,
+          "index": 8259
+        },
+        "end": {
+          "line": 329,
+          "column": 5,
+          "index": 8867
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 331,
+          "column": 4,
+          "index": 8874
+        },
+        "end": {
+          "line": 350,
+          "column": 5,
+          "index": 9468
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 352,
+          "column": 4,
+          "index": 9475
+        },
+        "end": {
+          "line": 371,
+          "column": 5,
+          "index": 10066
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetSelectionSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 373,
+          "column": 4,
+          "index": 10073
+        },
+        "end": {
+          "line": 398,
+          "column": 5,
+          "index": 10709
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 400,
+          "column": 4,
+          "index": 10716
+        },
+        "end": {
+          "line": 434,
+          "column": 5,
+          "index": 11658
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionSingleRemoveFirst": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 436,
+          "column": 4,
+          "index": 11665
+        },
+        "end": {
+          "line": 451,
+          "column": 5,
+          "index": 12076
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionMultiple": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 453,
+          "column": 4,
+          "index": 12083
+        },
+        "end": {
+          "line": 480,
+          "column": 5,
+          "index": 12871
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionBackSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 482,
+          "column": 4,
+          "index": 12878
+        },
+        "end": {
+          "line": 494,
+          "column": 5,
+          "index": 13247
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionBackMultiple": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 496,
+          "column": 4,
+          "index": 13254
+        },
+        "end": {
+          "line": 518,
+          "column": 5,
+          "index": 13946
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionArrayChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 520,
+          "column": 4,
+          "index": 13953
+        },
+        "end": {
+          "line": 536,
+          "column": 5,
+          "index": 14400
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionArrayChangeItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 538,
+          "column": 4,
+          "index": 14407
+        },
+        "end": {
+          "line": 550,
+          "column": 5,
+          "index": 14782
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionArrayReverse": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 552,
+          "column": 4,
+          "index": 14789
+        },
+        "end": {
+          "line": 577,
+          "column": 5,
+          "index": 15542
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionAfterDelete": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 579,
+          "column": 4,
+          "index": 15549
+        },
+        "end": {
+          "line": 605,
+          "column": 5,
+          "index": 16275
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionAfterDeleteEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 607,
+          "column": 4,
+          "index": 16282
+        },
+        "end": {
+          "line": 628,
+          "column": 5,
+          "index": 16849
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetBug": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 630,
+          "column": 4,
+          "index": 16856
+        },
+        "end": {
+          "line": 666,
+          "column": 5,
+          "index": 17706
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDates": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 668,
+          "column": 4,
+          "index": 17713
+        },
+        "end": {
+          "line": 688,
+          "column": 5,
+          "index": 18288
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConversionLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 690,
+          "column": 4,
+          "index": 18295
+        },
+        "end": {
+          "line": 709,
+          "column": 5,
+          "index": 18853
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOnUpdateLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 711,
+          "column": 4,
+          "index": 18860
+        },
+        "end": {
+          "line": 742,
+          "column": 5,
+          "index": 19802
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectBoxSelectionSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 744,
+          "column": 4,
+          "index": 19809
+        },
+        "end": {
+          "line": 764,
+          "column": 5,
+          "index": 20381
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithModelChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 766,
+          "column": 4,
+          "index": 20388
+        },
+        "end": {
+          "line": 799,
+          "column": 5,
+          "index": 21283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithModelChangeSelectBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 801,
+          "column": 4,
+          "index": 21290
+        },
+        "end": {
+          "line": 865,
+          "column": 5,
+          "index": 23073
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterApply": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 867,
+          "column": 4,
+          "index": 23080
+        },
+        "end": {
+          "line": 886,
+          "column": 5,
+          "index": 23595
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 888,
+          "column": 4,
+          "index": 23602
+        },
+        "end": {
+          "line": 908,
+          "column": 5,
+          "index": 24261
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterChangeModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 910,
+          "column": 4,
+          "index": 24268
+        },
+        "end": {
+          "line": 957,
+          "column": 5,
+          "index": 25349
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterReverseModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 959,
+          "column": 4,
+          "index": 25356
+        },
+        "end": {
+          "line": 1023,
+          "column": 5,
+          "index": 26790
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1025,
+          "column": 4,
+          "index": 26797
+        },
+        "end": {
+          "line": 1101,
+          "column": 5,
+          "index": 28475
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterChangeTarget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1103,
+          "column": 4,
+          "index": 28482
+        },
+        "end": {
+          "line": 1155,
+          "column": 5,
+          "index": 29668
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterWithSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1157,
+          "column": 4,
+          "index": 29675
+        },
+        "end": {
+          "line": 1197,
+          "column": 5,
+          "index": 30788
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilterAfterSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1199,
+          "column": 4,
+          "index": 30795
+        },
+        "end": {
+          "line": 1223,
+          "column": 5,
+          "index": 31432
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateLate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1225,
+          "column": 4,
+          "index": 31439
+        },
+        "end": {
+          "line": 1241,
+          "column": 5,
+          "index": 31893
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateFirst": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1243,
+          "column": 4,
+          "index": 31900
+        },
+        "end": {
+          "line": 1265,
+          "column": 5,
+          "index": 32639
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateBindItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1267,
+          "column": 4,
+          "index": 32646
+        },
+        "end": {
+          "line": 1298,
+          "column": 5,
+          "index": 33649
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateBindItemLate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1300,
+          "column": 4,
+          "index": 33656
+        },
+        "end": {
+          "line": 1330,
+          "column": 5,
+          "index": 34636
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateBindDefaultProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1332,
+          "column": 4,
+          "index": 34643
+        },
+        "end": {
+          "line": 1349,
+          "column": 5,
+          "index": 35228
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDelegateBindDefaultPropertiesLate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1351,
+          "column": 4,
+          "index": 35235
+        },
+        "end": {
+          "line": 1366,
+          "column": 5,
+          "index": 35768
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionSequence": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1368,
+          "column": 4,
+          "index": 35775
+        },
+        "end": {
+          "line": 1429,
+          "column": 5,
+          "index": 37522
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetVisibleModels": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1431,
+          "column": 4,
+          "index": 37529
+        },
+        "end": {
+          "line": 1449,
+          "column": 5,
+          "index": 38157
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindIconWithStringArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1451,
+          "column": 4,
+          "index": 38164
+        },
+        "end": {
+          "line": 1460,
+          "column": 5,
+          "index": 38498
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollBySelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1462,
+          "column": 4,
+          "index": 38505
+        },
+        "end": {
+          "line": 1477,
+          "column": 5,
+          "index": 39086
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollBySelectionMulti": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1479,
+          "column": 4,
+          "index": 39093
+        },
+        "end": {
+          "line": 1495,
+          "column": 5,
+          "index": 39724
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBug1947": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1497,
+          "column": 4,
+          "index": 39731
+        },
+        "end": {
+          "line": 1559,
+          "column": 5,
+          "index": 41210
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBug1988": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1561,
+          "column": 4,
+          "index": 41217
+        },
+        "end": {
+          "line": 1633,
+          "column": 5,
+          "index": 43070
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpliceAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 1635,
+          "column": 4,
+          "index": 43077
+        },
+        "end": {
+          "line": 1639,
+          "column": 5,
+          "index": 43257
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__sandbox": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 102,
+          "column": 4,
+          "index": 2531
+        },
+        "end": {
+          "line": 102,
+          "column": 19,
+          "index": 2546
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__fakeXhr": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2553
+        },
+        "end": {
+          "line": 104,
+          "column": 19,
+          "index": 2568
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__exposeAssertions": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Expose Sinon.JS assertions. Provides methods such",
+          "     * as assertCalled(), assertCalledWith().",
+          "     * (http://sinonjs.org/docs/#assert-expose)",
+          "     * Does not override existing assertion methods.",
+          "     * @ignore(sinon.assert.expose)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Expose Sinon.JS assertions. Provides methods such\n as assertCalled(), assertCalledWith().\n (http://sinonjs.org/docs/#assert-expose)\n Does not override existing assertion methods.</p>"
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "sinon.assert.expose"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 2831
+        },
+        "end": {
+          "line": 121,
+          "column": 5,
+          "index": 3056
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__getSinon": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get the Sinon.JS object.",
+          "     *",
+          "     * @return {Object}",
+          "     * @internal",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get the Sinon.JS object.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ],
+        "@internal": [
+          {
+            "name": "@internal",
+            "body": ""
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3159
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 3222
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "spy": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test spies allow introspection on how a function is used",
+          "     * throughout the system under test.",
+          "     *",
+          "     * * spy()",
+          "     *   Creates an anonymous function that records arguments,",
+          "     *   this value, exceptions and return values for all calls.",
+          "     *",
+          "     * * spy(func)",
+          "     *   Spies on the provided function",
+          "     *",
+          "     * * spy(object, \"method\")",
+          "     *   Creates a spy for object.method and replaces the original method",
+          "     *   with the spy. The spy acts exactly like the original method in all cases.",
+          "     *   The original method can be restored by calling object.method.restore().",
+          "     *   The returned spy is the function object which replaced the original method.",
+          "     *   spy === object.method.",
+          "     *",
+          "     * * spy.withArgs(arg1[, arg2, ...])",
+          "     *   Creates a spy that only records calls when the received arguments matches those",
+          "     *   passed to <code>withArgs</code>.",
+          "     *",
+          "     * A spy has a rich interface to introspect how the wrapped function was used:",
+          "     *",
+          "     * * spy.withArgs(arg1[, arg2, ...]);",
+          "     * * spy.callCount",
+          "     * * spy.called",
+          "     * * spy.calledOnce",
+          "     * * spy.calledTwice",
+          "     * * spy.calledThrice",
+          "     * * spy.firstCall",
+          "     * * spy.secondCall",
+          "     * * spy.thirdCall",
+          "     * * spy.lastCall",
+          "     * * spy.calledBefore(anotherSpy)",
+          "     * * spy.calledAfter(anotherSpy)",
+          "     * * spy.calledOn(obj)",
+          "     * * spy.alwaysCalledOn(obj)",
+          "     * * spy.calledWith(arg1, arg2, ...)",
+          "     * * spy.alwaysCalledWith(arg1, arg2, ...)",
+          "     * * spy.calledWithExactly(arg1, arg2, ...)",
+          "     * * spy.alwaysCalledWithExactly(arg1, arg2, ...)",
+          "     * * spy.calledWithMatch(arg1, arg2, ...);",
+          "     * * spy.alwaysCalledWithMatch(arg1, arg2, ...);",
+          "     * * spy.calledWithNew();",
+          "     * * spy.neverCalledWith(arg1, arg2, ...);",
+          "     * * spy.neverCalledWithMatch(arg1, arg2, ...);",
+          "     * * spy.threw()",
+          "     * * spy.threw(\"TypeError\")",
+          "     * * spy.threw(obj)",
+          "     * * spy.alwaysThrew()",
+          "     * * spy.alwaysThrew(\"TypeError\")",
+          "     * * spy.alwaysThrew(obj)",
+          "     * * spy.returned(obj)",
+          "     * * spy.alwaysReturned(obj)",
+          "     * * spy.getCall(n)",
+          "     * * spy.thisValues",
+          "     * * spy.args",
+          "     * * spy.exceptions",
+          "     * * spy.returnValues",
+          "     * * spy.reset()",
+          "     * * spy.printf(\"format string\", [arg1, arg2, ...])",
+          "     *",
+          "     * See http://sinonjs.org/docs/#spies.",
+          "     *",
+          "     * Note: Spies are transparently added to a sandbox. To restore",
+          "     * the original function for all spies run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @param function_or_object {Function|Object} Spies on the",
+          "     *   provided function or object.",
+          "     * @param method {String?null} The method to spy upon if an object was given.",
+          "     * @return {Function} The wrapped function enhanced with properties and methods",
+          "     *   that allow for introspection. See http://sinonjs.org/docs/#spies.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test spies allow introspection on how a function is used\n throughout the system under test.</p>\n<ul>\n<li>spy()\nCreates an anonymous function that records arguments,\nthis value, exceptions and return values for all calls.</li>\n<li>spy(func)\nSpies on the provided function</li>\n<li>spy(object, \"method\")\nCreates a spy for object.method and replaces the original method\nwith the spy. The spy acts exactly like the original method in all cases.\nThe original method can be restored by calling object.method.restore().\nThe returned spy is the function object which replaced the original method.\nspy === object.method.</li>\n<li>spy.withArgs(arg1[, arg2, …])\nCreates a spy that only records calls when the received arguments matches those\npassed to <code>withArgs</code>.\nA spy has a rich interface to introspect how the wrapped function was used:</li>\n<li>spy.withArgs(arg1[, arg2, …]);</li>\n<li>spy.callCount</li>\n<li>spy.called</li>\n<li>spy.calledOnce</li>\n<li>spy.calledTwice</li>\n<li>spy.calledThrice</li>\n<li>spy.firstCall</li>\n<li>spy.secondCall</li>\n<li>spy.thirdCall</li>\n<li>spy.lastCall</li>\n<li>spy.calledBefore(anotherSpy)</li>\n<li>spy.calledAfter(anotherSpy)</li>\n<li>spy.calledOn(obj)</li>\n<li>spy.alwaysCalledOn(obj)</li>\n<li>spy.calledWith(arg1, arg2, …)</li>\n<li>spy.alwaysCalledWith(arg1, arg2, …)</li>\n<li>spy.calledWithExactly(arg1, arg2, …)</li>\n<li>spy.alwaysCalledWithExactly(arg1, arg2, …)</li>\n<li>spy.calledWithMatch(arg1, arg2, …);</li>\n<li>spy.alwaysCalledWithMatch(arg1, arg2, …);</li>\n<li>spy.calledWithNew();</li>\n<li>spy.neverCalledWith(arg1, arg2, …);</li>\n<li>spy.neverCalledWithMatch(arg1, arg2, …);</li>\n<li>spy.threw()</li>\n<li>spy.threw(\"TypeError\")</li>\n<li>spy.threw(obj)</li>\n<li>spy.alwaysThrew()</li>\n<li>spy.alwaysThrew(\"TypeError\")</li>\n<li>spy.alwaysThrew(obj)</li>\n<li>spy.returned(obj)</li>\n<li>spy.alwaysReturned(obj)</li>\n<li>spy.getCall(n)</li>\n<li>spy.thisValues</li>\n<li>spy.args</li>\n<li>spy.exceptions</li>\n<li>spy.returnValues</li>\n<li>spy.reset()</li>\n<li>spy.printf(\"format string\", [arg1, arg2, …])\nSee http://sinonjs.org/docs/#spies.\nNote: Spies are transparently added to a sandbox. To restore\nthe original function for all spies run <code>this.getSandbox().restore()</code>\nin your <code>tearDown()</code> method.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "function_or_object {Function|Object} Spies on the\n   provided function or object.",
+            "paramName": "function_or_object",
+            "description": " Spies on the\n   provided function or object.",
+            "type": [
+              "Function",
+              "Object"
+            ]
+          },
+          {
+            "name": "@param",
+            "body": "method {String?null} The method to spy upon if an object was given.",
+            "paramName": "method",
+            "description": " The method to spy upon if an object was given.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} The wrapped function enhanced with properties and methods\n   that allow for introspection. See http://sinonjs.org/docs/#spies.",
+            "type": "((...args: any[]) => any)",
+            "description": "The wrapped function enhanced with properties and methods\n   that allow for introspection. See http://sinonjs.org/docs/#spies."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 208,
+          "column": 4,
+          "index": 6076
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 6181
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "function_or_object",
+          "type": [
+            "Function",
+            "Object"
+          ]
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "stub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test stubs are functions (spies) with pre-programmed behavior.",
+          "     *",
+          "     * * stub()",
+          "     *   Creates an anonymous stub function",
+          "     *",
+          "     * * stub(object, \"method\")",
+          "     *   Replaces object.method with a stub function. The original function",
+          "     *   can be restored by calling object.method.restore() (or stub.restore()).",
+          "     *   An exception is thrown if the property is not already a function,",
+          "     *   to help avoid typos when stubbing methods.",
+          "     *",
+          "     * * stub(obj)",
+          "     *   Stubs all the object's methods.",
+          "     *",
+          "     * * stub.withArgs(arg1[, arg2, ...])",
+          "     *   Stubs the method only for the provided arguments. Can be used to create",
+          "     *   a stub that acts differently in response to different arguments.",
+          "     *",
+          "     * A stub has the interface of a spy in addition to methods that allow to define behaviour:",
+          "     *",
+          "     * * stub.returns(obj)",
+          "     * * stub.throws()",
+          "     * * stub.throws(\"TypeError\")",
+          "     * * stub.throws(obj)",
+          "     * * stub.callsArg(index)",
+          "     * * stub.callsArg(0)",
+          "     * * stub.callsArgWith(index, arg1, arg2, ...)",
+          "     *",
+          "     * See http://sinonjs.org/docs/#stubs.",
+          "     *",
+          "     * Note: Stubs are transparently added to a sandbox. To restore",
+          "     * the original function for all stubs run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @param object {Object?null} Object to stub. Creates an anonymous stub function",
+          "     *   if not given.",
+          "     * @param  method {String?null} Replaces object.method with a stub function.",
+          "     *   An exception is thrown if the property is not already a function, to",
+          "     *   help avoid typos when stubbing methods.",
+          "     * @return {Function} A stub. Has the interface of a spy in addition to methods",
+          "     *   that allow to define behaviour. See http://sinonjs.org/docs/#stubs.",
+          "     *",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test stubs are functions (spies) with pre-programmed behavior.</p>\n<ul>\n<li>stub()\nCreates an anonymous stub function</li>\n<li>stub(object, \"method\")\nReplaces object.method with a stub function. The original function\ncan be restored by calling object.method.restore() (or stub.restore()).\nAn exception is thrown if the property is not already a function,\nto help avoid typos when stubbing methods.</li>\n<li>stub(obj)\nStubs all the object's methods.</li>\n<li>stub.withArgs(arg1[, arg2, …])\nStubs the method only for the provided arguments. Can be used to create\na stub that acts differently in response to different arguments.\nA stub has the interface of a spy in addition to methods that allow to define behaviour:</li>\n<li>stub.returns(obj)</li>\n<li>stub.throws()</li>\n<li>stub.throws(\"TypeError\")</li>\n<li>stub.throws(obj)</li>\n<li>stub.callsArg(index)</li>\n<li>stub.callsArg(0)</li>\n<li>stub.callsArgWith(index, arg1, arg2, …)\nSee http://sinonjs.org/docs/#stubs.\nNote: Stubs are transparently added to a sandbox. To restore\nthe original function for all stubs run <code>this.getSandbox().restore()</code>\nin your <code>tearDown()</code> method.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object?null} Object to stub. Creates an anonymous stub function\n   if not given.",
+            "paramName": "object",
+            "description": " Object to stub. Creates an anonymous stub function\n   if not given.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Object"
+          },
+          {
+            "name": "@param",
+            "body": "method {String?null} Replaces object.method with a stub function.\n   An exception is thrown if the property is not already a function, to\n   help avoid typos when stubbing methods.",
+            "paramName": "method",
+            "description": " Replaces object.method with a stub function.\n   An exception is thrown if the property is not already a function, to\n   help avoid typos when stubbing methods.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} A stub. Has the interface of a spy in addition to methods\n   that allow to define behaviour. See http://sinonjs.org/docs/#stubs.",
+            "type": "((...args: any[]) => any)",
+            "description": "A stub. Has the interface of a spy in addition to methods\n   that allow to define behaviour. See http://sinonjs.org/docs/#stubs."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 256,
+          "column": 4,
+          "index": 8014
+        },
+        "end": {
+          "line": 262,
+          "column": 5,
+          "index": 8234
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Object",
+          "optional": true,
+          "defaultValue": "null"
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "optional": true,
+          "defaultValue": "null"
+        },
+        {
+          "name": "func"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "mock": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Mocks are slightly different from spies and stubs in that you mock an",
+          "     * object, and then set an expectation on one or more of its objects.",
+          "     *",
+          "     * * var mock = mock(obj)",
+          "     *   Creates a mock for the provided object. Does not change the object, but",
+          "     *   returns a mock object to set expectations on the object's methods.",
+          "     *",
+          "     * * var expectation = mock.expects(\"method\")",
+          "     *   Overrides obj.method with a mock function and returns an expectation",
+          "     *   object. Expectations implement both the spy and stub interface plus",
+          "     *   the methods described below.",
+          "     *",
+          "     * Set expectations with following methods. All methods return the expectation",
+          "     * itself, meaning expectations can be chained.",
+          "     *",
+          "     * * expectation.atLeast(number);",
+          "     * * expectation.atMost(number);",
+          "     * * expectation.never();",
+          "     * * expectation.once();",
+          "     * * expectation.twice();",
+          "     * * expectation.thrice();",
+          "     * * expectation.exactly(number);",
+          "     * * expectation.withArgs(arg1, arg2, ...);",
+          "     * * expectation.withExactArgs(arg1, arg2, ...);",
+          "     * * expectation.on(obj);",
+          "     * * expectation.verify();",
+          "     *",
+          "     * See http://sinonjs.org/docs/#mocks.",
+          "     *",
+          "     * @param object {Object} The object to create a mock of.",
+          "     * @return {Function} A mock to set expectations on. See http://sinonjs.org/docs/#mocks.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Mocks are slightly different from spies and stubs in that you mock an\n object, and then set an expectation on one or more of its objects.</p>\n<ul>\n<li>var mock = mock(obj)\nCreates a mock for the provided object. Does not change the object, but\nreturns a mock object to set expectations on the object's methods.</li>\n<li>var expectation = mock.expects(\"method\")\nOverrides obj.method with a mock function and returns an expectation\nobject. Expectations implement both the spy and stub interface plus\nthe methods described below.\nSet expectations with following methods. All methods return the expectation\nitself, meaning expectations can be chained.</li>\n<li>expectation.atLeast(number);</li>\n<li>expectation.atMost(number);</li>\n<li>expectation.never();</li>\n<li>expectation.once();</li>\n<li>expectation.twice();</li>\n<li>expectation.thrice();</li>\n<li>expectation.exactly(number);</li>\n<li>expectation.withArgs(arg1, arg2, …);</li>\n<li>expectation.withExactArgs(arg1, arg2, …);</li>\n<li>expectation.on(obj);</li>\n<li>expectation.verify();\nSee http://sinonjs.org/docs/#mocks.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} The object to create a mock of.",
+            "paramName": "object",
+            "description": " The object to create a mock of.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} A mock to set expectations on. See http://sinonjs.org/docs/#mocks.",
+            "type": "((...args: any[]) => any)",
+            "description": "A mock to set expectations on. See http://sinonjs.org/docs/#mocks."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 297,
+          "column": 4,
+          "index": 9608
+        },
+        "end": {
+          "line": 300,
+          "column": 5,
+          "index": 9714
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "useFakeXMLHttpRequest": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Replace the native XMLHttpRequest object in browsers that support it with",
+          "     * a custom implementation which does not send actual requests.",
+          "     *",
+          "     * Note: The fake XHR is transparently added to a sandbox. To restore",
+          "     * the original host method run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#useFakeXMLHttpRequest.",
+          "     *",
+          "     * @return {Object}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Replace the native XMLHttpRequest object in browsers that support it with\n a custom implementation which does not send actual requests.\n Note: The fake XHR is transparently added to a sandbox. To restore\n the original host method run <code>this.getSandbox().restore()</code>\n in your <code>tearDown()</code> method.\n See http://sinonjs.org/docs/#useFakeXMLHttpRequest.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 314,
+          "column": 4,
+          "index": 10188
+        },
+        "end": {
+          "line": 316,
+          "column": 5,
+          "index": 10283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getRequests": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get requests made with faked XHR or server.",
+          "     *",
+          "     * Each request can be queried for url, method, requestHeaders,",
+          "     * status and more.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#FakeXMLHttpRequest.",
+          "     *",
+          "     * @return {Array} Array of faked requests.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get requests made with faked XHR or server.\n Each request can be queried for url, method, requestHeaders,\n status and more.\n See http://sinonjs.org/docs/#FakeXMLHttpRequest.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array} Array of faked requests.",
+            "type": "Array<any>",
+            "description": "Array of faked requests."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 10574
+        },
+        "end": {
+          "line": 330,
+          "column": 5,
+          "index": 10633
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Array<any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "useFakeServer": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * As {@link #useFakeXMLHttpRequest}, but additionally provides a high-level",
+          "     * API to setup server responses. To setup responses, use the server",
+          "     * returned by {@link #getServer}.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#server.",
+          "     *",
+          "     * Note: The fake server is transparently added to a sandbox. To restore",
+          "     * the original host method run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @return {Object}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>As {@link #useFakeXMLHttpRequest}, but additionally provides a high-level\n API to setup server responses. To setup responses, use the server\n returned by {@link #getServer}.\n See http://sinonjs.org/docs/#server.\n Note: The fake server is transparently added to a sandbox. To restore\n the original host method run <code>this.getSandbox().restore()</code>\n in your <code>tearDown()</code> method.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 345,
+          "column": 4,
+          "index": 11139
+        },
+        "end": {
+          "line": 347,
+          "column": 5,
+          "index": 11226
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getServer": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get fake server created by {@link #useFakeServer}.",
+          "     *",
+          "     * @return {Object} Fake server.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get fake server created by {@link #useFakeServer}.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Fake server.",
+            "type": "Record<any, any>",
+            "description": "Fake server."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 354,
+          "column": 4,
+          "index": 11351
+        },
+        "end": {
+          "line": 356,
+          "column": 5,
+          "index": 11406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getSandbox": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get sandbox.",
+          "     *",
+          "     * The sandbox holds all stubs and mocks. Run <code>this.getSandbox().restore()</code>",
+          "     * to restore all mock objects.",
+          "     *",
+          "     * @return {Object}",
+          "     *        Sandbox object.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get sandbox.\n The sandbox holds all stubs and mocks. Run <code>this.getSandbox().restore()</code>\n to restore all mock objects.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}\n        Sandbox object.",
+            "type": "Record<any, any>",
+            "description": "        Sandbox object."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 367,
+          "column": 4,
+          "index": 11644
+        },
+        "end": {
+          "line": 369,
+          "column": 5,
+          "index": 11693
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "deepStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Returns a deep copied, API-identical stubbed out clone of the given",
+          "     * object.",
+          "     *",
+          "     * In contrast to the shallow {@link #stub}, also stubs out properties that",
+          "     * belong to the prototype chain.",
+          "     *",
+          "     * @param object {Object} Object to stub deeply.",
+          "     * @return {Object} A stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns a deep copied, API-identical stubbed out clone of the given\n object.\n In contrast to the shallow {@link #stub}, also stubs out properties that\n belong to the prototype chain.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub deeply.",
+            "paramName": "object",
+            "description": " Object to stub deeply.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} A stub.",
+            "type": "Record<any, any>",
+            "description": "A stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 382,
+          "column": 4,
+          "index": 12030
+        },
+        "end": {
+          "line": 388,
+          "column": 5,
+          "index": 12199
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "shallowStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Shallowly stub all methods (except excluded) that belong to classes found in inheritance",
+          "     * chain up to (but including) the given class.",
+          "     *",
+          "     * @param object {Object} Object to stub shallowly.",
+          "     * @param targetClazz {Object} Class which marks the end of the chain.",
+          "     * @param propsToExclude {Array} Array with properties which shouldn't be stubbed.",
+          "     * @return {Object} A stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Shallowly stub all methods (except excluded) that belong to classes found in inheritance\n chain up to (but including) the given class.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub shallowly.",
+            "paramName": "object",
+            "description": " Object to stub shallowly.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "targetClazz {Object} Class which marks the end of the chain.",
+            "paramName": "targetClazz",
+            "description": " Class which marks the end of the chain.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "propsToExclude {Array} Array with properties which shouldn't be stubbed.",
+            "paramName": "propsToExclude",
+            "description": " Array with properties which shouldn't be stubbed.",
+            "type": "Array<any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} A stub.",
+            "type": "Record<any, any>",
+            "description": "A stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 400,
+          "column": 4,
+          "index": 12634
+        },
+        "end": {
+          "line": 410,
+          "column": 5,
+          "index": 12981
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "targetClazz",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "propsToExclude",
+          "type": "Array<any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "injectStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Changes the given factory (e.g. a constructor) to return a stub. The",
+          "     * method itself returns this stub.",
+          "     *",
+          "     * By default, the stub returned by the changed factory is the object built",
+          "     * by the original factory, but deeply stubbed (see {@link #deepStub}).",
+          "     * Alternatively, a custom stub may be given explicitly that is used instead.",
+          "     *",
+          "     * @param object {Object} Namespace to hold factory, e.g. qx.html.",
+          "     * @param property {String} Property as string that functions as",
+          "     *  constructor, e.g. \"Element\".",
+          "     * @param customStub {Object?} Stub to inject.",
+          "     * @return {Object} Injected stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Changes the given factory (e.g. a constructor) to return a stub. The\n method itself returns this stub.\n By default, the stub returned by the changed factory is the object built\n by the original factory, but deeply stubbed (see {@link #deepStub}).\n Alternatively, a custom stub may be given explicitly that is used instead.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Namespace to hold factory, e.g. qx.html.",
+            "paramName": "object",
+            "description": " Namespace to hold factory, e.g. qx.html.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "property {String} Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "paramName": "property",
+            "description": " Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "customStub {Object?} Stub to inject.",
+            "paramName": "customStub",
+            "description": " Stub to inject.",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Injected stub.",
+            "type": "Record<any, any>",
+            "description": "Injected stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 427,
+          "column": 4,
+          "index": 13646
+        },
+        "end": {
+          "line": 432,
+          "column": 5,
+          "index": 13833
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "property",
+          "type": "string"
+        },
+        {
+          "name": "customStub",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "revealMock": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Changes the given factory (e.g. a constructor) to make a mock of the",
+          "     * object returned. The method itself returns this mock.",
+          "     *",
+          "     * By default, the object returned by the changed factory (that a mock is",
+          "     * made of) is a deep copied, API-identical clone of the object built by the",
+          "     * original factory. Alternatively, the object returned can be given",
+          "     * explicitly.",
+          "     *",
+          "     * @param object {Object} Namespace to hold factory, e.g. qx.html.",
+          "     * @param property {String} Property as string that functions as",
+          "     *  constructor, e.g. \"Element\".",
+          "     * @param customObject {Object?} Object to inject.",
+          "     * @return {Object} Mock of the object built.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Changes the given factory (e.g. a constructor) to make a mock of the\n object returned. The method itself returns this mock.\n By default, the object returned by the changed factory (that a mock is\n made of) is a deep copied, API-identical clone of the object built by the\n original factory. Alternatively, the object returned can be given\n explicitly.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Namespace to hold factory, e.g. qx.html.",
+            "paramName": "object",
+            "description": " Namespace to hold factory, e.g. qx.html.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "property {String} Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "paramName": "property",
+            "description": " Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "customObject {Object?} Object to inject.",
+            "paramName": "customObject",
+            "description": " Object to inject.",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Mock of the object built.",
+            "type": "Record<any, any>",
+            "description": "Mock of the object built."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 449,
+          "column": 4,
+          "index": 14540
+        },
+        "end": {
+          "line": 454,
+          "column": 5,
+          "index": 14751
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "property",
+          "type": "string"
+        },
+        {
+          "name": "customObject",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__deepClone": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Deep clone object by copying properties from prototype.",
+          "     *",
+          "     * @param obj {Object} Object to prepare (that is, clone).",
+          "     * @return {Object} Prepared (deeply cloned) object.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Deep clone object by copying properties from prototype.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "obj {Object} Object to prepare (that is, clone).",
+            "paramName": "obj",
+            "description": " Object to prepare (that is, clone).",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Prepared (deeply cloned) object.",
+            "type": "Record<any, any>",
+            "description": "Prepared (deeply cloned) object."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 462,
+          "column": 4,
+          "index": 14964
+        },
+        "end": {
+          "line": 471,
+          "column": 5,
+          "index": 15132
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "obj",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__getOwnProperties": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get the object’s own properties.",
+          "     *",
+          "     * @param object {Object} Object to analyze.",
+          "     * @param targetClazz {Object} Class which marks the end of the chain.",
+          "     * @return {Array} Array of the object’s own properties.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get the object’s own properties.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to analyze.",
+            "paramName": "object",
+            "description": " Object to analyze.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "targetClazz {Object} Class which marks the end of the chain.",
+            "paramName": "targetClazz",
+            "description": " Class which marks the end of the chain.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array} Array of the object’s own properties.",
+            "type": "Array<any>",
+            "description": "Array of the object’s own properties."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 480,
+          "column": 4,
+          "index": 15387
+        },
+        "end": {
+          "line": 511,
+          "column": 5,
+          "index": 16194
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "targetClazz",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Array<any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__stubProperty": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Safely stub property.",
+          "     *",
+          "     * @param object {Object} Object to stub.",
+          "     * @param prop {String} Property to stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Safely stub property.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub.",
+            "paramName": "object",
+            "description": " Object to stub.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "prop {String} Property to stub.",
+            "paramName": "prop",
+            "description": " Property to stub.",
+            "type": "string"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 519,
+          "column": 4,
+          "index": 16345
+        },
+        "end": {
+          "line": 526,
+          "column": 5,
+          "index": 16560
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "prop",
+          "type": "string"
+        }
+      ],
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

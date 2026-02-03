@@ -1,0 +1,109 @@
+{
+  "version": 0.3,
+  "lastModified": 1767539332726,
+  "lastModifiedIso": "2026-01-04T15:08:52.726Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/test/DemoTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 749
+    },
+    "end": {
+      "line": 55,
+      "column": 3,
+      "index": 1520
+    }
+  },
+  "className": "qxapp.test.DemoTest",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This class demonstrates how to define unit tests for your application.",
+      " *",
+      " * Execute <code>qx test</code> to generate a testrunner application",
+      " * and open it from <tt>test/index.html</tt>",
+      " *",
+      " * The methods that contain the tests are instance methods with a",
+      " * <code>test</code> prefix. You can create an arbitrary number of test",
+      " * classes like this one. They can be organized in a regular class hierarchy,",
+      " * i.e. using deeper namespaces and a corresponding file structure within the",
+      " * <tt>test</tt> folder.",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This class demonstrates how to define unit tests for your application.\n Execute <code>qx test</code> to generate a testrunner application\n and open it from <tt>test/index.html</tt>\n The methods that contain the tests are instance methods with a\n <code>test</code> prefix. You can create an arbitrary number of test\n classes like this one. They can be organized in a regular class hierarchy,\n i.e. using deeper namespaces and a corresponding file structure within the\n <tt>test</tt> folder.</p>"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testSimple": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Here are some simple tests",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Here are some simple tests</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 1081
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1219
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAdvanced": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Here are some more advanced tests",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Here are some more advanced tests</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1283
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1512
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

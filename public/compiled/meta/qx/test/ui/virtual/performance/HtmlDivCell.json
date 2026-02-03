@@ -1,0 +1,96 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336857,
+  "lastModifiedIso": "2026-01-03T20:15:36.857Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/performance/HtmlDivCell.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 483
+    },
+    "end": {
+      "line": 33,
+      "column": 3,
+      "index": 918
+    }
+  },
+  "className": "qx.test.ui.virtual.performance.HtmlDivCell",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Jonathan Weiß (jonathan_rass)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.virtual.performance.AbstractLayerTest",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "getLayer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 787
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.performance.AbstractLayerTest",
+      "appearsIn": [
+        "qx.test.ui.virtual.performance.AbstractLayerTest"
+      ]
+    },
+    "getCellProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 794
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 910
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "row"
+        },
+        {
+          "name": "column"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

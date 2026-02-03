@@ -1,0 +1,37 @@
+{
+  "version": 0.3,
+  "lastModified": 1767539332732,
+  "lastModifiedIso": "2026-01-04T15:08:52.732Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/theme/Color.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 11,
+      "column": 0,
+      "index": 228
+    },
+    "end": {
+      "line": 18,
+      "column": 3,
+      "index": 324
+    }
+  },
+  "className": "qxapp.theme.Color",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   Copyright: 2026 sqville",
+      "",
+      "   License: MIT license",
+      "",
+      "   Authors: sqville",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.theme.indigo.Color",
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

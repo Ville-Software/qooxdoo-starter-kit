@@ -1,0 +1,155 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337710,
+  "lastModifiedIso": "2026-01-03T20:15:37.710Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/PointerEventMock.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 475
+    },
+    "end": {
+      "line": 45,
+      "column": 3,
+      "index": 925
+    }
+  },
+  "className": "qx.test.ui.virtual.PointerEventMock",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.event.type.Pointer",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "type"
+      },
+      {
+        "name": "config"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 568
+      },
+      "end": {
+        "line": 26,
+        "column": 3,
+        "index": 662
+      }
+    }
+  },
+  "members": {
+    "clone": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 682
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 716
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.event.type.Native",
+      "appearsIn": [
+        "qx.event.type.Native",
+        "qx.event.type.Event",
+        "qx.core.Object"
+      ]
+    },
+    "getDocumentLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 723
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 794
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.event.type.Pointer",
+      "appearsIn": [
+        "qx.event.type.Pointer",
+        "qx.event.type.Mouse"
+      ]
+    },
+    "getDocumentTop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 801
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 870
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.event.type.Pointer",
+      "appearsIn": [
+        "qx.event.type.Pointer",
+        "qx.event.type.Mouse"
+      ]
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 42,
+        "column": 2,
+        "index": 879
+      },
+      "end": {
+        "line": 44,
+        "column": 3,
+        "index": 921
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

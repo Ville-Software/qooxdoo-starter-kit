@@ -1,0 +1,594 @@
+{
+  "version": 0.3,
+  "lastModified": 1765560104256,
+  "lastModifiedIso": "2025-12-12T17:21:44.256Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/tabview/Page.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 12,
+      "column": 0,
+      "index": 474
+    },
+    "end": {
+      "line": 244,
+      "column": 3,
+      "index": 6875
+    }
+  },
+  "className": "ville.ui.tabview.Page",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * A page is the way to add content to a {@link TabView}. Each page gets a",
+      " * button to switch to the page. Only one page is visible at a time.",
+      " *",
+      " * @childControl button {ville.ui.tabview.TabButton} tab button connected to the page",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>A page is the way to add content to a {@link TabView}. Each page gets a\n button to switch to the page. Only one page is visible at a time.</p>"
+      }
+    ],
+    "@childControl": [
+      {
+        "name": "@childControl",
+        "body": "button {ville.ui.tabview.TabButton} tab button connected to the page"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Box",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "label"
+      },
+      {
+        "name": "icon"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 26,
+        "column": 2,
+        "index": 870
+      },
+      "end": {
+        "line": 58,
+        "column": 3,
+        "index": 1861
+      }
+    }
+  },
+  "events": {
+    "close": {
+      "type": "qx.event.type.Event",
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Fired by {@link qx.ui.tabview.TabButton} if the close button is tapped.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Fired by {@link qx.ui.tabview.TabButton} if the close button is tapped.</p>"
+          }
+        ]
+      },
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 2158
+        },
+        "end": {
+          "line": 70,
+          "column": 32,
+          "index": 2186
+        }
+      }
+    }
+  },
+  "properties": {
+    "label": {
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2457
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2537
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "",
+        "apply": "_applyLabel"
+      },
+      "jsdoc": {
+        "raw": [
+          "* The label/caption/text of the Page's button. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>The label/caption/text of the Page's button.</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "icon": {
+      "location": {
+        "start": {
+          "line": 89,
+          "column": 4,
+          "index": 2638
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2754
+        }
+      },
+      "json": {
+        "check": "ville.ui.core.Widget",
+        "apply": "_applyIcon",
+        "nullable": true
+      },
+      "jsdoc": {
+        "raw": [
+          "* Any URI String supported by qx.ui.basic.Image to display an icon in Page's button. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Any URI String supported by qx.ui.basic.Image to display an icon in Page's button.</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "showCloseButton": {
+      "location": {
+        "start": {
+          "line": 97,
+          "column": 4,
+          "index": 2834
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2938
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": false,
+        "apply": "_applyShowCloseButton"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Indicates if the close button of a TabButton should be shown. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Indicates if the close button of a TabButton should be shown.</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "tabVisibility": {
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 3003
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3180
+        }
+      },
+      "json": {
+        "init": "visible",
+        "check": [
+          "visible",
+          "excluded"
+        ],
+        "nullable": false,
+        "apply": "_applyTabVisibility",
+        "event": "changeTabVisibility"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Allows the tab to be excluded from the display "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Allows the tab to be excluded from the display</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_applyIcon": {
+      "jsdoc": {
+        "raw": [
+          "_applyIcon(value, old) {",
+          "      var btn = this.getChildControl(\"button\");",
+          "      if (value) {",
+          "        btn.setIcon(value);",
+          "        btn._showChildControl(\"icon\");",
+          "      } else {",
+          "        btn._excludeChildControl(\"icon\");",
+          "      }",
+          "    },"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 138,
+          "column": 4,
+          "index": 3900
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3989
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 4,
+          "index": 4018
+        },
+        "end": {
+          "line": 145,
+          "column": 5,
+          "index": 4103
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyEnabled": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 148,
+          "column": 4,
+          "index": 4128
+        },
+        "end": {
+          "line": 155,
+          "column": 5,
+          "index": 4416
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4633
+        },
+        "end": {
+          "line": 177,
+          "column": 5,
+          "index": 5048
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_onBtnChangeValue": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Tab Change Listener",
+          "     * @param {*} e",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Tab Change Listener</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "{*} e",
+            "paramName": "e",
+            "description": "",
+            "type": "*"
+          }
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 183,
+          "column": 4,
+          "index": 5118
+        },
+        "end": {
+          "line": 187,
+          "column": 5,
+          "index": 5376
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e",
+          "type": "*"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyShowCloseButton": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 196,
+          "column": 4,
+          "index": 5601
+        },
+        "end": {
+          "line": 198,
+          "column": 5,
+          "index": 5708
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyTabVisibility": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 201,
+          "column": 4,
+          "index": 5737
+        },
+        "end": {
+          "line": 203,
+          "column": 5,
+          "index": 5834
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "newValue"
+        },
+        {
+          "name": "oldValue"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_onButtonClose": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Fires an \"close\" event when the close button of the TabButton of the page",
+          "     * is tapped.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Fires an \"close\" event when the close button of the TabButton of the page\n is tapped.</p>"
+          }
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 215,
+          "column": 4,
+          "index": 6153
+        },
+        "end": {
+          "line": 217,
+          "column": 5,
+          "index": 6208
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getChildrenContainer": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * By default, widgets are added to `this`",
+          "     *",
+          "     * @return {qx.ui.core.Widget} the widget to add to",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>By default, widgets are added to <code>this</code></p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.core.Widget} the widget to add to",
+            "type": "qx.ui.core.Widget",
+            "description": "the widget to add to"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 230,
+          "column": 4,
+          "index": 6533
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6582
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qx.ui.core.Widget"
+      },
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "getButton": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the button used within this page. This method is used by",
+          "     * the TabView to access the button.",
+          "     *",
+          "     * @return {qx.ui.form.RadioButton} The button associated with this page.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the button used within this page. This method is used by\n the TabView to access the button.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.form.RadioButton} The button associated with this page.",
+            "type": "qx.ui.form.RadioButton",
+            "description": "The button associated with this page."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 240,
+          "column": 4,
+          "index": 6803
+        },
+        "end": {
+          "line": 242,
+          "column": 5,
+          "index": 6867
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qx.ui.form.RadioButton"
+      },
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

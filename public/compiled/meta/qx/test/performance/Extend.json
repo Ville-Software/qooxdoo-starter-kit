@@ -1,0 +1,116 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336395,
+  "lastModifiedIso": "2026-01-03T20:15:36.395Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/performance/Extend.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 17,
+      "column": 3,
+      "index": 376
+    }
+  },
+  "className": "qx.test.performance.Extend",
+  "jsdoc": null,
+  "superClass": "qx.test.performance.Base",
+  "members": {
+    "foo_base": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 102
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 158
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        },
+        {
+          "name": "c"
+        }
+      ],
+      "overriddenFrom": "qx.test.performance.Base",
+      "appearsIn": [
+        "qx.test.performance.Base"
+      ]
+    },
+    "foo_call": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 165
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 261
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        },
+        {
+          "name": "c"
+        }
+      ],
+      "appearsIn": []
+    },
+    "foo_apply": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 13,
+          "column": 4,
+          "index": 268
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 368
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "a"
+        },
+        {
+          "name": "b"
+        },
+        {
+          "name": "c"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

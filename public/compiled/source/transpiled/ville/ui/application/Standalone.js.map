@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "include",
+    "ui",
+    "core",
+    "LayoutItem",
+    "ville",
+    "cssuc",
+    "MControl",
+    "Widget",
+    "MCssUtilityClass",
+    "patch",
+    "html",
+    "Label",
+    "MLabel",
+    "form",
+    "AbstractField",
+    "MAbstractField",
+    "superclass",
+    "prototype",
+    "call",
+    "_createRootWidget",
+    "rootwidget",
+    "root",
+    "Application",
+    "document",
+    "setExcludeBoundsFromDom",
+    "setClearAllInlineStyles"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/application/Standalone.js"
+  ],
+  "sourcesContent": [
+    "/**\n * This is the application class of a ville ui standalone app\n *\n * @external(mantine/core/styles/baseline.css)\n * @external(mantine/core/styles/default-css-variables.css)\n * @external(mantine/core/styles/global.css)\n * @require(ville.ui.root.Application)\n * @require(ville.cssuc.MControl)\n * @require(ville.cssuc.MCssUtilityClass)\n * @require(ville.cssuc.patch.MLabel)\n *\n */\n\nqx.Class.define(\"ville.ui.application.Standalone\", {\n  extend: qx.application.Standalone,\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members: {\n\n    main () {\n\n        // Patch and include core classes\n        qx.Class.include(qx.ui.core.LayoutItem, ville.cssuc.MControl);\n        qx.Class.include(qx.ui.core.Widget, ville.cssuc.MCssUtilityClass);\n        qx.Class.patch(qx.html.Label, ville.cssuc.patch.MLabel);\n        qx.Class.patch(qx.ui.form.AbstractField, ville.cssuc.patch.MAbstractField);\n\n        // Call super class\n        super.main();\n\n    },\n\n    // overridden\n    _createRootWidget() {\n        var rootwidget = new ville.ui.root.Application(document);\n        rootwidget.setExcludeBoundsFromDom(true);\n        rootwidget.setClearAllInlineStyles(true);\n        return rootwidget;\n    }\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;EAEAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,iCAAiC,EAAE;IACjDC,MAAM,EAAEN,EAAE,CAACO,WAAW,CAACC,UAAU;IAEjC;AACF;AACA;AACA;AACA;;IAEEC,OAAO,EAAE;MAEPC,IAAIA,CAAA,EAAI;QAEJ;QACAV,EAAE,CAACI,KAAK,CAACO,OAAO,CAACX,EAAE,CAACY,EAAE,CAACC,IAAI,CAACC,UAAU,EAAEC,KAAK,CAACC,KAAK,CAACC,QAAQ,CAAC;QAC7DjB,EAAE,CAACI,KAAK,CAACO,OAAO,CAACX,EAAE,CAACY,EAAE,CAACC,IAAI,CAACK,MAAM,EAAEH,KAAK,CAACC,KAAK,CAACG,gBAAgB,CAAC;QACjEnB,EAAE,CAACI,KAAK,CAACgB,KAAK,CAACpB,EAAE,CAACqB,IAAI,CAACC,KAAK,EAAEP,KAAK,CAACC,KAAK,CAACI,KAAK,CAACG,MAAM,CAAC;QACvDvB,EAAE,CAACI,KAAK,CAACgB,KAAK,CAACpB,EAAE,CAACY,EAAE,CAACY,IAAI,CAACC,aAAa,EAAEV,KAAK,CAACC,KAAK,CAACI,KAAK,CAACM,cAAc,CAAC;;QAE1E;QACAX,KAAA,CAAAH,EAAA,CAAAL,WAAA,CAAAC,UAAA,CAAAmB,UAAA,CAAAC,SAAA,CAAAlB,IAAA,CAAAmB,IAAA;MAEJ,CAAC;MAED;MACAC,iBAAiBA,CAAA,EAAG;QAChB,IAAIC,UAAU,GAAG,IAAIhB,KAAK,CAACH,EAAE,CAACoB,IAAI,CAACC,WAAW,CAACC,QAAQ,CAAC;QACxDH,UAAU,CAACI,uBAAuB,CAAC,IAAI,CAAC;QACxCJ,UAAU,CAACK,uBAAuB,CAAC,IAAI,CAAC;QACxC,OAAOL,UAAU;MACrB;IACF;EACF,CAAC,CAAC;EA7CFhB,KAAK,CAACH,EAAE,CAACL,WAAW,CAACC,UAAU,CAACL,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

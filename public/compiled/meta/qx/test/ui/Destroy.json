@@ -1,0 +1,493 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336192,
+  "lastModifiedIso": "2026-01-03T20:15:36.192Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/Destroy.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 490,
+      "column": 3,
+      "index": 11761
+    }
+  },
+  "className": "qx.test.ui.Destroy",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "statics": {
+    "$$clazz": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 572
+        },
+        "end": {
+          "line": 23,
+          "column": 17,
+          "index": 585
+        }
+      },
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "$$args": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 591
+        },
+        "end": {
+          "line": 24,
+          "column": 16,
+          "index": 603
+        }
+      },
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    }
+  },
+  "members": {
+    "assertLayoutDispose": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @lint ignoreDeprecated(eval)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "ignoreDeprecated(eval)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 679
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1442
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        },
+        {
+          "name": "args"
+        },
+        {
+          "name": "layoutArgsArr"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testLayouts": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1449
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 2461
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testForms": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2468
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3510
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBasic": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3517
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 3868
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContainer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4,
+          "index": 3875
+        },
+        "end": {
+          "line": 174,
+          "column": 5,
+          "index": 4315
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testControls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 176,
+          "column": 4,
+          "index": 4322
+        },
+        "end": {
+          "line": 215,
+          "column": 5,
+          "index": 5268
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 217,
+          "column": 4,
+          "index": 5275
+        },
+        "end": {
+          "line": 233,
+          "column": 5,
+          "index": 5730
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmbeds": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 235,
+          "column": 4,
+          "index": 5737
+        },
+        "end": {
+          "line": 249,
+          "column": 5,
+          "index": 6100
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGroupBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 6107
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 6478
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 267,
+          "column": 4,
+          "index": 6485
+        },
+        "end": {
+          "line": 291,
+          "column": 5,
+          "index": 7182
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPopup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 293,
+          "column": 4,
+          "index": 7189
+        },
+        "end": {
+          "line": 305,
+          "column": 5,
+          "index": 7450
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplitPane": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 307,
+          "column": 4,
+          "index": 7457
+        },
+        "end": {
+          "line": 322,
+          "column": 5,
+          "index": 7831
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTabView": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 324,
+          "column": 4,
+          "index": 7838
+        },
+        "end": {
+          "line": 339,
+          "column": 5,
+          "index": 8222
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToolbar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 341,
+          "column": 4,
+          "index": 8229
+        },
+        "end": {
+          "line": 409,
+          "column": 5,
+          "index": 9957
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTooltip": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 411,
+          "column": 4,
+          "index": 9964
+        },
+        "end": {
+          "line": 423,
+          "column": 5,
+          "index": 10224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTree": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 425,
+          "column": 4,
+          "index": 10231
+        },
+        "end": {
+          "line": 443,
+          "column": 5,
+          "index": 10653
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 445,
+          "column": 4,
+          "index": 10660
+        },
+        "end": {
+          "line": 454,
+          "column": 5,
+          "index": 10906
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioButtonGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 456,
+          "column": 4,
+          "index": 10913
+        },
+        "end": {
+          "line": 464,
+          "column": 5,
+          "index": 11204
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 466,
+          "column": 4,
+          "index": 11211
+        },
+        "end": {
+          "line": 478,
+          "column": 5,
+          "index": 11466
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__createMenu": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 480,
+          "column": 4,
+          "index": 11473
+        },
+        "end": {
+          "line": 488,
+          "column": 5,
+          "index": 11753
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "properties": {}
+}

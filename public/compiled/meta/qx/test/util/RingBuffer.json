@@ -1,0 +1,160 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337856,
+  "lastModifiedIso": "2026-01-03T20:15:37.856Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/RingBuffer.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 486
+    },
+    "end": {
+      "line": 144,
+      "column": 3,
+      "index": 3590
+    }
+  },
+  "className": "qx.test.util.RingBuffer",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Carsten Lergenmueller (carstenl)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 581
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1148
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddMany": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1155
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1545
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGet": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1552
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2088
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMark": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2095
+        },
+        "end": {
+          "line": 100,
+          "column": 5,
+          "index": 2498
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClear": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 102,
+          "column": 4,
+          "index": 2505
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 2815
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDataTypes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 2822
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 3582
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

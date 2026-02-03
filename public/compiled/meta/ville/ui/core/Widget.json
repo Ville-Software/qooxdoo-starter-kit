@@ -1,0 +1,436 @@
+{
+  "version": 0.3,
+  "lastModified": 1769460036904,
+  "lastModifiedIso": "2026-01-26T20:40:36.904Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/core/Widget.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 49,
+      "column": 5,
+      "index": 1207
+    }
+  },
+  "className": "ville.ui.core.Widget",
+  "jsdoc": null,
+  "superClass": "qx.ui.core.Widget",
+  "mixins": [
+    "ville.ui.core.MWidget"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 7,
+        "column": 4,
+        "index": 116
+      },
+      "end": {
+        "line": 14,
+        "column": 5,
+        "index": 293
+      }
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 9,
+          "index": 343
+        },
+        "end": {
+          "line": 21,
+          "column": 9,
+          "index": 425
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyCursor": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 8,
+          "index": 462
+        },
+        "end": {
+          "line": 24,
+          "column": 35,
+          "index": 489
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyFocusable": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 8,
+          "index": 526
+        },
+        "end": {
+          "line": 47,
+          "column": 9,
+          "index": 1195
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "addClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 140
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 147
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 232
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 279
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 380
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 427
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 512
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyles": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 559
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 650
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "styles"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeStyle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 734
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 741
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 858
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 865
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 966
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 973
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1087
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1196
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

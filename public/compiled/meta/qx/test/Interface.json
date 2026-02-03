@@ -1,0 +1,361 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337050,
+  "lastModifiedIso": "2026-01-03T20:15:37.050Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Interface.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 509
+    },
+    "end": {
+      "line": 685,
+      "column": 3,
+      "index": 14744
+    }
+  },
+  "className": "qx.test.Interface",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.i.*)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.i.*"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 598
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 829
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 836
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 897
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassImplements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 904
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 1553
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEverythingImplemented": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 77,
+          "column": 4,
+          "index": 1560
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2094
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMissingMembers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2101
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 2499
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMissingMemberFunction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 2506
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 2973
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMissingMemberVariable": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 2980
+        },
+        "end": {
+          "line": 174,
+          "column": 5,
+          "index": 3482
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMissingStatics": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 176,
+          "column": 4,
+          "index": 3489
+        },
+        "end": {
+          "line": 197,
+          "column": 5,
+          "index": 3972
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMissingProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 4,
+          "index": 3979
+        },
+        "end": {
+          "line": 223,
+          "column": 5,
+          "index": 4474
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWithDebug": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 225,
+          "column": 4,
+          "index": 4481
+        },
+        "end": {
+          "line": 296,
+          "column": 5,
+          "index": 6224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAssertions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 298,
+          "column": 4,
+          "index": 6231
+        },
+        "end": {
+          "line": 412,
+          "column": 5,
+          "index": 8623
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 414,
+          "column": 4,
+          "index": 8630
+        },
+        "end": {
+          "line": 469,
+          "column": 5,
+          "index": 9901
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEvents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 471,
+          "column": 4,
+          "index": 9908
+        },
+        "end": {
+          "line": 495,
+          "column": 5,
+          "index": 10489
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIncludes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 497,
+          "column": 4,
+          "index": 10496
+        },
+        "end": {
+          "line": 602,
+          "column": 5,
+          "index": 12835
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAbstractClass": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * abstract classes may define an interface and implement it only partially",
+          "     * sub classes must implement the missing methods",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>abstract classes may define an interface and implement it only partially\n sub classes must implement the missing methods</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 608,
+          "column": 4,
+          "index": 12992
+        },
+        "end": {
+          "line": 663,
+          "column": 5,
+          "index": 14358
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGeneratedIsMethods": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 665,
+          "column": 4,
+          "index": 14365
+        },
+        "end": {
+          "line": 683,
+          "column": 5,
+          "index": 14736
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

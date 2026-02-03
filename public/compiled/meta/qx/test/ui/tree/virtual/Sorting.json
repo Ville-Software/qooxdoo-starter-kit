@@ -1,0 +1,210 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338009,
+  "lastModifiedIso": "2026-01-03T20:15:38.009Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/tree/virtual/Sorting.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 533
+    },
+    "end": {
+      "line": 196,
+      "column": 3,
+      "index": 4956
+    }
+  },
+  "className": "qx.test.ui.tree.virtual.Sorting",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.ui.tree.virtual.Node)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.ui.tree.virtual.Node"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.tree.virtual.AbstractTreeTest",
+  "members": {
+    "testSorter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 656
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1641
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelUnmodified": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1648
+        },
+        "end": {
+          "line": 88,
+          "column": 5,
+          "index": 2197
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSorterAndFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 2204
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3046
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__sortModel": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3053
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 3378
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        },
+        {
+          "name": "sorter"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testBuildLookupTable": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 138,
+          "column": 4,
+          "index": 3385
+        },
+        "end": {
+          "line": 155,
+          "column": 5,
+          "index": 3914
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testOrderNotChanged": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 157,
+          "column": 4,
+          "index": 3921
+        },
+        "end": {
+          "line": 169,
+          "column": 5,
+          "index": 4283
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "expected"
+        },
+        {
+          "name": "found"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__logModel": {
+      "jsdoc": {
+        "raw": [
+          "",
+          "    ---------------------------------------------------------------------------",
+          "      HELPER METHOD TO LOG TREE MODEL",
+          "    ---------------------------------------------------------------------------",
+          "    "
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 4503
+        },
+        "end": {
+          "line": 194,
+          "column": 5,
+          "index": 4948
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "model"
+        },
+        {
+          "name": "level"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

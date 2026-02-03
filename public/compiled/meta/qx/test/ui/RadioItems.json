@@ -1,0 +1,206 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337778,
+  "lastModifiedIso": "2026-01-03T20:15:37.778Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/RadioItems.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 473
+    },
+    "end": {
+      "line": 86,
+      "column": 3,
+      "index": 2271
+    }
+  },
+  "className": "qx.test.ui.RadioItems",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * mw (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "testTwiceClickForm": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 571
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 703
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTwiceClickMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 710
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 842
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTwiceClickToolbar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 849
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 987
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testTwiceClick": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 994
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1296
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testTwiceClickEmptySelectionForm": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1303
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1463
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTwiceClickEmptySelectionMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1470
+        },
+        "end": {
+          "line": 61,
+          "column": 5,
+          "index": 1630
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTwiceClickEmptySelectionToolbar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 63,
+          "column": 4,
+          "index": 1637
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1803
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testTwiceClickEmptySelection": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1810
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2263
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

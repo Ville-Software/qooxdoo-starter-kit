@@ -1,0 +1,71 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335216,
+  "lastModifiedIso": "2026-01-03T20:15:35.216Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/core/AppearanceTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 17,
+      "column": 3,
+      "index": 434
+    }
+  },
+  "className": "qx.test.ui.core.AppearanceTest",
+  "jsdoc": null,
+  "superClass": "qx.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 3,
+        "column": 2,
+        "index": 83
+      },
+      "end": {
+        "line": 6,
+        "column": 3,
+        "index": 159
+      }
+    }
+  },
+  "members": {
+    "_createChildControlImpl": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "index": 178
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 426
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

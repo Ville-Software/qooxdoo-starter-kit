@@ -1,0 +1,199 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336920,
+  "lastModifiedIso": "2026-01-03T20:15:36.920Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/embed/Iframe.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 478
+    },
+    "end": {
+      "line": 154,
+      "column": 3,
+      "index": 4586
+    }
+  },
+  "className": "qx.test.ui.embed.Iframe",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Alexander Steitz (aback)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__iframe": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 578
+        },
+        "end": {
+          "line": 23,
+          "column": 18,
+          "index": 592
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 599
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 716
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 723
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 772
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testHiddenSetSourceInitial": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 779
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1040
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHiddenSetSource": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1047
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1714
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1721
+        },
+        "end": {
+          "line": 87,
+          "column": 5,
+          "index": 2116
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSyncSourceAfterDOMMove": {
+      "jsdoc": {
+        "raw": [
+          "* @ignore(require) "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "require"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 2151
+        },
+        "end": {
+          "line": 152,
+          "column": 5,
+          "index": 4578
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

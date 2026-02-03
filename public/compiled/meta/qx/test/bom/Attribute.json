@@ -1,0 +1,195 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335340,
+  "lastModifiedIso": "2026-01-03T20:15:35.340Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/Attribute.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 26,
+      "column": 0,
+      "index": 689
+    },
+    "end": {
+      "line": 261,
+      "column": 3,
+      "index": 8762
+    }
+  },
+  "className": "qx.test.bom.Attribute",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/icon/Tango/48/places/folder.png)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/icon/Tango/48/places/folder.png"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__maxLengthValues": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 782
+        },
+        "end": {
+          "line": 30,
+          "column": 27,
+          "index": 805
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 812
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1441
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1448
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1648
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1655
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2545
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetAttributeWithUndefinedValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 2552
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2765
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2772
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 5082
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 160,
+          "column": 4,
+          "index": 5089
+        },
+        "end": {
+          "line": 205,
+          "column": 5,
+          "index": 6676
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResetAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 207,
+          "column": 4,
+          "index": 6683
+        },
+        "end": {
+          "line": 259,
+          "column": 5,
+          "index": 8754
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,646 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337277,
+  "lastModifiedIso": "2026-01-03T20:15:37.277Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/LocaleSwitch.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 120,
+      "column": 3,
+      "index": 3361
+    }
+  },
+  "className": "qx.test.ui.LocaleSwitch",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "mixins": [
+    "qx.locale.MTranslation"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 2,
+        "index": 597
+      },
+      "end": {
+        "line": 26,
+        "column": 3,
+        "index": 679
+      }
+    }
+  },
+  "members": {
+    "manager": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 699
+        },
+        "end": {
+          "line": 29,
+          "column": 17,
+          "index": 712
+        }
+      },
+      "appearsIn": []
+    },
+    "__translationAdded": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 718
+        },
+        "end": {
+          "line": 30,
+          "column": 28,
+          "index": 742
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 749
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1566
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1573
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1625
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testCommandInMenuButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1632
+        },
+        "end": {
+          "line": 82,
+          "column": 5,
+          "index": 2226
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 4,
+          "index": 2233
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 3007
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToolTipText": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 107,
+          "column": 4,
+          "index": 3014
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 3353
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tr": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a message",
+          "     * Mark the message for translation.",
+          "     *",
+          "     * @param messageId {String} message id (may contain format strings)",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a message\n Mark the message for translation.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "messageId {String} message id (may contain format strings)",
+            "paramName": "messageId",
+            "description": " message id (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1068
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1347
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "messageId",
+          "type": "string"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trn": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a plural message",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * Depending on the third argument the plural or the singular form is chosen.",
+          "     *",
+          "     * @param singularMessageId {String} message id of the singular form (may contain format strings)",
+          "     * @param pluralMessageId {String} message id of the plural form (may contain format strings)",
+          "     * @param count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a plural message\n Mark the messages for translation.\n Depending on the third argument the plural or the singular form is chosen.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "singularMessageId {String} message id of the singular form (may contain format strings)",
+            "paramName": "singularMessageId",
+            "description": " message id of the singular form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "pluralMessageId {String} message id of the plural form (may contain format strings)",
+            "paramName": "pluralMessageId",
+            "description": " message id of the plural form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+            "paramName": "count",
+            "description": " if greater than 1 the plural form otherwise the singular form is returned.",
+            "type": "Integer"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 2020
+        },
+        "end": {
+          "line": 69,
+          "column": 5,
+          "index": 2333
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "singularMessageId",
+          "type": "string"
+        },
+        {
+          "name": "pluralMessageId",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "Integer"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trc": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a message with translation hint",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * @param hint {String} hint for the translator of the message. Will be included in the .po file.",
+          "     * @param messageId {String} message id (may contain format strings)",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a message with translation hint\n Mark the messages for translation.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "hint {String} hint for the translator of the message. Will be included in the .po file.",
+            "paramName": "hint",
+            "description": " hint for the translator of the message. Will be included in the .po file.",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "messageId {String} message id (may contain format strings)",
+            "paramName": "messageId",
+            "description": " message id (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 2802
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 3089
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "messageId",
+          "type": "string"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "trnc": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Translate a plural message with translation hint",
+          "     * Mark the messages for translation.",
+          "     *",
+          "     * Depending on the third argument the plural or the singular form is chosen.",
+          "     *",
+          "     * @param hint {String} hint for the translator of the message. Will be included in the .po file.",
+          "     * @param singularMessageId {String} message id of the singular form (may contain format strings)",
+          "     * @param pluralMessageId {String} message id of the plural form (may contain format strings)",
+          "     * @param count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+          "     * @param varargs {Object?} variable number of arguments applied to the format string",
+          "     * @return {String|LocalizedString} The translated message or localized string",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Translate a plural message with translation hint\n Mark the messages for translation.\n Depending on the third argument the plural or the singular form is chosen.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "hint {String} hint for the translator of the message. Will be included in the .po file.",
+            "paramName": "hint",
+            "description": " hint for the translator of the message. Will be included in the .po file.",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "singularMessageId {String} message id of the singular form (may contain format strings)",
+            "paramName": "singularMessageId",
+            "description": " message id of the singular form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "pluralMessageId {String} message id of the plural form (may contain format strings)",
+            "paramName": "pluralMessageId",
+            "description": " message id of the plural form (may contain format strings)",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "count {Integer} if greater than 1 the plural form otherwise the singular form is returned.",
+            "paramName": "count",
+            "description": " if greater than 1 the plural form otherwise the singular form is returned.",
+            "type": "Integer"
+          },
+          {
+            "name": "@param",
+            "body": "varargs {Object?} variable number of arguments applied to the format string",
+            "paramName": "varargs",
+            "description": " variable number of arguments applied to the format string",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|LocalizedString} The translated message or localized string",
+            "type": "String|LocalizedString",
+            "description": "The translated message or localized string"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 3886
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 4207
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "hint",
+          "type": "string"
+        },
+        {
+          "name": "singularMessageId",
+          "type": "string"
+        },
+        {
+          "name": "pluralMessageId",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "type": "Integer"
+        },
+        {
+          "name": "varargs",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "String|LocalizedString"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    },
+    "marktr": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Mark the message for translation but return the original message.",
+          "     *",
+          "     * @param messageId {String} the message ID",
+          "     * @return {String} messageId",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Mark the message for translation but return the original message.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "messageId {String} the message ID",
+            "paramName": "messageId",
+            "description": " the message ID",
+            "type": "string"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String} messageId",
+            "type": "string",
+            "description": "messageId"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 4,
+          "index": 4392
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 4670
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "messageId",
+          "type": "string"
+        }
+      ],
+      "returnType": {
+        "type": "string"
+      },
+      "appearsIn": [
+        "qx.locale.MTranslation"
+      ],
+      "mixin": "qx.locale.MTranslation"
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

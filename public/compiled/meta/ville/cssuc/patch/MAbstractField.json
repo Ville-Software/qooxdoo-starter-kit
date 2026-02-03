@@ -1,0 +1,61 @@
+{
+  "version": 0.3,
+  "lastModified": 1768318773163,
+  "lastModifiedIso": "2026-01-13T15:39:33.163Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/patch/MAbstractField.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 80,
+      "column": 3,
+      "index": 2393
+    }
+  },
+  "className": "ville.cssuc.patch.MAbstractField",
+  "jsdoc": null,
+  "members": {
+    "renderLayout": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 91
+        },
+        "end": {
+          "line": 77,
+          "column": 5,
+          "index": 2383
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "left"
+        },
+        {
+          "name": "top"
+        },
+        {
+          "name": "width"
+        },
+        {
+          "name": "height"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

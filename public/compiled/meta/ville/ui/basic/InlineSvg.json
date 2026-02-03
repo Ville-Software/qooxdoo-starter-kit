@@ -1,0 +1,73 @@
+{
+  "version": 0.3,
+  "lastModified": 1768917367612,
+  "lastModifiedIso": "2026-01-20T13:56:07.612Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/basic/InlineSvg.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 27,
+      "column": 5,
+      "index": 601
+    }
+  },
+  "className": "ville.ui.basic.InlineSvg",
+  "jsdoc": null,
+  "superClass": "ville.ui.icon.Abstract",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "body"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 4,
+        "index": 87
+      },
+      "end": {
+        "line": 15,
+        "column": 5,
+        "index": 329
+      }
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 20,
+          "column": 8,
+          "index": 378
+        },
+        "end": {
+          "line": 25,
+          "column": 9,
+          "index": 589
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

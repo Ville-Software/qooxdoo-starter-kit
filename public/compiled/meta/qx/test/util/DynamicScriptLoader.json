@@ -1,0 +1,172 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336257,
+  "lastModifiedIso": "2026-01-03T20:15:36.257Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/DynamicScriptLoader.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 31,
+      "column": 0,
+      "index": 843
+    },
+    "end": {
+      "line": 132,
+      "column": 3,
+      "index": 3426
+    }
+  },
+  "className": "qx.test.util.DynamicScriptLoader",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/test/dynamicscriptloader/*)",
+      " *",
+      " * @ignore(qx.test.DYNAMICSCRIPTTEST.*)",
+      " * @ignore(qx.dynamicScriptLoadTest.*)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/test/dynamicscriptloader/*"
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.DYNAMICSCRIPTTEST.*"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.dynamicScriptLoadTest.*"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 947
+        },
+        "end": {
+          "line": 39,
+          "column": 5,
+          "index": 1051
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 1058
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1165
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test 1: dynamic parallel loading": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1172
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2111
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test 2: do not load again": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2118
+        },
+        "end": {
+          "line": 100,
+          "column": 5,
+          "index": 2663
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test 3: fail to load": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2669
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 3072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test 4: double start": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 116,
+          "column": 4,
+          "index": 3078
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 3418
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

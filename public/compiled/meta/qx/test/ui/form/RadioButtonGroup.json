@@ -1,0 +1,109 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337768,
+  "lastModifiedIso": "2026-01-03T20:15:37.768Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/RadioButtonGroup.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 476
+    },
+    "end": {
+      "line": 58,
+      "column": 3,
+      "index": 1429
+    }
+  },
+  "className": "qx.test.ui.form.RadioButtonGroup",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      " qooxdoo - the new era of web development",
+      "",
+      " http://qooxdoo.org",
+      "",
+      " Copyright:",
+      " 2004-2014 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      " License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      " See the LICENSE file in the project's top-level directory for details.",
+      "",
+      " Authors:",
+      " * Tobias Oberrauch <tobias.oberrauch@1und1.de>",
+      "",
+      " ************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 585
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 982
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 989
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1110
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "testRemoveAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1117
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1421
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

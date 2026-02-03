@@ -1,0 +1,682 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336718,
+  "lastModifiedIso": "2026-01-03T20:15:36.718Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/controller/Form.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 954,
+      "column": 3,
+      "index": 27401
+    }
+  },
+  "className": "qx.test.data.controller.Form",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__form": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 587
+        },
+        "end": {
+          "line": 22,
+          "column": 16,
+          "index": 599
+        }
+      },
+      "appearsIn": []
+    },
+    "__tf1": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 605
+        },
+        "end": {
+          "line": 23,
+          "column": 15,
+          "index": 616
+        }
+      },
+      "appearsIn": []
+    },
+    "__tf2": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 622
+        },
+        "end": {
+          "line": 24,
+          "column": 15,
+          "index": 633
+        }
+      },
+      "appearsIn": []
+    },
+    "__cb": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 639
+        },
+        "end": {
+          "line": 25,
+          "column": 14,
+          "index": 649
+        }
+      },
+      "appearsIn": []
+    },
+    "__model": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 655
+        },
+        "end": {
+          "line": 26,
+          "column": 17,
+          "index": 668
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 675
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1231
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1391
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetModelNull": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1398
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1876
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialResetter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1883
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2217
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnidirectionalDeep": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2224
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 3074
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnidirectionalSelectionOptions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 3081
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 4101
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnidirectionalOptions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 4108
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 4826
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnidirectionalSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 186,
+          "column": 4,
+          "index": 4833
+        },
+        "end": {
+          "line": 212,
+          "column": 5,
+          "index": 5553
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUnidirectional": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 214,
+          "column": 4,
+          "index": 5560
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6162
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 234,
+          "column": 4,
+          "index": 6169
+        },
+        "end": {
+          "line": 242,
+          "column": 5,
+          "index": 6448
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWithModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 244,
+          "column": 4,
+          "index": 6455
+        },
+        "end": {
+          "line": 252,
+          "column": 5,
+          "index": 6750
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWithForm": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 254,
+          "column": 4,
+          "index": 6757
+        },
+        "end": {
+          "line": 262,
+          "column": 5,
+          "index": 7055
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWithBoth": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 264,
+          "column": 4,
+          "index": 7062
+        },
+        "end": {
+          "line": 272,
+          "column": 5,
+          "index": 7384
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingCreate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 274,
+          "column": 4,
+          "index": 7391
+        },
+        "end": {
+          "line": 310,
+          "column": 5,
+          "index": 8676
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingChangeModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 312,
+          "column": 4,
+          "index": 8683
+        },
+        "end": {
+          "line": 351,
+          "column": 5,
+          "index": 9919
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingChangeForm": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 353,
+          "column": 4,
+          "index": 9926
+        },
+        "end": {
+          "line": 398,
+          "column": 5,
+          "index": 11367
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingDeep": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 400,
+          "column": 4,
+          "index": 11374
+        },
+        "end": {
+          "line": 449,
+          "column": 5,
+          "index": 12912
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingModelSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 451,
+          "column": 4,
+          "index": 12919
+        },
+        "end": {
+          "line": 491,
+          "column": 5,
+          "index": 13975
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreation": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 493,
+          "column": 4,
+          "index": 13982
+        },
+        "end": {
+          "line": 559,
+          "column": 5,
+          "index": 16018
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreationDeep": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 561,
+          "column": 4,
+          "index": 16025
+        },
+        "end": {
+          "line": 581,
+          "column": 5,
+          "index": 16654
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreationWithList": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 583,
+          "column": 4,
+          "index": 16661
+        },
+        "end": {
+          "line": 612,
+          "column": 5,
+          "index": 17418
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreationSpecialCaracter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 614,
+          "column": 4,
+          "index": 17425
+        },
+        "end": {
+          "line": 630,
+          "column": 5,
+          "index": 17924
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreationWithListController": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 632,
+          "column": 4,
+          "index": 17931
+        },
+        "end": {
+          "line": 676,
+          "column": 5,
+          "index": 19255
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testModelCreationWithModelSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 678,
+          "column": 4,
+          "index": 19262
+        },
+        "end": {
+          "line": 719,
+          "column": 5,
+          "index": 20458
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveTarget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 721,
+          "column": 4,
+          "index": 20465
+        },
+        "end": {
+          "line": 794,
+          "column": 5,
+          "index": 22494
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOptions": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 796,
+          "column": 4,
+          "index": 22501
+        },
+        "end": {
+          "line": 845,
+          "column": 5,
+          "index": 23818
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConnectionWithListControllerSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 847,
+          "column": 4,
+          "index": 23825
+        },
+        "end": {
+          "line": 918,
+          "column": 5,
+          "index": 26375
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDispose": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 920,
+          "column": 4,
+          "index": 26382
+        },
+        "end": {
+          "line": 929,
+          "column": 5,
+          "index": 26700
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testBindingCreateMissingOne": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 931,
+          "column": 4,
+          "index": 26707
+        },
+        "end": {
+          "line": 952,
+          "column": 5,
+          "index": 27393
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

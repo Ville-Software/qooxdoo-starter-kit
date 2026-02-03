@@ -1,0 +1,123 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337784,
+  "lastModifiedIso": "2026-01-03T20:15:37.784Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/event/Registration.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 519
+    },
+    "end": {
+      "line": 191,
+      "column": 3,
+      "index": 4836
+    }
+  },
+  "className": "qx.test.event.Registration",
+  "jsdoc": {
+    "raw": [
+      " global Foo "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "events": {
+    "$test": {
+      "type": "qx.event.type.Event",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 616
+        },
+        "end": {
+          "line": 28,
+          "column": 32,
+          "index": 644
+        }
+      }
+    }
+  },
+  "members": {
+    "testAddRemoveListener": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 668
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 2637
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddRemoveListenerById": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2644
+        },
+        "end": {
+          "line": 149,
+          "column": 5,
+          "index": 3983
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test addListenerOnce: same callback": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @ignore(Foo)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "Foo"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 4026
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 4828
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

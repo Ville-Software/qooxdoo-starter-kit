@@ -1,0 +1,49 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336451,
+  "lastModifiedIso": "2026-01-03T20:15:36.451Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/log/Filters.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 544
+    },
+    "end": {
+      "line": 70,
+      "column": 3,
+      "index": 1849
+    }
+  },
+  "className": "qx.test.log.Filters",
+  "jsdoc": {
+    "raw": [
+      " global my "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testFilters": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 635
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 1841
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

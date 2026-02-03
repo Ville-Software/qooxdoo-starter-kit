@@ -1,0 +1,316 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338327,
+  "lastModifiedIso": "2026-01-03T20:15:38.327Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/core/Widget.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 465
+    },
+    "end": {
+      "line": 337,
+      "column": 3,
+      "index": 8805
+    }
+  },
+  "className": "qx.test.mobile.core.Widget",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tino Butz (tbtz)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testCreate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 572
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 811
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNameProperty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 818
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1145
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetCssClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1152
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1888
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddRemoveCssClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1895
+        },
+        "end": {
+          "line": 88,
+          "column": 5,
+          "index": 2361
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAutoId": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 2368
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2999
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWidgetRegistration": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 3006
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 3246
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWidgetRegistrationSameId": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 3253
+        },
+        "end": {
+          "line": 128,
+          "column": 5,
+          "index": 3576
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTranslationAvailable": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 3583
+        },
+        "end": {
+          "line": 141,
+          "column": 5,
+          "index": 3879
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDestroy": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 4,
+          "index": 3886
+        },
+        "end": {
+          "line": 152,
+          "column": 5,
+          "index": 4190
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDomUpdatedFired": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 4197
+        },
+        "end": {
+          "line": 170,
+          "column": 5,
+          "index": 4580
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVisibility": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 172,
+          "column": 4,
+          "index": 4587
+        },
+        "end": {
+          "line": 238,
+          "column": 5,
+          "index": 6215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__assertShow": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 240,
+          "column": 4,
+          "index": 6222
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 6979
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testEnabled": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 267,
+          "column": 4,
+          "index": 6986
+        },
+        "end": {
+          "line": 322,
+          "column": 5,
+          "index": 8478
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToggleCss": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 324,
+          "column": 4,
+          "index": 8485
+        },
+        "end": {
+          "line": 335,
+          "column": 5,
+          "index": 8797
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,60 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337424,
+  "lastModifiedIso": "2026-01-03T20:15:37.424Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/MMixinOne.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 12,
+      "column": 3,
+      "index": 232
+    }
+  },
+  "className": "qx.test.testclasses.MMixinOne",
+  "jsdoc": null,
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 2,
+        "column": 2,
+        "index": 53
+      },
+      "end": {
+        "line": 5,
+        "column": 3,
+        "index": 156
+      }
+    }
+  },
+  "members": {
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 8,
+          "column": 4,
+          "index": 176
+        },
+        "end": {
+          "line": 10,
+          "column": 5,
+          "index": 224
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

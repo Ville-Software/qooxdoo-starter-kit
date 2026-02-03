@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "form",
+    "ToggleButton",
+    "include",
+    "core",
+    "MChildrenHandling",
+    "ville",
+    "MWidget",
+    "construct",
+    "label",
+    "constructor",
+    "call",
+    "_setLayout",
+    "layout",
+    "Basic",
+    "setExcludeBoundsFromDom",
+    "setClearAllInlineStyles",
+    "setCssUtilityClass",
+    "getContentElement",
+    "setAttribute",
+    "members",
+    "_createContentElement",
+    "html",
+    "Element",
+    "UnstyledToggleButton"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/form/UnstyledToggleButton.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Unstyled Button\n * @external(mantine/core/styles/UnstyledButton.css)\n */\nqx.Class.define(\"ville.ui.form.UnstyledToggleButton\", {\n    extend: qx.ui.form.ToggleButton,\n\n    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],\n\n    construct(label) {\n        super();\n\n        this._setLayout(new qx.ui.layout.Basic());\n\n        this.setExcludeBoundsFromDom(true);\n        this.setClearAllInlineStyles(true);\n        this.setCssUtilityClass(\"m_87cf2631 mantine-UnstyledButton-root\");\n        this.getContentElement().setAttribute('type', 'button');\n\n        if (label) {\n            this.getContentElement().setAttribute('html', label);\n        }\n    },\n\n    members: {\n\n        // overridden\n        _createContentElement() {\n            return new qx.html.Element(\"button\");\n        }\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,oCAAoC,EAAE;IAClDC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,YAAY;IAE/BC,OAAO,EAAE,CAACV,EAAE,CAACO,EAAE,CAACI,IAAI,CAACC,iBAAiB,EAAEC,KAAK,CAACN,EAAE,CAACI,IAAI,CAACG,OAAO,CAAC;IAE9DC,SAASA,CAACC,KAAK,EAAE;MACbhB,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,YAAA,CAAAQ,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,UAAU,CAAC,IAAInB,EAAE,CAACO,EAAE,CAACa,MAAM,CAACC,KAAK,CAAC,CAAC,CAAC;MAEzC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,kBAAkB,CAAC,wCAAwC,CAAC;MACjE,IAAI,CAACC,iBAAiB,CAAC,CAAC,CAACC,YAAY,CAAC,MAAM,EAAE,QAAQ,CAAC;MAEvD,IAAIV,KAAK,EAAE;QACP,IAAI,CAACS,iBAAiB,CAAC,CAAC,CAACC,YAAY,CAAC,MAAM,EAAEV,KAAK,CAAC;MACxD;IACJ,CAAC;IAEDW,OAAO,EAAE;MAEL;MACAC,qBAAqBA,CAAA,EAAG;QACpB,OAAO,IAAI5B,EAAE,CAAC6B,IAAI,CAACC,OAAO,CAAC,QAAQ,CAAC;MACxC;IACJ;EACF,CAAC,CAAC;EA/BJjB,KAAK,CAACN,EAAE,CAACC,IAAI,CAACuB,oBAAoB,CAAC5B,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

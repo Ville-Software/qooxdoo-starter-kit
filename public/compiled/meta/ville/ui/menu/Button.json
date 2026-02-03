@@ -1,0 +1,717 @@
+{
+  "version": 0.3,
+  "lastModified": 1769533031656,
+  "lastModifiedIso": "2026-01-27T16:57:11.656Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/menu/Button.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 6,
+      "column": 0,
+      "index": 119
+    },
+    "end": {
+      "line": 165,
+      "column": 5,
+      "index": 4726
+    }
+  },
+  "className": "ville.ui.menu.Button",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Menu Button",
+      " * @external(mantine/core/styles/UnstyledButton.css)",
+      " * @external(mantine/core/styles/Menu.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Menu Button</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/UnstyledButton.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Menu.css"
+      }
+    ]
+  },
+  "superClass": "qx.ui.menu.Button",
+  "mixins": [
+    "ville.ui.core.MWidget"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "label"
+      },
+      {
+        "name": "variant"
+      },
+      {
+        "name": "sectionLeft"
+      },
+      {
+        "name": "sectionRight"
+      },
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 12,
+        "column": 4,
+        "index": 239
+      },
+      "end": {
+        "line": 41,
+        "column": 5,
+        "index": 1008
+      }
+    }
+  },
+  "properties": {
+    "variant": {
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 8,
+          "index": 1042
+        },
+        "end": {
+          "line": 51,
+          "column": 9,
+          "index": 1287
+        }
+      },
+      "json": {
+        "init": "default",
+        "check": [
+          "default",
+          "filled",
+          "light",
+          "outline",
+          "subtle",
+          "transparent",
+          "white"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionLeft": {
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 8,
+          "index": 1298
+        },
+        "end": {
+          "line": 59,
+          "column": 9,
+          "index": 1498
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionLeft",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSectionLeft"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionRight": {
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 8,
+          "index": 1509
+        },
+        "end": {
+          "line": 67,
+          "column": 9,
+          "index": 1712
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionRight",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSectionRight"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "__componenttag": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 8,
+          "index": 1745
+        },
+        "end": {
+          "line": 72,
+          "column": 32,
+          "index": 1769
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 8,
+          "index": 1802
+        },
+        "end": {
+          "line": 77,
+          "column": 9,
+          "index": 1898
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 8,
+          "index": 1931
+        },
+        "end": {
+          "line": 110,
+          "column": 9,
+          "index": 3185
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.menu.AbstractButton",
+      "appearsIn": [
+        "qx.ui.menu.AbstractButton",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 8,
+          "index": 3222
+        },
+        "end": {
+          "line": 117,
+          "column": 9,
+          "index": 3356
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyIcon": {
+      "jsdoc": {
+        "raw": [
+          " Replaced by Section Left and Right"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 121,
+          "column": 8,
+          "index": 3435
+        },
+        "end": {
+          "line": 121,
+          "column": 33,
+          "index": 3460
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.menu.AbstractButton",
+      "appearsIn": [
+        "qx.ui.menu.AbstractButton"
+      ]
+    },
+    "_applyShow": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 8,
+          "index": 3493
+        },
+        "end": {
+          "line": 124,
+          "column": 33,
+          "index": 3518
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 127,
+          "column": 8,
+          "index": 3551
+        },
+        "end": {
+          "line": 132,
+          "column": 9,
+          "index": 3719
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.menu.AbstractButton",
+      "appearsIn": [
+        "qx.ui.menu.AbstractButton"
+      ]
+    },
+    "_applySectionLeft": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 8,
+          "index": 3730
+        },
+        "end": {
+          "line": 147,
+          "column": 9,
+          "index": 4214
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySectionRight": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 149,
+          "column": 8,
+          "index": 4225
+        },
+        "end": {
+          "line": 163,
+          "column": 9,
+          "index": 4714
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "addClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 140
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 147
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 232
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 279
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 380
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 427
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 512
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyles": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 559
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 650
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "styles"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeStyle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 734
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 741
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 858
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 865
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 966
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 973
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1087
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1196
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    }
+  },
+  "statics": {}
+}

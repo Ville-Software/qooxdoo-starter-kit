@@ -1,0 +1,84 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337084,
+  "lastModifiedIso": "2026-01-03T20:15:37.084Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/list/fixture/ItemMock.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 488
+    },
+    "end": {
+      "line": 30,
+      "column": 3,
+      "index": 684
+    }
+  },
+  "className": "qx.test.ui.list.fixture.ItemMock",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.core.Object",
+  "properties": {
+    "name": {
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 589
+        },
+        "end": {
+          "line": 24,
+          "column": 5,
+          "index": 628
+        }
+      },
+      "json": {
+        "event": "changeName"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "group": {
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4,
+          "index": 635
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 676
+        }
+      },
+      "json": {
+        "event": "changeGroup"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

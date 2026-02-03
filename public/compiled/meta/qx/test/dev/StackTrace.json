@@ -1,0 +1,157 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338028,
+  "lastModifiedIso": "2026-01-03T20:15:38.028Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/dev/StackTrace.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 16,
+      "column": 0,
+      "index": 433
+    },
+    "end": {
+      "line": 124,
+      "column": 3,
+      "index": 3510
+    }
+  },
+  "className": "qx.test.dev.StackTrace",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 20,
+          "column": 4,
+          "index": 527
+        },
+        "end": {
+          "line": 23,
+          "column": 5,
+          "index": 649
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetStackTraceFromError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 656
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1149
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetStackTraceFromErrorQx": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1156
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 2064
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilenameConverterDefault": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2071
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2453
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilenameConverterCustom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2460
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2933
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFormatStackTrace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 2940
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 3502
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

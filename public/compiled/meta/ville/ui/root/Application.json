@@ -1,0 +1,384 @@
+{
+  "version": 0.3,
+  "lastModified": 1769374672559,
+  "lastModifiedIso": "2026-01-25T20:57:52.559Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/root/Application.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 15,
+      "column": 0,
+      "index": 375
+    },
+    "end": {
+      "line": 197,
+      "column": 3,
+      "index": 5307
+    }
+  },
+  "className": "ville.ui.root.Application",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This is the root widget for Ville UI applications with an",
+      " * \"application\" like behaviour.",
+      " *",
+      " * This class uses a {@link qx.ui.layout.Basic} as fixed layout. The layout",
+      " * cannot be changed.",
+      " *",
+      " * @require(qx.event.handler.Window)",
+      " * @ignore(qx.ui.popup)",
+      " * @ignore(qx.ui.popup.Manager.*)",
+      " * @ignore(qx.ui.menu)",
+      " * @ignore(qx.ui.menu.Manager.*)",
+      " * @ignore(qx.ui)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This is the root widget for Ville UI applications with an\n \"application\" like behaviour.\n This class uses a {@link qx.ui.layout.Basic} as fixed layout. The layout\n cannot be changed.</p>"
+      }
+    ],
+    "@require": [
+      {
+        "name": "@require",
+        "body": "qx.event.handler.Window"
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.ui.popup"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.ui.popup.Manager.*"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.ui.menu"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.ui.menu.Manager.*"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.ui"
+      }
+    ]
+  },
+  "superClass": "qx.ui.root.Abstract",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "doc"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 27,
+        "column": 2,
+        "index": 699
+      },
+      "end": {
+        "line": 69,
+        "column": 3,
+        "index": 1809
+      }
+    }
+  },
+  "members": {
+    "__window": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 2013
+        },
+        "end": {
+          "line": 78,
+          "column": 18,
+          "index": 2027
+        }
+      },
+      "appearsIn": []
+    },
+    "__doc": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 79,
+          "column": 4,
+          "index": 2033
+        },
+        "end": {
+          "line": 79,
+          "column": 15,
+          "index": 2044
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Create the widget's container HTML element.",
+          "     *",
+          "     * @lint ignoreDeprecated(alert)",
+          "     * @return {qx.html.Element} The container HTML element",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Create the widget's container HTML element.</p>"
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "ignoreDeprecated(alert)"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.html.Element} The container HTML element",
+            "type": "qx.html.Element",
+            "description": "The container HTML element"
+          }
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2240
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 3082
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qx.html.Element"
+      },
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_onResize": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Listener for window's resize event",
+          "     *",
+          "     * @param e {qx.event.type.Event} Event object",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Listener for window's resize event</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "e {qx.event.type.Event} Event object",
+            "paramName": "e",
+            "description": " Event object",
+            "type": "qx.event.type.Event"
+          }
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 3205
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 3536
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e",
+          "type": "qx.event.type.Event"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_computeSizeHint": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 3561
+        },
+        "end": {
+          "line": 147,
+          "column": 5,
+          "index": 3881
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget",
+        "qx.ui.core.LayoutItem"
+      ]
+    },
+    "_applyPadding": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 3906
+        },
+        "end": {
+          "line": 150,
+          "column": 38,
+          "index": 3940
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        },
+        {
+          "name": "name"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "__stopScrolling": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Handler for the native 'touchstart' on the window which prevents",
+          "     * the native page scrolling.",
+          "     * @param e {qx.event.type.Touch} The qooxdoo touch event.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Handler for the native 'touchstart' on the window which prevents\n the native page scrolling.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "e {qx.event.type.Touch} The qooxdoo touch event.",
+            "paramName": "e",
+            "description": " The qooxdoo touch event.",
+            "type": "qx.event.type.Touch"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 157,
+          "column": 4,
+          "index": 4132
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4864
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e",
+          "type": "qx.event.type.Touch"
+        }
+      ],
+      "appearsIn": []
+    },
+    "destroy": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 178,
+          "column": 4,
+          "index": 4889
+        },
+        "end": {
+          "line": 185,
+          "column": 5,
+          "index": 5054
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 194,
+        "column": 2,
+        "index": 5248
+      },
+      "end": {
+        "line": 196,
+        "column": 3,
+        "index": 5303
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

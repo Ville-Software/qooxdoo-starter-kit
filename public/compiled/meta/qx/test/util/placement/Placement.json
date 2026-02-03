@@ -1,0 +1,180 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337693,
+  "lastModifiedIso": "2026-01-03T20:15:37.693Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/placement/Placement.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 515
+    },
+    "end": {
+      "line": 700,
+      "column": 3,
+      "index": 15291
+    }
+  },
+  "className": "qx.test.util.placement.Placement",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testEnoughSpace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 619
+        },
+        "end": {
+          "line": 214,
+          "column": 5,
+          "index": 4520
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedBottomKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 216,
+          "column": 4,
+          "index": 4527
+        },
+        "end": {
+          "line": 312,
+          "column": 5,
+          "index": 6665
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedTopKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 314,
+          "column": 4,
+          "index": 6672
+        },
+        "end": {
+          "line": 410,
+          "column": 5,
+          "index": 8805
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedRightKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 412,
+          "column": 4,
+          "index": 8812
+        },
+        "end": {
+          "line": 456,
+          "column": 5,
+          "index": 9878
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedLeftKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 458,
+          "column": 4,
+          "index": 9885
+        },
+        "end": {
+          "line": 502,
+          "column": 5,
+          "index": 10948
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedBottomAndTopWithBetterBottomKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 504,
+          "column": 4,
+          "index": 10955
+        },
+        "end": {
+          "line": 600,
+          "column": 5,
+          "index": 13116
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRestrictedLeftAndRightWithBetterLeftKeepAlign": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 602,
+          "column": 4,
+          "index": 13123
+        },
+        "end": {
+          "line": 698,
+          "column": 5,
+          "index": 15283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

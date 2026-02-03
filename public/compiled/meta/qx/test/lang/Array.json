@@ -1,0 +1,345 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335302,
+  "lastModifiedIso": "2026-01-03T20:15:35.302Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/lang/Array.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 520
+    },
+    "end": {
+      "line": 186,
+      "column": 3,
+      "index": 5059
+    }
+  },
+  "className": "qx.test.lang.Array",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testAppend": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Array tests",
+          "     *",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Array tests</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 652
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1304
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExclude": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1311
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2245
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinNumeric": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2252
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2394
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxNumeric": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2401
+        },
+        "end": {
+          "line": 92,
+          "column": 5,
+          "index": 2542
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinMixed": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 94,
+          "column": 4,
+          "index": 2549
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 2720
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxMixed": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 2727
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2897
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMinEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2904
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3024
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaxEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 3031
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 3151
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 3158
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 3548
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 3555
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 3747
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 140,
+          "column": 4,
+          "index": 3754
+        },
+        "end": {
+          "line": 146,
+          "column": 5,
+          "index": 3926
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContains": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 148,
+          "column": 4,
+          "index": 3933
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 4216
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEquals": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 160,
+          "column": 4,
+          "index": 4223
+        },
+        "end": {
+          "line": 168,
+          "column": 5,
+          "index": 4529
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReplace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 170,
+          "column": 4,
+          "index": 4536
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4741
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToNativeArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 4748
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 5051
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,109 @@
+{
+  "version": 0.3,
+  "lastModified": 1767823215882,
+  "lastModifiedIso": "2026-01-07T22:00:15.882Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/overlay/FloatingIndicator.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 82
+    },
+    "end": {
+      "line": 30,
+      "column": 5,
+      "index": 597
+    }
+  },
+  "className": "ville.ui.overlay.FloatingIndicator",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Base Container",
+      " * @external(mantine/core/styles/FloatingIndicator.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Base Container</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/FloatingIndicator.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 182
+      },
+      "end": {
+        "line": 18,
+        "column": 5,
+        "index": 407
+      }
+    }
+  },
+  "members": {
+    "__componenttag": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 8,
+          "index": 434
+        },
+        "end": {
+          "line": 22,
+          "column": 29,
+          "index": 455
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 8,
+          "index": 488
+        },
+        "end": {
+          "line": 27,
+          "column": 9,
+          "index": 584
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

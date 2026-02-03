@@ -1,0 +1,154 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335493,
+  "lastModifiedIso": "2026-01-03T20:15:35.493Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/layout/Box.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 488
+    },
+    "end": {
+      "line": 89,
+      "column": 3,
+      "index": 2260
+    }
+  },
+  "className": "qx.test.ui.layout.Box",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 586
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 676
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 683
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 752
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "__testExclude": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 759
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 1965
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "layout"
+        },
+        {
+          "name": "test"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testExcludeHBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 77,
+          "column": 4,
+          "index": 1972
+        },
+        "end": {
+          "line": 81,
+          "column": 5,
+          "index": 2108
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExcludeVBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 83,
+          "column": 4,
+          "index": 2115
+        },
+        "end": {
+          "line": 87,
+          "column": 5,
+          "index": 2252
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

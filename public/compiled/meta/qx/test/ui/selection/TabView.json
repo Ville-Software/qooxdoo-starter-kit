@@ -1,0 +1,212 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338079,
+  "lastModifiedIso": "2026-01-03T20:15:38.079Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/TabView.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 107,
+      "column": 3,
+      "index": 2665
+    }
+  },
+  "className": "qx.test.ui.selection.TabView",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.selection.AbstractSingleSelectonTest",
+  "members": {
+    "__radioButtons": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 616
+        },
+        "end": {
+          "line": 23,
+          "column": 24,
+          "index": 636
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 643
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1163
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1170
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1354
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1361
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1502
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "testAddAtIndex": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1509
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 1817
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddPage": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 1824
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2103
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddAtLastIndex": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 2110
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2575
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_createTestElement": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 2582
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 2657
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

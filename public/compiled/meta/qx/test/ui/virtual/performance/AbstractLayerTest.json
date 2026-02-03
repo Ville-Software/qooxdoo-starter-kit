@@ -1,0 +1,275 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471334983,
+  "lastModifiedIso": "2026-01-03T20:15:34.983Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/performance/AbstractLayerTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 483
+    },
+    "end": {
+      "line": 175,
+      "column": 3,
+      "index": 3912
+    }
+  },
+  "className": "qx.test.ui.virtual.performance.AbstractLayerTest",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Jonathan Weiß (jonathan_rass)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "isSingleton": false,
+  "abstract": true,
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 2,
+        "index": 613
+      },
+      "end": {
+        "line": 30,
+        "column": 3,
+        "index": 741
+      }
+    }
+  },
+  "members": {
+    "ITERATIONS": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 761
+        },
+        "end": {
+          "line": 33,
+          "column": 17,
+          "index": 774
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": {
+        "raw": [
+          " was 24"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 791
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1211
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1218
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1264
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "getLayer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1271
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1461
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFullUpdateSameWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1468
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 1707
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFullUpdateScrollDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 77,
+          "column": 4,
+          "index": 1714
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 2002
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateLayerWindowScrollDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 2009
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2377
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateLayerWindowScrollRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 2384
+        },
+        "end": {
+          "line": 129,
+          "column": 5,
+          "index": 2756
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateLayerData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 131,
+          "column": 4,
+          "index": 2763
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 3047
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "profile": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 3054
+        },
+        "end": {
+          "line": 173,
+          "column": 5,
+          "index": 3904
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        },
+        {
+          "name": "fcn"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "count"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,122 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335361,
+  "lastModifiedIso": "2026-01-03T20:15:35.361Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/BackgroundColor.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 134,
+      "column": 3,
+      "index": 3668
+    }
+  },
+  "className": "qx.test.ui.BackgroundColor",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "testChangeColorInContainer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 580
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1139
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeColorInDecorator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1146
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1950
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeDecorator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1957
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2861
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDecorationColor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2868
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 3660
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

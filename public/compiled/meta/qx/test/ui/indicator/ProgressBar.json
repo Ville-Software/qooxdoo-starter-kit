@@ -1,0 +1,272 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337733,
+  "lastModifiedIso": "2026-01-03T20:15:37.733Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/indicator/ProgressBar.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 479
+    },
+    "end": {
+      "line": 182,
+      "column": 3,
+      "index": 4540
+    }
+  },
+  "className": "qx.test.ui.indicator.ProgressBar",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Adrian Olaru (adrianolaru)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__pb": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 583
+        },
+        "end": {
+          "line": 22,
+          "column": 14,
+          "index": 593
+        }
+      },
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 600
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 645
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 652
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1593
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1600
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1845
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLimitValueToZero": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1852
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 2019
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLimitValueToMaximum": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 2026
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2240
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMaximum": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2247
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 2498
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDoNothingIfMaximumIsSetToZero": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 2505
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2713
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLimitMaximumToValue": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2720
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 2951
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 107,
+          "column": 4,
+          "index": 2958
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 3383
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCompleteEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 3390
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 4008
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCompleteEventFiresOnTime": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 4015
+        },
+        "end": {
+          "line": 180,
+          "column": 5,
+          "index": 4532
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

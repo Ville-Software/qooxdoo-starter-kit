@@ -1,0 +1,913 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337932,
+  "lastModifiedIso": "2026-01-03T20:15:37.932Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/Serializer.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 572
+    },
+    "end": {
+      "line": 632,
+      "column": 3,
+      "index": 16076
+    }
+  },
+  "className": "qx.test.util.Serializer",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.SerializerModel)",
+      " * @ignore(qx.test.SerializerModelEnc)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.SerializerModel"
+      },
+      {
+        "name": "@ignore",
+        "body": "qx.test.SerializerModelEnc"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 27,
+        "column": 2,
+        "index": 652
+      },
+      "end": {
+        "line": 46,
+        "column": 3,
+        "index": 980
+      }
+    }
+  },
+  "members": {
+    "__model": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1000
+        },
+        "end": {
+          "line": 49,
+          "column": 17,
+          "index": 1013
+        }
+      },
+      "appearsIn": []
+    },
+    "__s": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1019
+        },
+        "end": {
+          "line": 50,
+          "column": 13,
+          "index": 1028
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1035
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1102
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1109
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1157
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1164
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 1846
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlStringEncoded": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 1853
+        },
+        "end": {
+          "line": 102,
+          "column": 5,
+          "index": 2348
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlBoolean": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2355
+        },
+        "end": {
+          "line": 112,
+          "column": 5,
+          "index": 2610
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlNumber": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 2617
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 2878
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlKeyEncoded": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 4,
+          "index": 2885
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 3293
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlQxSerializer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 3300
+        },
+        "end": {
+          "line": 159,
+          "column": 5,
+          "index": 3720
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlDataArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 161,
+          "column": 4,
+          "index": 3727
+        },
+        "end": {
+          "line": 177,
+          "column": 5,
+          "index": 4222
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlDataArrayNative": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 179,
+          "column": 4,
+          "index": 4229
+        },
+        "end": {
+          "line": 190,
+          "column": 5,
+          "index": 4580
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlInherited": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 192,
+          "column": 4,
+          "index": 4587
+        },
+        "end": {
+          "line": 200,
+          "column": 5,
+          "index": 4929
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlQxClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 202,
+          "column": 4,
+          "index": 4936
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 5259
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonFlat": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 212,
+          "column": 4,
+          "index": 5266
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 5519
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonExp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 222,
+          "column": 4,
+          "index": 5526
+        },
+        "end": {
+          "line": 231,
+          "column": 5,
+          "index": 5834
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonDeep2": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 233,
+          "column": 4,
+          "index": 5841
+        },
+        "end": {
+          "line": 247,
+          "column": 5,
+          "index": 6249
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 249,
+          "column": 4,
+          "index": 6256
+        },
+        "end": {
+          "line": 257,
+          "column": 5,
+          "index": 6541
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonDataArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 259,
+          "column": 4,
+          "index": 6548
+        },
+        "end": {
+          "line": 271,
+          "column": 5,
+          "index": 7018
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonBig": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 273,
+          "column": 4,
+          "index": 7025
+        },
+        "end": {
+          "line": 277,
+          "column": 5,
+          "index": 7142
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonInherited": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 279,
+          "column": 4,
+          "index": 7149
+        },
+        "end": {
+          "line": 287,
+          "column": 5,
+          "index": 7484
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 289,
+          "column": 4,
+          "index": 7491
+        },
+        "end": {
+          "line": 299,
+          "column": 5,
+          "index": 7790
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonEscape": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 301,
+          "column": 4,
+          "index": 7797
+        },
+        "end": {
+          "line": 309,
+          "column": 5,
+          "index": 8083
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonQxSerializer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 311,
+          "column": 4,
+          "index": 8090
+        },
+        "end": {
+          "line": 328,
+          "column": 5,
+          "index": 8590
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonWithMarshaler": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 330,
+          "column": 4,
+          "index": 8597
+        },
+        "end": {
+          "line": 346,
+          "column": 5,
+          "index": 9126
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonLateObjectSet": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 348,
+          "column": 4,
+          "index": 9133
+        },
+        "end": {
+          "line": 364,
+          "column": 5,
+          "index": 9522
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonQxClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 366,
+          "column": 4,
+          "index": 9529
+        },
+        "end": {
+          "line": 375,
+          "column": 5,
+          "index": 9860
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectFlat": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 381,
+          "column": 4,
+          "index": 9910
+        },
+        "end": {
+          "line": 394,
+          "column": 5,
+          "index": 10221
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectExp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 396,
+          "column": 4,
+          "index": 10228
+        },
+        "end": {
+          "line": 410,
+          "column": 5,
+          "index": 10569
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectDeep2": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 412,
+          "column": 4,
+          "index": 10576
+        },
+        "end": {
+          "line": 436,
+          "column": 5,
+          "index": 11090
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 438,
+          "column": 4,
+          "index": 11097
+        },
+        "end": {
+          "line": 451,
+          "column": 5,
+          "index": 11443
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectDataArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 453,
+          "column": 4,
+          "index": 11450
+        },
+        "end": {
+          "line": 470,
+          "column": 5,
+          "index": 11981
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectBig": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 472,
+          "column": 4,
+          "index": 11988
+        },
+        "end": {
+          "line": 476,
+          "column": 5,
+          "index": 12121
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectEmpty": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 478,
+          "column": 4,
+          "index": 12128
+        },
+        "end": {
+          "line": 494,
+          "column": 5,
+          "index": 12544
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectEscape": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 496,
+          "column": 4,
+          "index": 12551
+        },
+        "end": {
+          "line": 509,
+          "column": 5,
+          "index": 12882
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectQxSerializer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 511,
+          "column": 4,
+          "index": 12889
+        },
+        "end": {
+          "line": 533,
+          "column": 5,
+          "index": 13447
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeObjectQxClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 535,
+          "column": 4,
+          "index": 13454
+        },
+        "end": {
+          "line": 548,
+          "column": 5,
+          "index": 13842
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__setUpDateModel": {
+      "jsdoc": {
+        "raw": [
+          " ******************************",
+          "     * DATE FORMATER",
+          "     * **************************** "
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 554,
+          "column": 4,
+          "index": 13948
+        },
+        "end": {
+          "line": 563,
+          "column": 5,
+          "index": 14289
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDateFormaterNative": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 565,
+          "column": 4,
+          "index": 14296
+        },
+        "end": {
+          "line": 579,
+          "column": 5,
+          "index": 14646
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDateFormaterJson": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 581,
+          "column": 4,
+          "index": 14653
+        },
+        "end": {
+          "line": 590,
+          "column": 5,
+          "index": 14951
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDateFormaterUrl": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 592,
+          "column": 4,
+          "index": 14958
+        },
+        "end": {
+          "line": 601,
+          "column": 5,
+          "index": 15261
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testJsonLocalizedStrings": {
+      "jsdoc": {
+        "raw": [
+          " ******************************",
+          "     * Localized strings",
+          "     * **************************** "
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 607,
+          "column": 4,
+          "index": 15371
+        },
+        "end": {
+          "line": 612,
+          "column": 5,
+          "index": 15531
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNativeLocalizedStrings": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 614,
+          "column": 4,
+          "index": 15538
+        },
+        "end": {
+          "line": 622,
+          "column": 5,
+          "index": 15823
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUrlLocalizedStrings": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 624,
+          "column": 4,
+          "index": 15830
+        },
+        "end": {
+          "line": 630,
+          "column": 5,
+          "index": 16068
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

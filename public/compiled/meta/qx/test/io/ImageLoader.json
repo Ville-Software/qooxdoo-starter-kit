@@ -1,0 +1,311 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336966,
+  "lastModifiedIso": "2026-01-03T20:15:36.966Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/ImageLoader.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 26,
+      "column": 0,
+      "index": 677
+    },
+    "end": {
+      "line": 352,
+      "column": 3,
+      "index": 7733
+    }
+  },
+  "className": "qx.test.io.ImageLoader",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/test/colorstrip.gif)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/test/colorstrip.gif"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 771
+        },
+        "end": {
+          "line": 45,
+          "column": 5,
+          "index": 1198
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 47,
+          "column": 4,
+          "index": 1205
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1258
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoadImageSuccess": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1265
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 1767
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoadVectorImageSuccess": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 1774
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2288
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoadImageFailure": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2295
+        },
+        "end": {
+          "line": 121,
+          "column": 5,
+          "index": 2802
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoadVectorImageFailure": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 123,
+          "column": 4,
+          "index": 2809
+        },
+        "end": {
+          "line": 145,
+          "column": 5,
+          "index": 3328
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImageWidth": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 147,
+          "column": 4,
+          "index": 3335
+        },
+        "end": {
+          "line": 172,
+          "column": 5,
+          "index": 3880
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVectorImageWidth": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 174,
+          "column": 4,
+          "index": 3887
+        },
+        "end": {
+          "line": 199,
+          "column": 5,
+          "index": 4444
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImageHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 201,
+          "column": 4,
+          "index": 4451
+        },
+        "end": {
+          "line": 226,
+          "column": 5,
+          "index": 4997
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVectorImageHeight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 228,
+          "column": 4,
+          "index": 5004
+        },
+        "end": {
+          "line": 253,
+          "column": 5,
+          "index": 5562
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImageSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 255,
+          "column": 4,
+          "index": 5569
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 6153
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVectorImageSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 281,
+          "column": 4,
+          "index": 6160
+        },
+        "end": {
+          "line": 305,
+          "column": 5,
+          "index": 6756
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImageFormat": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 307,
+          "column": 4,
+          "index": 6763
+        },
+        "end": {
+          "line": 332,
+          "column": 5,
+          "index": 7312
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAbort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 334,
+          "column": 4,
+          "index": 7319
+        },
+        "end": {
+          "line": 350,
+          "column": 5,
+          "index": 7725
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

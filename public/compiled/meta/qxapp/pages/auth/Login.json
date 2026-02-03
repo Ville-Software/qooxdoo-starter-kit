@@ -1,0 +1,122 @@
+{
+  "version": 0.3,
+  "lastModified": 1769800207935,
+  "lastModifiedIso": "2026-01-30T19:10:07.935Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/auth/Login.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 25
+    },
+    "end": {
+      "line": 147,
+      "column": 3,
+      "index": 5495
+    }
+  },
+  "className": "qxapp.pages.auth.Login",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Login page",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Login page</p>"
+      }
+    ]
+  },
+  "superClass": "ville.ui.layout.Center",
+  "mixins": [
+    "qxapp.pages.MPage"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 2,
+        "index": 139
+      },
+      "end": {
+        "line": 145,
+        "column": 3,
+        "index": 5490
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {
+    "pageUrl": {
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 111
+        },
+        "end": {
+          "line": 9,
+          "column": 5,
+          "index": 167
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's url made externally available "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's url made externally available</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 12,
+          "column": 4,
+          "index": 219
+        },
+        "end": {
+          "line": 15,
+          "column": 5,
+          "index": 285
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Associated Inertia component name "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Associated Inertia component name</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    }
+  }
+}

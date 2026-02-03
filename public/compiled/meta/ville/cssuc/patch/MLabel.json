@@ -1,0 +1,48 @@
+{
+  "version": 0.3,
+  "lastModified": 1768318415784,
+  "lastModifiedIso": "2026-01-13T15:33:35.784Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/patch/MLabel.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 22,
+      "column": 3,
+      "index": 540
+    }
+  },
+  "className": "ville.cssuc.patch.MLabel",
+  "jsdoc": null,
+  "members": {
+    "_createDomElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 83
+        },
+        "end": {
+          "line": 19,
+          "column": 5,
+          "index": 531
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,65 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337355,
+  "lastModifiedIso": "2026-01-03T20:15:37.355Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/MemoryManagement.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 479
+    },
+    "end": {
+      "line": 46,
+      "column": 3,
+      "index": 1270
+    }
+  },
+  "className": "qx.test.core.MemoryManagement",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2016 Zenesis Ltd http://www.zenesis.com",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * John Spackman (john.spackman@zenesis.com)",
+      "",
+      " ************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testEnvSetting": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 580
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1262
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

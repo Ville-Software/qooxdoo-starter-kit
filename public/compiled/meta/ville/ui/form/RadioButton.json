@@ -1,0 +1,1500 @@
+{
+  "version": 0.3,
+  "lastModified": 1767823006208,
+  "lastModifiedIso": "2026-01-07T21:56:46.208Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/RadioButton.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 7,
+      "column": 0,
+      "index": 108
+    },
+    "end": {
+      "line": 248,
+      "column": 5,
+      "index": 8195
+    }
+  },
+  "className": "ville.ui.form.RadioButton",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * RadioButton",
+      " * ",
+      " * @external(mantine/core/styles/Radio.css)",
+      " * @require(ville.ui.icon.IconRadio)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>RadioButton</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Radio.css"
+      }
+    ],
+    "@require": [
+      {
+        "name": "@require",
+        "body": "ville.ui.icon.IconRadio"
+      }
+    ]
+  },
+  "superClass": "qx.ui.form.RadioButton",
+  "mixins": [
+    "qx.ui.core.MChildrenHandling",
+    "ville.ui.core.MWidget"
+  ],
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "label"
+      },
+      {
+        "name": "alticon"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 13,
+        "column": 4,
+        "index": 270
+      },
+      "end": {
+        "line": 55,
+        "column": 5,
+        "index": 1816
+      }
+    }
+  },
+  "properties": {
+    "variant": {
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 8,
+          "index": 1846
+        },
+        "end": {
+          "line": 65,
+          "column": 9,
+          "index": 2036
+        }
+      },
+      "json": {
+        "init": "filled",
+        "check": [
+          "filled",
+          "outline"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "labelPosition": {
+      "location": {
+        "start": {
+          "line": 67,
+          "column": 8,
+          "index": 2047
+        },
+        "end": {
+          "line": 73,
+          "column": 9,
+          "index": 2250
+        }
+      },
+      "json": {
+        "init": "right",
+        "check": [
+          "right",
+          "left"
+        ],
+        "apply": "_applyLabelPosition",
+        "themeable": true,
+        "event": "changeLabelPosition"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "inlineIcon": {
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 8,
+          "index": 2261
+        },
+        "end": {
+          "line": 79,
+          "column": 9,
+          "index": 2380
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "nullable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "indeterminateIcon": {
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 8,
+          "index": 2391
+        },
+        "end": {
+          "line": 85,
+          "column": 9,
+          "index": 2517
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "nullable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "id": {
+      "location": {
+        "start": {
+          "line": 87,
+          "column": 8,
+          "index": 2528
+        },
+        "end": {
+          "line": 93,
+          "column": 9,
+          "index": 2691
+        }
+      },
+      "json": {
+        "check": "String",
+        "apply": "_applyId",
+        "themeable": false,
+        "nullable": true,
+        "event": "changeId"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "nestLabel": {
+      "location": {
+        "start": {
+          "line": 95,
+          "column": 8,
+          "index": 2702
+        },
+        "end": {
+          "line": 101,
+          "column": 9,
+          "index": 2873
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": true,
+        "nullable": false,
+        "themeable": true,
+        "apply": "_applyNestLabel"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "__alticon": {
+      "jsdoc": {
+        "raw": [
+          " global flag for alt icons"
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 8,
+          "index": 2944
+        },
+        "end": {
+          "line": 108,
+          "column": 25,
+          "index": 2961
+        }
+      },
+      "appearsIn": []
+    },
+    "__altindeterminateicon": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 8,
+          "index": 2972
+        },
+        "end": {
+          "line": 110,
+          "column": 38,
+          "index": 3002
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 8,
+          "index": 3035
+        },
+        "end": {
+          "line": 115,
+          "column": 9,
+          "index": 3117
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 8,
+          "index": 3150
+        },
+        "end": {
+          "line": 181,
+          "column": 9,
+          "index": 6144
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 184,
+          "column": 8,
+          "index": 6181
+        },
+        "end": {
+          "line": 196,
+          "column": 9,
+          "index": 6668
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLabelPosition": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 8,
+          "index": 6705
+        },
+        "end": {
+          "line": 207,
+          "column": 9,
+          "index": 7042
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyId": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 8,
+          "index": 7079
+        },
+        "end": {
+          "line": 221,
+          "column": 9,
+          "index": 7475
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyIcon": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 224,
+          "column": 8,
+          "index": 7508
+        },
+        "end": {
+          "line": 224,
+          "column": 23,
+          "index": 7523
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyLabel": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 226,
+          "column": 8,
+          "index": 7534
+        },
+        "end": {
+          "line": 233,
+          "column": 9,
+          "index": 7757
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyNestLabel": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 236,
+          "column": 8,
+          "index": 7794
+        },
+        "end": {
+          "line": 246,
+          "column": 9,
+          "index": 8183
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getChildren": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the children list",
+          "     *",
+          "     * @return {qx.ui.core.LayoutItem[]} The children array (Arrays are",
+          "     *   reference types, please do not modify them in-place)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the children list</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)",
+            "type": "qx.ui.core.LayoutItem[]",
+            "description": "The children array (Arrays are\n   reference types, please do not modify them in-place)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1328
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1383
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qx.ui.core.LayoutItem[]"
+      },
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "hasChildren": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Whether the widget contains children.",
+          "     *",
+          "     * @return {Boolean} Returns <code>true</code> when the widget has children.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Whether the widget contains children.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} Returns <code>true</code> when the widget has children.",
+            "type": "boolean",
+            "description": "Returns <code>true</code> when the widget has children."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1539
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1594
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "indexOf": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the index position of the given widget if it is",
+          "     * a child widget. Otherwise it returns <code>-1</code>.",
+          "     *",
+          "     * This method works on the widget's children list. Some layout managers",
+          "     * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional",
+          "     * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})",
+          "     * ignore the children order for the layout process.",
+          "     *",
+          "     * @param child {qx.ui.core.Widget} the widget to query for",
+          "     * @return {Integer} The index position or <code>-1</code> when",
+          "     *   the given widget is no child of this layout.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the index position of the given widget if it is\n a child widget. Otherwise it returns <code>-1</code>.\n This method works on the widget's children list. Some layout managers\n (e.g. {@link qx.ui.layout.HBox}) use the children order as additional\n layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})\n ignore the children order for the layout process.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.Widget} the widget to query for",
+            "paramName": "child",
+            "description": " the widget to query for",
+            "type": "qx.ui.core.Widget"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Integer} The index position or <code>-1</code> when\n   the given widget is no child of this layout.",
+            "type": "Integer",
+            "description": "The index position or <code>-1</code> when\n   the given widget is no child of this layout."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 2233
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 2290
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.Widget"
+        }
+      ],
+      "returnType": {
+        "type": "Integer"
+      },
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "add": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Adds a new child widget.",
+          "     *",
+          "     * The supported keys of the layout options map depend on the layout manager",
+          "     * used to position the widget. The options are documented in the class",
+          "     * documentation of each layout manager {@link qx.ui.layout}.",
+          "     *",
+          "     * @param child {qx.ui.core.LayoutItem} the widget to add.",
+          "     * @param options {Map?null} Optional layout data for widget.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Adds a new child widget.\n The supported keys of the layout options map depend on the layout manager\n used to position the widget. The options are documented in the class\n documentation of each layout manager {@link qx.ui.layout}.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.LayoutItem} the widget to add.",
+            "paramName": "child",
+            "description": " the widget to add.",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "options {Map?null} Optional layout data for widget.",
+            "paramName": "options",
+            "description": " Optional layout data for widget.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Map"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2711
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2771
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "options",
+          "type": "Map",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "addAt": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Add a child widget at the specified index",
+          "     *",
+          "     * This method works on the widget's children list. Some layout managers",
+          "     * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional",
+          "     * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})",
+          "     * ignore the children order for the layout process.",
+          "     *",
+          "     * @param child {qx.ui.core.LayoutItem} Widget to add",
+          "     * @param index {Integer} Index, at which the widget will be inserted",
+          "     * @param options {Map?null} Optional layout data for widget.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Add a child widget at the specified index\n This method works on the widget's children list. Some layout managers\n (e.g. {@link qx.ui.layout.HBox}) use the children order as additional\n layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})\n ignore the children order for the layout process.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.LayoutItem} Widget to add",
+            "paramName": "child",
+            "description": " Widget to add",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "index {Integer} Index, at which the widget will be inserted",
+            "paramName": "index",
+            "description": " Index, at which the widget will be inserted",
+            "type": "Integer"
+          },
+          {
+            "name": "@param",
+            "body": "options {Map?null} Optional layout data for widget.",
+            "paramName": "options",
+            "description": " Optional layout data for widget.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Map"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 3347
+        },
+        "end": {
+          "line": 100,
+          "column": 5,
+          "index": 3425
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "index",
+          "type": "Integer"
+        },
+        {
+          "name": "options",
+          "type": "Map",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "addBefore": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Add a widget before another already inserted widget",
+          "     *",
+          "     * This method works on the widget's children list. Some layout managers",
+          "     * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional",
+          "     * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})",
+          "     * ignore the children order for the layout process.",
+          "     *",
+          "     * @param child {qx.ui.core.LayoutItem} Widget to add",
+          "     * @param before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted.",
+          "     * @param options {Map?null} Optional layout data for widget.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Add a widget before another already inserted widget\n This method works on the widget's children list. Some layout managers\n (e.g. {@link qx.ui.layout.HBox}) use the children order as additional\n layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})\n ignore the children order for the layout process.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.LayoutItem} Widget to add",
+            "paramName": "child",
+            "description": " Widget to add",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted.",
+            "paramName": "before",
+            "description": " Widget before the new widget will be inserted.",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "options {Map?null} Optional layout data for widget.",
+            "paramName": "options",
+            "description": " Optional layout data for widget.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Map"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 4029
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 4117
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "before",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "options",
+          "type": "Map",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "addAfter": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Add a widget after another already inserted widget",
+          "     *",
+          "     * This method works on the widget's children list. Some layout managers",
+          "     * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional",
+          "     * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})",
+          "     * ignore the children order for the layout process.",
+          "     *",
+          "     * @param child {qx.ui.core.LayoutItem} Widget to add",
+          "     * @param after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted",
+          "     * @param options {Map?null} Optional layout data for widget.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Add a widget after another already inserted widget\n This method works on the widget's children list. Some layout managers\n (e.g. {@link qx.ui.layout.HBox}) use the children order as additional\n layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})\n ignore the children order for the layout process.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.LayoutItem} Widget to add",
+            "paramName": "child",
+            "description": " Widget to add",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted",
+            "paramName": "after",
+            "description": " Widget, after which the new widget will be inserted",
+            "type": "qx.ui.core.LayoutItem"
+          },
+          {
+            "name": "@param",
+            "body": "options {Map?null} Optional layout data for widget.",
+            "paramName": "options",
+            "description": " Optional layout data for widget.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Map"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 4724
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 4808
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "after",
+          "type": "qx.ui.core.LayoutItem"
+        },
+        {
+          "name": "options",
+          "type": "Map",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "remove": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Remove the given child widget.",
+          "     *",
+          "     * @param child {qx.ui.core.LayoutItem} the widget to remove",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Remove the given child widget.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "child {qx.ui.core.LayoutItem} the widget to remove",
+            "paramName": "child",
+            "description": " the widget to remove",
+            "type": "qx.ui.core.LayoutItem"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 139,
+          "column": 4,
+          "index": 4941
+        },
+        "end": {
+          "line": 141,
+          "column": 5,
+          "index": 4989
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "child",
+          "type": "qx.ui.core.LayoutItem"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "removeAt": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Remove the widget at the specified index.",
+          "     *",
+          "     * This method works on the widget's children list. Some layout managers",
+          "     * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional",
+          "     * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})",
+          "     * ignore the children order for the layout process.",
+          "     *",
+          "     * @param index {Integer} Index of the widget to remove.",
+          "     * @return {qx.ui.core.LayoutItem} The child removed.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Remove the widget at the specified index.\n This method works on the widget's children list. Some layout managers\n (e.g. {@link qx.ui.layout.HBox}) use the children order as additional\n layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})\n ignore the children order for the layout process.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "index {Integer} Index of the widget to remove.",
+            "paramName": "index",
+            "description": " Index of the widget to remove.",
+            "type": "Integer"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.core.LayoutItem} The child removed.",
+            "type": "qx.ui.core.LayoutItem",
+            "description": "The child removed."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 5486
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 5545
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "index",
+          "type": "Integer"
+        }
+      ],
+      "returnType": {
+        "type": "qx.ui.core.LayoutItem"
+      },
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "removeAll": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Remove all children.",
+          "     *",
+          "     * @return {Array} An array of the removed children.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Remove all children.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array} An array of the removed children.",
+            "type": "Array<any>",
+            "description": "An array of the removed children."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 163,
+          "column": 4,
+          "index": 5660
+        },
+        "end": {
+          "line": 165,
+          "column": 5,
+          "index": 5711
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Array<any>"
+      },
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    },
+    "addClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 140
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 147
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 232
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 279
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 380
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 427
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 512
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyles": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 559
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 650
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "styles"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeStyle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 734
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 741
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 858
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 865
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 966
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 973
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1087
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1196
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    }
+  },
+  "statics": {
+    "remap": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Mapping of protected methods to public.",
+          "     * This omits an additional function call when using these methods. Call",
+          "     * this methods in the defer block of the including class.",
+          "     *",
+          "     * @param members {Map} The including classes members map",
+          "     * @deprecated {7.0} this is not necessary in modern compilers and leads to unexpected behaviour",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Mapping of protected methods to public.\n This omits an additional function call when using these methods. Call\n this methods in the defer block of the including class.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "members {Map} The including classes members map",
+            "paramName": "members",
+            "description": " The including classes members map",
+            "type": "Map<any, any>"
+          }
+        ],
+        "@deprecated": [
+          {
+            "name": "@deprecated",
+            "body": "{7.0} this is not necessary in modern compilers and leads to unexpected behaviour"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 183,
+          "column": 4,
+          "index": 6292
+        },
+        "end": {
+          "line": 199,
+          "column": 5,
+          "index": 6916
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "members",
+          "type": "Map<any, any>"
+        }
+      ],
+      "appearsIn": [
+        "qx.ui.core.MChildrenHandling"
+      ],
+      "mixin": "qx.ui.core.MChildrenHandling"
+    }
+  }
+}

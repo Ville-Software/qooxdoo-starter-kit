@@ -1,0 +1,82 @@
+{
+  "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "../../public/compiled/source",
+      "bundle": {
+        "include": "qx.*"
+      }
+    },
+    {
+      "type": "build",
+      "outputPath": "../../public/compiled/build"
+    }
+  ],
+  "defaultTarget": "source",
+  "locales": ["en"],
+  "environment": {
+    "qx.nativeScrollBars": true,
+    "qx.dyntheme": false,
+    "ville.cssuc": true
+  },
+  "babel" : {
+    "options" : {
+      "targets" : "> 0.25%, not dead"
+    }
+  },
+  "applications": [
+    {
+      "class": "qxapp.Application",
+      "theme": "ville.cssuc.theme.blankslate.Theme",
+      "name": "qxapp",
+      "bootPath": "source/boot",
+      "include": ["qxapp.pages.*", "qxapp.app.*"],
+      "parts": {
+        "boot": {
+            "include": [
+                "qxapp.Application",
+                "qxapp.pages.MPage",
+                "ville.cssuc.*"
+            ]
+        },
+        "Welcome": {
+            "include": [
+                "qxapp.pages.Welcome"
+            ]
+        },
+        "Dashboard": {
+            "include": [
+                "qxapp.pages.Dashboard"
+            ]
+        },
+        "appshell": {
+            "include": [
+                "qxapp.app.AppShell"
+            ]
+        },
+        "auth.Login": {
+            "include": [
+                "qxapp.pages.auth.Login"
+            ]
+        },
+        "auth.Register": {
+            "include": [
+                "qxapp.pages.auth.Register"
+            ]
+        },
+        "auth.ForgotPassword": {
+            "include": [
+                "qxapp.pages.auth.ForgotPassword"
+            ]
+        },
+        "settings": {
+            "include": [
+                "qxapp.app.SettingsShell",
+                "qxapp.pages.settings.*"
+            ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 0.3,
+  "lastModified": 1767551851493,
+  "lastModifiedIso": "2026-01-04T18:37:31.493Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/theme/blankslate/Theme.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 11,
+      "column": 0,
+      "index": 232
+    },
+    "end": {
+      "line": 21,
+      "column": 3,
+      "index": 563
+    }
+  },
+  "className": "ville.cssuc.theme.blankslate.Theme",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   Copyright: 2024 undefined",
+      "",
+      "   License: MIT license",
+      "",
+      "   Authors: undefined",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

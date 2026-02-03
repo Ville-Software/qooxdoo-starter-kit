@@ -1,0 +1,300 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335873,
+  "lastModifiedIso": "2026-01-03T20:15:35.873Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/container/Composite.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 465
+    },
+    "end": {
+      "line": 326,
+      "column": 3,
+      "index": 8381
+    }
+  },
+  "className": "qx.test.mobile.container.Composite",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tino Butz (tbtz)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 580
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 983
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddSame": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 990
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1436
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddOther": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1443
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2191
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4,
+          "index": 2198
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 2856
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddBefore": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 2863
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 3697
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddAfter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 3704
+        },
+        "end": {
+          "line": 183,
+          "column": 5,
+          "index": 4740
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDestroy": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 185,
+          "column": 4,
+          "index": 4747
+        },
+        "end": {
+          "line": 203,
+          "column": 5,
+          "index": 5198
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 205,
+          "column": 4,
+          "index": 5205
+        },
+        "end": {
+          "line": 226,
+          "column": 5,
+          "index": 5763
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 228,
+          "column": 4,
+          "index": 5770
+        },
+        "end": {
+          "line": 257,
+          "column": 5,
+          "index": 6566
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 259,
+          "column": 4,
+          "index": 6573
+        },
+        "end": {
+          "line": 277,
+          "column": 5,
+          "index": 7054
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHasChildren": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 279,
+          "column": 4,
+          "index": 7061
+        },
+        "end": {
+          "line": 295,
+          "column": 5,
+          "index": 7468
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 297,
+          "column": 4,
+          "index": 7475
+        },
+        "end": {
+          "line": 315,
+          "column": 5,
+          "index": 8058
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_assertChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 317,
+          "column": 4,
+          "index": 8065
+        },
+        "end": {
+          "line": 324,
+          "column": 5,
+          "index": 8373
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "composite"
+        },
+        {
+          "name": "number"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

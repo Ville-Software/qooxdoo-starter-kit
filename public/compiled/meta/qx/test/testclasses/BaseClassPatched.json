@@ -1,0 +1,41 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335392,
+  "lastModifiedIso": "2026-01-03T20:15:35.392Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/BaseClassPatched.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 20,
+      "column": 3,
+      "index": 398
+    }
+  },
+  "className": "qx.test.testclasses.BaseClassPatched",
+  "jsdoc": null,
+  "superClass": "qx.test.testclasses.RootClass",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 102
+      },
+      "end": {
+        "line": 7,
+        "column": 3,
+        "index": 161
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

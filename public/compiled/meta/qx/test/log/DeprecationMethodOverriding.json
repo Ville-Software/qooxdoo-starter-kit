@@ -1,0 +1,242 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336176,
+  "lastModifiedIso": "2026-01-03T20:15:36.176Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/log/DeprecationMethodOverriding.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 106,
+      "column": 3,
+      "index": 2469
+    }
+  },
+  "className": "qx.test.log.DeprecationMethodOverriding",
+  "jsdoc": null,
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__lastWarnMsg": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 111
+        },
+        "end": {
+          "line": 5,
+          "column": 23,
+          "index": 130
+        }
+      },
+      "appearsIn": []
+    },
+    "__orgWarnMesthod": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 7,
+          "column": 4,
+          "index": 137
+        },
+        "end": {
+          "line": 7,
+          "column": 26,
+          "index": 159
+        }
+      },
+      "appearsIn": []
+    },
+    "__orgTraceMesthod": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 166
+        },
+        "end": {
+          "line": 9,
+          "column": 27,
+          "index": 189
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 11,
+          "column": 4,
+          "index": 196
+        },
+        "end": {
+          "line": 20,
+          "column": 5,
+          "index": 468
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 475
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 701
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassA: baseclass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 708
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 863
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassB1: overrides method": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 870
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1118
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassC1: doesn't override method": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1125
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1380
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassB2: doesn't override method": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1387
+        },
+        "end": {
+          "line": 64,
+          "column": 5,
+          "index": 1558
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClassC2: overrides method": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 4,
+          "index": 1565
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 1813
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__test": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 1820
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2461
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "instance"
+        },
+        {
+          "name": "callCountOldProperty"
+        },
+        {
+          "name": "callCountNewProperty"
+        },
+        {
+          "name": "reqExpWarnMsg"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

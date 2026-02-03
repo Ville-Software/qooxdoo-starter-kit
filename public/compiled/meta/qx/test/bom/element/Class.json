@@ -1,0 +1,350 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335718,
+  "lastModifiedIso": "2026-01-03T20:15:35.718Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/element/Class.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 163,
+      "column": 3,
+      "index": 5610
+    }
+  },
+  "className": "qx.test.bom.element.Class",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 574
+        },
+        "end": {
+          "line": 29,
+          "column": 5,
+          "index": 718
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 725
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 809
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get should return the className for svg element": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 816
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1281
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get on new element should return empty string": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1288
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1441
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get should return the className": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1448
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1642
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: add() on new element should set the class name": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1649
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1869
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: add() on element with class should not set it again": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1876
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 2109
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: addClasses() on new element should set multiple classes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 2116
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: addClasses() should ignore class names, which are already set": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2413
+        },
+        "end": {
+          "line": 88,
+          "column": 5,
+          "index": 2740
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: has()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 4,
+          "index": 2747
+        },
+        "end": {
+          "line": 99,
+          "column": 5,
+          "index": 3079
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: remove() non existing class should be ignored": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 3086
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 3354
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: remove() existing classes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 3361
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 3747
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: removeClasses() to remove several classes at once": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 3754
+        },
+        "end": {
+          "line": 126,
+          "column": 5,
+          "index": 4097
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: replace()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 128,
+          "column": 4,
+          "index": 4104
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 5085
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: toggle() non existing class should add it": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 5092
+        },
+        "end": {
+          "line": 154,
+          "column": 5,
+          "index": 5310
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: toggle() existing class name should remove it": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 4,
+          "index": 5317
+        },
+        "end": {
+          "line": 161,
+          "column": 5,
+          "index": 5602
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

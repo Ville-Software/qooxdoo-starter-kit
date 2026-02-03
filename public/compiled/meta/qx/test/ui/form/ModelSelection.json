@@ -1,0 +1,580 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337448,
+  "lastModifiedIso": "2026-01-03T20:15:37.448Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/ModelSelection.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 233,
+      "column": 3,
+      "index": 6367
+    }
+  },
+  "className": "qx.test.ui.form.ModelSelection",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__testGetSingle": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 594
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 986
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testGetMulti": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 993
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1573
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testSetSingle": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1580
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1952
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testSetMulti": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1959
+        },
+        "end": {
+          "line": 77,
+          "column": 5,
+          "index": 2463
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        },
+        {
+          "name": "children"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__createSelectBox": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 79,
+          "column": 4,
+          "index": 2470
+        },
+        "end": {
+          "line": 83,
+          "column": 5,
+          "index": 2591
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__createList": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 85,
+          "column": 4,
+          "index": 2598
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 2712
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__addListItems": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 2719
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2899
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__createRadioGroup": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2906
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 3037
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__createRadioButtonGroup": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 3044
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 3187
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__addRadioButton": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 3194
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 3366
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__createTree": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 3373
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 3831
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__getRidOf": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 133,
+          "column": 4,
+          "index": 3838
+        },
+        "end": {
+          "line": 139,
+          "column": 5,
+          "index": 4011
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "box"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSelectBoxGetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 141,
+          "column": 4,
+          "index": 4018
+        },
+        "end": {
+          "line": 145,
+          "column": 5,
+          "index": 4153
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectBoxSetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 147,
+          "column": 4,
+          "index": 4160
+        },
+        "end": {
+          "line": 151,
+          "column": 5,
+          "index": 4295
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListGetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 153,
+          "column": 4,
+          "index": 4302
+        },
+        "end": {
+          "line": 157,
+          "column": 5,
+          "index": 4430
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListSetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 159,
+          "column": 4,
+          "index": 4437
+        },
+        "end": {
+          "line": 163,
+          "column": 5,
+          "index": 4565
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListGetMulti": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 165,
+          "column": 4,
+          "index": 4572
+        },
+        "end": {
+          "line": 170,
+          "column": 5,
+          "index": 4736
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testListSetMulti": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 172,
+          "column": 4,
+          "index": 4743
+        },
+        "end": {
+          "line": 177,
+          "column": 5,
+          "index": 4907
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioGroupGetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 179,
+          "column": 4,
+          "index": 4914
+        },
+        "end": {
+          "line": 183,
+          "column": 5,
+          "index": 5057
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioGroupSetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 185,
+          "column": 4,
+          "index": 5064
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 5207
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioButtonGroupGetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 5214
+        },
+        "end": {
+          "line": 195,
+          "column": 5,
+          "index": 5369
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioButtonGroupSetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 197,
+          "column": 4,
+          "index": 5376
+        },
+        "end": {
+          "line": 201,
+          "column": 5,
+          "index": 5531
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeGetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 203,
+          "column": 4,
+          "index": 5538
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 5719
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeSetSingle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 5726
+        },
+        "end": {
+          "line": 215,
+          "column": 5,
+          "index": 5907
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeGetMulti": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 217,
+          "column": 4,
+          "index": 5914
+        },
+        "end": {
+          "line": 223,
+          "column": 5,
+          "index": 6133
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeSetMulti": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 225,
+          "column": 4,
+          "index": 6140
+        },
+        "end": {
+          "line": 231,
+          "column": 5,
+          "index": 6359
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,145 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335325,
+  "lastModifiedIso": "2026-01-03T20:15:35.325Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/basic/Atom.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 27,
+      "column": 0,
+      "index": 730
+    },
+    "end": {
+      "line": 233,
+      "column": 3,
+      "index": 7213
+    }
+  },
+  "className": "qx.test.mobile.basic.Atom",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/icon/Tango/48/places/user-home.png)",
+      " * @asset(qx/icon/Tango/32/places/folder-open.png)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/icon/Tango/48/places/user-home.png"
+      },
+      {
+        "name": "@asset",
+        "body": "qx/icon/Tango/32/places/folder-open.png"
+      }
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 836
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1399
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1406
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2605
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testShow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2612
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3403
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIconPosition": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 3410
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 6097
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetLabelAndIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 195,
+          "column": 4,
+          "index": 6104
+        },
+        "end": {
+          "line": 231,
+          "column": 5,
+          "index": 7205
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

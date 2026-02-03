@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "core",
+    "Widget",
+    "include",
+    "MChildrenHandling",
+    "construct",
+    "constructor",
+    "call",
+    "form",
+    "InputSection"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/form/InputSection.js"
+  ],
+  "sourcesContent": [
+    "/**\n * \n * \n */\nqx.Class.define(\"ville.ui.form.InputSection\", {\n    extend: ville.ui.core.Widget,\n\n    include: qx.ui.core.MChildrenHandling,\n\n    construct() {\n        super();\n    }\n    \n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,4BAA4B,EAAE;IAC1CC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,IAAI,CAACC,MAAM;IAE5BC,OAAO,EAAEX,EAAE,CAACQ,EAAE,CAACC,IAAI,CAACG,iBAAiB;IAErCC,SAASA,CAAA,EAAG;MACRN,KAAA,CAAAC,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAI,WAAA,CAAAC,IAAA;IACJ;EAEF,CAAC,CAAC;EAbJR,KAAK,CAACC,EAAE,CAACQ,IAAI,CAACC,YAAY,CAACd,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

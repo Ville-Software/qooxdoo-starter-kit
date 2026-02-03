@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "form",
+    "TextField",
+    "include",
+    "ville",
+    "core",
+    "MWidget",
+    "construct",
+    "constructor",
+    "call",
+    "setExcludeBoundsFromDom",
+    "setClearAllInlineStyles",
+    "setRemoveCssClasses",
+    "setCssUtilityClass"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/form/TextField.js"
+  ],
+  "sourcesContent": [
+    "/**\n * TextField\n * @external(mantine/core/styles/Input.css)\n */\nqx.Class.define(\"ville.ui.form.TextField\", {\n    extend: qx.ui.form.TextField,\n\n    include: ville.ui.core.MWidget,\n\n    construct() {\n        super();\n\n        this.setExcludeBoundsFromDom(true);\n        this.setClearAllInlineStyles(true);\n        this.setRemoveCssClasses([\"qx-abstract-field\", \"qx-placeholder-color\"]);\n        this.setCssUtilityClass(\"m_8fb7ebe7 mantine-Input-input mantine-TextInput-input\");\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,yBAAyB,EAAE;IACvCC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,SAAS;IAE5BC,OAAO,EAAEC,KAAK,CAACJ,EAAE,CAACK,IAAI,CAACC,OAAO;IAE9BC,SAASA,CAAA,EAAG;MACRd,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,SAAA,CAAAM,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,mBAAmB,CAAC,CAAC,mBAAmB,EAAE,sBAAsB,CAAC,CAAC;MACvE,IAAI,CAACC,kBAAkB,CAAC,wDAAwD,CAAC;IACrF;EACF,CAAC,CAAC;EAjBJT,KAAK,CAACJ,EAAE,CAACC,IAAI,CAACC,SAAS,CAACN,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

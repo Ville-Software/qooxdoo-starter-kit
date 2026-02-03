@@ -1,0 +1,516 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335374,
+  "lastModifiedIso": "2026-01-03T20:15:35.374Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/type/BaseArray.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 521
+    },
+    "end": {
+      "line": 288,
+      "column": 3,
+      "index": 8054
+    }
+  },
+  "className": "qx.test.type.BaseArray",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.test.type.TestArray)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.test.type.TestArray"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 26,
+        "column": 2,
+        "index": 600
+      },
+      "end": {
+        "line": 31,
+        "column": 3,
+        "index": 718
+      }
+    }
+  },
+  "members": {
+    "testListConstruct": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 738
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 954
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSingleItemConstruct": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 961
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1265
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayLength": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1272
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1392
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testClear": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1399
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1535
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayJoin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1542
+        },
+        "end": {
+          "line": 65,
+          "column": 5,
+          "index": 1672
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayConcat": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 67,
+          "column": 4,
+          "index": 1679
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1894
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayPop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1901
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 2088
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayPush": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 2095
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 2411
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayReverse": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 2418
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2654
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayShift": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2661
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2866
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayUnshift": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2873
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 3045
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArraySlice": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 3052
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 3377
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArraySort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 3384
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 3746
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArraySplice": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 3753
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 4047
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayToString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 140,
+          "column": 4,
+          "index": 4054
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 4190
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayToLocaleString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4,
+          "index": 4197
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 4360
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testArrayAccess": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 4367
+        },
+        "end": {
+          "line": 155,
+          "column": 5,
+          "index": 4557
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 157,
+          "column": 4,
+          "index": 4564
+        },
+        "end": {
+          "line": 165,
+          "column": 5,
+          "index": 4851
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLastIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 167,
+          "column": 4,
+          "index": 4858
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 5165
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testForEach": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 177,
+          "column": 4,
+          "index": 5172
+        },
+        "end": {
+          "line": 191,
+          "column": 5,
+          "index": 5590
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 193,
+          "column": 4,
+          "index": 5597
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 6128
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 212,
+          "column": 4,
+          "index": 6135
+        },
+        "end": {
+          "line": 229,
+          "column": 5,
+          "index": 6672
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSome": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 231,
+          "column": 4,
+          "index": 6679
+        },
+        "end": {
+          "line": 257,
+          "column": 5,
+          "index": 7342
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEvery": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 259,
+          "column": 4,
+          "index": 7349
+        },
+        "end": {
+          "line": 286,
+          "column": 5,
+          "index": 8046
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,390 @@
+{
+  "version": 0.3,
+  "lastModified": 1769694653598,
+  "lastModifiedIso": "2026-01-29T13:50:53.598Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/components/form/renderer/LoginForm.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 4,
+      "column": 0,
+      "index": 60
+    },
+    "end": {
+      "line": 182,
+      "column": 5,
+      "index": 6545
+    }
+  },
+  "className": "qxapp.components.form.renderer.LoginForm",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Login form renderer for {@link qx.ui.form.Form}.",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Login form renderer for {@link qx.ui.form.Form}.</p>"
+      }
+    ]
+  },
+  "superClass": "ville.ui.form.renderer.AbstractRenderer",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "form"
+      },
+      {
+        "name": "callingpage"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 7,
+        "column": 4,
+        "index": 180
+      },
+      "end": {
+        "line": 14,
+        "column": 5,
+        "index": 311
+      }
+    }
+  },
+  "members": {
+    "__callingpage": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 17,
+          "column": 6,
+          "index": 335
+        },
+        "end": {
+          "line": 17,
+          "column": 25,
+          "index": 354
+        }
+      },
+      "appearsIn": []
+    },
+    "_row": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 8,
+          "index": 364
+        },
+        "end": {
+          "line": 18,
+          "column": 15,
+          "index": 371
+        }
+      },
+      "appearsIn": []
+    },
+    "_itemsStack": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 6,
+          "index": 379
+        },
+        "end": {
+          "line": 19,
+          "column": 23,
+          "index": 396
+        }
+      },
+      "appearsIn": []
+    },
+    "_buttonRow": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 20,
+          "column": 6,
+          "index": 404
+        },
+        "end": {
+          "line": 20,
+          "column": 22,
+          "index": 420
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 6,
+          "index": 449
+        },
+        "end": {
+          "line": 25,
+          "column": 7,
+          "index": 528
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_onFormChange": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 6,
+          "index": 557
+        },
+        "end": {
+          "line": 35,
+          "column": 7,
+          "index": 748
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.form.renderer.AbstractRenderer",
+      "appearsIn": [
+        "ville.ui.form.renderer.AbstractRenderer"
+      ]
+    },
+    "addItems": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "       * Add a group of form items with the corresponding names. The names are",
+          "       * displayed as label.",
+          "       * The title is optional and is used as grouping for the given form",
+          "       * items.",
+          "       *",
+          "       * @param items {qx.ui.core.Widget[]} An array of form items to render.",
+          "       * @param names {String[]} An array of names for the form items.",
+          "       "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Add a group of form items with the corresponding names. The names are\n displayed as label.\n The title is optional and is used as grouping for the given form\n items.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "items {qx.ui.core.Widget[]} An array of form items to render.",
+            "paramName": "items",
+            "description": " An array of form items to render.",
+            "type": "qx.ui.core.Widget[]"
+          },
+          {
+            "name": "@param",
+            "body": "names {String[]} An array of names for the form items.",
+            "paramName": "names",
+            "description": " An array of names for the form items.",
+            "type": "String[]"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 6,
+          "index": 1133
+        },
+        "end": {
+          "line": 129,
+          "column": 7,
+          "index": 4978
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "items",
+          "type": "qx.ui.core.Widget[]"
+        },
+        {
+          "name": "names",
+          "type": "String[]"
+        },
+        {
+          "name": "title"
+        },
+        {
+          "name": "customize"
+        }
+      ],
+      "overriddenFrom": "ville.ui.form.renderer.AbstractRenderer",
+      "appearsIn": [
+        "ville.ui.form.renderer.AbstractRenderer",
+        "qx.ui.form.renderer.IFormRenderer"
+      ]
+    },
+    "addButton": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "       * Adds a button the form renderer. All buttons will be added in a",
+          "       * single row at the bottom of the form.",
+          "       *",
+          "       * @param button {qx.ui.form.Button} The button to add.",
+          "       "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Adds a button the form renderer. All buttons will be added in a\n single row at the bottom of the form.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "button {qx.ui.form.Button} The button to add.",
+            "paramName": "button",
+            "description": " The button to add.",
+            "type": "qx.ui.form.Button"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 137,
+          "column": 6,
+          "index": 5198
+        },
+        "end": {
+          "line": 149,
+          "column": 7,
+          "index": 5545
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "button",
+          "type": "qx.ui.form.Button"
+        }
+      ],
+      "overriddenFrom": "ville.ui.form.renderer.AbstractRenderer",
+      "appearsIn": [
+        "ville.ui.form.renderer.AbstractRenderer",
+        "qx.ui.form.renderer.IFormRenderer"
+      ]
+    },
+    "_createLabel": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "       * Creates a label for the given form item.",
+          "       *",
+          "       * @param name {String} The content of the label without the",
+          "       *   trailing * and :",
+          "       * @param item {qx.ui.core.Widget} The item, which has the required state.",
+          "       * @return {qx.ui.basic.Label} The label for the given item.",
+          "       "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Creates a label for the given form item.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "name {String} The content of the label without the\n   trailing * and :",
+            "paramName": "name",
+            "description": " The content of the label without the\n   trailing * and :",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "item {qx.ui.core.Widget} The item, which has the required state.",
+            "paramName": "item",
+            "description": " The item, which has the required state.",
+            "type": "qx.ui.core.Widget"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.basic.Label} The label for the given item.",
+            "type": "qx.ui.basic.Label",
+            "description": "The label for the given item."
+          }
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 159,
+          "column": 6,
+          "index": 5876
+        },
+        "end": {
+          "line": 164,
+          "column": 7,
+          "index": 6048
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "returnType": {
+        "type": "qx.ui.basic.Label"
+      },
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 173,
+        "column": 4,
+        "index": 6258
+      },
+      "end": {
+        "line": 181,
+        "column": 5,
+        "index": 6539
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

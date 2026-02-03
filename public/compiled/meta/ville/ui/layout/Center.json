@@ -1,0 +1,64 @@
+{
+  "version": 0.3,
+  "lastModified": 1768836230393,
+  "lastModifiedIso": "2026-01-19T15:23:50.393Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/layout/Center.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 63
+    },
+    "end": {
+      "line": 17,
+      "column": 5,
+      "index": 287
+    }
+  },
+  "className": "ville.ui.layout.Center",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Center",
+      " * @external(mantine/core/styles/Center.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Center</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Center.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Box",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 148
+      },
+      "end": {
+        "line": 15,
+        "column": 5,
+        "index": 280
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,91 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336367,
+  "lastModifiedIso": "2026-01-03T20:15:36.367Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/core/EventEmitterDummy.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 3,
+      "index": 226
+    }
+  },
+  "className": "qx.test.core.EventEmitterDummy",
+  "jsdoc": null,
+  "superClass": "qx.core.Object",
+  "events": {
+    "plain": {
+      "type": "qx.event.type.Event",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 4,
+          "column": 4,
+          "index": 94
+        },
+        "end": {
+          "line": 4,
+          "column": 32,
+          "index": 122
+        }
+      }
+    },
+    "error": {
+      "type": "qx.__12345__",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 128
+        },
+        "end": {
+          "line": 5,
+          "column": 25,
+          "index": 149
+        }
+      }
+    },
+    "data": {
+      "type": "qx.event.type.Data",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 155
+        },
+        "end": {
+          "line": 6,
+          "column": 30,
+          "index": 181
+        }
+      }
+    },
+    "eventName": {
+      "type": "qx.event.type.Data",
+      "jsdoc": null,
+      "location": {
+        "start": {
+          "line": 7,
+          "column": 4,
+          "index": 187
+        },
+        "end": {
+          "line": 7,
+          "column": 35,
+          "index": 218
+        }
+      }
+    }
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

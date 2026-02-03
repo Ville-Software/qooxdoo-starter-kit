@@ -1,0 +1,70 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336858,
+  "lastModifiedIso": "2026-01-03T20:15:36.858Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/performance/HtmlDivRelative.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 483
+    },
+    "end": {
+      "line": 28,
+      "column": 3,
+      "index": 760
+    }
+  },
+  "className": "qx.test.ui.virtual.performance.HtmlDivRelative",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Jonathan Weiß (jonathan_rass)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.virtual.performance.AbstractLayerTest",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "getLayer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 661
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 752
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.performance.AbstractLayerTest",
+      "appearsIn": [
+        "qx.test.ui.virtual.performance.AbstractLayerTest"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

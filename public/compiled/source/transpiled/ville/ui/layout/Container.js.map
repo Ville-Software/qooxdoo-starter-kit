@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "core",
+    "Widget",
+    "include",
+    "MChildrenHandling",
+    "construct",
+    "component",
+    "__componenttag",
+    "constructor",
+    "call",
+    "setCssUtilityClass",
+    "members",
+    "_createContentElement",
+    "html",
+    "Element",
+    "layout",
+    "Container"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/layout/Container.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Base Container\n * @external(mantine/core/styles/Container.css)\n */\nqx.Class.define(\"ville.ui.layout.Container\", {\n    \n    extend: ville.ui.core.Widget,\n\n    include: qx.ui.core.MChildrenHandling,\n\n    construct(component) {\n        \n        if (component) {\n            this.__componenttag = component;\n        }\n        super();\n\n        this.setCssUtilityClass(\"m_7485cace mantine-Container-root\");\n\n    },\n\n    members: {\n\n        __componenttag: \"div\",\n\n        // overridden\n        _createContentElement() {\n            return new qx.html.Element(this.__componenttag);\n        }\n\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,2BAA2B,EAAE;IAEzCC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,IAAI,CAACC,MAAM;IAE5BC,OAAO,EAAEX,EAAE,CAACQ,EAAE,CAACC,IAAI,CAACG,iBAAiB;IAErCC,SAASA,CAACC,SAAS,EAAE;MAEjB,IAAIA,SAAS,EAAE;QACX,IAAI,CAACC,qBAAc,GAAGD,SAAS;MACnC;MACAP,KAAA,CAAAC,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAM,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,kBAAkB,CAAC,mCAAmC,CAAC;IAEhE,CAAC;IAEDC,OAAO,EAAE;MAELJ,qBAAc,EAAE,KAAK;MAErB;MACAK,qBAAqBA,CAAA,EAAG;QACpB,OAAO,IAAIpB,EAAE,CAACqB,IAAI,CAACC,OAAO,CAAC,IAAI,CAACP,qBAAc,CAAC;MACnD;IAEJ;EACF,CAAC,CAAC;EA/BJR,KAAK,CAACC,EAAE,CAACe,MAAM,CAACC,SAAS,CAACrB,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

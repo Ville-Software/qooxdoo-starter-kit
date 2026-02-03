@@ -1,0 +1,88 @@
+{
+  "version": 0.3,
+  "lastModified": 1769453713185,
+  "lastModifiedIso": "2026-01-26T18:55:13.185Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/MControl.js",
+  "type": "mixin",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 25,
+      "column": 3,
+      "index": 397
+    }
+  },
+  "className": "ville.cssuc.MControl",
+  "jsdoc": null,
+  "properties": {
+    "bypassRenderLayout": {
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4,
+          "index": 72
+        },
+        "end": {
+          "line": 10,
+          "column": 5,
+          "index": 164
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": false,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "excludeBoundsFromDom": {
+      "location": {
+        "start": {
+          "line": 12,
+          "column": 4,
+          "index": 171
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 265
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": false,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "excludeBoundsFromDomMods": {
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 4,
+          "index": 272
+        },
+        "end": {
+          "line": 23,
+          "column": 5,
+          "index": 389
+        }
+      },
+      "json": {
+        "check": "Array",
+        "nullable": true,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {},
+  "statics": {}
+}

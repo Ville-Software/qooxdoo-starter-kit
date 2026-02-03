@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "layout",
+    "Flex",
+    "construct",
+    "constructor",
+    "call",
+    "pagenameroot",
+    "pageurl",
+    "pageName",
+    "lang",
+    "String",
+    "firstUp",
+    "addListener",
+    "document",
+    "title",
+    "routing",
+    "core",
+    "Init",
+    "getApplication",
+    "getRouting",
+    "setPageUrl",
+    "properties",
+    "pageUrl",
+    "check",
+    "init",
+    "componentName",
+    "qxapp",
+    "pages",
+    "Dashboard"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/Dashboard.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Dashboard page\n *\n */\nqx.Class.define(\"qxapp.pages.Dashboard\",\n{\n  extend : ville.ui.layout.Flex,\n\n  construct() {\n    super();\n\n    const pagenameroot = \"dashboard\";\n    const pageurl = `/${pagenameroot}`;\n    const pageName = qx.lang.String.firstUp(pagenameroot);\n\n    // Set up the page\n    this.addListener(\"appear\", () => {document.title = `${pageName} - Laravel`});\n\n    // Add to routing\n    var routing = qx.core.Init.getApplication().getRouting();\n    this.setPageUrl(pageurl);\n\n  },\n\n  properties : {\n\n    /** Page's url made externally available */\n    pageUrl: {\n      check: \"String\",\n      init: null\n    },\n\n    componentName: {\n        check: \"String\",\n        init: \"Dashboard\"\n    }\n\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,uBAAuB,EACvC;IACEC,MAAM,EAAGC,KAAK,CAACC,EAAE,CAACC,MAAM,CAACC,IAAI;IAE7BC,SAASA,CAAA,EAAG;MACVJ,KAAA,CAAAC,EAAA,CAAAC,MAAA,CAAAC,IAAA,CAAAE,WAAA,CAAAC,IAAA;MAEA,MAAMC,YAAY,GAAG,WAAW;MAChC,MAAMC,OAAO,GAAG,IAAID,YAAY,EAAE;MAClC,MAAME,QAAQ,GAAGhB,EAAE,CAACiB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACL,YAAY,CAAC;;MAErD;MACA,IAAI,CAACM,WAAW,CAAC,QAAQ,EAAE,MAAM;QAACC,QAAQ,CAACC,KAAK,GAAG,GAAGN,QAAQ,YAAY;MAAA,CAAC,CAAC;;MAE5E;MACA,IAAIO,OAAO,GAAGvB,EAAE,CAACwB,IAAI,CAACC,IAAI,CAACC,cAAc,CAAC,CAAC,CAACC,UAAU,CAAC,CAAC;MACxD,IAAI,CAACC,UAAU,CAACb,OAAO,CAAC;IAE1B,CAAC;IAEDc,UAAU,EAAG;MAEX;MACAC,OAAO,EAAE;QACPC,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACR,CAAC;MAEDC,aAAa,EAAE;QACXF,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACV;IAEF;EACF,CAAC,CAAC;EAtCFE,KAAK,CAACC,KAAK,CAACC,SAAS,CAACjC,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

@@ -1,0 +1,64 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336183,
+  "lastModifiedIso": "2026-01-03T20:15:36.183Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/testclasses/DerivedClassPatched.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 3,
+      "index": 272
+    }
+  },
+  "className": "qx.test.testclasses.DerivedClassPatched",
+  "jsdoc": null,
+  "superClass": "qx.test.testclasses.BaseClassPatched",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 112
+      },
+      "end": {
+        "line": 7,
+        "column": 3,
+        "index": 174
+      }
+    }
+  },
+  "members": {
+    "getSomething": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 10,
+          "column": 4,
+          "index": 194
+        },
+        "end": {
+          "line": 12,
+          "column": 5,
+          "index": 264
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.testclasses.RootClass",
+      "appearsIn": [
+        "qx.test.testclasses.RootClass"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

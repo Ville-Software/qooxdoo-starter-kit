@@ -1,0 +1,556 @@
+{
+  "version": 0.3,
+  "lastModified": 1769008508350,
+  "lastModifiedIso": "2026-01-21T15:15:08.350Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/TextFieldWrapper.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 9,
+      "column": 0,
+      "index": 307
+    },
+    "end": {
+      "line": 256,
+      "column": 5,
+      "index": 8039
+    }
+  },
+  "className": "ville.ui.form.TextFieldWrapper",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * TextFieldWrapper",
+      " * @childControl innerwrapper {ville.ui.core.InnerWrapper}",
+      " * @childControl inputwrapper {ville.ui.core.InnerWrapper}",
+      " * @childControl sectionleft {ville.ui.form.InputSection}",
+      " * @childControl sectionright {ville.ui.form.InputSection}",
+      " * @external(mantine/core/styles/Input.css)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>TextFieldWrapper</p>"
+      }
+    ],
+    "@childControl": [
+      {
+        "name": "@childControl",
+        "body": "innerwrapper {ville.ui.core.InnerWrapper}"
+      },
+      {
+        "name": "@childControl",
+        "body": "inputwrapper {ville.ui.core.InnerWrapper}"
+      },
+      {
+        "name": "@childControl",
+        "body": "sectionleft {ville.ui.form.InputSection}"
+      },
+      {
+        "name": "@childControl",
+        "body": "sectionright {ville.ui.form.InputSection}"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/Input.css"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "textfield"
+      },
+      {
+        "name": "variant"
+      },
+      {
+        "name": "sectionleft"
+      },
+      {
+        "name": "sectionright"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 12,
+        "column": 4,
+        "index": 398
+      },
+      "end": {
+        "line": 38,
+        "column": 5,
+        "index": 1000
+      }
+    }
+  },
+  "properties": {
+    "textField": {
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 8,
+          "index": 1030
+        },
+        "end": {
+          "line": 47,
+          "column": 9,
+          "index": 1203
+        }
+      },
+      "json": {
+        "check": "qx.ui.form.AbstractField",
+        "apply": "_applyTextField",
+        "nullable": false,
+        "event": "changeTextField"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "variant": {
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 8,
+          "index": 1214
+        },
+        "end": {
+          "line": 55,
+          "column": 9,
+          "index": 1459
+        }
+      },
+      "json": {
+        "init": "default",
+        "check": [
+          "default",
+          "filled",
+          "light",
+          "outline",
+          "subtle",
+          "transparent",
+          "white"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "size": {
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 8,
+          "index": 1470
+        },
+        "end": {
+          "line": 64,
+          "column": 9,
+          "index": 1684
+        }
+      },
+      "json": {
+        "init": "sm",
+        "check": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "apply": "_applySize",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeSize"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "radius": {
+      "location": {
+        "start": {
+          "line": 66,
+          "column": 8,
+          "index": 1695
+        },
+        "end": {
+          "line": 73,
+          "column": 9,
+          "index": 1915
+        }
+      },
+      "json": {
+        "init": "sm",
+        "check": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "apply": "_applyRadius",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeRadius"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionLeft": {
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 8,
+          "index": 1926
+        },
+        "end": {
+          "line": 80,
+          "column": 9,
+          "index": 2097
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionLeft",
+        "nullable": true,
+        "event": "changeSectionLeft"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "sectionRight": {
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 8,
+          "index": 2108
+        },
+        "end": {
+          "line": 87,
+          "column": 9,
+          "index": 2282
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applySectionRight",
+        "nullable": true,
+        "event": "changeSectionRight"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "nestLabel": {
+      "location": {
+        "start": {
+          "line": 89,
+          "column": 8,
+          "index": 2293
+        },
+        "end": {
+          "line": 94,
+          "column": 9,
+          "index": 2427
+        }
+      },
+      "json": {
+        "check": "Boolean",
+        "init": false,
+        "nullable": false,
+        "themeable": true
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "label": {
+      "location": {
+        "start": {
+          "line": 96,
+          "column": 8,
+          "index": 2438
+        },
+        "end": {
+          "line": 101,
+          "column": 9,
+          "index": 2591
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applyLabel",
+        "nullable": true,
+        "event": "changeLabel"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 8,
+          "index": 2647
+        },
+        "end": {
+          "line": 110,
+          "column": 9,
+          "index": 2729
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 8,
+          "index": 2762
+        },
+        "end": {
+          "line": 151,
+          "column": 9,
+          "index": 4536
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyTextField": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 8,
+          "index": 4573
+        },
+        "end": {
+          "line": 161,
+          "column": 9,
+          "index": 4823
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 8,
+          "index": 4860
+        },
+        "end": {
+          "line": 177,
+          "column": 9,
+          "index": 5354
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 180,
+          "column": 8,
+          "index": 5391
+        },
+        "end": {
+          "line": 187,
+          "column": 9,
+          "index": 5664
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySize": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 189,
+          "column": 8,
+          "index": 5675
+        },
+        "end": {
+          "line": 205,
+          "column": 9,
+          "index": 6370
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyRadius": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 207,
+          "column": 8,
+          "index": 6381
+        },
+        "end": {
+          "line": 214,
+          "column": 9,
+          "index": 6678
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySectionLeft": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 217,
+          "column": 8,
+          "index": 6715
+        },
+        "end": {
+          "line": 234,
+          "column": 9,
+          "index": 7363
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applySectionRight": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 236,
+          "column": 8,
+          "index": 7374
+        },
+        "end": {
+          "line": 253,
+          "column": 9,
+          "index": 8026
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {}
+}

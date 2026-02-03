@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "properties",
+    "bypassRenderLayout",
+    "check",
+    "init",
+    "themeable",
+    "excludeBoundsFromDom",
+    "excludeBoundsFromDomMods",
+    "nullable",
+    "ville",
+    "cssuc",
+    "MControl"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/cssuc/MControl.js"
+  ],
+  "sourcesContent": [
+    "qx.Mixin.define(\"ville.cssuc.MControl\",\n{      \n  properties :\n  {\n\n    bypassRenderLayout: {\n      check: \"Boolean\",\n      init: false,\n      themeable: true\n    },\n\n    excludeBoundsFromDom: {\n      check: \"Boolean\",\n      init: false,\n      themeable: true\n    },\n\n    excludeBoundsFromDomMods: {\n      check: \"Array\",\n      nullable: true,\n      init: null,\n      themeable: true\n    }\n  }\n});"
+  ],
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,sBAAsB,EACtC;IACEC,UAAU,EACV;MAEEC,kBAAkB,EAAE;QAClBC,KAAK,EAAE,SAAS;QAChBC,IAAI,EAAE,KAAK;QACXC,SAAS,EAAE;MACb,CAAC;MAEDC,oBAAoB,EAAE;QACpBH,KAAK,EAAE,SAAS;QAChBC,IAAI,EAAE,KAAK;QACXC,SAAS,EAAE;MACb,CAAC;MAEDE,wBAAwB,EAAE;QACxBJ,KAAK,EAAE,OAAO;QACdK,QAAQ,EAAE,IAAI;QACdJ,IAAI,EAAE,IAAI;QACVC,SAAS,EAAE;MACb;IACF;EACF,CAAC,CAAC;EAxBFI,KAAK,CAACC,KAAK,CAACC,QAAQ,CAACb,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

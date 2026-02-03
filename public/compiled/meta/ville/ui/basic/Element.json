@@ -1,0 +1,103 @@
+{
+  "version": 0.3,
+  "lastModified": 1767820592088,
+  "lastModifiedIso": "2026-01-07T21:16:32.088Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/basic/Element.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 5,
+      "column": 0,
+      "index": 78
+    },
+    "end": {
+      "line": 25,
+      "column": 5,
+      "index": 480
+    }
+  },
+  "className": "ville.ui.basic.Element",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Used as a base component or as a replacement for HTML elements",
+      " * ",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Used as a base component or as a replacement for HTML elements</p>"
+      }
+    ]
+  },
+  "superClass": "ville.ui.core.Widget",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "component"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 9,
+        "column": 4,
+        "index": 166
+      },
+      "end": {
+        "line": 14,
+        "column": 5,
+        "index": 291
+      }
+    }
+  },
+  "members": {
+    "__componenttag": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 8,
+          "index": 318
+        },
+        "end": {
+          "line": 18,
+          "column": 29,
+          "index": 339
+        }
+      },
+      "appearsIn": []
+    },
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 8,
+          "index": 372
+        },
+        "end": {
+          "line": 23,
+          "column": 9,
+          "index": 468
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.core.Widget",
+      "appearsIn": [
+        "ville.ui.core.Widget",
+        "qx.ui.core.Widget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

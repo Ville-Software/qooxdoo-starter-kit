@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "members",
+    "_createDomElement",
+    "rich",
+    "__rich",
+    "el",
+    "bom",
+    "Label",
+    "create",
+    "_content",
+    "lblclasses",
+    "_qxObject",
+    "getCssUtilityClass",
+    "element",
+    "Attribute",
+    "set",
+    "style",
+    "overflow",
+    "ville",
+    "cssuc",
+    "patch",
+    "MLabel"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/cssuc/patch/MLabel.js"
+  ],
+  "sourcesContent": [
+    "qx.Mixin.define(\"ville.cssuc.patch.MLabel\", {\n\n  members: {\n\n    // overridden\n    _createDomElement() {\n      var rich = this.__rich;\n      var el = qx.bom.Label.create(this._content, rich);\n      if (qx.core.Environment.get(\"ville.cssuc\")) {\n        var lblclasses = this._qxObject.getCssUtilityClass();\n        if (lblclasses)\n          qx.bom.element.Attribute.set(el, \"class\", lblclasses);\n        else\n          el.style.overflow = \"hidden\";\n      } else {\n        el.style.overflow = \"hidden\";\n      }\n      return el;\n    }\n\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,0BAA0B,EAAE;IAE1CC,OAAO,EAAE;MAEP;MACAC,iBAAiBA,CAAA,EAAG;QAClB,IAAIC,IAAI,GAAG,IAAI,CAACC,cAAM;QACtB,IAAIC,EAAE,GAAGV,EAAE,CAACW,GAAG,CAACC,KAAK,CAACC,MAAM,CAAC,IAAI,CAACC,QAAQ,EAAEN,IAAI,CAAC;QACL;UAC1C,IAAIO,UAAU,GAAG,IAAI,CAACC,SAAS,CAACC,kBAAkB,CAAC,CAAC;UACpD,IAAIF,UAAU,EACZf,EAAE,CAACW,GAAG,CAACO,OAAO,CAACC,SAAS,CAACC,GAAG,CAACV,EAAE,EAAE,OAAO,EAAEK,UAAU,CAAC,CAAC,KAEtDL,EAAE,CAACW,KAAK,CAACC,QAAQ,GAAG,QAAQ;QAChC;QAGA,OAAOZ,EAAE;MACX;IAEF;EACF,CAAC,CAAC;EArBFa,KAAK,CAACC,KAAK,CAACC,KAAK,CAACC,MAAM,CAACvB,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

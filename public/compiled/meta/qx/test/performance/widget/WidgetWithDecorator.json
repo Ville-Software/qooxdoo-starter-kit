@@ -1,0 +1,64 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338351,
+  "lastModifiedIso": "2026-01-03T20:15:38.351Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/performance/widget/WidgetWithDecorator.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 18,
+      "column": 3,
+      "index": 407
+    }
+  },
+  "className": "qx.test.performance.widget.WidgetWithDecorator",
+  "jsdoc": null,
+  "superClass": "qx.test.performance.widget.AbstractWidget",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 4,
+        "column": 2,
+        "index": 124
+      },
+      "end": {
+        "line": 11,
+        "column": 3,
+        "index": 281
+      }
+    }
+  },
+  "members": {
+    "_createWidget": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 301
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 399
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.performance.widget.AbstractWidget",
+      "appearsIn": [
+        "qx.test.performance.widget.AbstractWidget"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

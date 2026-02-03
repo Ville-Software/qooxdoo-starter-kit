@@ -1,0 +1,107 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336785,
+  "lastModifiedIso": "2026-01-03T20:15:36.785Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/layer/GridLinesHorizontal.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 510
+    },
+    "end": {
+      "line": 34,
+      "column": 3,
+      "index": 951
+    }
+  },
+  "className": "qx.test.ui.virtual.layer.GridLinesHorizontal",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Jonathan Weiß (jonathan_rass)",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.virtual.layer.LayerTestCase",
+  "members": {
+    "_createLayer": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 644
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 728
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase"
+      ]
+    },
+    "_assertCells": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 735
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 943
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowCount"
+        },
+        {
+          "name": "columnCount"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

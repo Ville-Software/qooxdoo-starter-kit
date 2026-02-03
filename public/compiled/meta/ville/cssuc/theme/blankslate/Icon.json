@@ -1,0 +1,24 @@
+{
+  "version": 0.3,
+  "lastModified": 1767551776582,
+  "lastModifiedIso": "2026-01-04T18:36:16.582Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/theme/blankslate/Icon.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 6,
+      "column": 3,
+      "index": 111
+    }
+  },
+  "className": "ville.cssuc.theme.blankslate.Icon",
+  "jsdoc": null,
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

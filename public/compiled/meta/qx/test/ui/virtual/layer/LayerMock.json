@@ -1,0 +1,249 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337186,
+  "lastModifiedIso": "2026-01-03T20:15:37.186Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/layer/LayerMock.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 475
+    },
+    "end": {
+      "line": 76,
+      "column": 3,
+      "index": 1973
+    }
+  },
+  "className": "qx.test.ui.virtual.layer.LayerMock",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.ui.virtual.layer.Abstract",
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2,
+        "index": 574
+      },
+      "end": {
+        "line": 26,
+        "column": 3,
+        "index": 626
+      }
+    }
+  },
+  "members": {
+    "updateLayerData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 830
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 995
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract",
+        "qx.ui.virtual.core.ILayer"
+      ]
+    },
+    "_updateLayerData": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1002
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1137
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract"
+      ]
+    },
+    "fullUpdate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1144
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1357
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "columnSizes"
+        }
+      ],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract",
+        "qx.ui.virtual.core.ILayer"
+      ]
+    },
+    "_fullUpdate": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1364
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1509
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "columnSizes"
+        }
+      ],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract"
+      ]
+    },
+    "updateLayerWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1516
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1775
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "columnSizes"
+        }
+      ],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract",
+        "qx.ui.virtual.core.ILayer"
+      ]
+    },
+    "_updateLayerWindow": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1782
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 1965
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "columnSizes"
+        }
+      ],
+      "overriddenFrom": "qx.ui.virtual.layer.Abstract",
+      "appearsIn": [
+        "qx.ui.virtual.layer.Abstract"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

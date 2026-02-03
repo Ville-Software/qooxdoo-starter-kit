@@ -1,0 +1,104 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336206,
+  "lastModifiedIso": "2026-01-03T20:15:36.206Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/placement/DirectAxis.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 515
+    },
+    "end": {
+      "line": 64,
+      "column": 3,
+      "index": 1539
+    }
+  },
+  "className": "qx.test.util.placement.DirectAxis",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 620
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 683
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 690
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 732
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEnoughSpace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 739
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1531
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

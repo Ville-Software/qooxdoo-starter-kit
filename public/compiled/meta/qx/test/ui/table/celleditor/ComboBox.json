@@ -1,0 +1,137 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335847,
+  "lastModifiedIso": "2026-01-03T20:15:35.847Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/celleditor/ComboBox.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 65,
+      "column": 3,
+      "index": 1635
+    }
+  },
+  "className": "qx.test.ui.table.celleditor.ComboBox",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.table.celleditor.AbstractField",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 606
+        },
+        "end": {
+          "line": 25,
+          "column": 5,
+          "index": 681
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.table.celleditor.AbstractField",
+      "appearsIn": [
+        "qx.test.ui.table.celleditor.AbstractField",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 688
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 760
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.table.celleditor.AbstractField",
+      "appearsIn": [
+        "qx.test.ui.table.celleditor.AbstractField",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getCellInfo": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 767
+        },
+        "end": {
+          "line": 50,
+          "column": 5,
+          "index": 1175
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.table.celleditor.AbstractField",
+      "appearsIn": [
+        "qx.test.ui.table.celleditor.AbstractField"
+      ]
+    },
+    "testChangeEditorSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 4,
+          "index": 1182
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1627
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

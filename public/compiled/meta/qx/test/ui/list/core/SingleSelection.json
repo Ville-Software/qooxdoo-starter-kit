@@ -1,0 +1,277 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337970,
+  "lastModifiedIso": "2026-01-03T20:15:37.970Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/list/core/SingleSelection.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 258,
+      "column": 3,
+      "index": 7529
+    }
+  },
+  "className": "qx.test.ui.list.core.SingleSelection",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.list.AbstractListTest",
+  "members": {
+    "createModelData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 609
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 774
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.list.AbstractListTest",
+      "appearsIn": [
+        "qx.test.ui.list.AbstractListTest"
+      ]
+    },
+    "testSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 781
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1416
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInvalidSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1423
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 2099
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionByUserInteraction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 2106
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2447
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionEventByUserInteraction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2454
+        },
+        "end": {
+          "line": 98,
+          "column": 5,
+          "index": 2983
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithSorter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 100,
+          "column": 4,
+          "index": 2990
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 3171
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectionWithFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 3178
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 3989
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInvalidSelectionWithFilter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 4,
+          "index": 3996
+        },
+        "end": {
+          "line": 152,
+          "column": 5,
+          "index": 4587
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testApplyFilterAfterSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 4594
+        },
+        "end": {
+          "line": 174,
+          "column": 5,
+          "index": 5219
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testApplySortingAfterSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 176,
+          "column": 4,
+          "index": 5226
+        },
+        "end": {
+          "line": 216,
+          "column": 5,
+          "index": 6406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 218,
+          "column": 4,
+          "index": 6413
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6875
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveItemWithGrouping": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 234,
+          "column": 4,
+          "index": 6882
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 7521
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

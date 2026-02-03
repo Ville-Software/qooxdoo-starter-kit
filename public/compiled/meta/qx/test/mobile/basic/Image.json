@@ -1,0 +1,82 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336938,
+  "lastModifiedIso": "2026-01-03T20:15:36.938Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/mobile/basic/Image.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 23,
+      "column": 0,
+      "index": 520
+    },
+    "end": {
+      "line": 74,
+      "column": 3,
+      "index": 1897
+    }
+  },
+  "className": "qx.test.mobile.basic.Image",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @asset(qx/icon/Tango/48/places/folder.png)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/icon/Tango/48/places/folder.png"
+      }
+    ]
+  },
+  "superClass": "qx.test.mobile.MobileTestCase",
+  "members": {
+    "testSrc": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4,
+          "index": 627
+        },
+        "end": {
+          "line": 52,
+          "column": 5,
+          "index": 1376
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoadingFailed": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4,
+          "index": 1383
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 1889
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

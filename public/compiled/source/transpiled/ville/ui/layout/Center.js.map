@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "core",
+    "Box",
+    "construct",
+    "component",
+    "constructor",
+    "call",
+    "setCssUtilityClass",
+    "layout",
+    "Center"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/layout/Center.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Center\n * @external(mantine/core/styles/Center.css)\n */\nqx.Class.define(\"ville.ui.layout.Center\", {\n    \n    extend: ville.ui.core.Box,\n\n    construct(component) {\n        \n        super(component);\n\n        this.setCssUtilityClass(\"m_4451eb3a mantine-Center-root\");\n\n    }\n\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,wBAAwB,EAAE;IAEtCC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,IAAI,CAACC,GAAG;IAEzBC,SAASA,CAACC,SAAS,EAAE;MAEjBL,KAAA,CAAAC,EAAA,CAAAC,IAAA,CAAAC,GAAA,CAAAG,WAAA,CAAAC,IAAA,OAAMF,SAAS;MAEf,IAAI,CAACG,kBAAkB,CAAC,gCAAgC,CAAC;IAE7D;EAEF,CAAC,CAAC;EAhBJR,KAAK,CAACC,EAAE,CAACQ,MAAM,CAACC,MAAM,CAACd,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

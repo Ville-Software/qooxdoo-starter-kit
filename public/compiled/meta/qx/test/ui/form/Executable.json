@@ -1,0 +1,335 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336386,
+  "lastModifiedIso": "2026-01-03T20:15:36.386Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/Executable.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 164,
+      "column": 3,
+      "index": 3640
+    }
+  },
+  "className": "qx.test.ui.form.Executable",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__test": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 590
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2492
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testToggleButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 2499
+        },
+        "end": {
+          "line": 110,
+          "column": 5,
+          "index": 2575
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 112,
+          "column": 4,
+          "index": 2582
+        },
+        "end": {
+          "line": 114,
+          "column": 5,
+          "index": 2650
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 116,
+          "column": 4,
+          "index": 2657
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 2721
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRepeatButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 2728
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 2804
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 4,
+          "index": 2811
+        },
+        "end": {
+          "line": 126,
+          "column": 5,
+          "index": 2883
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 128,
+          "column": 4,
+          "index": 2890
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 2964
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testToolbarButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 2971
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3045
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplitButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 136,
+          "column": 4,
+          "index": 3052
+        },
+        "end": {
+          "line": 138,
+          "column": 5,
+          "index": 3129
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuCheckBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 140,
+          "column": 4,
+          "index": 3136
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 3208
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuRadioButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 3215
+        },
+        "end": {
+          "line": 146,
+          "column": 5,
+          "index": 3293
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testButtonInMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 148,
+          "column": 4,
+          "index": 3300
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 3370
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCheckGroupBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 152,
+          "column": 4,
+          "index": 3377
+        },
+        "end": {
+          "line": 154,
+          "column": 5,
+          "index": 3459
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRadioGroupBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 4,
+          "index": 3466
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 3548
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDateChooser": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 160,
+          "column": 4,
+          "index": 3555
+        },
+        "end": {
+          "line": 162,
+          "column": 5,
+          "index": 3632
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

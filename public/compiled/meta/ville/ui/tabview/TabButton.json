@@ -1,0 +1,536 @@
+{
+  "version": 0.3,
+  "lastModified": 1767823215883,
+  "lastModifiedIso": "2026-01-07T22:00:15.883Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/tabview/TabButton.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 14,
+      "column": 0,
+      "index": 460
+    },
+    "end": {
+      "line": 256,
+      "column": 3,
+      "index": 6602
+    }
+  },
+  "className": "ville.ui.tabview.TabButton",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * A TabButton is the tapable part sitting on the {@link qx.ui.tabview.Page}.",
+      " * By tapping on the TabButton the user can set a Page active.",
+      " *",
+      " * @childControl label {ville.ui.basic.Label} label of the tab button",
+      " * @childControl tabsection {qx.ui.core.Widget} icon of the tab button",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>A TabButton is the tapable part sitting on the {@link qx.ui.tabview.Page}.\n By tapping on the TabButton the user can set a Page active.</p>"
+      }
+    ],
+    "@childControl": [
+      {
+        "name": "@childControl",
+        "body": "label {ville.ui.basic.Label} label of the tab button"
+      },
+      {
+        "name": "@childControl",
+        "body": "tabsection {qx.ui.core.Widget} icon of the tab button"
+      }
+    ]
+  },
+  "superClass": "qx.ui.tabview.TabButton",
+  "construct": {
+    "type": "function",
+    "params": [
+      {
+        "name": "label"
+      },
+      {
+        "name": "variant"
+      },
+      {
+        "name": "tabsection"
+      }
+    ],
+    "location": {
+      "start": {
+        "line": 24,
+        "column": 2,
+        "index": 737
+      },
+      "end": {
+        "line": 52,
+        "column": 3,
+        "index": 1402
+      }
+    }
+  },
+  "statics": {
+    "btnVariantClasses": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1423
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1533
+        }
+      },
+      "appearsIn": []
+    }
+  },
+  "properties": {
+    "iconPosition": {
+      "location": {
+        "start": {
+          "line": 71,
+          "column": 4,
+          "index": 1752
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 1812
+        }
+      },
+      "json": {
+        "refine": true,
+        "init": "left"
+      },
+      "jsdoc": null,
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "variant": {
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 4,
+          "index": 1819
+        },
+        "end": {
+          "line": 82,
+          "column": 5,
+          "index": 1986
+        }
+      },
+      "json": {
+        "init": "default",
+        "check": [
+          "default",
+          "outline",
+          "pills"
+        ],
+        "apply": "_applyVariant",
+        "themeable": true,
+        "event": "changeVariant"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "tabSection": {
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 4,
+          "index": 1993
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2156
+        }
+      },
+      "json": {
+        "check": "qx.ui.core.Widget",
+        "apply": "_applyTabSection",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeTabSection"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "barPosition": {
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 2163
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2318
+        }
+      },
+      "json": {
+        "check": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ],
+        "init": "top",
+        "apply": "_applyBarPosition",
+        "event": "changeBarPosition"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "_createContentElement": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 2737
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 2814
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.ui.core.Widget",
+      "appearsIn": [
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_createChildControlImpl": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 120,
+          "column": 4,
+          "index": 2839
+        },
+        "end": {
+          "line": 142,
+          "column": 5,
+          "index": 3586
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "hash"
+        }
+      ],
+      "overriddenFrom": "qx.ui.tabview.TabButton",
+      "appearsIn": [
+        "qx.ui.tabview.TabButton",
+        "qx.ui.basic.Atom",
+        "qx.ui.core.Widget"
+      ]
+    },
+    "_applyValue": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 151,
+          "column": 4,
+          "index": 3807
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 4152
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.form.RadioButton",
+      "appearsIn": [
+        "qx.ui.form.RadioButton"
+      ]
+    },
+    "_applyIconPosition": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 161,
+          "column": 4,
+          "index": 4177
+        },
+        "end": {
+          "line": 172,
+          "column": 5,
+          "index": 4577
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.tabview.TabButton",
+      "appearsIn": [
+        "qx.ui.tabview.TabButton",
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyIcon": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 175,
+          "column": 4,
+          "index": 4602
+        },
+        "end": {
+          "line": 175,
+          "column": 29,
+          "index": 4627
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyLabel": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 178,
+          "column": 4,
+          "index": 4652
+        },
+        "end": {
+          "line": 185,
+          "column": 5,
+          "index": 4825
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.basic.Atom",
+      "appearsIn": [
+        "qx.ui.basic.Atom"
+      ]
+    },
+    "_applyVariant": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 188,
+          "column": 4,
+          "index": 4854
+        },
+        "end": {
+          "line": 197,
+          "column": 5,
+          "index": 5168
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyTabSection": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 4,
+          "index": 5175
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 5510
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyBarPosition": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 212,
+          "column": 4,
+          "index": 5517
+        },
+        "end": {
+          "line": 247,
+          "column": 5,
+          "index": 6477
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyShowCloseButton": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 250,
+          "column": 4,
+          "index": 6506
+        },
+        "end": {
+          "line": 250,
+          "column": 40,
+          "index": 6542
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "overriddenFrom": "qx.ui.tabview.TabButton",
+      "appearsIn": [
+        "qx.ui.tabview.TabButton"
+      ]
+    },
+    "_applyCenter": {
+      "jsdoc": {
+        "raw": [
+          " property apply"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 253,
+          "column": 4,
+          "index": 6571
+        },
+        "end": {
+          "line": 253,
+          "column": 26,
+          "index": 6593
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        }
+      ],
+      "overriddenFrom": "qx.ui.tabview.TabButton",
+      "appearsIn": [
+        "qx.ui.tabview.TabButton",
+        "qx.ui.basic.Atom"
+      ]
+    }
+  }
+}

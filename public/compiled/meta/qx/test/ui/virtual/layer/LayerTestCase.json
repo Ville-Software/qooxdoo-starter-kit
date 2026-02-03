@@ -1,0 +1,521 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337189,
+  "lastModifiedIso": "2026-01-03T20:15:37.189Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/layer/LayerTestCase.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 510
+    },
+    "end": {
+      "line": 170,
+      "column": 3,
+      "index": 3562
+    }
+  },
+  "className": "qx.test.ui.virtual.layer.LayerTestCase",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Jonathan Weiß (jonathan_rass)",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 645
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1130
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1137
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1207
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_createLayer": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1214
+        },
+        "end": {
+          "line": 55,
+          "column": 5,
+          "index": 1291
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_assertCells": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4,
+          "index": 1298
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1381
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "lastRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "lastColumn"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_updateLayerWindow": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1388
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 2171
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "lastRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "lastColumn"
+        },
+        {
+          "name": "doFullUpdate"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testInit": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2178
+        },
+        "end": {
+          "line": 100,
+          "column": 5,
+          "index": 2236
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFullUpdate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 102,
+          "column": 4,
+          "index": 2243
+        },
+        "end": {
+          "line": 104,
+          "column": 5,
+          "index": 2313
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoOverlap": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 106,
+          "column": 4,
+          "index": 2320
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2390
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2397
+        },
+        "end": {
+          "line": 112,
+          "column": 5,
+          "index": 2468
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 2475
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 2543
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 2550
+        },
+        "end": {
+          "line": 120,
+          "column": 5,
+          "index": 2621
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 122,
+          "column": 4,
+          "index": 2628
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 2700
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapLeftTop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 2707
+        },
+        "end": {
+          "line": 128,
+          "column": 5,
+          "index": 2781
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapTop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 2788
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 2858
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapTopRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 4,
+          "index": 2865
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 2940
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 138,
+          "column": 4,
+          "index": 2947
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3019
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapInner": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3026
+        },
+        "end": {
+          "line": 144,
+          "column": 5,
+          "index": 3099
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapOuter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 146,
+          "column": 4,
+          "index": 3106
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 3178
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 150,
+          "column": 4,
+          "index": 3185
+        },
+        "end": {
+          "line": 152,
+          "column": 5,
+          "index": 3258
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapBottomLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 154,
+          "column": 4,
+          "index": 3265
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 3343
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapBottom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4,
+          "index": 3350
+        },
+        "end": {
+          "line": 160,
+          "column": 5,
+          "index": 3424
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testOverlapBottomRight": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 162,
+          "column": 4,
+          "index": 3431
+        },
+        "end": {
+          "line": 164,
+          "column": 5,
+          "index": 3510
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 167,
+        "column": 2,
+        "index": 3519
+      },
+      "end": {
+        "line": 169,
+        "column": 3,
+        "index": 3558
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

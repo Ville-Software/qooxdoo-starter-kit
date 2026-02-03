@@ -1,0 +1,159 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335356,
+  "lastModifiedIso": "2026-01-03T20:15:35.356Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/element/Background.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 26,
+      "column": 0,
+      "index": 674
+    },
+    "end": {
+      "line": 138,
+      "column": 3,
+      "index": 16221
+    }
+  },
+  "className": "qx.test.bom.element.Background",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/static/blank.gif)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/static/blank.gif"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 776
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 13836
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 13843
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 13945
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetStyles": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 13952
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 14666
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetStylesBase64": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 14673
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 15295
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCompile": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 15302
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 15710
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCompileBase64": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 15717
+        },
+        "end": {
+          "line": 136,
+          "column": 5,
+          "index": 16213
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

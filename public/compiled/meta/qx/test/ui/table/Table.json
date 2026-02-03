@@ -1,0 +1,259 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338072,
+  "lastModifiedIso": "2026-01-03T20:15:38.072Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/table/Table.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 297,
+      "column": 3,
+      "index": 8238
+    }
+  },
+  "className": "qx.test.ui.table.Table",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "createModel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 586
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "createRandomRows": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 827
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 1205
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "rowCount"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testSortInteger": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 1212
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1760
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSortIntegerNaN": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1767
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2886
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSortIntegerNaNInsensitive": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 2893
+        },
+        "end": {
+          "line": 141,
+          "column": 5,
+          "index": 4067
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSortStringInsensitive": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 143,
+          "column": 4,
+          "index": 4074
+        },
+        "end": {
+          "line": 164,
+          "column": 5,
+          "index": 4676
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSortString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 166,
+          "column": 4,
+          "index": 4683
+        },
+        "end": {
+          "line": 186,
+          "column": 5,
+          "index": 5230
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRegularListener": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 188,
+          "column": 4,
+          "index": 5237
+        },
+        "end": {
+          "line": 205,
+          "column": 5,
+          "index": 5613
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSpecialListener": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 207,
+          "column": 4,
+          "index": 5620
+        },
+        "end": {
+          "line": 236,
+          "column": 5,
+          "index": 6430
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollAfterScrollbarVisibilityChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 238,
+          "column": 4,
+          "index": 6437
+        },
+        "end": {
+          "line": 267,
+          "column": 5,
+          "index": 7360
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusAfterRemove": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 269,
+          "column": 4,
+          "index": 7367
+        },
+        "end": {
+          "line": 295,
+          "column": 5,
+          "index": 8230
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

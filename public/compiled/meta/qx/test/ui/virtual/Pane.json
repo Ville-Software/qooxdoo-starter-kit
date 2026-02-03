@@ -1,0 +1,746 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337605,
+  "lastModifiedIso": "2026-01-03T20:15:37.605Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/Pane.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 475
+    },
+    "end": {
+      "line": 953,
+      "column": 3,
+      "index": 27346
+    }
+  },
+  "className": "qx.test.ui.virtual.Pane",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 575
+        },
+        "end": {
+          "line": 40,
+          "column": 5,
+          "index": 941
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 42,
+          "column": 4,
+          "index": 948
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1037
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "assertUpdateArgs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1044
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1325
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "rowIndex"
+        },
+        {
+          "name": "colIndex"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "colSizes"
+        },
+        {
+          "name": "args"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "assertScrollArgs": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1332
+        },
+        "end": {
+          "line": 60,
+          "column": 5,
+          "index": 1613
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "rowIndex"
+        },
+        {
+          "name": "colIndex"
+        },
+        {
+          "name": "rowSizes"
+        },
+        {
+          "name": "colSizes"
+        },
+        {
+          "name": "args"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "assertScroll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 62,
+          "column": 4,
+          "index": 1620
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1880
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "scrollTop"
+        },
+        {
+          "name": "scrollLeft"
+        },
+        {
+          "name": "pane"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testConstructor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1887
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1954
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScrollProperties": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1961
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2182
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetScrollSize": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2189
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2641
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLayerAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2648
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2821
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2828
+        },
+        "end": {
+          "line": 144,
+          "column": 5,
+          "index": 4010
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFullUpdate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 146,
+          "column": 4,
+          "index": 4017
+        },
+        "end": {
+          "line": 230,
+          "column": 5,
+          "index": 6319
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoRows": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 232,
+          "column": 4,
+          "index": 6326
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 7083
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoColumns": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 258,
+          "column": 4,
+          "index": 7090
+        },
+        "end": {
+          "line": 282,
+          "column": 5,
+          "index": 7846
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchYAtTop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 284,
+          "column": 4,
+          "index": 7853
+        },
+        "end": {
+          "line": 296,
+          "column": 5,
+          "index": 8295
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchYLimitedAtTop": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 298,
+          "column": 4,
+          "index": 8302
+        },
+        "end": {
+          "line": 311,
+          "column": 5,
+          "index": 8798
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchYAtBottom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 313,
+          "column": 4,
+          "index": 8805
+        },
+        "end": {
+          "line": 326,
+          "column": 5,
+          "index": 9314
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchYLimitedAtBottom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 9321
+        },
+        "end": {
+          "line": 341,
+          "column": 5,
+          "index": 9849
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchYInMiddle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 343,
+          "column": 4,
+          "index": 9856
+        },
+        "end": {
+          "line": 386,
+          "column": 5,
+          "index": 11614
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchXAtLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 388,
+          "column": 4,
+          "index": 11621
+        },
+        "end": {
+          "line": 400,
+          "column": 5,
+          "index": 12060
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchXLimitedAtLeft": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 402,
+          "column": 4,
+          "index": 12067
+        },
+        "end": {
+          "line": 416,
+          "column": 5,
+          "index": 12618
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchXAtBottom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 418,
+          "column": 4,
+          "index": 12625
+        },
+        "end": {
+          "line": 432,
+          "column": 5,
+          "index": 13188
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchXLimitedAtBottom": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 434,
+          "column": 4,
+          "index": 13195
+        },
+        "end": {
+          "line": 448,
+          "column": 5,
+          "index": 13781
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPrefetchXInMiddle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 450,
+          "column": 4,
+          "index": 13788
+        },
+        "end": {
+          "line": 494,
+          "column": 5,
+          "index": 15603
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateLayerWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 496,
+          "column": 4,
+          "index": 15610
+        },
+        "end": {
+          "line": 570,
+          "column": 5,
+          "index": 17553
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSrollRowIntoView": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 572,
+          "column": 4,
+          "index": 17560
+        },
+        "end": {
+          "line": 592,
+          "column": 5,
+          "index": 18145
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSrollColumnIntoView": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 594,
+          "column": 4,
+          "index": 18152
+        },
+        "end": {
+          "line": 614,
+          "column": 5,
+          "index": 18741
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_testSrollRowIntoViewEdgeCase": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 616,
+          "column": 4,
+          "index": 18748
+        },
+        "end": {
+          "line": 636,
+          "column": 5,
+          "index": 19344
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "_testSrollColumnIntoViewEdgeCase": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 638,
+          "column": 4,
+          "index": 19351
+        },
+        "end": {
+          "line": 658,
+          "column": 5,
+          "index": 19950
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetCellAtPosition": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 660,
+          "column": 4,
+          "index": 19957
+        },
+        "end": {
+          "line": 680,
+          "column": 5,
+          "index": 20635
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGetItemAtPositionEmptySpace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 682,
+          "column": 4,
+          "index": 20642
+        },
+        "end": {
+          "line": 698,
+          "column": 5,
+          "index": 21135
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMouseCellEvents": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 700,
+          "column": 4,
+          "index": 21142
+        },
+        "end": {
+          "line": 868,
+          "column": 5,
+          "index": 25473
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test mouse click bug #6695": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 870,
+          "column": 4,
+          "index": 25480
+        },
+        "end": {
+          "line": 930,
+          "column": 5,
+          "index": 26938
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDestroy": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 932,
+          "column": 4,
+          "index": 26945
+        },
+        "end": {
+          "line": 947,
+          "column": 5,
+          "index": 27295
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 950,
+        "column": 2,
+        "index": 27304
+      },
+      "end": {
+        "line": 952,
+        "column": 3,
+        "index": 27342
+      }
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

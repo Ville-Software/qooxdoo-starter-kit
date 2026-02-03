@@ -1,0 +1,454 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337617,
+  "lastModifiedIso": "2026-01-03T20:15:37.617Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/PaneUpdate.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 42,
+      "column": 0,
+      "index": 1423
+    },
+    "end": {
+      "line": 340,
+      "column": 3,
+      "index": 10392
+    }
+  },
+  "className": "qx.test.ui.virtual.PaneUpdate",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This class tests all combinations of events, which could trigger pane and",
+      " * layer updates",
+      " *",
+      " * <pre>",
+      " *   Initial   Axis    Window   Data",
+      " * |X        |       |        |        |fullUpdate|",
+      " * |X        |       |        |X       |fullUpdate|",
+      " * |X        |       |X       |        |fullUpdate|",
+      " * |X        |       |X       |X       |fullUpdate|",
+      " * |X        |X      |        |        |fullUpdate|",
+      " * |X        |X      |        |X       |fullUpdate|",
+      " * |X        |X      |X       |        |fullUpdate|",
+      " * |X        |X      |X       |X       |fullUpdate|",
+      " * |         |X      |        |        |fullUpdate|",
+      " * |         |X      |        |X       |fullUpdate|",
+      " * |         |X      |X       |        |fullUpdate|",
+      " * |         |X      |X       |X       |fullUpdate|",
+      " * |         |       |X       |        |updateLayerWindow|",
+      " * |         |       |X       |X       |fullUpdate|",
+      " * |         |       |        |X       |updateData|",
+      " * </pre>",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This class tests all combinations of events, which could trigger pane and\n layer updates\n </p>\n<pre>\n   Initial   Axis    Window   Data\n |X        |       |        |        |fullUpdate|\n |X        |       |        |X       |fullUpdate|\n |X        |       |X       |        |fullUpdate|\n |X        |       |X       |X       |fullUpdate|\n |X        |X      |        |        |fullUpdate|\n |X        |X      |        |X       |fullUpdate|\n |X        |X      |X       |        |fullUpdate|\n |X        |X      |X       |X       |fullUpdate|\n |         |X      |        |        |fullUpdate|\n |         |X      |        |X       |fullUpdate|\n |         |X      |X       |        |fullUpdate|\n |         |X      |X       |X       |fullUpdate|\n |         |       |X       |        |updateLayerWindow|\n |         |       |X       |X       |fullUpdate|\n |         |       |        |X       |updateData|\n </pre>"
+      }
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1529
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1850
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1857
+        },
+        "end": {
+          "line": 61,
+          "column": 5,
+          "index": 1926
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "assertCalls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 63,
+          "column": 4,
+          "index": 1933
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 2153
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "methodNames"
+        },
+        {
+          "name": "calls"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "appearsIn": []
+    },
+    "resetCalls": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 70,
+          "column": 4,
+          "index": 2160
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 2240
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoUpdateBeforeAppear": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 2247
+        },
+        "end": {
+          "line": 107,
+          "column": 5,
+          "index": 3329
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitial": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 109,
+          "column": 4,
+          "index": 3336
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 3619
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 3626
+        },
+        "end": {
+          "line": 133,
+          "column": 5,
+          "index": 4124
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 4131
+        },
+        "end": {
+          "line": 144,
+          "column": 5,
+          "index": 4534
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialWindowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 146,
+          "column": 4,
+          "index": 4541
+        },
+        "end": {
+          "line": 164,
+          "column": 5,
+          "index": 5109
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialAxis": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 166,
+          "column": 4,
+          "index": 5116
+        },
+        "end": {
+          "line": 173,
+          "column": 5,
+          "index": 5453
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialAxisData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 175,
+          "column": 4,
+          "index": 5460
+        },
+        "end": {
+          "line": 191,
+          "column": 5,
+          "index": 5962
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialAxisWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 193,
+          "column": 4,
+          "index": 5969
+        },
+        "end": {
+          "line": 202,
+          "column": 5,
+          "index": 6376
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitialAxisWindowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 204,
+          "column": 4,
+          "index": 6383
+        },
+        "end": {
+          "line": 222,
+          "column": 5,
+          "index": 6955
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAxis": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 224,
+          "column": 4,
+          "index": 6962
+        },
+        "end": {
+          "line": 235,
+          "column": 5,
+          "index": 7363
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAxisData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 237,
+          "column": 4,
+          "index": 7370
+        },
+        "end": {
+          "line": 251,
+          "column": 5,
+          "index": 7884
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAxisWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 253,
+          "column": 4,
+          "index": 7891
+        },
+        "end": {
+          "line": 267,
+          "column": 5,
+          "index": 8363
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAxisWindowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 269,
+          "column": 4,
+          "index": 8370
+        },
+        "end": {
+          "line": 285,
+          "column": 5,
+          "index": 8954
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 287,
+          "column": 4,
+          "index": 8961
+        },
+        "end": {
+          "line": 307,
+          "column": 5,
+          "index": 9456
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testWindowData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 309,
+          "column": 4,
+          "index": 9463
+        },
+        "end": {
+          "line": 324,
+          "column": 5,
+          "index": 10007
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 326,
+          "column": 4,
+          "index": 10014
+        },
+        "end": {
+          "line": 338,
+          "column": 5,
+          "index": 10384
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

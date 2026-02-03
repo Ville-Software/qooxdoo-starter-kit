@@ -1,0 +1,160 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337799,
+  "lastModifiedIso": "2026-01-03T20:15:37.799Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/Request.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 480
+    },
+    "end": {
+      "line": 86,
+      "column": 3,
+      "index": 2696
+    }
+  },
+  "className": "qx.test.util.Request",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Tristan Koch (tristankoch)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "test: isCrossDomain() returns true with cross-domain URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 572
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 1100
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: isCrossDomain() returns false with same-origin URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 1107
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1691
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: isSuccessful() returns true with successful HTTP status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1698
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1998
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: isMethod() returns true if HTTP method is known": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 2005
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 2398
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: methodAllowsRequestBody() returns false when GET": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 2405
+        },
+        "end": {
+          "line": 80,
+          "column": 5,
+          "index": 2543
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: methodAllowsRequestBody() returns true when POST": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 82,
+          "column": 4,
+          "index": 2550
+        },
+        "end": {
+          "line": 84,
+          "column": 5,
+          "index": 2688
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

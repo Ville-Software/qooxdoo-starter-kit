@@ -1,0 +1,231 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337771,
+  "lastModifiedIso": "2026-01-03T20:15:37.771Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/RadioGroup.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 151,
+      "column": 3,
+      "index": 3721
+    }
+  },
+  "className": "qx.test.ui.selection.RadioGroup",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.selection.AbstractSingleSelectonTest",
+  "members": {
+    "__radioButtons": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 619
+        },
+        "end": {
+          "line": 23,
+          "column": 24,
+          "index": 639
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 646
+        },
+        "end": {
+          "line": 49,
+          "column": 5,
+          "index": 1283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1290
+        },
+        "end": {
+          "line": 62,
+          "column": 5,
+          "index": 1619
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.LayoutTestCase",
+      "appearsIn": [
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_getChildren": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 4,
+          "index": 1626
+        },
+        "end": {
+          "line": 70,
+          "column": 5,
+          "index": 1764
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "_createTestElement": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 72,
+          "column": 4,
+          "index": 1771
+        },
+        "end": {
+          "line": 74,
+          "column": 5,
+          "index": 1850
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "name"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "testAllowEmptySelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 4,
+          "index": 1857
+        },
+        "end": {
+          "line": 89,
+          "column": 5,
+          "index": 2251
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAdd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 2258
+        },
+        "end": {
+          "line": 105,
+          "column": 5,
+          "index": 2647
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddWithAllowEmptySelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 107,
+          "column": 4,
+          "index": 2654
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3084
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSetGroup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3091
+        },
+        "end": {
+          "line": 149,
+          "column": 5,
+          "index": 3713
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

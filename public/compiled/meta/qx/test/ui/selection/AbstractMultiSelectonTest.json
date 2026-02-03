@@ -1,0 +1,286 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471334992,
+  "lastModifiedIso": "2026-01-03T20:15:34.992Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/selection/AbstractMultiSelectonTest.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 332,
+      "column": 3,
+      "index": 9118
+    }
+  },
+  "className": "qx.test.ui.selection.AbstractMultiSelectonTest",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.selection.AbstractSingleSelectonTest",
+  "isSingleton": false,
+  "abstract": true,
+  "members": {
+    "testSetSelectionWithTooMuchElements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 654
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 719
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "testSetSelection": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 744
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1156
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.selection.AbstractSingleSelectonTest",
+      "appearsIn": [
+        "qx.test.ui.selection.AbstractSingleSelectonTest"
+      ]
+    },
+    "testSetSelectionOverrideWithLess": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1163
+        },
+        "end": {
+          "line": 75,
+          "column": 5,
+          "index": 2339
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSelectAll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 77,
+          "column": 4,
+          "index": 2346
+        },
+        "end": {
+          "line": 120,
+          "column": 5,
+          "index": 3495
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddToSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 122,
+          "column": 4,
+          "index": 3502
+        },
+        "end": {
+          "line": 165,
+          "column": 5,
+          "index": 4712
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAddToSelectionWithNotChildElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 167,
+          "column": 4,
+          "index": 4719
+        },
+        "end": {
+          "line": 182,
+          "column": 5,
+          "index": 5151
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveFromSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 184,
+          "column": 4,
+          "index": 5158
+        },
+        "end": {
+          "line": 218,
+          "column": 5,
+          "index": 6200
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveFromSelectionWithNotChildElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 220,
+          "column": 4,
+          "index": 6207
+        },
+        "end": {
+          "line": 235,
+          "column": 5,
+          "index": 6635
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemoveFromSelectionWithNotSelectedElement": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 237,
+          "column": 4,
+          "index": 6642
+        },
+        "end": {
+          "line": 250,
+          "column": 5,
+          "index": 7020
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInvertSelection": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 252,
+          "column": 4,
+          "index": 7027
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 7759
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInvertSelectionWithErrors": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 281,
+          "column": 4,
+          "index": 7766
+        },
+        "end": {
+          "line": 294,
+          "column": 5,
+          "index": 8113
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInvertSelectionWithDisabledChildElements": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 296,
+          "column": 4,
+          "index": 8120
+        },
+        "end": {
+          "line": 330,
+          "column": 5,
+          "index": 9110
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

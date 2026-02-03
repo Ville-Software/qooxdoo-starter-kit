@@ -1,0 +1,252 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338337,
+  "lastModifiedIso": "2026-01-03T20:15:38.337Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/cell/WidgetCell.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 28,
+      "column": 0,
+      "index": 713
+    },
+    "end": {
+      "line": 150,
+      "column": 3,
+      "index": 3451
+    }
+  },
+  "className": "qx.test.ui.virtual.cell.WidgetCell",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " *",
+      " * @asset(qx/icon/${qx.icontheme}/22/emotes/face-angel.png)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qx/icon/${qx.icontheme}/22/emotes/face-angel.png"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__cell": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 819
+        },
+        "end": {
+          "line": 32,
+          "column": 16,
+          "index": 831
+        }
+      },
+      "appearsIn": []
+    },
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 838
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 910
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 917
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 990
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWidget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 997
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1124
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWidgetWithDelegate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 49,
+          "column": 4,
+          "index": 1131
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1322
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPoolOnDelegateChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1329
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 1790
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 1797
+        },
+        "end": {
+          "line": 103,
+          "column": 5,
+          "index": 2389
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 105,
+          "column": 4,
+          "index": 2396
+        },
+        "end": {
+          "line": 117,
+          "column": 5,
+          "index": 2767
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateEmptyData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 119,
+          "column": 4,
+          "index": 2774
+        },
+        "end": {
+          "line": 127,
+          "column": 5,
+          "index": 3017
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpdateWrongData": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3024
+        },
+        "end": {
+          "line": 140,
+          "column": 5,
+          "index": 3290
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__setUpDelegate": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3297
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 3443
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

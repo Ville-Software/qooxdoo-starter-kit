@@ -1,0 +1,36 @@
+{
+  "version": 0.3,
+  "lastModified": 1745803264755,
+  "lastModifiedIso": "2025-04-28T01:21:04.755Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/theme/blankslate/Color.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 518
+    },
+    "end": {
+      "line": 24,
+      "column": 3,
+      "index": 590
+    }
+  },
+  "className": "ville.cssuc.theme.blankslate.Color",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Simple color theme",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Simple color theme</p>"
+      }
+    ]
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

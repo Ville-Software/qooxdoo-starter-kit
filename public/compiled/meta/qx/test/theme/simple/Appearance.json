@@ -1,0 +1,1260 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335104,
+  "lastModifiedIso": "2026-01-03T20:15:35.104Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/simple/Appearance.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 478
+    },
+    "end": {
+      "line": 824,
+      "column": 3,
+      "index": 21506
+    }
+  },
+  "className": "qx.test.theme.simple.Appearance",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2016 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * William Opandi (woprandi)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__obj": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 581
+        },
+        "end": {
+          "line": 22,
+          "column": 49,
+          "index": 626
+        }
+      },
+      "appearsIn": []
+    },
+    "testLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 633
+        },
+        "end": {
+          "line": 33,
+          "column": 5,
+          "index": 868
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testImage": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4,
+          "index": 875
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 1161
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRoot": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1168
+        },
+        "end": {
+          "line": 58,
+          "column": 5,
+          "index": 1421
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPopup": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 60,
+          "column": 4,
+          "index": 1428
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1638
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTooltip": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 69,
+          "column": 4,
+          "index": 1645
+        },
+        "end": {
+          "line": 79,
+          "column": 5,
+          "index": 2032
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTooltipError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 81,
+          "column": 4,
+          "index": 2039
+        },
+        "end": {
+          "line": 92,
+          "column": 5,
+          "index": 2472
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIframe": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 94,
+          "column": 4,
+          "index": 2479
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2685
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMoveFrame": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 2692
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2848
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDragDropCursor": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 2855
+        },
+        "end": {
+          "line": 153,
+          "column": 5,
+          "index": 3803
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlideBarButtonForward": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 3810
+        },
+        "end": {
+          "line": 167,
+          "column": 5,
+          "index": 4164
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSlideBarButtonBackward": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 169,
+          "column": 4,
+          "index": 4171
+        },
+        "end": {
+          "line": 181,
+          "column": 5,
+          "index": 4524
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableStatusBar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 183,
+          "column": 4,
+          "index": 4531
+        },
+        "end": {
+          "line": 188,
+          "column": 5,
+          "index": 4728
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableColumnButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 190,
+          "column": 4,
+          "index": 4735
+        },
+        "end": {
+          "line": 199,
+          "column": 5,
+          "index": 5064
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableColumnResetButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 201,
+          "column": 4,
+          "index": 5071
+        },
+        "end": {
+          "line": 205,
+          "column": 5,
+          "index": 5251
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableScrollerHeader": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 207,
+          "column": 4,
+          "index": 5258
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5416
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableScrollerFocusIndicator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 213,
+          "column": 4,
+          "index": 5423
+        },
+        "end": {
+          "line": 217,
+          "column": 5,
+          "index": 5590
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableScrollerResizeLine": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 219,
+          "column": 4,
+          "index": 5597
+        },
+        "end": {
+          "line": 224,
+          "column": 5,
+          "index": 5815
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableHeaderCell": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 226,
+          "column": 4,
+          "index": 5822
+        },
+        "end": {
+          "line": 272,
+          "column": 5,
+          "index": 7050
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableHeaderCellIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 274,
+          "column": 4,
+          "index": 7057
+        },
+        "end": {
+          "line": 278,
+          "column": 5,
+          "index": 7206
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableHeaderCellSortIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 280,
+          "column": 4,
+          "index": 7213
+        },
+        "end": {
+          "line": 286,
+          "column": 5,
+          "index": 7474
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableEditorTextField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 288,
+          "column": 4,
+          "index": 7481
+        },
+        "end": {
+          "line": 293,
+          "column": 5,
+          "index": 7678
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableEditorSelectBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 295,
+          "column": 4,
+          "index": 7685
+        },
+        "end": {
+          "line": 299,
+          "column": 5,
+          "index": 7837
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTableEditorComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 301,
+          "column": 4,
+          "index": 7844
+        },
+        "end": {
+          "line": 305,
+          "column": 5,
+          "index": 7986
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testProgressiveTableHeader": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 307,
+          "column": 4,
+          "index": 7993
+        },
+        "end": {
+          "line": 311,
+          "column": 5,
+          "index": 8169
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testProgressiveTableHeaderCell": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 313,
+          "column": 4,
+          "index": 8176
+        },
+        "end": {
+          "line": 318,
+          "column": 5,
+          "index": 8425
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtual": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 320,
+          "column": 4,
+          "index": 8432
+        },
+        "end": {
+          "line": 330,
+          "column": 5,
+          "index": 8675
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualFolder": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 332,
+          "column": 4,
+          "index": 8682
+        },
+        "end": {
+          "line": 352,
+          "column": 5,
+          "index": 9212
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualFile": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 354,
+          "column": 4,
+          "index": 9219
+        },
+        "end": {
+          "line": 364,
+          "column": 5,
+          "index": 9563
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualLine": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 366,
+          "column": 4,
+          "index": 9570
+        },
+        "end": {
+          "line": 373,
+          "column": 5,
+          "index": 9770
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualContract": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 375,
+          "column": 4,
+          "index": 9777
+        },
+        "end": {
+          "line": 382,
+          "column": 5,
+          "index": 9979
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualExpand": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 384,
+          "column": 4,
+          "index": 9986
+        },
+        "end": {
+          "line": 388,
+          "column": 5,
+          "index": 10159
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualOnlyContract": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 390,
+          "column": 4,
+          "index": 10166
+        },
+        "end": {
+          "line": 397,
+          "column": 5,
+          "index": 10389
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualOnlyExpand": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 399,
+          "column": 4,
+          "index": 10396
+        },
+        "end": {
+          "line": 406,
+          "column": 5,
+          "index": 10614
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualStartContract": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 408,
+          "column": 4,
+          "index": 10621
+        },
+        "end": {
+          "line": 415,
+          "column": 5,
+          "index": 10847
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualStartExpand": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 417,
+          "column": 4,
+          "index": 10854
+        },
+        "end": {
+          "line": 424,
+          "column": 5,
+          "index": 11075
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualEndContract": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 426,
+          "column": 4,
+          "index": 11082
+        },
+        "end": {
+          "line": 433,
+          "column": 5,
+          "index": 11302
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualEndExpand": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 435,
+          "column": 4,
+          "index": 11309
+        },
+        "end": {
+          "line": 442,
+          "column": 5,
+          "index": 11524
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualCrossContract": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 444,
+          "column": 4,
+          "index": 11531
+        },
+        "end": {
+          "line": 451,
+          "column": 5,
+          "index": 11757
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualCrossExpand": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 453,
+          "column": 4,
+          "index": 11764
+        },
+        "end": {
+          "line": 460,
+          "column": 5,
+          "index": 11985
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualEnd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 462,
+          "column": 4,
+          "index": 11992
+        },
+        "end": {
+          "line": 469,
+          "column": 5,
+          "index": 12189
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testTreeVirtualCross": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 471,
+          "column": 4,
+          "index": 12196
+        },
+        "end": {
+          "line": 478,
+          "column": 5,
+          "index": 12399
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testResizer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 480,
+          "column": 4,
+          "index": 12406
+        },
+        "end": {
+          "line": 484,
+          "column": 5,
+          "index": 12535
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplitpaneSplitter": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 486,
+          "column": 4,
+          "index": 12542
+        },
+        "end": {
+          "line": 490,
+          "column": 5,
+          "index": 12705
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplitpaneSplitterKnob": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 492,
+          "column": 4,
+          "index": 12712
+        },
+        "end": {
+          "line": 512,
+          "column": 5,
+          "index": 13228
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSplitpaneSlider": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 514,
+          "column": 4,
+          "index": 13235
+        },
+        "end": {
+          "line": 519,
+          "column": 5,
+          "index": 13445
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenu": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 521,
+          "column": 4,
+          "index": 13452
+        },
+        "end": {
+          "line": 559,
+          "column": 5,
+          "index": 14698
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuSlideBarButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 561,
+          "column": 4,
+          "index": 14705
+        },
+        "end": {
+          "line": 573,
+          "column": 5,
+          "index": 15117
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuSlideBarButtonBackward": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 575,
+          "column": 4,
+          "index": 15124
+        },
+        "end": {
+          "line": 588,
+          "column": 5,
+          "index": 15525
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuSlideBarButtonForward": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 590,
+          "column": 4,
+          "index": 15532
+        },
+        "end": {
+          "line": 606,
+          "column": 5,
+          "index": 15959
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuSeparator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 608,
+          "column": 4,
+          "index": 15966
+        },
+        "end": {
+          "line": 617,
+          "column": 5,
+          "index": 16356
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 619,
+          "column": 4,
+          "index": 16363
+        },
+        "end": {
+          "line": 636,
+          "column": 5,
+          "index": 16901
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButtonIcon": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 638,
+          "column": 4,
+          "index": 16908
+        },
+        "end": {
+          "line": 642,
+          "column": 5,
+          "index": 17047
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButtonLabel": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 644,
+          "column": 4,
+          "index": 17054
+        },
+        "end": {
+          "line": 649,
+          "column": 5,
+          "index": 17241
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButtonShortcut": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 651,
+          "column": 4,
+          "index": 17248
+        },
+        "end": {
+          "line": 657,
+          "column": 5,
+          "index": 17491
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuButtonArrow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 659,
+          "column": 4,
+          "index": 17498
+        },
+        "end": {
+          "line": 681,
+          "column": 5,
+          "index": 18024
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuCheckbox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 683,
+          "column": 4,
+          "index": 18031
+        },
+        "end": {
+          "line": 710,
+          "column": 5,
+          "index": 18626
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuRadioButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 712,
+          "column": 4,
+          "index": 18633
+        },
+        "end": {
+          "line": 739,
+          "column": 5,
+          "index": 19240
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuBar": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 741,
+          "column": 4,
+          "index": 19247
+        },
+        "end": {
+          "line": 746,
+          "column": 5,
+          "index": 19442
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testMenuBarButton": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 748,
+          "column": 4,
+          "index": 19449
+        },
+        "end": {
+          "line": 782,
+          "column": 5,
+          "index": 20400
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testGroupItem": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 784,
+          "column": 4,
+          "index": 20407
+        },
+        "end": {
+          "line": 791,
+          "column": 5,
+          "index": 20693
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testVirtualTree": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 793,
+          "column": 4,
+          "index": 20700
+        },
+        "end": {
+          "line": 797,
+          "column": 5,
+          "index": 20830
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCell": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 799,
+          "column": 4,
+          "index": 20837
+        },
+        "end": {
+          "line": 816,
+          "column": 5,
+          "index": 21359
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCellNumber": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 818,
+          "column": 4,
+          "index": 21366
+        },
+        "end": {
+          "line": 822,
+          "column": 5,
+          "index": 21498
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

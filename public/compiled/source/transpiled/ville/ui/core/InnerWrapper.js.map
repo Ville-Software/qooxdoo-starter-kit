@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "core",
+    "Widget",
+    "include",
+    "MChildrenHandling",
+    "MWidget",
+    "construct",
+    "component",
+    "__componenttag",
+    "constructor",
+    "call",
+    "_setLayout",
+    "layout",
+    "Basic",
+    "setExcludeBoundsFromDom",
+    "members",
+    "_createContentElement",
+    "html",
+    "Element",
+    "InnerWrapper"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/core/InnerWrapper.js"
+  ],
+  "sourcesContent": [
+    "/**\n * This is the innerwrapper widget for Button, TextFieldWrapper\n * @external(mantine/core/styles/InlineInput.css)\n */\nqx.Class.define(\"ville.ui.core.InnerWrapper\", {\n    extend: ville.ui.core.Widget,\n\n    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],\n\n    construct(component) {\n        if (component) {\n            this.__componenttag = component;\n        }\n        super();\n\n        this._setLayout(new qx.ui.layout.Basic());\n        this.setExcludeBoundsFromDom(true);\n        //this.setExcludeInlineStyles([\"position\"]);\n    },\n\n    members: {\n\n        __componenttag: \"span\",\n\n        // overridden\n        _createContentElement() {\n            return new qx.html.Element(this.__componenttag);\n        }\n    }\n  });\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,4BAA4B,EAAE;IAC1CC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,IAAI,CAACC,MAAM;IAE5BC,OAAO,EAAE,CAACX,EAAE,CAACQ,EAAE,CAACC,IAAI,CAACG,iBAAiB,EAAEL,KAAK,CAACC,EAAE,CAACC,IAAI,CAACI,OAAO,CAAC;IAE9DC,SAASA,CAACC,SAAS,EAAE;MACjB,IAAIA,SAAS,EAAE;QACX,IAAI,CAACC,sBAAc,GAAGD,SAAS;MACnC;MACAR,KAAA,CAAAC,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAO,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,UAAU,CAAC,IAAInB,EAAE,CAACQ,EAAE,CAACY,MAAM,CAACC,KAAK,CAAC,CAAC,CAAC;MACzC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC;IACJ,CAAC;IAEDC,OAAO,EAAE;MAELP,sBAAc,EAAE,MAAM;MAEtB;MACAQ,qBAAqBA,CAAA,EAAG;QACpB,OAAO,IAAIxB,EAAE,CAACyB,IAAI,CAACC,OAAO,CAAC,IAAI,CAACV,sBAAc,CAAC;MACnD;IACJ;EACF,CAAC,CAAC;EA7BJT,KAAK,CAACC,EAAE,CAACC,IAAI,CAACkB,YAAY,CAACxB,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

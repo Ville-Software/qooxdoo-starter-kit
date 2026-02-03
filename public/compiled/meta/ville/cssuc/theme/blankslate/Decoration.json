@@ -1,0 +1,36 @@
+{
+  "version": 0.3,
+  "lastModified": 1745803264755,
+  "lastModifiedIso": "2025-04-28T01:21:04.755Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/cssuc/theme/blankslate/Decoration.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 22,
+      "column": 0,
+      "index": 535
+    },
+    "end": {
+      "line": 27,
+      "column": 3,
+      "index": 634
+    }
+  },
+  "className": "ville.cssuc.theme.blankslate.Decoration",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * The simple qooxdoo decoration theme.",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>The simple qooxdoo decoration theme.</p>"
+      }
+    ]
+  },
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

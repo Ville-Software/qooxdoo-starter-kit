@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ville",
+    "ui",
+    "tabview",
+    "Page",
+    "include",
+    "qxapp",
+    "pages",
+    "MPage",
+    "construct",
+    "pagenameroot",
+    "pageName",
+    "lang",
+    "String",
+    "firstUp",
+    "constructor",
+    "call",
+    "addListener",
+    "document",
+    "title",
+    "setAttribute",
+    "settings",
+    "Appearance"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/settings/Appearance.js"
+  ],
+  "sourcesContent": [
+    "/**\n * Appearance page\n *\n */\nqx.Class.define(\"qxapp.pages.settings.Appearance\",\n{\n  extend : ville.ui.tabview.Page,\n\n  include : qxapp.pages.MPage,\n\n  construct() {\n\n    const pagenameroot = \"appearance\";\n    const pageName = qx.lang.String.firstUp(pagenameroot);\n\n    super(pageName);\n\n    // Set up the page\n    this.addListener(\"appear\", () => {document.title = `${pageName} - Laravel`});\n\n    this.setAttribute(\"html\", pagenameroot);\n\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,iCAAiC,EACjD;IACEC,MAAM,EAAGC,KAAK,CAACC,EAAE,CAACC,OAAO,CAACC,IAAI;IAE9BC,OAAO,EAAGC,KAAK,CAACC,KAAK,CAACC,KAAK;IAE3BC,SAASA,CAAA,EAAG;MAEV,MAAMC,YAAY,GAAG,YAAY;MACjC,MAAMC,QAAQ,GAAGjB,EAAE,CAACkB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACJ,YAAY,CAAC;MAErDT,KAAA,CAAAC,EAAA,CAAAC,OAAA,CAAAC,IAAA,CAAAW,WAAA,CAAAC,IAAA,OAAML,QAAQ;;MAEd;MACA,IAAI,CAACM,WAAW,CAAC,QAAQ,EAAE,MAAM;QAACC,QAAQ,CAACC,KAAK,GAAG,GAAGR,QAAQ,YAAY;MAAA,CAAC,CAAC;MAE5E,IAAI,CAACS,YAAY,CAAC,MAAM,EAAEV,YAAY,CAAC;IAEzC;EACF,CAAC,CAAC;EAvBFJ,KAAK,CAACC,KAAK,CAACc,QAAQ,CAACC,UAAU,CAACzB,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

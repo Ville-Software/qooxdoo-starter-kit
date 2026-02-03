@@ -1,0 +1,129 @@
+{
+  "version": 0.3,
+  "lastModified": 1769695756215,
+  "lastModifiedIso": "2026-01-29T14:09:16.215Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/application/Standalone.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 14,
+      "column": 0,
+      "index": 382
+    },
+    "end": {
+      "line": 46,
+      "column": 3,
+      "index": 1333
+    }
+  },
+  "className": "ville.ui.application.Standalone",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This is the application class of a ville ui standalone app",
+      " *",
+      " * @external(mantine/core/styles/baseline.css)",
+      " * @external(mantine/core/styles/default-css-variables.css)",
+      " * @external(mantine/core/styles/global.css)",
+      " * @require(ville.ui.root.Application)",
+      " * @require(ville.cssuc.MControl)",
+      " * @require(ville.cssuc.MCssUtilityClass)",
+      " * @require(ville.cssuc.patch.MLabel)",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This is the application class of a ville ui standalone app</p>"
+      }
+    ],
+    "@external": [
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/baseline.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/default-css-variables.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/global.css"
+      }
+    ],
+    "@require": [
+      {
+        "name": "@require",
+        "body": "ville.ui.root.Application"
+      },
+      {
+        "name": "@require",
+        "body": "ville.cssuc.MControl"
+      },
+      {
+        "name": "@require",
+        "body": "ville.cssuc.MCssUtilityClass"
+      },
+      {
+        "name": "@require",
+        "body": "ville.cssuc.patch.MLabel"
+      }
+    ]
+  },
+  "superClass": "qx.application.Standalone",
+  "members": {
+    "main": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 675
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.application.AbstractGui",
+      "appearsIn": [
+        "qx.application.AbstractGui",
+        "qx.application.IApplication"
+      ]
+    },
+    "_createRootWidget": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 4,
+          "index": 1105
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1325
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.application.Standalone",
+      "appearsIn": [
+        "qx.application.Standalone",
+        "qx.application.AbstractGui"
+      ]
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

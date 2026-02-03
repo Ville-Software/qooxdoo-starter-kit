@@ -1,0 +1,25 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335798,
+  "lastModifiedIso": "2026-01-03T20:15:35.798Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/mock/Color.js",
+  "type": "theme",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 10,
+      "column": 3,
+      "index": 219
+    }
+  },
+  "className": "qx.test.theme.manager.mock.Color",
+  "jsdoc": null,
+  "superClass": "qx.theme.simple.Color",
+  "members": {},
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,333 @@
+{
+  "version": 0.3,
+  "lastModified": 1769806348027,
+  "lastModifiedIso": "2026-01-30T20:52:28.027Z",
+  "classFilename": "../../../resources/qxapp/source/class/qxapp/Application.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 16,
+      "column": 0,
+      "index": 307
+    },
+    "end": {
+      "line": 161,
+      "column": 3,
+      "index": 4452
+    }
+  },
+  "className": "qxapp.Application",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * This is the main application class of \"qxapp\"",
+      " *",
+      " * @asset(qxapp/*)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>This is the main application class of \"qxapp\"</p>"
+      }
+    ],
+    "@asset": [
+      {
+        "name": "@asset",
+        "body": "qxapp/*"
+      }
+    ]
+  },
+  "superClass": "ville.ui.application.Standalone",
+  "members": {
+    "__routing": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 596
+        },
+        "end": {
+          "line": 29,
+          "column": 20,
+          "index": 612
+        }
+      },
+      "appearsIn": []
+    },
+    "__stack": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 31,
+          "column": 4,
+          "index": 619
+        },
+        "end": {
+          "line": 31,
+          "column": 18,
+          "index": 633
+        }
+      },
+      "appearsIn": []
+    },
+    "__app": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 640
+        },
+        "end": {
+          "line": 33,
+          "column": 16,
+          "index": 652
+        }
+      },
+      "appearsIn": []
+    },
+    "main": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * This method contains the initial application code and gets called",
+          "     * during startup of the application",
+          "     *",
+          "     * @lint ignoreDeprecated(alert)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>This method contains the initial application code and gets called\n during startup of the application</p>"
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "ignoreDeprecated(alert)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 4,
+          "index": 833
+        },
+        "end": {
+          "line": 88,
+          "column": 5,
+          "index": 2472
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "ville.ui.application.Standalone",
+      "appearsIn": [
+        "ville.ui.application.Standalone",
+        "qx.application.AbstractGui",
+        "qx.application.IApplication"
+      ]
+    },
+    "initRouting": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Initialize the application's routing.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Initialize the application's routing.</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2540
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2666
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "initialpage"
+        }
+      ],
+      "appearsIn": []
+    },
+    "getRouting": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the application's routing.",
+          "     *",
+          "     * @return {qxapp.Routing} The application's routing.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the application's routing.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qxapp.Routing} The application's routing.",
+            "type": "qxapp.Routing",
+            "description": "The application's routing."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2796
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2845
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "qxapp.Routing"
+      },
+      "appearsIn": []
+    },
+    "getStack": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Returns the application's stack widget.",
+          "     *",
+          "     * @return {ville.ui.layout.Stack} object",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the application's stack widget.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{ville.ui.layout.Stack} object",
+            "type": "ville.ui.layout.Stack",
+            "description": "object"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 2968
+        },
+        "end": {
+          "line": 116,
+          "column": 5,
+          "index": 3056
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "ville.ui.layout.Stack"
+      },
+      "appearsIn": []
+    },
+    "initAppShell": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 118,
+          "column": 4,
+          "index": 3063
+        },
+        "end": {
+          "line": 133,
+          "column": 5,
+          "index": 3535
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "getLoadedStackPart": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 3542
+        },
+        "end": {
+          "line": 144,
+          "column": 5,
+          "index": 3829
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "component"
+        }
+      ],
+      "appearsIn": []
+    },
+    "LoadStackPart": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 146,
+          "column": 4,
+          "index": 3836
+        },
+        "end": {
+          "line": 158,
+          "column": 5,
+          "index": 4443
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "component"
+        },
+        {
+          "name": "callingpage"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

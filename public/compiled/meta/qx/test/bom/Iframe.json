@@ -1,0 +1,162 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471336914,
+  "lastModifiedIso": "2026-01-03T20:15:36.914Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/bom/Iframe.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 489
+    },
+    "end": {
+      "line": 68,
+      "column": 3,
+      "index": 1816
+    }
+  },
+  "className": "qx.test.bom.Iframe",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Christian Hagendorn (chris_schmidt)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "__iframe": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 579
+        },
+        "end": {
+          "line": 23,
+          "column": 18,
+          "index": 593
+        }
+      },
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4,
+          "index": 600
+        },
+        "end": {
+          "line": 27,
+          "column": 5,
+          "index": 646
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 29,
+          "column": 4,
+          "index": 653
+        },
+        "end": {
+          "line": 32,
+          "column": 5,
+          "index": 782
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCreateWithAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4,
+          "index": 789
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 1045
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "__testAttributes": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1052
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1556
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testGetWindow": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1563
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1808
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

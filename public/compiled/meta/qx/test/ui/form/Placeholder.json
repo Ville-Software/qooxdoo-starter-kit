@@ -1,0 +1,736 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337688,
+  "lastModifiedIso": "2026-01-03T20:15:37.688Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/form/Placeholder.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 18,
+      "column": 0,
+      "index": 487
+    },
+    "end": {
+      "line": 384,
+      "column": 3,
+      "index": 10620
+    }
+  },
+  "className": "qx.test.ui.form.Placeholder",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Martin Wittemann (martinwittemann)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.LayoutTestCase",
+  "members": {
+    "__testInit": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 22,
+          "column": 4,
+          "index": 591
+        },
+        "end": {
+          "line": 57,
+          "column": 5,
+          "index": 1553
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        },
+        {
+          "name": "childControlName"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testChangeValue": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 59,
+          "column": 4,
+          "index": 1560
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2415
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testFocus": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2422
+        },
+        "end": {
+          "line": 133,
+          "column": 5,
+          "index": 3422
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testRemovePlaceholder": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 4,
+          "index": 3429
+        },
+        "end": {
+          "line": 149,
+          "column": 5,
+          "index": 3874
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__testDisabled": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 151,
+          "column": 4,
+          "index": 3881
+        },
+        "end": {
+          "line": 182,
+          "column": 5,
+          "index": 4700
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "clazz"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__hasTextfieldChildControl": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 184,
+          "column": 4,
+          "index": 4707
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 4919
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__syncAppearance": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 4926
+        },
+        "end": {
+          "line": 197,
+          "column": 5,
+          "index": 5202
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__getVisibleValueOf": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 4,
+          "index": 5209
+        },
+        "end": {
+          "line": 208,
+          "column": 5,
+          "index": 5563
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__getPlaceholderValueOf": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 210,
+          "column": 4,
+          "index": 5570
+        },
+        "end": {
+          "line": 236,
+          "column": 5,
+          "index": 6492
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "__isPlaceholderVisible": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 238,
+          "column": 4,
+          "index": 6499
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 8132
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testInitTextField": {
+      "jsdoc": {
+        "raw": [
+          "///////// TextField ///////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 282,
+          "column": 4,
+          "index": 8177
+        },
+        "end": {
+          "line": 284,
+          "column": 5,
+          "index": 8249
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeValueTextField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 286,
+          "column": 4,
+          "index": 8256
+        },
+        "end": {
+          "line": 288,
+          "column": 5,
+          "index": 8342
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusTextField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 290,
+          "column": 4,
+          "index": 8349
+        },
+        "end": {
+          "line": 292,
+          "column": 5,
+          "index": 8423
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemovePlaceholderTextField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 294,
+          "column": 4,
+          "index": 8430
+        },
+        "end": {
+          "line": 296,
+          "column": 5,
+          "index": 8528
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledTextField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 298,
+          "column": 4,
+          "index": 8535
+        },
+        "end": {
+          "line": 300,
+          "column": 5,
+          "index": 8615
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitTextArea": {
+      "jsdoc": {
+        "raw": [
+          "///////// TextArea ///////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 303,
+          "column": 4,
+          "index": 8659
+        },
+        "end": {
+          "line": 305,
+          "column": 5,
+          "index": 8729
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeValueTextArea": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 307,
+          "column": 4,
+          "index": 8736
+        },
+        "end": {
+          "line": 309,
+          "column": 5,
+          "index": 8820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusTextArea": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 311,
+          "column": 4,
+          "index": 8827
+        },
+        "end": {
+          "line": 313,
+          "column": 5,
+          "index": 8899
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemovePlaceholderTextArea": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 315,
+          "column": 4,
+          "index": 8906
+        },
+        "end": {
+          "line": 317,
+          "column": 5,
+          "index": 9002
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledTextArea": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 319,
+          "column": 4,
+          "index": 9009
+        },
+        "end": {
+          "line": 321,
+          "column": 5,
+          "index": 9087
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitPasswordField": {
+      "jsdoc": {
+        "raw": [
+          "///////// PasswordField ///////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 324,
+          "column": 4,
+          "index": 9136
+        },
+        "end": {
+          "line": 326,
+          "column": 5,
+          "index": 9216
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeValuePasswordField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 9223
+        },
+        "end": {
+          "line": 336,
+          "column": 5,
+          "index": 9532
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusPasswordField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 338,
+          "column": 4,
+          "index": 9539
+        },
+        "end": {
+          "line": 340,
+          "column": 5,
+          "index": 9621
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemovePlaceholderPasswordField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 342,
+          "column": 4,
+          "index": 9628
+        },
+        "end": {
+          "line": 344,
+          "column": 5,
+          "index": 9734
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledPasswordField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 346,
+          "column": 4,
+          "index": 9741
+        },
+        "end": {
+          "line": 348,
+          "column": 5,
+          "index": 9829
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testInitComboBox": {
+      "jsdoc": {
+        "raw": [
+          "///////// ComboBox ///////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 351,
+          "column": 4,
+          "index": 9873
+        },
+        "end": {
+          "line": 353,
+          "column": 5,
+          "index": 9943
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testChangeValueComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 355,
+          "column": 4,
+          "index": 9950
+        },
+        "end": {
+          "line": 357,
+          "column": 5,
+          "index": 10034
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 359,
+          "column": 4,
+          "index": 10041
+        },
+        "end": {
+          "line": 361,
+          "column": 5,
+          "index": 10113
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemovePlaceholderComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 363,
+          "column": 4,
+          "index": 10120
+        },
+        "end": {
+          "line": 365,
+          "column": 5,
+          "index": 10216
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledComboBox": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 367,
+          "column": 4,
+          "index": 10223
+        },
+        "end": {
+          "line": 369,
+          "column": 5,
+          "index": 10301
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testFocusDateField": {
+      "jsdoc": {
+        "raw": [
+          "///////// DateField ///////////"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 372,
+          "column": 4,
+          "index": 10346
+        },
+        "end": {
+          "line": 374,
+          "column": 5,
+          "index": 10420
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRemovePlaceholderDateField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 376,
+          "column": 4,
+          "index": 10427
+        },
+        "end": {
+          "line": 378,
+          "column": 5,
+          "index": 10525
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testDisabledDateField": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 380,
+          "column": 4,
+          "index": 10532
+        },
+        "end": {
+          "line": 382,
+          "column": 5,
+          "index": 10612
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

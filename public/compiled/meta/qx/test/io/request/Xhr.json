@@ -1,0 +1,4351 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338371,
+  "lastModifiedIso": "2026-01-03T20:15:38.371Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/request/Xhr.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 40,
+      "column": 0,
+      "index": 1018
+    },
+    "end": {
+      "line": 992,
+      "column": 3,
+      "index": 26212
+    }
+  },
+  "className": "qx.test.io.request.Xhr",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * Tests asserting behavior",
+      " *",
+      " * - special to io.request.Xhr and",
+      " * - common to io.request.* (see {@link qx.test.io.request.MRequest})",
+      " *",
+      " * Tests defined in MRequest run with appropriate context, i.e.",
+      " * a transport that is an instance of qx.bom.request.Xhr",
+      " * (see {@link #setUpFakeTransport}).",
+      " *",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": "<p>Tests asserting behavior</p>\n<ul>\n<li>special to io.request.Xhr and</li>\n<li>common to io.request.* (see {@link qx.test.io.request.MRequest})\nTests defined in MRequest run with appropriate context, i.e.\na transport that is an instance of qx.bom.request.Xhr\n(see {@link #setUpFakeTransport}).</li>\n</ul>"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "mixins": [
+    "qx.test.io.request.MRequest",
+    "qx.dev.unit.MMock",
+    "qx.dev.unit.MRequirements"
+  ],
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1217
+        },
+        "end": {
+          "line": 53,
+          "column": 5,
+          "index": 1292
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setUpRequest": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 55,
+          "column": 4,
+          "index": 1299
+        },
+        "end": {
+          "line": 59,
+          "column": 5,
+          "index": 1431
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setUpFakeTransport": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 4,
+          "index": 1438
+        },
+        "end": {
+          "line": 72,
+          "column": 5,
+          "index": 1761
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setUpFakeServer": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 1768
+        },
+        "end": {
+          "line": 100,
+          "column": 5,
+          "index": 2381
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setUpFakeXhr": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 102,
+          "column": 4,
+          "index": 2388
+        },
+        "end": {
+          "line": 108,
+          "column": 5,
+          "index": 2537
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 110,
+          "column": 4,
+          "index": 2544
+        },
+        "end": {
+          "line": 118,
+          "column": 5,
+          "index": 2717
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set url property on construct": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 4,
+          "index": 2762
+        },
+        "end": {
+          "line": 128,
+          "column": 5,
+          "index": 2922
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set method property on construct": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 130,
+          "column": 4,
+          "index": 2929
+        },
+        "end": {
+          "line": 134,
+          "column": 5,
+          "index": 3104
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send POST request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 140,
+          "column": 4,
+          "index": 3146
+        },
+        "end": {
+          "line": 146,
+          "column": 5,
+          "index": 3330
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send sync request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 148,
+          "column": 4,
+          "index": 3337
+        },
+        "end": {
+          "line": 157,
+          "column": 5,
+          "index": 3609
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set content type urlencoded for POST request with body when no type given": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 163,
+          "column": 4,
+          "index": 3651
+        },
+        "end": {
+          "line": 174,
+          "column": 5,
+          "index": 4019
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: not set content type urlencoded for POST request with body when type given": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 176,
+          "column": 4,
+          "index": 4026
+        },
+        "end": {
+          "line": 194,
+          "column": 5,
+          "index": 4584
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send string data with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 196,
+          "column": 4,
+          "index": 4591
+        },
+        "end": {
+          "line": 203,
+          "column": 5,
+          "index": 4829
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send obj data with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 205,
+          "column": 4,
+          "index": 4836
+        },
+        "end": {
+          "line": 212,
+          "column": 5,
+          "index": 5090
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send qooxdoo obj data with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 214,
+          "column": 4,
+          "index": 5097
+        },
+        "end": {
+          "line": 224,
+          "column": 5,
+          "index": 5419
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send blob data with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 226,
+          "column": 4,
+          "index": 5426
+        },
+        "end": {
+          "line": 237,
+          "column": 5,
+          "index": 5838
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send array buffer data with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 5845
+        },
+        "end": {
+          "line": 250,
+          "column": 5,
+          "index": 6258
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: serialize data": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 252,
+          "column": 4,
+          "index": 6265
+        },
+        "end": {
+          "line": 269,
+          "column": 5,
+          "index": 7010
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set requested-with header": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 275,
+          "column": 4,
+          "index": 7065
+        },
+        "end": {
+          "line": 284,
+          "column": 5,
+          "index": 7297
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: not set requested-with header when cross-origin": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 286,
+          "column": 4,
+          "index": 7304
+        },
+        "end": {
+          "line": 297,
+          "column": 5,
+          "index": 7625
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set cache control header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 299,
+          "column": 4,
+          "index": 7632
+        },
+        "end": {
+          "line": 309,
+          "column": 5,
+          "index": 7891
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: set accept header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 311,
+          "column": 4,
+          "index": 7898
+        },
+        "end": {
+          "line": 321,
+          "column": 5,
+          "index": 8160
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: override response content type": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 323,
+          "column": 4,
+          "index": 8167
+        },
+        "end": {
+          "line": 331,
+          "column": 5,
+          "index": 8443
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get response content type": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 333,
+          "column": 4,
+          "index": 8450
+        },
+        "end": {
+          "line": 338,
+          "column": 5,
+          "index": 8656
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: event handler receives request": {
+      "jsdoc": {
+        "raw": [
+          " Documentation only"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 345,
+          "column": 4,
+          "index": 8719
+        },
+        "end": {
+          "line": 361,
+          "column": 5,
+          "index": 9198
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: event handler's this is request": {
+      "jsdoc": {
+        "raw": [
+          " Documentation only"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 364,
+          "column": 4,
+          "index": 9231
+        },
+        "end": {
+          "line": 380,
+          "column": 5,
+          "index": 9692
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: sync XHR properties for every readyState": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 386,
+          "column": 4,
+          "index": 9732
+        },
+        "end": {
+          "line": 412,
+          "column": 5,
+          "index": 10556
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get response": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 418,
+          "column": 4,
+          "index": 10594
+        },
+        "end": {
+          "line": 429,
+          "column": 5,
+          "index": 10912
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get response on 400 status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 431,
+          "column": 4,
+          "index": 10919
+        },
+        "end": {
+          "line": 442,
+          "column": 5,
+          "index": 11251
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: get response by change event": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 444,
+          "column": 4,
+          "index": 11258
+        },
+        "end": {
+          "line": 464,
+          "column": 5,
+          "index": 11758
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: _getParsedResponse": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 470,
+          "column": 4,
+          "index": 11795
+        },
+        "end": {
+          "line": 485,
+          "column": 5,
+          "index": 12315
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: setParser": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 487,
+          "column": 4,
+          "index": 12322
+        },
+        "end": {
+          "line": 498,
+          "column": 5,
+          "index": 12691
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: basic auth": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 504,
+          "column": 4,
+          "index": 12725
+        },
+        "end": {
+          "line": 522,
+          "column": 5,
+          "index": 13281
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send with promise sends the request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 528,
+          "column": 4,
+          "index": 13318
+        },
+        "end": {
+          "line": 535,
+          "column": 5,
+          "index": 13573
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send with promise succeeds": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 537,
+          "column": 4,
+          "index": 13580
+        },
+        "end": {
+          "line": 558,
+          "column": 5,
+          "index": 14170
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send with promise fails with statusError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 560,
+          "column": 4,
+          "index": 14177
+        },
+        "end": {
+          "line": 592,
+          "column": 5,
+          "index": 15142
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send with promise fails with error": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 594,
+          "column": 4,
+          "index": 15149
+        },
+        "end": {
+          "line": 625,
+          "column": 5,
+          "index": 16057
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: send with promise fails with timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 627,
+          "column": 4,
+          "index": 16064
+        },
+        "end": {
+          "line": 658,
+          "column": 5,
+          "index": 16975
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: setled promise has no extra listeners": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 660,
+          "column": 4,
+          "index": 16982
+        },
+        "end": {
+          "line": 686,
+          "column": 5,
+          "index": 17804
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: aborted request rejects the promise": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 688,
+          "column": 4,
+          "index": 17811
+        },
+        "end": {
+          "line": 715,
+          "column": 5,
+          "index": 18627
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: parseError rejects the promise": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 717,
+          "column": 4,
+          "index": 18634
+        },
+        "end": {
+          "line": 756,
+          "column": 5,
+          "index": 19812
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: canceled promise with abort() in finally does not reject other promises": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 758,
+          "column": 4,
+          "index": 19819
+        },
+        "end": {
+          "line": 821,
+          "column": 5,
+          "index": 21682
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: canceled promise path does not affect other listeners": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 823,
+          "column": 4,
+          "index": 21689
+        },
+        "end": {
+          "line": 871,
+          "column": 5,
+          "index": 23117
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: canceled promise aborts pending request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 873,
+          "column": 4,
+          "index": 23124
+        },
+        "end": {
+          "line": 917,
+          "column": 5,
+          "index": 24380
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: settled promise does not set phase to abort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 919,
+          "column": 4,
+          "index": 24387
+        },
+        "end": {
+          "line": 952,
+          "column": 5,
+          "index": 25300
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: returned promise is bound to request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 954,
+          "column": 4,
+          "index": 25307
+        },
+        "end": {
+          "line": 971,
+          "column": 5,
+          "index": 25758
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "test: returned promise is bound to caller": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 973,
+          "column": 4,
+          "index": 25765
+        },
+        "end": {
+          "line": 990,
+          "column": 5,
+          "index": 26204
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "setUpKlass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1029
+        },
+        "end": {
+          "line": 47,
+          "column": 5,
+          "index": 1210
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: dispose transport on destruct": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1247
+        },
+        "end": {
+          "line": 63,
+          "column": 5,
+          "index": 1459
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: getTransport()": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1466
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1564
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: send() GET": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1598
+        },
+        "end": {
+          "line": 78,
+          "column": 5,
+          "index": 1760
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: drop fragment from URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 80,
+          "column": 4,
+          "index": 1767
+        },
+        "end": {
+          "line": 85,
+          "column": 5,
+          "index": 1950
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: abort request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 91,
+          "column": 4,
+          "index": 1985
+        },
+        "end": {
+          "line": 95,
+          "column": 5,
+          "index": 2088
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: not send data with GET request": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 101,
+          "column": 4,
+          "index": 2122
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2282
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: append string data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4,
+          "index": 2289
+        },
+        "end": {
+          "line": 113,
+          "column": 5,
+          "index": 2479
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: append obj data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 115,
+          "column": 4,
+          "index": 2486
+        },
+        "end": {
+          "line": 120,
+          "column": 5,
+          "index": 2688
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: append qooxdoo obj data to URL with GET request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 122,
+          "column": 4,
+          "index": 2695
+        },
+        "end": {
+          "line": 130,
+          "column": 5,
+          "index": 2969
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: append FormData to URL with POST request": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 132,
+          "column": 4,
+          "index": 2976
+        },
+        "end": {
+          "line": 150,
+          "column": 5,
+          "index": 3503
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: set request header": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 4,
+          "index": 3550
+        },
+        "end": {
+          "line": 161,
+          "column": 5,
+          "index": 3737
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: set request header does not append": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 163,
+          "column": 4,
+          "index": 3744
+        },
+        "end": {
+          "line": 171,
+          "column": 5,
+          "index": 4054
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: get request header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 4,
+          "index": 4061
+        },
+        "end": {
+          "line": 177,
+          "column": 5,
+          "index": 4215
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: remove request header": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 179,
+          "column": 4,
+          "index": 4222
+        },
+        "end": {
+          "line": 189,
+          "column": 5,
+          "index": 4500
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: get all request headers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 4507
+        },
+        "end": {
+          "line": 197,
+          "column": 5,
+          "index": 4807
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: get all request headers includes configuration dependent headers": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 199,
+          "column": 4,
+          "index": 4814
+        },
+        "end": {
+          "line": 207,
+          "column": 5,
+          "index": 5208
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: not append cache parameter to URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5215
+        },
+        "end": {
+          "line": 214,
+          "column": 5,
+          "index": 5422
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: append nocache parameter to URL": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 216,
+          "column": 4,
+          "index": 5429
+        },
+        "end": {
+          "line": 225,
+          "column": 5,
+          "index": 5703
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire readyStateChange": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 231,
+          "column": 4,
+          "index": 5739
+        },
+        "end": {
+          "line": 239,
+          "column": 5,
+          "index": 5975
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire success": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 241,
+          "column": 4,
+          "index": 5982
+        },
+        "end": {
+          "line": 249,
+          "column": 5,
+          "index": 6173
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: not fire success on erroneous status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 6180
+        },
+        "end": {
+          "line": 259,
+          "column": 5,
+          "index": 6397
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire load": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 261,
+          "column": 4,
+          "index": 6404
+        },
+        "end": {
+          "line": 269,
+          "column": 5,
+          "index": 6580
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire loadEnd": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 271,
+          "column": 4,
+          "index": 6587
+        },
+        "end": {
+          "line": 279,
+          "column": 5,
+          "index": 6778
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire abort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 281,
+          "column": 4,
+          "index": 6785
+        },
+        "end": {
+          "line": 289,
+          "column": 5,
+          "index": 6976
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 291,
+          "column": 4,
+          "index": 6983
+        },
+        "end": {
+          "line": 304,
+          "column": 5,
+          "index": 7312
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire error": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 306,
+          "column": 4,
+          "index": 7319
+        },
+        "end": {
+          "line": 314,
+          "column": 5,
+          "index": 7505
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire statusError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 316,
+          "column": 4,
+          "index": 7512
+        },
+        "end": {
+          "line": 324,
+          "column": 5,
+          "index": 7726
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire fail on erroneous status": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 326,
+          "column": 4,
+          "index": 7733
+        },
+        "end": {
+          "line": 334,
+          "column": 5,
+          "index": 7932
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire fail on network error": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 336,
+          "column": 4,
+          "index": 7939
+        },
+        "end": {
+          "line": 344,
+          "column": 5,
+          "index": 8137
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire fail on timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 346,
+          "column": 4,
+          "index": 8144
+        },
+        "end": {
+          "line": 354,
+          "column": 5,
+          "index": 8331
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: fire changePhase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 356,
+          "column": 4,
+          "index": 8338
+        },
+        "end": {
+          "line": 370,
+          "column": 5,
+          "index": 8647
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is unsent": {
+      "jsdoc": {
+        "raw": [
+          ""
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 376,
+          "column": 4,
+          "index": 8682
+        },
+        "end": {
+          "line": 378,
+          "column": 5,
+          "index": 8771
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase was open before send": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 380,
+          "column": 4,
+          "index": 8778
+        },
+        "end": {
+          "line": 392,
+          "column": 5,
+          "index": 9072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is sent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 394,
+          "column": 4,
+          "index": 9079
+        },
+        "end": {
+          "line": 401,
+          "column": 5,
+          "index": 9231
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is loading": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 403,
+          "column": 4,
+          "index": 9238
+        },
+        "end": {
+          "line": 411,
+          "column": 5,
+          "index": 9458
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is load intermediately": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 413,
+          "column": 4,
+          "index": 9465
+        },
+        "end": {
+          "line": 427,
+          "column": 5,
+          "index": 9851
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is success": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 429,
+          "column": 4,
+          "index": 9858
+        },
+        "end": {
+          "line": 434,
+          "column": 5,
+          "index": 9993
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is statusError": {
+      "jsdoc": {
+        "raw": [
+          " Error handling"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 438,
+          "column": 4,
+          "index": 10023
+        },
+        "end": {
+          "line": 443,
+          "column": 5,
+          "index": 10169
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is abort": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 445,
+          "column": 4,
+          "index": 10176
+        },
+        "end": {
+          "line": 457,
+          "column": 5,
+          "index": 10495
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is abort when from cache": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 459,
+          "column": 4,
+          "index": 10502
+        },
+        "end": {
+          "line": 474,
+          "column": 5,
+          "index": 10910
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is abort on readyState DONE when aborted before": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 476,
+          "column": 4,
+          "index": 10917
+        },
+        "end": {
+          "line": 494,
+          "column": 5,
+          "index": 11408
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is abort on readyState DONE when aborting loading": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 496,
+          "column": 4,
+          "index": 11415
+        },
+        "end": {
+          "line": 519,
+          "column": 5,
+          "index": 12019
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is abort on loadEnd when aborted before": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 521,
+          "column": 4,
+          "index": 12026
+        },
+        "end": {
+          "line": 537,
+          "column": 5,
+          "index": 12429
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "test: phase is timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 539,
+          "column": 4,
+          "index": 12436
+        },
+        "end": {
+          "line": 544,
+          "column": 5,
+          "index": 12571
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "getFakeReq": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 546,
+          "column": 4,
+          "index": 12578
+        },
+        "end": {
+          "line": 548,
+          "column": 5,
+          "index": 12644
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "noCache": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 550,
+          "column": 4,
+          "index": 12651
+        },
+        "end": {
+          "line": 555,
+          "column": 5,
+          "index": 12779
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "url"
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "respond": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 557,
+          "column": 4,
+          "index": 12786
+        },
+        "end": {
+          "line": 579,
+          "column": 5,
+          "index": 13280
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "status"
+        },
+        {
+          "name": "error"
+        }
+      ],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "respondError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 581,
+          "column": 4,
+          "index": 13287
+        },
+        "end": {
+          "line": 583,
+          "column": 5,
+          "index": 13343
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "timeout": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 585,
+          "column": 4,
+          "index": 13350
+        },
+        "end": {
+          "line": 587,
+          "column": 5,
+          "index": 13401
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.test.io.request.MRequest"
+      ],
+      "mixin": "qx.test.io.request.MRequest"
+    },
+    "__sandbox": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 102,
+          "column": 4,
+          "index": 2531
+        },
+        "end": {
+          "line": 102,
+          "column": 19,
+          "index": 2546
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__fakeXhr": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2553
+        },
+        "end": {
+          "line": 104,
+          "column": 19,
+          "index": 2568
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__exposeAssertions": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Expose Sinon.JS assertions. Provides methods such",
+          "     * as assertCalled(), assertCalledWith().",
+          "     * (http://sinonjs.org/docs/#assert-expose)",
+          "     * Does not override existing assertion methods.",
+          "     * @ignore(sinon.assert.expose)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Expose Sinon.JS assertions. Provides methods such\n as assertCalled(), assertCalledWith().\n (http://sinonjs.org/docs/#assert-expose)\n Does not override existing assertion methods.</p>"
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "sinon.assert.expose"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 113,
+          "column": 4,
+          "index": 2831
+        },
+        "end": {
+          "line": 121,
+          "column": 5,
+          "index": 3056
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__getSinon": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get the Sinon.JS object.",
+          "     *",
+          "     * @return {Object}",
+          "     * @internal",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get the Sinon.JS object.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ],
+        "@internal": [
+          {
+            "name": "@internal",
+            "body": ""
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3159
+        },
+        "end": {
+          "line": 131,
+          "column": 5,
+          "index": 3222
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "spy": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test spies allow introspection on how a function is used",
+          "     * throughout the system under test.",
+          "     *",
+          "     * * spy()",
+          "     *   Creates an anonymous function that records arguments,",
+          "     *   this value, exceptions and return values for all calls.",
+          "     *",
+          "     * * spy(func)",
+          "     *   Spies on the provided function",
+          "     *",
+          "     * * spy(object, \"method\")",
+          "     *   Creates a spy for object.method and replaces the original method",
+          "     *   with the spy. The spy acts exactly like the original method in all cases.",
+          "     *   The original method can be restored by calling object.method.restore().",
+          "     *   The returned spy is the function object which replaced the original method.",
+          "     *   spy === object.method.",
+          "     *",
+          "     * * spy.withArgs(arg1[, arg2, ...])",
+          "     *   Creates a spy that only records calls when the received arguments matches those",
+          "     *   passed to <code>withArgs</code>.",
+          "     *",
+          "     * A spy has a rich interface to introspect how the wrapped function was used:",
+          "     *",
+          "     * * spy.withArgs(arg1[, arg2, ...]);",
+          "     * * spy.callCount",
+          "     * * spy.called",
+          "     * * spy.calledOnce",
+          "     * * spy.calledTwice",
+          "     * * spy.calledThrice",
+          "     * * spy.firstCall",
+          "     * * spy.secondCall",
+          "     * * spy.thirdCall",
+          "     * * spy.lastCall",
+          "     * * spy.calledBefore(anotherSpy)",
+          "     * * spy.calledAfter(anotherSpy)",
+          "     * * spy.calledOn(obj)",
+          "     * * spy.alwaysCalledOn(obj)",
+          "     * * spy.calledWith(arg1, arg2, ...)",
+          "     * * spy.alwaysCalledWith(arg1, arg2, ...)",
+          "     * * spy.calledWithExactly(arg1, arg2, ...)",
+          "     * * spy.alwaysCalledWithExactly(arg1, arg2, ...)",
+          "     * * spy.calledWithMatch(arg1, arg2, ...);",
+          "     * * spy.alwaysCalledWithMatch(arg1, arg2, ...);",
+          "     * * spy.calledWithNew();",
+          "     * * spy.neverCalledWith(arg1, arg2, ...);",
+          "     * * spy.neverCalledWithMatch(arg1, arg2, ...);",
+          "     * * spy.threw()",
+          "     * * spy.threw(\"TypeError\")",
+          "     * * spy.threw(obj)",
+          "     * * spy.alwaysThrew()",
+          "     * * spy.alwaysThrew(\"TypeError\")",
+          "     * * spy.alwaysThrew(obj)",
+          "     * * spy.returned(obj)",
+          "     * * spy.alwaysReturned(obj)",
+          "     * * spy.getCall(n)",
+          "     * * spy.thisValues",
+          "     * * spy.args",
+          "     * * spy.exceptions",
+          "     * * spy.returnValues",
+          "     * * spy.reset()",
+          "     * * spy.printf(\"format string\", [arg1, arg2, ...])",
+          "     *",
+          "     * See http://sinonjs.org/docs/#spies.",
+          "     *",
+          "     * Note: Spies are transparently added to a sandbox. To restore",
+          "     * the original function for all spies run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @param function_or_object {Function|Object} Spies on the",
+          "     *   provided function or object.",
+          "     * @param method {String?null} The method to spy upon if an object was given.",
+          "     * @return {Function} The wrapped function enhanced with properties and methods",
+          "     *   that allow for introspection. See http://sinonjs.org/docs/#spies.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test spies allow introspection on how a function is used\n throughout the system under test.</p>\n<ul>\n<li>spy()\nCreates an anonymous function that records arguments,\nthis value, exceptions and return values for all calls.</li>\n<li>spy(func)\nSpies on the provided function</li>\n<li>spy(object, \"method\")\nCreates a spy for object.method and replaces the original method\nwith the spy. The spy acts exactly like the original method in all cases.\nThe original method can be restored by calling object.method.restore().\nThe returned spy is the function object which replaced the original method.\nspy === object.method.</li>\n<li>spy.withArgs(arg1[, arg2, …])\nCreates a spy that only records calls when the received arguments matches those\npassed to <code>withArgs</code>.\nA spy has a rich interface to introspect how the wrapped function was used:</li>\n<li>spy.withArgs(arg1[, arg2, …]);</li>\n<li>spy.callCount</li>\n<li>spy.called</li>\n<li>spy.calledOnce</li>\n<li>spy.calledTwice</li>\n<li>spy.calledThrice</li>\n<li>spy.firstCall</li>\n<li>spy.secondCall</li>\n<li>spy.thirdCall</li>\n<li>spy.lastCall</li>\n<li>spy.calledBefore(anotherSpy)</li>\n<li>spy.calledAfter(anotherSpy)</li>\n<li>spy.calledOn(obj)</li>\n<li>spy.alwaysCalledOn(obj)</li>\n<li>spy.calledWith(arg1, arg2, …)</li>\n<li>spy.alwaysCalledWith(arg1, arg2, …)</li>\n<li>spy.calledWithExactly(arg1, arg2, …)</li>\n<li>spy.alwaysCalledWithExactly(arg1, arg2, …)</li>\n<li>spy.calledWithMatch(arg1, arg2, …);</li>\n<li>spy.alwaysCalledWithMatch(arg1, arg2, …);</li>\n<li>spy.calledWithNew();</li>\n<li>spy.neverCalledWith(arg1, arg2, …);</li>\n<li>spy.neverCalledWithMatch(arg1, arg2, …);</li>\n<li>spy.threw()</li>\n<li>spy.threw(\"TypeError\")</li>\n<li>spy.threw(obj)</li>\n<li>spy.alwaysThrew()</li>\n<li>spy.alwaysThrew(\"TypeError\")</li>\n<li>spy.alwaysThrew(obj)</li>\n<li>spy.returned(obj)</li>\n<li>spy.alwaysReturned(obj)</li>\n<li>spy.getCall(n)</li>\n<li>spy.thisValues</li>\n<li>spy.args</li>\n<li>spy.exceptions</li>\n<li>spy.returnValues</li>\n<li>spy.reset()</li>\n<li>spy.printf(\"format string\", [arg1, arg2, …])\nSee http://sinonjs.org/docs/#spies.\nNote: Spies are transparently added to a sandbox. To restore\nthe original function for all spies run <code>this.getSandbox().restore()</code>\nin your <code>tearDown()</code> method.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "function_or_object {Function|Object} Spies on the\n   provided function or object.",
+            "paramName": "function_or_object",
+            "description": " Spies on the\n   provided function or object.",
+            "type": [
+              "Function",
+              "Object"
+            ]
+          },
+          {
+            "name": "@param",
+            "body": "method {String?null} The method to spy upon if an object was given.",
+            "paramName": "method",
+            "description": " The method to spy upon if an object was given.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} The wrapped function enhanced with properties and methods\n   that allow for introspection. See http://sinonjs.org/docs/#spies.",
+            "type": "((...args: any[]) => any)",
+            "description": "The wrapped function enhanced with properties and methods\n   that allow for introspection. See http://sinonjs.org/docs/#spies."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 208,
+          "column": 4,
+          "index": 6076
+        },
+        "end": {
+          "line": 210,
+          "column": 5,
+          "index": 6181
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "function_or_object",
+          "type": [
+            "Function",
+            "Object"
+          ]
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "optional": true,
+          "defaultValue": "null"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "stub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Test stubs are functions (spies) with pre-programmed behavior.",
+          "     *",
+          "     * * stub()",
+          "     *   Creates an anonymous stub function",
+          "     *",
+          "     * * stub(object, \"method\")",
+          "     *   Replaces object.method with a stub function. The original function",
+          "     *   can be restored by calling object.method.restore() (or stub.restore()).",
+          "     *   An exception is thrown if the property is not already a function,",
+          "     *   to help avoid typos when stubbing methods.",
+          "     *",
+          "     * * stub(obj)",
+          "     *   Stubs all the object's methods.",
+          "     *",
+          "     * * stub.withArgs(arg1[, arg2, ...])",
+          "     *   Stubs the method only for the provided arguments. Can be used to create",
+          "     *   a stub that acts differently in response to different arguments.",
+          "     *",
+          "     * A stub has the interface of a spy in addition to methods that allow to define behaviour:",
+          "     *",
+          "     * * stub.returns(obj)",
+          "     * * stub.throws()",
+          "     * * stub.throws(\"TypeError\")",
+          "     * * stub.throws(obj)",
+          "     * * stub.callsArg(index)",
+          "     * * stub.callsArg(0)",
+          "     * * stub.callsArgWith(index, arg1, arg2, ...)",
+          "     *",
+          "     * See http://sinonjs.org/docs/#stubs.",
+          "     *",
+          "     * Note: Stubs are transparently added to a sandbox. To restore",
+          "     * the original function for all stubs run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @param object {Object?null} Object to stub. Creates an anonymous stub function",
+          "     *   if not given.",
+          "     * @param  method {String?null} Replaces object.method with a stub function.",
+          "     *   An exception is thrown if the property is not already a function, to",
+          "     *   help avoid typos when stubbing methods.",
+          "     * @return {Function} A stub. Has the interface of a spy in addition to methods",
+          "     *   that allow to define behaviour. See http://sinonjs.org/docs/#stubs.",
+          "     *",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Test stubs are functions (spies) with pre-programmed behavior.</p>\n<ul>\n<li>stub()\nCreates an anonymous stub function</li>\n<li>stub(object, \"method\")\nReplaces object.method with a stub function. The original function\ncan be restored by calling object.method.restore() (or stub.restore()).\nAn exception is thrown if the property is not already a function,\nto help avoid typos when stubbing methods.</li>\n<li>stub(obj)\nStubs all the object's methods.</li>\n<li>stub.withArgs(arg1[, arg2, …])\nStubs the method only for the provided arguments. Can be used to create\na stub that acts differently in response to different arguments.\nA stub has the interface of a spy in addition to methods that allow to define behaviour:</li>\n<li>stub.returns(obj)</li>\n<li>stub.throws()</li>\n<li>stub.throws(\"TypeError\")</li>\n<li>stub.throws(obj)</li>\n<li>stub.callsArg(index)</li>\n<li>stub.callsArg(0)</li>\n<li>stub.callsArgWith(index, arg1, arg2, …)\nSee http://sinonjs.org/docs/#stubs.\nNote: Stubs are transparently added to a sandbox. To restore\nthe original function for all stubs run <code>this.getSandbox().restore()</code>\nin your <code>tearDown()</code> method.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object?null} Object to stub. Creates an anonymous stub function\n   if not given.",
+            "paramName": "object",
+            "description": " Object to stub. Creates an anonymous stub function\n   if not given.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "Object"
+          },
+          {
+            "name": "@param",
+            "body": "method {String?null} Replaces object.method with a stub function.\n   An exception is thrown if the property is not already a function, to\n   help avoid typos when stubbing methods.",
+            "paramName": "method",
+            "description": " Replaces object.method with a stub function.\n   An exception is thrown if the property is not already a function, to\n   help avoid typos when stubbing methods.",
+            "optional": true,
+            "defaultValue": "null",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} A stub. Has the interface of a spy in addition to methods\n   that allow to define behaviour. See http://sinonjs.org/docs/#stubs.",
+            "type": "((...args: any[]) => any)",
+            "description": "A stub. Has the interface of a spy in addition to methods\n   that allow to define behaviour. See http://sinonjs.org/docs/#stubs."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 256,
+          "column": 4,
+          "index": 8014
+        },
+        "end": {
+          "line": 262,
+          "column": 5,
+          "index": 8234
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Object",
+          "optional": true,
+          "defaultValue": "null"
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "optional": true,
+          "defaultValue": "null"
+        },
+        {
+          "name": "func"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "mock": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Mocks are slightly different from spies and stubs in that you mock an",
+          "     * object, and then set an expectation on one or more of its objects.",
+          "     *",
+          "     * * var mock = mock(obj)",
+          "     *   Creates a mock for the provided object. Does not change the object, but",
+          "     *   returns a mock object to set expectations on the object's methods.",
+          "     *",
+          "     * * var expectation = mock.expects(\"method\")",
+          "     *   Overrides obj.method with a mock function and returns an expectation",
+          "     *   object. Expectations implement both the spy and stub interface plus",
+          "     *   the methods described below.",
+          "     *",
+          "     * Set expectations with following methods. All methods return the expectation",
+          "     * itself, meaning expectations can be chained.",
+          "     *",
+          "     * * expectation.atLeast(number);",
+          "     * * expectation.atMost(number);",
+          "     * * expectation.never();",
+          "     * * expectation.once();",
+          "     * * expectation.twice();",
+          "     * * expectation.thrice();",
+          "     * * expectation.exactly(number);",
+          "     * * expectation.withArgs(arg1, arg2, ...);",
+          "     * * expectation.withExactArgs(arg1, arg2, ...);",
+          "     * * expectation.on(obj);",
+          "     * * expectation.verify();",
+          "     *",
+          "     * See http://sinonjs.org/docs/#mocks.",
+          "     *",
+          "     * @param object {Object} The object to create a mock of.",
+          "     * @return {Function} A mock to set expectations on. See http://sinonjs.org/docs/#mocks.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Mocks are slightly different from spies and stubs in that you mock an\n object, and then set an expectation on one or more of its objects.</p>\n<ul>\n<li>var mock = mock(obj)\nCreates a mock for the provided object. Does not change the object, but\nreturns a mock object to set expectations on the object's methods.</li>\n<li>var expectation = mock.expects(\"method\")\nOverrides obj.method with a mock function and returns an expectation\nobject. Expectations implement both the spy and stub interface plus\nthe methods described below.\nSet expectations with following methods. All methods return the expectation\nitself, meaning expectations can be chained.</li>\n<li>expectation.atLeast(number);</li>\n<li>expectation.atMost(number);</li>\n<li>expectation.never();</li>\n<li>expectation.once();</li>\n<li>expectation.twice();</li>\n<li>expectation.thrice();</li>\n<li>expectation.exactly(number);</li>\n<li>expectation.withArgs(arg1, arg2, …);</li>\n<li>expectation.withExactArgs(arg1, arg2, …);</li>\n<li>expectation.on(obj);</li>\n<li>expectation.verify();\nSee http://sinonjs.org/docs/#mocks.</li>\n</ul>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} The object to create a mock of.",
+            "paramName": "object",
+            "description": " The object to create a mock of.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Function} A mock to set expectations on. See http://sinonjs.org/docs/#mocks.",
+            "type": "((...args: any[]) => any)",
+            "description": "A mock to set expectations on. See http://sinonjs.org/docs/#mocks."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 297,
+          "column": 4,
+          "index": 9608
+        },
+        "end": {
+          "line": 300,
+          "column": 5,
+          "index": 9714
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "((...args: any[]) => any)"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "useFakeXMLHttpRequest": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Replace the native XMLHttpRequest object in browsers that support it with",
+          "     * a custom implementation which does not send actual requests.",
+          "     *",
+          "     * Note: The fake XHR is transparently added to a sandbox. To restore",
+          "     * the original host method run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#useFakeXMLHttpRequest.",
+          "     *",
+          "     * @return {Object}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Replace the native XMLHttpRequest object in browsers that support it with\n a custom implementation which does not send actual requests.\n Note: The fake XHR is transparently added to a sandbox. To restore\n the original host method run <code>this.getSandbox().restore()</code>\n in your <code>tearDown()</code> method.\n See http://sinonjs.org/docs/#useFakeXMLHttpRequest.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 314,
+          "column": 4,
+          "index": 10188
+        },
+        "end": {
+          "line": 316,
+          "column": 5,
+          "index": 10283
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getRequests": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get requests made with faked XHR or server.",
+          "     *",
+          "     * Each request can be queried for url, method, requestHeaders,",
+          "     * status and more.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#FakeXMLHttpRequest.",
+          "     *",
+          "     * @return {Array} Array of faked requests.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get requests made with faked XHR or server.\n Each request can be queried for url, method, requestHeaders,\n status and more.\n See http://sinonjs.org/docs/#FakeXMLHttpRequest.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array} Array of faked requests.",
+            "type": "Array<any>",
+            "description": "Array of faked requests."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 328,
+          "column": 4,
+          "index": 10574
+        },
+        "end": {
+          "line": 330,
+          "column": 5,
+          "index": 10633
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Array<any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "useFakeServer": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * As {@link #useFakeXMLHttpRequest}, but additionally provides a high-level",
+          "     * API to setup server responses. To setup responses, use the server",
+          "     * returned by {@link #getServer}.",
+          "     *",
+          "     * See http://sinonjs.org/docs/#server.",
+          "     *",
+          "     * Note: The fake server is transparently added to a sandbox. To restore",
+          "     * the original host method run <code>this.getSandbox().restore()</code>",
+          "     * in your <code>tearDown()</code> method.",
+          "     *",
+          "     * @return {Object}",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>As {@link #useFakeXMLHttpRequest}, but additionally provides a high-level\n API to setup server responses. To setup responses, use the server\n returned by {@link #getServer}.\n See http://sinonjs.org/docs/#server.\n Note: The fake server is transparently added to a sandbox. To restore\n the original host method run <code>this.getSandbox().restore()</code>\n in your <code>tearDown()</code> method.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}",
+            "type": "Record<any, any>",
+            "description": ""
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 345,
+          "column": 4,
+          "index": 11139
+        },
+        "end": {
+          "line": 347,
+          "column": 5,
+          "index": 11226
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getServer": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get fake server created by {@link #useFakeServer}.",
+          "     *",
+          "     * @return {Object} Fake server.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get fake server created by {@link #useFakeServer}.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Fake server.",
+            "type": "Record<any, any>",
+            "description": "Fake server."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 354,
+          "column": 4,
+          "index": 11351
+        },
+        "end": {
+          "line": 356,
+          "column": 5,
+          "index": 11406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "getSandbox": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get sandbox.",
+          "     *",
+          "     * The sandbox holds all stubs and mocks. Run <code>this.getSandbox().restore()</code>",
+          "     * to restore all mock objects.",
+          "     *",
+          "     * @return {Object}",
+          "     *        Sandbox object.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get sandbox.\n The sandbox holds all stubs and mocks. Run <code>this.getSandbox().restore()</code>\n to restore all mock objects.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object}\n        Sandbox object.",
+            "type": "Record<any, any>",
+            "description": "        Sandbox object."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 367,
+          "column": 4,
+          "index": 11644
+        },
+        "end": {
+          "line": 369,
+          "column": 5,
+          "index": 11693
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "deepStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Returns a deep copied, API-identical stubbed out clone of the given",
+          "     * object.",
+          "     *",
+          "     * In contrast to the shallow {@link #stub}, also stubs out properties that",
+          "     * belong to the prototype chain.",
+          "     *",
+          "     * @param object {Object} Object to stub deeply.",
+          "     * @return {Object} A stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns a deep copied, API-identical stubbed out clone of the given\n object.\n In contrast to the shallow {@link #stub}, also stubs out properties that\n belong to the prototype chain.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub deeply.",
+            "paramName": "object",
+            "description": " Object to stub deeply.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} A stub.",
+            "type": "Record<any, any>",
+            "description": "A stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 382,
+          "column": 4,
+          "index": 12030
+        },
+        "end": {
+          "line": 388,
+          "column": 5,
+          "index": 12199
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "shallowStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Shallowly stub all methods (except excluded) that belong to classes found in inheritance",
+          "     * chain up to (but including) the given class.",
+          "     *",
+          "     * @param object {Object} Object to stub shallowly.",
+          "     * @param targetClazz {Object} Class which marks the end of the chain.",
+          "     * @param propsToExclude {Array} Array with properties which shouldn't be stubbed.",
+          "     * @return {Object} A stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Shallowly stub all methods (except excluded) that belong to classes found in inheritance\n chain up to (but including) the given class.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub shallowly.",
+            "paramName": "object",
+            "description": " Object to stub shallowly.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "targetClazz {Object} Class which marks the end of the chain.",
+            "paramName": "targetClazz",
+            "description": " Class which marks the end of the chain.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "propsToExclude {Array} Array with properties which shouldn't be stubbed.",
+            "paramName": "propsToExclude",
+            "description": " Array with properties which shouldn't be stubbed.",
+            "type": "Array<any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} A stub.",
+            "type": "Record<any, any>",
+            "description": "A stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 400,
+          "column": 4,
+          "index": 12634
+        },
+        "end": {
+          "line": 410,
+          "column": 5,
+          "index": 12981
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "targetClazz",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "propsToExclude",
+          "type": "Array<any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "injectStub": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     *",
+          "     * Changes the given factory (e.g. a constructor) to return a stub. The",
+          "     * method itself returns this stub.",
+          "     *",
+          "     * By default, the stub returned by the changed factory is the object built",
+          "     * by the original factory, but deeply stubbed (see {@link #deepStub}).",
+          "     * Alternatively, a custom stub may be given explicitly that is used instead.",
+          "     *",
+          "     * @param object {Object} Namespace to hold factory, e.g. qx.html.",
+          "     * @param property {String} Property as string that functions as",
+          "     *  constructor, e.g. \"Element\".",
+          "     * @param customStub {Object?} Stub to inject.",
+          "     * @return {Object} Injected stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Changes the given factory (e.g. a constructor) to return a stub. The\n method itself returns this stub.\n By default, the stub returned by the changed factory is the object built\n by the original factory, but deeply stubbed (see {@link #deepStub}).\n Alternatively, a custom stub may be given explicitly that is used instead.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Namespace to hold factory, e.g. qx.html.",
+            "paramName": "object",
+            "description": " Namespace to hold factory, e.g. qx.html.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "property {String} Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "paramName": "property",
+            "description": " Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "customStub {Object?} Stub to inject.",
+            "paramName": "customStub",
+            "description": " Stub to inject.",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Injected stub.",
+            "type": "Record<any, any>",
+            "description": "Injected stub."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 427,
+          "column": 4,
+          "index": 13646
+        },
+        "end": {
+          "line": 432,
+          "column": 5,
+          "index": 13833
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "property",
+          "type": "string"
+        },
+        {
+          "name": "customStub",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "revealMock": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Changes the given factory (e.g. a constructor) to make a mock of the",
+          "     * object returned. The method itself returns this mock.",
+          "     *",
+          "     * By default, the object returned by the changed factory (that a mock is",
+          "     * made of) is a deep copied, API-identical clone of the object built by the",
+          "     * original factory. Alternatively, the object returned can be given",
+          "     * explicitly.",
+          "     *",
+          "     * @param object {Object} Namespace to hold factory, e.g. qx.html.",
+          "     * @param property {String} Property as string that functions as",
+          "     *  constructor, e.g. \"Element\".",
+          "     * @param customObject {Object?} Object to inject.",
+          "     * @return {Object} Mock of the object built.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Changes the given factory (e.g. a constructor) to make a mock of the\n object returned. The method itself returns this mock.\n By default, the object returned by the changed factory (that a mock is\n made of) is a deep copied, API-identical clone of the object built by the\n original factory. Alternatively, the object returned can be given\n explicitly.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Namespace to hold factory, e.g. qx.html.",
+            "paramName": "object",
+            "description": " Namespace to hold factory, e.g. qx.html.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "property {String} Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "paramName": "property",
+            "description": " Property as string that functions as\n  constructor, e.g. \"Element\".",
+            "type": "string"
+          },
+          {
+            "name": "@param",
+            "body": "customObject {Object?} Object to inject.",
+            "paramName": "customObject",
+            "description": " Object to inject.",
+            "optional": true,
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Mock of the object built.",
+            "type": "Record<any, any>",
+            "description": "Mock of the object built."
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 449,
+          "column": 4,
+          "index": 14540
+        },
+        "end": {
+          "line": 454,
+          "column": 5,
+          "index": 14751
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "property",
+          "type": "string"
+        },
+        {
+          "name": "customObject",
+          "type": "Object",
+          "optional": true
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__deepClone": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Deep clone object by copying properties from prototype.",
+          "     *",
+          "     * @param obj {Object} Object to prepare (that is, clone).",
+          "     * @return {Object} Prepared (deeply cloned) object.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Deep clone object by copying properties from prototype.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "obj {Object} Object to prepare (that is, clone).",
+            "paramName": "obj",
+            "description": " Object to prepare (that is, clone).",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Prepared (deeply cloned) object.",
+            "type": "Record<any, any>",
+            "description": "Prepared (deeply cloned) object."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 462,
+          "column": 4,
+          "index": 14964
+        },
+        "end": {
+          "line": 471,
+          "column": 5,
+          "index": 15132
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "obj",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Record<any, any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__getOwnProperties": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Get the object’s own properties.",
+          "     *",
+          "     * @param object {Object} Object to analyze.",
+          "     * @param targetClazz {Object} Class which marks the end of the chain.",
+          "     * @return {Array} Array of the object’s own properties.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get the object’s own properties.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to analyze.",
+            "paramName": "object",
+            "description": " Object to analyze.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "targetClazz {Object} Class which marks the end of the chain.",
+            "paramName": "targetClazz",
+            "description": " Class which marks the end of the chain.",
+            "type": "Record<any, any>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array} Array of the object’s own properties.",
+            "type": "Array<any>",
+            "description": "Array of the object’s own properties."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 480,
+          "column": 4,
+          "index": 15387
+        },
+        "end": {
+          "line": 511,
+          "column": 5,
+          "index": 16194
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "targetClazz",
+          "type": "Record<any, any>"
+        }
+      ],
+      "returnType": {
+        "type": "Array<any>"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "__stubProperty": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Safely stub property.",
+          "     *",
+          "     * @param object {Object} Object to stub.",
+          "     * @param prop {String} Property to stub.",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Safely stub property.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object} Object to stub.",
+            "paramName": "object",
+            "description": " Object to stub.",
+            "type": "Record<any, any>"
+          },
+          {
+            "name": "@param",
+            "body": "prop {String} Property to stub.",
+            "paramName": "prop",
+            "description": " Property to stub.",
+            "type": "string"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 519,
+          "column": 4,
+          "index": 16345
+        },
+        "end": {
+          "line": 526,
+          "column": 5,
+          "index": 16560
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "object",
+          "type": "Record<any, any>"
+        },
+        {
+          "name": "prop",
+          "type": "string"
+        }
+      ],
+      "appearsIn": [
+        "qx.dev.unit.MMock"
+      ],
+      "mixin": "qx.dev.unit.MMock"
+    },
+    "hasHttp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application has been loaded over HTTP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if HTTP is currently used",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application has been loaded over HTTP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if HTTP is currently used",
+            "type": "boolean",
+            "description": "<code>true</code> if HTTP is currently used"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 65,
+          "column": 4,
+          "index": 1851
+        },
+        "end": {
+          "line": 67,
+          "column": 5,
+          "index": 1930
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the server supports PHP.",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if PHP is supported by the backend",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the server supports PHP.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if PHP is supported by the backend",
+            "type": "boolean",
+            "description": "<code>true</code> if PHP is supported by the backend"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 74,
+          "column": 4,
+          "index": 2080
+        },
+        "end": {
+          "line": 106,
+          "column": 5,
+          "index": 2978
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGuiApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Standalone",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a standalone (GUI)",
+          "     * application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Standalone</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a standalone (GUI)\n application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a standalone (GUI)\n application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 114,
+          "column": 4,
+          "index": 3178
+        },
+        "end": {
+          "line": 122,
+          "column": 5,
+          "index": 3365
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasInlineApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Inline",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is an inline application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Inline</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is an inline application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is an inline application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 129,
+          "column": 4,
+          "index": 3545
+        },
+        "end": {
+          "line": 135,
+          "column": 5,
+          "index": 3709
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNativeApp": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application extends qx.application.Native",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the application is a native application",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application extends qx.application.Native</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the application is a native application",
+            "type": "boolean",
+            "description": "<code>true</code> if the application is a native application"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 142,
+          "column": 4,
+          "index": 3888
+        },
+        "end": {
+          "line": 148,
+          "column": 5,
+          "index": 4052
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasChrome": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Google Chrome",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Google Chrome",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Google Chrome</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Google Chrome",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Google Chrome"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 155,
+          "column": 4,
+          "index": 4218
+        },
+        "end": {
+          "line": 157,
+          "column": 5,
+          "index": 4304
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasFirefox": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Firefox",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Firefox",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Firefox</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Firefox",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Firefox"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 164,
+          "column": 4,
+          "index": 4458
+        },
+        "end": {
+          "line": 166,
+          "column": 5,
+          "index": 4546
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasGecko": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Gecko engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Gecko engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Mozilla Gecko",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Mozilla Gecko"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 4,
+          "index": 4738
+        },
+        "end": {
+          "line": 175,
+          "column": 5,
+          "index": 4820
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasIe": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in Internet Explorer",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is Internet Explorer",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in Internet Explorer</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is Internet Explorer",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is Internet Explorer"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 182,
+          "column": 4,
+          "index": 4994
+        },
+        "end": {
+          "line": 184,
+          "column": 5,
+          "index": 5072
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasMshtml": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the MSHTML engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is MSHTML",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the MSHTML engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is MSHTML",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is MSHTML"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 191,
+          "column": 4,
+          "index": 5258
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 5342
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasOpera": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Opera engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Opera",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Opera engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Opera",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Opera"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 200,
+          "column": 4,
+          "index": 5526
+        },
+        "end": {
+          "line": 202,
+          "column": 5,
+          "index": 5608
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasWebkit": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running in a browser using the Webkit engine",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser engine is Webkit",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running in a browser using the Webkit engine</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser engine is Webkit",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser engine is Webkit"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 209,
+          "column": 4,
+          "index": 5794
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5878
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoOsx": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is NOT running on OS X",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the operating system is NOT OX X",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is NOT running on OS X</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the operating system is NOT OX X",
+            "type": "boolean",
+            "description": "<code>true</code> if the operating system is NOT OX X"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 218,
+          "column": 4,
+          "index": 6043
+        },
+        "end": {
+          "line": 220,
+          "column": 5,
+          "index": 6135
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin7": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 7",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 7",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 7</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 7",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 7"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 227,
+          "column": 4,
+          "index": 6299
+        },
+        "end": {
+          "line": 232,
+          "column": 5,
+          "index": 6484
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoWin10": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on Windows 10",
+          "     *",
+          "     * @return {Boolean} <code>false</code> if operating system is Windows 10",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on Windows 10</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>false</code> if operating system is Windows 10",
+            "type": "boolean",
+            "description": "<code>false</code> if operating system is Windows 10"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 239,
+          "column": 4,
+          "index": 6650
+        },
+        "end": {
+          "line": 244,
+          "column": 5,
+          "index": 6839
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasNoChromeOnLinux": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is not running in a Google Chrome browser on Linux",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is not running in a Google Chrome browser on Linux</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the browser is not Google Chrome on Linux",
+            "type": "boolean",
+            "description": "<code>true</code> if the browser is not Google Chrome on Linux"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 251,
+          "column": 4,
+          "index": 7041
+        },
+        "end": {
+          "line": 256,
+          "column": 5,
+          "index": 7225
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "hasAsyncFunctions": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Checks if the application is running on a client supporting async functions",
+          "     *",
+          "     * @return {Boolean} <code>true</code> if the client supports async functions",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Checks if the application is running on a client supporting async functions</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if the client supports async functions",
+            "type": "boolean",
+            "description": "<code>true</code> if the client supports async functions"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 263,
+          "column": 4,
+          "index": 7420
+        },
+        "end": {
+          "line": 265,
+          "column": 5,
+          "index": 7514
+        }
+      },
+      "type": "function",
+      "params": [],
+      "returnType": {
+        "type": "boolean"
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    },
+    "require": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Verifies a list of infrastructure requirements by checking for",
+          "     * corresponding \"has\" methods. If no such method was found,",
+          "     * {@link qx.core.Environment} will be checked for a key matching the given",
+          "     * feature name. Note that asynchronous environment checks are not supported!",
+          "     *",
+          "     * @throws {qx.dev.unit.RequirementError} if any requirement check returned",
+          "     *   <code>false</code>",
+          "     * @throws {Error} if no valid check was found for a feature.",
+          "     *",
+          "     * @param featureList {String[]} List of infrastructure requirements",
+          "     * @lint environmentNonLiteralKey(feature)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Verifies a list of infrastructure requirements by checking for\n corresponding \"has\" methods. If no such method was found,\n {@link qx.core.Environment} will be checked for a key matching the given\n feature name. Note that asynchronous environment checks are not supported!</p>"
+          }
+        ],
+        "@throws": [
+          {
+            "name": "@throws",
+            "body": "{qx.dev.unit.RequirementError} if any requirement check returned\n   <code>false</code>",
+            "type": "qx.dev.unit.RequirementError",
+            "description": " if any requirement check returned\n   <code>false</code>"
+          },
+          {
+            "name": "@throws",
+            "body": "{Error} if no valid check was found for a feature.",
+            "type": "Error",
+            "description": " if no valid check was found for a feature."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "featureList {String[]} List of infrastructure requirements",
+            "paramName": "featureList",
+            "description": " List of infrastructure requirements",
+            "type": "String[]"
+          }
+        ],
+        "@lint": [
+          {
+            "name": "@lint",
+            "body": "environmentNonLiteralKey(feature)"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1452
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2994
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "featureList",
+          "type": "String[]"
+        }
+      ],
+      "mixin": "qx.dev.unit.MRequirements",
+      "appearsIn": [
+        "qx.dev.unit.MRequirements",
+        "qx.dev.unit.MRequirementsBasic"
+      ]
+    }
+  },
+  "statics": {
+    "__hasPhp": {
+      "jsdoc": {
+        "raw": [
+          "* @type {Boolean} Result of {@link #hasPhp}. Stored as class member to avoid",
+          "     * repeating the check. "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{Boolean} Result of {@link #hasPhp}. Stored as class member to avoid\n repeating the check."
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 51,
+          "column": 4,
+          "index": 1478
+        },
+        "end": {
+          "line": 51,
+          "column": 18,
+          "index": 1492
+        }
+      },
+      "appearsIn": [
+        "qx.dev.unit.MRequirements"
+      ],
+      "mixin": "qx.dev.unit.MRequirements"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "properties",
+    "pageUrl",
+    "check",
+    "init",
+    "componentName",
+    "qxapp",
+    "pages",
+    "MPage"
+  ],
+  "sources": [
+    "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/MPage.js"
+  ],
+  "sourcesContent": [
+    "qx.Mixin.define(\"qxapp.pages.MPage\",\n{\n    properties : {\n\n    /** Page's url made externally available */\n    pageUrl: {\n      check: \"String\",\n      init: null\n    },\n\n    /** Associated Inertia component name */\n    componentName: {\n        check: \"String\",\n        init: null\n    }\n\n  }\n});\n"
+  ],
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,mBAAmB,EACnC;IACIC,UAAU,EAAG;MAEb;MACAC,OAAO,EAAE;QACPC,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACR,CAAC;MAED;MACAC,aAAa,EAAE;QACXF,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACV;IAEF;EACF,CAAC,CAAC;EAjBFE,KAAK,CAACC,KAAK,CAACC,KAAK,CAACV,aAAa,GAAGA,aAAa;AAAC",
+  "ignoreList": []
+}

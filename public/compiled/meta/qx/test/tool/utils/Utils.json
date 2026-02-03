@@ -1,0 +1,100 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338249,
+  "lastModifiedIso": "2026-01-03T20:15:38.249Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/tool/utils/Utils.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 16,
+      "column": 0,
+      "index": 392
+    },
+    "end": {
+      "line": 70,
+      "column": 3,
+      "index": 2055
+    }
+  },
+  "className": "qx.test.tool.utils.Utils",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Henner Kollmann ",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testStripSourceMapWriteStreamWholeStream": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 20,
+          "column": 4,
+          "index": 488
+        },
+        "end": {
+          "line": 35,
+          "column": 5,
+          "index": 993
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStripSourceMapWriteStreamChunked1": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4,
+          "index": 1000
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1514
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStripSourceMapWriteStreamChunked2": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1521
+        },
+        "end": {
+          "line": 68,
+          "column": 5,
+          "index": 2047
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

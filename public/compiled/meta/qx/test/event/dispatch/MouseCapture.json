@@ -1,0 +1,326 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471337458,
+  "lastModifiedIso": "2026-01-03T20:15:37.458Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/event/dispatch/MouseCapture.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 472
+    },
+    "end": {
+      "line": 229,
+      "column": 3,
+      "index": 6016
+    }
+  },
+  "className": "qx.test.event.dispatch.MouseCapture",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 579
+        },
+        "end": {
+          "line": 73,
+          "column": 5,
+          "index": 2096
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4,
+          "index": 2103
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2410
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "logEvent": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2417
+        },
+        "end": {
+          "line": 90,
+          "column": 5,
+          "index": 2485
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "e"
+        }
+      ],
+      "appearsIn": []
+    },
+    "onLoseCapture": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 4,
+          "index": 2492
+        },
+        "end": {
+          "line": 94,
+          "column": 5,
+          "index": 2554
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "fire": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 96,
+          "column": 4,
+          "index": 2561
+        },
+        "end": {
+          "line": 102,
+          "column": 5,
+          "index": 2761
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "target"
+        },
+        {
+          "name": "type"
+        },
+        {
+          "name": "bubble"
+        }
+      ],
+      "appearsIn": []
+    },
+    "testNoCapture": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 104,
+          "column": 4,
+          "index": 2768
+        },
+        "end": {
+          "line": 107,
+          "column": 5,
+          "index": 2894
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testContainerCapture": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 109,
+          "column": 4,
+          "index": 2901
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3345
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testNoContainerCapture": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3352
+        },
+        "end": {
+          "line": 139,
+          "column": 5,
+          "index": 3805
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCaptureBubbling": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 141,
+          "column": 4,
+          "index": 3812
+        },
+        "end": {
+          "line": 147,
+          "column": 5,
+          "index": 4021
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoseCaptureOnClick": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 149,
+          "column": 4,
+          "index": 4028
+        },
+        "end": {
+          "line": 163,
+          "column": 5,
+          "index": 4404
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoseCaptureOnWindowBlur": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 165,
+          "column": 4,
+          "index": 4411
+        },
+        "end": {
+          "line": 179,
+          "column": 5,
+          "index": 4801
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoseCaptureOnWindowFocus": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 181,
+          "column": 4,
+          "index": 4808
+        },
+        "end": {
+          "line": 195,
+          "column": 5,
+          "index": 5200
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoseCaptureOnWindowScroll": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 197,
+          "column": 4,
+          "index": 5207
+        },
+        "end": {
+          "line": 211,
+          "column": 5,
+          "index": 5601
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLoseCaptureOnCaptureChange": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 213,
+          "column": 4,
+          "index": 5608
+        },
+        "end": {
+          "line": 227,
+          "column": 5,
+          "index": 6008
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

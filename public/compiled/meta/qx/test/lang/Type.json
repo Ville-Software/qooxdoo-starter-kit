@@ -1,0 +1,273 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338220,
+  "lastModifiedIso": "2026-01-03T20:15:38.220Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/lang/Type.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 19,
+      "column": 0,
+      "index": 477
+    },
+    "end": {
+      "line": 399,
+      "column": 3,
+      "index": 12920
+    }
+  },
+  "className": "qx.test.lang.Type",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testIsString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 23,
+          "column": 4,
+          "index": 566
+        },
+        "end": {
+          "line": 43,
+          "column": 5,
+          "index": 1418
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsPojo": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 45,
+          "column": 4,
+          "index": 1425
+        },
+        "end": {
+          "line": 193,
+          "column": 5,
+          "index": 5586
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsArray": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 195,
+          "column": 4,
+          "index": 5593
+        },
+        "end": {
+          "line": 214,
+          "column": 5,
+          "index": 6345
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsObject": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 216,
+          "column": 4,
+          "index": 6352
+        },
+        "end": {
+          "line": 243,
+          "column": 5,
+          "index": 7511
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsRegExp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 245,
+          "column": 4,
+          "index": 7518
+        },
+        "end": {
+          "line": 262,
+          "column": 5,
+          "index": 8163
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsNumber": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 264,
+          "column": 4,
+          "index": 8170
+        },
+        "end": {
+          "line": 284,
+          "column": 5,
+          "index": 8950
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsBoolean": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 286,
+          "column": 4,
+          "index": 8957
+        },
+        "end": {
+          "line": 307,
+          "column": 5,
+          "index": 9727
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsFunction": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 309,
+          "column": 4,
+          "index": 9734
+        },
+        "end": {
+          "line": 328,
+          "column": 5,
+          "index": 10410
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsDate": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 330,
+          "column": 4,
+          "index": 10417
+        },
+        "end": {
+          "line": 351,
+          "column": 5,
+          "index": 11269
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsError": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 353,
+          "column": 4,
+          "index": 11276
+        },
+        "end": {
+          "line": 375,
+          "column": 5,
+          "index": 12168
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIsPromise": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * @ignore(Promise)",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@ignore": [
+          {
+            "name": "@ignore",
+            "body": "Promise"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 380,
+          "column": 4,
+          "index": 12215
+        },
+        "end": {
+          "line": 397,
+          "column": 5,
+          "index": 12912
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

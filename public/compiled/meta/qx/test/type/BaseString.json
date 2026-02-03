@@ -1,0 +1,386 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335402,
+  "lastModifiedIso": "2026-01-03T20:15:35.402Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/type/BaseString.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 24,
+      "column": 0,
+      "index": 545
+    },
+    "end": {
+      "line": 131,
+      "column": 3,
+      "index": 3150
+    }
+  },
+  "className": "qx.test.type.BaseString",
+  "jsdoc": {
+    "raw": [
+      "*",
+      " * @ignore(qx.String)",
+      " "
+    ],
+    "@description": [
+      {
+        "name": "@description",
+        "body": ""
+      }
+    ],
+    "@ignore": [
+      {
+        "name": "@ignore",
+        "body": "qx.String"
+      }
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testToString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 640
+        },
+        "end": {
+          "line": 31,
+          "column": 5,
+          "index": 744
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testValueOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 4,
+          "index": 751
+        },
+        "end": {
+          "line": 36,
+          "column": 5,
+          "index": 874
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testUpperCase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4,
+          "index": 881
+        },
+        "end": {
+          "line": 41,
+          "column": 5,
+          "index": 1000
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 43,
+          "column": 4,
+          "index": 1007
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1118
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testPlusOperator": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 4,
+          "index": 1125
+        },
+        "end": {
+          "line": 51,
+          "column": 5,
+          "index": 1261
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCharAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 53,
+          "column": 4,
+          "index": 1268
+        },
+        "end": {
+          "line": 56,
+          "column": 5,
+          "index": 1377
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testcharCodeAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 58,
+          "column": 4,
+          "index": 1384
+        },
+        "end": {
+          "line": 61,
+          "column": 5,
+          "index": 1501
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testlastIndexOf": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 63,
+          "column": 4,
+          "index": 1508
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1627
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLength": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1634
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1738
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testLowerCase": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1745
+        },
+        "end": {
+          "line": 76,
+          "column": 5,
+          "index": 1864
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSubstringOneArgument": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 4,
+          "index": 1871
+        },
+        "end": {
+          "line": 81,
+          "column": 5,
+          "index": 1998
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSubstringTwoArguments": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 83,
+          "column": 4,
+          "index": 2005
+        },
+        "end": {
+          "line": 86,
+          "column": 5,
+          "index": 2135
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSearchString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 88,
+          "column": 4,
+          "index": 2142
+        },
+        "end": {
+          "line": 91,
+          "column": 5,
+          "index": 2257
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testSearchRegExp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 93,
+          "column": 4,
+          "index": 2264
+        },
+        "end": {
+          "line": 96,
+          "column": 5,
+          "index": 2379
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testReplace": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4,
+          "index": 2386
+        },
+        "end": {
+          "line": 101,
+          "column": 5,
+          "index": 2507
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmptyString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4,
+          "index": 2514
+        },
+        "end": {
+          "line": 109,
+          "column": 5,
+          "index": 2708
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testExtend": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4,
+          "index": 2715
+        },
+        "end": {
+          "line": 124,
+          "column": 5,
+          "index": 3020
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCodePointAt": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 126,
+          "column": 4,
+          "index": 3027
+        },
+        "end": {
+          "line": 129,
+          "column": 5,
+          "index": 3142
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

@@ -1,0 +1,240 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471338338,
+  "lastModifiedIso": "2026-01-03T20:15:38.338Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/layer/WidgetCell.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 510
+    },
+    "end": {
+      "line": 158,
+      "column": 3,
+      "index": 4245
+    }
+  },
+  "className": "qx.test.ui.virtual.layer.WidgetCell",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2004-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "   * Jonathan Weiß (jonathan_rass)",
+      "   * Fabian Jakobs (fjakobs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.test.ui.virtual.layer.LayerTestCase",
+  "members": {
+    "setUp": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 635
+        },
+        "end": {
+          "line": 28,
+          "column": 5,
+          "index": 695
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "tearDown": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 4,
+          "index": 702
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 883
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase",
+        "qx.test.ui.LayoutTestCase"
+      ]
+    },
+    "_createLayer": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 890
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 967
+        }
+      },
+      "type": "function",
+      "params": [],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase"
+      ]
+    },
+    "getCellWidget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 974
+        },
+        "end": {
+          "line": 48,
+          "column": 5,
+          "index": 1169
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "row"
+        },
+        {
+          "name": "column"
+        }
+      ],
+      "appearsIn": []
+    },
+    "poolCellWidget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 50,
+          "column": 4,
+          "index": 1176
+        },
+        "end": {
+          "line": 54,
+          "column": 5,
+          "index": 1314
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "widget"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_assertCells": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4,
+          "index": 1321
+        },
+        "end": {
+          "line": 71,
+          "column": 5,
+          "index": 1884
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "firstRow"
+        },
+        {
+          "name": "firstColumn"
+        },
+        {
+          "name": "rowCount"
+        },
+        {
+          "name": "columnCount"
+        },
+        {
+          "name": "msg"
+        }
+      ],
+      "overriddenFrom": "qx.test.ui.virtual.layer.LayerTestCase",
+      "appearsIn": [
+        "qx.test.ui.virtual.layer.LayerTestCase"
+      ]
+    },
+    "testGetRenderedCellWidget": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 73,
+          "column": 4,
+          "index": 1891
+        },
+        "end": {
+          "line": 123,
+          "column": 5,
+          "index": 3433
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testEmptyCells": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 125,
+          "column": 4,
+          "index": 3440
+        },
+        "end": {
+          "line": 156,
+          "column": 5,
+          "index": 4237
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}

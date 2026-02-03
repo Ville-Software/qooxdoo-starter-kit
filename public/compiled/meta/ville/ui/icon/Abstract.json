@@ -1,0 +1,348 @@
+{
+  "version": 0.3,
+  "lastModified": 1767823215883,
+  "lastModifiedIso": "2026-01-07T22:00:15.883Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/ui/icon/Abstract.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 1,
+      "column": 0,
+      "index": 0
+    },
+    "end": {
+      "line": 109,
+      "column": 5,
+      "index": 2316
+    }
+  },
+  "className": "ville.ui.icon.Abstract",
+  "jsdoc": null,
+  "superClass": "ville.ui.core.Widget",
+  "isSingleton": false,
+  "abstract": true,
+  "construct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 7,
+        "column": 4,
+        "index": 111
+      },
+      "end": {
+        "line": 11,
+        "column": 5,
+        "index": 149
+      }
+    }
+  },
+  "properties": {
+    "xmlns": {
+      "location": {
+        "start": {
+          "line": 15,
+          "column": 8,
+          "index": 179
+        },
+        "end": {
+          "line": 19,
+          "column": 9,
+          "index": 303
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "http://www.w3.org/2000/svg",
+        "nullable": false
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "viewBox": {
+      "location": {
+        "start": {
+          "line": 21,
+          "column": 8,
+          "index": 314
+        },
+        "end": {
+          "line": 28,
+          "column": 9,
+          "index": 523
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "0 0 24 24",
+        "apply": "_applyViewBox",
+        "nullable": false,
+        "themeable": true,
+        "event": "changeViewBox"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "fill": {
+      "location": {
+        "start": {
+          "line": 30,
+          "column": 8,
+          "index": 534
+        },
+        "end": {
+          "line": 37,
+          "column": 9,
+          "index": 728
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "none",
+        "apply": "_applyFill",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeFill"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "strokeWidth": {
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 8,
+          "index": 739
+        },
+        "end": {
+          "line": 46,
+          "column": 9,
+          "index": 951
+        }
+      },
+      "json": {
+        "check": "Number",
+        "init": "1",
+        "apply": "_applyStrokeWidth",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeStrokeWidth"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "stroke": {
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 8,
+          "index": 962
+        },
+        "end": {
+          "line": 54,
+          "column": 9,
+          "index": 1135
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "currentColor",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeStroke"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "strokeLinecap": {
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 8,
+          "index": 1146
+        },
+        "end": {
+          "line": 62,
+          "column": 9,
+          "index": 1326
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "round",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeStrokeLinecap"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    },
+    "strokeLinejoin": {
+      "location": {
+        "start": {
+          "line": 64,
+          "column": 8,
+          "index": 1337
+        },
+        "end": {
+          "line": 70,
+          "column": 9,
+          "index": 1519
+        }
+      },
+      "json": {
+        "check": "String",
+        "init": "round",
+        "nullable": true,
+        "themeable": true,
+        "event": "changeStrokeLinejoin"
+      },
+      "jsdoc": null,
+      "appearsIn": []
+    }
+  },
+  "members": {
+    "__fulliconmarkup": {
+      "jsdoc": null,
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 76,
+          "column": 8,
+          "index": 1553
+        },
+        "end": {
+          "line": 76,
+          "column": 31,
+          "index": 1576
+        }
+      },
+      "appearsIn": []
+    },
+    "_applyViewBox": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 78,
+          "column": 8,
+          "index": 1587
+        },
+        "end": {
+          "line": 82,
+          "column": 9,
+          "index": 1716
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyFill": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 8,
+          "index": 1727
+        },
+        "end": {
+          "line": 88,
+          "column": 9,
+          "index": 1850
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyStrokeWidth": {
+      "jsdoc": null,
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 90,
+          "column": 8,
+          "index": 1861
+        },
+        "end": {
+          "line": 94,
+          "column": 9,
+          "index": 1999
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    },
+    "_applyCssUtilityClass": {
+      "jsdoc": {
+        "raw": [
+          " overridden"
+        ]
+      },
+      "access": "protected",
+      "location": {
+        "start": {
+          "line": 97,
+          "column": 8,
+          "index": 2032
+        },
+        "end": {
+          "line": 102,
+          "column": 9,
+          "index": 2228
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "old"
+        }
+      ],
+      "appearsIn": []
+    }
+  },
+  "destruct": {
+    "type": "function",
+    "params": [],
+    "location": {
+      "start": {
+        "line": 106,
+        "column": 4,
+        "index": 2242
+      },
+      "end": {
+        "line": 108,
+        "column": 5,
+        "index": 2310
+      }
+    }
+  },
+  "statics": {}
+}

@@ -1,0 +1,180 @@
+{
+  "version": 0.3,
+  "lastModified": 1767471335835,
+  "lastModifiedIso": "2026-01-03T20:15:35.835Z",
+  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/ColorUtil.js",
+  "type": "class",
+  "location": {
+    "start": {
+      "line": 20,
+      "column": 0,
+      "index": 515
+    },
+    "end": {
+      "line": 156,
+      "column": 3,
+      "index": 3653
+    }
+  },
+  "className": "qx.test.util.ColorUtil",
+  "jsdoc": {
+    "raw": [
+      " ************************************************************************",
+      "",
+      "   qooxdoo - the new era of web development",
+      "",
+      "   http://qooxdoo.org",
+      "",
+      "   Copyright:",
+      "     2007-2009 1&1 Internet AG, Germany, http://www.1und1.de",
+      "",
+      "   License:",
+      "     MIT: https://opensource.org/licenses/MIT",
+      "     See the LICENSE file in the project's top-level directory for details.",
+      "",
+      "   Authors:",
+      "     * Jonathan Weiß (jonathan_rass)",
+      "     * Christian Hagendorn (cs)",
+      "",
+      "************************************************************************ "
+    ]
+  },
+  "superClass": "qx.dev.unit.TestCase",
+  "members": {
+    "testRgbToRgbString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 609
+        },
+        "end": {
+          "line": 44,
+          "column": 5,
+          "index": 1110
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testCssStringToRgb": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 46,
+          "column": 4,
+          "index": 1117
+        },
+        "end": {
+          "line": 66,
+          "column": 5,
+          "index": 1612
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testHex3StringToHex6String": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 68,
+          "column": 4,
+          "index": 1619
+        },
+        "end": {
+          "line": 97,
+          "column": 5,
+          "index": 2317
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testRgbToHexString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 99,
+          "column": 4,
+          "index": 2324
+        },
+        "end": {
+          "line": 115,
+          "column": 5,
+          "index": 2772
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testStringToRgbString": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 117,
+          "column": 4,
+          "index": 2779
+        },
+        "end": {
+          "line": 132,
+          "column": 5,
+          "index": 3182
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testScale": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 134,
+          "column": 4,
+          "index": 3189
+        },
+        "end": {
+          "line": 143,
+          "column": 5,
+          "index": 3406
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    },
+    "testAdjust": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4,
+          "index": 3412
+        },
+        "end": {
+          "line": 154,
+          "column": 5,
+          "index": 3645
+        }
+      },
+      "type": "function",
+      "params": [],
+      "appearsIn": []
+    }
+  },
+  "statics": {},
+  "properties": {}
+}
