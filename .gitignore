@@ -2,11 +2,13 @@
 /bootstrap/ssr
 /node_modules
 /public/build
+/public/compiled
 /public/hot
 /public/storage
 /resources/js/actions
 /resources/js/routes
 /resources/js/wayfinder
+/resources/qxapp/qx_packages
 /storage/*.key
 /storage/pail
 /vendor
