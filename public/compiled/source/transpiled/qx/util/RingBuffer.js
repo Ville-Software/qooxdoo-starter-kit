@@ -51,17 +51,17 @@
     },
     members: {
       //Next slot in ringbuffer to use
-      __nextIndexToStoreTo__P_185_0: 0,
+      __nextIndexToStoreTo__P_193_0: 0,
       //Number of elements in ring buffer
-      __entriesStored__P_185_1: 0,
+      __entriesStored__P_193_1: 0,
       //Was a mark set?
-      __isMarkActive__P_185_2: false,
+      __isMarkActive__P_193_2: false,
       //How many elements were stored since setting of mark?
-      __entriesStoredSinceMark__P_185_3: 0,
+      __entriesStoredSinceMark__P_193_3: 0,
       //ring buffer
-      __entries__P_185_4: null,
+      __entries__P_193_4: null,
       //Maximum number of messages to store. Could be converted to a qx property.
-      __maxEntries__P_185_5: null,
+      __maxEntries__P_193_5: null,
       /**
        * Set the maximum number of messages to hold. If null the number of
        * messages is not limited.
@@ -71,7 +71,7 @@
        * @param maxEntries {Integer} the maximum number of messages to hold
        */
       setMaxEntries(maxEntries) {
-        this.__maxEntries__P_185_5 = maxEntries;
+        this.__maxEntries__P_193_5 = maxEntries;
         this.clear();
       },
       /**
@@ -80,7 +80,7 @@
        * @return {Integer}
        */
       getMaxEntries() {
-        return this.__maxEntries__P_185_5;
+        return this.__maxEntries__P_193_5;
       },
       /**
        * Adds a single entry
@@ -88,18 +88,18 @@
        * @param entry {var} The data to store
        */
       addEntry(entry) {
-        this.__entries__P_185_4[this.__nextIndexToStoreTo__P_185_0] = entry;
-        this.__nextIndexToStoreTo__P_185_0 = this.__addToIndex__P_185_6(this.__nextIndexToStoreTo__P_185_0, 1);
+        this.__entries__P_193_4[this.__nextIndexToStoreTo__P_193_0] = entry;
+        this.__nextIndexToStoreTo__P_193_0 = this.__addToIndex__P_193_6(this.__nextIndexToStoreTo__P_193_0, 1);
 
         //Count # of stored entries
         var max = this.getMaxEntries();
-        if (this.__entriesStored__P_185_1 < max) {
-          this.__entriesStored__P_185_1++;
+        if (this.__entriesStored__P_193_1 < max) {
+          this.__entriesStored__P_193_1++;
         }
 
         //Count # of stored elements since last mark call
-        if (this.__isMarkActive__P_185_2 && this.__entriesStoredSinceMark__P_185_3 < max) {
-          this.__entriesStoredSinceMark__P_185_3++;
+        if (this.__isMarkActive__P_193_2 && this.__entriesStoredSinceMark__P_193_3 < max) {
+          this.__entriesStoredSinceMark__P_193_3++;
         }
       },
       /**
@@ -107,21 +107,21 @@
        * @return {Integer}
        */
       getNumEntriesStored() {
-        return this.__entriesStored__P_185_1;
+        return this.__entriesStored__P_193_1;
       },
       /**
        * Remembers the current position in the ring buffer
        *
        */
       mark() {
-        this.__isMarkActive__P_185_2 = true;
-        this.__entriesStoredSinceMark__P_185_3 = 0;
+        this.__isMarkActive__P_193_2 = true;
+        this.__entriesStoredSinceMark__P_193_3 = 0;
       },
       /**
        * Removes the current mark position
        */
       clearMark() {
-        this.__isMarkActive__P_185_2 = false;
+        this.__isMarkActive__P_193_2 = false;
       },
       /**
        * Returns all stored entries. Mark is ignored.
@@ -143,25 +143,25 @@
        */
       getEntries(count, startingFromMark) {
         //Trim count so it does not exceed ringbuffer size
-        if (count > this.__entriesStored__P_185_1) {
-          count = this.__entriesStored__P_185_1;
+        if (count > this.__entriesStored__P_193_1) {
+          count = this.__entriesStored__P_193_1;
         }
 
         // Trim count so it does not exceed last call to mark (if mark was called
         // and startingFromMark was true)
-        if (startingFromMark && this.__isMarkActive__P_185_2 && count > this.__entriesStoredSinceMark__P_185_3) {
-          count = this.__entriesStoredSinceMark__P_185_3;
+        if (startingFromMark && this.__isMarkActive__P_193_2 && count > this.__entriesStoredSinceMark__P_193_3) {
+          count = this.__entriesStoredSinceMark__P_193_3;
         }
         if (count > 0) {
-          var indexOfYoungestElementInHistory = this.__addToIndex__P_185_6(this.__nextIndexToStoreTo__P_185_0, -1);
-          var startIndex = this.__addToIndex__P_185_6(indexOfYoungestElementInHistory, -count + 1);
+          var indexOfYoungestElementInHistory = this.__addToIndex__P_193_6(this.__nextIndexToStoreTo__P_193_0, -1);
+          var startIndex = this.__addToIndex__P_193_6(indexOfYoungestElementInHistory, -count + 1);
           var result;
           if (startIndex <= indexOfYoungestElementInHistory) {
             //Requested segment not wrapping around ringbuffer boundary, get in one run
-            result = this.__entries__P_185_4.slice(startIndex, indexOfYoungestElementInHistory + 1);
+            result = this.__entries__P_193_4.slice(startIndex, indexOfYoungestElementInHistory + 1);
           } else {
             //Requested segment wrapping around ringbuffer boundary, get two parts & concat
-            result = this.__entries__P_185_4.slice(startIndex, this.__entriesStored__P_185_1).concat(this.__entries__P_185_4.slice(0, indexOfYoungestElementInHistory + 1));
+            result = this.__entries__P_193_4.slice(startIndex, this.__entriesStored__P_193_1).concat(this.__entries__P_193_4.slice(0, indexOfYoungestElementInHistory + 1));
           }
         } else {
           result = [];
@@ -172,10 +172,10 @@
        * Clears all entries
        */
       clear() {
-        this.__entries__P_185_4 = new Array(this.getMaxEntries());
-        this.__entriesStored__P_185_1 = 0;
-        this.__entriesStoredSinceMark__P_185_3 = 0;
-        this.__nextIndexToStoreTo__P_185_0 = 0;
+        this.__entries__P_193_4 = new Array(this.getMaxEntries());
+        this.__entriesStored__P_193_1 = 0;
+        this.__entriesStoredSinceMark__P_193_3 = 0;
+        this.__nextIndexToStoreTo__P_193_0 = 0;
       },
       /**
        * Adds a number to an ringbuffer index. Does a modulus calculation,
@@ -186,7 +186,7 @@
        * @param addMe {Number} The number to add.
        * @return {Number} The new index
        */
-      __addToIndex__P_185_6(idx, addMe) {
+      __addToIndex__P_193_6(idx, addMe) {
         var max = this.getMaxEntries();
         var result = (idx + addMe) % max;
 
@@ -201,4 +201,4 @@
   qx.util.RingBuffer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=RingBuffer.js.map?dt=1769806693712
+//# sourceMappingURL=RingBuffer.js.map?dt=1791841652607

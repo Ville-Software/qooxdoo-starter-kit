@@ -1,76 +1,84 @@
 /**
  * CheckBox
- * 
+ *
  * Data Attributes (defaults)
- *  data-label-position="right"
  *  data-size="sm"
- * 
+ *
  * @external(mantine/core/styles/Checkbox.css)
- * @require(ville.ui.icon.IconCheck)
- * @require(ville.ui.icon.IconIndeterminate)
+ * @require(ville.ui.icon.tabler.IconCheck)
+ * @require(ville.ui.icon.tabler.IconIndeterminate)
  */
 qx.Class.define("ville.ui.form.CheckBox", {
     extend: qx.ui.form.CheckBox,
 
-    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],
-
     construct(label, alticon, altindeterminateicon) {
-        super();
 
-        this._setLayout(new qx.ui.layout.Basic());
-        this.setExcludeBoundsFromDom(true);
-        this.setClearAllInlineStyles(true);
-        this.setCssUtilityClass("m_bf2d988c mantine-Checkbox-root m_5f75b09e");
+        super(label);
 
-        //this._createChildControl("label");
-        this._createChildControl("input");
-        if (alticon) {
+        var cbinput = this.getChildControl("input");
+
+        if (alticon)
             this.setInlineIcon(alticon);
-            this.__alticon = true;
-        }
 
-        if (altindeterminateicon) {
+        if (altindeterminateicon)
             this.setIndeterminateIcon(altindeterminateicon);
-            this.__altindeterminateicon = true;
-        } else {
 
-        }
-        
         this._createChildControl("icon");
         this._createChildControl("indeterminateicon");
-    
-        if (label) {
-            this.setLabel(label);
-        }
 
         // Set attributes
-        this.setAttributes({
-            "data-label-position" : this.getLabelPosition(),
+        this.getContentElement().setAttributes({
             "data-variant" : this.getVariant()
         });
 
-        //var cbinnerwrapper = this.getChildControl("checkboxinnerwrapper");
-        var cbinput = this.getChildControl("input");
+        /* If I can figure out how to expose qx.html.Input classes checked value
+        * then I will want to use single binding feature
+        * this.bind("value", cbinput, "checked");
+        * cbinput.bind("checked", this, "value");
+        * */
 
-        // Set icon based on value
-        if (this.isTriState() && this.getValue() == null) {
-            // indeterminate
-            cbinput.setAttribute("data-indeterminate", "true");
-        }
+        // Sync up input to checkbox value on inital load
+        this.addListenerOnce("appear", () => {
+            var value = this.getValue();
+            var cbinputelem = cbinput.getContentElement();
+            if (this.isTriState() && value == null) {
+                // replace entire svg inline icon
+                cbinputelem.setAttribute("data-indeterminate", "true");
+                cbinputelem.getDomElement().indeterminate = true;
+            } else if (this.isTriState() && value) {
+                cbinputelem.removeAttribute("data-indeterminate");
+                cbinputelem.getDomElement().indeterminate = false;
+                cbinputelem.getDomElement().checked = true;
+            }
+            else if (!this.isTriState()) {
+                cbinput.getContentElement().getDomElement().indeterminate = false;
+                cbinputelem.removeAttribute("data-indeterminate");
+                if (value)
+                    cbinputelem.getDomElement().checked = true;
+                else
+                    cbinputelem.getDomElement().checked = false;
+            }
+        });
 
-        // Add a change value listener to update the icon
+        // Keep input and checkbox value in sync on value change
         this.addListener("changeValue", (e) => {
-            var cbinnerwrapper = this.getChildControl("checkboxinnerwrapper");
-            //console.log(e.getData());
+            var cbbody = this.getChildControl("body");
             if (this.isTriState() && e.getData() == null) {
                 // replace entire svg inline icon
-                cbinput.setAttribute("data-indeterminate", "true");
-                cbinnerwrapper.removeAt(1);
-                cbinnerwrapper.add(this.getIndeterminateIcon());
+                cbinput.getContentElement().setAttribute("data-indeterminate", "true");
+                cbbody.remove(this.getInlineIcon());
+                cbbody.add(this.getIndeterminateIcon());
+                cbinput.getContentElement().getDomElement().indeterminate = true;
             } else if (this.isTriState() && e.getData() && e.getOldData() == null) {
-                cbinput.removeAttribute("data-indeterminate");
-                cbinnerwrapper.removeAt(1);
-                cbinnerwrapper.add(this.getInlineIcon());
+                cbinput.getContentElement().removeAttribute("data-indeterminate");
+                cbbody.remove(this.getIndeterminateIcon());
+                cbbody.add(this.getInlineIcon());
+                cbinput.getContentElement().getDomElement().indeterminate = false;
+                cbinput.getContentElement().getDomElement().checked = e.getData();
+            }
+            else if (!this.isTriState()) {
+                cbinput.getContentElement().getDomElement().indeterminate = false;
+                cbinput.getContentElement().getDomElement().checked = e.getData();
             }
         });
     },
@@ -85,130 +93,74 @@ qx.Class.define("ville.ui.form.CheckBox", {
             event: "changeVariant"
         },
 
-        labelPosition: {
-            init: "right",
-            check: ["right", "left"],
-            apply: "_applyLabelPosition",
-            themeable: true,
-            event: "changeLabelPosition"
-        },
-
         inlineIcon: {
             check: "qx.ui.core.Widget",
+            init: null,
             nullable: true,
             themeable: true
         },
 
         indeterminateIcon: {
             check: "qx.ui.core.Widget",
+            init: null,
             nullable: true,
             themeable: true
-        },
-
-        id: {
-            check: "String",
-            apply: "_applyId",
-            themeable: false,
-            nullable: true,
-            event: "changeId"
-        },
-
-        nestLabel: {
-            check: "Boolean",
-            init: true,
-            nullable: false,
-            themeable: true,
-            apply: "_applyNestLabel"
         }
 
     },
 
     members: {
 
-        // global flag for alt icons
-        __alticon : false,
-
-        __altindeterminateicon : false,
-
-        // overridden
-        _createContentElement() {
-            return new qx.html.Element("div");
-        },
-
         // overridden
         _createChildControlImpl(id, hash) {
             var control;
             var cbbody;
-            var cbinnerwrapper;
-            var cblabelwrapper;
-            var cblabel;
 
             switch (id) {
-                case "checkboxbody":
+                case "body":
                     control = new ville.ui.core.InnerWrapper("div");
+                    control.setAnonymous(true);
                     control.setCssUtilityClass("m_5f6e695e mantine-Checkbox-body");
                     this._add(control);
-                    break;  
-
-                case "checkboxinnerwrapper":
-                    control = new ville.ui.core.InnerWrapper("div");
-                    control.setCssUtilityClass("m_26062bec mantine-Checkbox-inner");
-                    control.setAttribute("data-label-position", this.getLabelPosition());
-                    cbbody = this.getChildControl("checkboxbody");
-                    cbbody.add(control);
-                    break; 
-
-                case "checkboxlabelwrapper":
-                    control = new ville.ui.core.InnerWrapper("div");
-                    control.setCssUtilityClass("m_d3ea56bb mantine-Checkbox-labelWrapper");
-                    cbbody = this.getChildControl("checkboxbody");
-                    cbbody.add(control);
-                    break;
-
-                case "label":
-                    control = new ville.ui.form.Label();
-                    control.setAnonymous(true);
-                    control.setSelectable(false);
-                    control.setCssUtilityClass("m_8ee546b8 mantine-Checkbox-label");
-                    cblabelwrapper = this.getChildControl("checkboxlabelwrapper");
-                    cblabelwrapper.add(control);
                     break;
 
                 case "input":
                     control = new ville.ui.core.BaseWidget({ "basetag" : "input", "type" : "checkbox" });
-                    control.setCssUtilityClass("mantine-focus-auto m_26063560 mantine-Checkbox-input");
-                    cbinnerwrapper = this.getChildControl("checkboxinnerwrapper");
-                    cbinnerwrapper.add(control);
+                    control.setAnonymous(true);
+                    cbbody = this.getChildControl("body");
+                    cbbody.add(control);
                     break;
-                
+
                 case "icon":
                     // check to see if there is an alternative icon, otherwise use default
-                    if (this.__alticon) {
-                        control = this.getInlineIcon();
-                    } else {
-                        control = new ville.ui.icon.IconCheck();
+                    if (!this.getInlineIcon()) {
+                        control = new ville.ui.icon.tabler.IconCheck();
                         control.setViewBox("0 0 10 7");
                         this.setInlineIcon(control);
+                    } else {
+                        control = this.getInlineIcon();
                     }
                     control.setCssUtilityClass("m_bf295423 mantine-Checkbox-icon");
-                    control.setAttribute("aria-hidden", "true");
-                    cbinnerwrapper = this.getChildControl("checkboxinnerwrapper");
-                    cbinnerwrapper.add(control);
+                    control.getContentElement().setAttribute("aria-hidden", "true");
+                    control.setAnonymous(true);
+                    cbbody = this.getChildControl("body");
+                    cbbody.add(control);
                     break;
 
                 case "indeterminateicon":
                     // check to see if there is an alternative icon, otherwise use default
-                    if (this.__altinderterminateicon) {
-                        control = this.getIndeterminateIcon();
-                    } else {
-                        control = new ville.ui.icon.IconIndeterminate();
+                    if (!this.getIndeterminateIcon()) {
+                        control = new ville.ui.icon.tabler.IconIndeterminate();
                         control.setViewBox("0 0 32 6");
                         this.setIndeterminateIcon(control);
+                    } else {
+                        control = this.getIndeterminateIcon();
                     }
                     control.setCssUtilityClass("m_bf295423 mantine-Checkbox-icon");
-                    control.setAttribute("aria-hidden", "true");
+                    control.getContentElement().setAttribute("aria-hidden", "true");
+                    control.setAnonymous(true);
                     break;
-                
+
             }
 
             return control || super._createChildControlImpl(id);
@@ -217,10 +169,10 @@ qx.Class.define("ville.ui.form.CheckBox", {
         // property apply
         _applyVariant(value, old) {
             if (value) {
-                this.setAttribute("data-variant", value);
+                this.getContentElement().setAttribute("data-variant", value);
                 var input = this.getChildControl("input");
                 if (input) {
-                    if (value = "outline") {
+                    if (value === "outline") {
                         input.getContentElement().addClass("m_215c4542");
                     } else {
                         input.getContentElement().removeClass("m_215c4542");
@@ -229,54 +181,8 @@ qx.Class.define("ville.ui.form.CheckBox", {
             }
         },
 
-        // property apply
-        _applyLabelPosition(value, old) {
-            if (value) {
-                this.setAttribute("data-label-position", value);
-                var cbiw = this.getChildControl("checkboxinnerwrapper");
-                if (cbiw) {
-                   cbiw.setAttribute("data-label-position", value);
-                }
-            }
-        },
-
-        // property apply
-        _applyId(value, old) {
-            if (value) {
-                var input = this.getChildControl("input");
-                if (input) {
-                    input.setAttribute("id", value);
-                }
-                var label = this.getChildControl("label", true);
-                if (label) {
-                    label.setAttribute("for", value);
-                }
-            }
-        },
-
         // overridden
         _applyIcon() {},
 
-        _applyLabel(value, old) {
-            if (value) {
-                var label = this.getChildControl("label");
-                if (label) {
-                    label.setValue(value);
-                }
-            }
-        },
-
-        // property apply
-        _applyNestLabel(value, old) {
-            if (value) {
-                var label = this.getChildControl("label");
-                if (label) {
-                    var cbinnerwrapper = this.getChildControl("checkboxinnerwrapper");
-                    if (cbinnerwrapper) {
-                        label.add(cbinnerwrapper);
-                    }
-                }
-            }
-        }
     }
   });

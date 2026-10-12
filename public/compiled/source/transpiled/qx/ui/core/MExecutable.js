@@ -84,12 +84,9 @@
     */
 
     members: {
-      __executableBindingIds__P_152_0: null,
-      /**
-       * @type {Boolean} Whether the command already executed. The protection flag to stop the second command execution.
-       */
-      __commandExecuted__P_152_1: false,
-      __executeListenerId__P_152_2: null,
+      __executableBindingIds__P_164_0: null,
+      __semaphore__P_164_1: false,
+      __executeListenerId__P_164_2: null,
       /**
        * @type {Map} Set of properties, which will by synced from the command to the
        *    including widget
@@ -106,10 +103,10 @@
       execute() {
         var cmd = this.getCommand();
         if (cmd) {
-          if (this.__commandExecuted__P_152_1) {
-            this.__commandExecuted__P_152_1 = false;
+          if (this.__semaphore__P_164_1) {
+            this.__semaphore__P_164_1 = false;
           } else {
-            this.__commandExecuted__P_152_1 = true;
+            this.__semaphore__P_164_1 = true;
             cmd.execute(this);
           }
         }
@@ -120,30 +117,32 @@
        *
        * @param e {qx.event.type.Event} The execute event of the command.
        */
-      __onCommandExecute__P_152_3(e) {
-        if (this.__commandExecuted__P_152_1) {
-          this.__commandExecuted__P_152_1 = false;
-          return;
-        }
-        this.__commandExecuted__P_152_1 = true;
+      __onCommandExecute__P_164_3(e) {
         if (this.isEnabled()) {
-          this.execute();
+          if (this.__semaphore__P_164_1) {
+            this.__semaphore__P_164_1 = false;
+            return;
+          }
+          if (this.isEnabled()) {
+            this.__semaphore__P_164_1 = true;
+            this.execute();
+          }
         }
       },
       // property apply
       _applyCommand(value, old) {
         // execute forwarding
         if (old != null) {
-          old.removeListenerById(this.__executeListenerId__P_152_2);
+          old.removeListenerById(this.__executeListenerId__P_164_2);
         }
         if (value != null) {
-          this.__executeListenerId__P_152_2 = value.addListener("execute", this.__onCommandExecute__P_152_3, this);
+          this.__executeListenerId__P_164_2 = value.addListener("execute", this.__onCommandExecute__P_164_3, this);
         }
 
         // binding stuff
-        var ids = this.__executableBindingIds__P_152_0;
+        var ids = this.__executableBindingIds__P_164_0;
         if (ids == null) {
-          this.__executableBindingIds__P_152_0 = ids = {};
+          this.__executableBindingIds__P_164_0 = ids = {};
         }
         var selfPropertyValue;
         for (var i = 0; i < this._bindableProperties.length; i++) {
@@ -184,10 +183,10 @@
     },
     destruct() {
       this._applyCommand(null, this.getCommand());
-      this.__executableBindingIds__P_152_0 = null;
+      this.__executableBindingIds__P_164_0 = null;
     }
   });
   qx.ui.core.MExecutable.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MExecutable.js.map?dt=1769806692527
+//# sourceMappingURL=MExecutable.js.map?dt=1791841652271

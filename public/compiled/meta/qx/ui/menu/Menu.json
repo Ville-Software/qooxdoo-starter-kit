@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337358,
-  "lastModifiedIso": "2026-01-03T20:15:37.358Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/menu/Menu.js",
+  "lastModified": 1739993515986,
+  "lastModifiedIso": "2025-02-19T19:31:55.986Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/menu/Menu.js",
   "type": "class",
   "location": {
     "start": {
@@ -2319,26 +2319,6 @@
       ],
       "mixin": "qx.ui.core.MPlacement"
     },
-    "__lastKnownSize": {
-      "jsdoc": null,
-      "access": "private",
-      "location": {
-        "start": {
-          "line": 208,
-          "column": 4,
-          "index": 5636
-        },
-        "end": {
-          "line": 208,
-          "column": 25,
-          "index": 5657
-        }
-      },
-      "appearsIn": [
-        "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
-    },
     "getLayoutLocation": {
       "jsdoc": {
         "raw": [
@@ -2384,14 +2364,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 224,
+          "line": 223,
           "column": 4,
-          "index": 6377
+          "index": 6350
         },
         "end": {
-          "line": 275,
+          "line": 274,
           "column": 5,
-          "index": 7677
+          "index": 7650
         }
       },
       "type": "function",
@@ -2450,14 +2430,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 288,
+          "line": 287,
           "column": 4,
-          "index": 8186
+          "index": 8159
         },
         "end": {
-          "line": 337,
+          "line": 336,
           "column": 5,
-          "index": 9703
+          "index": 9676
         }
       },
       "type": "function",
@@ -2524,14 +2504,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 349,
+          "line": 348,
           "column": 4,
-          "index": 10190
+          "index": 10163
         },
         "end": {
-          "line": 404,
+          "line": 397,
           "column": 5,
-          "index": 11819
+          "index": 11611
         }
       },
       "type": "function",
@@ -2570,14 +2550,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 409,
+          "line": 402,
           "column": 4,
-          "index": 11935
+          "index": 11727
         },
         "end": {
-          "line": 428,
+          "line": 421,
           "column": 5,
-          "index": 12426
+          "index": 12218
         }
       },
       "type": "function",
@@ -2615,14 +2595,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 435,
+          "line": 428,
           "column": 4,
-          "index": 12576
+          "index": 12368
         },
         "end": {
-          "line": 447,
+          "line": 440,
           "column": 5,
-          "index": 12849
+          "index": 12641
         }
       },
       "type": "function",
@@ -2674,14 +2654,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 456,
+          "line": 449,
           "column": 4,
-          "index": 13123
+          "index": 12915
         },
         "end": {
-          "line": 495,
+          "line": 488,
           "column": 5,
-          "index": 14261
+          "index": 14053
         }
       },
       "type": "function",
@@ -2729,14 +2709,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 503,
+          "line": 496,
           "column": 4,
-          "index": 14460
+          "index": 14252
         },
         "end": {
-          "line": 512,
+          "line": 505,
           "column": 5,
-          "index": 14648
+          "index": 14440
         }
       },
       "type": "function",
@@ -2778,14 +2758,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 519,
+          "line": 512,
           "column": 4,
-          "index": 14767
+          "index": 14559
         },
         "end": {
-          "line": 526,
+          "line": 519,
           "column": 5,
-          "index": 14968
+          "index": 14760
         }
       },
       "type": "function",
@@ -2810,7 +2790,7 @@
           "     * <code>_computePlacementSize</code>, which returns the size.",
           "     *",
           "     *  @param callback {Function} This function will be called with the size as",
-          "     *    first argument. If it is null, the size is returned directly.",
+          "     *    first argument",
           "     "
         ],
         "@description": [
@@ -2822,9 +2802,9 @@
         "@param": [
           {
             "name": "@param",
-            "body": "callback {Function} This function will be called with the size as\n    first argument. If it is null, the size is returned directly.",
+            "body": "callback {Function} This function will be called with the size as\n    first argument",
             "paramName": "callback",
-            "description": " This function will be called with the size as\n    first argument. If it is null, the size is returned directly.",
+            "description": " This function will be called with the size as\n    first argument",
             "type": "((...args: any[]) => any)"
           }
         ]
@@ -2832,14 +2812,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 539,
+          "line": 532,
           "column": 4,
-          "index": 15529
+          "index": 15274
         },
         "end": {
-          "line": 559,
+          "line": 548,
           "column": 5,
-          "index": 16007
+          "index": 15694
         }
       },
       "type": "function",
@@ -2885,14 +2865,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 569,
+          "line": 558,
           "column": 4,
-          "index": 16347
+          "index": 16034
         },
         "end": {
-          "line": 590,
+          "line": 579,
           "column": 5,
-          "index": 17002
+          "index": 16689
         }
       },
       "type": "function",

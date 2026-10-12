@@ -153,7 +153,7 @@
        * @return {Boolean} The result of the comparison
        */
       equals(object1, object2) {
-        return qx.lang.Object.__equals__P_71_0(object1, object2, [], []);
+        return qx.lang.Object.__equals__P_44_0(object1, object2, [], []);
       },
       /**
        * Internal recursive comparison function for equals
@@ -165,7 +165,7 @@
        * @return {Boolean} The result of the comparison
        *
        */
-      __equals__P_71_0(object1, object2, aStack, bStack) {
+      __equals__P_44_0(object1, object2, aStack, bStack) {
         // Identical objects are equal. `0 === -0`, but they aren't identical.
         // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
         if (object1 === object2) {
@@ -233,7 +233,7 @@
           if (result) {
             // Deep compare the contents, ignoring non-numeric properties.
             while (size--) {
-              if (!(result = qx.lang.Object.__equals__P_71_0(object1[size], object2[size], aStack, bStack))) {
+              if (!(result = qx.lang.Object.__equals__P_44_0(object1[size], object2[size], aStack, bStack))) {
                 break;
               }
             }
@@ -245,7 +245,7 @@
               // Count the expected number of properties.
               size++;
               // Deep compare each member.
-              if (!(result = Object.prototype.hasOwnProperty.call(object2, key) && qx.lang.Object.__equals__P_71_0(object1[key], object2[key], aStack, bStack))) {
+              if (!(result = Object.prototype.hasOwnProperty.call(object2, key) && qx.lang.Object.__equals__P_44_0(object1[key], object2[key], aStack, bStack))) {
                 break;
               }
             }
@@ -350,4 +350,4 @@
   qx.lang.Object.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Object.js.map?dt=1769806689046
+//# sourceMappingURL=Object.js.map?dt=1791841650354

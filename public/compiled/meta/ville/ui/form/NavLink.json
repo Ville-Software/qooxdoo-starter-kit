@@ -2,7 +2,7 @@
   "version": 0.3,
   "lastModified": 1769195145582,
   "lastModifiedIso": "2026-01-23T19:05:45.582Z",
-  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/NavLink.js",
+  "classFilename": "../../../resources/qxapp/source/class/ville/uiold/form/NavLink.js",
   "type": "class",
   "location": {
     "start": {
@@ -126,7 +126,6 @@
           "index": 1008
         }
       },
-      "overriddenFrom": "ville.ui.form.UnstyledToggleButton",
       "appearsIn": []
     },
     "_createContentElement": {
@@ -181,7 +180,6 @@
           "name": "value"
         }
       ],
-      "overriddenFrom": "ville.ui.form.UnstyledToggleButton",
       "appearsIn": []
     },
     "_applyTarget": {
@@ -209,7 +207,6 @@
           "name": "value"
         }
       ],
-      "overriddenFrom": "ville.ui.form.UnstyledToggleButton",
       "appearsIn": []
     }
   },

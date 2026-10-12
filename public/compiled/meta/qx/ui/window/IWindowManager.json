@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337093,
-  "lastModifiedIso": "2026-01-03T20:15:37.093Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/window/IWindowManager.js",
+  "lastModified": 1739993515882,
+  "lastModifiedIso": "2025-02-19T19:31:55.882Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/window/IWindowManager.js",
   "type": "interface",
   "location": {
     "start": {

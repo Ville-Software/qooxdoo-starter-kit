@@ -1,19 +1,19 @@
 {
   "version": 0.3,
-  "lastModified": 1769806348027,
-  "lastModifiedIso": "2026-01-30T20:52:28.027Z",
+  "lastModified": 1791833139901,
+  "lastModifiedIso": "2026-10-12T19:25:39.901Z",
   "classFilename": "../../../resources/qxapp/source/class/qxapp/Application.js",
   "type": "class",
   "location": {
     "start": {
-      "line": 16,
+      "line": 22,
       "column": 0,
-      "index": 307
+      "index": 581
     },
     "end": {
-      "line": 161,
+      "line": 178,
       "column": 3,
-      "index": 4452
+      "index": 5232
     }
   },
   "className": "qxapp.Application",
@@ -22,7 +22,13 @@
       "*",
       " * This is the main application class of \"qxapp\"",
       " *",
-      " * @asset(qxapp/*)",
+      " * @external(mantine/core/styles/baseline.css)",
+      " * @external(mantine/core/styles/default-css-variables.css)",
+      " * @external(mantine/core/styles/global.css)",
+      " * @external(qxapp/mantine-style-classes.css)",
+      " * @external(mantine/core/styles/ScrollArea.css)",
+      " *",
+      " * @requires(ville.cssuc.MCssUtilityClass)",
       " "
     ],
     "@description": [
@@ -31,28 +37,50 @@
         "body": "<p>This is the main application class of \"qxapp\"</p>"
       }
     ],
-    "@asset": [
+    "@external": [
       {
-        "name": "@asset",
-        "body": "qxapp/*"
+        "name": "@external",
+        "body": "mantine/core/styles/baseline.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/default-css-variables.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/global.css"
+      },
+      {
+        "name": "@external",
+        "body": "qxapp/mantine-style-classes.css"
+      },
+      {
+        "name": "@external",
+        "body": "mantine/core/styles/ScrollArea.css"
+      }
+    ],
+    "@requires": [
+      {
+        "name": "@requires",
+        "body": "ville.cssuc.MCssUtilityClass"
       }
     ]
   },
-  "superClass": "ville.ui.application.Standalone",
+  "superClass": "qx.application.Standalone",
   "members": {
     "__routing": {
       "jsdoc": null,
       "access": "private",
       "location": {
         "start": {
-          "line": 29,
+          "line": 35,
           "column": 4,
-          "index": 596
+          "index": 864
         },
         "end": {
-          "line": 29,
+          "line": 35,
           "column": 20,
-          "index": 612
+          "index": 880
         }
       },
       "appearsIn": []
@@ -62,14 +90,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 31,
+          "line": 37,
           "column": 4,
-          "index": 619
+          "index": 887
         },
         "end": {
-          "line": 31,
+          "line": 37,
           "column": 18,
-          "index": 633
+          "index": 901
         }
       },
       "appearsIn": []
@@ -79,14 +107,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 33,
+          "line": 39,
           "column": 4,
-          "index": 640
+          "index": 908
         },
         "end": {
-          "line": 33,
+          "line": 39,
           "column": 16,
-          "index": 652
+          "index": 920
         }
       },
       "appearsIn": []
@@ -117,21 +145,20 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 41,
+          "line": 47,
           "column": 4,
-          "index": 833
+          "index": 1101
         },
         "end": {
-          "line": 88,
+          "line": 105,
           "column": 5,
-          "index": 2472
+          "index": 3228
         }
       },
       "type": "function",
       "params": [],
-      "overriddenFrom": "ville.ui.application.Standalone",
+      "overriddenFrom": "qx.application.AbstractGui",
       "appearsIn": [
-        "ville.ui.application.Standalone",
         "qx.application.AbstractGui",
         "qx.application.IApplication"
       ]
@@ -153,14 +180,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 93,
+          "line": 110,
           "column": 4,
-          "index": 2540
+          "index": 3296
         },
         "end": {
-          "line": 97,
+          "line": 114,
           "column": 5,
-          "index": 2666
+          "index": 3422
         }
       },
       "type": "function",
@@ -198,14 +225,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 104,
+          "line": 121,
           "column": 4,
-          "index": 2796
+          "index": 3552
         },
         "end": {
-          "line": 106,
+          "line": 123,
           "column": 5,
-          "index": 2845
+          "index": 3601
         }
       },
       "type": "function",
@@ -242,14 +269,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 113,
+          "line": 130,
           "column": 4,
-          "index": 2968
+          "index": 3724
         },
         "end": {
-          "line": 116,
+          "line": 133,
           "column": 5,
-          "index": 3056
+          "index": 3812
         }
       },
       "type": "function",
@@ -264,14 +291,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 118,
+          "line": 135,
           "column": 4,
-          "index": 3063
+          "index": 3819
         },
         "end": {
-          "line": 133,
+          "line": 150,
           "column": 5,
-          "index": 3535
+          "index": 4315
         }
       },
       "type": "function",
@@ -283,14 +310,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 135,
+          "line": 152,
           "column": 4,
-          "index": 3542
+          "index": 4322
         },
         "end": {
-          "line": 144,
+          "line": 161,
           "column": 5,
-          "index": 3829
+          "index": 4609
         }
       },
       "type": "function",
@@ -306,14 +333,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 146,
+          "line": 163,
           "column": 4,
-          "index": 3836
+          "index": 4616
         },
         "end": {
-          "line": 158,
+          "line": 175,
           "column": 5,
-          "index": 4443
+          "index": 5223
         }
       },
       "type": "function",

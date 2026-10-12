@@ -54,11 +54,11 @@
       if (inst.stacktrace) {
         this.stacktrace = inst.stacktrace;
       }
-      this.__failMessage__P_171_0 = failMessage;
-      this.__uri__P_171_1 = uri || "";
-      this.__lineNumber__P_171_2 = lineNumber === undefined ? -1 : lineNumber;
-      this.__columnNumber__P_171_3 = columnNumber === undefined ? -1 : columnNumber;
-      this.__sourceException__P_171_4 = sourceException;
+      this.__failMessage__P_166_0 = failMessage;
+      this.__uri__P_166_1 = uri || "";
+      this.__lineNumber__P_166_2 = lineNumber === undefined ? -1 : lineNumber;
+      this.__columnNumber__P_166_3 = columnNumber === undefined ? -1 : columnNumber;
+      this.__sourceException__P_166_4 = sourceException;
     },
     /*
     *****************************************************************************
@@ -67,18 +67,18 @@
     */
 
     members: {
-      __failMessage__P_171_0: null,
-      __uri__P_171_1: null,
-      __lineNumber__P_171_2: null,
-      __columnNumber__P_171_3: null,
-      __sourceException__P_171_4: null,
+      __failMessage__P_166_0: null,
+      __uri__P_166_1: null,
+      __lineNumber__P_166_2: null,
+      __columnNumber__P_166_3: null,
+      __sourceException__P_166_4: null,
       /**
        * Returns the error message.
        *
        * @return {String} error message
        */
       toString() {
-        return this.__failMessage__P_171_0;
+        return this.__failMessage__P_166_0;
       },
       /**
        * Get the URI where error was raised
@@ -86,7 +86,7 @@
        * @return {String} URI where error was raised
        */
       getUri() {
-        return this.__uri__P_171_1;
+        return this.__uri__P_166_1;
       },
       /**
        * Get the line number where the error was raised
@@ -94,7 +94,7 @@
        * @return {Integer} The line number where the error was raised
        */
       getLineNumber() {
-        return this.__lineNumber__P_171_2;
+        return this.__lineNumber__P_166_2;
       },
       /**
        * Get the column number where the error was raised
@@ -102,7 +102,7 @@
        * @return {Integer} The line number where the error was raised
        */
       getColumnNumber() {
-        return this.__columnNumber__P_171_3;
+        return this.__columnNumber__P_166_3;
       },
       /**
        * Get the source exception
@@ -110,11 +110,11 @@
        * @return {Error} The source error
        */
       getSourceException() {
-        return this.__sourceException__P_171_4;
+        return this.__sourceException__P_166_4;
       }
     }
   });
   qx.core.WindowError.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=WindowError.js.map?dt=1769806693136
+//# sourceMappingURL=WindowError.js.map?dt=1791841652322

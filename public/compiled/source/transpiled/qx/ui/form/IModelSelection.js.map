@@ -16,7 +16,7 @@
     "IModelSelection"
   ],
   "sources": [
-    "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class/qx/ui/form/IModelSelection.js"
+    "/usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/form/IModelSelection.js"
   ],
   "sourcesContent": [
     "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Martin Wittemann (martinwittemann)\n\n************************************************************************ */\n\n/**\n * This interface should be used in all objects managing a set of items\n * implementing {@link qx.ui.form.IModel}.\n */\nqx.Interface.define(\"qx.ui.form.IModelSelection\", {\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members: {\n    /**\n     * Tries to set the selection using the given array containing the\n     * representative models for the selectables.\n     *\n     * @param value {Array} An array of models.\n     */\n    setModelSelection(value) {},\n\n    /**\n     * Returns an array of the selected models.\n     *\n     * @return {qx.data.Array} An array containing the models of the currently selected\n     *   items.\n     */\n    getModelSelection() {}\n  }\n});\n"

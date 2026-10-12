@@ -1,7 +1,7 @@
 {
   "version": 0.3,
-  "lastModified": 1769800208102,
-  "lastModifiedIso": "2026-01-30T19:10:08.102Z",
+  "lastModified": 1770568411346,
+  "lastModifiedIso": "2026-02-08T16:33:31.346Z",
   "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/MPage.js",
   "type": "mixin",
   "location": {
@@ -11,9 +11,9 @@
       "index": 0
     },
     "end": {
-      "line": 18,
+      "line": 24,
       "column": 3,
-      "index": 294
+      "index": 403
     }
   },
   "className": "qxapp.pages.MPage",
@@ -48,7 +48,7 @@
       },
       "appearsIn": []
     },
-    "componentName": {
+    "pageName": {
       "location": {
         "start": {
           "line": 12,
@@ -58,7 +58,36 @@
         "end": {
           "line": 15,
           "column": 5,
-          "index": 285
+          "index": 276
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's name for the browser title "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's name for the browser title</p>"
+          }
+        ]
+      },
+      "appearsIn": []
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 4,
+          "index": 328
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 394
         }
       },
       "json": {

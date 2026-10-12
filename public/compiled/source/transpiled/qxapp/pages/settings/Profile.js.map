@@ -8,7 +8,6 @@
     "Class",
     "define",
     "extend",
-    "ville",
     "ui",
     "tabview",
     "Page",
@@ -23,13 +22,31 @@
     "lang",
     "String",
     "firstUp",
+    "setPageName",
     "constructor",
     "call",
+    "setComponentName",
     "setPageUrl",
+    "pagebtnlink",
+    "getButton",
+    "getContentElement",
+    "setNodeName",
+    "setAttribute",
     "addListener",
+    "e",
+    "preventDefault",
+    "setNativeContextMenu",
+    "getChildControl",
+    "setStyle",
+    "SettingsappHeader",
+    "core",
+    "Init",
+    "getApplication",
+    "getStack",
+    "getSelection",
+    "getHeader",
     "document",
     "title",
-    "setAttribute",
     "settings",
     "Profile"
   ],
@@ -37,8 +54,8 @@
     "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/settings/Profile.js"
   ],
   "sourcesContent": [
-    "/**\n * Profile page\n *\n */\nqx.Class.define(\"qxapp.pages.settings.Profile\",\n{\n  extend : ville.ui.tabview.Page,\n\n  include : qxapp.pages.MPage,\n\n  construct() {\n\n    const pagenameroot = \"profile\";\n    const pageurl = `/settings/${pagenameroot}`;\n    const pageName = qx.lang.String.firstUp(pagenameroot);\n\n    super(pageName);\n\n    this.setPageUrl(pageurl);\n\n    // Set up the page\n    this.addListener(\"appear\", () => {document.title = `${pageName} - Laravel`});\n\n    this.setAttribute(\"html\", pagenameroot);\n\n  }\n\n});\n"
+    "/**\n * Profile page\n *\n */\nqx.Class.define(\"qxapp.pages.settings.Profile\",\n{\n  extend : qx.ui.tabview.Page,\n\n  include : qxapp.pages.MPage,\n\n  construct() {\n\n    const pagenameroot = \"profile\";\n    const pageurl = `/settings/${pagenameroot}`;\n    const pageName = qx.lang.String.firstUp(pagenameroot) + \" settings\";\n    this.setPageName(pageName);\n\n    super(qx.lang.String.firstUp(pagenameroot));\n\n    this.setComponentName(\"settings.Profile\");\n\n    this.setPageUrl(pageurl);\n\n    // Update Button to link\n    var pagebtnlink = this.getButton();\n    pagebtnlink.getContentElement().setNodeName(\"a\");\n    pagebtnlink.getContentElement().setAttribute(\"href\", pageurl);\n    pagebtnlink.addListener(\"click\", (e) => {e.preventDefault()});\n    pagebtnlink.setNativeContextMenu(false);\n    pagebtnlink.getChildControl(\"label\").getContentElement().setStyle(\"text-align\",\"start\");\n\n    // Get the Routing object\n    //const routing = qx.core.Init.getApplication().getRouting();\n    const SettingsappHeader = qx.core.Init.getApplication().getStack().getSelection()[0].getHeader();\n\n    // Set up the page\n    this.addListener(\"appear\", () => {\n        document.title = `${pageName} - Laravel`;\n        //routing.getRouter().push({ url: pageurl });\n        SettingsappHeader.getContentElement().setAttribute(\"html\", pageName);\n    });\n\n    this.getContentElement().setAttribute(\"html\", pagenameroot);\n\n  }\n\n});\n"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAC9C;IACEC,MAAM,EAAGC,KAAK,CAACC,EAAE,CAACC,OAAO,CAACC,IAAI;IAE9BC,OAAO,EAAGC,KAAK,CAACC,KAAK,CAACC,KAAK;IAE3BC,SAASA,CAAA,EAAG;MAEV,MAAMC,YAAY,GAAG,SAAS;MAC9B,MAAMC,OAAO,GAAG,aAAaD,YAAY,EAAE;MAC3C,MAAME,QAAQ,GAAGlB,EAAE,CAACmB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACL,YAAY,CAAC;MAErDT,KAAA,CAAAC,EAAA,CAAAC,OAAA,CAAAC,IAAA,CAAAY,WAAA,CAAAC,IAAA,OAAML,QAAQ;MAEd,IAAI,CAACM,UAAU,CAACP,OAAO,CAAC;;MAExB;MACA,IAAI,CAACQ,WAAW,CAAC,QAAQ,EAAE,MAAM;QAACC,QAAQ,CAACC,KAAK,GAAG,GAAGT,QAAQ,YAAY;MAAA,CAAC,CAAC;MAE5E,IAAI,CAACU,YAAY,CAAC,MAAM,EAAEZ,YAAY,CAAC;IAEzC;EAEF,CAAC,CAAC;EA3BFJ,KAAK,CAACC,KAAK,CAACgB,QAAQ,CAACC,OAAO,CAAC3B,aAAa,GAAGA,aAAa;AAAC",
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAC9C;IACEC,MAAM,EAAGN,EAAE,CAACO,EAAE,CAACC,OAAO,CAACC,IAAI;IAE3BC,OAAO,EAAGC,KAAK,CAACC,KAAK,CAACC,KAAK;IAE3BC,SAASA,CAAA,EAAG;MAEV,MAAMC,YAAY,GAAG,SAAS;MAC9B,MAAMC,OAAO,GAAG,aAAaD,YAAY,EAAE;MAC3C,MAAME,QAAQ,GAAGjB,EAAE,CAACkB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACL,YAAY,CAAC,GAAG,WAAW;MACnE,IAAI,CAACM,WAAW,CAACJ,QAAQ,CAAC;MAE1BjB,EAAA,CAAAO,EAAA,CAAAC,OAAA,CAAAC,IAAA,CAAAa,WAAA,CAAAC,IAAA,OAAMvB,EAAE,CAACkB,IAAI,CAACC,MAAM,CAACC,OAAO,CAACL,YAAY,CAAC;MAE1C,IAAI,CAACS,gBAAgB,CAAC,kBAAkB,CAAC;MAEzC,IAAI,CAACC,UAAU,CAACT,OAAO,CAAC;;MAExB;MACA,IAAIU,WAAW,GAAG,IAAI,CAACC,SAAS,CAAC,CAAC;MAClCD,WAAW,CAACE,iBAAiB,CAAC,CAAC,CAACC,WAAW,CAAC,GAAG,CAAC;MAChDH,WAAW,CAACE,iBAAiB,CAAC,CAAC,CAACE,YAAY,CAAC,MAAM,EAAEd,OAAO,CAAC;MAC7DU,WAAW,CAACK,WAAW,CAAC,OAAO,EAAGC,CAAC,IAAK;QAACA,CAAC,CAACC,cAAc,CAAC,CAAC;MAAA,CAAC,CAAC;MAC7DP,WAAW,CAACQ,oBAAoB,CAAC,KAAK,CAAC;MACvCR,WAAW,CAACS,eAAe,CAAC,OAAO,CAAC,CAACP,iBAAiB,CAAC,CAAC,CAACQ,QAAQ,CAAC,YAAY,EAAC,OAAO,CAAC;;MAEvF;MACA;MACA,MAAMC,iBAAiB,GAAGrC,EAAE,CAACsC,IAAI,CAACC,IAAI,CAACC,cAAc,CAAC,CAAC,CAACC,QAAQ,CAAC,CAAC,CAACC,YAAY,CAAC,CAAC,CAAC,CAAC,CAAC,CAACC,SAAS,CAAC,CAAC;;MAEhG;MACA,IAAI,CAACZ,WAAW,CAAC,QAAQ,EAAE,MAAM;QAC7Ba,QAAQ,CAACC,KAAK,GAAG,GAAG5B,QAAQ,YAAY;QACxC;QACAoB,iBAAiB,CAACT,iBAAiB,CAAC,CAAC,CAACE,YAAY,CAAC,MAAM,EAAEb,QAAQ,CAAC;MACxE,CAAC,CAAC;MAEF,IAAI,CAACW,iBAAiB,CAAC,CAAC,CAACE,YAAY,CAAC,MAAM,EAAEf,YAAY,CAAC;IAE7D;EAEF,CAAC,CAAC;EA9CFJ,KAAK,CAACC,KAAK,CAACkC,QAAQ,CAACC,OAAO,CAAC5C,aAAa,GAAGA,aAAa;AAAC",
   "ignoreList": []
 }

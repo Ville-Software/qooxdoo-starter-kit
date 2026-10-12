@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337469,
-  "lastModifiedIso": "2026-01-03T20:15:37.469Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/request/MRequest.js",
+  "lastModified": 1739993516106,
+  "lastModifiedIso": "2025-02-19T19:31:56.106Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/io/request/MRequest.js",
   "type": "mixin",
   "location": {
     "start": {

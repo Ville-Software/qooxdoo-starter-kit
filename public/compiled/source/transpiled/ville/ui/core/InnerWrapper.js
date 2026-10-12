@@ -5,14 +5,11 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.core.Widget": {
+      "qx.ui.core.Widget": {
         "construct": true,
         "require": true
       },
       "qx.ui.core.MChildrenHandling": {
-        "require": true
-      },
-      "ville.ui.core.MWidget": {
         "require": true
       },
       "qx.ui.layout.Basic": {
@@ -27,26 +24,24 @@
    * @external(mantine/core/styles/InlineInput.css)
    */
   qx.Class.define("ville.ui.core.InnerWrapper", {
-    extend: ville.ui.core.Widget,
-    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],
+    extend: qx.ui.core.Widget,
+    include: qx.ui.core.MChildrenHandling,
     construct(component) {
       if (component) {
-        this.__componenttag__P_58_0 = component;
+        this.__componenttag__P_93_0 = component;
       }
-      ville.ui.core.Widget.constructor.call(this);
+      qx.ui.core.Widget.constructor.call(this);
       this._setLayout(new qx.ui.layout.Basic());
-      this.setExcludeBoundsFromDom(true);
-      //this.setExcludeInlineStyles(["position"]);
     },
     members: {
-      __componenttag__P_58_0: "span",
+      __componenttag__P_93_0: "span",
       // overridden
       _createContentElement() {
-        return new qx.html.Element(this.__componenttag__P_58_0);
+        return new qx.html.Element(this.__componenttag__P_93_0);
       }
     }
   });
   ville.ui.core.InnerWrapper.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=InnerWrapper.js.map?dt=1769806688437
+//# sourceMappingURL=InnerWrapper.js.map?dt=1791841651250

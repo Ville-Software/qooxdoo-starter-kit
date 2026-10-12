@@ -8,7 +8,6 @@
     "Class",
     "define",
     "extend",
-    "ville",
     "ui",
     "core",
     "Widget",
@@ -25,14 +24,18 @@
     "Input",
     "type",
     "Element",
+    "addListener",
+    "e",
+    "preventDefault",
+    "ville",
     "BaseWidget"
   ],
   "sources": [
     "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/core/BaseWidget.js"
   ],
   "sourcesContent": [
-    "/**\n * Base widget\n */\nqx.Class.define(\"ville.ui.core.BaseWidget\", {\n    extend: ville.ui.core.Widget,\n\n    construct(component) {\n        if (component) {\n            this.__componentmap = component;\n        }\n        super();\n    },\n\n    members: {\n\n        __componentmap: {\"basetag\" : \"div\", \"type\" : \"na\"},\n\n        // overridden\n        _createContentElement() {\n            var newelem;\n            if (this.__componentmap.basetag = \"input\") {\n                newelem = new qx.html.Input(this.__componentmap.type);\n            } else {\n                newelem = new qx.html.Element(this.__componentmap.basetag);\n            }\n            return newelem; \n        }\n    }\n  });\n"
+    "/**\n * Base widget\n */\nqx.Class.define(\"ville.ui.core.BaseWidget\", {\n    extend: qx.ui.core.Widget,\n\n    construct(component) {\n        if (component) {\n            this.__componentmap = component;\n        }\n        super();\n    },\n\n    members: {\n\n        __componentmap: {\"basetag\" : \"div\", \"type\" : \"na\"},\n\n        // overridden\n        _createContentElement() {\n            var newelem;\n            if (this.__componentmap.basetag === \"input\") {\n                newelem = new qx.html.Input(this.__componentmap.type);\n            } else {\n                newelem = new qx.html.Element(this.__componentmap.basetag);\n            }\n            newelem.addListener(\"click\", (e) => {\n                e.preventDefault();\n            });\n            return newelem;\n        }\n    }\n  });\n"
   ],
-  "mappings": ";;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,0BAA0B,EAAE;IACxCC,MAAM,EAAEC,KAAK,CAACC,EAAE,CAACC,IAAI,CAACC,MAAM;IAE5BC,SAASA,CAACC,SAAS,EAAE;MACjB,IAAIA,SAAS,EAAE;QACX,IAAI,CAACC,sBAAc,GAAGD,SAAS;MACnC;MACAL,KAAA,CAAAC,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAI,WAAA,CAAAC,IAAA;IACJ,CAAC;IAEDC,OAAO,EAAE;MAELH,sBAAc,EAAE;QAAC,SAAS,EAAG,KAAK;QAAE,MAAM,EAAG;MAAI,CAAC;MAElD;MACAI,qBAAqBA,CAAA,EAAG;QACpB,IAAIC,OAAO;QACX,IAAI,IAAI,CAACL,sBAAc,CAACM,OAAO,GAAG,OAAO,EAAE;UACvCD,OAAO,GAAG,IAAIlB,EAAE,CAACoB,IAAI,CAACC,KAAK,CAAC,IAAI,CAACR,sBAAc,CAACS,IAAI,CAAC;QACzD,CAAC,MAAM;UACHJ,OAAO,GAAG,IAAIlB,EAAE,CAACoB,IAAI,CAACG,OAAO,CAAC,IAAI,CAACV,sBAAc,CAACM,OAAO,CAAC;QAC9D;QACA,OAAOD,OAAO;MAClB;IACJ;EACF,CAAC,CAAC;EA5BJX,KAAK,CAACC,EAAE,CAACC,IAAI,CAACe,UAAU,CAACrB,aAAa,GAAGA,aAAa;AAAC",
+  "mappings": ";;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,0BAA0B,EAAE;IACxCC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,MAAM;IAEzBC,SAASA,CAACC,SAAS,EAAE;MACjB,IAAIA,SAAS,EAAE;QACX,IAAI,CAACC,sBAAc,GAAGD,SAAS;MACnC;MACAX,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,MAAA,CAAAI,WAAA,CAAAC,IAAA;IACJ,CAAC;IAEDC,OAAO,EAAE;MAELH,sBAAc,EAAE;QAAC,SAAS,EAAG,KAAK;QAAE,MAAM,EAAG;MAAI,CAAC;MAElD;MACAI,qBAAqBA,CAAA,EAAG;QACpB,IAAIC,OAAO;QACX,IAAI,IAAI,CAACL,sBAAc,CAACM,OAAO,KAAK,OAAO,EAAE;UACzCD,OAAO,GAAG,IAAIjB,EAAE,CAACmB,IAAI,CAACC,KAAK,CAAC,IAAI,CAACR,sBAAc,CAACS,IAAI,CAAC;QACzD,CAAC,MAAM;UACHJ,OAAO,GAAG,IAAIjB,EAAE,CAACmB,IAAI,CAACG,OAAO,CAAC,IAAI,CAACV,sBAAc,CAACM,OAAO,CAAC;QAC9D;QACAD,OAAO,CAACM,WAAW,CAAC,OAAO,EAAGC,CAAC,IAAK;UAChCA,CAAC,CAACC,cAAc,CAAC,CAAC;QACtB,CAAC,CAAC;QACF,OAAOR,OAAO;MAClB;IACJ;EACF,CAAC,CAAC;EA/BJS,KAAK,CAACnB,EAAE,CAACC,IAAI,CAACmB,UAAU,CAACxB,aAAa,GAAGA,aAAa;AAAC",
   "ignoreList": []
 }

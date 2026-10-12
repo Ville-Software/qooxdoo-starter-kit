@@ -1,107 +1,8 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
-      "qx.Interface": {
+      "qx.Mixin": {
         "usage": "dynamic",
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2021 Zenesis Ltd (https://www.zenesis.com)
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * John Spackman (github.com/johnspackman)
-  
-  ************************************************************************ */
-
-  /**
-   * This is a marker interface for classes which can act as a children of
-   * {@link qx.ui.form.List}
-   */
-  qx.Interface.define("qx.ui.form.IListItem", {
-    /*
-    *****************************************************************************
-     EVENTS
-    *****************************************************************************
-    */
-
-    events: {
-      /** Fired when the value was modified */
-      changeReadOnly: "qx.event.type.Data"
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      /*
-      ---------------------------------------------------------------------------
-        READONLY PROPERTY
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Sets the element's value.
-       *
-       * @param value {Boolean|null} The new value of the element.
-       * @return {Boolean|null}
-       */
-      setReadOnly(value) {
-        this.assertArgumentsCount(arguments, 1, 1);
-      },
-      /**
-       * Resets the element's value to its initial value.
-       */
-      resetReadOnly() {},
-      /**
-       * The element's user set value.
-       *
-       * @return {Boolean|null} The value.
-       */
-      getReadOnly() {}
-    }
-  });
-  qx.ui.form.IListItem.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.form.ToggleButton": {
-        "construct": true,
-        "require": true
-      },
-      "qx.ui.form.MForm": {
-        "require": true
-      },
-      "qx.ui.form.MModelProperty": {
-        "require": true
-      },
-      "qx.ui.form.IForm": {
-        "require": true
-      },
-      "qx.ui.form.IModel": {
-        "require": true
-      },
-      "qx.ui.form.IListItem": {
         "require": true
       }
     }
@@ -123,17 +24,145 @@
      Authors:
        * Sebastian Werner (wpbasti)
        * Fabian Jakobs (fjakobs)
-       * Andreas Ecker (ecker)
+       * Martin Wittemann (martinwittemann)
   
   ************************************************************************ */
 
   /**
-   * A check box widget with an optional label.
+   * This mixin is included by all widgets which supports native overflowing.
    */
-  qx.Class.define("qx.ui.form.CheckBox", {
-    extend: qx.ui.form.ToggleButton,
-    include: [qx.ui.form.MForm, qx.ui.form.MModelProperty],
-    implement: [qx.ui.form.IForm, qx.ui.form.IModel, qx.ui.form.IListItem],
+  qx.Mixin.define("qx.ui.core.MNativeOverflow", {
+    /*
+    *****************************************************************************
+       PROPERTIES
+    *****************************************************************************
+    */
+
+    properties: {
+      /**
+       * Whether the widget should have horizontal scrollbars.
+       */
+      overflowX: {
+        check: ["hidden", "visible", "scroll", "auto"],
+        nullable: true,
+        apply: "_applyOverflowX"
+      },
+      /**
+       * Whether the widget should have vertical scrollbars.
+       */
+      overflowY: {
+        check: ["hidden", "visible", "scroll", "auto"],
+        nullable: true,
+        apply: "_applyOverflowY"
+      },
+      /**
+       * Overflow group property
+       */
+      overflow: {
+        group: ["overflowX", "overflowY"]
+      }
+    },
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      // property apply
+      _applyOverflowX(value) {
+        this.getContentElement().setStyle("overflowX", value);
+      },
+      // property apply
+      _applyOverflowY(value) {
+        this.getContentElement().setStyle("overflowY", value);
+      }
+    }
+  });
+  qx.ui.core.MNativeOverflow.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.core.Environment": {
+        "defer": "load",
+        "require": true
+      },
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.ui.core.Widget": {
+        "construct": true,
+        "require": true
+      },
+      "qx.ui.core.MNativeOverflow": {
+        "require": true
+      },
+      "qx.bom.client.Engine": {
+        "require": true
+      },
+      "qx.bom.client.Browser": {
+        "require": true
+      },
+      "qx.theme.manager.Font": {},
+      "qx.bom.Font": {},
+      "qx.theme.manager.Color": {}
+    },
+    "environment": {
+      "provided": [],
+      "required": {
+        "engine.name": {
+          "className": "qx.bom.client.Engine"
+        },
+        "browser.documentmode": {
+          "className": "qx.bom.client.Browser"
+        }
+      }
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+       * Andreas Ecker (ecker)
+       * Martin Wittemann (martinwittemann)
+  
+  ************************************************************************ */
+
+  /**
+   * The Html widget embeds plain HTML code into the application
+   *
+   * *Example*
+   *
+   * Here is a little example of how to use the canvas widget.
+   *
+   * <pre class='javascript'>
+   * var html = new qx.ui.embed.Html();
+   * html.setHtml("<h1>Hello World</h1>");
+   * </pre>
+   *
+   * *External Documentation*
+   *
+   * <a href='http://qooxdoo.org/docs/#desktop/widget/html.md' target='_blank'>
+   * Documentation of this widget in the qooxdoo manual.</a>
+   */
+  qx.Class.define("qx.ui.embed.Html", {
+    extend: qx.ui.core.Widget,
+    include: [qx.ui.core.MNativeOverflow],
     /*
     *****************************************************************************
        CONSTRUCTOR
@@ -141,23 +170,13 @@
     */
 
     /**
-     * @param label {String?null} An optional label for the check box.
+     * @param html {String} Initial HTML content
      */
-    construct(label) {
-      {
-        this.assertArgumentsCount(arguments, 0, 1);
+    construct(html) {
+      qx.ui.core.Widget.constructor.call(this);
+      if (html != null) {
+        this.setHtml(html);
       }
-      qx.ui.form.ToggleButton.constructor.call(this, label);
-
-      // Initialize the checkbox to a valid value (the default is null which
-      // is invalid)
-      this.setValue(false);
-
-      // ARIA attrs
-      const contentEl = this.getContentElement();
-      contentEl.setAttribute("role", "checkbox");
-      contentEl.removeAttribute("aria-pressed");
-      contentEl.setAttribute("aria-checked", false);
     },
     /*
     *****************************************************************************
@@ -166,55 +185,119 @@
     */
 
     properties: {
-      // overridden
-      appearance: {
-        refine: true,
-        init: "checkbox"
+      /** Any text string which can contain HTML, too */
+      html: {
+        check: "String",
+        apply: "_applyHtml",
+        event: "changeHtml",
+        nullable: true
+      },
+      /**
+       * The css classname for the html embed.
+       * <b>IMPORTANT</b> Paddings and borders does not work
+       * in the css class. These styles cause conflicts with
+       * the layout engine.
+       */
+      cssClass: {
+        check: "String",
+        init: "",
+        apply: "_applyCssClass"
       },
       // overridden
-      allowGrowX: {
+      selectable: {
         refine: true,
-        init: false
+        init: true
+      },
+      // overridden
+      focusable: {
+        refine: true,
+        init: true
       }
     },
-    /* eslint-disable @qooxdoo/qx/no-refs-in-members */
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
     members: {
-      /**
-       * @lint ignoreReferenceField(_forwardStates)
-       */
-      _forwardStates: {
-        invalid: true,
-        focused: true,
-        undetermined: true,
-        checked: true,
-        hovered: true
+      /*
+      ---------------------------------------------------------------------------
+        WIDGET API
+      ---------------------------------------------------------------------------
+      */
+
+      getFocusElement() {
+        return this.getContentElement();
       },
-      /**
-       * overridden (from MExecutable to keep the icon out of the binding)
-       * @lint ignoreReferenceField(_bindableProperties)
-       */
-      _bindableProperties: ["enabled", "label", "toolTipText", "value", "menu"],
-      // overridden
-      _applyValue(value, old) {
-        value ? this.addState("checked") : this.removeState("checked");
-        let ariaChecked = Boolean(value);
-        if (this.isTriState()) {
-          if (value === null) {
-            ariaChecked = "mixed";
-            this.addState("undetermined");
-          } else if (old === null) {
-            this.removeState("undetermined");
-          }
+      /*
+      ---------------------------------------------------------------------------
+        APPLY ROUTINES
+      ---------------------------------------------------------------------------
+      */
+
+      // property apply
+      _applyHtml(value, old) {
+        var elem = this.getContentElement();
+        // Workaround for http://bugzilla.qooxdoo.org/show_bug.cgi?id=7679
+        if (qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("browser.documentmode") == 9) {
+          elem.setStyle("position", "relative");
         }
 
-        // ARIA attrs
-        this.getContentElement().setAttribute("aria-checked", ariaChecked);
+        // Insert HTML content
+        elem.setAttribute("html", value || "");
+      },
+      // property apply
+      _applyCssClass(value, old) {
+        this.getContentElement().removeClass(old);
+        this.getContentElement().addClass(value);
+      },
+      // overridden
+      _applySelectable(value) {
+        qx.ui.embed.Html.superclass.prototype._applySelectable.call(this, value);
+
+        /*
+         * We have to set the value to "text" in Webkit for the content element
+         */
+        if (qx.core.Environment.get("engine.name") == "webkit") {
+          this.getContentElement().setStyle("userSelect", value ? "text" : "none");
+        }
+      },
+      /*
+      ---------------------------------------------------------------------------
+        FONT SUPPORT
+      ---------------------------------------------------------------------------
+      */
+
+      // overridden
+      _applyFont(value, old) {
+        var styles = value ? qx.theme.manager.Font.getInstance().resolve(value).getStyles() : qx.bom.Font.getDefaultStyles();
+
+        // check if text color already set - if so this local value has higher priority
+        if (this.getTextColor() != null) {
+          delete styles["color"];
+        }
+        this.getContentElement().setStyles(styles);
+      },
+      /*
+      ---------------------------------------------------------------------------
+        TEXT COLOR SUPPORT
+      ---------------------------------------------------------------------------
+      */
+
+      // overridden
+      _applyTextColor(value, old) {
+        if (value) {
+          this.getContentElement().setStyle("color", qx.theme.manager.Color.getInstance().resolve(value));
+        } else {
+          this.getContentElement().removeStyle("color");
+        }
       }
     }
   });
-  qx.ui.form.CheckBox.$$dbClassInfo = $$dbClassInfo;
+  qx.ui.embed.Html.$$dbClassInfo = $$dbClassInfo;
 })();
-//# sourceMappingURL=package-35.js.map?dt=1769807054404
+//# sourceMappingURL=package-35.js.map?dt=1791845587653
 qx.$$packageData['35'] = {
   "locales": {},
   "resources": {},

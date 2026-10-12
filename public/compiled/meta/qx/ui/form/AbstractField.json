@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471334958,
-  "lastModifiedIso": "2026-01-03T20:15:34.958Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/form/AbstractField.js",
+  "lastModified": 1739993515159,
+  "lastModifiedIso": "2025-02-19T19:31:55.159Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/form/AbstractField.js",
   "type": "class",
   "location": {
     "start": {
@@ -512,10 +512,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "required": {
       "location": {
@@ -548,10 +548,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "invalidMessage": {
       "location": {
@@ -584,10 +584,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "requiredInvalidMessage": {
       "location": {
@@ -621,10 +621,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     }
   },
   "members": {
@@ -2291,18 +2291,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "enabled {Boolean} The enabled state.",
-            "paramName": "enabled",
-            "description": " The enabled state.",
-            "type": "boolean"
+            "body": "enabled {Boolean} The enabled state."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean}",
-            "type": "boolean",
-            "description": ""
+            "body": "{Boolean}"
           }
         ]
       },
@@ -2322,18 +2317,14 @@
       "type": "function",
       "params": [
         {
-          "name": "enabled",
-          "type": "boolean"
+          "name": "enabled"
         }
       ],
       "abstract": true,
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "boolean"
-      }
+      ]
     },
     "getEnabled": {
       "jsdoc": {
@@ -2353,9 +2344,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} If the widget is enabled.",
-            "type": "boolean",
-            "description": "If the widget is enabled."
+            "body": "{Boolean} If the widget is enabled."
           }
         ]
       },
@@ -2378,10 +2367,7 @@
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "boolean"
-      }
+      ]
     },
     "setRequired": {
       "jsdoc": {
@@ -2401,10 +2387,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "required {Boolean} A flag signaling if the widget is required.",
-            "paramName": "required",
-            "description": " A flag signaling if the widget is required.",
-            "type": "boolean"
+            "body": "required {Boolean} A flag signaling if the widget is required."
           }
         ]
       },
@@ -2424,8 +2407,7 @@
       "type": "function",
       "params": [
         {
-          "name": "required",
-          "type": "boolean"
+          "name": "required"
         }
       ],
       "abstract": true,
@@ -2452,9 +2434,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} True, if the widget is required.",
-            "type": "boolean",
-            "description": "True, if the widget is required."
+            "body": "{Boolean} True, if the widget is required."
           }
         ]
       },
@@ -2477,10 +2457,7 @@
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "boolean"
-      }
+      ]
     },
     "setValid": {
       "jsdoc": {
@@ -2500,10 +2477,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "valid {Boolean} The valid state of the widget.",
-            "paramName": "valid",
-            "description": " The valid state of the widget.",
-            "type": "boolean"
+            "body": "valid {Boolean} The valid state of the widget."
           }
         ]
       },
@@ -2523,8 +2497,7 @@
       "type": "function",
       "params": [
         {
-          "name": "valid",
-          "type": "boolean"
+          "name": "valid"
         }
       ],
       "abstract": true,
@@ -2551,9 +2524,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} If the state of the widget is valid.",
-            "type": "boolean",
-            "description": "If the state of the widget is valid."
+            "body": "{Boolean} If the state of the widget is valid."
           }
         ]
       },
@@ -2576,10 +2547,7 @@
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "boolean"
-      }
+      ]
     },
     "setInvalidMessage": {
       "jsdoc": {
@@ -2599,10 +2567,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "message {String} The invalid message.",
-            "paramName": "message",
-            "description": " The invalid message.",
-            "type": "string"
+            "body": "message {String} The invalid message."
           }
         ]
       },
@@ -2622,8 +2587,7 @@
       "type": "function",
       "params": [
         {
-          "name": "message",
-          "type": "string"
+          "name": "message"
         }
       ],
       "abstract": true,
@@ -2650,9 +2614,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{String} The current set message.",
-            "type": "string",
-            "description": "The current set message."
+            "body": "{String} The current set message."
           }
         ]
       },
@@ -2675,10 +2637,7 @@
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "string"
-      }
+      ]
     },
     "setRequiredInvalidMessage": {
       "jsdoc": {
@@ -2698,10 +2657,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "message {String} The invalid message.",
-            "paramName": "message",
-            "description": " The invalid message.",
-            "type": "string"
+            "body": "message {String} The invalid message."
           }
         ]
       },
@@ -2721,8 +2677,7 @@
       "type": "function",
       "params": [
         {
-          "name": "message",
-          "type": "string"
+          "name": "message"
         }
       ],
       "abstract": true,
@@ -2749,9 +2704,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{String} The current set message.",
-            "type": "string",
-            "description": "The current set message."
+            "body": "{String} The current set message."
           }
         ]
       },
@@ -2774,10 +2727,7 @@
       "fromInterface": "qx.ui.form.IForm",
       "appearsIn": [
         "qx.ui.form.IForm"
-      ],
-      "returnType": {
-        "type": "string"
-      }
+      ]
     },
     "_applyValid": {
       "jsdoc": {
@@ -2807,10 +2757,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "__onChangeLocale": {
       "jsdoc": {
@@ -2837,10 +2787,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {Event} the change event",
-            "paramName": "e",
-            "description": " the change event",
-            "type": "Event"
+            "body": "e {Event} the change event"
           }
         ]
       },
@@ -2857,10 +2804,10 @@
           "index": 2607
         }
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     }
   },
   "destruct": {

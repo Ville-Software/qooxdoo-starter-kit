@@ -116,7 +116,7 @@
 
           // Validate incoming data
           {
-            this.__validateConfig__P_22_0(name, config);
+            this.__validateConfig__P_11_0(name, config);
           }
 
           // Create Interface from statics
@@ -382,7 +382,7 @@
       /** Registers all defined mixins */
       $$registry: {},
       /** @type {Map} allowed keys in mixin definition */
-      __allowedKeys__P_22_1: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_11_1: qx.core.Environment.select("qx.debug", {
         true: {
           include: "object",
           // Mixin | Mixin[]
@@ -409,10 +409,10 @@
        * @param name {String} The name of the class
        * @param config {Map} Configuration map
        */
-      __validateConfig__P_22_0: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_11_0: qx.core.Environment.select("qx.debug", {
         true(name, config) {
           // Validate keys
-          var allowed = this.__allowedKeys__P_22_1;
+          var allowed = this.__allowedKeys__P_11_1;
           for (var key in config) {
             if (!allowed[key]) {
               throw new Error('The configuration key "' + key + '" in mixin "' + name + '" is not allowed!');
@@ -454,4 +454,4 @@
   qx.Mixin.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Mixin.js.map?dt=1769806686259
+//# sourceMappingURL=Mixin.js.map?dt=1791841649598

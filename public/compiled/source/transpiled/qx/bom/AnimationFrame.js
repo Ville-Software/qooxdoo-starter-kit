@@ -97,7 +97,7 @@
       frame: "Number"
     },
     members: {
-      __canceled__P_180_0: false,
+      __canceled__P_119_0: false,
       /**
        * Method used to start a series of animation frames. The series will end as
        * soon as the given duration is over.
@@ -107,10 +107,10 @@
        * @ignore(performance.*)
        */
       startSequence(duration) {
-        this.__canceled__P_180_0 = false;
-        var start = window.performance && performance.now ? performance.now() + qx.bom.AnimationFrame.__start__P_180_1 : Date.now();
+        this.__canceled__P_119_0 = false;
+        var start = window.performance && performance.now ? performance.now() + qx.bom.AnimationFrame.__start__P_119_1 : Date.now();
         var cb = function (time) {
-          if (this.__canceled__P_180_0) {
+          if (this.__canceled__P_119_0) {
             this.id = null;
             return;
           }
@@ -132,7 +132,7 @@
        * sequence is running.
        */
       cancelSequence() {
-        this.__canceled__P_180_0 = true;
+        this.__canceled__P_119_0 = true;
       }
     },
     statics: {
@@ -192,7 +192,7 @@
         var cb = function (time) {
           // check for high resolution time
           if (time < 1e10) {
-            time = qx.bom.AnimationFrame.__start__P_180_1 + time;
+            time = qx.bom.AnimationFrame.__start__P_119_1 + time;
           }
           time = time || Date.now();
           callback.call(context, time);
@@ -213,14 +213,14 @@
      */
     defer(statics) {
       // check and use the high resolution start time if available
-      statics.__start__P_180_1 = window.performance && performance.timing && performance.timing.navigationStart;
+      statics.__start__P_119_1 = window.performance && performance.timing && performance.timing.navigationStart;
       // if not, simply use the current time
-      if (!statics.__start__P_180_1) {
-        statics.__start__P_180_1 = Date.now();
+      if (!statics.__start__P_119_1) {
+        statics.__start__P_119_1 = Date.now();
       }
     }
   });
   qx.bom.AnimationFrame.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=AnimationFrame.js.map?dt=1769806693560
+//# sourceMappingURL=AnimationFrame.js.map?dt=1791841651656

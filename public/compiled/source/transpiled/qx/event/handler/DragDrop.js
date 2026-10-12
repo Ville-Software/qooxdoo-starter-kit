@@ -98,16 +98,16 @@
       qx.core.Object.constructor.call(this);
 
       // Define shorthands
-      this.__manager__P_105_0 = manager;
-      this.__root__P_105_1 = manager.getWindow().document.documentElement;
+      this.__manager__P_36_0 = manager;
+      this.__root__P_36_1 = manager.getWindow().document.documentElement;
 
       // Initialize listener
-      this.__manager__P_105_0.addListener(this.__root__P_105_1, "longtap", this._onLongtap, this);
-      this.__manager__P_105_0.addListener(this.__root__P_105_1, "pointerdown", this._onPointerdown, this, true);
+      this.__manager__P_36_0.addListener(this.__root__P_36_1, "longtap", this._onLongtap, this);
+      this.__manager__P_36_0.addListener(this.__root__P_36_1, "pointerdown", this._onPointerdown, this, true);
       qx.event.Registration.addListener(window, "blur", this._onWindowBlur, this);
 
       // Initialize data structures
-      this.__rebuildStructures__P_105_2();
+      this.__rebuildStructures__P_36_2();
     },
     /*
     *****************************************************************************
@@ -160,21 +160,21 @@
     */
 
     members: {
-      __manager__P_105_0: null,
-      __root__P_105_1: null,
-      __dropTarget__P_105_3: null,
-      __dragTarget__P_105_4: null,
-      __types__P_105_5: null,
-      __actions__P_105_6: null,
-      __keys__P_105_7: null,
-      __cache__P_105_8: null,
-      __currentType__P_105_9: null,
-      __currentAction__P_105_10: null,
-      __sessionActive__P_105_11: false,
-      __validDrop__P_105_12: false,
-      __validAction__P_105_13: false,
-      __dragTargetWidget__P_105_14: null,
-      __startConfig__P_105_15: null,
+      __manager__P_36_0: null,
+      __root__P_36_1: null,
+      __dropTarget__P_36_3: null,
+      __dragTarget__P_36_4: null,
+      __types__P_36_5: null,
+      __actions__P_36_6: null,
+      __keys__P_36_7: null,
+      __cache__P_36_8: null,
+      __currentType__P_36_9: null,
+      __currentAction__P_36_10: null,
+      __sessionActive__P_36_11: false,
+      __validDrop__P_36_12: false,
+      __validAction__P_36_13: false,
+      __dragTargetWidget__P_36_14: null,
+      __startConfig__P_36_15: null,
       /*
       ---------------------------------------------------------------------------
         EVENT HANDLER INTERFACE
@@ -203,7 +203,7 @@
        * @param type {String} The type to add
        */
       addType(type) {
-        this.__types__P_105_5[type] = true;
+        this.__types__P_36_5[type] = true;
       },
       /**
        * Registers a supported action. One of <code>move</code>,
@@ -212,7 +212,7 @@
        * @param action {String} The action to add
        */
       addAction(action) {
-        this.__actions__P_105_6[action] = true;
+        this.__actions__P_36_6[action] = true;
       },
       /**
        * Whether the current drag target supports the given type
@@ -221,7 +221,7 @@
        * @return {Boolean} Whether the type is supported
        */
       supportsType(type) {
-        return !!this.__types__P_105_5[type];
+        return !!this.__types__P_36_5[type];
       },
       /**
        * Whether the current drag target supports the given action
@@ -230,7 +230,7 @@
        * @return {Boolean} Whether the action is supported
        */
       supportsAction(type) {
-        return !!this.__actions__P_105_6[type];
+        return !!this.__actions__P_36_6[type];
       },
       /**
        * Whether the current drop target allows the current drag target.
@@ -238,8 +238,8 @@
        * @param isAllowed {Boolean} False if a drop should be disallowed
        */
       setDropAllowed(isAllowed) {
-        this.__validDrop__P_105_12 = isAllowed;
-        this.__detectAction__P_105_16();
+        this.__validDrop__P_36_12 = isAllowed;
+        this.__detectAction__P_36_16();
       },
       /**
        * Returns the data of the given type during the <code>drop</code> event
@@ -254,20 +254,20 @@
        * @return {var} The result data in a promise
        */
       getData(type) {
-        if (!this.__validDrop__P_105_12 || !this.__dropTarget__P_105_3) {
+        if (!this.__validDrop__P_36_12 || !this.__dropTarget__P_36_3) {
           throw new Error("This method must not be used outside the drop event listener!");
         }
-        if (!this.__types__P_105_5[type]) {
+        if (!this.__types__P_36_5[type]) {
           throw new Error("Unsupported data type: " + type + "!");
         }
-        if (!this.__cache__P_105_8[type]) {
-          this.__currentType__P_105_9 = type;
-          this.__fireEvent__P_105_17("droprequest", this.__dragTarget__P_105_4, this.__dropTarget__P_105_3, false, false);
+        if (!this.__cache__P_36_8[type]) {
+          this.__currentType__P_36_9 = type;
+          this.__fireEvent__P_36_17("droprequest", this.__dragTarget__P_36_4, this.__dropTarget__P_36_3, false, false);
         }
-        if (!this.__cache__P_105_8[type]) {
+        if (!this.__cache__P_36_8[type]) {
           throw new Error("Please use a droprequest listener to the drag source to fill the manager with data!");
         }
-        return this.__cache__P_105_8[type] || null;
+        return this.__cache__P_36_8[type] || null;
       },
       /**
        * Returns the data of the given type during the <code>drop</code> event
@@ -278,25 +278,25 @@
        * @return {qx.Promise} The result data in a promise
        */
       getDataAsync(type) {
-        if (!this.__validDrop__P_105_12 || !this.__dropTarget__P_105_3) {
+        if (!this.__validDrop__P_36_12 || !this.__dropTarget__P_36_3) {
           throw new Error("This method must not be used outside the drop event listener!");
         }
-        if (!this.__types__P_105_5[type]) {
+        if (!this.__types__P_36_5[type]) {
           throw new Error("Unsupported data type: " + type + "!");
         }
         var tracker = {};
         var self = this;
-        if (!this.__cache__P_105_8[type]) {
+        if (!this.__cache__P_36_8[type]) {
           qx.event.Utils.then(tracker, function () {
-            self.__currentType__P_105_9 = type;
-            return self.__fireEvent__P_105_17("droprequest", self.__dragTarget__P_105_4, self.__dropTarget__P_105_3, false);
+            self.__currentType__P_36_9 = type;
+            return self.__fireEvent__P_36_17("droprequest", self.__dragTarget__P_36_4, self.__dropTarget__P_36_3, false);
           });
         }
         return qx.event.Utils.then(tracker, function () {
-          if (!this.__cache__P_105_8[type]) {
+          if (!this.__cache__P_36_8[type]) {
             throw new Error("Please use a droprequest listener to the drag source to fill the manager with data!");
           }
-          return this.__cache__P_105_8[type] || null;
+          return this.__cache__P_36_8[type] || null;
         });
       },
       /**
@@ -306,8 +306,8 @@
        *    <code>alias</code>
        */
       getCurrentAction() {
-        this.__detectAction__P_105_16();
-        return this.__currentAction__P_105_10;
+        this.__detectAction__P_36_16();
+        return this.__currentAction__P_36_10;
       },
       /**
        * Returns the currently selected action (by user keyboard modifiers)
@@ -318,8 +318,8 @@
       getCurrentActionAsync: qx.core.Environment.select("qx.promise", {
         true() {
           var self = this;
-          return qx.Promise.resolve(self.__detectAction__P_105_16()).then(function () {
-            return self.__currentAction__P_105_10;
+          return qx.Promise.resolve(self.__detectAction__P_36_16()).then(function () {
+            return self.__currentAction__P_36_10;
           });
         },
         false() {
@@ -331,7 +331,7 @@
        * @return {qx.ui.core.Widget} The widget on which the drag started.
        */
       getDragTarget() {
-        return this.__dragTargetWidget__P_105_14;
+        return this.__dragTargetWidget__P_36_14;
       },
       /**
        * Adds data of the given type to the internal storage. The data
@@ -341,7 +341,7 @@
        * @param data {var} Any data to store
        */
       addData(type, data) {
-        this.__cache__P_105_8[type] = data;
+        this.__cache__P_36_8[type] = data;
       },
       /**
        * Returns the type which was requested last.
@@ -349,7 +349,7 @@
        * @return {String} The last requested data type
        */
       getCurrentType() {
-        return this.__currentType__P_105_9;
+        return this.__currentType__P_36_9;
       },
       /**
        * Returns if a drag session is currently active
@@ -357,7 +357,7 @@
        * @return {Boolean} active drag session
        */
       isSessionActive() {
-        return this.__sessionActive__P_105_11;
+        return this.__sessionActive__P_36_11;
       },
       /*
       ---------------------------------------------------------------------------
@@ -368,11 +368,11 @@
       /**
        * Rebuilds the internal data storage used during a drag&drop session
        */
-      __rebuildStructures__P_105_2() {
-        this.__types__P_105_5 = {};
-        this.__actions__P_105_6 = {};
-        this.__keys__P_105_7 = {};
-        this.__cache__P_105_8 = {};
+      __rebuildStructures__P_36_2() {
+        this.__types__P_36_5 = {};
+        this.__actions__P_36_6 = {};
+        this.__keys__P_36_7 = {};
+        this.__cache__P_36_8 = {};
       },
       /**
        * Detects the current action and stores it under the private
@@ -381,16 +381,16 @@
        *
        * @return {qx.Promise|null}
        */
-      __detectAction__P_105_16() {
-        if (this.__dragTarget__P_105_4 == null) {
+      __detectAction__P_36_16() {
+        if (this.__dragTarget__P_36_4 == null) {
           {
             return qx.Promise.reject();
           }
         }
-        var actions = this.__actions__P_105_6;
-        var keys = this.__keys__P_105_7;
+        var actions = this.__actions__P_36_6;
+        var keys = this.__keys__P_36_7;
         var current = null;
-        if (this.__validDrop__P_105_12) {
+        if (this.__validDrop__P_36_12) {
           if (keys.Shift && keys.Control && actions.alias) {
             current = "alias";
           } else if (keys.Shift && keys.Alt && actions.copy) {
@@ -411,19 +411,19 @@
         }
         var self = this;
         var tracker = {};
-        var old = this.__currentAction__P_105_10;
+        var old = this.__currentAction__P_36_10;
         if (current != old) {
-          if (this.__dropTarget__P_105_3) {
+          if (this.__dropTarget__P_36_3) {
             qx.event.Utils.catch(function () {
-              self.__validAction__P_105_13 = false;
+              self.__validAction__P_36_13 = false;
               current = null;
             });
             qx.event.Utils.then(tracker, function () {
-              self.__currentAction__P_105_10 = current;
-              return self.__fireEvent__P_105_17("dragchange", self.__dropTarget__P_105_3, self.__dragTarget__P_105_4, true);
+              self.__currentAction__P_36_10 = current;
+              return self.__fireEvent__P_36_17("dragchange", self.__dropTarget__P_36_3, self.__dragTarget__P_36_4, true);
             });
             qx.event.Utils.then(tracker, function (validAction) {
-              self.__validAction__P_105_13 = validAction;
+              self.__validAction__P_36_13 = validAction;
               if (!validAction) {
                 current = null;
               }
@@ -432,8 +432,8 @@
         }
         return qx.event.Utils.then(tracker, function () {
           if (current != old) {
-            self.__currentAction__P_105_10 = current;
-            return self.__fireEvent__P_105_17("dragchange", self.__dragTarget__P_105_4, self.__dropTarget__P_105_3, false);
+            self.__currentAction__P_36_10 = current;
+            return self.__fireEvent__P_36_17("dragchange", self.__dragTarget__P_36_4, self.__dropTarget__P_36_3, false);
           }
         });
       },
@@ -450,7 +450,7 @@
        * @return {qx.Promise|Boolean} <code>true</code> if the event's default behavior was
        * not prevented
        */
-      __fireEvent__P_105_17(type, target, relatedTarget, cancelable, original, async) {
+      __fireEvent__P_36_17(type, target, relatedTarget, cancelable, original, async) {
         var Registration = qx.event.Registration;
         var dragEvent = Registration.createEvent(type, qx.event.type.Drag, [cancelable, original]);
         if (target !== relatedTarget) {
@@ -480,7 +480,7 @@
        * @param elem {Element} The element to query
        * @return {Element} The next parent element which is draggable. May also be <code>null</code>
        */
-      __findDraggable__P_105_18(elem) {
+      __findDraggable__P_36_18(elem) {
         while (elem && elem.nodeType == 1) {
           if (elem.getAttribute("qxDraggable") == "on") {
             return elem;
@@ -497,7 +497,7 @@
        * @param elem {Element} The element to query
        * @return {Element} The next parent element which is droppable. May also be <code>null</code>
        */
-      __findDroppable__P_105_19(elem) {
+      __findDroppable__P_36_19(elem) {
         while (elem && elem.nodeType == 1) {
           if (elem.getAttribute("qxDroppable") == "on") {
             return elem;
@@ -515,36 +515,36 @@
         //this.debug("clearSession");
 
         // Deregister from root events
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "pointermove", this._onPointermove, this);
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "pointerup", this._onPointerup, this, true);
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "keydown", this._onKeyDown, this, true);
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "keyup", this._onKeyUp, this, true);
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "keypress", this._onKeyPress, this, true);
-        this.__manager__P_105_0.removeListener(this.__root__P_105_1, "roll", this._onRoll, this, true);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "pointermove", this._onPointermove, this);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "pointerup", this._onPointerup, this, true);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "keydown", this._onKeyDown, this, true);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "keyup", this._onKeyUp, this, true);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "keypress", this._onKeyPress, this, true);
+        this.__manager__P_36_0.removeListener(this.__root__P_36_1, "roll", this._onRoll, this, true);
         var tracker = {};
         var self = this;
 
         // Fire dragend event
-        if (this.__dragTarget__P_105_4) {
+        if (this.__dragTarget__P_36_4) {
           qx.event.Utils.then(tracker, function () {
-            return self.__fireEvent__P_105_17("dragend", self.__dragTarget__P_105_4, self.__dropTarget__P_105_3, false);
+            return self.__fireEvent__P_36_17("dragend", self.__dragTarget__P_36_4, self.__dropTarget__P_36_3, false);
           });
         }
         return qx.event.Utils.then(tracker, function () {
           // Cleanup
-          self.__validDrop__P_105_12 = false;
-          self.__dropTarget__P_105_3 = null;
-          if (self.__dragTargetWidget__P_105_14) {
-            self.__dragTargetWidget__P_105_14.removeState("drag");
-            self.__dragTargetWidget__P_105_14 = null;
+          self.__validDrop__P_36_12 = false;
+          self.__dropTarget__P_36_3 = null;
+          if (self.__dragTargetWidget__P_36_14) {
+            self.__dragTargetWidget__P_36_14.removeState("drag");
+            self.__dragTargetWidget__P_36_14 = null;
           }
 
           // Clear init
           //self.debug("Clearing drag target");
-          self.__dragTarget__P_105_4 = null;
-          self.__sessionActive__P_105_11 = false;
-          self.__startConfig__P_105_15 = null;
-          self.__rebuildStructures__P_105_2();
+          self.__dragTarget__P_36_4 = null;
+          self.__sessionActive__P_36_11 = false;
+          self.__startConfig__P_36_15 = null;
+          self.__rebuildStructures__P_36_2();
         });
       },
       /*
@@ -564,7 +564,7 @@
           return;
         }
         // prevent scrolling
-        this.__manager__P_105_0.addListener(this.__root__P_105_1, "roll", this._onRoll, this, true);
+        this.__manager__P_36_0.addListener(this.__root__P_36_1, "roll", this._onRoll, this, true);
         return this._start(e);
       },
       /**
@@ -584,18 +584,18 @@
 
         // start target can be none as the drag & drop handler might
         // be created after the first start event
-        var target = this.__startConfig__P_105_15 ? this.__startConfig__P_105_15.target : e.getTarget();
-        var draggable = this.__findDraggable__P_105_18(target);
+        var target = this.__startConfig__P_36_15 ? this.__startConfig__P_36_15.target : e.getTarget();
+        var draggable = this.__findDraggable__P_36_18(target);
         if (draggable) {
           // This is the source target
           //this.debug("Setting dragtarget = " + draggable);
-          this.__dragTarget__P_105_4 = draggable;
-          var widgetOriginalTarget = qx.ui.core.Widget.getWidgetByElement(this.__startConfig__P_105_15.original);
+          this.__dragTarget__P_36_4 = draggable;
+          var widgetOriginalTarget = qx.ui.core.Widget.getWidgetByElement(this.__startConfig__P_36_15.original);
           while (widgetOriginalTarget && widgetOriginalTarget.isAnonymous()) {
             widgetOriginalTarget = widgetOriginalTarget.getLayoutParent();
           }
           if (widgetOriginalTarget) {
-            this.__dragTargetWidget__P_105_14 = widgetOriginalTarget;
+            this.__dragTargetWidget__P_36_14 = widgetOriginalTarget;
             widgetOriginalTarget.addState("drag");
           }
 
@@ -604,20 +604,20 @@
           var tracker = {};
           qx.event.Utils.catch(function () {
             //self.debug("dragstart FAILED, setting __sessionActive=false");
-            self.__sessionActive__P_105_11 = false;
+            self.__sessionActive__P_36_11 = false;
           });
           qx.event.Utils.then(tracker, function () {
-            return self.__fireEvent__P_105_17("dragstart", self.__dragTarget__P_105_4, self.__dropTarget__P_105_3, true, e);
+            return self.__fireEvent__P_36_17("dragstart", self.__dragTarget__P_36_4, self.__dropTarget__P_36_3, true, e);
           });
           return qx.event.Utils.then(tracker, function (validAction) {
             if (!validAction) {
               return;
             }
             //self.debug("dragstart ok, setting __sessionActive=true")
-            self.__manager__P_105_0.addListener(self.__root__P_105_1, "keydown", self._onKeyDown, self, true);
-            self.__manager__P_105_0.addListener(self.__root__P_105_1, "keyup", self._onKeyUp, self, true);
-            self.__manager__P_105_0.addListener(self.__root__P_105_1, "keypress", self._onKeyPress, self, true);
-            self.__sessionActive__P_105_11 = true;
+            self.__manager__P_36_0.addListener(self.__root__P_36_1, "keydown", self._onKeyDown, self, true);
+            self.__manager__P_36_0.addListener(self.__root__P_36_1, "keyup", self._onKeyUp, self, true);
+            self.__manager__P_36_0.addListener(self.__root__P_36_1, "keypress", self._onKeyPress, self, true);
+            self.__sessionActive__P_36_11 = true;
           });
         }
       },
@@ -627,14 +627,14 @@
        */
       _onPointerdown(e) {
         if (e.isPrimary()) {
-          this.__startConfig__P_105_15 = {
+          this.__startConfig__P_36_15 = {
             target: e.getTarget(),
             original: e.getOriginalTarget(),
             left: e.getDocumentLeft(),
             top: e.getDocumentTop()
           };
-          this.__manager__P_105_0.addListener(this.__root__P_105_1, "pointermove", this._onPointermove, this);
-          this.__manager__P_105_0.addListener(this.__root__P_105_1, "pointerup", this._onPointerup, this, true);
+          this.__manager__P_36_0.addListener(this.__root__P_36_1, "pointermove", this._onPointermove, this);
+          this.__manager__P_36_0.addListener(this.__root__P_36_1, "pointerup", this._onPointerup, this, true);
         }
       },
       /**
@@ -657,7 +657,7 @@
         });
 
         // start the drag session for mouse
-        if (!self.__sessionActive__P_105_11 && e.getPointerType() == "mouse") {
+        if (!self.__sessionActive__P_36_11 && e.getPointerType() == "mouse") {
           var delta = self._getDelta(e);
           // if the mouse moved a bit in any direction
           var distance = qx.event.handler.DragDrop.MIN_DRAG_DISTANCE;
@@ -670,14 +670,14 @@
         }
         return qx.event.Utils.then(tracker, function () {
           // check if the session has been activated
-          if (!self.__sessionActive__P_105_11) {
+          if (!self.__sessionActive__P_36_11) {
             //self.debug("not active");
             return;
           }
           var tracker = {};
           qx.event.Utils.then(tracker, function () {
             //self.debug("active, firing drag");
-            return self.__fireEvent__P_105_17("drag", self.__dragTarget__P_105_4, self.__dropTarget__P_105_3, true, e);
+            return self.__fireEvent__P_36_17("drag", self.__dragTarget__P_36_4, self.__dropTarget__P_36_3, true, e);
           });
           qx.event.Utils.then(tracker, function (validAction) {
             if (!validAction) {
@@ -687,7 +687,7 @@
             //self.debug("drag");
             // find current hovered droppable
             var el = e.getTarget();
-            if (self.__startConfig__P_105_15.target === el) {
+            if (self.__startConfig__P_36_15.target === el) {
               // on touch devices the native events return wrong elements as target (its always the element where the dragging started)
               el = e.getNativeEvent().view.document.elementFromPoint(e.getDocumentLeft(), e.getDocumentTop());
             }
@@ -704,54 +704,54 @@
               qx.bom.element.Style.set(cursorEl, "display", display);
             }
             if (el !== cursorEl) {
-              var droppable = self.__findDroppable__P_105_19(el);
+              var droppable = self.__findDroppable__P_36_19(el);
 
               // new drop target detected
-              if (droppable && droppable != self.__dropTarget__P_105_3) {
-                var dropLeaveTarget = self.__dropTarget__P_105_3;
-                self.__validDrop__P_105_12 = true; // initial value should be true
-                self.__dropTarget__P_105_3 = droppable;
+              if (droppable && droppable != self.__dropTarget__P_36_3) {
+                var dropLeaveTarget = self.__dropTarget__P_36_3;
+                self.__validDrop__P_36_12 = true; // initial value should be true
+                self.__dropTarget__P_36_3 = droppable;
                 var innerTracker = {};
                 qx.event.Utils.catch(innerTracker, function () {
-                  self.__dropTarget__P_105_3 = null;
-                  self.__validDrop__P_105_12 = false;
+                  self.__dropTarget__P_36_3 = null;
+                  self.__validDrop__P_36_12 = false;
                 });
 
                 // fire dragleave for previous drop target
                 if (dropLeaveTarget) {
                   qx.event.Utils.then(innerTracker, function () {
-                    return self.__fireEvent__P_105_17("dragleave", dropLeaveTarget, self.__dragTarget__P_105_4, false, e);
+                    return self.__fireEvent__P_36_17("dragleave", dropLeaveTarget, self.__dragTarget__P_36_4, false, e);
                   });
                 }
                 qx.event.Utils.then(innerTracker, function () {
-                  return self.__fireEvent__P_105_17("dragover", droppable, self.__dragTarget__P_105_4, true, e);
+                  return self.__fireEvent__P_36_17("dragover", droppable, self.__dragTarget__P_36_4, true, e);
                 });
                 return qx.event.Utils.then(innerTracker, function (validDrop) {
-                  self.__validDrop__P_105_12 = validDrop;
+                  self.__validDrop__P_36_12 = validDrop;
                 });
               }
 
               // only previous drop target
-              else if (!droppable && self.__dropTarget__P_105_3) {
+              else if (!droppable && self.__dropTarget__P_36_3) {
                 var innerTracker = {};
                 qx.event.Utils.then(innerTracker, function () {
-                  return self.__fireEvent__P_105_17("dragleave", self.__dropTarget__P_105_3, self.__dragTarget__P_105_4, false, e);
+                  return self.__fireEvent__P_36_17("dragleave", self.__dropTarget__P_36_3, self.__dragTarget__P_36_4, false, e);
                 });
                 return qx.event.Utils.then(innerTracker, function () {
-                  self.__dropTarget__P_105_3 = null;
-                  self.__validDrop__P_105_12 = false;
-                  return self.__detectAction__P_105_16();
+                  self.__dropTarget__P_36_3 = null;
+                  self.__validDrop__P_36_12 = false;
+                  return self.__detectAction__P_36_16();
                 });
               }
             }
           });
           return qx.event.Utils.then(tracker, function () {
             // Reevaluate current action
-            var keys = self.__keys__P_105_7;
+            var keys = self.__keys__P_36_7;
             keys.Control = e.isCtrlPressed();
             keys.Shift = e.isShiftPressed();
             keys.Alt = e.isAltPressed();
-            return self.__detectAction__P_105_16();
+            return self.__detectAction__P_36_16();
           });
         });
       },
@@ -764,11 +764,11 @@
        * @return {Map} containing the deltaX as x, and deltaY as y.
        */
       _getDelta(e) {
-        if (!this.__startConfig__P_105_15) {
+        if (!this.__startConfig__P_36_15) {
           return null;
         }
-        var deltaX = e.getDocumentLeft() - this.__startConfig__P_105_15.left;
-        var deltaY = e.getDocumentTop() - this.__startConfig__P_105_15.top;
+        var deltaX = e.getDocumentLeft() - this.__startConfig__P_36_15.left;
+        var deltaY = e.getDocumentTop() - this.__startConfig__P_36_15.top;
         return {
           x: deltaX,
           y: deltaY
@@ -786,14 +786,14 @@
         var self = this;
 
         // Fire drop event in success case
-        if (this.__validDrop__P_105_12 && this.__validAction__P_105_13) {
+        if (this.__validDrop__P_36_12 && this.__validAction__P_36_13) {
           qx.event.Utils.then(tracker, function () {
-            return self.__fireEvent__P_105_17("drop", self.__dropTarget__P_105_3, self.__dragTarget__P_105_4, false, e);
+            return self.__fireEvent__P_36_17("drop", self.__dropTarget__P_36_3, self.__dragTarget__P_36_4, false, e);
           });
         }
         return qx.event.Utils.then(tracker, function () {
           // Stop event
-          if (e.getTarget() == self.__dragTarget__P_105_4) {
+          if (e.getTarget() == self.__dragTarget__P_36_4) {
             e.stopPropagation();
           }
 
@@ -827,9 +827,9 @@
           case "Alt":
           case "Control":
           case "Shift":
-            if (!this.__keys__P_105_7[iden]) {
-              this.__keys__P_105_7[iden] = true;
-              return this.__detectAction__P_105_16();
+            if (!this.__keys__P_36_7[iden]) {
+              this.__keys__P_36_7[iden] = true;
+              return this.__detectAction__P_36_16();
             }
         }
       },
@@ -844,9 +844,9 @@
           case "Alt":
           case "Control":
           case "Shift":
-            if (this.__keys__P_105_7[iden]) {
-              this.__keys__P_105_7[iden] = false;
-              return this.__detectAction__P_105_16();
+            if (this.__keys__P_36_7[iden]) {
+              this.__keys__P_36_7[iden] = false;
+              return this.__detectAction__P_36_16();
             }
         }
       },
@@ -873,7 +873,7 @@
       qx.event.Registration.removeListener(window, "blur", this._onWindowBlur, this);
 
       // Clear fields
-      this.__dragTarget__P_105_4 = this.__dropTarget__P_105_3 = this.__manager__P_105_0 = this.__root__P_105_1 = this.__types__P_105_5 = this.__actions__P_105_6 = this.__keys__P_105_7 = this.__cache__P_105_8 = null;
+      this.__dragTarget__P_36_4 = this.__dropTarget__P_36_3 = this.__manager__P_36_0 = this.__root__P_36_1 = this.__types__P_36_5 = this.__actions__P_36_6 = this.__keys__P_36_7 = this.__cache__P_36_8 = null;
     },
     /*
     *****************************************************************************
@@ -888,4 +888,4 @@
   qx.event.handler.DragDrop.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=DragDrop.js.map?dt=1769806690131
+//# sourceMappingURL=DragDrop.js.map?dt=1791841650241

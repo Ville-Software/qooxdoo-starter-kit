@@ -1,17 +1,18 @@
 /**
  * Button
+ * @external(mantine/core/styles/UnstyledButton.css)
  * @external(mantine/core/styles/ActionIcon.css)
  */
 qx.Class.define("ville.ui.form.ToggleActionIcon", {
-    extend: ville.ui.form.UnstyledToggleButton,
+    extend: qx.ui.form.ToggleButton,
 
     construct(trueicon, falseicon, variant, component) {
         if (component) {
             this.__componenttag = component;
         }
-        super(); 
+        super();
 
-        this.setCssUtilityClass("mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root " + this.getCssUtilityClass());
+        this.setCssUtilityClass("mantine-focus-auto mantine-active m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root");
 
         if (trueicon) {
             this.setTrueIcon(trueicon);
@@ -20,7 +21,7 @@ qx.Class.define("ville.ui.form.ToggleActionIcon", {
         if (falseicon) {
             this.setFalseIcon(falseicon);
         }
-        
+
         if (variant) {
             this.setVariant(variant);
         }
@@ -33,11 +34,11 @@ qx.Class.define("ville.ui.form.ToggleActionIcon", {
 
         this.addListenerOnce("appear", (e) => {
             if (this.isValue()) {
-                trueicon.setStyle("display", "block");
-                falseicon.setStyle("display", "none");
+                trueicon.getContentElement().setStyle("display", "block");
+                falseicon.getContentElement().setStyle("display", "none");
             } else {
-                trueicon.setStyle("display", "none");
-                falseicon.setStyle("display", "block");
+                trueicon.getContentElement().setStyle("display", "none");
+                falseicon.getContentElement().setStyle("display", "block");
             }
         });
 
@@ -59,18 +60,18 @@ qx.Class.define("ville.ui.form.ToggleActionIcon", {
                 //innerwrapper.removeAll();
                 if (e.getData()) {
                     //innerwrapper.add(this.getTrueIcon());
-                    trueicon.setStyle("display", "block");
-                    falseicon.setStyle("display", "none");
+                    trueicon.getContentElement().setStyle("display", "block");
+                    falseicon.getContentElement().setStyle("display", "none");
                 } else {
                     //innerwrapper.add(this.getFalseIcon());
-                    trueicon.setStyle("display", "none");
-                    falseicon.setStyle("display", "block");
+                    trueicon.getContentElement().setStyle("display", "none");
+                    falseicon.getContentElement().setStyle("display", "block");
                 }
             }
-            
+
         });
 
-        
+
     },
 
     properties: {
@@ -113,7 +114,7 @@ qx.Class.define("ville.ui.form.ToggleActionIcon", {
 
     members: {
 
-        __componenttag: "button",
+        __componenttag: "div",
 
         __trueiconpathd: null,
 
@@ -143,7 +144,7 @@ qx.Class.define("ville.ui.form.ToggleActionIcon", {
         // property apply
         _applyVariant(value, old) {
             if (value) {
-                this.setAttribute("data-variant", value);
+                this.getContentElement().setAttribute("data-variant", value);
             }
         },
 

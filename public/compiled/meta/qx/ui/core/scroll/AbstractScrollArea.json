@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471335005,
-  "lastModifiedIso": "2026-01-03T20:15:35.005Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/core/scroll/AbstractScrollArea.js",
+  "lastModified": 1739993515168,
+  "lastModifiedIso": "2025-02-19T19:31:55.168Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/core/scroll/AbstractScrollArea.js",
   "type": "class",
   "location": {
     "start": {
@@ -381,10 +381,10 @@
         "check": "Boolean"
       },
       "jsdoc": null,
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "dragScrollThresholdX": {
       "location": {
@@ -1582,20 +1582,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "orientation {String?\"horizontal\"} The initial scroll bar orientation",
-            "paramName": "orientation",
-            "description": " The initial scroll bar orientation",
-            "optional": true,
-            "defaultValue": "\"horizontal\"",
-            "type": "String"
+            "body": "orientation {String?\"horizontal\"} The initial scroll bar orientation"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.scroll.IScrollBar} The scrollbar instance",
-            "type": "qx.ui.core.scroll.IScrollBar",
-            "description": "The scrollbar instance"
+            "body": "{qx.ui.core.scroll.IScrollBar} The scrollbar instance"
           }
         ]
       },
@@ -1615,19 +1608,13 @@
       "type": "function",
       "params": [
         {
-          "name": "orientation",
-          "type": "String",
-          "optional": true,
-          "defaultValue": "\"horizontal\""
+          "name": "orientation"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.scroll.IScrollBar"
-      },
+      "mixin": "qx.ui.core.scroll.MScrollBarFactory",
       "appearsIn": [
         "qx.ui.core.scroll.MScrollBarFactory"
-      ],
-      "mixin": "qx.ui.core.scroll.MScrollBarFactory"
+      ]
     },
     "_cancelRoll": {
       "jsdoc": null,
@@ -1644,10 +1631,10 @@
           "index": 1088
         }
       },
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "_addRollHandling": {
       "jsdoc": {
@@ -1678,10 +1665,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "_removeRollHandling": {
       "jsdoc": {
@@ -1712,10 +1699,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "_onPointerDownForRoll": {
       "jsdoc": {
@@ -1735,10 +1722,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} pointerdown event",
-            "paramName": "e",
-            "description": " pointerdown event",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} pointerdown event"
           }
         ]
       },
@@ -1758,14 +1742,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "_onRoll": {
       "jsdoc": {
@@ -1785,10 +1768,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Roll} Roll event",
-            "paramName": "e",
-            "description": " Roll event",
-            "type": "qx.event.type.Roll"
+            "body": "e {qx.event.type.Roll} Roll event"
           }
         ]
       },
@@ -1808,14 +1788,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Roll"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.scroll.MRoll",
       "appearsIn": [
         "qx.ui.core.scroll.MRoll"
-      ],
-      "mixin": "qx.ui.core.scroll.MRoll"
+      ]
     },
     "__dragScrollTimer": {
       "jsdoc": null,

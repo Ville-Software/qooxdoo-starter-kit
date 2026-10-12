@@ -147,7 +147,7 @@
        * A static reference to the property implementation in the case it
        * should be included.
        */
-      __Property__P_4_0: true ? qx.core.Property : null,
+      __Property__P_5_0: true ? qx.core.Property : null,
       /*
       ---------------------------------------------------------------------------
          PUBLIC METHODS
@@ -224,7 +224,7 @@
        */
       define(name, config) {
         try {
-          return this.__defineImpl__P_4_1(name, config);
+          return this.__defineImpl__P_5_1(name, config);
         } catch (ex) {
           qx.Class.$$brokenClassDefinitions = true;
           throw ex;
@@ -238,7 +238,7 @@
        * @param {*} config @see `define()`
        * @returns  @see `define()`
        */
-      __defineImpl__P_4_1(name, config) {
+      __defineImpl__P_5_1(name, config) {
         if (!config) {
           config = {};
         }
@@ -263,7 +263,7 @@
         // Validate incoming data
         {
           try {
-            this.__validateConfig__P_4_2(name, config);
+            this.__validateConfig__P_5_2(name, config);
           } catch (ex) {
             if (implicitType) {
               ex.message = 'Assumed static class because no "extend" key was found. ' + ex.message;
@@ -273,40 +273,40 @@
         }
 
         // Create the class
-        var clazz = this.__createClass__P_4_3(name, config.type, config.extend, config.statics, config.construct, config.destruct, config.include);
+        var clazz = this.__createClass__P_5_3(name, config.type, config.extend, config.statics, config.construct, config.destruct, config.include);
 
         // Initialise class and constructor/destructor annotations
         ["@", "@construct", "@destruct"].forEach(function (id) {
-          this.__attachAnno__P_4_4(clazz, id, null, config[id]);
+          this.__attachAnno__P_5_4(clazz, id, null, config[id]);
         }, this);
 
         // Members, properties, events and mixins are only allowed for non-static classes
         if (config.extend) {
           // Attach properties
           if (config.properties) {
-            this.__addProperties__P_4_5(clazz, config.properties, true);
+            this.__addProperties__P_5_5(clazz, config.properties, true);
           }
 
           // Attach members
           if (config.members) {
-            this.__addMembers__P_4_6(clazz, config.members, true, true, false);
+            this.__addMembers__P_5_6(clazz, config.members, true, true, false);
           }
 
           // Process events
           if (config.events) {
-            this.__addEvents__P_4_7(clazz, config.events, true);
+            this.__addEvents__P_5_7(clazz, config.events, true);
           }
 
           //Process cached objects
           if (config.objects) {
-            this.__addObjects__P_4_8(clazz, config.objects);
+            this.__addObjects__P_5_8(clazz, config.objects);
           }
 
           // Include mixins
           // Must be the last here to detect conflicts
           if (config.include) {
             for (var i = 0, l = config.include.length; i < l; i++) {
-              this.__addMixin__P_4_9(clazz, config.include[i], false);
+              this.__addMixin__P_5_9(clazz, config.include[i], false);
             }
           }
         }
@@ -325,11 +325,11 @@
         // Interface support for non-static classes
         if (config.implement) {
           for (var i = 0, l = config.implement.length; i < l; i++) {
-            this.__addInterface__P_4_10(clazz, config.implement[i]);
+            this.__addInterface__P_5_10(clazz, config.implement[i]);
           }
         }
         {
-          this.__validateAbstractInterfaces__P_4_11(clazz);
+          this.__validateAbstractInterfaces__P_5_11(clazz);
         }
 
         // Process defer
@@ -344,7 +344,7 @@
                 properties[name] = config;
 
                 // execute generic property handler
-                qx.Class.__addProperties__P_4_5(clazz, properties, true);
+                qx.Class.__addProperties__P_5_5(clazz, properties, true);
               }
             });
           });
@@ -419,7 +419,7 @@
           }
           qx.Mixin.isCompatible(mixin, clazz);
         }
-        qx.Class.__addMixin__P_4_9(clazz, mixin, false);
+        qx.Class.__addMixin__P_5_9(clazz, mixin, false);
       },
       /**
        * Include all features of the given mixin into the class. The mixin may
@@ -442,7 +442,7 @@
           }
           qx.Mixin.isCompatible(mixin, clazz);
         }
-        qx.Class.__addMixin__P_4_9(clazz, mixin, true);
+        qx.Class.__addMixin__P_5_9(clazz, mixin, true);
         return qx.Class.getByName(clazz.classname);
       },
       /**
@@ -734,7 +734,7 @@
       /** Stores all defined classes */
       $$registry: qx.Bootstrap.$$registry,
       /** @type {Map} allowed keys in non-static class definition */
-      __allowedKeys__P_4_12: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_5_12: qx.core.Environment.select("qx.debug", {
         true: {
           "@": "object",
           "@construct": "object",
@@ -768,7 +768,7 @@
         default: null
       }),
       /** @type {Map} allowed keys in static class definition */
-      __staticAllowedKeys__P_4_13: qx.core.Environment.select("qx.debug", {
+      __staticAllowedKeys__P_5_13: qx.core.Environment.select("qx.debug", {
         true: {
           "@": "object",
           type: "string",
@@ -788,7 +788,7 @@
        * @param name {String} The name of the class
        * @param config {Map} Configuration map
        */
-      __validateConfig__P_4_2: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_5_2: qx.core.Environment.select("qx.debug", {
         true(name, config) {
           // Validate type
           if (config.type && !(config.type === "static" || config.type === "abstract" || config.type === "singleton")) {
@@ -801,7 +801,7 @@
           }
 
           // Validate keys
-          var allowed = config.type === "static" ? this.__staticAllowedKeys__P_4_13 : this.__allowedKeys__P_4_12;
+          var allowed = config.type === "static" ? this.__staticAllowedKeys__P_5_13 : this.__allowedKeys__P_5_12;
           for (var key in config) {
             if (!(key in allowed)) {
               throw new Error('The configuration key "' + key + '" in class "' + name + '" is not allowed!');
@@ -893,7 +893,7 @@
        * @signature function(clazz)
        * @param clazz {Class} The configured class.
        */
-      __validateAbstractInterfaces__P_4_11: qx.core.Environment.select("qx.debug", {
+      __validateAbstractInterfaces__P_5_11: qx.core.Environment.select("qx.debug", {
         true(clazz) {
           var superclass = clazz.superclass;
           while (superclass) {
@@ -919,7 +919,7 @@
        * @param key {String} Name of the annotated item
        * @param anno {Object} Annotation object
        */
-      __attachAnno__P_4_4(clazz, group, key, anno) {
+      __attachAnno__P_5_4(clazz, group, key, anno) {
         if (anno !== undefined) {
           if (clazz.$$annotations === undefined) {
             clazz.$$annotations = {};
@@ -949,7 +949,7 @@
        * @param mixins {Mixin[]} array of mixins of the class
        * @return {Class} The generated class
        */
-      __createClass__P_4_3(name, type, extend, statics, construct, destruct, mixins) {
+      __createClass__P_5_3(name, type, extend, statics, construct, destruct, mixins) {
         var isStrictMode = function () {
           return typeof this == "undefined";
         };
@@ -963,9 +963,9 @@
           if (extend) {
             // Create default constructor
             if (!construct) {
-              construct = this.__createDefaultConstructor__P_4_14();
+              construct = this.__createDefaultConstructor__P_5_14();
             }
-            clazz = this.__wrapConstructor__P_4_15(construct, name, type);
+            clazz = this.__wrapConstructor__P_5_15(construct, name, type);
 
             // Add singleton getInstance()
             if (type === "singleton") {
@@ -999,7 +999,7 @@
               }
 
               // Attach annotations
-              this.__attachAnno__P_4_4(clazz, "statics", key, statics["@" + key]);
+              this.__attachAnno__P_5_4(clazz, "statics", key, statics["@" + key]);
             }
           }
         }
@@ -1057,7 +1057,7 @@
        * @param events {Map} map of event names the class fires.
        * @param patch {Boolean ? false} Enable redefinition of event type?
        */
-      __addEvents__P_4_7(clazz, events, patch) {
+      __addEvents__P_5_7(clazz, events, patch) {
         {
           if (typeof events !== "object" || qx.Bootstrap.getClass(events) === "Array") {
             throw new Error(clazz.classname + ": the events must be defined as map!");
@@ -1085,7 +1085,7 @@
           clazz.$$events = events;
         }
       },
-      __addObjects__P_4_8(clazz, objects) {
+      __addObjects__P_5_8(clazz, objects) {
         function validateCachedObject(key, value) {
           if (typeof value !== "function") {
             throw new Error("Invalid cached object definition for " + key + " in " + clazz.classname);
@@ -1112,7 +1112,7 @@
        * @param patch {Boolean ? false} Overwrite property with the limitations of a property
                  which means you are able to refine but not to replace (esp. for new properties)
        */
-      __addProperties__P_4_5(clazz, properties, patch) {
+      __addProperties__P_5_5(clazz, properties, patch) {
         // check for the property module
 
         {
@@ -1130,7 +1130,7 @@
 
           // Check incoming configuration
           {
-            this.__validateProperty__P_4_16(clazz, name, config, patch);
+            this.__validateProperty__P_5_16(clazz, name, config, patch);
           }
 
           // Store name into configuration
@@ -1159,22 +1159,22 @@
             if (config.async) {
               event[config.event + "Async"] = "qx.event.type.Data";
             }
-            this.__addEvents__P_4_7(clazz, event, patch);
+            this.__addEvents__P_5_7(clazz, event, patch);
           }
 
           // Remember inheritable properties
           if (config.inheritable) {
-            this.__Property__P_4_0.$$inheritable[name] = true;
+            this.__Property__P_5_0.$$inheritable[name] = true;
             if (!proto.$$refreshInheritables) {
-              this.__Property__P_4_0.attachRefreshInheritables(clazz);
+              this.__Property__P_5_0.attachRefreshInheritables(clazz);
             }
           }
           if (!config.refine) {
-            this.__Property__P_4_0.attachMethods(clazz, name, config);
+            this.__Property__P_5_0.attachMethods(clazz, name, config);
           }
 
           // Add annotations
-          this.__attachAnno__P_4_4(clazz, "properties", name, config["@"]);
+          this.__attachAnno__P_5_4(clazz, "properties", name, config["@"]);
         }
       },
       /**
@@ -1186,7 +1186,7 @@
        * @param config {Map} configuration map
        * @param patch {Boolean ? false} enable refine/patch?
        */
-      __validateProperty__P_4_16: qx.core.Environment.select("qx.debug", {
+      __validateProperty__P_5_16: qx.core.Environment.select("qx.debug", {
         true(clazz, name, config, patch) {
           // check for properties
 
@@ -1215,7 +1215,7 @@
           }
 
           // Check 0.7 keys
-          var allowed = config.group ? this.__Property__P_4_0.$$allowedGroupKeys : this.__Property__P_4_0.$$allowedKeys;
+          var allowed = config.group ? this.__Property__P_5_0.$$allowedGroupKeys : this.__Property__P_5_0.$$allowedKeys;
           for (var key in config) {
             if (allowed[key] === undefined) {
               throw new Error('The configuration key "' + key + '" of property "' + name + '" in class "' + clazz.classname + '" is not allowed!');
@@ -1251,7 +1251,7 @@
        * @param wrap {Boolean ? false} Whether the member method should be wrapped.
        *     this is needed to allow base calls in patched mixin members.
        */
-      __addMembers__P_4_6(clazz, members, patch, base, wrap) {
+      __addMembers__P_5_6(clazz, members, patch, base, wrap) {
         var proto = clazz.prototype;
         var key, member;
         qx.Bootstrap.setDisplayNames(members, clazz.classname + ".prototype");
@@ -1281,7 +1281,7 @@
           if (key.charAt(0) === "@") {
             var annoKey = key.substring(1);
             if (members[annoKey] === undefined) {
-              this.__attachAnno__P_4_4(clazz, "members", annoKey, members[key]);
+              this.__attachAnno__P_5_4(clazz, "members", annoKey, members[key]);
             }
             continue;
           }
@@ -1315,7 +1315,7 @@
           proto[key] = member;
 
           // Attach annotations
-          this.__attachAnno__P_4_4(clazz, "members", key, members["@" + key]);
+          this.__attachAnno__P_5_4(clazz, "members", key, members["@" + key]);
         }
       },
       /**
@@ -1324,7 +1324,7 @@
        * @param clazz {Class} class to add interface to
        * @param iface {Interface} the Interface to add
        */
-      __addInterface__P_4_10(clazz, iface) {
+      __addInterface__P_5_10(clazz, iface) {
         {
           if (!clazz || !iface) {
             throw new Error("Incomplete parameters!");
@@ -1360,7 +1360,7 @@
        * @param mixin {Mixin} Include all features of this mixin
        * @param patch {Boolean} Overwrite existing fields, functions and properties
        */
-      __addMixin__P_4_9(clazz, mixin, patch) {
+      __addMixin__P_5_9(clazz, mixin, patch) {
         {
           if (!clazz || !mixin) {
             throw new Error("Incomplete parameters!");
@@ -1378,17 +1378,17 @@
 
           // Attach events
           if (entry.$$events) {
-            this.__addEvents__P_4_7(clazz, entry.$$events, patch);
+            this.__addEvents__P_5_7(clazz, entry.$$events, patch);
           }
 
           // Attach properties (Properties are already readonly themselves, no patch handling needed)
           if (entry.$$properties) {
-            this.__addProperties__P_4_5(clazz, entry.$$properties, patch);
+            this.__addProperties__P_5_5(clazz, entry.$$properties, patch);
           }
 
           // Attach members (Respect patch setting, but dont apply base variables)
           if (entry.$$members) {
-            this.__addMembers__P_4_6(clazz, entry.$$members, patch, patch, patch);
+            this.__addMembers__P_5_6(clazz, entry.$$members, patch, patch, patch);
           }
         }
 
@@ -1413,7 +1413,7 @@
        *
        * @return {Function} The default constructor.
        */
-      __createDefaultConstructor__P_4_14() {
+      __createDefaultConstructor__P_5_14() {
         function defaultConstructor() {
           defaultConstructor.base.apply(this, arguments);
         }
@@ -1428,7 +1428,7 @@
        * @param type {String} the user specified class type
        * @return {Function} The wrapped constructor
        */
-      __wrapConstructor__P_4_15(construct, name, type) {
+      __wrapConstructor__P_5_15(construct, name, type) {
         var wrapper = function () {
           var clazz = wrapper;
           {
@@ -1486,4 +1486,4 @@
   qx.Class.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Class.js.map?dt=1769806685785
+//# sourceMappingURL=Class.js.map?dt=1791841649364

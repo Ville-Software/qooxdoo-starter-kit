@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337407,
-  "lastModifiedIso": "2026-01-03T20:15:37.407Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/mobile/container/MIScroll.js",
+  "lastModified": 1739993516070,
+  "lastModifiedIso": "2025-02-19T19:31:56.070Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/mobile/container/MIScroll.js",
   "type": "mixin",
   "location": {
     "start": {

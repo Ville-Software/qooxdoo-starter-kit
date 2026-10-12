@@ -6,23 +6,14 @@
  */
 qx.Class.define("qxapp.pages.Welcome",
 {
-  extend : ville.ui.layout.Flex,
+  extend : qx.ui.container.Composite,
 
   include : qxapp.pages.MPage,
 
   construct() {
-    super();
+    super(new qx.ui.layout.VBox(20));
 
     this.setComponentName("Welcome");
-
-    this.setStyles({
-        "padding": "var(--mantine-spacing-lg)",
-        "gap": "var(--mantine-spacing-md)",
-        "align-items": "center",
-        "justify-content": "center",
-        "flex-flow": "column wrap",
-        "min-height": "calc(3.125rem * var(--mantine-scale))"
-    });
 
     const pagenameroot = "welcome";
     const pageurl = "/";
@@ -31,30 +22,25 @@ qx.Class.define("qxapp.pages.Welcome",
     // Set up the page
     this.addListener("appear", () => {document.title = `${pageName} - Laravel`});
 
-    // Add to routing
-    //var routing = qx.core.Init.getApplication().getRouting();
     this.setPageUrl(pageurl);
 
     // Header
-    var header = new ville.ui.layout.Container("header");
+    var header = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
+    header.getContentElement().setNodeName("header");
     this.add(header);
 
     // Login and Register buttons
-    var headernav = new ville.ui.layout.HGroup("nav");
-    headernav.setStyles({
-        "--group-gap": "var(--mantine-spacing-md)",
-        "--group-align": "center",
-        "--group-justify": "flex-end",
-        "--group-wrap": "wrap"
-    });
-    header.add(headernav);
-    var login = new ville.ui.form.Anchor("Log in");
+    var headernav = new qx.ui.container.Composite(new qx.ui.layout.HBox(20));
+    headernav.getContentElement().setNodeName("nav");
+    header.add(headernav, {top: 0, right: 10});
+
+    var login = new ville.ui.navigation.Anchor("Log in");
     login.setHref("/login");
     login.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Login", this);
     }, this);
     headernav.add(login);
-    var register = new ville.ui.form.Anchor("Register");
+    var register = new ville.ui.navigation.Anchor("Register");
     register.setHref("/register");
     register.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Register", this);
@@ -62,13 +48,15 @@ qx.Class.define("qxapp.pages.Welcome",
     headernav.add(register);
 
     // Main
-    var mainwrapper = new ville.ui.layout.Flex();
+    var mainwrapper = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
     this.add(mainwrapper);
-    var main = new ville.ui.core.Box("main");
-    main.setCssUtilityClass("WelcomeBanner_wrapper__AZDUt");
-    mainwrapper.add(main);
+    var main = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
+    main.getContentElement().setNodeName("main");
 
-    main.setAttribute("html", "Main area content");
+    main.setCssUtilityClass("WelcomeBanner_wrapper__AZDUt");
+    mainwrapper.add(main, {edge: 0});
+
+    main.getContentElement().setAttribute("html", "Main area content");
 
   }
 });

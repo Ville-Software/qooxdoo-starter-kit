@@ -24,7 +24,7 @@
     "_native"
   ],
   "sources": [
-    "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class/qx/event/type/Track.js"
+    "/usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/event/type/Track.js"
   ],
   "sourcesContent": [
     "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2014 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Christopher Zuendorf (czuendorf)\n\n************************************************************************ */\n\n/**\n * Track is a single pointer gesture and contains of a three vent types:\n * <code>trackstart</code>, <code>track</code> and <code>trackend</code>. These\n * events will be fired when a pointer grabs an item and moves the pointer on it.\n */\nqx.Class.define(\"qx.event.type.Track\", {\n  extend: qx.event.type.Pointer,\n\n  members: {\n    // overridden\n    _cloneNativeEvent(nativeEvent, clone) {\n      var clone = super._cloneNativeEvent(nativeEvent, clone);\n\n      clone.delta = nativeEvent.delta;\n\n      return clone;\n    },\n\n    /**\n     * Returns a map with the calculated delta coordinates and axis,\n     * relative to the position on <code>trackstart</code> event.\n     *\n     * @return {Map} a map with contains the delta as <code>x</code> and\n     * <code>y</code> and the movement axis as <code>axis</code>.\n     */\n    getDelta() {\n      return this._native.delta;\n    }\n  }\n});\n"

@@ -4,12 +4,12 @@
  */
 qx.Class.define("qxapp.pages.auth.Register",
 {
-  extend : ville.ui.layout.Flex,
+  extend : qx.ui.container.Composite,
 
   include : qxapp.pages.MPage,
 
   construct() {
-    super();
+    super(new qx.ui.layout.Canvas());
 
     this.setComponentName("auth.Register");
 
@@ -21,16 +21,16 @@ qx.Class.define("qxapp.pages.auth.Register",
     this.addListener("appear", () => {document.title = `${pageName} - Laravel`});
 
     // Add to routing
-    var routing = qx.core.Init.getApplication().getRouting();
+    // var routing = qx.core.Init.getApplication().getRouting();
     this.setPageUrl(pageurl);
 
-    var login = new ville.ui.form.Anchor("Log in");
+    var login = new ville.ui.navigation.Anchor("Log in");
     login.setHref("/login");
     login.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Login", this);
     }, this);
 
-    this.setAttribute("html", pagenameroot);
+    this.getContentElement().setAttribute("html", pagenameroot);
 
     this.add(login);
 

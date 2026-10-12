@@ -74,7 +74,7 @@
 
     statics: {
       /** @type {Map} Internal data structures with all supported input types */
-      __types__P_182_0: {
+      __types__P_205_0: {
         textarea: true,
         select: true,
         button: true,
@@ -117,7 +117,7 @@
        */
       create(type, attributes, win) {
         {
-          qx.core.Assert.assertKeyInMap(type, this.__types__P_182_0, "Unsupported input type.");
+          qx.core.Assert.assertKeyInMap(type, this.__types__P_205_0, "Unsupported input type.");
         }
 
         // Work on a copy to not modify given attributes map
@@ -277,4 +277,4 @@
   qx.bom.Input.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Input.js.map?dt=1769806693626
+//# sourceMappingURL=Input.js.map?dt=1791841652778

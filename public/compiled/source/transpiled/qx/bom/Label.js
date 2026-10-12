@@ -65,7 +65,7 @@
 
     statics: {
       /** @type {Map} Contains all supported styles */
-      __styles__P_98_0: {
+      __styles__P_144_0: {
         fontFamily: 1,
         fontSize: 1,
         fontWeight: 1,
@@ -75,14 +75,14 @@
         letterSpacing: 1
       },
       /** @type{Object<String,Object>} cache of label sizes */
-      __sizeCache__P_98_1: {},
+      __sizeCache__P_144_1: {},
       /**
        * Generates the helper DOM element for text measuring
        *
        * @return {Element} Helper DOM element
        */
-      __prepareText__P_98_2() {
-        var el = this.__createMeasureElement__P_98_3(false);
+      __prepareText__P_144_2() {
+        var el = this.__createMeasureElement__P_144_3(false);
         document.body.insertBefore(el, document.body.firstChild);
         return this._textElement = el;
       },
@@ -91,8 +91,8 @@
        *
        * @return {Element} Helper DOM element
        */
-      __prepareHtml__P_98_4() {
-        var el = this.__createMeasureElement__P_98_3(true);
+      __prepareHtml__P_144_4() {
+        var el = this.__createMeasureElement__P_144_3(true);
         document.body.insertBefore(el, document.body.firstChild);
         return this._htmlElement = el;
       },
@@ -102,7 +102,7 @@
        * @param html {Boolean?false} Whether HTML markup should be used.
        * @return {Element} The measure element
        */
-      __createMeasureElement__P_98_3(html) {
+      __createMeasureElement__P_144_3(html) {
         var el = qx.dom.Element.create("div");
         var style = el.style;
         style.width = style.height = "auto";
@@ -124,7 +124,7 @@
             style.padding = "0";
             style.margin = "0";
             style.width = "auto";
-            for (var key in this.__styles__P_98_0) {
+            for (var key in this.__styles__P_144_0) {
               style[key] = "inherit";
             }
             el.appendChild(inner);
@@ -139,7 +139,7 @@
        * @param html {Boolean?false} Whether HTML markup should be used.
        * @return {Map} Initial styles which should be applied to a label element.
        */
-      __getStyles__P_98_5(html) {
+      __getStyles__P_144_5(html) {
         var styles = {};
         styles.overflow = "hidden";
         if (html) {
@@ -193,13 +193,13 @@
 
           // Force style inheritance for font styles to omit usage of
           // CSS "label" selector, See bug #1349 for details.
-          for (var key in this.__styles__P_98_0) {
+          for (var key in this.__styles__P_144_0) {
             xulel.style[key] = "inherit";
           }
           xulel.setAttribute("crop", "end");
           el.appendChild(xulel);
         } else {
-          qx.bom.element.Style.setStyles(el, this.__getStyles__P_98_5(html));
+          qx.bom.element.Style.setStyles(el, this.__getStyles__P_144_5(html));
         }
         if (content) {
           this.setValue(el, content);
@@ -207,7 +207,7 @@
         return el;
       },
       /** Sanitizer function */
-      __sanitizer__P_98_6: null,
+      __sanitizer__P_144_6: null,
       /**
        * Sets a function to sanitize values. It will be used by {@link #setValue}.
        * The function to sanitize will get the <code>string</code> value and
@@ -222,7 +222,7 @@
             qx.core.Assert.assertFunction(func);
           }
         }
-        qx.bom.Label.__sanitizer__P_98_6 = func;
+        qx.bom.Label.__sanitizer__P_144_6 = func;
       },
       /**
        * Sets the content of the element.
@@ -236,8 +236,8 @@
       setValue(element, value) {
         value = value || "";
         if (element.useHtml) {
-          if (qx.bom.Label.__sanitizer__P_98_6 && typeof qx.bom.Label.__sanitizer__P_98_6 === "function") {
-            value = qx.bom.Label.__sanitizer__P_98_6(value);
+          if (qx.bom.Label.__sanitizer__P_144_6 && typeof qx.bom.Label.__sanitizer__P_144_6 === "function") {
+            value = qx.bom.Label.__sanitizer__P_144_6(value);
           }
           element.innerHTML = value;
         } else if (!qx.core.Environment.get("css.textoverflow") && qx.core.Environment.get("html.xul")) {
@@ -270,19 +270,19 @@
        * @return {Map} A map with preferred <code>width</code> and <code>height</code>.
        */
       getHtmlSize(content, styles, width) {
-        let cacheKey = this.__getCacheKey__P_98_7(styles, width);
-        let size = this.__getCachedSize__P_98_8(cacheKey, content);
+        let cacheKey = this.__getCacheKey__P_144_7(styles, width);
+        let size = this.__getCachedSize__P_144_8(cacheKey, content);
         if (size !== undefined) {
           return size;
         }
-        var element = this._htmlElement || this.__prepareHtml__P_98_4();
+        var element = this._htmlElement || this.__prepareHtml__P_144_4();
 
         // apply width
         element.style.width = width != undefined ? width + "px" : "auto";
         // insert content
         element.innerHTML = content;
-        size = this.__measureSize__P_98_9(element, styles);
-        this.__storeCacheSize__P_98_10(cacheKey, content, size);
+        size = this.__measureSize__P_144_9(element, styles);
+        this.__storeCacheSize__P_144_10(cacheKey, content, size);
         return size;
       },
       /**
@@ -293,19 +293,19 @@
        * @return {Map} A map with preferred <code>width</code> and <code>height</code>.
        */
       getTextSize(text, styles) {
-        let cacheKey = this.__getCacheKey__P_98_7(styles);
-        let size = this.__getCachedSize__P_98_8(cacheKey, text);
+        let cacheKey = this.__getCacheKey__P_144_7(styles);
+        let size = this.__getCachedSize__P_144_8(cacheKey, text);
         if (size !== undefined) {
           return size;
         }
-        var element = this._textElement || this.__prepareText__P_98_2();
+        var element = this._textElement || this.__prepareText__P_144_2();
         if (!qx.core.Environment.get("css.textoverflow") && qx.core.Environment.get("html.xul")) {
           element.firstChild.setAttribute("value", text);
         } else {
           qx.bom.element.Attribute.set(element, "text", text);
         }
-        size = this.__measureSize__P_98_9(element, styles);
-        this.__storeCacheSize__P_98_10(cacheKey, text, size);
+        size = this.__measureSize__P_144_9(element, styles);
+        this.__storeCacheSize__P_144_10(cacheKey, text, size);
         return size;
       },
       /**
@@ -315,7 +315,7 @@
        * @param {Integer?} width optional width
        * @returns
        */
-      __getCacheKey__P_98_7(styles, width) {
+      __getCacheKey__P_144_7(styles, width) {
         let cacheKey = [];
         for (let key in styles) {
           let value = styles[key];
@@ -335,8 +335,8 @@
        * @param {String} text
        * @returns {*} size object
        */
-      __getCachedSize__P_98_8(cacheKey, text) {
-        let cache = qx.bom.Label.__sizeCache__P_98_1[cacheKey];
+      __getCachedSize__P_144_8(cacheKey, text) {
+        let cache = qx.bom.Label.__sizeCache__P_144_1[cacheKey];
         return cache?.sizes[text];
       },
       /**
@@ -346,13 +346,13 @@
        * @param {String} text
        * @param {*} size
        */
-      __storeCacheSize__P_98_10(cacheKey, text, size) {
+      __storeCacheSize__P_144_10(cacheKey, text, size) {
         if (!size) {
           return;
         }
-        let cache = qx.bom.Label.__sizeCache__P_98_1[cacheKey];
+        let cache = qx.bom.Label.__sizeCache__P_144_1[cacheKey];
         if (cache === undefined) {
-          cache = qx.bom.Label.__sizeCache__P_98_1[cacheKey] = {
+          cache = qx.bom.Label.__sizeCache__P_144_1[cacheKey] = {
             sizes: {}
           };
         }
@@ -362,7 +362,7 @@
        * Flushes the size cache - use this when something changes, for example webfonts have been loaded
        */
       flushSizeCache() {
-        qx.bom.Label.__sizeCache__P_98_1 = {};
+        qx.bom.Label.__sizeCache__P_144_1 = {};
       },
       /**
        * Measure the size of the given element
@@ -371,9 +371,9 @@
        * @param styles {Map?null} Optional styles to apply
        * @return {Map} A map with preferred <code>width</code> and <code>height</code>.
        */
-      __measureSize__P_98_9(element, styles) {
+      __measureSize__P_144_9(element, styles) {
         // sync styles
-        var keys = this.__styles__P_98_0;
+        var keys = this.__styles__P_144_0;
         if (!styles) {
           styles = {};
         }
@@ -393,4 +393,4 @@
   qx.bom.Label.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Label.js.map?dt=1769806689934
+//# sourceMappingURL=Label.js.map?dt=1791841652037

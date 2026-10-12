@@ -14,15 +14,6 @@
         "construct": true,
         "require": true
       },
-      "qx.ui.core.MChildrenHandling": {
-        "require": true
-      },
-      "ville.ui.core.MWidget": {
-        "require": true
-      },
-      "qx.ui.layout.Basic": {
-        "construct": true
-      },
       "qx.html.Element": {},
       "qx.ui.core.queue.Layout": {}
     },
@@ -38,24 +29,25 @@
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
   qx.Class.define("ville.ui.basic.Label", {
     extend: qx.ui.basic.Label,
-    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],
     construct(text, component) {
       if (component) {
-        this.__componenttag__P_57_0 = component;
+        this.__componenttag__P_22_0 = component;
       }
+
+      //if (text)
+      //  super(text);
+      //else
       qx.ui.basic.Label.constructor.call(this);
-      this._setLayout(new qx.ui.layout.Basic());
-      this.setExcludeBoundsFromDom(true);
-      this.setClearAllInlineStyles(true);
-      if (text) {
-        this.setValue(text);
-      }
+
+      //this._setLayout(new qx.ui.layout.Basic());
+
+      if (text) this.setValue(text);
     },
     members: {
-      __componenttag__P_57_0: "span",
+      __componenttag__P_22_0: "div",
       // overridden
       _createContentElement() {
-        return new qx.html.Element(this.__componenttag__P_57_0);
+        return new qx.html.Element(this.__componenttag__P_22_0);
       },
       // overridden
       _applyValue: qx.core.Environment.select("qx.dynlocale", {
@@ -68,7 +60,7 @@
           }
 
           // Mark text size cache as invalid
-          this.__invalidContentSize__P_57_1 = true;
+          this.__invalidContentSize__P_22_1 = true;
 
           // Update layout
           qx.ui.core.queue.Layout.add(this);
@@ -77,7 +69,7 @@
           this.getContentElement().setAttribute("html", value);
 
           // Mark text size cache as invalid
-          this.__invalidContentSize__P_57_1 = true;
+          this.__invalidContentSize__P_22_1 = true;
 
           // Update layout
           qx.ui.core.queue.Layout.add(this);
@@ -88,4 +80,4 @@
   ville.ui.basic.Label.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Label.js.map?dt=1769806688398
+//# sourceMappingURL=Label.js.map?dt=1791841649787

@@ -1,19 +1,19 @@
 {
   "version": 0.3,
-  "lastModified": 1767823215883,
-  "lastModifiedIso": "2026-01-07T22:00:15.883Z",
-  "classFilename": "../../../resources/qxapp/source/class/ville/ui/tabview/TabButton.js",
+  "lastModified": 1771860941757,
+  "lastModifiedIso": "2026-02-23T15:35:41.757Z",
+  "classFilename": "../../../resources/qxapp/source/class/ville/uiold/tabview/TabButton.js",
   "type": "class",
   "location": {
     "start": {
       "line": 14,
       "column": 0,
-      "index": 460
+      "index": 459
     },
     "end": {
-      "line": 256,
+      "line": 258,
       "column": 3,
-      "index": 6602
+      "index": 6621
     }
   },
   "className": "ville.ui.tabview.TabButton",
@@ -45,6 +45,9 @@
     ]
   },
   "superClass": "qx.ui.tabview.TabButton",
+  "mixins": [
+    "ville.ui.core.MWidget"
+  ],
   "construct": {
     "type": "function",
     "params": [
@@ -60,14 +63,14 @@
     ],
     "location": {
       "start": {
-        "line": 24,
+        "line": 26,
         "column": 2,
-        "index": 737
+        "index": 769
       },
       "end": {
-        "line": 52,
+        "line": 54,
         "column": 3,
-        "index": 1402
+        "index": 1426
       }
     }
   },
@@ -77,14 +80,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 56,
+          "line": 58,
           "column": 4,
-          "index": 1423
+          "index": 1447
         },
         "end": {
-          "line": 60,
+          "line": 62,
           "column": 5,
-          "index": 1533
+          "index": 1557
         }
       },
       "appearsIn": []
@@ -94,14 +97,14 @@
     "iconPosition": {
       "location": {
         "start": {
-          "line": 71,
+          "line": 73,
           "column": 4,
-          "index": 1752
+          "index": 1772
         },
         "end": {
-          "line": 74,
+          "line": 76,
           "column": 5,
-          "index": 1812
+          "index": 1832
         }
       },
       "json": {
@@ -116,14 +119,14 @@
     "variant": {
       "location": {
         "start": {
-          "line": 76,
+          "line": 78,
           "column": 4,
-          "index": 1819
+          "index": 1839
         },
         "end": {
-          "line": 82,
+          "line": 84,
           "column": 5,
-          "index": 1986
+          "index": 2006
         }
       },
       "json": {
@@ -143,14 +146,14 @@
     "tabSection": {
       "location": {
         "start": {
-          "line": 84,
+          "line": 86,
           "column": 4,
-          "index": 1993
+          "index": 2013
         },
         "end": {
-          "line": 90,
+          "line": 92,
           "column": 5,
-          "index": 2156
+          "index": 2176
         }
       },
       "json": {
@@ -166,14 +169,14 @@
     "barPosition": {
       "location": {
         "start": {
-          "line": 92,
+          "line": 94,
           "column": 4,
-          "index": 2163
+          "index": 2183
         },
         "end": {
-          "line": 97,
+          "line": 99,
           "column": 5,
-          "index": 2318
+          "index": 2338
         }
       },
       "json": {
@@ -201,14 +204,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 115,
+          "line": 117,
           "column": 4,
-          "index": 2737
+          "index": 2757
         },
         "end": {
-          "line": 117,
+          "line": 119,
           "column": 5,
-          "index": 2814
+          "index": 2834
         }
       },
       "type": "function",
@@ -227,14 +230,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 120,
+          "line": 122,
           "column": 4,
-          "index": 2839
+          "index": 2859
         },
         "end": {
-          "line": 142,
+          "line": 144,
           "column": 5,
-          "index": 3586
+          "index": 3606
         }
       },
       "type": "function",
@@ -262,14 +265,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 151,
+          "line": 153,
           "column": 4,
-          "index": 3807
+          "index": 3827
         },
         "end": {
-          "line": 158,
+          "line": 160,
           "column": 5,
-          "index": 4152
+          "index": 4172
         }
       },
       "type": "function",
@@ -295,14 +298,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 161,
+          "line": 163,
           "column": 4,
-          "index": 4177
+          "index": 4197
         },
         "end": {
-          "line": 172,
+          "line": 174,
           "column": 5,
-          "index": 4577
+          "index": 4596
         }
       },
       "type": "function",
@@ -329,14 +332,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 175,
+          "line": 177,
           "column": 4,
-          "index": 4602
+          "index": 4621
         },
         "end": {
-          "line": 175,
+          "line": 177,
           "column": 29,
-          "index": 4627
+          "index": 4646
         }
       },
       "type": "function",
@@ -362,14 +365,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 178,
+          "line": 180,
           "column": 4,
-          "index": 4652
+          "index": 4671
         },
         "end": {
-          "line": 185,
+          "line": 187,
           "column": 5,
-          "index": 4825
+          "index": 4844
         }
       },
       "type": "function",
@@ -395,14 +398,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 188,
+          "line": 190,
           "column": 4,
-          "index": 4854
+          "index": 4873
         },
         "end": {
-          "line": 197,
+          "line": 199,
           "column": 5,
-          "index": 5168
+          "index": 5187
         }
       },
       "type": "function",
@@ -421,14 +424,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 199,
+          "line": 201,
           "column": 4,
-          "index": 5175
+          "index": 5194
         },
         "end": {
-          "line": 210,
+          "line": 212,
           "column": 5,
-          "index": 5510
+          "index": 5529
         }
       },
       "type": "function",
@@ -447,14 +450,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 212,
+          "line": 214,
           "column": 4,
-          "index": 5517
+          "index": 5536
         },
         "end": {
-          "line": 247,
+          "line": 249,
           "column": 5,
-          "index": 6477
+          "index": 6496
         }
       },
       "type": "function",
@@ -477,14 +480,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 250,
+          "line": 252,
           "column": 4,
-          "index": 6506
+          "index": 6525
         },
         "end": {
-          "line": 250,
+          "line": 252,
           "column": 40,
-          "index": 6542
+          "index": 6561
         }
       },
       "type": "function",
@@ -510,14 +513,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 253,
+          "line": 255,
           "column": 4,
-          "index": 6571
+          "index": 6590
         },
         "end": {
-          "line": 253,
+          "line": 255,
           "column": 26,
-          "index": 6593
+          "index": 6612
         }
       },
       "type": "function",
@@ -531,6 +534,305 @@
         "qx.ui.tabview.TabButton",
         "qx.ui.basic.Atom"
       ]
+    },
+    "addClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 5,
+          "column": 4,
+          "index": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 5,
+          "index": 140
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeClass": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 9,
+          "column": 4,
+          "index": 147
+        },
+        "end": {
+          "line": 11,
+          "column": 5,
+          "index": 232
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "classname"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 14,
+          "column": 4,
+          "index": 279
+        },
+        "end": {
+          "line": 16,
+          "column": 5,
+          "index": 380
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getStyle": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 19,
+          "column": 4,
+          "index": 427
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 512
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setStyles": {
+      "jsdoc": {
+        "raw": [
+          " API - bubble up Style/Attributes"
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 24,
+          "column": 4,
+          "index": 559
+        },
+        "end": {
+          "line": 26,
+          "column": 5,
+          "index": 650
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "styles"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeStyle": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 28,
+          "column": 4,
+          "index": 657
+        },
+        "end": {
+          "line": 30,
+          "column": 5,
+          "index": 734
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "style"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4,
+          "index": 741
+        },
+        "end": {
+          "line": 34,
+          "column": 5,
+          "index": 858
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "getAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4,
+          "index": 865
+        },
+        "end": {
+          "line": 38,
+          "column": 5,
+          "index": 966
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "setAttributes": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 4,
+          "index": 973
+        },
+        "end": {
+          "line": 42,
+          "column": 5,
+          "index": 1080
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attributes"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
+    },
+    "removeAttribute": {
+      "jsdoc": null,
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 4,
+          "index": 1087
+        },
+        "end": {
+          "line": 46,
+          "column": 5,
+          "index": 1196
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "attribute"
+        },
+        {
+          "name": "direct"
+        }
+      ],
+      "appearsIn": [
+        "ville.ui.core.MWidget"
+      ],
+      "mixin": "ville.ui.core.MWidget"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336241,
-  "lastModifiedIso": "2026-01-03T20:15:36.241Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/core/DragDropCursor.js",
+  "lastModified": 1739993515604,
+  "lastModifiedIso": "2025-02-19T19:31:55.604Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/core/DragDropCursor.js",
   "type": "class",
   "location": {
     "start": {
@@ -175,10 +175,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placeMethod": {
       "location": {
@@ -215,10 +215,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "domMove": {
       "location": {
@@ -248,10 +248,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placementModeX": {
       "location": {
@@ -291,10 +291,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placementModeY": {
       "location": {
@@ -334,10 +334,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "offsetLeft": {
       "location": {
@@ -368,10 +368,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "offsetTop": {
       "location": {
@@ -402,10 +402,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "offsetRight": {
       "location": {
@@ -436,10 +436,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "offsetBottom": {
       "location": {
@@ -470,10 +470,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "offset": {
       "location": {
@@ -509,10 +509,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     }
   },
   "members": {
@@ -561,10 +561,10 @@
           "index": 5443
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__ptwLiveDisappearListener": {
       "jsdoc": null,
@@ -581,10 +581,10 @@
           "index": 5481
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__ptwLiveUpdateDisappearListener": {
       "jsdoc": null,
@@ -601,10 +601,10 @@
           "index": 5525
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__lastKnownCoords": {
       "jsdoc": {
@@ -625,30 +625,10 @@
           "index": 5630
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
-    },
-    "__lastKnownSize": {
-      "jsdoc": null,
-      "access": "private",
-      "location": {
-        "start": {
-          "line": 208,
-          "column": 4,
-          "index": 5636
-        },
-        "end": {
-          "line": 208,
-          "column": 25,
-          "index": 5657
-        }
-      },
-      "appearsIn": [
-        "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "getLayoutLocation": {
       "jsdoc": {
@@ -677,48 +657,39 @@
         "@param": [
           {
             "name": "@param",
-            "body": "widget {qx.ui.core.Widget} Any widget",
-            "paramName": "widget",
-            "description": " Any widget",
-            "type": "qx.ui.core.Widget"
+            "body": "widget {qx.ui.core.Widget} Any widget"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Map|null} Returns a map with <code>left</code>, <code>top</code>,\n   <code>right</code> and <code>bottom</code> which contains the distance\n   of the widget relative coords the document.",
-            "type": "Map|null",
-            "description": "Returns a map with <code>left</code>, <code>top</code>,\n   <code>right</code> and <code>bottom</code> which contains the distance\n   of the widget relative coords the document."
+            "body": "{Map|null} Returns a map with <code>left</code>, <code>top</code>,\n   <code>right</code> and <code>bottom</code> which contains the distance\n   of the widget relative coords the document."
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 224,
+          "line": 223,
           "column": 4,
-          "index": 6377
+          "index": 6350
         },
         "end": {
-          "line": 275,
+          "line": 274,
           "column": 5,
-          "index": 7677
+          "index": 7650
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "widget",
-          "type": "qx.ui.core.Widget"
+          "name": "widget"
         }
       ],
-      "returnType": {
-        "type": "Map|null"
-      },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "moveTo": {
       "jsdoc": {
@@ -744,48 +715,40 @@
         "@param": [
           {
             "name": "@param",
-            "body": "left {Integer} The left position",
-            "paramName": "left",
-            "description": " The left position",
-            "type": "Integer"
+            "body": "left {Integer} The left position"
           },
           {
             "name": "@param",
-            "body": "top {Integer} The top position",
-            "paramName": "top",
-            "description": " The top position",
-            "type": "Integer"
+            "body": "top {Integer} The top position"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 288,
+          "line": 287,
           "column": 4,
-          "index": 8186
+          "index": 8159
         },
         "end": {
-          "line": 337,
+          "line": 336,
           "column": 5,
-          "index": 9703
+          "index": 9676
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "left",
-          "type": "Integer"
+          "name": "left"
         },
         {
-          "name": "top",
-          "type": "Integer"
+          "name": "top"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placeToWidget": {
       "jsdoc": {
@@ -810,59 +773,46 @@
         "@param": [
           {
             "name": "@param",
-            "body": "target {qx.ui.core.Widget} Target coords align coords",
-            "paramName": "target",
-            "description": " Target coords align coords",
-            "type": "qx.ui.core.Widget"
+            "body": "target {qx.ui.core.Widget} Target coords align coords"
           },
           {
             "name": "@param",
-            "body": "liveupdate {Boolean} Flag indicating if the position of the\n widget should be checked and corrected automatically.",
-            "paramName": "liveupdate",
-            "description": " Flag indicating if the position of the\n widget should be checked and corrected automatically.",
-            "type": "boolean"
+            "body": "liveupdate {Boolean} Flag indicating if the position of the\n widget should be checked and corrected automatically."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} true if the widget was successfully placed",
-            "type": "boolean",
-            "description": "true if the widget was successfully placed"
+            "body": "{Boolean} true if the widget was successfully placed"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 349,
+          "line": 348,
           "column": 4,
-          "index": 10190
+          "index": 10163
         },
         "end": {
-          "line": 404,
+          "line": 397,
           "column": 5,
-          "index": 11819
+          "index": 11611
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "target",
-          "type": "qx.ui.core.Widget"
+          "name": "target"
         },
         {
-          "name": "liveupdate",
-          "type": "boolean"
+          "name": "liveupdate"
         }
       ],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__cleanupFromLastPlaceToWidgetLiveUpdate": {
       "jsdoc": {
@@ -881,22 +831,22 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 409,
+          "line": 402,
           "column": 4,
-          "index": 11935
+          "index": 11727
         },
         "end": {
-          "line": 428,
+          "line": 421,
           "column": 5,
-          "index": 12426
+          "index": 12218
         }
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placeToPointer": {
       "jsdoc": {
@@ -916,37 +866,33 @@
         "@param": [
           {
             "name": "@param",
-            "body": "event {qx.event.type.Pointer} Pointer event to align to",
-            "paramName": "event",
-            "description": " Pointer event to align to",
-            "type": "qx.event.type.Pointer"
+            "body": "event {qx.event.type.Pointer} Pointer event to align to"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 435,
+          "line": 428,
           "column": 4,
-          "index": 12576
+          "index": 12368
         },
         "end": {
-          "line": 447,
+          "line": 440,
           "column": 5,
-          "index": 12849
+          "index": 12641
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "event",
-          "type": "qx.event.type.Pointer"
+          "name": "event"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placeToElement": {
       "jsdoc": {
@@ -968,48 +914,40 @@
         "@param": [
           {
             "name": "@param",
-            "body": "elem {Element} DOM element to align to",
-            "paramName": "elem",
-            "description": " DOM element to align to",
-            "type": "Element"
+            "body": "elem {Element} DOM element to align to"
           },
           {
             "name": "@param",
-            "body": "liveupdate {Boolean} Flag indicating if the position of the\n widget should be checked and corrected automatically.",
-            "paramName": "liveupdate",
-            "description": " Flag indicating if the position of the\n widget should be checked and corrected automatically.",
-            "type": "boolean"
+            "body": "liveupdate {Boolean} Flag indicating if the position of the\n widget should be checked and corrected automatically."
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 456,
+          "line": 449,
           "column": 4,
-          "index": 13123
+          "index": 12915
         },
         "end": {
-          "line": 495,
+          "line": 488,
           "column": 5,
-          "index": 14261
+          "index": 14053
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "elem",
-          "type": "Element"
+          "name": "elem"
         },
         {
-          "name": "liveupdate",
-          "type": "boolean"
+          "name": "liveupdate"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "placeToPoint": {
       "jsdoc": {
@@ -1030,37 +968,33 @@
         "@param": [
           {
             "name": "@param",
-            "body": "point {Map} Coordinate of any point with the keys <code>left</code>\n   and <code>top</code>.",
-            "paramName": "point",
-            "description": " Coordinate of any point with the keys <code>left</code>\n   and <code>top</code>.",
-            "type": "Map<any, any>"
+            "body": "point {Map} Coordinate of any point with the keys <code>left</code>\n   and <code>top</code>."
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 503,
+          "line": 496,
           "column": 4,
-          "index": 14460
+          "index": 14252
         },
         "end": {
-          "line": 512,
+          "line": 505,
           "column": 5,
-          "index": 14648
+          "index": 14440
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "point",
-          "type": "Map<any, any>"
+          "name": "point"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "_getPlacementOffsets": {
       "jsdoc": {
@@ -1080,34 +1014,29 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Map} The placement offsets",
-            "type": "Map<any, any>",
-            "description": "The placement offsets"
+            "body": "{Map} The placement offsets"
           }
         ]
       },
       "access": "protected",
       "location": {
         "start": {
-          "line": 519,
+          "line": 512,
           "column": 4,
-          "index": 14767
+          "index": 14559
         },
         "end": {
-          "line": 526,
+          "line": 519,
           "column": 5,
-          "index": 14968
+          "index": 14760
         }
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "Map<any, any>"
-      },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__getPlacementSize": {
       "jsdoc": {
@@ -1121,7 +1050,7 @@
           "     * <code>_computePlacementSize</code>, which returns the size.",
           "     *",
           "     *  @param callback {Function} This function will be called with the size as",
-          "     *    first argument. If it is null, the size is returned directly.",
+          "     *    first argument",
           "     "
         ],
         "@description": [
@@ -1133,37 +1062,33 @@
         "@param": [
           {
             "name": "@param",
-            "body": "callback {Function} This function will be called with the size as\n    first argument. If it is null, the size is returned directly.",
-            "paramName": "callback",
-            "description": " This function will be called with the size as\n    first argument. If it is null, the size is returned directly.",
-            "type": "((...args: any[]) => any)"
+            "body": "callback {Function} This function will be called with the size as\n    first argument"
           }
         ]
       },
       "access": "private",
       "location": {
         "start": {
-          "line": 539,
+          "line": 532,
           "column": 4,
-          "index": 15529
+          "index": 15274
         },
         "end": {
-          "line": 559,
+          "line": 548,
           "column": 5,
-          "index": 16007
+          "index": 15694
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "callback",
-          "type": "((...args: any[]) => any)"
+          "name": "callback"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "_place": {
       "jsdoc": {
@@ -1186,37 +1111,33 @@
         "@param": [
           {
             "name": "@param",
-            "body": "coords {Map} Location of the object to align the this to. This map\n   should have the keys <code>left</code>, <code>top</code>, <code>right</code>\n   and <code>bottom</code>.",
-            "paramName": "coords",
-            "description": " Location of the object to align the this to. This map\n   should have the keys <code>left</code>, <code>top</code>, <code>right</code>\n   and <code>bottom</code>.",
-            "type": "Map<any, any>"
+            "body": "coords {Map} Location of the object to align the this to. This map\n   should have the keys <code>left</code>, <code>top</code>, <code>right</code>\n   and <code>bottom</code>."
           }
         ]
       },
       "access": "protected",
       "location": {
         "start": {
-          "line": 569,
+          "line": 558,
           "column": 4,
-          "index": 16347
+          "index": 16034
         },
         "end": {
-          "line": 590,
+          "line": 579,
           "column": 5,
-          "index": 17002
+          "index": 16689
         }
       },
       "type": "function",
       "params": [
         {
-          "name": "coords",
-          "type": "Map<any, any>"
+          "name": "coords"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     }
   },
   "statics": {
@@ -1235,10 +1156,10 @@
           "index": 748
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "__direction": {
       "jsdoc": null,
@@ -1255,10 +1176,10 @@
           "index": 773
         }
       },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "setVisibleElement": {
       "jsdoc": {
@@ -1280,10 +1201,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "elem {qx.ui.core.Widget} The widget which should always be visible.",
-            "paramName": "elem",
-            "description": " The widget which should always be visible.",
-            "type": "qx.ui.core.Widget"
+            "body": "elem {qx.ui.core.Widget} The widget which should always be visible."
           }
         ]
       },
@@ -1303,14 +1221,13 @@
       "type": "function",
       "params": [
         {
-          "name": "elem",
-          "type": "qx.ui.core.Widget"
+          "name": "elem"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "getVisibleElement": {
       "jsdoc": {
@@ -1331,9 +1248,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget|null} The given widget.",
-            "type": "qx.ui.core.Widget|null",
-            "description": "The given widget."
+            "body": "{qx.ui.core.Widget|null} The given widget."
           }
         ]
       },
@@ -1352,13 +1267,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.Widget|null"
-      },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "setMoveDirection": {
       "jsdoc": {
@@ -1379,10 +1291,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "direction {String} The direction <code>left</code> or <code>top</code>.",
-            "paramName": "direction",
-            "description": " The direction <code>left</code> or <code>top</code>.",
-            "type": "string"
+            "body": "direction {String} The direction <code>left</code> or <code>top</code>."
           }
         ]
       },
@@ -1402,14 +1311,13 @@
       "type": "function",
       "params": [
         {
-          "name": "direction",
-          "type": "string"
+          "name": "direction"
         }
       ],
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     },
     "getMoveDirection": {
       "jsdoc": {
@@ -1430,9 +1338,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{String} The move direction.",
-            "type": "string",
-            "description": "The move direction."
+            "body": "{String} The move direction."
           }
         ]
       },
@@ -1451,13 +1357,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "string"
-      },
+      "mixin": "qx.ui.core.MPlacement",
       "appearsIn": [
         "qx.ui.core.MPlacement"
-      ],
-      "mixin": "qx.ui.core.MPlacement"
+      ]
     }
   }
 }

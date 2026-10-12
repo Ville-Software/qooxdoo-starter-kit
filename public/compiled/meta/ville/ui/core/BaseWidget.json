@@ -1,7 +1,7 @@
 {
   "version": 0.3,
-  "lastModified": 1768425831733,
-  "lastModifiedIso": "2026-01-14T21:23:51.733Z",
+  "lastModified": 1791826789248,
+  "lastModifiedIso": "2026-10-12T17:39:49.248Z",
   "classFilename": "../../../resources/qxapp/source/class/ville/ui/core/BaseWidget.js",
   "type": "class",
   "location": {
@@ -11,9 +11,9 @@
       "index": 23
     },
     "end": {
-      "line": 29,
+      "line": 32,
       "column": 5,
-      "index": 683
+      "index": 783
     }
   },
   "className": "ville.ui.core.BaseWidget",
@@ -30,7 +30,7 @@
       }
     ]
   },
-  "superClass": "ville.ui.core.Widget",
+  "superClass": "qx.ui.core.Widget",
   "construct": {
     "type": "function",
     "params": [
@@ -42,12 +42,12 @@
       "start": {
         "line": 7,
         "column": 4,
-        "index": 108
+        "index": 105
       },
       "end": {
         "line": 12,
         "column": 5,
-        "index": 233
+        "index": 230
       }
     }
   },
@@ -59,12 +59,12 @@
         "start": {
           "line": 16,
           "column": 8,
-          "index": 260
+          "index": 257
         },
         "end": {
           "line": 16,
           "column": 58,
-          "index": 310
+          "index": 307
         }
       },
       "appearsIn": []
@@ -80,19 +80,18 @@
         "start": {
           "line": 19,
           "column": 8,
-          "index": 343
+          "index": 340
         },
         "end": {
-          "line": 27,
+          "line": 30,
           "column": 9,
-          "index": 671
+          "index": 771
         }
       },
       "type": "function",
       "params": [],
-      "overriddenFrom": "ville.ui.core.Widget",
+      "overriddenFrom": "qx.ui.core.Widget",
       "appearsIn": [
-        "ville.ui.core.Widget",
         "qx.ui.core.Widget"
       ]
     }

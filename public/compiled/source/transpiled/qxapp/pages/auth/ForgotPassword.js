@@ -5,17 +5,20 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.layout.Flex": {
+      "qx.ui.container.Composite": {
         "construct": true,
         "require": true
       },
       "qxapp.pages.MPage": {
         "require": true
       },
-      "qx.core.Init": {
+      "qx.ui.layout.Canvas": {
         "construct": true
       },
-      "ville.ui.form.Anchor": {
+      "ville.ui.navigation.Anchor": {
+        "construct": true
+      },
+      "qx.core.Init": {
         "construct": true
       }
     }
@@ -26,10 +29,10 @@
    *
    */
   qx.Class.define("qxapp.pages.auth.ForgotPassword", {
-    extend: ville.ui.layout.Flex,
+    extend: qx.ui.container.Composite,
     include: qxapp.pages.MPage,
     construct() {
-      ville.ui.layout.Flex.constructor.call(this);
+      qx.ui.container.Composite.constructor.call(this, new qx.ui.layout.Canvas());
       this.setComponentName("auth.ForgotPassword");
       const pagenameroot = "forgot-password";
       const pageurl = `/${pagenameroot}`;
@@ -40,18 +43,18 @@
       });
 
       // Add to routing
-      var routing = qx.core.Init.getApplication().getRouting();
+      // var routing = qx.core.Init.getApplication().getRouting();
       this.setPageUrl(pageurl);
-      var login = new ville.ui.form.Anchor("Return to log in");
+      var login = new ville.ui.navigation.Anchor("Return to log in");
       login.setHref("/login");
       login.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Login", this);
       }, this);
-      this.setAttribute("html", pagenameroot);
+      this.getContentElement().setAttribute("html", pagenameroot);
       this.add(login);
     }
   });
   qxapp.pages.auth.ForgotPassword.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=ForgotPassword.js.map?dt=1769806685496
+//# sourceMappingURL=ForgotPassword.js.map?dt=1791841649231

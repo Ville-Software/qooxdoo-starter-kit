@@ -265,7 +265,7 @@
         this._handleLabel();
         this._handleIcon();
       },
-      __safeSetPropertyOnLayout__P_151_0(value, propertyName) {
+      __safeSetPropertyOnLayout__P_106_0(value, propertyName) {
         const layout = this._getLayout();
         const propertySetter = `set${qx.lang.String.firstUp(propertyName)}`;
         if (layout[propertySetter]) {
@@ -276,15 +276,15 @@
       },
       // property apply
       _applyGap(value) {
-        this.__safeSetPropertyOnLayout__P_151_0(value, "gap");
+        this.__safeSetPropertyOnLayout__P_106_0(value, "gap");
       },
       // property apply
       _applyIconPosition(value) {
-        this.__safeSetPropertyOnLayout__P_151_0(value, "iconPosition");
+        this.__safeSetPropertyOnLayout__P_106_0(value, "iconPosition");
       },
       // property apply
       _applyCenter(value) {
-        this.__safeSetPropertyOnLayout__P_151_0(value, "center");
+        this.__safeSetPropertyOnLayout__P_106_0(value, "center");
       },
       // overridden
       _applySelectable(value, old) {
@@ -299,4 +299,4 @@
   qx.ui.basic.Atom.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Atom.js.map?dt=1769806692512
+//# sourceMappingURL=Atom.js.map?dt=1791841651464

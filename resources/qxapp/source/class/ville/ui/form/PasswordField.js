@@ -1,18 +1,46 @@
 /**
- * TextField
+ * PasswordField
  * @external(mantine/core/styles/PasswordInput.css)
  */
 qx.Class.define("ville.ui.form.PasswordField", {
     extend: qx.ui.form.PasswordField,
 
-    include: ville.ui.core.MWidget,
+    construct(value, variant) {
+        super(value);
 
-    construct() {
-        super();
+        this.getContentElement().removeClass("qx-abstract-field");
 
-        this.setExcludeBoundsFromDom(true);
-        this.setClearAllInlineStyles(true);
-        this.setRemoveCssClasses(["qx-abstract-field", "qx-placeholder-color"]);
-        this.setCssUtilityClass("m_f2d85dd2 mantine-PasswordInput-innerInput");
+        if (variant) {
+            this.setVariant(variant);
+        } else {
+            this.initVariant();
+        }
+
+    },
+
+    properties: {
+
+        // overridden
+        appearance: {
+            refine: true,
+            init: "passwordfield"
+        },
+
+        variant: {
+            init: "default",
+            check: ["default", "filled", "light", "outline", "subtle", "transparent", "white"],
+            apply: "_applyVariant",
+            themeable: true,
+            event: "changeVariant"
+        }
+    },
+
+    members: {
+        // property apply
+        _applyVariant(value, old) {
+            if (value) {
+                this.getContentElement().setAttribute("data-variant", value);
+            }
+        }
     }
   });

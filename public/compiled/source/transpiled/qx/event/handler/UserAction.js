@@ -60,8 +60,8 @@
       qx.core.Object.constructor.call(this);
 
       // Define shorthands
-      this.__manager__P_124_0 = manager;
-      this.__window__P_124_1 = manager.getWindow();
+      this.__manager__P_118_0 = manager;
+      this.__window__P_118_1 = manager.getWindow();
     },
     /*
     *****************************************************************************
@@ -88,8 +88,8 @@
     */
 
     members: {
-      __manager__P_124_0: null,
-      __window__P_124_1: null,
+      __manager__P_118_0: null,
+      __window__P_118_1: null,
       /*
       ---------------------------------------------------------------------------
         EVENT HANDLER INTERFACE
@@ -114,7 +114,7 @@
     */
 
     destruct() {
-      this.__manager__P_124_0 = this.__window__P_124_1 = null;
+      this.__manager__P_118_0 = this.__window__P_118_1 = null;
     },
     /*
     *****************************************************************************
@@ -129,4 +129,4 @@
   qx.event.handler.UserAction.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=UserAction.js.map?dt=1769806690715
+//# sourceMappingURL=UserAction.js.map?dt=1791841651649

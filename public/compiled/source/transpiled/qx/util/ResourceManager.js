@@ -84,9 +84,9 @@
 
     statics: {
       /** @type {Map} the shared image registry */
-      __registry__P_120_0: qx.$$resources || {},
+      __registry__P_178_0: qx.$$resources || {},
       /** @type {Map} prefix per library used in HTTPS mode for IE */
-      __urlPrefix__P_120_1: {}
+      __urlPrefix__P_178_1: {}
     },
     /*
     *****************************************************************************
@@ -163,7 +163,7 @@
        * @return {Array|null} an array containing the IDs or null if the registry is not initialized
        */
       getIds(pathfragment) {
-        var registry = qx.util.ResourceManager.__registry__P_120_0;
+        var registry = qx.util.ResourceManager.__registry__P_178_0;
         if (!registry) {
           return null;
         }
@@ -178,7 +178,7 @@
        * @return {Boolean} <code>true</code> when the resource is known.
        */
       has(id) {
-        return !!qx.util.ResourceManager.__registry__P_120_0[id];
+        return !!qx.util.ResourceManager.__registry__P_178_0[id];
       },
       /**
        * Get information about an resource.
@@ -187,7 +187,7 @@
        * @return {Array} Registered data or <code>null</code>
        */
       getData(id) {
-        return qx.util.ResourceManager.__registry__P_120_0[id] || null;
+        return qx.util.ResourceManager.__registry__P_178_0[id] || null;
       },
       /**
        * Returns the width of the given resource ID,
@@ -206,7 +206,7 @@
             id = part[0] + "/" + part[1];
           }
         }
-        var entry = qx.util.ResourceManager.__registry__P_120_0[id]; // [ width, height, codepoint ]
+        var entry = qx.util.ResourceManager.__registry__P_178_0[id]; // [ width, height, codepoint ]
         if (size && entry) {
           var width = Math.ceil(size / entry[1] * entry[0]);
           return width;
@@ -229,7 +229,7 @@
             return size;
           }
         }
-        var entry = qx.util.ResourceManager.__registry__P_120_0[id];
+        var entry = qx.util.ResourceManager.__registry__P_178_0[id];
         return entry ? entry[1] : null;
       },
       /**
@@ -244,7 +244,7 @@
         if (id && id.startsWith("@")) {
           return "font";
         }
-        var entry = qx.util.ResourceManager.__registry__P_120_0[id];
+        var entry = qx.util.ResourceManager.__registry__P_178_0[id];
         return entry ? entry[2] : null;
       },
       /**
@@ -257,11 +257,11 @@
        */
       getCombinedFormat(id) {
         var clippedtype = "";
-        var entry = qx.util.ResourceManager.__registry__P_120_0[id];
-        var isclipped = entry && entry.length > 4 && typeof entry[4] == "string" && this.constructor.__registry__P_120_0[entry[4]];
+        var entry = qx.util.ResourceManager.__registry__P_178_0[id];
+        var isclipped = entry && entry.length > 4 && typeof entry[4] == "string" && this.constructor.__registry__P_178_0[entry[4]];
         if (isclipped) {
           var combId = entry[4];
-          var combImg = this.constructor.__registry__P_120_0[combId];
+          var combImg = this.constructor.__registry__P_178_0[combId];
           clippedtype = combImg[2];
         }
         return clippedtype;
@@ -276,7 +276,7 @@
         if (id == null) {
           return id;
         }
-        var entry = qx.util.ResourceManager.__registry__P_120_0[id];
+        var entry = qx.util.ResourceManager.__registry__P_178_0[id];
         if (!entry) {
           return id;
         }
@@ -293,7 +293,7 @@
         }
         var urlPrefix = "";
         if (qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("io.ssl")) {
-          urlPrefix = qx.util.ResourceManager.__urlPrefix__P_120_1[lib];
+          urlPrefix = qx.util.ResourceManager.__urlPrefix__P_178_1[lib];
         }
         return urlPrefix + qx.util.LibraryManager.getInstance().get(lib, "resourceUri") + "/" + id;
       },
@@ -309,8 +309,8 @@
        * @return {String} "data:" or "http:" URI
        */
       toDataUri(resid) {
-        var resentry = this.constructor.__registry__P_120_0[resid];
-        var combined = resentry ? this.constructor.__registry__P_120_0[resentry[4]] : null;
+        var resentry = this.constructor.__registry__P_178_0[resid];
+        var combined = resentry ? this.constructor.__registry__P_178_0[resentry[4]] : null;
         var uri;
         if (combined) {
           var resstruct = combined[4][resid];
@@ -378,7 +378,7 @@
               resourceUri = qx.util.LibraryManager.getInstance().get(lib, "resourceUri");
             } else {
               // default for libraries without a resourceUri set
-              statics.__urlPrefix__P_120_1[lib] = "";
+              statics.__urlPrefix__P_178_1[lib] = "";
               continue;
             }
             var href;
@@ -392,15 +392,15 @@
             // be considered. If the to resolved URL begins with "//" the
             // manager prefixes it with "https:" to avoid any problems for IE
             if (resourceUri.match(/^\/\//) != null) {
-              statics.__urlPrefix__P_120_1[lib] = window.location.protocol;
+              statics.__urlPrefix__P_178_1[lib] = window.location.protocol;
             }
             // If the resourceUri begins with a single slash, include the current
             // hostname
             else if (resourceUri.match(/^\//) != null) {
               if (href) {
-                statics.__urlPrefix__P_120_1[lib] = href;
+                statics.__urlPrefix__P_178_1[lib] = href;
               } else {
-                statics.__urlPrefix__P_120_1[lib] = window.location.protocol + "//" + window.location.host;
+                statics.__urlPrefix__P_178_1[lib] = window.location.protocol + "//" + window.location.host;
               }
             }
             // If the resolved URL begins with "./" the final URL has to be
@@ -408,10 +408,10 @@
             // IMPORTANT: this is only applicable for the source version
             else if (resourceUri.match(/^\.\//) != null) {
               var url = document.URL;
-              statics.__urlPrefix__P_120_1[lib] = url.substring(0, url.lastIndexOf("/") + 1);
+              statics.__urlPrefix__P_178_1[lib] = url.substring(0, url.lastIndexOf("/") + 1);
             } else if (resourceUri.match(/^http/) != null) {
               // Let absolute URLs pass through
-              statics.__urlPrefix__P_120_1[lib] = "";
+              statics.__urlPrefix__P_178_1[lib] = "";
             } else {
               if (!href) {
                 // check for parameters with URLs as value
@@ -422,7 +422,7 @@
                   href = window.location.href.substring(0, index);
                 }
               }
-              statics.__urlPrefix__P_120_1[lib] = href.substring(0, href.lastIndexOf("/") + 1);
+              statics.__urlPrefix__P_178_1[lib] = href.substring(0, href.lastIndexOf("/") + 1);
             }
           }
         }
@@ -432,4 +432,4 @@
   qx.util.ResourceManager.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=ResourceManager.js.map?dt=1769806690488
+//# sourceMappingURL=ResourceManager.js.map?dt=1791841652451

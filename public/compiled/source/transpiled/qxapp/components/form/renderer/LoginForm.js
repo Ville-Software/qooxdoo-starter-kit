@@ -9,17 +9,21 @@
         "construct": true,
         "require": true
       },
+      "qx.ui.layout.Canvas": {
+        "construct": true
+      },
       "qx.html.Element": {},
-      "ville.ui.layout.VStack": {},
+      "qx.ui.container.Composite": {},
+      "qx.ui.layout.VBox": {},
       "ville.ui.form.TextFieldWrapper": {},
-      "ville.ui.icon.IconEye": {},
-      "ville.ui.icon.IconEyeOff": {},
+      "ville.ui.icon.phosphor.Eye": {},
+      "ville.ui.icon.phosphor.EyeSlash": {},
       "ville.ui.form.ToggleActionIcon": {},
-      "ville.ui.form.PasswordWrapper": {},
-      "ville.ui.layout.HGroup": {},
-      "ville.ui.form.Anchor": {},
+      "ville.ui.form.PasswordFieldWrapper": {},
+      "qx.ui.layout.HBox": {},
+      "ville.ui.navigation.Anchor": {},
       "qx.core.Init": {},
-      "ville.ui.form.Label": {}
+      "ville.ui.basic.Label": {}
     }
   };
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
@@ -30,10 +34,11 @@
     extend: ville.ui.form.renderer.AbstractRenderer,
     construct(form, callingpage) {
       ville.ui.form.renderer.AbstractRenderer.constructor.call(this, form);
-      if (callingpage != null) this.__callingpage__P_28_0 = callingpage;
+      this._setLayout(new qx.ui.layout.Canvas());
+      if (callingpage != null) this.__callingpage__P_27_0 = callingpage;
     },
     members: {
-      __callingpage__P_28_0: null,
+      __callingpage__P_27_0: null,
       _row: 0,
       _itemsStack: null,
       _buttonRow: null,
@@ -61,7 +66,10 @@
        */
       addItems(items, names, title, customize) {
         // create items content container
-        var itemscontainer = new ville.ui.layout.VStack("stretch", null, "xl");
+        //var itemscontainer = new ville.ui.layout.VStack("stretch", null, "xl");
+        var itemscontainer = new qx.ui.container.Composite();
+        var itemslayout = new qx.ui.layout.VBox(10);
+        itemscontainer.setLayout(itemslayout);
 
         // add the items
         for (var i = 0; i < items.length; i++) {
@@ -71,73 +79,76 @@
             label = this._createLabel(names[i]);
             label.setCssUtilityClass("m_8fdc1311 mantine-InputWrapper-label mantine-TextInput-label");
             if (item.getRequired()) {
-              label.setAttribute("data-required", "true");
+              label.getContentElement().setAttribute("data-required", "true");
             }
           }
           var itemwrapper;
           if (customize[i].complexity == "email") {
             itemwrapper = new ville.ui.form.TextFieldWrapper(item);
             if (label) {
-              label.addClass("mantine-TextInput-label");
-              label.setAttribute("for", "villetxtemail123");
-              itemwrapper.setLabel(label);
+              label.getContentElement().addClass("mantine-TextInput-label");
+              label.getContentElement().setAttribute("for", "villetxtemail123");
+              // itemwrapper.setLabel(label);
             }
           } else if (customize[i].complexity == "password") {
-            var IconEye = new ville.ui.icon.IconEye().set({
+            var IconEye = new ville.ui.icon.phosphor.Eye(16).set({
               "viewBox": "0 0 15 15"
             });
-            IconEye.setStyles({
+            IconEye.getContentElement().setStyles({
               width: "var(--psi-icon-size)",
               height: "var(--psi-icon-size)"
             });
-            var IconEyeOff = new ville.ui.icon.IconEyeOff().set({
+            var IconEyeOff = new ville.ui.icon.phosphor.EyeSlash(16).set({
               "viewBox": "0 0 15 15"
             });
-            IconEyeOff.setStyles({
+            IconEyeOff.getContentElement().setStyles({
               width: "var(--psi-icon-size)",
               height: "var(--psi-icon-size)"
             });
             var btnShowHidePassword = new ville.ui.form.ToggleActionIcon(IconEyeOff, IconEye, "subtle");
-            btnShowHidePassword.setStyles({
+            btnShowHidePassword.getContentElement().setStyles({
               "--ai-radius": "var(--mantine-radius-sm)",
               "--ai-bg": "transparent",
               "--ai-hover": "var(--mantine-color-gray-light-hover)",
               "--ai-color": "var(--mantine-color-gray-light-color)",
               "--ai-bd": "calc(0.0625rem * var(--mantine-scale)) solid transparent"
             });
-            itemwrapper = new ville.ui.form.PasswordWrapper(item, null, null, btnShowHidePassword);
+            itemwrapper = new ville.ui.form.PasswordFieldWrapper(item, null, null, btnShowHidePassword);
             if (label) {
-              label.addClass("mantine-PasswordInput-label");
-              label.setAttribute("for", "villetxtpassword123");
+              label.getContentElement().addClass("mantine-PasswordInput-label");
+              label.getContentElement().setAttribute("for", "villetxtpassword123");
               // include Forgot password link
-              var passwordlabelgroup = new ville.ui.layout.HGroup();
-              passwordlabelgroup.setStyles({
-                "--group-gap": "var(--mantine-spacing-md)",
-                "--group-align": "center",
-                "--group-justify": "space-between",
-                "--group-wrap": "wrap"
-              });
+              //var passwordlabelgroup = new ville.ui.layout.HGroup();
+              var passwordlabelgroup = new qx.ui.container.Composite();
+              var passwordlglayout = new qx.ui.layout.HBox(10);
+              passwordlabelgroup.setLayout(passwordlglayout);
+              /*passwordlabelgroup.getContentElement().setStyles({
+                    "--group-gap": "var(--mantine-spacing-md)",
+                    "--group-align": "center",
+                    "--group-justify": "space-between",
+                    "--group-wrap": "wrap"
+                });*/
               passwordlabelgroup.add(label);
-              var forgot = new ville.ui.form.Anchor("Forgot password?");
-              forgot.setStyles({
+              var forgot = new ville.ui.navigation.Anchor("Forgot password?");
+              forgot.getContentElement().setStyles({
                 "--text-fz": "var(--mantine-font-size-sm)",
                 "--text-lh": "var(--mantine-line-height-sm)"
               });
               forgot.setUnderline("always");
               forgot.setHref("/forgot-password");
               forgot.addListener("click", () => {
-                qx.core.Init.getApplication().LoadStackPart("auth.ForgotPassword", this.__callingpage__P_28_0);
+                qx.core.Init.getApplication().LoadStackPart("auth.ForgotPassword", this.__callingpage__P_27_0);
               }, this);
               passwordlabelgroup.add(forgot);
-              itemwrapper.setLabel(passwordlabelgroup);
+              //itemwrapper.setLabel(passwordlabelgroup);
             }
           } else {
             itemwrapper = item;
           }
           if (label) {
-            if (!itemwrapper.getNestLabel()) {
+            /*if (!itemwrapper.getNestLabel()) {
               label.setBuddy(item);
-            }
+            }*/
             this._connectVisibility(item, label);
             // store the names for translation
             {
@@ -180,7 +191,7 @@
        * @return {qx.ui.basic.Label} The label for the given item.
        */
       _createLabel(name) {
-        var label = new ville.ui.form.Label(name);
+        var label = new ville.ui.basic.Label(name);
         // store labels for disposal
         this._labels.push(label);
         return label;
@@ -198,10 +209,10 @@
         this._buttonRow.removeAll();
         this._disposeObjects("_buttonRow");
       }
-      this._disposeObjects("__callingpage__P_28_0");
+      this._disposeObjects("__callingpage__P_27_0");
     }
   });
   qxapp.components.form.renderer.LoginForm.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=LoginForm.js.map?dt=1769806686684
+//# sourceMappingURL=LoginForm.js.map?dt=1791841649914

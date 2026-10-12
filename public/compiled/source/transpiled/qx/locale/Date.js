@@ -46,7 +46,7 @@
        *
        * @internal
        */
-      __mgr__P_184_0: qx.locale.Manager.getInstance(),
+      __mgr__P_192_0: qx.locale.Manager.getInstance(),
       /**
        * Get AM marker for time definitions
        *
@@ -54,7 +54,7 @@
        * @return {String} translated AM marker.
        */
       getAmMarker(locale) {
-        return this.__mgr__P_184_0.localize("cldr_am", [], locale);
+        return this.__mgr__P_192_0.localize("cldr_am", [], locale);
       },
       /**
        * Get PM marker for time definitions
@@ -63,7 +63,7 @@
        * @return {String} translated PM marker.
        */
       getPmMarker(locale) {
-        return this.__mgr__P_184_0.localize("cldr_pm", [], locale);
+        return this.__mgr__P_192_0.localize("cldr_pm", [], locale);
       },
       /**
        * Return localized names of day names
@@ -87,7 +87,7 @@
         var names = [];
         for (var i = 0; i < days.length; i++) {
           var key = "cldr_day_" + context + "_" + length + "_" + days[i];
-          names.push(withFallback ? this.__localizeWithFallback__P_184_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_184_0.localize(key, [], locale));
+          names.push(withFallback ? this.__localizeWithFallback__P_192_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_192_0.localize(key, [], locale));
         }
         return names;
       },
@@ -114,7 +114,7 @@
         }
         var days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
         var key = "cldr_day_" + context + "_" + length + "_" + days[day];
-        return withFallback ? this.__localizeWithFallback__P_184_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_184_0.localize(key, [], locale);
+        return withFallback ? this.__localizeWithFallback__P_192_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_192_0.localize(key, [], locale);
       },
       /**
        * Return localized names of month names
@@ -137,7 +137,7 @@
         var names = [];
         for (var i = 0; i < 12; i++) {
           var key = "cldr_month_" + context + "_" + length + "_" + (i + 1);
-          names.push(withFallback ? this.__localizeWithFallback__P_184_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_184_0.localize(key, [], locale));
+          names.push(withFallback ? this.__localizeWithFallback__P_192_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_192_0.localize(key, [], locale));
         }
         return names;
       },
@@ -161,7 +161,7 @@
           qx.core.Assert.assertInArray(context, ["format", "stand-alone"]);
         }
         var key = "cldr_month_" + context + "_" + length + "_" + (month + 1);
-        return withFallback ? this.__localizeWithFallback__P_184_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_184_0.localize(key, [], locale);
+        return withFallback ? this.__localizeWithFallback__P_192_1(context, context === "format" ? "stand-alone" : "format", key, locale) : this.__mgr__P_192_0.localize(key, [], locale);
       },
       /**
        * Return localized date format string to be used with {@link qx.util.format.DateFormat}.
@@ -176,7 +176,7 @@
           qx.core.Assert.assertInArray(size, ["short", "medium", "long", "full"]);
         }
         var key = "cldr_date_format_" + size;
-        return this.__mgr__P_184_0.localize(key, [], locale);
+        return this.__mgr__P_192_0.localize(key, [], locale);
       },
       /**
        * Try to localize a date/time format string. For format string possibilities see
@@ -193,7 +193,7 @@
        */
       getDateTimeFormat(canonical, fallback, locale) {
         var key = "cldr_date_time_format_" + canonical;
-        var localizedFormat = this.__mgr__P_184_0.localize(key, [], locale);
+        var localizedFormat = this.__mgr__P_192_0.localize(key, [], locale);
         if (localizedFormat == key) {
           localizedFormat = fallback;
         }
@@ -212,7 +212,7 @@
           qx.core.Assert.assertInArray(size, ["short", "medium", "long", "full"]);
         }
         var key = "cldr_time_format_" + size;
-        var localizedFormat = this.__mgr__P_184_0.localize(key, [], locale);
+        var localizedFormat = this.__mgr__P_192_0.localize(key, [], locale);
         if (localizedFormat != key) {
           return localizedFormat;
         }
@@ -416,7 +416,7 @@
         if (locale) {
           var territory = locale.split("_")[1] || locale;
         } else {
-          territory = this.__mgr__P_184_0.getTerritory() || this.__mgr__P_184_0.getLanguage();
+          territory = this.__mgr__P_192_0.getTerritory() || this.__mgr__P_192_0.getLanguage();
         }
         return territory.toUpperCase();
       },
@@ -432,11 +432,11 @@
        * @return {String} localized name for the key
        *
        */
-      __localizeWithFallback__P_184_1(context, fallbackContext, key, locale) {
-        var localizedString = this.__mgr__P_184_0.localize(key, [], locale);
+      __localizeWithFallback__P_192_1(context, fallbackContext, key, locale) {
+        var localizedString = this.__mgr__P_192_0.localize(key, [], locale);
         if (localizedString == key) {
           var newKey = key.replace("_" + context + "_", "_" + fallbackContext + "_");
-          return this.__mgr__P_184_0.localize(newKey, [], locale);
+          return this.__mgr__P_192_0.localize(newKey, [], locale);
         } else {
           return localizedString;
         }
@@ -446,4 +446,4 @@
   qx.locale.Date.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Date.js.map?dt=1769806693694
+//# sourceMappingURL=Date.js.map?dt=1791841652602

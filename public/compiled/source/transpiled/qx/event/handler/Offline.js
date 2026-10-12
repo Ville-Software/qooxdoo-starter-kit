@@ -70,8 +70,8 @@
      */
     construct(manager) {
       qx.core.Object.constructor.call(this);
-      this.__manager__P_157_0 = manager;
-      this.__window__P_157_1 = manager.getWindow();
+      this.__manager__P_151_0 = manager;
+      this.__window__P_151_1 = manager.getWindow();
       this._initObserver();
     },
     /*
@@ -100,9 +100,9 @@
     */
 
     members: {
-      __manager__P_157_0: null,
-      __window__P_157_1: null,
-      __onNativeWrapper__P_157_2: null,
+      __manager__P_151_0: null,
+      __window__P_151_1: null,
+      __onNativeWrapper__P_151_2: null,
       /*
       ---------------------------------------------------------------------------
         EVENT HANDLER INTERFACE
@@ -123,16 +123,16 @@
        * Connects the native online and offline event listeners.
        */
       _initObserver() {
-        this.__onNativeWrapper__P_157_2 = qx.lang.Function.listener(this._onNative, this);
-        qx.bom.Event.addNativeListener(this.__window__P_157_1, "offline", this.__onNativeWrapper__P_157_2);
-        qx.bom.Event.addNativeListener(this.__window__P_157_1, "online", this.__onNativeWrapper__P_157_2);
+        this.__onNativeWrapper__P_151_2 = qx.lang.Function.listener(this._onNative, this);
+        qx.bom.Event.addNativeListener(this.__window__P_151_1, "offline", this.__onNativeWrapper__P_151_2);
+        qx.bom.Event.addNativeListener(this.__window__P_151_1, "online", this.__onNativeWrapper__P_151_2);
       },
       /**
        * Disconnects the native online and offline event listeners.
        */
       _stopObserver() {
-        qx.bom.Event.removeNativeListener(this.__window__P_157_1, "offline", this.__onNativeWrapper__P_157_2);
-        qx.bom.Event.removeNativeListener(this.__window__P_157_1, "online", this.__onNativeWrapper__P_157_2);
+        qx.bom.Event.removeNativeListener(this.__window__P_151_1, "offline", this.__onNativeWrapper__P_151_2);
+        qx.bom.Event.removeNativeListener(this.__window__P_151_1, "online", this.__onNativeWrapper__P_151_2);
       },
       /**
        * Native handler function which fires a qooxdoo event.
@@ -140,7 +140,7 @@
        * @param domEvent {Event} Native DOM event
        */
       _onNative: qx.event.GlobalError.observeMethod(function (domEvent) {
-        qx.event.Registration.fireEvent(this.__window__P_157_1, domEvent.type, qx.event.type.Event, []);
+        qx.event.Registration.fireEvent(this.__window__P_151_1, domEvent.type, qx.event.type.Event, []);
       }),
       /*
       ---------------------------------------------------------------------------
@@ -153,7 +153,7 @@
        * @return {Boolean} <code>true</code> if its online
        */
       isOnline() {
-        return !!this.__window__P_157_1.navigator.onLine;
+        return !!this.__window__P_151_1.navigator.onLine;
       }
     },
     /*
@@ -163,11 +163,11 @@
     */
 
     destruct() {
-      this.__manager__P_157_0 = null;
+      this.__manager__P_151_0 = null;
       this._stopObserver();
 
       // Deregister
-      delete qx.event.handler.Appear.__instances__P_157_3[this.toHashCode()];
+      delete qx.event.handler.Appear.__instances__P_151_3[this.toHashCode()];
     },
     /*
     *****************************************************************************
@@ -182,4 +182,4 @@
   qx.event.handler.Offline.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Offline.js.map?dt=1769806692681
+//# sourceMappingURL=Offline.js.map?dt=1791841652140

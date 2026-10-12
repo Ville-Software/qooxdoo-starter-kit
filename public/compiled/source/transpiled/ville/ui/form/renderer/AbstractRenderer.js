@@ -10,7 +10,7 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.core.Widget": {
+      "qx.ui.core.Widget": {
         "construct": true,
         "require": true
       },
@@ -40,18 +40,18 @@
    */
   qx.Class.define("ville.ui.form.renderer.AbstractRenderer", {
     type: "abstract",
-    extend: ville.ui.core.Widget,
+    extend: qx.ui.core.Widget,
     implement: qx.ui.form.renderer.IFormRenderer,
     /**
      * @param form {qx.ui.form.Form} The form to render.
      */
     construct(form) {
-      ville.ui.core.Widget.constructor.call(this);
+      qx.ui.core.Widget.constructor.call(this);
       this._labels = [];
 
       // translation support
       {
-        this.__changeLocaleRendererListenerId__P_88_0 = qx.locale.Manager.getInstance().addListener("changeLocale", this._onChangeLocale, this);
+        this.__changeLocaleRendererListenerId__P_95_0 = qx.locale.Manager.getInstance().addListener("changeLocale", this._onChangeLocale, this);
         this._names = [];
       }
       this._form = form;
@@ -177,8 +177,8 @@
     */
 
     destruct() {
-      if (true && this.__changeLocaleRendererListenerId__P_88_0) {
-        qx.locale.Manager.getInstance().removeListenerById(this.__changeLocaleRendererListenerId__P_88_0);
+      if (true && this.__changeLocaleRendererListenerId__P_95_0) {
+        qx.locale.Manager.getInstance().removeListenerById(this.__changeLocaleRendererListenerId__P_95_0);
       }
       this._names = null;
       this._form.removeListener("change", this._onFormChange, this);
@@ -188,4 +188,4 @@
   ville.ui.form.renderer.AbstractRenderer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=AbstractRenderer.js.map?dt=1769806689534
+//# sourceMappingURL=AbstractRenderer.js.map?dt=1791841651269

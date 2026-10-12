@@ -38,11 +38,11 @@
   qx.Mixin.define("qx.ui.form.MModelSelection", {
     construct() {
       // create the selection array
-      this.__modelSelection__P_60_0 = new qx.data.Array();
+      this.__modelSelection__P_72_0 = new qx.data.Array();
 
       // listen to the changes
-      this.__modelSelection__P_60_0.addListener("change", this.__onModelSelectionArrayChange__P_60_1, this);
-      this.addListener("changeSelection", this.__onModelSelectionChange__P_60_2, this);
+      this.__modelSelection__P_72_0.addListener("change", this.__onModelSelectionArrayChange__P_72_1, this);
+      this.addListener("changeSelection", this.__onModelSelectionChange__P_72_2, this);
     },
     events: {
       /**
@@ -52,15 +52,15 @@
       changeModelSelection: "qx.event.type.Data"
     },
     members: {
-      __modelSelection__P_60_0: null,
-      __inSelectionChange__P_60_3: false,
+      __modelSelection__P_72_0: null,
+      __inSelectionChange__P_72_3: false,
       /**
        * Handler for the selection change of the including class e.g. SelectBox,
        * List, ...
        * It sets the new modelSelection via {@link #setModelSelection}.
        */
-      __onModelSelectionChange__P_60_2() {
-        if (this.__inSelectionChange__P_60_3) {
+      __onModelSelectionChange__P_72_2() {
+        if (this.__inSelectionChange__P_72_3) {
           return;
         }
         var data = this.getSelection();
@@ -84,11 +84,11 @@
       /**
        * Listener for the change of the internal model selection data array.
        */
-      __onModelSelectionArrayChange__P_60_1() {
-        this.__inSelectionChange__P_60_3 = true;
+      __onModelSelectionArrayChange__P_72_1() {
+        this.__inSelectionChange__P_72_3 = true;
         var selectables = this.getSelectables(true);
         var itemSelection = [];
-        var modelSelection = this.__modelSelection__P_60_0.toArray();
+        var modelSelection = this.__modelSelection__P_72_0.toArray();
         for (var i = 0; i < modelSelection.length; i++) {
           var model = modelSelection[i];
           for (var j = 0; j < selectables.length; j++) {
@@ -102,13 +102,13 @@
           }
         }
         this.setSelection(itemSelection);
-        this.__inSelectionChange__P_60_3 = false;
+        this.__inSelectionChange__P_72_3 = false;
 
         // check if the setting has worked
         var currentSelection = this.getSelection();
         if (!qx.lang.Array.equals(currentSelection, itemSelection)) {
           // if not, set the actual selection
-          this.__onModelSelectionChange__P_60_2();
+          this.__onModelSelectionChange__P_72_2();
         }
       },
       /**
@@ -121,7 +121,7 @@
        * @return {qx.data.Array} An array of the models of the selected items.
        */
       getModelSelection() {
-        return this.__modelSelection__P_60_0;
+        return this.__modelSelection__P_72_0;
       },
       /**
        * Takes the given models in the array and searches for the corresponding
@@ -139,7 +139,7 @@
       setModelSelection(modelSelection) {
         // check for null values
         if (!modelSelection) {
-          this.__modelSelection__P_60_0.removeAll();
+          this.__modelSelection__P_72_0.removeAll();
           return;
         }
         {
@@ -147,18 +147,18 @@
         }
 
         // add the first two parameter
-        modelSelection.unshift(this.__modelSelection__P_60_0.getLength()); // remove index
+        modelSelection.unshift(this.__modelSelection__P_72_0.getLength()); // remove index
         modelSelection.unshift(0); // start index
 
-        var returnArray = this.__modelSelection__P_60_0.splice.apply(this.__modelSelection__P_60_0, modelSelection);
+        var returnArray = this.__modelSelection__P_72_0.splice.apply(this.__modelSelection__P_72_0, modelSelection);
         returnArray.dispose();
       }
     },
     destruct() {
-      this._disposeObjects("__modelSelection__P_60_0");
+      this._disposeObjects("__modelSelection__P_72_0");
     }
   });
   qx.ui.form.MModelSelection.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MModelSelection.js.map?dt=1769806688521
+//# sourceMappingURL=MModelSelection.js.map?dt=1791841650938

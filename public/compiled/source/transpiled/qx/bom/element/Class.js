@@ -74,9 +74,9 @@
 
     statics: {
       /** @type {RegExp} Regular expressions to split class names */
-      __splitter__P_227_0: /\s+/g,
+      __splitter__P_206_0: /\s+/g,
       /** @type {RegExp} String trim regular expression. */
-      __trim__P_227_1: /^\s+|\s+$/g,
+      __trim__P_206_1: /^\s+|\s+$/g,
       /**
        * Adds a className to the given element
        * If successfully added the given className will be returned
@@ -122,7 +122,7 @@
           var result;
           var old = element.className;
           if (old) {
-            result = old.split(this.__splitter__P_227_0);
+            result = old.split(this.__splitter__P_206_0);
             for (var i = 0, l = result.length; i < l; i++) {
               keys[result[i]] = true;
             }
@@ -218,7 +218,7 @@
         },
         default(element, classes) {
           var reg = new RegExp("\\b" + classes.join("\\b|\\b") + "\\b", "g");
-          return element.className = element.className.replace(reg, "").replace(this.__trim__P_227_1, "").replace(this.__splitter__P_227_0, " ");
+          return element.className = element.className.replace(reg, "").replace(this.__trim__P_206_1, "").replace(this.__splitter__P_206_0, " ");
         }
       }[qx.core.Environment.get("html.classlist") ? "native" : "default"],
       /**
@@ -268,4 +268,4 @@
   qx.bom.element.Class.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Class.js.map?dt=1769806695426
+//# sourceMappingURL=Class.js.map?dt=1791841652796

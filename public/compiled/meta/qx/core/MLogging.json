@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337420,
-  "lastModifiedIso": "2026-01-03T20:15:37.420Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/core/MLogging.js",
+  "lastModified": 1739993516080,
+  "lastModifiedIso": "2025-02-19T19:31:56.080Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/core/MLogging.js",
   "type": "mixin",
   "location": {
     "start": {

@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336257,
-  "lastModifiedIso": "2026-01-03T20:15:36.257Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/util/DynamicScriptLoader.js",
+  "lastModified": 1739993515609,
+  "lastModifiedIso": "2025-02-19T19:31:55.609Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/util/DynamicScriptLoader.js",
   "type": "class",
   "location": {
     "start": {

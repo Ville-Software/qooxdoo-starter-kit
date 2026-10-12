@@ -2,7 +2,7 @@
   "version": 0.3,
   "lastModified": 1767823006208,
   "lastModifiedIso": "2026-01-07T21:56:46.208Z",
-  "classFilename": "../../../resources/qxapp/source/class/ville/ui/form/RadioButton.js",
+  "classFilename": "../../../resources/qxapp/source/class/ville/uiold/form/RadioButton.js",
   "type": "class",
   "location": {
     "start": {
@@ -508,9 +508,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)",
-            "type": "qx.ui.core.LayoutItem[]",
-            "description": "The children array (Arrays are\n   reference types, please do not modify them in-place)"
+            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)"
           }
         ]
       },
@@ -529,13 +527,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem[]"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "hasChildren": {
       "jsdoc": {
@@ -555,9 +550,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Returns <code>true</code> when the widget has children.",
-            "type": "boolean",
-            "description": "Returns <code>true</code> when the widget has children."
+            "body": "{Boolean} Returns <code>true</code> when the widget has children."
           }
         ]
       },
@@ -576,13 +569,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "indexOf": {
       "jsdoc": {
@@ -610,18 +600,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.Widget} the widget to query for",
-            "paramName": "child",
-            "description": " the widget to query for",
-            "type": "qx.ui.core.Widget"
+            "body": "child {qx.ui.core.Widget} the widget to query for"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Integer} The index position or <code>-1</code> when\n   the given widget is no child of this layout.",
-            "type": "Integer",
-            "description": "The index position or <code>-1</code> when\n   the given widget is no child of this layout."
+            "body": "{Integer} The index position or <code>-1</code> when\n   the given widget is no child of this layout."
           }
         ]
       },
@@ -641,17 +626,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.Widget"
+          "name": "child"
         }
       ],
-      "returnType": {
-        "type": "Integer"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "add": {
       "jsdoc": {
@@ -676,19 +657,11 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the widget to add.",
-            "paramName": "child",
-            "description": " the widget to add.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the widget to add."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -708,20 +681,16 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addAt": {
       "jsdoc": {
@@ -748,26 +717,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "index {Integer} Index, at which the widget will be inserted",
-            "paramName": "index",
-            "description": " Index, at which the widget will be inserted",
-            "type": "Integer"
+            "body": "index {Integer} Index, at which the widget will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -787,24 +745,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addBefore": {
       "jsdoc": {
@@ -831,26 +784,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted.",
-            "paramName": "before",
-            "description": " Widget before the new widget will be inserted.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -870,24 +812,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "before",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "before"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addAfter": {
       "jsdoc": {
@@ -914,26 +851,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted",
-            "paramName": "after",
-            "description": " Widget, after which the new widget will be inserted",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -953,24 +879,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "after",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "after"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "remove": {
       "jsdoc": {
@@ -990,10 +911,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the widget to remove",
-            "paramName": "child",
-            "description": " the widget to remove",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the widget to remove"
           }
         ]
       },
@@ -1013,14 +931,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "removeAt": {
       "jsdoc": {
@@ -1046,18 +963,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "index {Integer} Index of the widget to remove.",
-            "paramName": "index",
-            "description": " Index of the widget to remove.",
-            "type": "Integer"
+            "body": "index {Integer} Index of the widget to remove."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem} The child removed.",
-            "type": "qx.ui.core.LayoutItem",
-            "description": "The child removed."
+            "body": "{qx.ui.core.LayoutItem} The child removed."
           }
         ]
       },
@@ -1077,17 +989,13 @@
       "type": "function",
       "params": [
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "removeAll": {
       "jsdoc": {
@@ -1107,9 +1015,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Array} An array of the removed children.",
-            "type": "Array<any>",
-            "description": "An array of the removed children."
+            "body": "{Array} An array of the removed children."
           }
         ]
       },
@@ -1128,13 +1034,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "Array<any>"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addClass": {
       "jsdoc": null,
@@ -1458,10 +1361,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "members {Map} The including classes members map",
-            "paramName": "members",
-            "description": " The including classes members map",
-            "type": "Map<any, any>"
+            "body": "members {Map} The including classes members map"
           }
         ],
         "@deprecated": [
@@ -1487,14 +1387,13 @@
       "type": "function",
       "params": [
         {
-          "name": "members",
-          "type": "Map<any, any>"
+          "name": "members"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     }
   }
 }

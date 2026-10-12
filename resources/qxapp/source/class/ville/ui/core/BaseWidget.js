@@ -2,7 +2,7 @@
  * Base widget
  */
 qx.Class.define("ville.ui.core.BaseWidget", {
-    extend: ville.ui.core.Widget,
+    extend: qx.ui.core.Widget,
 
     construct(component) {
         if (component) {
@@ -18,12 +18,15 @@ qx.Class.define("ville.ui.core.BaseWidget", {
         // overridden
         _createContentElement() {
             var newelem;
-            if (this.__componentmap.basetag = "input") {
+            if (this.__componentmap.basetag === "input") {
                 newelem = new qx.html.Input(this.__componentmap.type);
             } else {
                 newelem = new qx.html.Element(this.__componentmap.basetag);
             }
-            return newelem; 
+            newelem.addListener("click", (e) => {
+                e.preventDefault();
+            });
+            return newelem;
         }
     }
   });

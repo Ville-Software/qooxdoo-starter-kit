@@ -84,8 +84,8 @@
     },
     construct() {
       qx.core.Object.constructor.call(this);
-      this.__rules__P_108_0 = [];
-      this.__legacyIe__P_108_1 = qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("browser.documentmode") < 9;
+      this.__rules__P_45_0 = [];
+      this.__legacyIe__P_45_1 = qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("browser.documentmode") < 9;
     },
     /*
     *****************************************************************************
@@ -109,9 +109,9 @@
     */
 
     members: {
-      __dynamic__P_108_2: null,
-      __rules__P_108_0: null,
-      __legacyIe__P_108_1: false,
+      __dynamic__P_45_2: null,
+      __rules__P_45_0: null,
+      __legacyIe__P_45_1: false,
       /**
        * Returns the name which will be / is used as css class name.
        * @param value {String|qx.ui.decoration.IDecorator} The decorator string or instance.
@@ -163,8 +163,8 @@
               inner = true;
               innerCss += innerKey + ":" + innerStyles[innerKey] + ";";
             }
-            var innerSelector = this.__legacyIe__P_108_1 ? selector : selector + (inner ? ":" : "");
-            this.__rules__P_108_0.push(innerSelector + key);
+            var innerSelector = this.__legacyIe__P_45_1 ? selector : selector + (inner ? ":" : "");
+            this.__rules__P_45_0.push(innerSelector + key);
             sheet.addRule(innerSelector + key, innerCss);
             return;
           }
@@ -172,7 +172,7 @@
         }, this);
         if (css) {
           sheet.addRule(selector, css);
-          this.__rules__P_108_0.push(selector);
+          this.__rules__P_45_0.push(selector);
         }
         return value;
       },
@@ -182,11 +182,11 @@
        */
       removeAllCssClasses() {
         // remove old rules
-        for (var i = 0; i < this.__rules__P_108_0.length; i++) {
-          var selector = this.__rules__P_108_0[i];
+        for (var i = 0; i < this.__rules__P_45_0.length; i++) {
+          var selector = this.__rules__P_45_0[i];
           qx.ui.style.Stylesheet.getInstance().removeRule(selector);
         }
-        this.__rules__P_108_0 = [];
+        this.__rules__P_45_0 = [];
       },
       /**
        * Returns the dynamically interpreted result for the incoming value
@@ -201,9 +201,9 @@
         if (typeof value === "object") {
           return value;
         }
-        var cache = this.__dynamic__P_108_2;
+        var cache = this.__dynamic__P_45_2;
         if (!cache) {
-          cache = this.__dynamic__P_108_2 = {};
+          cache = this.__dynamic__P_45_2 = {};
         }
         var resolved = cache[value];
         if (resolved) {
@@ -279,7 +279,7 @@
        * @internal
        */
       isCached(decorator) {
-        return !this.__dynamic__P_108_2 ? false : qx.lang.Object.contains(this.__dynamic__P_108_2, decorator);
+        return !this.__dynamic__P_45_2 ? false : qx.lang.Object.contains(this.__dynamic__P_45_2, decorator);
       },
       // property apply
       _applyTheme(value, old) {
@@ -297,8 +297,8 @@
             aliasManager.add(alias, value.aliases[alias]);
           }
         }
-        this._disposeMap("__dynamic__P_108_2");
-        this.__dynamic__P_108_2 = {};
+        this._disposeMap("__dynamic__P_45_2");
+        this.__dynamic__P_45_2 = {};
       },
       /**
        * Clears internal caches and removes all previously created CSS classes.
@@ -315,8 +315,8 @@
 
         // remove old rules
         this.removeAllCssClasses();
-        this._disposeMap("__dynamic__P_108_2");
-        this.__dynamic__P_108_2 = {};
+        this._disposeMap("__dynamic__P_45_2");
+        this.__dynamic__P_45_2 = {};
       },
       /**
        * Refreshes all decorator by clearing internal caches and re applying
@@ -346,4 +346,4 @@
   qx.theme.manager.Decoration.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Decoration.js.map?dt=1769806690231
+//# sourceMappingURL=Decoration.js.map?dt=1791841650364

@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471335030,
-  "lastModifiedIso": "2026-01-03T20:15:35.030Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/event/AcceleratingTimer.js",
+  "lastModified": 1739993515179,
+  "lastModifiedIso": "2025-02-19T19:31:55.179Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/event/AcceleratingTimer.js",
   "type": "class",
   "location": {
     "start": {

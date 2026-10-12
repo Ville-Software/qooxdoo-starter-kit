@@ -5,29 +5,29 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.layout.Flex": {
+      "qx.ui.container.Composite": {
         "construct": true,
         "require": true
       },
       "qxapp.pages.MPage": {
         "require": true
       },
+      "qx.ui.layout.VBox": {
+        "construct": true
+      },
       "qx.lang.String": {
         "construct": true
       },
-      "ville.ui.layout.Container": {
+      "qx.ui.layout.Canvas": {
         "construct": true
       },
-      "ville.ui.layout.HGroup": {
+      "qx.ui.layout.HBox": {
         "construct": true
       },
-      "ville.ui.form.Anchor": {
+      "ville.ui.navigation.Anchor": {
         "construct": true
       },
       "qx.core.Init": {
-        "construct": true
-      },
-      "ville.ui.core.Box": {
         "construct": true
       }
     }
@@ -40,19 +40,11 @@
    *
    */
   qx.Class.define("qxapp.pages.Welcome", {
-    extend: ville.ui.layout.Flex,
+    extend: qx.ui.container.Composite,
     include: qxapp.pages.MPage,
     construct() {
-      ville.ui.layout.Flex.constructor.call(this);
+      qx.ui.container.Composite.constructor.call(this, new qx.ui.layout.VBox(20));
       this.setComponentName("Welcome");
-      this.setStyles({
-        "padding": "var(--mantine-spacing-lg)",
-        "gap": "var(--mantine-spacing-md)",
-        "align-items": "center",
-        "justify-content": "center",
-        "flex-flow": "column wrap",
-        "min-height": "calc(3.125rem * var(--mantine-scale))"
-      });
       const pagenameroot = "welcome";
       const pageurl = "/";
       const pageName = qx.lang.String.firstUp(pagenameroot);
@@ -61,31 +53,27 @@
       this.addListener("appear", () => {
         document.title = `${pageName} - Laravel`;
       });
-
-      // Add to routing
-      //var routing = qx.core.Init.getApplication().getRouting();
       this.setPageUrl(pageurl);
 
       // Header
-      var header = new ville.ui.layout.Container("header");
+      var header = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
+      header.getContentElement().setNodeName("header");
       this.add(header);
 
       // Login and Register buttons
-      var headernav = new ville.ui.layout.HGroup("nav");
-      headernav.setStyles({
-        "--group-gap": "var(--mantine-spacing-md)",
-        "--group-align": "center",
-        "--group-justify": "flex-end",
-        "--group-wrap": "wrap"
+      var headernav = new qx.ui.container.Composite(new qx.ui.layout.HBox(20));
+      headernav.getContentElement().setNodeName("nav");
+      header.add(headernav, {
+        top: 0,
+        right: 10
       });
-      header.add(headernav);
-      var login = new ville.ui.form.Anchor("Log in");
+      var login = new ville.ui.navigation.Anchor("Log in");
       login.setHref("/login");
       login.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Login", this);
       }, this);
       headernav.add(login);
-      var register = new ville.ui.form.Anchor("Register");
+      var register = new ville.ui.navigation.Anchor("Register");
       register.setHref("/register");
       register.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Register", this);
@@ -93,15 +81,18 @@
       headernav.add(register);
 
       // Main
-      var mainwrapper = new ville.ui.layout.Flex();
+      var mainwrapper = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
       this.add(mainwrapper);
-      var main = new ville.ui.core.Box("main");
+      var main = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
+      main.getContentElement().setNodeName("main");
       main.setCssUtilityClass("WelcomeBanner_wrapper__AZDUt");
-      mainwrapper.add(main);
-      main.setAttribute("html", "Main area content");
+      mainwrapper.add(main, {
+        edge: 0
+      });
+      main.getContentElement().setAttribute("html", "Main area content");
     }
   });
   qxapp.pages.Welcome.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Welcome.js.map?dt=1769806685479
+//# sourceMappingURL=Welcome.js.map?dt=1791841649176

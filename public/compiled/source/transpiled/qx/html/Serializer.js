@@ -47,9 +47,9 @@
      */
     construct() {
       qx.core.Object.constructor.call(this);
-      this.__output__P_154_0 = "";
-      this.__objectStack__P_154_1 = [];
-      this.__tagDataStack__P_154_2 = [];
+      this.__output__P_148_0 = "";
+      this.__objectStack__P_148_1 = [];
+      this.__tagDataStack__P_148_2 = [];
     },
     properties: {
       /** Whether to pretty print (default is whatever qx.cdebug is set to) */
@@ -61,9 +61,9 @@
     },
     members: {
       /** @type{String} the HTML being built up */
-      __output__P_154_0: null,
+      __output__P_148_0: null,
       /** @type{qx.html.Node[]} the stack of objects being written */
-      __objectStack__P_154_1: null,
+      __objectStack__P_148_1: null,
       /**
        * For each tag on the stack being emitted, we track the data in an object, nominally called TagData
        *
@@ -76,18 +76,15 @@
        */
 
       /** @type{TagData[]} the stack of elements being written */
-      __tagDataStack__P_154_2: null,
+      __tagDataStack__P_148_2: null,
       /** @type{String?} the current tag name */
-      __currentTagName__P_154_3: null,
+      __currentTagName__P_148_3: null,
       /**
        * Writes to the output
        * @param  {var[]} args array of values to convert to strings and output
        */
-      write() {
-        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
-        this.__output__P_154_0 += args.join("");
+      write(...args) {
+        this.__output__P_148_0 += args.join("");
       },
       /**
        * Called when an open tag needs to be emitted
@@ -95,9 +92,9 @@
        * @param {String} tagName
        */
       openTag(tagName) {
-        this.__flush__P_154_4();
-        this.__tagDataStack__P_154_2.push({
-          indent: this.__tagDataStack__P_154_2.length,
+        this.__flush__P_148_4();
+        this.__tagDataStack__P_148_2.push({
+          indent: this.__tagDataStack__P_148_2.length,
           tagName: tagName.toLowerCase(),
           attributes: {}
         });
@@ -108,7 +105,7 @@
        */
       rawTextInBody(text) {
         if (text !== null && text !== undefined) {
-          this.__flush__P_154_4();
+          this.__flush__P_148_4();
           this.write(text);
         }
       },
@@ -116,8 +113,8 @@
        * Called to close the current tag
        */
       closeTag() {
-        this.__flush__P_154_4(true);
-        this.__tagDataStack__P_154_2.pop();
+        this.__flush__P_148_4(true);
+        this.__tagDataStack__P_148_2.pop();
       },
       /**
        * Adds an attribute to the current tag; cannot be done if body or children have been output
@@ -126,7 +123,7 @@
        * @param {String?} value teh attribite value, if null the attribute will be deleted
        */
       setAttribute(key, value) {
-        const tagData = this.__peekTagData__P_154_5();
+        const tagData = this.__peekTagData__P_148_5();
         if (tagData.openTagWritten) {
           throw new Error("Cannot modify attributes after the opening tag has been written");
         }
@@ -137,8 +134,8 @@
        *
        * @returns {TagData}
        */
-      __peekTagData__P_154_5() {
-        return this.__tagDataStack__P_154_2[this.__tagDataStack__P_154_2.length - 1];
+      __peekTagData__P_148_5() {
+        return this.__tagDataStack__P_148_2[this.__tagDataStack__P_148_2.length - 1];
       },
       /**
        * Flushes the tag into the output.  This will prevent further attributes etc from being emitted
@@ -146,8 +143,8 @@
        *
        * @param {Boolean} closeTag if we are flushing because the tag is being closed
        */
-      __flush__P_154_4(closeTag) {
-        const tagData = this.__peekTagData__P_154_5();
+      __flush__P_148_4(closeTag) {
+        const tagData = this.__peekTagData__P_148_5();
         if (!tagData) {
           return;
         }
@@ -169,7 +166,7 @@
           }
           this.write(tmp.join(" "));
           if (closeTag) {
-            if (qx.html.Serializer.__SELF_CLOSING_TAGS__P_154_6[tagData.tagName]) {
+            if (qx.html.Serializer.__SELF_CLOSING_TAGS__P_148_6[tagData.tagName]) {
               this.write("/>");
             } else {
               this.write("></" + tagData.tagName + ">");
@@ -199,7 +196,7 @@
        * Erases all output
        */
       clear() {
-        this.__output__P_154_0 = "";
+        this.__output__P_148_0 = "";
       },
       /**
        * Provides the accumulated output
@@ -207,7 +204,7 @@
        * @returns {String}
        */
       getOutput() {
-        return this.__output__P_154_0;
+        return this.__output__P_148_0;
       },
       /**
        * Pushes the QxObject onto the stack
@@ -215,13 +212,13 @@
        * @param {qx.core.Object} obj
        */
       pushQxObject(obj) {
-        this.__objectStack__P_154_1.push(obj);
+        this.__objectStack__P_148_1.push(obj);
       },
       /**
        * Pops the topmost QxObject from the stack
        */
       popQxObject() {
-        this.__objectStack__P_154_1.pop();
+        this.__objectStack__P_148_1.pop();
       },
       /**
        * Peeks the QxObject stack
@@ -229,7 +226,7 @@
        * @returns {qx.core.Object}
        */
       peekQxObject() {
-        return this.__objectStack__P_154_1[this.__objectStack__P_154_1.length - 1] || null;
+        return this.__objectStack__P_148_1[this.__objectStack__P_148_1.length - 1] || null;
       },
       /**
        * Calculates a Qx Object ID which is either relative to the root most element,
@@ -251,7 +248,7 @@
         //  easier to read and understand, and consumes less bytes in the output
         const stackTop = this.peekQxObject();
         if (stackTop === target) {
-          const secondTop = this.__objectStack__P_154_1.slice(-2)[0] || null;
+          const secondTop = this.__objectStack__P_148_1.slice(-2)[0] || null;
           if (secondTop === target.getQxOwner()) {
             return target.getQxObjectId();
           }
@@ -259,11 +256,11 @@
 
         // Calculate the relative path between the stack top and the target object
         const ids = [target.getQxObjectId()];
-        const stackFirst = this.__objectStack__P_154_1[0];
+        const stackFirst = this.__objectStack__P_148_1[0];
         let tmp = target;
         do {
           const owner = tmp.getQxOwner();
-          if (this.__objectStack__P_154_1.indexOf(owner) < 0) {
+          if (this.__objectStack__P_148_1.indexOf(owner) < 0) {
             break;
           } else if (owner === stackFirst) {
             ids.unshift("..");
@@ -276,19 +273,19 @@
     },
     statics: {
       /** @type{Dictionary<String,Boolean>} list of self closing tags, in lowercase */
-      __SELF_CLOSING_TAGS__P_154_6: null
+      __SELF_CLOSING_TAGS__P_148_6: null
     },
     /**
      * Populates statics
      */
     defer(statics) {
-      statics.__SELF_CLOSING_TAGS__P_154_6 = {};
+      statics.__SELF_CLOSING_TAGS__P_148_6 = {};
       ["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"].forEach(function (tagName) {
-        statics.__SELF_CLOSING_TAGS__P_154_6[tagName] = true;
+        statics.__SELF_CLOSING_TAGS__P_148_6[tagName] = true;
       });
     }
   });
   qx.html.Serializer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Serializer.js.map?dt=1769806692588
+//# sourceMappingURL=Serializer.js.map?dt=1791841652107

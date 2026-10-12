@@ -37,9 +37,9 @@
   qx.Class.define("qx.ui.core.queue.Layout", {
     statics: {
       /** @type {Map} This contains all the queued widgets for the next flush. */
-      __queue__P_101_0: {},
+      __queue__P_42_0: {},
       /** Nesting level cache **/
-      __nesting__P_101_1: {},
+      __nesting__P_42_1: {},
       /**
        * Clears the widget from the internal queue. Normally only used
        * during interims disposes of one or a few widgets.
@@ -47,7 +47,7 @@
        * @param widget {qx.ui.core.Widget} The widget to clear
        */
       remove(widget) {
-        delete this.__queue__P_101_0[widget.toHashCode()];
+        delete this.__queue__P_42_0[widget.toHashCode()];
       },
       /**
        * Mark a widget's layout as invalid and add its layout root to
@@ -58,7 +58,7 @@
        * @param widget {qx.ui.core.Widget} Widget to add.
        */
       add(widget) {
-        this.__queue__P_101_0[widget.toHashCode()] = widget;
+        this.__queue__P_42_0[widget.toHashCode()] = widget;
         qx.ui.core.queue.Manager.scheduleFlush("layout");
       },
       /**
@@ -70,7 +70,7 @@
        * @return {Boolean} Whether the widget given has layout changes queued.
        */
       isScheduled(widget) {
-        return !!this.__queue__P_101_0[widget.toHashCode()];
+        return !!this.__queue__P_42_0[widget.toHashCode()];
       },
       /**
        * Update the layout of all widgets, which layout is marked as invalid.
@@ -80,7 +80,7 @@
        */
       flush() {
         // get sorted widgets to (re-)layout
-        var queue = this.__getSortedQueue__P_101_2();
+        var queue = this.__getSortedQueue__P_42_2();
 
         // iterate in reversed order to process widgets with the smallest nesting
         // level first because these may affect the inner lying children
@@ -116,7 +116,7 @@
        * @return {Integer} The nesting level
        */
       getNestingLevel(widget) {
-        var cache = this.__nesting__P_101_1;
+        var cache = this.__nesting__P_42_1;
         var level = 0;
         var parent = widget;
 
@@ -147,15 +147,15 @@
        * @return {Map[]} A sparse array. Each entry of the array contains a widget
        *     map with all widgets of the same level as the array index.
        */
-      __getLevelGroupedWidgets__P_101_3() {
+      __getLevelGroupedWidgets__P_42_3() {
         var VisibilityQueue = qx.ui.core.queue.Visibility;
 
         // clear cache
-        this.__nesting__P_101_1 = {};
+        this.__nesting__P_42_1 = {};
 
         // sparse level array
         var levels = [];
-        var queue = this.__queue__P_101_0;
+        var queue = this.__queue__P_42_0;
         var widget, level;
         for (var hash in queue) {
           widget = queue[hash];
@@ -186,9 +186,9 @@
        *
        * @return {qx.ui.core.Widget[]} Ordered list or layout roots.
        */
-      __getSortedQueue__P_101_2() {
+      __getSortedQueue__P_42_2() {
         var sortedQueue = [];
-        var levels = this.__getLevelGroupedWidgets__P_101_3();
+        var levels = this.__getLevelGroupedWidgets__P_42_3();
         for (var level = levels.length - 1; level >= 0; level--) {
           // Ignore empty levels (levels is an sparse array)
           if (!levels[level]) {
@@ -235,4 +235,4 @@
   qx.ui.core.queue.Layout.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Layout.js.map?dt=1769806690012
+//# sourceMappingURL=Layout.js.map?dt=1791841650336

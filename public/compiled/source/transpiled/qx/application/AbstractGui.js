@@ -62,7 +62,7 @@
 
     members: {
       /** @type {qx.ui.core.Widget} The root widget */
-      __root__P_99_0: null,
+      __root__P_33_0: null,
       /**
        * Create the root widget. This method is abstract and must be overridden
        * by sub classes.
@@ -85,7 +85,7 @@
        * @return {qx.ui.core.Widget} The application's root widget.
        */
       getRoot() {
-        return this.__root__P_99_0;
+        return this.__root__P_33_0;
       },
       // interface method
       main() {
@@ -96,7 +96,7 @@
         qx.ui.tooltip.Manager.getInstance();
         var rule = ["-webkit-touch-callout: none;", "-ms-touch-select: none;", "-webkit-tap-highlight-color: rgba(0,0,0,0);", "-webkit-tap-highlight-color: transparent;"].join("");
         qx.ui.style.Stylesheet.getInstance().addRule("*", rule);
-        this.__root__P_99_0 = this._createRootWidget();
+        this.__root__P_33_0 = this._createRootWidget();
 
         // make sure we start with a good scroll position
         window.scrollTo(0, 0);
@@ -125,4 +125,4 @@
   qx.application.AbstractGui.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=AbstractGui.js.map?dt=1769806689954
+//# sourceMappingURL=AbstractGui.js.map?dt=1791841650198

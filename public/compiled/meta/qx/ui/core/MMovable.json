@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337431,
-  "lastModifiedIso": "2026-01-03T20:15:37.431Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/core/MMovable.js",
+  "lastModified": 1739993516086,
+  "lastModifiedIso": "2025-02-19T19:31:56.086Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/core/MMovable.js",
   "type": "mixin",
   "location": {
     "start": {

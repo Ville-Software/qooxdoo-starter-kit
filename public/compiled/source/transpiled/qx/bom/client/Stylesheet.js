@@ -49,11 +49,11 @@
        *
        * @return {StyleSheet} Stylesheet element
        */
-      __getStylesheet__P_128_0() {
-        if (!qx.bom.client.Stylesheet.__stylesheet__P_128_1) {
-          qx.bom.client.Stylesheet.__stylesheet__P_128_1 = qx.bom.Stylesheet.createElement();
+      __getStylesheet__P_129_0() {
+        if (!qx.bom.client.Stylesheet.__stylesheet__P_129_1) {
+          qx.bom.client.Stylesheet.__stylesheet__P_129_1 = qx.bom.Stylesheet.createElement();
         }
-        return qx.bom.client.Stylesheet.__stylesheet__P_128_1;
+        return qx.bom.client.Stylesheet.__stylesheet__P_129_1;
       },
       /**
        * Check for IE's non-standard document.createStyleSheet function.
@@ -75,7 +75,7 @@
        * @return {Boolean} <code>true</code> if insertRule is supported
        */
       getInsertRule() {
-        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_128_0().insertRule === "function";
+        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_129_0().insertRule === "function";
       },
       /**
        * Check for stylesheet.deleteRule. Legacy IEs do not support this.
@@ -84,7 +84,7 @@
        * @return {Boolean} <code>true</code> if deleteRule is supported
        */
       getDeleteRule() {
-        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_128_0().deleteRule === "function";
+        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_129_0().deleteRule === "function";
       },
       /**
        * Decides whether to use the legacy IE-only stylesheet.addImport or the
@@ -94,7 +94,7 @@
        * @return {Boolean} <code>true</code> if stylesheet.addImport is supported
        */
       getAddImport() {
-        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_128_0().addImport === "object";
+        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_129_0().addImport === "object";
       },
       /**
        * Decides whether to use the legacy IE-only stylesheet.removeImport or the
@@ -104,7 +104,7 @@
        * @return {Boolean} <code>true</code> if stylesheet.removeImport is supported
        */
       getRemoveImport() {
-        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_128_0().removeImport === "object";
+        return typeof qx.bom.client.Stylesheet.__getStylesheet__P_129_0().removeImport === "object";
       }
     },
     defer(statics) {
@@ -118,4 +118,4 @@
   qx.bom.client.Stylesheet.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Stylesheet.js.map?dt=1769806690976
+//# sourceMappingURL=Stylesheet.js.map?dt=1791841651879

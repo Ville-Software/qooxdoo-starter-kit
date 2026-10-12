@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471335794,
-  "lastModifiedIso": "2026-01-03T20:15:35.794Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Color.js",
+  "lastModified": 1739993515393,
+  "lastModifiedIso": "2025-02-19T19:31:55.393Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Color.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 477
     },
     "end": {
-      "line": 148,
+      "line": 140,
       "column": 3,
-      "index": 3701
+      "index": 3611
     }
   },
   "className": "qx.test.theme.manager.Color",
@@ -57,7 +57,7 @@
       },
       "appearsIn": []
     },
-    "__savedListeners": {
+    "__formerListener": {
       "jsdoc": null,
       "access": "private",
       "location": {
@@ -86,7 +86,7 @@
         "end": {
           "line": 37,
           "column": 5,
-          "index": 1051
+          "index": 1039
         }
       },
       "type": "function",
@@ -100,12 +100,12 @@
         "start": {
           "line": 39,
           "column": 4,
-          "index": 1058
+          "index": 1046
         },
         "end": {
-          "line": 60,
+          "line": 52,
           "column": 5,
-          "index": 1594
+          "index": 1504
         }
       },
       "type": "function",
@@ -117,14 +117,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 62,
+          "line": 54,
           "column": 4,
-          "index": 1601
+          "index": 1511
         },
         "end": {
-          "line": 80,
+          "line": 72,
           "column": 5,
-          "index": 2085
+          "index": 1995
         }
       },
       "type": "function",
@@ -136,14 +136,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 82,
+          "line": 74,
           "column": 4,
-          "index": 2092
+          "index": 2002
         },
         "end": {
-          "line": 99,
+          "line": 91,
           "column": 5,
-          "index": 2613
+          "index": 2523
         }
       },
       "type": "function",
@@ -155,14 +155,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 101,
+          "line": 93,
           "column": 4,
-          "index": 2620
+          "index": 2530
         },
         "end": {
-          "line": 117,
+          "line": 109,
           "column": 5,
-          "index": 3085
+          "index": 2995
         }
       },
       "type": "function",
@@ -174,14 +174,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 119,
+          "line": 111,
           "column": 4,
-          "index": 3092
+          "index": 3002
         },
         "end": {
-          "line": 146,
+          "line": 138,
           "column": 5,
-          "index": 3693
+          "index": 3603
         }
       },
       "type": "function",

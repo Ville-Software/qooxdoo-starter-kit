@@ -4,7 +4,7 @@
  */
 qx.Class.define("qxapp.pages.settings.Profile",
 {
-  extend : ville.ui.tabview.Page,
+  extend : qx.ui.tabview.Page,
 
   include : qxapp.pages.MPage,
 
@@ -12,16 +12,35 @@ qx.Class.define("qxapp.pages.settings.Profile",
 
     const pagenameroot = "profile";
     const pageurl = `/settings/${pagenameroot}`;
-    const pageName = qx.lang.String.firstUp(pagenameroot);
+    const pageName = qx.lang.String.firstUp(pagenameroot) + " settings";
+    this.setPageName(pageName);
 
-    super(pageName);
+    super(qx.lang.String.firstUp(pagenameroot));
+
+    this.setComponentName("settings.Profile");
 
     this.setPageUrl(pageurl);
 
-    // Set up the page
-    this.addListener("appear", () => {document.title = `${pageName} - Laravel`});
+    // Update Button to link
+    var pagebtnlink = this.getButton();
+    pagebtnlink.getContentElement().setNodeName("a");
+    pagebtnlink.getContentElement().setAttribute("href", pageurl);
+    pagebtnlink.addListener("click", (e) => {e.preventDefault()});
+    pagebtnlink.setNativeContextMenu(false);
+    pagebtnlink.getChildControl("label").getContentElement().setStyle("text-align","start");
 
-    this.setAttribute("html", pagenameroot);
+    // Get the Routing object
+    //const routing = qx.core.Init.getApplication().getRouting();
+    const SettingsappHeader = qx.core.Init.getApplication().getStack().getSelection()[0].getHeader();
+
+    // Set up the page
+    this.addListener("appear", () => {
+        document.title = `${pageName} - Laravel`;
+        //routing.getRouter().push({ url: pageurl });
+        SettingsappHeader.getContentElement().setAttribute("html", pageName);
+    });
+
+    this.getContentElement().setAttribute("html", pagenameroot);
 
   }
 

@@ -76,9 +76,9 @@
       /** @type {Boolean} Whether clipping hints should be logged */
       DEBUG: false,
       /** @type {Map} Collect warnings for potential clipped images */
-      __warnings__P_213_0: {},
+      __warnings__P_179_0: {},
       /** @type {Map} List of repeat modes which supports the IE AlphaImageLoader */
-      __alphaFixRepeats__P_213_1: qx.core.Environment.select("engine.name", {
+      __alphaFixRepeats__P_179_1: qx.core.Environment.select("engine.name", {
         mshtml: {
           "scale-x": true,
           "scale-y": true,
@@ -88,7 +88,7 @@
         default: null
       }),
       /** @type {Map} Mapping between background repeat and the tag to create */
-      __repeatToTagname__P_213_2: {
+      __repeatToTagname__P_179_2: {
         "scale-x": "img",
         "scale-y": "img",
         scale: "img",
@@ -201,10 +201,10 @@
        * @return {String} The tag name: <code>div</code> or <code>img</code>
        */
       getTagName(repeat, source) {
-        if (source && qx.core.Environment.get("css.alphaimageloaderneeded") && this.__alphaFixRepeats__P_213_1[repeat] && source.endsWith(".png")) {
+        if (source && qx.core.Environment.get("css.alphaimageloaderneeded") && this.__alphaFixRepeats__P_179_1[repeat] && source.endsWith(".png")) {
           return "div";
         }
-        return this.__repeatToTagname__P_213_2[repeat];
+        return this.__repeatToTagname__P_179_2[repeat];
       },
       /**
        * This method is used to collect all needed attributes for
@@ -237,19 +237,19 @@
         var result;
 
         // Enable AlphaImageLoader in IE6/IE7/IE8
-        if (qx.core.Environment.get("css.alphaimageloaderneeded") && this.__alphaFixRepeats__P_213_1[repeat] && format === "png") {
-          var dimension = this.__getDimension__P_213_3(source);
-          this.__normalizeWidthHeight__P_213_4(style, dimension.width, dimension.height);
+        if (qx.core.Environment.get("css.alphaimageloaderneeded") && this.__alphaFixRepeats__P_179_1[repeat] && format === "png") {
+          var dimension = this.__getDimension__P_179_3(source);
+          this.__normalizeWidthHeight__P_179_4(style, dimension.width, dimension.height);
           result = this.processAlphaFix(style, repeat, source);
         } else {
           delete style.clip;
           if (repeat === "scale") {
-            result = this.__processScale__P_213_5(style, repeat, source);
+            result = this.__processScale__P_179_5(style, repeat, source);
           } else if (repeat === "scale-x" || repeat === "scale-y") {
-            result = this.__processScaleXScaleY__P_213_6(style, repeat, source);
+            result = this.__processScaleXScaleY__P_179_6(style, repeat, source);
           } else {
             // Native repeats or "no-repeat"
-            result = this.__processRepeats__P_213_7(style, repeat, source);
+            result = this.__processRepeats__P_179_7(style, repeat, source);
           }
         }
         return result;
@@ -261,7 +261,7 @@
        * @param width {Integer?null} width as number or null
        * @param height {Integer?null} height as number or null
        */
-      __normalizeWidthHeight__P_213_4(style, width, height) {
+      __normalizeWidthHeight__P_179_4(style, width, height) {
         if (style.width == null && width != null) {
           style.width = width + "px";
         }
@@ -277,7 +277,7 @@
        * @param source {String} image source
        * @return {Map} dimension of image
        */
-      __getDimension__P_213_3(source) {
+      __getDimension__P_179_3(source) {
         var width = qx.util.ResourceManager.getInstance().getImageWidth(source) || qx.io.ImageLoader.getWidth(source);
         var height = qx.util.ResourceManager.getInstance().getImageHeight(source) || qx.io.ImageLoader.getHeight(source);
         return {
@@ -318,10 +318,10 @@
        *
        * @return {Map} image URI and style infos
        */
-      __processScale__P_213_5(style, repeat, source) {
+      __processScale__P_179_5(style, repeat, source) {
         var uri = qx.util.ResourceManager.getInstance().toUri(source);
-        var dimension = this.__getDimension__P_213_3(source);
-        this.__normalizeWidthHeight__P_213_4(style, dimension.width, dimension.height);
+        var dimension = this.__getDimension__P_179_3(source);
+        this.__normalizeWidthHeight__P_179_4(style, dimension.width, dimension.height);
         return {
           src: uri,
           style: style
@@ -337,10 +337,10 @@
        *
        * @return {Map} image URI and style infos
        */
-      __processScaleXScaleY__P_213_6(style, repeat, sourceid) {
+      __processScaleXScaleY__P_179_6(style, repeat, sourceid) {
         var ResourceManager = qx.util.ResourceManager.getInstance();
         var clipped = ResourceManager.getCombinedFormat(sourceid);
-        var dimension = this.__getDimension__P_213_3(sourceid);
+        var dimension = this.__getDimension__P_179_3(sourceid);
         var uri;
         if (clipped) {
           var data = ResourceManager.getData(sourceid);
@@ -351,9 +351,9 @@
             uri = ResourceManager.toUri(combinedid);
           }
           if (repeat === "scale-x") {
-            style = this.__getStylesForClippedScaleX__P_213_8(style, data, dimension.height);
+            style = this.__getStylesForClippedScaleX__P_179_8(style, data, dimension.height);
           } else {
-            style = this.__getStylesForClippedScaleY__P_213_9(style, data, dimension.width);
+            style = this.__getStylesForClippedScaleY__P_179_9(style, data, dimension.width);
           }
           return {
             src: uri,
@@ -364,7 +364,7 @@
         // No clipped image available
         else {
           {
-            this.__checkForPotentialClippedImage__P_213_10(sourceid);
+            this.__checkForPotentialClippedImage__P_179_10(sourceid);
           }
           if (repeat == "scale-x") {
             style.height = dimension.height == null ? null : dimension.height + "px";
@@ -389,7 +389,7 @@
        *
        * @return {Map} style infos and image URI
        */
-      __getStylesForClippedScaleX__P_213_8(style, data, height) {
+      __getStylesForClippedScaleX__P_179_8(style, data, height) {
         // Use clipped image (multi-images on x-axis)
         var imageHeight = qx.util.ResourceManager.getInstance().getImageHeight(data[4]);
 
@@ -419,7 +419,7 @@
        *
        * @return {Map} style infos and image URI
        */
-      __getStylesForClippedScaleY__P_213_9(style, data, width) {
+      __getStylesForClippedScaleY__P_179_9(style, data, width) {
         // Use clipped image (multi-images on x-axis)
         var imageWidth = qx.util.ResourceManager.getInstance().getImageWidth(data[4]);
 
@@ -449,10 +449,10 @@
        *
        * @return {Map} image URI and style infos
        */
-      __processRepeats__P_213_7(style, repeat, sourceid) {
+      __processRepeats__P_179_7(style, repeat, sourceid) {
         var ResourceManager = qx.util.ResourceManager.getInstance();
         var clipped = ResourceManager.getCombinedFormat(sourceid);
-        var dimension = this.__getDimension__P_213_3(sourceid);
+        var dimension = this.__getDimension__P_179_3(sourceid);
 
         // Double axis repeats cannot be clipped
         if (clipped && repeat !== "repeat") {
@@ -502,11 +502,11 @@
           style.backgroundPosition = left + "px " + top + "px";
           {
             if (repeat !== "repeat") {
-              this.__checkForPotentialClippedImage__P_213_10(sourceid);
+              this.__checkForPotentialClippedImage__P_179_10(sourceid);
             }
           }
-          this.__normalizeWidthHeight__P_213_4(style, dimension.width, dimension.height);
-          this.__getStylesForSingleRepeat__P_213_11(style, sourceid, repeat);
+          this.__normalizeWidthHeight__P_179_4(style, dimension.width, dimension.height);
+          this.__getStylesForSingleRepeat__P_179_11(style, sourceid, repeat);
           return {
             style: style
           };
@@ -519,7 +519,7 @@
        * @param repeat {String} repeat mode
        * @param source {String} image source
        */
-      __getStylesForSingleRepeat__P_213_11(style, source, repeat) {
+      __getStylesForSingleRepeat__P_179_11(style, source, repeat) {
         // retrieve the "backgroundPosition" style if available to prevent
         // overwriting with default values
         var top = null;
@@ -553,11 +553,11 @@
        *
        * @param source {String} image source
        */
-      __checkForPotentialClippedImage__P_213_10(source) {
+      __checkForPotentialClippedImage__P_179_10(source) {
         if (this.DEBUG && qx.util.ResourceManager.getInstance().has(source) && source.indexOf("qx/icon") == -1) {
-          if (!this.__warnings__P_213_0[source]) {
+          if (!this.__warnings__P_179_0[source]) {
             qx.log.Logger.debug("Potential clipped image candidate: " + source);
-            this.__warnings__P_213_0[source] = true;
+            this.__warnings__P_179_0[source] = true;
           }
         }
       }
@@ -566,4 +566,4 @@
   qx.bom.element.Decoration.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Decoration.js.map?dt=1769806694884
+//# sourceMappingURL=Decoration.js.map?dt=1791841652468

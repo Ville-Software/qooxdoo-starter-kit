@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336549,
-  "lastModifiedIso": "2026-01-03T20:15:36.549Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Font.js",
+  "lastModified": 1739993515686,
+  "lastModifiedIso": "2025-02-19T19:31:55.686Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Font.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 473
     },
     "end": {
-      "line": 126,
+      "line": 118,
       "column": 3,
-      "index": 2926
+      "index": 2836
     }
   },
   "className": "qx.test.theme.manager.Font",
@@ -57,7 +57,7 @@
       },
       "appearsIn": []
     },
-    "__savedListeners": {
+    "__formerListener": {
       "jsdoc": null,
       "access": "private",
       "location": {
@@ -86,7 +86,7 @@
         "end": {
           "line": 37,
           "column": 5,
-          "index": 1045
+          "index": 1033
         }
       },
       "type": "function",
@@ -100,12 +100,12 @@
         "start": {
           "line": 39,
           "column": 4,
-          "index": 1052
+          "index": 1040
         },
         "end": {
-          "line": 60,
+          "line": 52,
           "column": 5,
-          "index": 1588
+          "index": 1498
         }
       },
       "type": "function",
@@ -117,14 +117,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 62,
+          "line": 54,
           "column": 4,
-          "index": 1595
+          "index": 1505
         },
         "end": {
-          "line": 124,
+          "line": 116,
           "column": 5,
-          "index": 2918
+          "index": 2828
         }
       },
       "type": "function",

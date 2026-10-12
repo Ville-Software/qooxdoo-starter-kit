@@ -51,7 +51,7 @@
     type: "singleton",
     construct() {
       qx.core.Object.constructor.call(this);
-      this.__factoriesByTagName__P_153_0 = {};
+      this.__factoriesByTagName__P_147_0 = {};
       this.registerFactory("#text", (tagName, styles, attributes) => new qx.html.Text(""));
       this.registerFactory("iframe", (tagName, styles, attributes) => new qx.html.Iframe(attributes.src, styles, attributes));
       this.registerFactory("input", (tagName, styles, attributes) => new qx.html.Input(attributes.type || "text", styles, attributes));
@@ -71,7 +71,7 @@
       });
     },
     members: {
-      __factoriesByTagName__P_153_0: null,
+      __factoriesByTagName__P_147_0: null,
       /**
        * Registers a factory; a factory is either a class, or a function which is
        * called with the parameters (tagName {String}, styles{Map?}, attributes {Map?}), and
@@ -82,10 +82,10 @@
        */
       registerFactory(tagName, factory) {
         tagName = tagName.toLowerCase();
-        if (this.__factoriesByTagName__P_153_0[tagName] === undefined) {
-          this.__factoriesByTagName__P_153_0[tagName] = [];
+        if (this.__factoriesByTagName__P_147_0[tagName] === undefined) {
+          this.__factoriesByTagName__P_147_0[tagName] = [];
         }
-        this.__factoriesByTagName__P_153_0[tagName].push(factory);
+        this.__factoriesByTagName__P_147_0[tagName].push(factory);
       },
       /**
        * Called to create an {Element}
@@ -125,7 +125,7 @@
             }
           }
         }
-        var factories = this.__factoriesByTagName__P_153_0[tagName];
+        var factories = this.__factoriesByTagName__P_147_0[tagName];
         if (factories) {
           for (var i = factories.length - 1; i > -1; i--) {
             var factory = factories[i];
@@ -148,4 +148,4 @@
   qx.html.Factory.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Factory.js.map?dt=1769806692562
+//# sourceMappingURL=Factory.js.map?dt=1791841652098

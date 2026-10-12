@@ -56,8 +56,8 @@
     */
 
     members: {
-      __orientation__P_226_0: null,
-      __mode__P_226_1: null,
+      __orientation__P_214_0: null,
+      __mode__P_214_1: null,
       /**
        * Initialize the fields of the event. The event must be initialized before
        * it can be dispatched.
@@ -68,8 +68,8 @@
        */
       init(orientation, mode) {
         qx.event.type.Orientation.superclass.prototype.init.call(this, false, false);
-        this.__orientation__P_226_0 = orientation;
-        this.__mode__P_226_1 = mode;
+        this.__orientation__P_214_0 = orientation;
+        this.__mode__P_214_1 = mode;
         return this;
       },
       /**
@@ -84,8 +84,8 @@
        */
       clone(embryo) {
         var clone = qx.event.type.Orientation.superclass.prototype.clone.call(this, embryo);
-        clone.__orientation__P_226_0 = this.__orientation__P_226_0;
-        clone.__mode__P_226_1 = this.__mode__P_226_1;
+        clone.__orientation__P_214_0 = this.__orientation__P_214_0;
+        clone.__mode__P_214_1 = this.__mode__P_214_1;
         return clone;
       },
       /**
@@ -101,7 +101,7 @@
        * @return {Integer} The current orientation in degree
        */
       getOrientation() {
-        return this.__orientation__P_226_0;
+        return this.__orientation__P_214_0;
       },
       /**
        * Whether the viewport orientation is currently in landscape mode.
@@ -110,7 +110,7 @@
        *     is currently in landscape mode.
        */
       isLandscape() {
-        return this.__mode__P_226_1 == "landscape";
+        return this.__mode__P_214_1 == "landscape";
       },
       /**
        * Whether the viewport orientation is currently in portrait mode.
@@ -119,11 +119,11 @@
        *     is currently in portrait mode.
        */
       isPortrait() {
-        return this.__mode__P_226_1 == "portrait";
+        return this.__mode__P_214_1 == "portrait";
       }
     }
   });
   qx.event.type.Orientation.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Orientation.js.map?dt=1769806695405
+//# sourceMappingURL=Orientation.js.map?dt=1791841652974

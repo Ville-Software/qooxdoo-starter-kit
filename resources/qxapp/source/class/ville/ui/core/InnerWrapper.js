@@ -3,9 +3,9 @@
  * @external(mantine/core/styles/InlineInput.css)
  */
 qx.Class.define("ville.ui.core.InnerWrapper", {
-    extend: ville.ui.core.Widget,
+    extend: qx.ui.core.Widget,
 
-    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],
+    include: qx.ui.core.MChildrenHandling,
 
     construct(component) {
         if (component) {
@@ -14,8 +14,6 @@ qx.Class.define("ville.ui.core.InnerWrapper", {
         super();
 
         this._setLayout(new qx.ui.layout.Basic());
-        this.setExcludeBoundsFromDom(true);
-        //this.setExcludeInlineStyles(["position"]);
     },
 
     members: {

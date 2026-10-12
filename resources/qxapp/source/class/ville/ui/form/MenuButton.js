@@ -1,79 +1,60 @@
 /**
- * Menu Button
+ * A button which opens the connected menu when tapping on it.
  * @external(mantine/core/styles/UnstyledButton.css)
  * @external(mantine/core/styles/Button.css)
  */
 qx.Class.define("ville.ui.form.MenuButton", {
-    
     extend: qx.ui.form.MenuButton,
 
-    include: ville.ui.core.MWidget,
+    construct(label, icon, menu, component) {
 
-    construct(label, variant, sectionLeft, sectionRight, menu, component) {
-        
-        if (component != null)
+        if (component != null) {
             this.__componenttag = component;
+        }
 
-        super();
-
-        this.setExcludeBoundsFromDom(true);
-        this.setClearAllInlineStyles(true);
-        //this.setStyle("position", "relative", true);
-        //this.setExcludeBoundsFromDomMods(["left", "top"]);
-        this.setCssUtilityClass("mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root");
-
-        if (this.__componenttag !== "button")
-            this.getContentElement().removeAttribute('type');
-
-        if (variant) {
-            this.setVariant(variant);
+        if (icon != null) {
+            if (qx.lang.Type.isString(icon)) {
+                super(label, icon, menu);
+            } else {
+                super(label, null, menu);
+                this.setInlineIcon(icon);
+                this._createChildControl("inlineicon");
+            }
         } else {
-            this.initVariant();
+            super(label, null, menu);
         }
 
-        if (sectionLeft != null) {
-            this.setSectionLeft(sectionLeft);
-        }
-
-        if (label != null) {
-            this.setLabel(label);
-        }
-
-        if (sectionRight != null) {
-            this.setSectionRight(sectionRight);
-        }
-
-        if (menu != null) {
-            this.setMenu(menu);
-        }
+        /*if (arrowicon) {
+            this.setArrowIcon(arrowicon);
+            //this.setShowArrow(true);
+        }*/
 
     },
 
     properties: {
 
-        variant: {
-            init: "default",
-            check: ["default", "filled", "light", "outline", "subtle", "transparent", "white"],
-            apply: "_applyVariant",
-            themeable: true,
-            event: "changeVariant"
-        },
-
-        sectionLeft: {
+        inlineIcon: {
             check: "qx.ui.core.Widget",
-            apply: "_applySectionLeft",
+            apply: "_applyInlineIcon",
             nullable: true,
             themeable: true,
-            event: "changeSectionLeft"
+            event: "changeInlineIcon"
         },
 
-        sectionRight: {
+        arrowIcon: {
             check: "qx.ui.core.Widget",
-            apply: "_applySectionRight",
+            init: null,
             nullable: true,
-            themeable: true,
-            event: "changeSectionRight"
+            themeable: true
         }
+
+        /*showArrow: {
+            check: "Boolean",
+            init: false,
+            apply: "_applyShowArrow",
+            themeable: true,
+            event: "changeShowArrow"
+        }*/
     },
 
     members: {
@@ -88,44 +69,82 @@ qx.Class.define("ville.ui.form.MenuButton", {
         // overridden
         _createChildControlImpl(id, hash) {
             var control;
-            var innerwrapper;
 
             switch (id) {
-                case "innerwrapper":
-                    control = new ville.ui.core.InnerWrapper();
-                    control.setCssUtilityClass("m_80f1301b mantine-Button-inner");
-                    this._add(control);
-                    break;
-                
-                case "label":
-                    control = new ville.ui.basic.Label();
-                    control.setAnonymous(true);
-                    control.setSelectable(this.getSelectable());
-                    control.setCssUtilityClass("m_811560b9 mantine-Button-label");
-                    innerwrapper = this.getChildControl("innerwrapper");
-                    innerwrapper.add(control);
-                    break;
 
-                case "sectionleft":
-                    control = new ville.ui.basic.Label();
+                case "inlineicon":
+                    control = this.getInlineIcon();
                     control.setAnonymous(true);
-                    control.setCssUtilityClass("m_a74036a mantine-Button-section");
                     control.getContentElement().setAttribute("data-position", "left");
-                    innerwrapper = this.getChildControl("innerwrapper");
-                    innerwrapper.add(control);
+                    this.getContentElement().setAttribute("data-with-left-section", true);
+                    this._add(control, { column: 0 });
+                    if (control == null) {
+                        control.exclude();
+                    }
                     break;
 
-                case "sectionright":
-                    control = new ville.ui.basic.Label();
+                /*case "arrowicon":
+                    // check to see if there is an icon, otherwise use default
+                    if (!this.getArrowIcon()) {
+                        control = new ville.icon.phosphor.CaretDown(18);
+                        //control.setViewBox("0 0 32 6");
+                        this.setArrowIcon(control);
+                    } else {
+                        control = this.getArrowIcon();
+                    }
                     control.setAnonymous(true);
-                    control.setCssUtilityClass("m_a74036a mantine-Button-section");
-                    control.getContentElement().setAttribute("data-position", "right");
-                    innerwrapper = this.getChildControl("innerwrapper");
-                    innerwrapper.add(control);
-                    break;
+                    this._add(control, { column: 3 });
+
+                    break;*/
+
             }
 
             return control || super._createChildControlImpl(id);
+        },
+
+        // overridden
+        _applyEnabled(value, old) {
+            super._applyEnabled(value, old);
+            if (value === false) {
+                // villeui-mantine attriubute setting
+                this.getContentElement().setAttribute("data-disabled", true);
+                //this.getContentElement().removeClass("mantine-active");
+            } else {
+                // villeui-mantine attriubute setting
+                this.getContentElement().removeAttribute("data-disabled");
+                //this.getContentElement().addClass("mantine-active");
+            }
+        },
+
+        // property apply
+        _applyInlineIcon (value, old)
+        {
+            if (this.getIcon() != null) {
+                value.exclude();
+            } else {
+                if (old)
+                    this._removeAt(0);
+
+                if (value)
+                    this.getChildControl("inlineicon", true);
+
+            }
+        },
+
+        // overridden
+        _handleIcon() {
+            if (this.getIcon() == null) {
+                this._excludeChildControl("icon");
+            } else {
+                this._showChildControl("icon");
+            }
+
+            if (this.getInlineIcon() == null) {
+                this._excludeChildControl("inlineicon");
+            } else {
+                if (this.getIcon() == null)
+                    this._showChildControl("inlineicon");
+            }
         },
 
         // property apply
@@ -133,63 +152,19 @@ qx.Class.define("ville.ui.form.MenuButton", {
             if (value) {
                 this.getContentElement().setAttribute("data-variant", value);
             }
-        },
-
-        // overridden
-        // Replaced by Section Left and Right
-        _applyIcon(value, old) {},
-
-        // overridden
-        _applyShow(value, old) {},
-
-        // overridden
-        _applyLabel(value, old) {
-            var innerwrapper = this.getChildControl("innerwrapper");
-            if (innerwrapper) {
-                var label = this.getChildControl("label");
-                if (label) {
-                    label.setValue(value);
-                }
-            }
-        },
-
-        _applySectionLeft(value, old) {
-            var innerwrapper = this.getChildControl("innerwrapper");
-            if (innerwrapper) {
-                var section = this.getChildControl("sectionleft");
-                if (section) {
-                    if (old) {
-                        section.removeAll();
-                    }
-
-                    if (value) {
-                        section.add(value);
-                        this.getContentElement().setAttribute("data-with-left-section", "true");
-                    } else {
-                        this.getContentElement().removeAttribute("data-with-left-section");
-                    }
-                }
-            }
-        },
-
-        _applySectionRight(value, old) {
-            var innerwrapper = this.getChildControl("innerwrapper");
-            if (innerwrapper) {
-                var section = this.getChildControl("sectionright");
-                if (section) {
-                    if (old) {
-                        section.removeAll();
-                    }
-
-                    if (value) {
-                        section.add(value);
-                        this.getContentElement().setAttribute("data-with-right-section", "true");
-                    } else {
-                        this.getContentElement().removeAttribute("data-with-right-section");
-                    }
-                }
-            }
         }
 
+        // property apply
+        /*_applyShowArrow(value) {
+            if (value) {
+                var arrowicon = this.getChildControl("arrowicon", true);
+                if (arrowicon)
+                    arrowicon.show();
+                else
+                    arrowicon.exclude();
+            }
+        }*/
+
     }
-  });
+
+});

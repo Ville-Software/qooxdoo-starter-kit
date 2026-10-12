@@ -17,27 +17,30 @@
   "locales": ["en"],
   "environment": {
     "qx.nativeScrollBars": true,
-    "qx.dyntheme": false,
-    "ville.cssuc": true
+    "qx.dyntheme": false
   },
   "babel" : {
     "options" : {
-      "targets" : "> 0.25%, not dead"
+      "targets" : "> 2%, not dead"
     }
   },
   "applications": [
     {
       "class": "qxapp.Application",
-      "theme": "ville.cssuc.theme.blankslate.Theme",
+      "theme": "ville.cssuc.theme.middleman.Theme",
       "name": "qxapp",
       "bootPath": "source/boot",
-      "include": ["qxapp.pages.*", "qxapp.app.*"],
+      "include": ["qxapp.pages.*"],
+      "environment": {
+        "inertia.rootView": "app"
+      },
       "parts": {
         "boot": {
             "include": [
                 "qxapp.Application",
                 "qxapp.pages.MPage",
-                "ville.cssuc.*"
+                "ville.cssuc.MCssUtilityClass",
+                "ville.cssuc.theme.middleman.*"
             ]
         },
         "Welcome": {
@@ -50,9 +53,9 @@
                 "qxapp.pages.Dashboard"
             ]
         },
-        "appshell": {
+        "app.AppShell": {
             "include": [
-                "qxapp.app.AppShell"
+                "qxapp.pages.app.AppShell"
             ]
         },
         "auth.Login": {
@@ -70,9 +73,14 @@
                 "qxapp.pages.auth.ForgotPassword"
             ]
         },
-        "settings": {
+        "auth.ConfirmPassword": {
             "include": [
-                "qxapp.app.SettingsShell",
+                "qxapp.pages.auth.ConfirmPassword"
+            ]
+        },
+        "app.SettingsView": {
+            "include": [
+                "qxapp.pages.app.SettingsView",
                 "qxapp.pages.settings.*"
             ]
         }

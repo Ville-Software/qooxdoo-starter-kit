@@ -1,27 +1,28 @@
 qx.Class.define("ville.ui.basic.Label", {
+
     extend: qx.ui.basic.Label,
 
-    include: [qx.ui.core.MChildrenHandling, ville.ui.core.MWidget],
-
     construct(text, component) {
+
         if (component) {
             this.__componenttag = component;
         }
-        super();
 
-        this._setLayout(new qx.ui.layout.Basic());
+        //if (text)
+          //  super(text);
+        //else
+            super();
 
-        this.setExcludeBoundsFromDom(true);
-        this.setClearAllInlineStyles(true);
+        //this._setLayout(new qx.ui.layout.Basic());
 
-        if (text) {
+        if (text)
             this.setValue(text);
-        }
+
     },
 
     members: {
 
-        __componenttag: "span",
+        __componenttag: "div",
 
         // overridden
         _createContentElement() {
@@ -54,6 +55,6 @@ qx.Class.define("ville.ui.basic.Label", {
                 // Update layout
                 qx.ui.core.queue.Layout.add(this);
             }
-            })
+        })
     }
   });

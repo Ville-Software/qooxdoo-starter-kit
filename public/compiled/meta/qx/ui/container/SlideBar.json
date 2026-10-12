@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337999,
-  "lastModifiedIso": "2026-01-03T20:15:37.999Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/container/SlideBar.js",
+  "lastModified": 1739993516316,
+  "lastModifiedIso": "2025-02-19T19:31:56.316Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/container/SlideBar.js",
   "type": "class",
   "location": {
     "start": {
@@ -862,42 +862,25 @@
         "@param": [
           {
             "name": "@param",
-            "body": "functionName {String} name of the method to forward",
-            "paramName": "functionName",
-            "description": " name of the method to forward",
-            "type": "string"
+            "body": "functionName {String} name of the method to forward"
           },
           {
             "name": "@param",
-            "body": "a1 {var?} first argument of the method to call",
-            "paramName": "a1",
-            "description": " first argument of the method to call",
-            "optional": true,
-            "type": "var"
+            "body": "a1 {var?} first argument of the method to call"
           },
           {
             "name": "@param",
-            "body": "a2 {var?} second argument of the method to call",
-            "paramName": "a2",
-            "description": " second argument of the method to call",
-            "optional": true,
-            "type": "var"
+            "body": "a2 {var?} second argument of the method to call"
           },
           {
             "name": "@param",
-            "body": "a3 {var?} third argument of the method to call",
-            "paramName": "a3",
-            "description": " third argument of the method to call",
-            "optional": true,
-            "type": "var"
+            "body": "a3 {var?} third argument of the method to call"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{var} The return value of the forward method",
-            "type": "var",
-            "description": "The return value of the forward method"
+            "body": "{var} The return value of the forward method"
           }
         ]
       },
@@ -917,32 +900,22 @@
       "type": "function",
       "params": [
         {
-          "name": "functionName",
-          "type": "string"
+          "name": "functionName"
         },
         {
-          "name": "a1",
-          "type": "var",
-          "optional": true
+          "name": "a1"
         },
         {
-          "name": "a2",
-          "type": "var",
-          "optional": true
+          "name": "a2"
         },
         {
-          "name": "a3",
-          "type": "var",
-          "optional": true
+          "name": "a3"
         }
       ],
-      "returnType": {
-        "type": "var"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "getChildren": {
       "jsdoc": {
@@ -963,9 +936,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)",
-            "type": "qx.ui.core.LayoutItem[]",
-            "description": "The children array (Arrays are\n   reference types, please do not modify them in-place)"
+            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)"
           }
         ]
       },
@@ -984,13 +955,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem[]"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "hasChildren": {
       "jsdoc": {
@@ -1010,9 +978,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Returns <code>true</code> when the widget has children.",
-            "type": "boolean",
-            "description": "Returns <code>true</code> when the widget has children."
+            "body": "{Boolean} Returns <code>true</code> when the widget has children."
           }
         ]
       },
@@ -1031,13 +997,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "add": {
       "jsdoc": {
@@ -1063,27 +1026,17 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the item to add.",
-            "paramName": "child",
-            "description": " the item to add.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the item to add."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for item.",
-            "paramName": "options",
-            "description": " Optional layout data for item.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for item."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget} This object (for chaining support)",
-            "type": "qx.ui.core.Widget",
-            "description": "This object (for chaining support)"
+            "body": "{qx.ui.core.Widget} This object (for chaining support)"
           }
         ]
       },
@@ -1103,23 +1056,16 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.Widget"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "remove": {
       "jsdoc": {
@@ -1140,18 +1086,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the item to remove",
-            "paramName": "child",
-            "description": " the item to remove",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the item to remove"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget} This object (for chaining support)",
-            "type": "qx.ui.core.Widget",
-            "description": "This object (for chaining support)"
+            "body": "{qx.ui.core.Widget} This object (for chaining support)"
           }
         ]
       },
@@ -1171,17 +1112,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.Widget"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "removeAll": {
       "jsdoc": {
@@ -1200,9 +1137,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Array} An array containing the removed children.",
-            "type": "Array<any>",
-            "description": "An array containing the removed children."
+            "body": "{Array} An array containing the removed children."
           }
         ]
       },
@@ -1221,13 +1156,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "Array<any>"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "indexOf": {
       "jsdoc": {
@@ -1255,18 +1187,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the item to query for",
-            "paramName": "child",
-            "description": " the item to query for",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the item to query for"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Integer} The index position or <code>-1</code> when\n   the given item is no child of this layout.",
-            "type": "Integer",
-            "description": "The index position or <code>-1</code> when\n   the given item is no child of this layout."
+            "body": "{Integer} The index position or <code>-1</code> when\n   the given item is no child of this layout."
           }
         ]
       },
@@ -1286,17 +1213,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         }
       ],
-      "returnType": {
-        "type": "Integer"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "addAt": {
       "jsdoc": {
@@ -1323,26 +1246,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} item to add",
-            "paramName": "child",
-            "description": " item to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} item to add"
           },
           {
             "name": "@param",
-            "body": "index {Integer} Index, at which the item will be inserted",
-            "paramName": "index",
-            "description": " Index, at which the item will be inserted",
-            "type": "Integer"
+            "body": "index {Integer} Index, at which the item will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for item.",
-            "paramName": "options",
-            "description": " Optional layout data for item.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for item."
           }
         ]
       },
@@ -1362,24 +1274,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "addBefore": {
       "jsdoc": {
@@ -1406,26 +1313,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} item to add",
-            "paramName": "child",
-            "description": " item to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} item to add"
           },
           {
             "name": "@param",
-            "body": "before {qx.ui.core.LayoutItem} item before the new item will be inserted.",
-            "paramName": "before",
-            "description": " item before the new item will be inserted.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "before {qx.ui.core.LayoutItem} item before the new item will be inserted."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for item.",
-            "paramName": "options",
-            "description": " Optional layout data for item.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for item."
           }
         ]
       },
@@ -1445,24 +1341,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "before",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "before"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "addAfter": {
       "jsdoc": {
@@ -1489,26 +1380,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} item to add",
-            "paramName": "child",
-            "description": " item to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} item to add"
           },
           {
             "name": "@param",
-            "body": "after {qx.ui.core.LayoutItem} item, after which the new item will be inserted",
-            "paramName": "after",
-            "description": " item, after which the new item will be inserted",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "after {qx.ui.core.LayoutItem} item, after which the new item will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for item.",
-            "paramName": "options",
-            "description": " Optional layout data for item.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for item."
           }
         ]
       },
@@ -1528,24 +1408,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "after",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "after"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "removeAt": {
       "jsdoc": {
@@ -1571,18 +1446,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "index {Integer} Index of the item to remove.",
-            "paramName": "index",
-            "description": " Index of the item to remove.",
-            "type": "Integer"
+            "body": "index {Integer} Index of the item to remove."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem} The removed item",
-            "type": "qx.ui.core.LayoutItem",
-            "description": "The removed item"
+            "body": "{qx.ui.core.LayoutItem} The removed item"
           }
         ]
       },
@@ -1602,17 +1472,13 @@
       "type": "function",
       "params": [
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem"
-      },
+      "mixin": "qx.ui.core.MRemoteChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteChildrenHandling"
+      ]
     },
     "setLayout": {
       "jsdoc": {
@@ -1635,10 +1501,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "layout {qx.ui.layout.Abstract} The new layout or\n     <code>null</code> to reset the layout.",
-            "paramName": "layout",
-            "description": " The new layout or\n     <code>null</code> to reset the layout.",
-            "type": "qx.ui.layout.Abstract"
+            "body": "layout {qx.ui.layout.Abstract} The new layout or\n     <code>null</code> to reset the layout."
           }
         ]
       },
@@ -1658,14 +1521,13 @@
       "type": "function",
       "params": [
         {
-          "name": "layout",
-          "type": "qx.ui.layout.Abstract"
+          "name": "layout"
         }
       ],
+      "mixin": "qx.ui.core.MRemoteLayoutHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteLayoutHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteLayoutHandling"
+      ]
     },
     "getLayout": {
       "jsdoc": {
@@ -1685,9 +1547,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.layout.Abstract} The widget's layout manager",
-            "type": "qx.ui.layout.Abstract",
-            "description": "The widget's layout manager"
+            "body": "{qx.ui.layout.Abstract} The widget's layout manager"
           }
         ]
       },
@@ -1706,13 +1566,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.layout.Abstract"
-      },
+      "mixin": "qx.ui.core.MRemoteLayoutHandling",
       "appearsIn": [
         "qx.ui.core.MRemoteLayoutHandling"
-      ],
-      "mixin": "qx.ui.core.MRemoteLayoutHandling"
+      ]
     }
   },
   "statics": {}

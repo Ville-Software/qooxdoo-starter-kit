@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336227,
-  "lastModifiedIso": "2026-01-03T20:15:36.227Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/event/dispatch/DomBubbling.js",
+  "lastModified": 1739993515595,
+  "lastModifiedIso": "2025-02-19T19:31:55.595Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/event/dispatch/DomBubbling.js",
   "type": "class",
   "location": {
     "start": {

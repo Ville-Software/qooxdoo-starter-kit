@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337892,
-  "lastModifiedIso": "2026-01-03T20:15:37.892Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/container/Scroll.js",
+  "lastModified": 1739993516266,
+  "lastModifiedIso": "2025-02-19T19:31:56.266Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/container/Scroll.js",
   "type": "class",
   "location": {
     "start": {
@@ -318,10 +318,10 @@
           "index": 3125
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "__contentPaddingThemedSetter": {
       "jsdoc": {
@@ -364,10 +364,10 @@
           "index": 3553
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "__contentPaddingResetter": {
       "jsdoc": {
@@ -410,10 +410,10 @@
           "index": 3952
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "_applyContentPadding": {
       "jsdoc": {
@@ -449,10 +449,10 @@
           "name": "variant"
         }
       ],
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     }
   },
   "statics": {},
@@ -487,10 +487,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingRight": {
       "location": {
@@ -522,10 +522,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingBottom": {
       "location": {
@@ -557,10 +557,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingLeft": {
       "location": {
@@ -592,10 +592,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPadding": {
       "location": {
@@ -639,10 +639,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     }
   }
 }

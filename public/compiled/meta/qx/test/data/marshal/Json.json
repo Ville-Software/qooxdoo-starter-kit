@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337124,
-  "lastModifiedIso": "2026-01-03T20:15:37.124Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/data/marshal/Json.js",
+  "lastModified": 1739993515892,
+  "lastModifiedIso": "2025-02-19T19:31:55.892Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/data/marshal/Json.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 620
     },
     "end": {
-      "line": 1532,
+      "line": 1503,
       "column": 3,
-      "index": 43537
+      "index": 42740
     }
   },
   "className": "qx.test.data.marshal.Json",
@@ -1058,25 +1058,6 @@
           "line": 1501,
           "column": 5,
           "index": 42732
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testNonPojoObjects": {
-      "jsdoc": null,
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1503,
-          "column": 4,
-          "index": 42739
-        },
-        "end": {
-          "line": 1530,
-          "column": 5,
-          "index": 43529
         }
       },
       "type": "function",

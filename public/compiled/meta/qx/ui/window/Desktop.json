@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336190,
-  "lastModifiedIso": "2026-01-03T20:15:36.190Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/window/Desktop.js",
+  "lastModified": 1739993515578,
+  "lastModifiedIso": "2025-02-19T19:31:55.578Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/window/Desktop.js",
   "type": "class",
   "location": {
     "start": {
@@ -724,10 +724,10 @@
           "index": 1531
         }
       },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "__manager": {
       "jsdoc": null,
@@ -744,10 +744,10 @@
           "index": 1552
         }
       },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "getWindowManager": {
       "jsdoc": {
@@ -769,9 +769,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.window.IWindowManager} The desktop's window manager",
-            "type": "qx.ui.window.IWindowManager",
-            "description": "The desktop's window manager"
+            "body": "{qx.ui.window.IWindowManager} The desktop's window manager"
           }
         ]
       },
@@ -790,13 +788,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.window.IWindowManager"
-      },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "supportsMaximize": {
       "jsdoc": {
@@ -817,9 +812,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Whether the layout supports maximized windows",
-            "type": "boolean",
-            "description": "Whether the layout supports maximized windows"
+            "body": "{Boolean} Whether the layout supports maximized windows"
           }
         ]
       },
@@ -838,14 +831,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop",
         "qx.ui.window.IDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "setWindowManager": {
       "jsdoc": {
@@ -865,10 +855,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "manager {qx.ui.window.IWindowManager} The window manager",
-            "paramName": "manager",
-            "description": " The window manager",
-            "type": "qx.ui.window.IWindowManager"
+            "body": "manager {qx.ui.window.IWindowManager} The window manager"
           }
         ]
       },
@@ -888,15 +875,14 @@
       "type": "function",
       "params": [
         {
-          "name": "manager",
-          "type": "qx.ui.window.IWindowManager"
+          "name": "manager"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop",
         "qx.ui.window.IDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_onChangeActive": {
       "jsdoc": {
@@ -917,10 +903,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Event} the event object.",
-            "paramName": "e",
-            "description": " the event object.",
-            "type": "qx.event.type.Event"
+            "body": "e {qx.event.type.Event} the event object."
           }
         ]
       },
@@ -940,14 +923,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Event"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_applyActiveWindow": {
       "jsdoc": {
@@ -977,10 +959,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_onChangeModal": {
       "jsdoc": {
@@ -1000,10 +982,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Event} the event object.",
-            "paramName": "e",
-            "description": " the event object.",
-            "type": "qx.event.type.Event"
+            "body": "e {qx.event.type.Event} the event object."
           }
         ]
       },
@@ -1023,14 +1002,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Event"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_onChangeVisibility": {
       "jsdoc": {
@@ -1062,10 +1040,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_afterAddChild": {
       "jsdoc": {
@@ -1085,10 +1063,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "win {qx.ui.core.Widget} added widget",
-            "paramName": "win",
-            "description": " added widget",
-            "type": "qx.ui.core.Widget"
+            "body": "win {qx.ui.core.Widget} added widget"
           }
         ]
       },
@@ -1108,15 +1083,14 @@
       "type": "function",
       "params": [
         {
-          "name": "win",
-          "type": "qx.ui.core.Widget"
+          "name": "win"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop",
         "qx.ui.core.Widget"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_addWindow": {
       "jsdoc": {
@@ -1136,10 +1110,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "win {qx.ui.window.Window} Window, which has been added",
-            "paramName": "win",
-            "description": " Window, which has been added",
-            "type": "qx.ui.window.Window"
+            "body": "win {qx.ui.window.Window} Window, which has been added"
           }
         ]
       },
@@ -1159,14 +1130,13 @@
       "type": "function",
       "params": [
         {
-          "name": "win",
-          "type": "qx.ui.window.Window"
+          "name": "win"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_afterRemoveChild": {
       "jsdoc": {
@@ -1186,10 +1156,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "win {qx.ui.core.Widget} removed widget",
-            "paramName": "win",
-            "description": " removed widget",
-            "type": "qx.ui.core.Widget"
+            "body": "win {qx.ui.core.Widget} removed widget"
           }
         ]
       },
@@ -1209,15 +1176,14 @@
       "type": "function",
       "params": [
         {
-          "name": "win",
-          "type": "qx.ui.core.Widget"
+          "name": "win"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop",
         "qx.ui.core.Widget"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "_removeWindow": {
       "jsdoc": {
@@ -1237,10 +1203,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "win {qx.ui.window.Window} Window, which has been removed",
-            "paramName": "win",
-            "description": " Window, which has been removed",
-            "type": "qx.ui.window.Window"
+            "body": "win {qx.ui.window.Window} Window, which has been removed"
           }
         ]
       },
@@ -1260,14 +1223,13 @@
       "type": "function",
       "params": [
         {
-          "name": "win",
-          "type": "qx.ui.window.Window"
+          "name": "win"
         }
       ],
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "getWindows": {
       "jsdoc": {
@@ -1287,9 +1249,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.window.Window[]} Array of managed windows",
-            "type": "qx.ui.window.Window[]",
-            "description": "Array of managed windows"
+            "body": "{qx.ui.window.Window[]} Array of managed windows"
           }
         ]
       },
@@ -1308,14 +1268,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.window.Window[]"
-      },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop",
         "qx.ui.window.IDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "__blocker": {
       "jsdoc": null,
@@ -1798,10 +1755,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.window.MDesktop",
       "appearsIn": [
         "qx.ui.window.MDesktop"
-      ],
-      "mixin": "qx.ui.window.MDesktop"
+      ]
     },
     "blockerColor": {
       "location": {

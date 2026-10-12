@@ -51,29 +51,29 @@
     construct(loader) {
       // assert: boot part has a single package
       var bootPackageKey = loader.parts[loader.boot][0];
-      this.__loader__P_49_0 = loader;
+      this.__loader__P_64_0 = loader;
 
       // initialize the pseudo event listener maps
-      this.__partListners__P_49_1 = {};
-      this.__packageListeners__P_49_2 = {};
-      this.__packageClosureListeners__P_49_3 = {};
+      this.__partListners__P_64_1 = {};
+      this.__packageListeners__P_64_2 = {};
+      this.__packageClosureListeners__P_64_3 = {};
 
       // create the packages
-      this.__packages__P_49_4 = {};
+      this.__packages__P_64_4 = {};
       for (var key in loader.packages) {
-        var pkg = new qx.io.part.Package(this.__decodeUris__P_49_5(loader.packages[key].uris), key, key == bootPackageKey);
-        this.__packages__P_49_4[key] = pkg;
+        var pkg = new qx.io.part.Package(this.__decodeUris__P_64_5(loader.packages[key].uris), key, key == bootPackageKey);
+        this.__packages__P_64_4[key] = pkg;
       }
 
       // create the parts
-      this.__parts__P_49_6 = {};
+      this.__parts__P_64_6 = {};
       var parts = loader.parts;
       var closureParts = loader.closureParts || {};
       for (var name in parts) {
         var pkgKeys = parts[name];
         var packages = [];
         for (var i = 0; i < pkgKeys.length; i++) {
-          packages.push(this.__packages__P_49_4[pkgKeys[i]]);
+          packages.push(this.__packages__P_64_4[pkgKeys[i]]);
         }
 
         // check for closure loading
@@ -82,7 +82,7 @@
         } else {
           var part = new qx.io.part.Part(name, packages, this);
         }
-        this.__parts__P_49_6[name] = part;
+        this.__parts__P_64_6[name] = part;
       }
     },
     statics: {
@@ -139,10 +139,10 @@
       }
     },
     members: {
-      __loader__P_49_0: null,
-      __packages__P_49_4: null,
-      __parts__P_49_6: null,
-      __packageClosureListeners__P_49_3: null,
+      __loader__P_64_0: null,
+      __packages__P_64_4: null,
+      __parts__P_64_6: null,
+      __packageClosureListeners__P_64_3: null,
       /**
        * This method is only for testing purposes! Don't use it!
        *
@@ -151,7 +151,7 @@
        *   registry of packages.
        */
       addToPackage(pkg) {
-        this.__packages__P_49_4[pkg.getId()] = pkg;
+        this.__packages__P_64_4[pkg.getId()] = pkg;
       },
       /**
        * Internal helper method to save the closure and notify that the load.
@@ -162,7 +162,7 @@
        */
       saveClosure(id, closure) {
         // search for the package
-        var pkg = this.__packages__P_49_4[id];
+        var pkg = this.__packages__P_64_4[id];
 
         // error if no package could be found
         if (!pkg) {
@@ -173,7 +173,7 @@
         pkg.saveClosure(closure);
 
         // call the listeners
-        var listeners = this.__packageClosureListeners__P_49_3[id];
+        var listeners = this.__packageClosureListeners__P_64_3[id];
         if (!listeners) {
           return;
         }
@@ -181,7 +181,7 @@
           listeners[i]("complete", id);
         }
         // get rid of all closure package listeners for that package
-        this.__packageClosureListeners__P_49_3[id] = [];
+        this.__packageClosureListeners__P_64_3[id] = [];
       },
       /**
        * Internal method for testing purposes which returns the internal parts
@@ -191,7 +191,7 @@
        * @return {Array} An array of parts.
        */
       getParts() {
-        return this.__parts__P_49_6;
+        return this.__parts__P_64_6;
       },
       /**
        * Loads one or more parts asynchronously. The callback is called after all
@@ -214,7 +214,7 @@
         }
         var parts = [];
         for (var i = 0; i < partNames.length; i++) {
-          var part = this.__parts__P_49_6[partNames[i]];
+          var part = this.__parts__P_64_6[partNames[i]];
           if (part === undefined) {
             var registeredPartNames = qx.Bootstrap.keys(this.getParts());
             throw new Error('Part "' + partNames[i] + '" not found in parts (' + registeredPartNames.join(", ") + ")");
@@ -254,13 +254,13 @@
         }
         var partsPreloaded = 0;
         for (var i = 0; i < partNames.length; i++) {
-          this.__parts__P_49_6[partNames[i]].preload(function () {
+          this.__parts__P_64_6[partNames[i]].preload(function () {
             partsPreloaded++;
             if (partsPreloaded >= partNames.length) {
               // gather the ready states of the parts
               var states = [];
               for (var i = 0; i < partNames.length; i++) {
-                states.push(this.__parts__P_49_6[partNames[i]].getReadyState());
+                states.push(this.__parts__P_64_6[partNames[i]].getReadyState());
               }
               if (callback) {
                 callback.call(self, states);
@@ -274,11 +274,11 @@
        *
        * @return {String[][]} Array of URI lists for each package
        */
-      __getUris__P_49_7() {
-        var packages = this.__loader__P_49_0.packages;
+      __getUris__P_64_7() {
+        var packages = this.__loader__P_64_0.packages;
         var uris = [];
         for (var key in packages) {
-          uris.push(this.__decodeUris__P_49_5(packages[key].uris));
+          uris.push(this.__decodeUris__P_64_5(packages[key].uris));
         }
         return uris;
       },
@@ -290,14 +290,14 @@
        * @param compressedUris {String[]} Array of compressed URIs
        * @return {String[]} decompressed URIs
        */
-      __decodeUris__P_49_5: qx.$$loader.decodeUris,
+      __decodeUris__P_64_5: qx.$$loader.decodeUris,
       /*
       ---------------------------------------------------------------------------
         PART
       ---------------------------------------------------------------------------
       */
 
-      __partListners__P_49_1: null,
+      __partListners__P_64_1: null,
       /**
        * Register callback, which is called after the given part has been loaded
        * or fails with an error. After the call the listener is removed.
@@ -309,10 +309,10 @@
        */
       addPartListener(part, callback) {
         var key = part.getName();
-        if (!this.__partListners__P_49_1[key]) {
-          this.__partListners__P_49_1[key] = [];
+        if (!this.__partListners__P_64_1[key]) {
+          this.__partListners__P_64_1[key] = [];
         }
-        this.__partListners__P_49_1[key].push(callback);
+        this.__partListners__P_64_1[key].push(callback);
       },
       /**
        * If defined this method is called after each part load.
@@ -327,12 +327,12 @@
        */
       notifyPartResult(part) {
         var key = part.getName();
-        var listeners = this.__partListners__P_49_1[key];
+        var listeners = this.__partListners__P_64_1[key];
         if (listeners) {
           for (var i = 0; i < listeners.length; i++) {
             listeners[i](part.getReadyState());
           }
-          this.__partListners__P_49_1[key] = [];
+          this.__partListners__P_64_1[key] = [];
         }
         if (typeof this.onpart === "function") {
           this.onpart(part);
@@ -344,7 +344,7 @@
       ---------------------------------------------------------------------------
       */
 
-      __packageListeners__P_49_2: null,
+      __packageListeners__P_64_2: null,
       /**
        * Register callback, which is called after the given package has been loaded
        * or fails with an error. After the call the listener is removed.
@@ -356,10 +356,10 @@
        */
       addPackageListener(pkg, callback) {
         var key = pkg.getId();
-        if (!this.__packageListeners__P_49_2[key]) {
-          this.__packageListeners__P_49_2[key] = [];
+        if (!this.__packageListeners__P_64_2[key]) {
+          this.__packageListeners__P_64_2[key] = [];
         }
-        this.__packageListeners__P_49_2[key].push(callback);
+        this.__packageListeners__P_64_2[key].push(callback);
       },
       /**
        * This method is called after a packages has been loaded or failed to load.
@@ -370,18 +370,18 @@
        */
       notifyPackageResult(pkg) {
         var key = pkg.getId();
-        var listeners = this.__packageListeners__P_49_2[key];
+        var listeners = this.__packageListeners__P_64_2[key];
         if (!listeners) {
           return;
         }
         for (var i = 0; i < listeners.length; i++) {
           listeners[i](pkg.getReadyState());
         }
-        this.__packageListeners__P_49_2[key] = [];
+        this.__packageListeners__P_64_2[key] = [];
       }
     }
   });
   qx.Part.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Part.js.map?dt=1769806688065
+//# sourceMappingURL=Part.js.map?dt=1791841650608

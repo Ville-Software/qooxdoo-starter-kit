@@ -54,13 +54,13 @@
   qx.Bootstrap.define("qx.event.Messaging", {
     construct() {
       this._listener = {};
-      this.__listenerIdCount__P_51_0 = 0;
-      this.__channelToIdMapping__P_51_1 = {};
+      this.__listenerIdCount__P_66_0 = 0;
+      this.__channelToIdMapping__P_66_1 = {};
     },
     members: {
       _listener: null,
-      __listenerIdCount__P_51_0: null,
-      __channelToIdMapping__P_51_1: null,
+      __listenerIdCount__P_66_0: null,
+      __channelToIdMapping__P_66_1: null,
       /**
        * Adds a route handler for the given channel. The route is called
        * if the {@link #emit} method finds a match.
@@ -97,7 +97,7 @@
        */
       _addListener(channel, type, handler, scope) {
         var listeners = this._listener[channel] = this._listener[channel] || {};
-        var id = this.__listenerIdCount__P_51_0++;
+        var id = this.__listenerIdCount__P_66_0++;
         var params = [];
         var param = null;
 
@@ -115,7 +115,7 @@
           handler: handler,
           scope: scope
         };
-        this.__channelToIdMapping__P_51_1[id] = channel;
+        this.__channelToIdMapping__P_66_1[id] = channel;
         return id;
       },
       /**
@@ -124,10 +124,10 @@
        * @param id {String} The id of the registered listener.
        */
       remove(id) {
-        var channel = this.__channelToIdMapping__P_51_1[id];
+        var channel = this.__channelToIdMapping__P_66_1[id];
         var listener = this._listener[channel];
         delete listener[id];
-        delete this.__channelToIdMapping__P_51_1[id];
+        delete this.__channelToIdMapping__P_66_1[id];
       },
       /**
        * Checks if a listener is registered for the given path in the given channel.
@@ -244,4 +244,4 @@
   qx.event.Messaging.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Messaging.js.map?dt=1769806688123
+//# sourceMappingURL=Messaging.js.map?dt=1791841650637

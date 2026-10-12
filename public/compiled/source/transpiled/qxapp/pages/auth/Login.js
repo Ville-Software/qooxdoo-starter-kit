@@ -5,12 +5,15 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.layout.Center": {
+      "qx.ui.container.Composite": {
         "construct": true,
         "require": true
       },
       "qxapp.pages.MPage": {
         "require": true
+      },
+      "qx.ui.layout.Canvas": {
+        "construct": true
       },
       "qx.lang.String": {
         "construct": true
@@ -21,16 +24,13 @@
       "qx.html.Element": {
         "construct": true
       },
-      "ville.ui.form.Anchor": {
+      "ville.ui.navigation.Anchor": {
         "construct": true
       },
-      "ville.ui.layout.VStack": {
+      "qx.ui.layout.VBox": {
         "construct": true
       },
-      "ville.ui.typography.Title": {
-        "construct": true
-      },
-      "ville.ui.typography.Text": {
+      "ville.ui.basic.Label": {
         "construct": true
       },
       "qx.ui.form.Form": {
@@ -62,12 +62,12 @@
    *
    */
   qx.Class.define("qxapp.pages.auth.Login", {
-    extend: ville.ui.layout.Center,
+    extend: qx.ui.container.Composite,
     include: qxapp.pages.MPage,
     construct() {
-      ville.ui.layout.Center.constructor.call(this);
+      qx.ui.container.Composite.constructor.call(this, new qx.ui.layout.Canvas());
       this.setComponentName("auth.Login");
-      this.setStyles({
+      this.getContentElement().setStyles({
         "padding": "var(--mantine-spacing-lg)",
         "min-height": "100svh"
       });
@@ -91,7 +91,7 @@
         </svg>`;
       var logo = new qx.html.Element();
       logo.useMarkup(laravellogosvg);
-      var welcome = new ville.ui.form.Anchor();
+      var welcome = new ville.ui.navigation.Anchor();
       welcome.setHref("/");
       welcome.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("Welcome", this);
@@ -99,18 +99,18 @@
       welcome.getContentElement().add(logo);
 
       // Page Header
-      var header = new ville.ui.layout.VStack("center", "center", "md");
-      header.setStyle("padding-bottom", "var(--mantine-spacing-md)");
+      var header = new qx.ui.container.Composite(new qx.ui.layout.VBox(10));
+      header.getContentElement().setStyle("padding-bottom", "var(--mantine-spacing-md)");
       header.add(welcome);
-      var title = new ville.ui.typography.Title(1, "Log in to your account");
-      title.setStyles({
+      var title = new ville.ui.basic.Label("Log in to your account", "h1");
+      title.getContentElement().setStyles({
         "--title-fw": "var(--mantine-h1-font-weight)",
         "--title-lh": "var(--mantine-h1-line-height)",
         "--title-fz": "var(--mantine-font-size-xl)"
       });
       header.add(title);
-      var subtitle = new ville.ui.typography.Text("Enter your email and password below to log in");
-      subtitle.setStyles({
+      var subtitle = new ville.ui.basic.Label("Enter your email and password below to log in");
+      subtitle.getContentElement().setStyles({
         "--text-fz": "var(--mantine-font-size-sm)",
         "--text-lh": "var(--mantine-line-height-sm)"
       });
@@ -123,7 +123,7 @@
       var email = new ville.ui.form.TextField().set({
         required: true
       });
-      email.setAttribute("id", "villetxtemail123");
+      email.getContentElement().setAttribute("id", "villetxtemail123");
       email.setPlaceholder("email@example.com");
       form.add(email, "Email address", qx.util.Validate.email(), null, null, {
         complexity: "email"
@@ -133,23 +133,21 @@
       var password = new ville.ui.form.PasswordField().set({
         required: true
       });
-      password.setAttribute("id", "villetxtpassword123", true);
+      password.getContentElement().setAttribute("id", "villetxtpassword123", true);
       password.setPlaceholder("Password");
       form.add(password, "Password", null, null, null, {
         complexity: "password"
       });
 
       // Remember Me - CheckBox
-      var rememberme = new ville.ui.form.CheckBox("Remember me").set({
-        id: "villechkrme123"
-      });
+      var rememberme = new ville.ui.form.CheckBox("Remember me");
       form.add(rememberme, "rememberme", null, null, null, {
         complexity: "checkbox"
       });
 
       // Form Bottom Buttons
-      var loginbutton = new ville.ui.form.Button("Log in", "filled");
-      loginbutton.addClass("mantine-focus-auto mantine-active");
+      var loginbutton = new ville.ui.form.Button("Log in", null, "filled");
+      loginbutton.getContentElement().addClass("mantine-focus-auto mantine-active");
       form.addButton(loginbutton);
 
       // Form Renderer
@@ -179,18 +177,18 @@
           });
         }
       });
-      var noaccountmsg = new ville.ui.typography.Text("Don't have an account? ", "div");
-      noaccountmsg.setStyles({
+      var noaccountmsg = new ville.ui.basic.Label("Don't have an account? ", "div");
+      noaccountmsg.getContentElement().setStyles({
         "text-align": "center",
         "--text-fz": "var(--mantine-font-size-sm)",
         "--text-lh": "var(--mantine-line-height-sm)"
       });
-      var register = new ville.ui.form.Anchor("Sign up");
-      register.setStyles({
+      var register = new ville.ui.navigation.Anchor("Sign up");
+      register.getContentElement().setStyles({
         "--text-fz": "var(--mantine-font-size-sm)",
         "--text-lh": "var(--mantine-line-height-sm)"
       });
-      noaccountmsg.add(register);
+      // noaccountmsg.add(register);
       register.setUnderline("always");
       register.setHref("/register");
       register.addListener("click", () => {
@@ -198,8 +196,8 @@
       }, this);
 
       // Internal VStack for all items
-      var internalVStack = new ville.ui.layout.VStack();
-      internalVStack.setStyle("min-width", "calc(24rem * var(--mantine-scale))");
+      var internalVStack = new qx.ui.container.Composite(new qx.ui.layout.VBox(10));
+      internalVStack.getContentElement().setStyle("min-width", "calc(24rem * var(--mantine-scale))");
       internalVStack.add(header);
       internalVStack.add(loginForm);
       internalVStack.add(noaccountmsg);
@@ -209,4 +207,4 @@
   qxapp.pages.auth.Login.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Login.js.map?dt=1769806685523
+//# sourceMappingURL=Login.js.map?dt=1791841649247

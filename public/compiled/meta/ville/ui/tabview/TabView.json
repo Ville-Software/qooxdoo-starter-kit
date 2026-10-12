@@ -2,7 +2,7 @@
   "version": 0.3,
   "lastModified": 1767969834738,
   "lastModifiedIso": "2026-01-09T14:43:54.738Z",
-  "classFilename": "../../../resources/qxapp/source/class/ville/ui/tabview/TabView.js",
+  "classFilename": "../../../resources/qxapp/source/class/ville/uiold/tabview/TabView.js",
   "type": "class",
   "location": {
     "start": {
@@ -257,10 +257,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingRight": {
       "location": {
@@ -292,10 +292,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingBottom": {
       "location": {
@@ -327,10 +327,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPaddingLeft": {
       "location": {
@@ -362,10 +362,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "contentPadding": {
       "location": {
@@ -409,10 +409,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     }
   },
   "members": {
@@ -1757,10 +1757,10 @@
           "index": 3125
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "__contentPaddingThemedSetter": {
       "jsdoc": {
@@ -1803,10 +1803,10 @@
           "index": 3553
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "__contentPaddingResetter": {
       "jsdoc": {
@@ -1849,10 +1849,10 @@
           "index": 3952
         }
       },
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     },
     "_applyContentPadding": {
       "jsdoc": {
@@ -1888,10 +1888,10 @@
           "name": "variant"
         }
       ],
+      "mixin": "qx.ui.core.MContentPadding",
       "appearsIn": [
         "qx.ui.core.MContentPadding"
-      ],
-      "mixin": "qx.ui.core.MContentPadding"
+      ]
     }
   },
   "destruct": {

@@ -876,7 +876,7 @@
       /** Map containing the asynchronous check functions. */
       _asyncChecks: {},
       /** Internal cache for all checks. */
-      __cache__P_31_0: {},
+      __cache__P_30_0: {},
       /**
        * Internal map for environment keys to check methods.
        * Gets populated dynamically at runtime.
@@ -898,7 +898,6 @@
         "qx.dynlocale": true,
         "qx.dyntheme": true,
         "qx.blankpage": "qx/static/blank.html",
-        "qx.data.marshal.Json.breakOnNonPojos": false,
         "qx.debug.databinding": false,
         "qx.debug.dispose": false,
         "qx.debug.startupTimings": false,
@@ -940,8 +939,8 @@
        */
       get(key) {
         // check the cache
-        if (this.__cache__P_31_0[key] != undefined) {
-          return this.__cache__P_31_0[key];
+        if (this.__cache__P_30_0[key] != undefined) {
+          return this.__cache__P_30_0[key];
         }
 
         // search for a matching check
@@ -949,7 +948,7 @@
         if (check) {
           // execute the check and write the result in the cache
           var value = check();
-          this.__cache__P_31_0[key] = value;
+          this.__cache__P_30_0[key] = value;
           return value;
         }
 
@@ -959,7 +958,7 @@
           var clazz = classAndMethod[0];
           var method = classAndMethod[1];
           var value = clazz[method](); // call the check method
-          this.__cache__P_31_0[key] = value;
+          this.__cache__P_30_0[key] = value;
           return value;
         }
 
@@ -1006,17 +1005,17 @@
       getAsync(key, callback, self) {
         // check the cache
         var env = this;
-        if (this.__cache__P_31_0[key] != undefined) {
+        if (this.__cache__P_30_0[key] != undefined) {
           // force async behavior
           window.setTimeout(function () {
-            callback.call(self, env.__cache__P_31_0[key]);
+            callback.call(self, env.__cache__P_30_0[key]);
           }, 0);
           return;
         }
         var check = this._asyncChecks[key];
         if (check) {
           check(function (result) {
-            env.__cache__P_31_0[key] = result;
+            env.__cache__P_30_0[key] = result;
             callback.call(self, result);
           });
           return;
@@ -1029,7 +1028,7 @@
           var method = classAndMethod[1];
           clazz[method](function (result) {
             // call the check method
-            env.__cache__P_31_0[key] = result;
+            env.__cache__P_30_0[key] = result;
             callback.call(self, result);
           });
           return;
@@ -1051,7 +1050,7 @@
        *   check of the key.
        */
       select(key, values) {
-        return this.__pickFromValues__P_31_1(this.get(key), values);
+        return this.__pickFromValues__P_30_1(this.get(key), values);
       },
       /**
        * Selects the proper function dependent on the asynchronous check.
@@ -1066,7 +1065,7 @@
        */
       selectAsync(key, values, self) {
         this.getAsync(key, function (result) {
-          var value = this.__pickFromValues__P_31_1(key, values);
+          var value = this.__pickFromValues__P_30_1(key, values);
           value.call(self, result);
         }, this);
       },
@@ -1080,7 +1079,7 @@
        * @param values {Map} A map containing some keys.
        * @return {var} The value stored as values[key] usually.
        */
-      __pickFromValues__P_31_1(key, values) {
+      __pickFromValues__P_30_1(key, values) {
         var value = values[key];
         if (values.hasOwnProperty(key)) {
           return value;
@@ -1127,7 +1126,7 @@
        * @param key {String} The key of the check.
        */
       invalidateCacheKey(key) {
-        delete this.__cache__P_31_0[key];
+        delete this.__cache__P_30_0[key];
       },
       /**
        * Add a check to the environment class. If there is already a check
@@ -1149,7 +1148,7 @@
             this._checks[key] = check;
             // otherwise, create a check function and use that
           } else {
-            this._checks[key] = this.__createCheck__P_31_2(check);
+            this._checks[key] = this.__createCheck__P_30_2(check);
           }
         }
       },
@@ -1200,12 +1199,12 @@
         if (key === undefined) {
           throw new TypeError("Key must be provided to set an environment setting.");
         }
-        if (this.__environmentBackup__P_31_3 === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined) {
           qx.Bootstrap.warn("Modifying environment settings at runtime is enabled. This is a security risk and should not be done in production code.");
-          this.__environmentBackup__P_31_3 = Object.assign({}, this.__cache__P_31_0);
-          this.__checksBackup__P_31_4 = Object.assign({}, this._checks);
+          this.__environmentBackup__P_30_3 = Object.assign({}, this.__cache__P_30_0);
+          this.__checksBackup__P_30_4 = Object.assign({}, this._checks);
         }
-        this.__cache__P_31_0[key] = value;
+        this.__cache__P_30_0[key] = value;
         delete this._checks[key];
         delete this._checksMap[key];
       } : undefined,
@@ -1219,10 +1218,10 @@
         if (key === undefined) {
           throw new TypeError("Key must be provided to remove an environment setting.");
         }
-        if (this.__environmentBackup__P_31_3 === undefined || this.__environmentBackup__P_31_3[key] === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined || this.__environmentBackup__P_30_3[key] === undefined) {
           throw new TypeError(`Environment setting "${key}" does not exist.`);
         }
-        delete this.__cache__P_31_0[key];
+        delete this.__cache__P_30_0[key];
         delete this._checks[key];
         delete this._checksMap[key];
       } : undefined,
@@ -1233,22 +1232,22 @@
        * @param key {String?} The key of the environment setting to reset. If not provided, all settings are reset.
        */
       reset: qx.Bootstrap.getEnvironmentSetting("qx.environment.allowRuntimeMutations") ? function (key) {
-        if (this.__environmentBackup__P_31_3 === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined) {
           // no backup available, nothing to reset
           return;
         }
-        if (key !== undefined && this.__environmentBackup__P_31_3[key] === undefined) {
+        if (key !== undefined && this.__environmentBackup__P_30_3[key] === undefined) {
           throw new TypeError(`Environment setting "${key}" does not exist.`);
         }
         if (key === undefined) {
           // reset all keys
-          this.__cache__P_31_0 = Object.assign({}, this.__environmentBackup__P_31_3);
-          this._checks = Object.assign({}, this.__checksBackup__P_31_4);
+          this.__cache__P_30_0 = Object.assign({}, this.__environmentBackup__P_30_3);
+          this._checks = Object.assign({}, this.__checksBackup__P_30_4);
           return;
         }
         // only reset the particular key 
-        this.__cache__P_31_0[key] = this.__environmentBackup__P_31_3[key];
-        this._checks[key] = this.__checksBackup__P_31_4[key];
+        this.__cache__P_30_0[key] = this.__environmentBackup__P_30_3[key];
+        this._checks[key] = this.__checksBackup__P_30_4[key];
       } : undefined,
       /**
        * Initializer for the default values of the framework settings.
@@ -1266,12 +1265,12 @@
       /**
        * Import checks from global qx.$$environment into the Environment class.
        */
-      __importFromGenerator__P_31_5() {
+      __importFromGenerator__P_30_5() {
         // import the environment map
         if (qx && qx.$$environment) {
           for (var key in qx.$$environment) {
             var value = qx.$$environment[key];
-            this._checks[key] = this.__createCheck__P_31_2(value);
+            this._checks[key] = this.__createCheck__P_30_2(value);
           }
         }
       },
@@ -1279,7 +1278,7 @@
        * Checks the URL for environment settings and imports these into the
        * Environment class.
        */
-      __importFromUrl__P_31_6() {
+      __importFromUrl__P_30_6() {
         if (window.document && window.document.location) {
           var urlChecks = window.document.location.search.slice(1).split("&");
           for (var i = 0; i < urlChecks.length; i++) {
@@ -1298,7 +1297,7 @@
             } else if (/^(\d|\.)+$/.test(value)) {
               value = parseFloat(value);
             }
-            this._checks[key] = this.__createCheck__P_31_2(value);
+            this._checks[key] = this.__createCheck__P_30_2(value);
           }
         }
       },
@@ -1308,7 +1307,7 @@
        * @param value {var} The value which should be returned.
        * @return {Function} A function which could be used by a test.
        */
-      __createCheck__P_31_2(value) {
+      __createCheck__P_30_2(value) {
         return qx.Bootstrap.bind(function (value) {
           return value;
         }, null, value);
@@ -1318,10 +1317,10 @@
       // create default values for the environment class
       statics._initDefaultQxValues();
       // load the checks from the generator
-      statics.__importFromGenerator__P_31_5();
+      statics.__importFromGenerator__P_30_5();
       // load the checks from the url
       if (statics.get("qx.allowUrlSettings") === true) {
-        statics.__importFromUrl__P_31_6();
+        statics.__importFromUrl__P_30_6();
       }
     },
     environment: {
@@ -1338,4 +1337,4 @@
   qx.core.Environment.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Environment.js.map?dt=1769806687008
+//# sourceMappingURL=Environment.js.map?dt=1791841650108

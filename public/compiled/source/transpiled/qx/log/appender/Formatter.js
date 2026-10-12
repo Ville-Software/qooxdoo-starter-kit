@@ -50,10 +50,10 @@
         if (this.getFormatTimeAs() == "offset") {
           return this.formatOffset(entry.offset, 6);
         }
-        if (!qx.log.appender.Formatter.__DATETIME_FORMAT__P_41_0) {
-          qx.log.appender.Formatter.__DATETIME_FORMAT__P_41_0 = new qx.util.format.DateFormat("YYYY-MM-dd HH:mm:ss");
+        if (!qx.log.appender.Formatter.__DATETIME_FORMAT__P_58_0) {
+          qx.log.appender.Formatter.__DATETIME_FORMAT__P_58_0 = new qx.util.format.DateFormat("YYYY-MM-dd HH:mm:ss");
         }
-        return qx.log.appender.Formatter.__DATETIME_FORMAT__P_41_0.format(entry.time);
+        return qx.log.appender.Formatter.__DATETIME_FORMAT__P_58_0.format(entry.time);
       },
       /**
        * Normalises the entry into an object with clazz, object, hash.
@@ -225,19 +225,19 @@
     },
     statics: {
       /** @type {qx.util.format.DateFormat} format for datetimes */
-      __DATETIME_FORMAT__P_41_0: null,
+      __DATETIME_FORMAT__P_58_0: null,
       /** @type {qx.log.appender.Formatter} the default instance */
-      __defaultFormatter__P_41_1: null,
+      __defaultFormatter__P_58_1: null,
       /**
        * Returns the default formatter
        *
        * @return {qx.log.appender.Formatter}
        */
       getFormatter() {
-        if (!qx.log.appender.Formatter.__defaultFormatter__P_41_1) {
-          qx.log.appender.Formatter.__defaultFormatter__P_41_1 = new qx.log.appender.Formatter();
+        if (!qx.log.appender.Formatter.__defaultFormatter__P_58_1) {
+          qx.log.appender.Formatter.__defaultFormatter__P_58_1 = new qx.log.appender.Formatter();
         }
-        return qx.log.appender.Formatter.__defaultFormatter__P_41_1;
+        return qx.log.appender.Formatter.__defaultFormatter__P_58_1;
       },
       /**
        * Sets the default formatter
@@ -245,7 +245,7 @@
        * @param instance {qx.log.appender.Formatter}
        */
       setFormatter(instance) {
-        qx.log.appender.Formatter.__defaultFormatter__P_41_1 = instance;
+        qx.log.appender.Formatter.__defaultFormatter__P_58_1 = instance;
       },
       /**
        * Escapes the HTML in the given value
@@ -255,7 +255,7 @@
        * @return {String} escaped value
        */
       escapeHTML(value) {
-        return String(value).replace(/[<>&"']/g, qx.log.appender.Formatter.__escapeHTMLReplace__P_41_2);
+        return String(value).replace(/[<>&"']/g, qx.log.appender.Formatter.__escapeHTMLReplace__P_58_2);
       },
       /**
        * Internal replacement helper for HTML escape.
@@ -264,7 +264,7 @@
        *          {String} Single item to replace.
        * @return {String} Replaced item
        */
-      __escapeHTMLReplace__P_41_2(ch) {
+      __escapeHTMLReplace__P_58_2(ch) {
         var map = {
           "<": "&lt;",
           ">": "&gt;",
@@ -279,4 +279,4 @@
   qx.log.appender.Formatter.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Formatter.js.map?dt=1769806687668
+//# sourceMappingURL=Formatter.js.map?dt=1791841650489

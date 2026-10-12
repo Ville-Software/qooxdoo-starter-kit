@@ -65,8 +65,8 @@
      */
     construct(shortcut) {
       qx.core.Object.constructor.call(this);
-      this.__modifier__P_224_0 = {};
-      this.__key__P_224_1 = null;
+      this.__modifier__P_215_0 = {};
+      this.__key__P_215_1 = null;
       if (shortcut != null) {
         this.setShortcut(shortcut);
       }
@@ -121,8 +121,8 @@
     */
     /* eslint-disable @qooxdoo/qx/no-refs-in-members */
     members: {
-      __modifier__P_224_0: "",
-      __key__P_224_1: "",
+      __modifier__P_215_0: "",
+      __key__P_215_1: "",
       /*
       ---------------------------------------------------------------------------
         USER METHODS
@@ -142,8 +142,8 @@
        *
        * @param event {qx.event.type.KeySequence} The key event object
        */
-      __onKeyDown__P_224_2(event) {
-        if (this.getEnabled() && this.__matchesKeyEvent__P_224_3(event)) {
+      __onKeyDown__P_215_2(event) {
+        if (this.getEnabled() && this.__matchesKeyEvent__P_215_3(event)) {
           if (!this.isAutoRepeat()) {
             this.execute(event.getTarget());
           }
@@ -155,8 +155,8 @@
        *
        * @param event {qx.event.type.KeySequence} The key event object
        */
-      __onKeyPress__P_224_4(event) {
-        if (this.getEnabled() && this.__matchesKeyEvent__P_224_3(event)) {
+      __onKeyPress__P_215_4(event) {
+        if (this.getEnabled() && this.__matchesKeyEvent__P_215_3(event)) {
           if (this.isAutoRepeat()) {
             this.execute(event.getTarget());
           }
@@ -172,11 +172,11 @@
       // property apply
       _applyEnabled(value, old) {
         if (value) {
-          qx.event.Registration.addListener(document.documentElement, "keydown", this.__onKeyDown__P_224_2, this);
-          qx.event.Registration.addListener(document.documentElement, "keypress", this.__onKeyPress__P_224_4, this);
+          qx.event.Registration.addListener(document.documentElement, "keydown", this.__onKeyDown__P_215_2, this);
+          qx.event.Registration.addListener(document.documentElement, "keypress", this.__onKeyPress__P_215_4, this);
         } else {
-          qx.event.Registration.removeListener(document.documentElement, "keydown", this.__onKeyDown__P_224_2, this);
-          qx.event.Registration.removeListener(document.documentElement, "keypress", this.__onKeyPress__P_224_4, this);
+          qx.event.Registration.removeListener(document.documentElement, "keydown", this.__onKeyDown__P_215_2, this);
+          qx.event.Registration.removeListener(document.documentElement, "keypress", this.__onKeyPress__P_215_4, this);
         }
       },
       // property apply
@@ -188,13 +188,13 @@
             this.error(msg);
             throw new Error(msg);
           }
-          this.__modifier__P_224_0 = {
+          this.__modifier__P_215_0 = {
             Control: false,
             Shift: false,
             Meta: false,
             Alt: false
           };
-          this.__key__P_224_1 = null;
+          this.__key__P_215_1 = null;
 
           // To support shortcuts with "+" and "-" as keys it is necessary
           // to split the given value in a different way to determine the
@@ -214,25 +214,25 @@
           }
           var al = a.length;
           for (var i = 0; i < al; i++) {
-            var identifier = this.__normalizeKeyIdentifier__P_224_5(a[i]);
+            var identifier = this.__normalizeKeyIdentifier__P_215_5(a[i]);
             switch (identifier) {
               case "Control":
               case "Shift":
               case "Meta":
               case "Alt":
-                this.__modifier__P_224_0[identifier] = true;
+                this.__modifier__P_215_0[identifier] = true;
                 break;
               case "Unidentified":
                 var msg = "Not a valid key name for a shortcut: " + a[i];
                 this.error(msg);
                 throw msg;
               default:
-                if (this.__key__P_224_1) {
+                if (this.__key__P_215_1) {
                   var msg = "You can only specify one non modifier key!";
                   this.error(msg);
                   throw msg;
                 }
-                this.__key__P_224_1 = identifier;
+                this.__key__P_215_1 = identifier;
             }
           }
         }
@@ -250,8 +250,8 @@
        * @param e {qx.event.type.KeySequence} the key event object
        * @return {Boolean} whether the shortcuts shortcut matches the key event
        */
-      __matchesKeyEvent__P_224_3(e) {
-        var key = this.__key__P_224_1;
+      __matchesKeyEvent__P_215_3(e) {
+        var key = this.__key__P_215_1;
         if (!key) {
           // no shortcut defined.
           return false;
@@ -259,7 +259,7 @@
 
         // for check special keys
         // and check if a shortcut is a single char and special keys are pressed
-        if (!this.__modifier__P_224_0.Shift && e.isShiftPressed() || this.__modifier__P_224_0.Shift && !e.isShiftPressed() || !this.__modifier__P_224_0.Control && e.isCtrlPressed() || this.__modifier__P_224_0.Control && !e.isCtrlPressed() || !this.__modifier__P_224_0.Meta && e.isMetaPressed() || this.__modifier__P_224_0.Meta && !e.isMetaPressed() || !this.__modifier__P_224_0.Alt && e.isAltPressed() || this.__modifier__P_224_0.Alt && !e.isAltPressed()) {
+        if (!this.__modifier__P_215_0.Shift && e.isShiftPressed() || this.__modifier__P_215_0.Shift && !e.isShiftPressed() || !this.__modifier__P_215_0.Control && e.isCtrlPressed() || this.__modifier__P_215_0.Control && !e.isCtrlPressed() || !this.__modifier__P_215_0.Meta && e.isMetaPressed() || this.__modifier__P_215_0.Meta && !e.isMetaPressed() || !this.__modifier__P_215_0.Alt && e.isAltPressed() || this.__modifier__P_215_0.Alt && !e.isAltPressed()) {
           return false;
         }
         if (key == e.getKeyIdentifier()) {
@@ -276,7 +276,7 @@
       /**
        * @lint ignoreReferenceField(__oldKeyNameToKeyIdentifierMap)
        */
-      __oldKeyNameToKeyIdentifierMap__P_224_6: {
+      __oldKeyNameToKeyIdentifierMap__P_215_6: {
         // all other keys are converted by converting the first letter to uppercase
         esc: "Escape",
         ctrl: "Control",
@@ -306,7 +306,7 @@
        * @param keyName {String} name of the key.
        * @return {String} normalized keyIdentifier or "Unidentified" if a conversion was not possible
        */
-      __normalizeKeyIdentifier__P_224_5(keyName) {
+      __normalizeKeyIdentifier__P_215_5(keyName) {
         var kbUtil = qx.event.util.Keyboard;
         var keyIdentifier = "Unidentified";
         if (kbUtil.isValidKeyIdentifier(keyName)) {
@@ -316,7 +316,7 @@
           return keyName.toUpperCase();
         }
         keyName = keyName.toLowerCase();
-        var keyIdentifier = this.__oldKeyNameToKeyIdentifierMap__P_224_6[keyName] || qx.lang.String.firstUp(keyName);
+        var keyIdentifier = this.__oldKeyNameToKeyIdentifierMap__P_215_6[keyName] || qx.lang.String.firstUp(keyName);
         if (kbUtil.isValidKeyIdentifier(keyIdentifier)) {
           return keyIdentifier;
         } else {
@@ -335,13 +335,13 @@
        * @return {String} shortcut
        */
       toString() {
-        var key = this.__key__P_224_1;
+        var key = this.__key__P_215_1;
         var str = [];
-        for (var modifier in this.__modifier__P_224_0) {
+        for (var modifier in this.__modifier__P_215_0) {
           // this.__modifier holds a map with shortcut combination keys
           // like "Control", "Alt", "Meta" and "Shift" as keys with
           // Boolean values
-          if (this.__modifier__P_224_0[modifier]) {
+          if (this.__modifier__P_215_0[modifier]) {
             str.push(qx.locale.Key.getKeyName("short", modifier));
           }
         }
@@ -360,10 +360,10 @@
     destruct() {
       // this will remove the event listener
       this.setEnabled(false);
-      this.__modifier__P_224_0 = this.__key__P_224_1 = null;
+      this.__modifier__P_215_0 = this.__key__P_215_1 = null;
     }
   });
   qx.bom.Shortcut.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Shortcut.js.map?dt=1769806695363
+//# sourceMappingURL=Shortcut.js.map?dt=1791841652996

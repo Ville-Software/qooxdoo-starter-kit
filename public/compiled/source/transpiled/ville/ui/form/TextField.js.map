@@ -11,24 +11,33 @@
     "ui",
     "form",
     "TextField",
-    "include",
-    "ville",
-    "core",
-    "MWidget",
     "construct",
+    "value",
+    "variant",
     "constructor",
     "call",
-    "setExcludeBoundsFromDom",
-    "setClearAllInlineStyles",
-    "setRemoveCssClasses",
-    "setCssUtilityClass"
+    "getContentElement",
+    "removeClass",
+    "setVariant",
+    "initVariant",
+    "properties",
+    "init",
+    "check",
+    "apply",
+    "themeable",
+    "event",
+    "members",
+    "_applyVariant",
+    "old",
+    "setAttribute",
+    "ville"
   ],
   "sources": [
     "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/ui/form/TextField.js"
   ],
   "sourcesContent": [
-    "/**\n * TextField\n * @external(mantine/core/styles/Input.css)\n */\nqx.Class.define(\"ville.ui.form.TextField\", {\n    extend: qx.ui.form.TextField,\n\n    include: ville.ui.core.MWidget,\n\n    construct() {\n        super();\n\n        this.setExcludeBoundsFromDom(true);\n        this.setClearAllInlineStyles(true);\n        this.setRemoveCssClasses([\"qx-abstract-field\", \"qx-placeholder-color\"]);\n        this.setCssUtilityClass(\"m_8fb7ebe7 mantine-Input-input mantine-TextInput-input\");\n    }\n  });\n"
+    "/**\n * TextField\n * @external(mantine/core/styles/Input.css)\n */\nqx.Class.define(\"ville.ui.form.TextField\", {\n    extend: qx.ui.form.TextField,\n\n    construct(value, variant) {\n        super(value);\n\n        this.getContentElement().removeClass(\"qx-abstract-field\");\n\n        if (variant) {\n            this.setVariant(variant);\n        } else {\n            this.initVariant();\n        }\n\n    },\n\n    properties: {\n        variant: {\n            init: \"default\",\n            check: [\"default\", \"filled\", \"light\", \"outline\", \"subtle\", \"transparent\", \"white\"],\n            apply: \"_applyVariant\",\n            themeable: true,\n            event: \"changeVariant\"\n        }\n    },\n\n    members: {\n        // property apply\n        _applyVariant(value, old) {\n            if (value) {\n                this.getContentElement().setAttribute(\"data-variant\", value);\n            }\n        }\n    }\n  });\n"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,yBAAyB,EAAE;IACvCC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,SAAS;IAE5BC,OAAO,EAAEC,KAAK,CAACJ,EAAE,CAACK,IAAI,CAACC,OAAO;IAE9BC,SAASA,CAAA,EAAG;MACRd,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,SAAA,CAAAM,WAAA,CAAAC,IAAA;MAEA,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,uBAAuB,CAAC,IAAI,CAAC;MAClC,IAAI,CAACC,mBAAmB,CAAC,CAAC,mBAAmB,EAAE,sBAAsB,CAAC,CAAC;MACvE,IAAI,CAACC,kBAAkB,CAAC,wDAAwD,CAAC;IACrF;EACF,CAAC,CAAC;EAjBJT,KAAK,CAACJ,EAAE,CAACC,IAAI,CAACC,SAAS,CAACN,aAAa,GAAGA,aAAa;AAAC",
+  "mappings": ";;;;;;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhD;AACA;AACA;AACA;EACAH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,yBAAyB,EAAE;IACvCC,MAAM,EAAEN,EAAE,CAACO,EAAE,CAACC,IAAI,CAACC,SAAS;IAE5BC,SAASA,CAACC,KAAK,EAAEC,OAAO,EAAE;MACtBZ,EAAA,CAAAO,EAAA,CAAAC,IAAA,CAAAC,SAAA,CAAAI,WAAA,CAAAC,IAAA,OAAMH,KAAK;MAEX,IAAI,CAACI,iBAAiB,CAAC,CAAC,CAACC,WAAW,CAAC,mBAAmB,CAAC;MAEzD,IAAIJ,OAAO,EAAE;QACT,IAAI,CAACK,UAAU,CAACL,OAAO,CAAC;MAC5B,CAAC,MAAM;QACH,IAAI,CAACM,WAAW,CAAC,CAAC;MACtB;IAEJ,CAAC;IAEDC,UAAU,EAAE;MACRP,OAAO,EAAE;QACLQ,IAAI,EAAE,SAAS;QACfC,KAAK,EAAE,CAAC,SAAS,EAAE,QAAQ,EAAE,OAAO,EAAE,SAAS,EAAE,QAAQ,EAAE,aAAa,EAAE,OAAO,CAAC;QAClFC,KAAK,EAAE,eAAe;QACtBC,SAAS,EAAE,IAAI;QACfC,KAAK,EAAE;MACX;IACJ,CAAC;IAEDC,OAAO,EAAE;MACL;MACAC,aAAaA,CAACf,KAAK,EAAEgB,GAAG,EAAE;QACtB,IAAIhB,KAAK,EAAE;UACP,IAAI,CAACI,iBAAiB,CAAC,CAAC,CAACa,YAAY,CAAC,cAAc,EAAEjB,KAAK,CAAC;QAChE;MACJ;IACJ;EACF,CAAC,CAAC;EAtCJkB,KAAK,CAACtB,EAAE,CAACC,IAAI,CAACC,SAAS,CAACN,aAAa,GAAGA,aAAa;AAAC",
   "ignoreList": []
 }

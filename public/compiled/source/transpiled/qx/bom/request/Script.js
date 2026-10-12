@@ -81,18 +81,18 @@
   qx.Bootstrap.define("qx.bom.request.Script", {
     implement: [qx.core.IDisposable],
     construct() {
-      this.__initXhrProperties__P_190_0();
-      this.__onNativeLoadBound__P_190_1 = qx.Bootstrap.bind(this._onNativeLoad, this);
-      this.__onNativeErrorBound__P_190_2 = qx.Bootstrap.bind(this._onNativeError, this);
-      this.__onTimeoutBound__P_190_3 = qx.Bootstrap.bind(this._onTimeout, this);
-      this.__headElement__P_190_4 = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+      this.__initXhrProperties__P_197_0();
+      this.__onNativeLoadBound__P_197_1 = qx.Bootstrap.bind(this._onNativeLoad, this);
+      this.__onNativeErrorBound__P_197_2 = qx.Bootstrap.bind(this._onNativeError, this);
+      this.__onTimeoutBound__P_197_3 = qx.Bootstrap.bind(this._onTimeout, this);
+      this.__headElement__P_197_4 = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
       this._emitter = new qx.event.Emitter();
 
       // BUGFIX: Browsers not supporting error handler
       // Set default timeout to capture network errors
       //
       // Note: The script is parsed and executed, before a "load" is fired.
-      this.timeout = this.__supportsErrorHandler__P_190_5() ? 0 : 15000;
+      this.timeout = this.__supportsErrorHandler__P_197_5() ? 0 : 15000;
     },
     events: {
       /** Fired at ready state changes. */
@@ -146,7 +146,7 @@
       /**
        * @type {Function} Function that is executed once the script was loaded.
        */
-      __determineSuccess__P_190_6: null,
+      __determineSuccess__P_197_6: null,
       /**
        * Add an event listener for the given event name.
        *
@@ -170,15 +170,15 @@
        *   The URL to which to send the request.
        */
       open(method, url) {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return;
         }
 
         // Reset XHR properties that may have been set by previous request
-        this.__initXhrProperties__P_190_0();
-        this.__abort__P_190_8 = null;
-        this.__url__P_190_9 = url;
-        if (this.__environmentGet__P_190_10("qx.debug.io")) {
+        this.__initXhrProperties__P_197_0();
+        this.__abort__P_197_8 = null;
+        this.__url__P_197_9 = url;
+        if (this.__environmentGet__P_197_10("qx.debug.io")) {
           qx.Bootstrap.debug(qx.bom.request.Script, "Open native request with url: " + url);
         }
         this._readyStateChange(1);
@@ -199,7 +199,7 @@
        * @return {qx.bom.request.Script} Self for chaining.
        */
       setRequestHeader(key, value) {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return null;
         }
         var param = {};
@@ -207,7 +207,7 @@
           throw new Error("Invalid state");
         }
         param[key] = value;
-        this.__url__P_190_9 = qx.util.Uri.appendParamsToUrl(this.__url__P_190_9, param);
+        this.__url__P_197_9 = qx.util.Uri.appendParamsToUrl(this.__url__P_197_9, param);
         return this;
       },
       /**
@@ -215,16 +215,16 @@
        * @return {qx.bom.request.Script} Self for chaining.
        */
       send() {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return null;
         }
-        var script = this.__createScriptElement__P_190_11(),
-          head = this.__headElement__P_190_4,
+        var script = this.__createScriptElement__P_197_11(),
+          head = this.__headElement__P_197_4,
           that = this;
         if (this.timeout > 0) {
-          this.__timeoutId__P_190_12 = window.setTimeout(this.__onTimeoutBound__P_190_3, this.timeout);
+          this.__timeoutId__P_197_12 = window.setTimeout(this.__onTimeoutBound__P_197_3, this.timeout);
         }
-        if (this.__environmentGet__P_190_10("qx.debug.io")) {
+        if (this.__environmentGet__P_197_10("qx.debug.io")) {
           qx.Bootstrap.debug(qx.bom.request.Script, "Send native request");
         }
 
@@ -244,11 +244,11 @@
        * @return {qx.bom.request.Script} Self for chaining.
        */
       abort() {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return null;
         }
-        this.__abort__P_190_8 = true;
-        this.__disposeScriptElement__P_190_13();
+        this.__abort__P_197_8 = true;
+        this.__disposeScriptElement__P_197_13();
         this._emit("abort");
         return this;
       },
@@ -326,10 +326,10 @@
        * is disposed
        */
       getResponseHeader(key) {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return null;
         }
-        if (this.__environmentGet__P_190_10("qx.debug")) {
+        if (this.__environmentGet__P_197_10("qx.debug")) {
           qx.Bootstrap.debug("Response header cannot be determined for requests made with script transport.");
         }
         return "unknown";
@@ -343,10 +343,10 @@
        * is disposed
        */
       getAllResponseHeaders() {
-        if (this.__disposed__P_190_7) {
+        if (this.__disposed__P_197_7) {
           return null;
         }
-        if (this.__environmentGet__P_190_10("qx.debug")) {
+        if (this.__environmentGet__P_197_10("qx.debug")) {
           qx.Bootstrap.debug("Response headers cannot be determined forrequests made with script transport.");
         }
         return "Unknown response headers";
@@ -361,23 +361,23 @@
        *
        */
       setDetermineSuccess(check) {
-        this.__determineSuccess__P_190_6 = check;
+        this.__determineSuccess__P_197_6 = check;
       },
       /**
        * Dispose object.
        */
       dispose() {
-        var script = this.__scriptElement__P_190_14;
-        if (!this.__disposed__P_190_7) {
+        var script = this.__scriptElement__P_197_14;
+        if (!this.__disposed__P_197_7) {
           // Prevent memory leaks
           if (script) {
             script.onload = script.onreadystatechange = null;
-            this.__disposeScriptElement__P_190_13();
+            this.__disposeScriptElement__P_197_13();
           }
-          if (this.__timeoutId__P_190_12) {
-            window.clearTimeout(this.__timeoutId__P_190_12);
+          if (this.__timeoutId__P_197_12) {
+            window.clearTimeout(this.__timeoutId__P_197_12);
           }
-          this.__disposed__P_190_7 = true;
+          this.__disposed__P_197_7 = true;
         }
       },
       /**
@@ -385,7 +385,7 @@
        * @return {Boolean} <code>true</code>, if the request has been disposed.
        */
       isDisposed() {
-        return !!this.__disposed__P_190_7;
+        return !!this.__disposed__P_197_7;
       },
       /*
       ---------------------------------------------------------------------------
@@ -399,7 +399,7 @@
        * @return {String} URL of request.
        */
       _getUrl() {
-        return this.__url__P_190_9;
+        return this.__url__P_197_9;
       },
       /**
        * Get script element used for request.
@@ -407,18 +407,18 @@
        * @return {Element} Script element.
        */
       _getScriptElement() {
-        return this.__scriptElement__P_190_14;
+        return this.__scriptElement__P_197_14;
       },
       /**
        * Handle timeout.
        */
       _onTimeout() {
-        this.__failure__P_190_15();
-        if (!this.__supportsErrorHandler__P_190_5()) {
+        this.__failure__P_197_15();
+        if (!this.__supportsErrorHandler__P_197_5()) {
           this._emit("error");
         }
         this._emit("timeout");
-        if (!this.__supportsErrorHandler__P_190_5()) {
+        if (!this.__supportsErrorHandler__P_197_5()) {
           this._emit("loadend");
         }
       },
@@ -426,28 +426,28 @@
        * Handle native load.
        */
       _onNativeLoad() {
-        var script = this.__scriptElement__P_190_14,
-          determineSuccess = this.__determineSuccess__P_190_6,
+        var script = this.__scriptElement__P_197_14,
+          determineSuccess = this.__determineSuccess__P_197_6,
           that = this;
 
         // Aborted request must not fire load
-        if (this.__abort__P_190_8) {
+        if (this.__abort__P_197_8) {
           return;
         }
 
         // BUGFIX: IE < 9
         // When handling "readystatechange" event, skip if readyState
         // does not signal loaded script
-        if (this.__environmentGet__P_190_10("engine.name") === "mshtml" && this.__environmentGet__P_190_10("browser.documentmode") < 9) {
+        if (this.__environmentGet__P_197_10("engine.name") === "mshtml" && this.__environmentGet__P_197_10("browser.documentmode") < 9) {
           if (!/loaded|complete/.test(script.readyState)) {
             return;
           } else {
-            if (this.__environmentGet__P_190_10("qx.debug.io")) {
+            if (this.__environmentGet__P_197_10("qx.debug.io")) {
               qx.Bootstrap.debug(qx.bom.request.Script, "Received native readyState: loaded");
             }
           }
         }
-        if (this.__environmentGet__P_190_10("qx.debug.io")) {
+        if (this.__environmentGet__P_197_10("qx.debug.io")) {
           qx.Bootstrap.debug(qx.bom.request.Script, "Received native load");
         }
 
@@ -459,12 +459,12 @@
           }
         }
         if (this.status === 500) {
-          if (this.__environmentGet__P_190_10("qx.debug.io")) {
+          if (this.__environmentGet__P_197_10("qx.debug.io")) {
             qx.Bootstrap.debug(qx.bom.request.Script, "Detected error");
           }
         }
-        if (this.__timeoutId__P_190_12) {
-          window.clearTimeout(this.__timeoutId__P_190_12);
+        if (this.__timeoutId__P_197_12) {
+          window.clearTimeout(this.__timeoutId__P_197_12);
         }
         window.setTimeout(function () {
           that._success();
@@ -477,7 +477,7 @@
        * Handle native error.
        */
       _onNativeError() {
-        this.__failure__P_190_15();
+        this.__failure__P_197_15();
         this._emit("error");
         this._emit("loadend");
       },
@@ -490,39 +490,39 @@
       /**
        * @type {Element} Script element
        */
-      __scriptElement__P_190_14: null,
+      __scriptElement__P_197_14: null,
       /**
        * @type {Element} Head element
        */
-      __headElement__P_190_4: null,
+      __headElement__P_197_4: null,
       /**
        * @type {String} URL
        */
-      __url__P_190_9: "",
+      __url__P_197_9: "",
       /**
        * @type {Function} Bound _onNativeLoad handler.
        */
-      __onNativeLoadBound__P_190_1: null,
+      __onNativeLoadBound__P_197_1: null,
       /**
        * @type {Function} Bound _onNativeError handler.
        */
-      __onNativeErrorBound__P_190_2: null,
+      __onNativeErrorBound__P_197_2: null,
       /**
        * @type {Function} Bound _onTimeout handler.
        */
-      __onTimeoutBound__P_190_3: null,
+      __onTimeoutBound__P_197_3: null,
       /**
        * @type {Number} Timeout timer iD.
        */
-      __timeoutId__P_190_12: null,
+      __timeoutId__P_197_12: null,
       /**
        * @type {Boolean} Whether request was aborted.
        */
-      __abort__P_190_8: null,
+      __abort__P_197_8: null,
       /**
        * @type {Boolean} Whether request was disposed.
        */
-      __disposed__P_190_7: null,
+      __disposed__P_197_7: null,
       /*
       ---------------------------------------------------------------------------
         HELPER
@@ -532,7 +532,7 @@
       /**
        * Initialize properties.
        */
-      __initXhrProperties__P_190_0() {
+      __initXhrProperties__P_197_0() {
         this.readyState = 0;
         this.status = 0;
         this.statusText = "";
@@ -550,7 +550,7 @@
        * Handle success.
        */
       _success() {
-        this.__disposeScriptElement__P_190_13();
+        this.__disposeScriptElement__P_197_13();
         this.readyState = 4;
 
         // By default, load is considered successful
@@ -562,8 +562,8 @@
       /**
        * Handle failure.
        */
-      __failure__P_190_15() {
-        this.__disposeScriptElement__P_190_13();
+      __failure__P_197_15() {
+        this.__disposeScriptElement__P_197_13();
         this.readyState = 4;
         this.status = 0;
         this.statusText = null;
@@ -573,9 +573,9 @@
        *
        * @return {Boolean} Whether browser supports error handler.
        */
-      __supportsErrorHandler__P_190_5() {
-        var isLegacyIe = this.__environmentGet__P_190_10("engine.name") === "mshtml" && this.__environmentGet__P_190_10("browser.documentmode") < 9;
-        var isOpera = this.__environmentGet__P_190_10("engine.name") === "opera";
+      __supportsErrorHandler__P_197_5() {
+        var isLegacyIe = this.__environmentGet__P_197_10("engine.name") === "mshtml" && this.__environmentGet__P_197_10("browser.documentmode") < 9;
+        var isOpera = this.__environmentGet__P_197_10("engine.name") === "opera";
         return !(isLegacyIe || isOpera);
       },
       /**
@@ -583,27 +583,27 @@
        *
        * @return {Element} Configured script element.
        */
-      __createScriptElement__P_190_11() {
-        var script = this.__scriptElement__P_190_14 = document.createElement("script");
-        script.src = this.__url__P_190_9;
-        script.onerror = this.__onNativeErrorBound__P_190_2;
-        script.onload = this.__onNativeLoadBound__P_190_1;
+      __createScriptElement__P_197_11() {
+        var script = this.__scriptElement__P_197_14 = document.createElement("script");
+        script.src = this.__url__P_197_9;
+        script.onerror = this.__onNativeErrorBound__P_197_2;
+        script.onload = this.__onNativeLoadBound__P_197_1;
 
         // BUGFIX: IE < 9
         // Legacy IEs do not fire the "load" event for script elements.
         // Instead, they support the "readystatechange" event
-        if (this.__environmentGet__P_190_10("engine.name") === "mshtml" && this.__environmentGet__P_190_10("browser.documentmode") < 9) {
-          script.onreadystatechange = this.__onNativeLoadBound__P_190_1;
+        if (this.__environmentGet__P_197_10("engine.name") === "mshtml" && this.__environmentGet__P_197_10("browser.documentmode") < 9) {
+          script.onreadystatechange = this.__onNativeLoadBound__P_197_1;
         }
         return script;
       },
       /**
        * Remove script element from DOM.
        */
-      __disposeScriptElement__P_190_13() {
-        var script = this.__scriptElement__P_190_14;
+      __disposeScriptElement__P_197_13() {
+        var script = this.__scriptElement__P_197_14;
         if (script && script.parentNode) {
-          this.__headElement__P_190_4.removeChild(script);
+          this.__headElement__P_197_4.removeChild(script);
         }
       },
       /**
@@ -613,7 +613,7 @@
        * @return {var} Value of the queried environment key
        * @lint environmentNonLiteralKey(key)
        */
-      __environmentGet__P_190_10(key) {
+      __environmentGet__P_197_10(key) {
         if (qx && qx.core && qx.core.Environment) {
           return qx.core.Environment.get(key);
         } else {
@@ -639,4 +639,4 @@
   qx.bom.request.Script.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Script.js.map?dt=1769806694029
+//# sourceMappingURL=Script.js.map?dt=1791841652697

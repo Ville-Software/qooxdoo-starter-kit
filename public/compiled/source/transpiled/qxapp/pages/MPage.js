@@ -15,6 +15,11 @@
         check: "String",
         init: null
       },
+      /** Page's name for the browser title */
+      pageName: {
+        check: "String",
+        init: null
+      },
       /** Associated Inertia component name */
       componentName: {
         check: "String",
@@ -25,4 +30,4 @@
   qxapp.pages.MPage.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MPage.js.map?dt=1769806685463
+//# sourceMappingURL=MPage.js.map?dt=1791841649142

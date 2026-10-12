@@ -84,10 +84,10 @@
       qx.core.Object.constructor.call(this);
 
       // create item array
-      this.__items__P_17_0 = [];
+      this.__items__P_21_0 = [];
 
       // add listener before call add!!!
-      this.addListener("changeSelection", this.__onChangeSelection__P_17_1, this);
+      this.addListener("changeSelection", this.__onChangeSelection__P_21_1, this);
       if (varargs != null) {
         this.add.apply(this, arguments);
       }
@@ -188,7 +188,7 @@
 
     members: {
       /** @type {qx.ui.form.IRadioItem[]} The items of the radio group */
-      __items__P_17_0: null,
+      __items__P_21_0: null,
       /*
       ---------------------------------------------------------------------------
         UTILITIES
@@ -201,7 +201,7 @@
        * @return {qx.ui.form.IRadioItem[]} All managed items.
        */
       getItems() {
-        return this.__items__P_17_0;
+        return this.__items__P_21_0;
       },
       /*
       ---------------------------------------------------------------------------
@@ -215,7 +215,7 @@
        * @param varargs {qx.ui.form.IRadioItem} A variable number of items to add.
        */
       add(varargs) {
-        var items = this.__items__P_17_0;
+        var items = this.__items__P_21_0;
         var item;
         var groupedProperty = this.getGroupedProperty();
         var groupedPropertyUp = qx.lang.String.firstUp(groupedProperty);
@@ -251,7 +251,7 @@
        * @param item {qx.ui.form.IRadioItem} The item to remove.
        */
       remove(item) {
-        var items = this.__items__P_17_0;
+        var items = this.__items__P_21_0;
         var groupedProperty = this.getGroupedProperty();
         var groupedPropertyUp = qx.lang.String.firstUp(groupedProperty);
         if (items.includes(item)) {
@@ -278,7 +278,7 @@
        * @return {qx.ui.form.IRadioItem[]} The item array
        */
       getChildren() {
-        return this.__items__P_17_0;
+        return this.__items__P_21_0;
       },
       /*
       ---------------------------------------------------------------------------
@@ -311,8 +311,8 @@
         var item;
         var oldFirstUp = qx.lang.String.firstUp(old);
         var newFirstUp = qx.lang.String.firstUp(value);
-        for (var i = 0; i < this.__items__P_17_0.length; i++) {
-          item = this.__items__P_17_0[i];
+        for (var i = 0; i < this.__items__P_21_0.length; i++) {
+          item = this.__items__P_21_0[i];
 
           // remove the listener for the old change event
           item.removeListener("change" + oldFirstUp, this._onItemChangeChecked, this);
@@ -323,19 +323,19 @@
       },
       // property apply
       _applyInvalidMessage(value, old) {
-        for (var i = 0; i < this.__items__P_17_0.length; i++) {
-          this.__items__P_17_0[i].setInvalidMessage(value);
+        for (var i = 0; i < this.__items__P_21_0.length; i++) {
+          this.__items__P_21_0[i].setInvalidMessage(value);
         }
       },
       // property apply
       _applyValid(value, old) {
-        for (var i = 0; i < this.__items__P_17_0.length; i++) {
-          this.__items__P_17_0[i].setValid(value);
+        for (var i = 0; i < this.__items__P_21_0.length; i++) {
+          this.__items__P_21_0[i].setValid(value);
         }
       },
       // property apply
       _applyEnabled(value, old) {
-        var items = this.__items__P_17_0;
+        var items = this.__items__P_21_0;
         if (value == null) {
           for (var i = 0, l = items.length; i < l; i++) {
             items[i].resetEnabled();
@@ -363,7 +363,7 @@
        */
       selectNext() {
         var item = this.getSelection()[0];
-        var items = this.__items__P_17_0;
+        var items = this.__items__P_21_0;
         var index = items.indexOf(item);
         if (index == -1) {
           return;
@@ -388,7 +388,7 @@
        */
       selectPrevious() {
         var item = this.getSelection()[0];
-        var items = this.__items__P_17_0;
+        var items = this.__items__P_21_0;
         var index = items.indexOf(item);
         if (index == -1) {
           return;
@@ -441,14 +441,14 @@
        *    <code>false</code> otherwise.
        */
       _isItemSelectable(item) {
-        return this.__items__P_17_0.indexOf(item) != -1;
+        return this.__items__P_21_0.indexOf(item) != -1;
       },
       /**
        * Event handler for <code>changeSelection</code>.
        *
        * @param e {qx.event.type.Data} Data event.
        */
-      __onChangeSelection__P_17_1(e) {
+      __onChangeSelection__P_21_1(e) {
         var value = e.getData()[0];
         var old = e.getOldData()[0];
         var groupedProperty = this.getGroupedProperty();
@@ -459,7 +459,7 @@
           value.set(groupedProperty, true);
 
           // If Group is focused, the selection was changed by keyboard. Switch focus to new value
-          if (this.__isGroupFocused__P_17_2() && value.isFocusable()) {
+          if (this.__isGroupFocused__P_21_2() && value.isFocusable()) {
             value.focus();
           }
         }
@@ -468,7 +468,7 @@
        * Checks if this group is focused by checking focused state of each item
        * @returns {Boolean} result
        */
-      __isGroupFocused__P_17_2() {
+      __isGroupFocused__P_21_2() {
         const focusHandler = qx.ui.core.FocusHandler.getInstance();
         for (const item of this._getItems()) {
           if (focusHandler.isFocused(item)) {
@@ -485,10 +485,10 @@
     */
 
     destruct() {
-      this._disposeArray("__items__P_17_0");
+      this._disposeArray("__items__P_21_0");
     }
   });
   qx.ui.form.RadioGroup.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=RadioGroup.js.map?dt=1769806686127
+//# sourceMappingURL=RadioGroup.js.map?dt=1791841649782

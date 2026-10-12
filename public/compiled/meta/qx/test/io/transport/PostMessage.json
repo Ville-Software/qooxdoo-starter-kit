@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337726,
-  "lastModifiedIso": "2026-01-03T20:15:37.726Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/io/transport/PostMessage.js",
+  "lastModified": 1739993516201,
+  "lastModifiedIso": "2025-02-19T19:31:56.201Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/io/transport/PostMessage.js",
   "type": "class",
   "location": {
     "start": {

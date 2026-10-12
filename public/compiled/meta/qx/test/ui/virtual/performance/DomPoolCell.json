@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336232,
-  "lastModifiedIso": "2026-01-03T20:15:36.232Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/performance/DomPoolCell.js",
+  "lastModified": 1739993515599,
+  "lastModifiedIso": "2025-02-19T19:31:55.599Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/ui/virtual/performance/DomPoolCell.js",
   "type": "class",
   "location": {
     "start": {

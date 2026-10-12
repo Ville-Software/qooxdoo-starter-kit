@@ -16,7 +16,7 @@
     "IFormat"
   ],
   "sources": [
-    "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class/qx/util/format/IFormat.js"
+    "/usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/util/format/IFormat.js"
   ],
   "sourcesContent": [
     "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2006 STZ-IDA, Germany, http://www.stz-ida.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Til Schneider (til132)\n\n************************************************************************ */\n\n/**\n * Superclass for formatters and parsers.\n */\nqx.Interface.define(\"qx.util.format.IFormat\", {\n  members: {\n    /**\n     * Formats an object.\n     *\n     * @abstract\n     * @param obj {var} The object to format.\n     * @return {String} the formatted object.\n     * @throws {Error} the abstract function warning.\n     */\n    format(obj) {},\n\n    /**\n     * Parses an object.\n     *\n     * @abstract\n     * @param str {String} the string to parse.\n     * @return {var} the parsed object.\n     * @throws {Error} the abstract function warning.\n     */\n    parse(str) {}\n  }\n});\n"

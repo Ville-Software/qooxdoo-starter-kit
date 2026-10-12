@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337372,
-  "lastModifiedIso": "2026-01-03T20:15:37.372Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/io/jsonrpc/protocol/Message.js",
+  "lastModified": 1739993515992,
+  "lastModifiedIso": "2025-02-19T19:31:55.992Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/io/jsonrpc/protocol/Message.js",
   "type": "class",
   "location": {
     "start": {

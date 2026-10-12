@@ -55,9 +55,9 @@
   qx.Class.define("qx.bom.element.Background", {
     statics: {
       /** @type {Array} Internal helper to improve compile performance */
-      __tmpl__P_230_0: ["background-image:url(", null, ");", "background-position:", null, ";", "background-repeat:", null, ";"],
+      __tmpl__P_210_0: ["background-image:url(", null, ");", "background-position:", null, ";", "background-repeat:", null, ";"],
       /** @type {Map} Empty styles when no image is given */
-      __emptyStyles__P_230_1: {
+      __emptyStyles__P_210_1: {
         backgroundImage: null,
         backgroundPosition: null,
         backgroundRepeat: null
@@ -71,7 +71,7 @@
        *    string value
        * @return {String} The background position CSS value
        */
-      __computePosition__P_230_2(left, top) {
+      __computePosition__P_210_2(left, top) {
         // Correcting buggy Firefox background-position implementation
         // Have problems with identical values
         var engine = qx.core.Environment.get("engine.name");
@@ -109,11 +109,11 @@
        * @return {String} CSS string
        */
       compile(source, repeat, left, top) {
-        var position = this.__computePosition__P_230_2(left, top);
+        var position = this.__computePosition__P_210_2(left, top);
         var backgroundImageUrl = qx.util.ResourceManager.getInstance().toUri(source);
 
         // Updating template
-        var tmpl = this.__tmpl__P_230_0;
+        var tmpl = this.__tmpl__P_210_0;
         tmpl[1] = "'" + backgroundImageUrl + "'"; // Put in quotes so spaces work
         tmpl[4] = position;
         tmpl[7] = repeat;
@@ -138,9 +138,9 @@
        */
       getStyles(source, repeat, left, top) {
         if (!source) {
-          return this.__emptyStyles__P_230_1;
+          return this.__emptyStyles__P_210_1;
         }
-        var position = this.__computePosition__P_230_2(left, top);
+        var position = this.__computePosition__P_210_2(left, top);
         var backgroundImageUrl = qx.util.ResourceManager.getInstance().toUri(source);
         var backgroundImageCssString = "url('" + backgroundImageUrl + "')"; // Put in quotes so spaces work
         var map = {
@@ -176,4 +176,4 @@
   qx.bom.element.Background.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Background.js.map?dt=1769806695850
+//# sourceMappingURL=Background.js.map?dt=1791841652909

@@ -22,7 +22,7 @@
     "Separator"
   ],
   "sources": [
-    "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class/qx/ui/toolbar/Separator.js"
+    "/usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/toolbar/Separator.js"
   ],
   "sourcesContent": [
     "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Sebastian Werner (wpbasti)\n     * Andreas Ecker (ecker)\n\n************************************************************************ */\n\n/**\n * A widget used for decoration proposes to structure a toolbar. Each\n * Separator renders a line between the buttons around.\n */\nqx.Class.define(\"qx.ui.toolbar.Separator\", {\n  extend: qx.ui.core.Widget,\n\n  /*\n  *****************************************************************************\n     PROPERTIES\n  *****************************************************************************\n  */\n\n  properties: {\n    // overridden\n    appearance: {\n      refine: true,\n      init: \"toolbar-separator\"\n    },\n\n    // overridden\n    anonymous: {\n      refine: true,\n      init: true\n    },\n\n    // overridden\n    width: {\n      refine: true,\n      init: 0\n    },\n\n    // overridden\n    height: {\n      refine: true,\n      init: 0\n    }\n  }\n});\n"

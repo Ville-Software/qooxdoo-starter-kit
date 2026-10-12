@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471338294,
-  "lastModifiedIso": "2026-01-03T20:15:38.294Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/tree/VirtualTree.js",
+  "lastModified": 1739993516437,
+  "lastModifiedIso": "2025-02-19T19:31:56.437Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/tree/VirtualTree.js",
   "type": "class",
   "location": {
     "start": {
@@ -798,10 +798,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "dragSelection": {
       "location": {
@@ -837,10 +837,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "quickSelection": {
       "location": {
@@ -875,10 +875,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "contentPaddingTop": {
       "location": {
@@ -3272,10 +3272,10 @@
           "index": 3426
         }
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__ignoreChangeSelection": {
       "jsdoc": {
@@ -3308,10 +3308,10 @@
           "index": 3550
         }
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__ignoreManagerChangeSelection": {
       "jsdoc": {
@@ -3344,10 +3344,10 @@
           "index": 3684
         }
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__selection": {
       "jsdoc": null,
@@ -3364,10 +3364,10 @@
           "index": 3708
         }
       },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "setValue": {
       "jsdoc": {
@@ -3388,21 +3388,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "selection {qx.data.IListData|null} List data to select as value.",
-            "paramName": "selection",
-            "description": " List data to select as value.",
-            "type": [
-              "qx.data.IListData",
-              "null"
-            ]
+            "body": "selection {qx.data.IListData|null} List data to select as value."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{null} The status of this operation.",
-            "type": "null",
-            "description": "The status of this operation."
+            "body": "{null} The status of this operation."
           }
         ]
       },
@@ -3422,20 +3414,13 @@
       "type": "function",
       "params": [
         {
-          "name": "selection",
-          "type": [
-            "qx.data.IListData",
-            "null"
-          ]
+          "name": "selection"
         }
       ],
-      "returnType": {
-        "type": "null"
-      },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "getValue": {
       "jsdoc": {
@@ -3455,9 +3440,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.data.IListData} The current selection.",
-            "type": "qx.data.IListData",
-            "description": "The current selection."
+            "body": "{qx.data.IListData} The current selection."
           }
         ]
       },
@@ -3476,13 +3459,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.data.IListData"
-      },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "resetValue": {
       "jsdoc": {
@@ -3513,10 +3493,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_initSelectionManager": {
       "jsdoc": {
@@ -3547,10 +3527,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "setAutoScrollIntoView": {
       "jsdoc": {
@@ -3571,10 +3551,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "value {Boolean} Set <code>false</code> to suspend auto scrolling.",
-            "paramName": "value",
-            "description": " Set <code>false</code> to suspend auto scrolling.",
-            "type": "boolean"
+            "body": "value {Boolean} Set <code>false</code> to suspend auto scrolling."
           }
         ]
       },
@@ -3594,14 +3571,13 @@
       "type": "function",
       "params": [
         {
-          "name": "value",
-          "type": "boolean"
+          "name": "value"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "getAutoScrollIntoView": {
       "jsdoc": {
@@ -3621,9 +3597,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Returns <code>false</code> if auto scrolling is suspended.",
-            "type": "boolean",
-            "description": "Returns <code>false</code> if auto scrolling is suspended."
+            "body": "{Boolean} Returns <code>false</code> if auto scrolling is suspended."
           }
         ]
       },
@@ -3642,13 +3616,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_updateSelection": {
       "jsdoc": {
@@ -3680,10 +3651,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "setSelection": {
       "jsdoc": {
@@ -3704,10 +3675,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "value {qx.data.Array} the new selection",
-            "paramName": "value",
-            "description": " the new selection",
-            "type": "qx.data.Array"
+            "body": "value {qx.data.Array} the new selection"
           }
         ]
       },
@@ -3727,15 +3695,14 @@
       "type": "function",
       "params": [
         {
-          "name": "value",
-          "type": "qx.data.Array"
+          "name": "value"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel",
         "qx.data.controller.ISelection"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "getSelection": {
       "jsdoc": {
@@ -3755,9 +3722,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.data.Array}",
-            "type": "qx.data.Array",
-            "description": ""
+            "body": "{qx.data.Array}"
           }
         ]
       },
@@ -3776,15 +3741,12 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.data.Array"
-      },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel",
         "qx.ui.tree.core.IVirtualTree",
         "qx.data.controller.ISelection"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "resetSelection": {
       "jsdoc": {
@@ -3815,11 +3777,11 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel",
         "qx.data.controller.ISelection"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "initSelection": {
       "jsdoc": {
@@ -3840,10 +3802,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "value {qx.data.Array} the new selection",
-            "paramName": "value",
-            "description": " the new selection",
-            "type": "qx.data.Array"
+            "body": "value {qx.data.Array} the new selection"
           }
         ]
       },
@@ -3863,14 +3822,13 @@
       "type": "function",
       "params": [
         {
-          "name": "value",
-          "type": "qx.data.Array"
+          "name": "value"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_applySelection": {
       "jsdoc": {
@@ -3891,17 +3849,11 @@
         "@param": [
           {
             "name": "@param",
-            "body": "value {qx.data.Array} new value",
-            "paramName": "value",
-            "description": " new value",
-            "type": "qx.data.Array"
+            "body": "value {qx.data.Array} new value"
           },
           {
             "name": "@param",
-            "body": "old {qx.data.Array} old value",
-            "paramName": "old",
-            "description": " old value",
-            "type": "qx.data.Array"
+            "body": "old {qx.data.Array} old value"
           }
         ]
       },
@@ -3921,18 +3873,16 @@
       "type": "function",
       "params": [
         {
-          "name": "value",
-          "type": "qx.data.Array"
+          "name": "value"
         },
         {
-          "name": "old",
-          "type": "qx.data.Array"
+          "name": "old"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_applySelectionMode": {
       "jsdoc": {
@@ -3962,10 +3912,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_applyDragSelection": {
       "jsdoc": {
@@ -3995,10 +3945,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_applyQuickSelection": {
       "jsdoc": {
@@ -4028,10 +3978,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_onChangeSelection": {
       "jsdoc": {
@@ -4051,10 +4001,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Data} the change event.",
-            "paramName": "e",
-            "description": " the change event.",
-            "type": "qx.event.type.Data"
+            "body": "e {qx.event.type.Data} the change event."
           }
         ]
       },
@@ -4074,14 +4021,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Data"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_onManagerChangeSelection": {
       "jsdoc": {
@@ -4101,10 +4047,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Data} the change event.",
-            "paramName": "e",
-            "description": " the change event.",
-            "type": "qx.event.type.Data"
+            "body": "e {qx.event.type.Data} the change event."
           }
         ]
       },
@@ -4124,14 +4067,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Data"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__synchronizeSelection": {
       "jsdoc": {
@@ -4162,10 +4104,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__replaceSelection": {
       "jsdoc": {
@@ -4185,10 +4127,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "newSelection {qx.data.Array} The new selection.",
-            "paramName": "newSelection",
-            "description": " The new selection.",
-            "type": "qx.data.Array"
+            "body": "newSelection {qx.data.Array} The new selection."
           }
         ]
       },
@@ -4208,14 +4147,13 @@
       "type": "function",
       "params": [
         {
-          "name": "newSelection",
-          "type": "qx.data.Array"
+          "name": "newSelection"
         }
       ],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__isSelectionEquals": {
       "jsdoc": {
@@ -4236,9 +4174,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} <code>true</code> if the selections are equal,\n   <code>false</code> otherwise.",
-            "type": "boolean",
-            "description": "<code>true</code> if the selections are equal,\n   <code>false</code> otherwise."
+            "body": "{Boolean} <code>true</code> if the selections are equal,\n   <code>false</code> otherwise."
           }
         ]
       },
@@ -4257,13 +4193,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "_applyDefaultSelection": {
       "jsdoc": {
@@ -4294,10 +4227,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.virtual.selection.MModel",
       "appearsIn": [
         "qx.ui.virtual.selection.MModel"
-      ],
-      "mixin": "qx.ui.virtual.selection.MModel"
+      ]
     },
     "__contentPaddingSetter": {
       "jsdoc": {

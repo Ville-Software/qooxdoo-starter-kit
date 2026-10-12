@@ -1,73 +1,25 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337739,
-  "lastModifiedIso": "2026-01-03T20:15:37.739Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/Promise.js",
+  "lastModified": 1739993516206,
+  "lastModifiedIso": "2025-02-19T19:31:56.206Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/Promise.js",
   "type": "class",
   "location": {
     "start": {
-      "line": 56,
+      "line": 69,
       "column": 0,
-      "index": 1675
+      "index": 2191
     },
     "end": {
-      "line": 1089,
+      "line": 1063,
       "column": 3,
-      "index": 41263
+      "index": 40673
     }
   },
   "className": "qx.Promise",
   "jsdoc": {
     "raw": [
-      "*",
-      " * This class adds Promise/A+ support to Qooxdoo, as specified at",
-      " * https://github.com/promises-aplus/promises-spec",
-      "",
-      " * There are two ways to bind a 'this' value to callbacks - the first is to",
-      " * append a context method to methods like then(), and the second is to specify",
-      " * the context as the second parameter to the constructor and all callbacks will",
-      " * be bound to that value.",
-      " *",
-      " * For example:",
-      " *",
-      " * <pre class=\"javascript\">",
-      " *   var promise = new qx.Promise(myAsyncFunction, this);",
-      " *   promise.then(function() {",
-      " *     // 'this' is preserved from the outer scope",
-      " *   });",
-      " *",
-      " *   // ... is the same as: ...",
-      " *   var promise = new qx.Promise(myAsyncFunction);",
-      " *   promise.then(function() {",
-      " *     // 'this' is preserved from the outer scope",
-      " *   }, this);",
-      " * </pre>",
-      " *",
-      " * If you have an existing qx.Promise and want to bind all callbacks, use the",
-      " * bind() method - but note that it returns a new promise:",
-      " *",
-      " *  <pre class=\"javascript\">",
-      " *    var promise = someMethodThatReturnsAPromise();",
-      " *    var boundPromise = promise.bind(this);",
-      " *    boundPromise.then(function() {",
-      " *      // 'this' is preserved from the outer scope",
-      " *    }, this);",
-      " *  </pre>",
-      " * @ignore(process.*)",
-      " *",
-      " "
-    ],
-    "@description": [
-      {
-        "name": "@description",
-        "body": "<p>This class adds Promise/A+ support to Qooxdoo, as specified at\n https://github.com/promises-aplus/promises-spec\n There are two ways to bind a 'this' value to callbacks - the first is to\n append a context method to methods like then(), and the second is to specify\n the context as the second parameter to the constructor and all callbacks will\n be bound to that value.\n For example:\n </p>\n<pre class=\"javascript\">\n   var promise = new qx.Promise(myAsyncFunction, this);\n   promise.then(function() {\n\n   });\n\n   var promise = new qx.Promise(myAsyncFunction);\n   promise.then(function() {\n\n   }, this);\n </pre>\n<p>If you have an existing qx.Promise and want to bind all callbacks, use the\n bind() method - but note that it returns a new promise:\n  </p>\n<pre class=\"javascript\">\n    var promise = someMethodThatReturnsAPromise();\n    var boundPromise = promise.bind(this);\n    boundPromise.then(function() {\n\n    }, this);\n  </pre>"
-      }
-    ],
-    "@ignore": [
-      {
-        "name": "@ignore",
-        "body": "process.*"
-      }
+      " eslint-disable no-global-assign "
     ]
   },
   "superClass": "qx.core.Object",
@@ -83,14 +35,14 @@
     ],
     "location": {
       "start": {
-        "line": 74,
+        "line": 83,
         "column": 2,
-        "index": 2389
+        "index": 2770
       },
       "end": {
-        "line": 111,
+        "line": 120,
         "column": 3,
-        "index": 3659
+        "index": 4052
       }
     }
   },
@@ -99,14 +51,14 @@
     "params": [],
     "location": {
       "start": {
-        "line": 116,
+        "line": 125,
         "column": 2,
-        "index": 3692
+        "index": 4085
       },
       "end": {
-        "line": 119,
+        "line": 128,
         "column": 3,
-        "index": 3762
+        "index": 4155
       }
     }
   },
@@ -126,14 +78,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 123,
+          "line": 132,
           "column": 4,
-          "index": 3805
+          "index": 4198
         },
         "end": {
-          "line": 123,
+          "line": 132,
           "column": 13,
-          "index": 3814
+          "index": 4207
         }
       },
       "appearsIn": []
@@ -153,43 +105,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 126,
+          "line": 135,
           "column": 4,
-          "index": 3882
+          "index": 4275
         },
         "end": {
-          "line": 126,
+          "line": 135,
           "column": 20,
-          "index": 3898
-        }
-      },
-      "appearsIn": []
-    },
-    "__cancelWarningShown": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Whether the depracation warning of qx.Promise#cancel has been shown",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Whether the depracation warning of qx.Promise#cancel has been shown</p>"
-          }
-        ]
-      },
-      "access": "private",
-      "location": {
-        "start": {
-          "line": 131,
-          "column": 4,
-          "index": 3996
-        },
-        "end": {
-          "line": 131,
-          "column": 31,
-          "index": 4023
+          "index": 4291
         }
       },
       "appearsIn": []
@@ -243,14 +166,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 149,
+          "line": 153,
           "column": 4,
-          "index": 4617
+          "index": 4885
         },
         "end": {
-          "line": 151,
+          "line": 155,
           "column": 5,
-          "index": 4704
+          "index": 4972
         }
       },
       "type": "function",
@@ -312,14 +235,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 163,
+          "line": 167,
           "column": 4,
-          "index": 5272
+          "index": 5540
         },
         "end": {
-          "line": 165,
+          "line": 169,
           "column": 5,
-          "index": 5348
+          "index": 5616
         }
       },
       "type": "function",
@@ -372,14 +295,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 179,
+          "line": 183,
           "column": 4,
-          "index": 5712
+          "index": 5980
         },
         "end": {
-          "line": 181,
+          "line": 185,
           "column": 5,
-          "index": 5789
+          "index": 6057
         }
       },
       "type": "function",
@@ -450,14 +373,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 205,
+          "line": 209,
           "column": 4,
-          "index": 6478
+          "index": 6746
         },
         "end": {
-          "line": 207,
+          "line": 211,
           "column": 5,
-          "index": 6562
+          "index": 6830
         }
       },
       "type": "function",
@@ -512,14 +435,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 217,
+          "line": 221,
           "column": 4,
-          "index": 6957
+          "index": 7225
         },
         "end": {
-          "line": 219,
+          "line": 223,
           "column": 5,
-          "index": 7037
+          "index": 7305
         }
       },
       "type": "function",
@@ -538,22 +461,12 @@
         "raw": [
           "*",
           "     * Cancel this promise. Will not do anything if this promise is already settled.",
-          "     *",
-          "     * @deprecated",
-          "     * While Bluebird supports this feature,",
-          "     * this is not ratified by ES6 and there are no plans to add this to the native promise any time soon.",
           "     "
         ],
         "@description": [
           {
             "name": "@description",
             "body": "<p>Cancel this promise. Will not do anything if this promise is already settled.</p>"
-          }
-        ],
-        "@deprecated": [
-          {
-            "name": "@deprecated",
-            "body": "While Bluebird supports this feature,\n this is not ratified by ES6 and there are no plans to add this to the native promise any time soon."
           }
         ]
       },
@@ -562,12 +475,12 @@
         "start": {
           "line": 228,
           "column": 4,
-          "index": 7323
+          "index": 7413
         },
         "end": {
-          "line": 242,
+          "line": 230,
           "column": 5,
-          "index": 7902
+          "index": 7481
         }
       },
       "type": "function",
@@ -604,14 +517,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 252,
+          "line": 240,
           "column": 4,
-          "index": 8318
+          "index": 7897
         },
         "end": {
-          "line": 254,
+          "line": 242,
           "column": 5,
-          "index": 8388
+          "index": 7967
         }
       },
       "type": "function",
@@ -651,14 +564,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 264,
+          "line": 252,
           "column": 4,
-          "index": 8816
+          "index": 8395
         },
         "end": {
-          "line": 266,
+          "line": 254,
           "column": 5,
-          "index": 8896
+          "index": 8475
         }
       },
       "type": "function",
@@ -701,14 +614,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 275,
+          "line": 263,
           "column": 4,
-          "index": 9228
+          "index": 8807
         },
         "end": {
-          "line": 277,
+          "line": 265,
           "column": 5,
-          "index": 9306
+          "index": 8885
         }
       },
       "type": "function",
@@ -768,14 +681,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 288,
+          "line": 276,
           "column": 4,
-          "index": 9771
+          "index": 9350
         },
         "end": {
-          "line": 290,
+          "line": 278,
           "column": 5,
-          "index": 9858
+          "index": 9437
         }
       },
       "type": "function",
@@ -807,6 +720,7 @@
           "     * function returns a promise or a thenable, then the result of the promise is awaited, before continuing with",
           "     * next iteration.",
           "     *",
+          "     * @param iterable {Iterable} An iterable object, such as an Array",
           "     * @param iterator {Function} the callback, with <code>(value, index, length)</code>",
           "     * @return {qx.Promise}",
           "     "
@@ -818,6 +732,13 @@
           }
         ],
         "@param": [
+          {
+            "name": "@param",
+            "body": "iterable {Iterable} An iterable object, such as an Array",
+            "paramName": "iterable",
+            "description": " An iterable object, such as an Array",
+            "type": "Iterable"
+          },
           {
             "name": "@param",
             "body": "iterator {Function} the callback, with <code>(value, index, length)</code>",
@@ -838,18 +759,22 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 305,
+          "line": 294,
           "column": 4,
-          "index": 10678
+          "index": 10328
         },
         "end": {
-          "line": 307,
+          "line": 296,
           "column": 5,
-          "index": 10761
+          "index": 10421
         }
       },
       "type": "function",
       "params": [
+        {
+          "name": "iterable",
+          "type": "Iterable"
+        },
         {
           "name": "iterator",
           "type": "((...args: any[]) => any)"
@@ -867,10 +792,10 @@
           "     * Same as {@link qx.Promise.filter} except that it iterates over the value of this promise, when it is fulfilled;",
           "     * iterates over all the values into an array and filter the array to another using the given filterer function.",
           "     *",
+          "     * @param iterable {Iterable} An iterable object, such as an Array",
           "     * @param iterator {Function} the callback, with <code>(value, index, length)</code>",
-          "     * @param options {Object?} Either:",
-          "     *   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>",
-          "     * Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+          "     * @param options {Object?} options; can be:",
+          "     *  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
           "     * @return {qx.Promise}",
           "     "
         ],
@@ -883,6 +808,13 @@
         "@param": [
           {
             "name": "@param",
+            "body": "iterable {Iterable} An iterable object, such as an Array",
+            "paramName": "iterable",
+            "description": " An iterable object, such as an Array",
+            "type": "Iterable"
+          },
+          {
+            "name": "@param",
             "body": "iterator {Function} the callback, with <code>(value, index, length)</code>",
             "paramName": "iterator",
             "description": " the callback, with <code>(value, index, length)</code>",
@@ -890,9 +822,9 @@
           },
           {
             "name": "@param",
-            "body": "options {Object?} Either:\n   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>\n Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+            "body": "options {Object?} options; can be:\n  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
             "paramName": "options",
-            "description": " Either:\n   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>\n Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+            "description": " options; can be:\n  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
             "optional": true,
             "type": "Object"
           }
@@ -909,18 +841,22 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 319,
+          "line": 308,
           "column": 4,
-          "index": 11432
+          "index": 11025
         },
         "end": {
-          "line": 321,
+          "line": 310,
           "column": 5,
-          "index": 11525
+          "index": 11128
         }
       },
       "type": "function",
       "params": [
+        {
+          "name": "iterable",
+          "type": "Iterable"
+        },
         {
           "name": "iterator",
           "type": "((...args: any[]) => any)"
@@ -952,10 +888,10 @@
           "     * has items in random order, it means that .map can be used for concurrency coordination unlike",
           "     * .all.",
           "     *",
+          "     * @param iterable {Iterable} An iterable object, such as an Array",
           "     * @param iterator {Function} the callback, with <code>(value, index, length)</code>",
-          "     * @param options {Object?} Either:",
-          "     *   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>",
-          "     * Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+          "     * @param options {Object?} options; can be:",
+          "     *  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
           "     * @return {qx.Promise}",
           "     "
         ],
@@ -968,6 +904,13 @@
         "@param": [
           {
             "name": "@param",
+            "body": "iterable {Iterable} An iterable object, such as an Array",
+            "paramName": "iterable",
+            "description": " An iterable object, such as an Array",
+            "type": "Iterable"
+          },
+          {
+            "name": "@param",
             "body": "iterator {Function} the callback, with <code>(value, index, length)</code>",
             "paramName": "iterator",
             "description": " the callback, with <code>(value, index, length)</code>",
@@ -975,9 +918,9 @@
           },
           {
             "name": "@param",
-            "body": "options {Object?} Either:\n   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>\n Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+            "body": "options {Object?} options; can be:\n  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
             "paramName": "options",
-            "description": " Either:\n   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>\n Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator",
+            "description": " options; can be:\n  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>",
             "optional": true,
             "type": "Object"
           }
@@ -994,18 +937,22 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 342,
+          "line": 331,
           "column": 4,
-          "index": 12831
+          "index": 12367
         },
         "end": {
-          "line": 344,
+          "line": 333,
           "column": 5,
-          "index": 12918
+          "index": 12464
         }
       },
       "type": "function",
       "params": [
+        {
+          "name": "iterable",
+          "type": "Iterable"
+        },
         {
           "name": "iterator",
           "type": "((...args: any[]) => any)"
@@ -1037,6 +984,7 @@
           "     * If any promise in the input array is rejected or any promise returned by the iterator function is",
           "     * rejected, the result will be rejected as well.",
           "     *",
+          "     * @param iterable {Iterable} An iterable object, such as an Array",
           "     * @param iterator {Function} the callback, with <code>(value, index, length)</code>",
           "     * @return {qx.Promise}",
           "     "
@@ -1048,6 +996,13 @@
           }
         ],
         "@param": [
+          {
+            "name": "@param",
+            "body": "iterable {Iterable} An iterable object, such as an Array",
+            "paramName": "iterable",
+            "description": " An iterable object, such as an Array",
+            "type": "Iterable"
+          },
           {
             "name": "@param",
             "body": "iterator {Function} the callback, with <code>(value, index, length)</code>",
@@ -1068,18 +1023,22 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 362,
+          "line": 352,
           "column": 4,
-          "index": 13876
+          "index": 13493
         },
         "end": {
-          "line": 364,
+          "line": 354,
           "column": 5,
-          "index": 13966
+          "index": 13593
         }
       },
       "type": "function",
       "params": [
+        {
+          "name": "iterable",
+          "type": "Iterable"
+        },
         {
           "name": "iterator",
           "type": "((...args: any[]) => any)"
@@ -1110,6 +1069,7 @@
           "     * qx.Promise.reduce will start calling the reducer as soon as possible, this is why you might want to",
           "     * use it over qx.Promise.all (which awaits for the entire array before you can call Array#reduce on it).",
           "     *",
+          "     * @param iterable {Iterable} An iterable object, such as an Array",
           "     * @param reducer {Function} the callback, with <code>(value, index, length)</code>",
           "     * @param initialValue {Object?} optional initial value",
           "     * @return {qx.Promise}",
@@ -1122,6 +1082,13 @@
           }
         ],
         "@param": [
+          {
+            "name": "@param",
+            "body": "iterable {Iterable} An iterable object, such as an Array",
+            "paramName": "iterable",
+            "description": " An iterable object, such as an Array",
+            "type": "Iterable"
+          },
           {
             "name": "@param",
             "body": "reducer {Function} the callback, with <code>(value, index, length)</code>",
@@ -1150,18 +1117,22 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 387,
+          "line": 378,
           "column": 4,
-          "index": 15285
+          "index": 14983
         },
         "end": {
-          "line": 389,
+          "line": 380,
           "column": 5,
-          "index": 15382
+          "index": 15090
         }
       },
       "type": "function",
       "params": [
+        {
+          "name": "iterable",
+          "type": "Iterable"
+        },
         {
           "name": "reducer",
           "type": "((...args: any[]) => any)"
@@ -1194,14 +1165,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 394,
+          "line": 385,
           "column": 4,
-          "index": 15437
+          "index": 15145
         },
         "end": {
-          "line": 396,
+          "line": 387,
           "column": 5,
-          "index": 15558
+          "index": 15266
         }
       },
       "type": "function",
@@ -1232,14 +1203,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 401,
+          "line": 392,
           "column": 4,
-          "index": 15669
+          "index": 15377
         },
         "end": {
-          "line": 410,
+          "line": 401,
           "column": 5,
-          "index": 15992
+          "index": 15700
         }
       },
       "type": "function",
@@ -1263,14 +1234,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 415,
+          "line": 406,
           "column": 4,
-          "index": 16051
+          "index": 15759
         },
         "end": {
-          "line": 417,
+          "line": 408,
           "column": 5,
-          "index": 16123
+          "index": 15831
         }
       },
       "type": "function",
@@ -1298,14 +1269,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 422,
+          "line": 413,
           "column": 4,
-          "index": 16181
+          "index": 15889
         },
         "end": {
-          "line": 424,
+          "line": 415,
           "column": 5,
-          "index": 16253
+          "index": 15961
         }
       },
       "type": "function",
@@ -1333,14 +1304,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 435,
+          "line": 426,
           "column": 4,
-          "index": 16489
+          "index": 16197
         },
         "end": {
-          "line": 446,
+          "line": 437,
           "column": 5,
-          "index": 16870
+          "index": 16582
         }
       },
       "type": "function",
@@ -1371,14 +1342,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 451,
+          "line": 442,
           "column": 4,
-          "index": 16944
+          "index": 16656
         },
         "end": {
-          "line": 454,
+          "line": 445,
           "column": 5,
-          "index": 17099
+          "index": 16811
         }
       },
       "type": "function",
@@ -1397,10 +1368,8 @@
         "raw": [
           "*",
           "     * Returns the actual Promise implementation.",
-          "     * If the environment key `qx.Promise.useNativePromise` is set to true,",
-          "     * it will be qx.promise.NativeWrapper, otherwise it will be qx.promise.BluebirdImpl.Bluebird.",
           "     *",
-          "     * The underlying implementation may change without",
+          "     * Note that Bluebird is the current implementation, and may change without",
           "     * notice in the future; if you use this API you accept that this is a private",
           "     * implementation detail exposed for debugging or diagnosis purposes only.  For",
           "     * this reason, the toPromise() method is listed as deprecated starting from the",
@@ -1411,7 +1380,7 @@
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Returns the actual Promise implementation.\n If the environment key <code>qx.Promise.useNativePromise</code> is set to true,\n it will be qx.promise.NativeWrapper, otherwise it will be qx.promise.BluebirdImpl.Bluebird.\n The underlying implementation may change without\n notice in the future; if you use this API you accept that this is a private\n implementation detail exposed for debugging or diagnosis purposes only.  For\n this reason, the toPromise() method is listed as deprecated starting from the\n first release</p>"
+            "body": "<p>Returns the actual Promise implementation.\n Note that Bluebird is the current implementation, and may change without\n notice in the future; if you use this API you accept that this is a private\n implementation detail exposed for debugging or diagnosis purposes only.  For\n this reason, the toPromise() method is listed as deprecated starting from the\n first release</p>"
           }
         ],
         "@deprecated": [
@@ -1424,14 +1393,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 468,
+          "line": 457,
           "column": 4,
-          "index": 17745
+          "index": 17306
         },
         "end": {
-          "line": 470,
+          "line": 459,
           "column": 5,
-          "index": 17787
+          "index": 17348
         }
       },
       "type": "function",
@@ -1440,32 +1409,83 @@
     }
   },
   "statics": {
-    "Impl": {
+    "Bluebird": {
       "jsdoc": {
         "raw": [
-          "*",
-          "     * Internal implementation of the promise. Either Bluebird or the native Promise wrapper",
-          "     * (qx.promise.NativeWrapper) depending on the environment setting `qx.Promise.useNativePromise`.",
-          "     "
+          "* Bluebird Promise library; always available "
         ],
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Internal implementation of the promise. Either Bluebird or the native Promise wrapper\n (qx.promise.NativeWrapper) depending on the environment setting <code>qx.Promise.useNativePromise</code>.</p>"
+            "body": "<p>Bluebird Promise library; always available</p>"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 478,
+          "line": 464,
           "column": 4,
-          "index": 18022
+          "index": 17426
         },
         "end": {
-          "line": 478,
-          "column": 14,
-          "index": 18032
+          "line": 464,
+          "column": 18,
+          "index": 17440
+        }
+      },
+      "appearsIn": []
+    },
+    "Native": {
+      "jsdoc": {
+        "raw": [
+          "* Native Promise library; only available if the browser supports it "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Native Promise library; only available if the browser supports it</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 467,
+          "column": 4,
+          "index": 17524
+        },
+        "end": {
+          "line": 467,
+          "column": 16,
+          "index": 17536
+        }
+      },
+      "appearsIn": []
+    },
+    "Promise": {
+      "jsdoc": {
+        "raw": [
+          "* Promise library, either the Native one or a Polyfill; reliable choice for native Promises "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Promise library, either the Native one or a Polyfill; reliable choice for native Promises</p>"
+          }
+        ]
+      },
+      "access": "public",
+      "location": {
+        "start": {
+          "line": 470,
+          "column": 4,
+          "index": 17644
+        },
+        "end": {
+          "line": 470,
+          "column": 17,
+          "index": 17657
         }
       },
       "appearsIn": []
@@ -1487,14 +1507,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 483,
+          "line": 475,
           "column": 4,
-          "index": 18175
+          "index": 17800
         },
         "end": {
-          "line": 483,
+          "line": 475,
           "column": 47,
-          "index": 18218
+          "index": 17843
         }
       },
       "appearsIn": []
@@ -1552,14 +1572,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 507,
+          "line": 499,
           "column": 4,
-          "index": 19187
+          "index": 18812
         },
         "end": {
-          "line": 525,
+          "line": 515,
           "column": 5,
-          "index": 19690
+          "index": 19297
         }
       },
       "type": "function",
@@ -1623,14 +1643,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 538,
+          "line": 528,
           "column": 4,
-          "index": 20291
+          "index": 19898
         },
         "end": {
-          "line": 549,
+          "line": 539,
           "column": 5,
-          "index": 20605
+          "index": 20216
         }
       },
       "type": "function",
@@ -1696,14 +1716,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 557,
+          "line": 547,
           "column": 4,
-          "index": 20958
+          "index": 20569
         },
         "end": {
-          "line": 570,
+          "line": 560,
           "column": 5,
-          "index": 21457
+          "index": 21068
         }
       },
       "type": "function",
@@ -1763,14 +1783,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 580,
+          "line": 570,
           "column": 4,
-          "index": 21865
+          "index": 21476
         },
         "end": {
-          "line": 598,
+          "line": 588,
           "column": 5,
-          "index": 22445
+          "index": 22056
         }
       },
       "type": "function",
@@ -1824,14 +1844,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 608,
+          "line": 598,
           "column": 4,
-          "index": 22806
+          "index": 22417
         },
         "end": {
-          "line": 610,
+          "line": 600,
           "column": 5,
-          "index": 22889
+          "index": 22500
         }
       },
       "type": "function",
@@ -1883,14 +1903,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 618,
+          "line": 608,
           "column": 4,
-          "index": 23180
+          "index": 22791
         },
         "end": {
-          "line": 620,
+          "line": 610,
           "column": 5,
-          "index": 23265
+          "index": 22876
         }
       },
       "type": "function",
@@ -1943,14 +1963,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 635,
+          "line": 625,
           "column": 4,
-          "index": 23686
+          "index": 23297
         },
         "end": {
-          "line": 637,
+          "line": 627,
           "column": 5,
-          "index": 23769
+          "index": 23380
         }
       },
       "type": "function",
@@ -2012,14 +2032,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 649,
+          "line": 639,
           "column": 4,
-          "index": 24322
+          "index": 23933
         },
         "end": {
-          "line": 651,
+          "line": 641,
           "column": 5,
-          "index": 24414
+          "index": 24025
         }
       },
       "type": "function",
@@ -2090,14 +2110,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 667,
+          "line": 657,
           "column": 4,
-          "index": 25336
+          "index": 24947
         },
         "end": {
-          "line": 669,
+          "line": 659,
           "column": 5,
-          "index": 25434
+          "index": 25045
         }
       },
       "type": "function",
@@ -2186,14 +2206,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 695,
+          "line": 685,
           "column": 4,
-          "index": 26579
+          "index": 26190
         },
         "end": {
-          "line": 697,
+          "line": 687,
           "column": 5,
-          "index": 26687
+          "index": 26298
         }
       },
       "type": "function",
@@ -2304,14 +2324,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 740,
+          "line": 730,
           "column": 4,
-          "index": 28689
+          "index": 28300
         },
         "end": {
-          "line": 742,
+          "line": 732,
           "column": 5,
-          "index": 28791
+          "index": 28402
         }
       },
       "type": "function",
@@ -2408,14 +2428,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 779,
+          "line": 769,
           "column": 4,
-          "index": 30643
+          "index": 30254
         },
         "end": {
-          "line": 781,
+          "line": 771,
           "column": 5,
-          "index": 30748
+          "index": 30359
         }
       },
       "type": "function",
@@ -2516,14 +2536,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 819,
+          "line": 809,
           "column": 4,
-          "index": 32688
+          "index": 32299
         },
         "end": {
-          "line": 821,
+          "line": 811,
           "column": 5,
-          "index": 32800
+          "index": 32411
         }
       },
       "type": "function",
@@ -2583,14 +2603,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 829,
+          "line": 819,
           "column": 4,
-          "index": 33117
+          "index": 32728
         },
         "end": {
-          "line": 834,
+          "line": 824,
           "column": 5,
-          "index": 33289
+          "index": 32904
         }
       },
       "type": "function",
@@ -2650,14 +2670,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 850,
+          "line": 840,
           "column": 4,
-          "index": 34126
+          "index": 33741
         },
         "end": {
-          "line": 852,
+          "line": 842,
           "column": 5,
-          "index": 34210
+          "index": 33825
         }
       },
       "type": "function",
@@ -2764,14 +2784,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 907,
+          "line": 897,
           "column": 4,
-          "index": 36064
+          "index": 35679
         },
         "end": {
-          "line": 922,
+          "line": 899,
           "column": 5,
-          "index": 36428
+          "index": 35776
         }
       },
       "type": "function",
@@ -2779,11 +2799,62 @@
         {
           "name": "f",
           "type": "((...args: any[]) => any)"
+        },
+        {
+          "name": "options",
+          "type": "Map",
+          "optional": true
         }
       ],
       "returnType": {
         "type": "qx.Promise"
       },
+      "appearsIn": []
+    },
+    "__attachBluebird": {
+      "jsdoc": {
+        "raw": [
+          "*",
+          "     * Called when the Bluebird Promise class is loaded",
+          "     * @param Promise {Class} the Promise class",
+          "     "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Called when the Bluebird Promise class is loaded</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "Promise {Class} the Promise class",
+            "paramName": "Promise",
+            "description": " the Promise class",
+            "type": "qx.Class"
+          }
+        ]
+      },
+      "access": "private",
+      "location": {
+        "start": {
+          "line": 911,
+          "column": 4,
+          "index": 36043
+        },
+        "end": {
+          "line": 918,
+          "column": 5,
+          "index": 36319
+        }
+      },
+      "type": "function",
+      "params": [
+        {
+          "name": "Promise",
+          "type": "qx.Class"
+        }
+      ],
       "appearsIn": []
     },
     "__initialized": {
@@ -2801,14 +2872,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 931,
+          "line": 921,
           "column": 4,
-          "index": 36630
+          "index": 36381
         },
         "end": {
-          "line": 931,
+          "line": 921,
           "column": 24,
-          "index": 36650
+          "index": 36401
         }
       },
       "appearsIn": []
@@ -2830,14 +2901,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 936,
+          "line": 926,
           "column": 4,
-          "index": 36701
+          "index": 36452
         },
         "end": {
-          "line": 960,
+          "line": 950,
           "column": 5,
-          "index": 37451
+          "index": 37202
         }
       },
       "type": "function",
@@ -2870,14 +2941,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 966,
+          "line": 956,
           "column": 4,
-          "index": 37594
+          "index": 37345
         },
         "end": {
-          "line": 985,
+          "line": 975,
           "column": 5,
-          "index": 38175
+          "index": 37926
         }
       },
       "type": "function",
@@ -2924,14 +2995,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 992,
+          "line": 982,
           "column": 4,
-          "index": 38307
+          "index": 38058
         },
         "end": {
-          "line": 1001,
+          "line": 991,
           "column": 5,
-          "index": 38540
+          "index": 38295
         }
       },
       "type": "function",
@@ -2993,14 +3064,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 1012,
+          "line": 1002,
           "column": 4,
-          "index": 39059
+          "index": 38814
         },
         "end": {
-          "line": 1029,
+          "line": 1019,
           "column": 5,
-          "index": 39592
+          "index": 39347
         }
       },
       "type": "function",
@@ -3024,7 +3095,7 @@
       "jsdoc": {
         "raw": [
           "*",
-          "     * Helper method used to call a Promise method in the underlying implementation",
+          "     * Helper method used to call a Bluebird Promise method",
           "     * @param methodName {String} method name to call",
           "     * @param args {Array} arguments to pass",
           "     * @param minArgs {Integer?} {@see __bindArgs}",
@@ -3034,7 +3105,7 @@
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Helper method used to call a Promise method in the underlying implementation</p>"
+            "body": "<p>Helper method used to call a Bluebird Promise method</p>"
           }
         ],
         "@param": [
@@ -3073,14 +3144,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 1038,
+          "line": 1028,
           "column": 4,
-          "index": 39874
+          "index": 39605
         },
         "end": {
-          "line": 1046,
+          "line": 1036,
           "column": 5,
-          "index": 40136
+          "index": 39875
         }
       },
       "type": "function",
@@ -3122,14 +3193,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 1052,
+          "line": 1042,
           "column": 4,
-          "index": 40331
+          "index": 40070
         },
         "end": {
-          "line": 1064,
+          "line": 1054,
           "column": 5,
-          "index": 40659
+          "index": 40398
         }
       },
       "type": "function",

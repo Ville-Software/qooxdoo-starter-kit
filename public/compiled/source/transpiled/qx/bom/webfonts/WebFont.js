@@ -49,7 +49,7 @@
         init: false,
         check: "Boolean",
         event: "changeValid",
-        apply: "__applyValid__P_121_0"
+        apply: "__applyValid__P_142_0"
       }
     },
     /*
@@ -73,8 +73,8 @@
     */
 
     members: {
-      __families__P_121_1: null,
-      __allValidPromise__P_121_2: null,
+      __families__P_142_1: null,
+      __allValidPromise__P_142_2: null,
       toString() {
         let fontWeight = this.isBold() ? "bold" : "normal";
         if (this.getWeight() !== null) {
@@ -100,7 +100,7 @@
             promises.push(validator.isValid());
           }
         }
-        this.__allValidPromise__P_121_2 = qx.Promise.all(promises).then(results => {
+        this.__allValidPromise__P_142_2 = qx.Promise.all(promises).then(results => {
           if (results.length == 0 || results.indexOf(true) > -1) {
             this.setValid(true);
           } else {
@@ -109,9 +109,9 @@
         });
       },
       async checkValid() {
-        await this.__allValidPromise__P_121_2;
+        await this.__allValidPromise__P_142_2;
       },
-      __applyValid__P_121_0(value) {
+      __applyValid__P_142_0(value) {
         qx.bom.Label.flushSizeCache();
         this.fireDataEvent("changeStatus", {
           family: this.getFamily(),
@@ -129,4 +129,4 @@
   qx.bom.webfonts.WebFont.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=WebFont.js.map?dt=1769806690508
+//# sourceMappingURL=WebFont.js.map?dt=1791841652016

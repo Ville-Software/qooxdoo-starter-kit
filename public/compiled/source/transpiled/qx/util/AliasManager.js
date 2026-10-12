@@ -69,7 +69,7 @@
       qx.util.ValueManager.constructor.call(this);
 
       // Contains defined aliases (like icons/, widgets/, application/, ...)
-      this.__aliases__P_179_0 = {};
+      this.__aliases__P_117_0 = {};
 
       // Define static alias from setting
       this.add("static", "qx/static");
@@ -81,7 +81,7 @@
     */
 
     members: {
-      __aliases__P_179_0: null,
+      __aliases__P_117_0: null,
       /**
        * pre-process incoming dynamic value
        *
@@ -97,11 +97,11 @@
             dynamics[value] = false;
             return value;
           }
-          if (this.__aliases__P_179_0[value]) {
-            return this.__aliases__P_179_0[value];
+          if (this.__aliases__P_117_0[value]) {
+            return this.__aliases__P_117_0[value];
           }
           var alias = value.substring(0, value.indexOf("/"));
-          var resolved = this.__aliases__P_179_0[alias];
+          var resolved = this.__aliases__P_117_0[alias];
           if (resolved !== undefined) {
             dynamics[value] = resolved + value.substring(alias.length);
           }
@@ -116,7 +116,7 @@
        */
       add(alias, base) {
         // Store new alias value
-        this.__aliases__P_179_0[alias] = base;
+        this.__aliases__P_117_0[alias] = base;
 
         // Localify stores
         var dynamics = this._getDynamic();
@@ -134,7 +134,7 @@
        * @param alias {String} alias name for the resource path/url
        */
       remove(alias) {
-        delete this.__aliases__P_179_0[alias];
+        delete this.__aliases__P_117_0[alias];
 
         // No signal for depending objects here. These
         // will informed with the new value using add().
@@ -159,8 +159,8 @@
        */
       getAliases() {
         var res = {};
-        for (var key in this.__aliases__P_179_0) {
-          res[key] = this.__aliases__P_179_0[key];
+        for (var key in this.__aliases__P_117_0) {
+          res[key] = this.__aliases__P_117_0[key];
         }
         return res;
       }
@@ -169,4 +169,4 @@
   qx.util.AliasManager.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=AliasManager.js.map?dt=1769806693539
+//# sourceMappingURL=AliasManager.js.map?dt=1791841651645

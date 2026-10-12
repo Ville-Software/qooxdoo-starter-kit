@@ -107,9 +107,8 @@
       },
       "type": "function",
       "params": [],
-      "overriddenFrom": "ville.ui.core.Widget",
+      "overriddenFrom": "qx.ui.core.Widget",
       "appearsIn": [
-        "ville.ui.core.Widget",
         "qx.ui.core.Widget"
       ]
     },

@@ -58,7 +58,7 @@
     */
 
     members: {
-      __rich__P_38_0: null,
+      __rich__P_140_0: null,
       /*
       ---------------------------------------------------------------------------
         ELEMENT API
@@ -76,7 +76,7 @@
       },
       // overridden
       _createDomElement() {
-        var rich = this.__rich__P_38_0;
+        var rich = this.__rich__P_140_0;
         var el = qx.bom.Label.create(this._content, rich);
         el.style.overflow = "hidden";
         return el;
@@ -104,10 +104,10 @@
           throw new Error("The label mode cannot be modified after initial creation");
         }
         value = !!value;
-        if (this.__rich__P_38_0 == value) {
+        if (this.__rich__P_140_0 == value) {
           return this;
         }
-        this.__rich__P_38_0 = value;
+        this.__rich__P_140_0 = value;
         return this;
       },
       /**
@@ -141,4 +141,4 @@
   qx.html.Label.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Label.js.map?dt=1769806687555
+//# sourceMappingURL=Label.js.map?dt=1791841651999

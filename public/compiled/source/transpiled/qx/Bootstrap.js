@@ -411,7 +411,7 @@
         construct.self = clazz.constructor = proto.constructor = clazz;
       },
       /** Private list of classes which have a defer method that needs to be executed */
-      __pendingDefers__P_32_0: [],
+      __pendingDefers__P_31_0: [],
       /**
        * Adds a callback for a class so that it's defer method can be called, either after all classes
        * are loaded or when absolutely necessary because of load-time requirements of other classes.
@@ -421,7 +421,7 @@
        */
       addPendingDefer(clazz, cb) {
         if (qx.$$loader && qx.$$loader.delayDefer) {
-          this.__pendingDefers__P_32_0.push(clazz);
+          this.__pendingDefers__P_31_0.push(clazz);
           clazz.$$pendingDefer = cb;
         } else {
           cb.call(clazz);
@@ -494,8 +494,8 @@
           return clazz;
         };
         if (!dbClassInfo) {
-          var pendingDefers = this.__pendingDefers__P_32_0;
-          this.__pendingDefers__P_32_0 = [];
+          var pendingDefers = this.__pendingDefers__P_31_0;
+          this.__pendingDefers__P_31_0 = [];
           pendingDefers.forEach(execute);
           return;
         }
@@ -555,7 +555,7 @@
        * @internal
        * @type {String[]}
        */
-      __shadowedKeys__P_32_1: ["isPrototypeOf", "hasOwnProperty", "toLocaleString", "toString", "valueOf", "propertyIsEnumerable", "constructor"],
+      __shadowedKeys__P_31_1: ["isPrototypeOf", "hasOwnProperty", "toLocaleString", "toString", "valueOf", "propertyIsEnumerable", "constructor"],
       /**
        * Get the keys of a map as array as returned by a "for ... in" statement.
        *
@@ -581,7 +581,7 @@
           // IE does not return "shadowed" keys even if they are defined directly
           // in the object. This is incompatible with the ECMA standard!!
           // This is why this checks are needed.
-          var shadowedKeys = qx.Bootstrap.__shadowedKeys__P_32_1;
+          var shadowedKeys = qx.Bootstrap.__shadowedKeys__P_31_1;
           for (var i = 0, a = shadowedKeys, l = a.length; i < l; i++) {
             if (hasOwnProperty.call(map, a[i])) {
               arr.push(a[i]);
@@ -614,7 +614,7 @@
        * @internal
        * @type {Map}
        */
-      __classToTypeMap__P_32_2: {
+      __classToTypeMap__P_31_2: {
         "[object String]": "String",
         "[object Array]": "Array",
         "[object Object]": "Object",
@@ -714,7 +714,7 @@
           return "Null";
         }
         var classString = Object.prototype.toString.call(value);
-        return qx.Bootstrap.__classToTypeMap__P_32_2[classString] || classString.slice(8, -1);
+        return qx.Bootstrap.__classToTypeMap__P_31_2[classString] || classString.slice(8, -1);
       },
       /**
        * Whether the value is a string.
@@ -745,13 +745,10 @@
         return value !== null && (value instanceof Array || value && qx.data && qx.data.IListData && qx.util.OOUtil.hasInterface(value.constructor, qx.data.IListData) || qx.Bootstrap.getClass(value) === "Array" || !!value && !!value.$$isArray);
       },
       /**
-       * Whether the value is an POJO (ie {foo: 1})
-       * or an object which is created from a ES6-style class or prototypical-inheritance-based class;
-       * If you need to determine whether something is a POJO and not created from a class, use isPojo instead
+       * Whether the value is an object. Note that built-in types like Window are
+       * not reported to be objects.
        *
-       * Note that built-in types like Window are not deemed to be objects.
-       *
-       * @param {*} value value to check.
+       * @param value {var} Value to check.
        * @return {Boolean} Whether the value is an object.
        */
       isObject(value) {
@@ -838,4 +835,4 @@
   qx.Bootstrap.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Bootstrap.js.map?dt=1769806687063
+//# sourceMappingURL=Bootstrap.js.map?dt=1791841650129

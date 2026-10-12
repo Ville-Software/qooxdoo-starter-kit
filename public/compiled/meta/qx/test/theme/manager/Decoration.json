@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471335975,
-  "lastModifiedIso": "2026-01-03T20:15:35.975Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Decoration.js",
+  "lastModified": 1739993515486,
+  "lastModifiedIso": "2025-02-19T19:31:55.486Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Decoration.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 472
     },
     "end": {
-      "line": 229,
+      "line": 221,
       "column": 3,
-      "index": 5571
+      "index": 5481
     }
   },
   "className": "qx.test.theme.manager.Decoration",
@@ -57,7 +57,7 @@
       },
       "appearsIn": []
     },
-    "__savedListeners": {
+    "__formerListener": {
       "jsdoc": null,
       "access": "private",
       "location": {
@@ -86,7 +86,7 @@
         "end": {
           "line": 37,
           "column": 5,
-          "index": 1056
+          "index": 1044
         }
       },
       "type": "function",
@@ -100,12 +100,12 @@
         "start": {
           "line": 39,
           "column": 4,
-          "index": 1063
+          "index": 1051
         },
         "end": {
-          "line": 60,
+          "line": 52,
           "column": 5,
-          "index": 1599
+          "index": 1509
         }
       },
       "type": "function",
@@ -117,14 +117,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 62,
+          "line": 54,
           "column": 4,
-          "index": 1606
+          "index": 1516
         },
         "end": {
-          "line": 86,
+          "line": 78,
           "column": 5,
-          "index": 2224
+          "index": 2134
         }
       },
       "type": "function",
@@ -136,14 +136,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 88,
+          "line": 80,
           "column": 4,
-          "index": 2231
+          "index": 2141
         },
         "end": {
-          "line": 117,
+          "line": 109,
           "column": 5,
-          "index": 2980
+          "index": 2890
         }
       },
       "type": "function",
@@ -155,14 +155,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 119,
+          "line": 111,
           "column": 4,
-          "index": 2987
+          "index": 2897
         },
         "end": {
-          "line": 152,
+          "line": 144,
           "column": 5,
-          "index": 3809
+          "index": 3719
         }
       },
       "type": "function",
@@ -174,14 +174,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 154,
+          "line": 146,
           "column": 4,
-          "index": 3816
+          "index": 3726
         },
         "end": {
-          "line": 187,
+          "line": 179,
           "column": 5,
-          "index": 4528
+          "index": 4438
         }
       },
       "type": "function",
@@ -193,14 +193,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 189,
+          "line": 181,
           "column": 4,
-          "index": 4535
+          "index": 4445
         },
         "end": {
-          "line": 227,
+          "line": 219,
           "column": 5,
-          "index": 5563
+          "index": 5473
         }
       },
       "type": "function",

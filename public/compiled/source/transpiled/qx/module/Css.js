@@ -63,7 +63,7 @@
                 position: "absolute",
                 visibility: "hidden"
               };
-              elementHeight = qx.module.Css.__swap__P_206_0(elem, stylesToSwap, "_getHeight", this);
+              elementHeight = qx.module.Css.__swap__P_168_0(elem, stylesToSwap, "_getHeight", this);
             } else {
               elementHeight = qx.bom.element.Dimension.getHeight(elem);
             }
@@ -95,7 +95,7 @@
                 position: "absolute",
                 visibility: "hidden"
               };
-              elementWidth = qx.module.Css.__swap__P_206_0(elem, stylesToSwap, "_getWidth", this);
+              elementWidth = qx.module.Css.__swap__P_168_0(elem, stylesToSwap, "_getWidth", this);
             } else {
               elementWidth = qx.bom.element.Dimension.getWidth(elem);
             }
@@ -128,7 +128,7 @@
               visibility: "hidden",
               display: "block"
             };
-            contentHeight = qx.module.Css.__swap__P_206_0(obj, stylesToSwap, "_getContentHeight", this);
+            contentHeight = qx.module.Css.__swap__P_168_0(obj, stylesToSwap, "_getContentHeight", this);
           } else {
             contentHeight = qx.bom.element.Dimension.getContentHeight(obj);
           }
@@ -156,7 +156,7 @@
               visibility: "hidden",
               display: "block"
             };
-            contentWidth = qx.module.Css.__swap__P_206_0(obj, stylesToSwap, "_getContentWidth", this);
+            contentWidth = qx.module.Css.__swap__P_168_0(obj, stylesToSwap, "_getContentWidth", this);
           } else {
             contentWidth = qx.bom.element.Dimension.getContentWidth(obj);
           }
@@ -167,7 +167,7 @@
       /**
        * Maps HTML elements to their default "display" style values.
        */
-      __displayDefaults__P_206_1: {},
+      __displayDefaults__P_168_1: {},
       /**
        * Attempts tp determine the default "display" style value for
        * elements with the given tag name.
@@ -177,8 +177,8 @@
        * @return {String} The default "display" value, e.g. <code>inline</code>
        * or <code>block</code>
        */
-      __getDisplayDefault__P_206_2(tagName, doc) {
-        var defaults = qx.module.Css.__displayDefaults__P_206_1;
+      __getDisplayDefault__P_168_2(tagName, doc) {
+        var defaults = qx.module.Css.__displayDefaults__P_168_1;
         if (!defaults[tagName]) {
           var docu = doc || document;
           var tempEl = qxWeb(docu.createElement(tagName)).appendTo(doc.body);
@@ -199,7 +199,7 @@
        * @param context {Object} the context in which the callback should be called
        * @return {Object} the return value of the callback
        */
-      __swap__P_206_0(element, styles, methodName, context) {
+      __swap__P_168_0(element, styles, methodName, context) {
         // get the current values
         var currentValues = {};
         for (var styleProperty in styles) {
@@ -283,7 +283,7 @@
               newVal = prevVal;
             } else {
               var doc = qxWeb.getDocument(item[0]);
-              newVal = qx.module.Css.__getDisplayDefault__P_206_2(item[0].tagName, doc);
+              newVal = qx.module.Css.__getDisplayDefault__P_168_2(item[0].tagName, doc);
             }
             item.setStyle("display", newVal);
             item[0].$$qPrevDisp = "none";
@@ -545,4 +545,4 @@
   qx.module.Css.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Css.js.map?dt=1769806694654
+//# sourceMappingURL=Css.js.map?dt=1791841652340

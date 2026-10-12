@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471335647,
-  "lastModifiedIso": "2026-01-03T20:15:35.647Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/form/CheckBox.js",
+  "lastModified": 1739993515350,
+  "lastModifiedIso": "2025-02-19T19:31:55.350Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/form/CheckBox.js",
   "type": "class",
   "location": {
     "start": {
@@ -148,10 +148,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "required": {
       "location": {
@@ -184,10 +184,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "invalidMessage": {
       "location": {
@@ -220,10 +220,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "requiredInvalidMessage": {
       "location": {
@@ -257,10 +257,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "model": {
       "location": {
@@ -307,10 +307,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MModelProperty",
       "appearsIn": [
         "qx.ui.form.MModelProperty"
-      ],
-      "mixin": "qx.ui.form.MModelProperty"
+      ]
     }
   },
   "members": {
@@ -389,10 +389,8 @@
       },
       "mixin": "qx.ui.core.MExecutable",
       "appearsIn": [
-        "qx.ui.form.ToggleButton",
         "qx.ui.core.MExecutable"
-      ],
-      "overriddenFrom": "qx.ui.form.ToggleButton"
+      ]
     },
     "_applyValue": {
       "jsdoc": {
@@ -455,10 +453,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "__onChangeLocale": {
       "jsdoc": {
@@ -485,10 +483,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {Event} the change event",
-            "paramName": "e",
-            "description": " the change event",
-            "type": "Event"
+            "body": "e {Event} the change event"
           }
         ]
       },
@@ -505,10 +500,10 @@
           "index": 2607
         }
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "_applyModel": {
       "jsdoc": {
@@ -538,10 +533,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.form.MModelProperty",
       "appearsIn": [
         "qx.ui.form.MModelProperty"
-      ],
-      "mixin": "qx.ui.form.MModelProperty"
+      ]
     }
   },
   "statics": {}

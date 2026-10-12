@@ -38,8 +38,8 @@
    */
   qx.Mixin.define("qx.ui.core.MPlacement", {
     statics: {
-      __visible__P_143_0: null,
-      __direction__P_143_1: "left",
+      __visible__P_108_0: null,
+      __direction__P_108_1: "left",
       /**
        * Set the always visible element. If an element is set, the
        * {@link #moveTo} method takes care of every move and tries not to cover
@@ -48,7 +48,7 @@
        * @param elem {qx.ui.core.Widget} The widget which should always be visible.
        */
       setVisibleElement(elem) {
-        this.__visible__P_143_0 = elem;
+        this.__visible__P_108_0 = elem;
       },
       /**
        * Returns the given always visible element. See {@link #setVisibleElement}
@@ -57,7 +57,7 @@
        * @return {qx.ui.core.Widget|null} The given widget.
        */
       getVisibleElement() {
-        return this.__visible__P_143_0;
+        return this.__visible__P_108_0;
       },
       /**
        * Set the move direction for an element which hides always visible element.
@@ -67,7 +67,7 @@
        */
       setMoveDirection(direction) {
         if (direction === "top" || direction === "left") {
-          this.__direction__P_143_1 = direction;
+          this.__direction__P_108_1 = direction;
         } else {
           throw new Error("Invalid value for the parameter 'direction' [qx.ui.core.MPlacement.setMoveDirection()], the value was '" + direction + "' " + "but 'top' or 'left' are allowed.");
         }
@@ -79,7 +79,7 @@
        * @return {String} The move direction.
        */
       getMoveDirection() {
-        return this.__direction__P_143_1;
+        return this.__direction__P_108_1;
       }
     },
     properties: {
@@ -179,12 +179,11 @@
       }
     },
     members: {
-      __ptwLiveUpdater__P_143_2: null,
-      __ptwLiveDisappearListener__P_143_3: null,
-      __ptwLiveUpdateDisappearListener__P_143_4: null,
+      __ptwLiveUpdater__P_108_2: null,
+      __ptwLiveDisappearListener__P_108_3: null,
+      __ptwLiveUpdateDisappearListener__P_108_4: null,
       /**@type {Record<"top" | "right" | "bottom" | "left", number> | null}*/
-      __lastKnownCoords__P_143_5: null,
-      __lastKnownSize__P_143_6: null,
+      __lastKnownCoords__P_108_5: null,
       /**
        * Returns the location data like {qx.bom.element.Location#get} does,
        * but does not rely on DOM elements coordinates to be rendered. Instead,
@@ -320,27 +319,24 @@
         // Use the idle event to make sure that the widget's position gets
         // updated automatically (e.g. the widget gets scrolled).
         if (liveupdate) {
-          this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_143_7();
+          this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_108_6();
 
           // Bind target and livupdate to placeToWidget
-          this.__ptwLiveUpdater__P_143_2 = qx.lang.Function.bind(this.placeToWidget, this, target, false);
-          qx.event.Idle.getInstance().addListener("interval", this.__ptwLiveUpdater__P_143_2);
+          this.__ptwLiveUpdater__P_108_2 = qx.lang.Function.bind(this.placeToWidget, this, target, false);
+          qx.event.Idle.getInstance().addListener("interval", this.__ptwLiveUpdater__P_108_2);
 
           // Remove the listener when the element disappears.
-          this.__ptwLiveUpdateDisappearListener__P_143_4 = function () {
-            this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_143_7();
+          this.__ptwLiveUpdateDisappearListener__P_108_4 = function () {
+            this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_108_6();
           };
-          this.addListener("disappear", this.__ptwLiveUpdateDisappearListener__P_143_4, this);
+          this.addListener("disappear", this.__ptwLiveUpdateDisappearListener__P_108_4, this);
         }
         var coords = target.getContentLocation() || this.getLayoutLocation(target);
-        var size = this.__getPlacementSize__P_143_8();
         if (coords != null) {
-          const boundsAreEqual = (bound1, bound2) => bound1 && bound2 && bound1.top === bound2.top && bound1.right === bound2.right && bound1.bottom === bound2.bottom && bound1.left === bound2.left;
-          if (boundsAreEqual(coords, this.__lastKnownCoords__P_143_5) && boundsAreEqual(size, this.__lastKnownSize__P_143_6)) {
+          if (coords.top === this.__lastKnownCoords__P_108_5?.top && coords.right === this.__lastKnownCoords__P_108_5?.right && coords.bottom === this.__lastKnownCoords__P_108_5?.bottom && coords.left === this.__lastKnownCoords__P_108_5?.left) {
             return true;
           }
-          this.__lastKnownCoords__P_143_5 = coords;
-          this.__lastKnownSize__P_143_6 = size;
+          this.__lastKnownCoords__P_108_5 = coords;
           this._place(coords);
           return true;
         } else {
@@ -350,14 +346,14 @@
       /**
        * Removes all resources allocated by the last run of placeToWidget with liveupdate=true
        */
-      __cleanupFromLastPlaceToWidgetLiveUpdate__P_143_7() {
-        if (this.__ptwLiveUpdater__P_143_2) {
-          qx.event.Idle.getInstance().removeListener("interval", this.__ptwLiveUpdater__P_143_2);
-          this.__ptwLiveUpdater__P_143_2 = null;
+      __cleanupFromLastPlaceToWidgetLiveUpdate__P_108_6() {
+        if (this.__ptwLiveUpdater__P_108_2) {
+          qx.event.Idle.getInstance().removeListener("interval", this.__ptwLiveUpdater__P_108_2);
+          this.__ptwLiveUpdater__P_108_2 = null;
         }
-        if (this.__ptwLiveUpdateDisappearListener__P_143_4) {
-          this.removeListener("disappear", this.__ptwLiveUpdateDisappearListener__P_143_4, this);
-          this.__ptwLiveUpdateDisappearListener__P_143_4 = null;
+        if (this.__ptwLiveUpdateDisappearListener__P_108_4) {
+          this.removeListener("disappear", this.__ptwLiveUpdateDisappearListener__P_108_4, this);
+          this.__ptwLiveUpdateDisappearListener__P_108_4 = null;
         }
       },
       /**
@@ -396,14 +392,14 @@
         // updated automatically (e.g. the widget gets scrolled).
         if (liveupdate) {
           // Bind target and livupdate to placeToWidget
-          this.__ptwLiveUpdater__P_143_2 = qx.lang.Function.bind(this.placeToElement, this, elem, false);
-          qx.event.Idle.getInstance().addListener("interval", this.__ptwLiveUpdater__P_143_2);
+          this.__ptwLiveUpdater__P_108_2 = qx.lang.Function.bind(this.placeToElement, this, elem, false);
+          qx.event.Idle.getInstance().addListener("interval", this.__ptwLiveUpdater__P_108_2);
 
           // Remove the listener when the element disappears.
           this.addListener("disappear", () => {
-            if (this.__ptwLiveUpdater__P_143_2) {
-              qx.event.Idle.getInstance().removeListener("interval", this.__ptwLiveUpdater__P_143_2);
-              this.__ptwLiveUpdater__P_143_2 = null;
+            if (this.__ptwLiveUpdater__P_108_2) {
+              qx.event.Idle.getInstance().removeListener("interval", this.__ptwLiveUpdater__P_108_2);
+              this.__ptwLiveUpdater__P_108_2 = null;
             }
           });
         }
@@ -446,23 +442,18 @@
        * <code>_computePlacementSize</code>, which returns the size.
        *
        *  @param callback {Function} This function will be called with the size as
-       *    first argument. If it is null, the size is returned directly.
+       *    first argument
        */
-      __getPlacementSize__P_143_8(callback) {
+      __getPlacementSize__P_108_7(callback) {
         var size = null;
         if (this._computePlacementSize) {
           var size = this._computePlacementSize();
         } else if (this.isVisible()) {
           var size = this.getBounds();
         }
-        if (!callback) {
-          return {
-            ...size
-          };
-        }
         if (size == null) {
           this.addListenerOnce("appear", () => {
-            this.__getPlacementSize__P_143_8(callback);
+            this.__getPlacementSize__P_108_7(callback);
           });
         } else {
           callback.call(this, size);
@@ -477,7 +468,7 @@
        *   and <code>bottom</code>.
        */
       _place(coords) {
-        this.__getPlacementSize__P_143_8(function (size) {
+        this.__getPlacementSize__P_108_7(function (size) {
           var result = qx.util.placement.Placement.compute(size, this.getLayoutParent().getBounds(), coords, this._getPlacementOffsets(), this.getPosition(), this.getPlacementModeX(), this.getPlacementModeY());
 
           // state handling for tooltips e.g.
@@ -489,10 +480,10 @@
       }
     },
     destruct() {
-      this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_143_7();
+      this.__cleanupFromLastPlaceToWidgetLiveUpdate__P_108_6();
     }
   });
   qx.ui.core.MPlacement.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MPlacement.js.map?dt=1769806692209
+//# sourceMappingURL=MPlacement.js.map?dt=1791841651510

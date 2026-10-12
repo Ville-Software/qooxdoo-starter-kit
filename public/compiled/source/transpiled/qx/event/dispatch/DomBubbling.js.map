@@ -29,7 +29,7 @@
     "DomBubbling"
   ],
   "sources": [
-    "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class/qx/event/dispatch/DomBubbling.js"
+    "/usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/event/dispatch/DomBubbling.js"
   ],
   "sourcesContent": [
     "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Fabian Jakobs (fjakobs)\n     * Sebastian Werner (wpbasti)\n\n************************************************************************ */\n\n/**\n * Event dispatcher for all bubbling events on DOM elements.\n */\nqx.Class.define(\"qx.event.dispatch.DomBubbling\", {\n  extend: qx.event.dispatch.AbstractBubbling,\n\n  statics: {\n    /** @type {Integer} Priority of this dispatcher */\n    PRIORITY: qx.event.Registration.PRIORITY_NORMAL\n  },\n\n  members: {\n    // overridden\n    _getParent(target) {\n      return target.parentNode;\n    },\n\n    // interface implementation\n    canDispatchEvent(target, event, type) {\n      return target.nodeType !== undefined && event.getBubbles();\n    }\n  },\n\n  defer(statics) {\n    qx.event.Registration.addDispatcher(statics);\n  }\n});\n"

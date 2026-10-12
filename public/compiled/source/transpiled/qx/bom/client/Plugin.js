@@ -109,7 +109,7 @@
        * Database of supported features.
        * Filled with additional data at initialization
        */
-      __db__P_203_0: {
+      __db__P_204_0: {
         quicktime: {
           plugin: ["QuickTime"],
           control: "QuickTimeCheckObject.QuickTimeCheck.1"
@@ -144,8 +144,8 @@
        * @internal
        */
       getQuicktimeVersion() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["quicktime"];
-        return qx.bom.client.Plugin.__getVersion__P_203_1(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["quicktime"];
+        return qx.bom.client.Plugin.__getVersion__P_204_1(entry.control, entry.plugin);
       },
       /**
        * Fetches the version of the windows media plugin.
@@ -154,8 +154,8 @@
        * @internal
        */
       getWindowsMediaVersion() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["wmv"];
-        return qx.bom.client.Plugin.__getVersion__P_203_1(entry.control, entry.plugin, true);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["wmv"];
+        return qx.bom.client.Plugin.__getVersion__P_204_1(entry.control, entry.plugin, true);
       },
       /**
        * Fetches the version of the divx plugin.
@@ -164,8 +164,8 @@
        * @internal
        */
       getDivXVersion() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["divx"];
-        return qx.bom.client.Plugin.__getVersion__P_203_1(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["divx"];
+        return qx.bom.client.Plugin.__getVersion__P_204_1(entry.control, entry.plugin);
       },
       /**
        * Fetches the version of the silverlight plugin.
@@ -174,8 +174,8 @@
        * @internal
        */
       getSilverlightVersion() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["silverlight"];
-        return qx.bom.client.Plugin.__getVersion__P_203_1(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["silverlight"];
+        return qx.bom.client.Plugin.__getVersion__P_204_1(entry.control, entry.plugin);
       },
       /**
        * Fetches the version of the pdf plugin.
@@ -198,8 +198,8 @@
        * @internal
        */
       getPdfVersion() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["pdf"];
-        return qx.bom.client.Plugin.__getVersion__P_203_1(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["pdf"];
+        return qx.bom.client.Plugin.__getVersion__P_204_1(entry.control, entry.plugin);
       },
       /**
        * Checks if the quicktime plugin is available.
@@ -207,8 +207,8 @@
        * @internal
        */
       getQuicktime() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["quicktime"];
-        return qx.bom.client.Plugin.__isAvailable__P_203_2(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["quicktime"];
+        return qx.bom.client.Plugin.__isAvailable__P_204_2(entry.control, entry.plugin);
       },
       /**
        * Checks if the windows media plugin is available.
@@ -216,8 +216,8 @@
        * @internal
        */
       getWindowsMedia() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["wmv"];
-        return qx.bom.client.Plugin.__isAvailable__P_203_2(entry.control, entry.plugin, true);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["wmv"];
+        return qx.bom.client.Plugin.__isAvailable__P_204_2(entry.control, entry.plugin, true);
       },
       /**
        * Checks if the divx plugin is available.
@@ -225,8 +225,8 @@
        * @internal
        */
       getDivX() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["divx"];
-        return qx.bom.client.Plugin.__isAvailable__P_203_2(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["divx"];
+        return qx.bom.client.Plugin.__isAvailable__P_204_2(entry.control, entry.plugin);
       },
       /**
        * Checks if the silverlight plugin is available.
@@ -234,8 +234,8 @@
        * @internal
        */
       getSilverlight() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["silverlight"];
-        return qx.bom.client.Plugin.__isAvailable__P_203_2(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["silverlight"];
+        return qx.bom.client.Plugin.__isAvailable__P_204_2(entry.control, entry.plugin);
       },
       /**
        * Checks if the pdf plugin is available.
@@ -257,8 +257,8 @@
        * @internal
        */
       getPdf() {
-        var entry = qx.bom.client.Plugin.__db__P_203_0["pdf"];
-        return qx.bom.client.Plugin.__isAvailable__P_203_2(entry.control, entry.plugin);
+        var entry = qx.bom.client.Plugin.__db__P_204_0["pdf"];
+        return qx.bom.client.Plugin.__isAvailable__P_204_2(entry.control, entry.plugin);
       },
       /**
        * Internal helper for getting the version of a given plugin.
@@ -271,8 +271,8 @@
        *   for IE11 plugins that aren't listed in navigator.plugins
        * @return {String} The version of the plugin as string.
        */
-      __getVersion__P_203_1(activeXName, pluginNames, forceActiveX) {
-        var available = qx.bom.client.Plugin.__isAvailable__P_203_2(activeXName, pluginNames, forceActiveX);
+      __getVersion__P_204_1(activeXName, pluginNames, forceActiveX) {
+        var available = qx.bom.client.Plugin.__isAvailable__P_204_2(activeXName, pluginNames, forceActiveX);
 
         // don't check if the plugin is not available
         if (!available) {
@@ -340,7 +340,7 @@
        *   for IE11 plugins that aren't listed in navigator.plugins
        * @return {Boolean} <code>true</code>, if the plugin available
        */
-      __isAvailable__P_203_2(activeXName, pluginNames, forceActiveX) {
+      __isAvailable__P_204_2(activeXName, pluginNames, forceActiveX) {
         // IE checks
         if (qx.bom.client.Engine.getName() == "mshtml" && (qx.bom.client.Browser.getDocumentMode() < 11 || forceActiveX)) {
           if (!this.getActiveX()) {
@@ -390,4 +390,4 @@
   qx.bom.client.Plugin.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Plugin.js.map?dt=1769806694464
+//# sourceMappingURL=Plugin.js.map?dt=1791841652767

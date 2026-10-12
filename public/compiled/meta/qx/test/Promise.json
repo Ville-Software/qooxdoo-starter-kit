@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337741,
-  "lastModifiedIso": "2026-01-03T20:15:37.741Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/Promise.js",
+  "lastModified": 1739993516207,
+  "lastModifiedIso": "2025-02-19T19:31:56.207Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/Promise.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,46 +11,15 @@
       "index": 0
     },
     "end": {
-      "line": 1996,
+      "line": 873,
       "column": 3,
-      "index": 55985
+      "index": 23779
     }
   },
   "className": "qx.test.Promise",
   "jsdoc": null,
   "superClass": "qx.dev.unit.TestCase",
   "members": {
-    "testIsPromise": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the isPromise method",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the isPromise method</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 8,
-          "column": 4,
-          "index": 137
-        },
-        "end": {
-          "line": 16,
-          "column": 5,
-          "index": 558
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
     "testNewPromise": {
       "jsdoc": {
         "raw": [
@@ -68,14 +37,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 20,
+          "line": 8,
           "column": 4,
-          "index": 636
+          "index": 159
         },
         "end": {
-          "line": 40,
+          "line": 28,
           "column": 5,
-          "index": 1117
+          "index": 640
         }
       },
       "type": "function",
@@ -99,297 +68,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 45,
+          "line": 33,
           "column": 4,
-          "index": 1184
+          "index": 707
         },
         "end": {
-          "line": 65,
+          "line": 53,
           "column": 5,
-          "index": 1681
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testExternalReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests promise being rejected externally using `reject` method",
-          "     * Also tests binding catch",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests promise being rejected externally using <code>reject</code> method\n Also tests binding catch</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 71,
-          "column": 4,
-          "index": 1805
-        },
-        "end": {
-          "line": 79,
-          "column": 5,
-          "index": 2076
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCancel1": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that cancelling promise will cause `then` and `catch` to not be called",
-          "     * (finally must be called)",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that cancelling promise will cause <code>then</code> and <code>catch</code> to not be called\n (finally must be called)</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 85,
-          "column": 4,
-          "index": 2215
-        },
-        "end": {
-          "line": 130,
-          "column": 5,
-          "index": 3488
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCancel2": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures that non of the handlers in the chain are called when a promise is cancelled immediately",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures that non of the handlers in the chain are called when a promise is cancelled immediately</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 135,
-          "column": 4,
-          "index": 3615
-        },
-        "end": {
-          "line": 173,
-          "column": 5,
-          "index": 4656
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCancel3": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures that the promise chain does not continue after a promise is cancelled, except ALL the `finally` calls",
-          "     * which are both ancestors and descendants of the cancelled promise, which have not been called yet.",
-          "    ",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures that the promise chain does not continue after a promise is cancelled, except ALL the <code>finally</code> calls\n which are both ancestors and descendants of the cancelled promise, which have not been called yet.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 180,
-          "column": 4,
-          "index": 4907
-        },
-        "end": {
-          "line": 245,
-          "column": 5,
-          "index": 6732
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCancel4": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that cancelling a promise will not stop its chain from executing if there are promises which depend on some stages in the chain",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that cancelling a promise will not stop its chain from executing if there are promises which depend on some stages in the chain</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 250,
-          "column": 4,
-          "index": 6896
-        },
-        "end": {
-          "line": 277,
-          "column": 5,
-          "index": 7661
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testThenAfterCancel": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures exception is thrown when trying to call `then` for a promise which has already been cancelled.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures exception is thrown when trying to call <code>then</code> for a promise which has already been cancelled.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 282,
-          "column": 4,
-          "index": 7794
-        },
-        "end": {
-          "line": 304,
-          "column": 5,
-          "index": 8491
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCatchAfterCancel": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures exception is thrown when trying to call `catch` for a promise which has already been cancelled.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures exception is thrown when trying to call <code>catch</code> for a promise which has already been cancelled.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 309,
-          "column": 4,
-          "index": 8625
-        },
-        "end": {
-          "line": 333,
-          "column": 5,
-          "index": 9356
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testFinallyAfterCancel": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures exception is thrown when trying to call `finally` for a promise which has already been cancelled.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures exception is thrown when trying to call <code>finally</code> for a promise which has already been cancelled.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 338,
-          "column": 4,
-          "index": 9492
-        },
-        "end": {
-          "line": 362,
-          "column": 5,
-          "index": 10225
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testCancelAfterSettled": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures a promise can still be cancelled after it has been settled",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures a promise can still be cancelled after it has been settled</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 367,
-          "column": 4,
-          "index": 10322
-        },
-        "end": {
-          "line": 385,
-          "column": 5,
-          "index": 10845
+          "index": 1204
         }
       },
       "type": "function",
@@ -397,93 +83,18 @@
       "appearsIn": []
     },
     "testCatchFinally": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures that `finally` is run when the promise rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures that <code>finally</code> is run when the promise rejects</p>"
-          }
-        ]
-      },
+      "jsdoc": null,
       "access": "public",
       "location": {
         "start": {
-          "line": 390,
+          "line": 55,
           "column": 4,
-          "index": 10930
+          "index": 1211
         },
         "end": {
-          "line": 406,
+          "line": 69,
           "column": 5,
-          "index": 11391
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testPromisifyResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that the `promisify` method works for operations functions.",
-          "     * Also ensures the return value of `.then` is a qx.Promise",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that the <code>promisify</code> method works for operations functions.\n Also ensures the return value of <code>.then</code> is a qx.Promise</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 412,
-          "column": 4,
-          "index": 11551
-        },
-        "end": {
-          "line": 430,
-          "column": 5,
-          "index": 12056
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testPromisifyReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that the `promisify` method works for unsuccessful operations",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that the <code>promisify</code> method works for unsuccessful operations</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 435,
-          "column": 4,
-          "index": 12154
-        },
-        "end": {
-          "line": 453,
-          "column": 5,
-          "index": 12671
+          "index": 1590
         }
       },
       "type": "function",
@@ -507,77 +118,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 458,
+          "line": 74,
           "column": 4,
-          "index": 12735
+          "index": 1654
         },
         "end": {
-          "line": 488,
+          "line": 102,
           "column": 5,
-          "index": 13547
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAllOfReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Checks that if one of the promises in the allOf array rejects,",
-          "     * the overall result will reject",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Checks that if one of the promises in the allOf array rejects,\n the overall result will reject</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 494,
-          "column": 4,
-          "index": 13678
-        },
-        "end": {
-          "line": 509,
-          "column": 5,
-          "index": 14067
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAllOfPromiseObj": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the qx.Promise.allOf being passed a promise of an object instead of a straight value",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the qx.Promise.allOf being passed a promise of an object instead of a straight value</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 514,
-          "column": 4,
-          "index": 14188
-        },
-        "end": {
-          "line": 533,
-          "column": 5,
-          "index": 14676
+          "index": 2368
         }
       },
       "type": "function",
@@ -603,14 +151,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 540,
+          "line": 109,
           "column": 4,
-          "index": 14914
+          "index": 2606
         },
         "end": {
-          "line": 565,
+          "line": 134,
           "column": 5,
-          "index": 15662
+          "index": 3333
         }
       },
       "type": "function",
@@ -636,14 +184,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 572,
+          "line": 141,
           "column": 4,
-          "index": 15918
+          "index": 3589
         },
         "end": {
-          "line": 597,
+          "line": 166,
           "column": 5,
-          "index": 16686
+          "index": 4336
         }
       },
       "type": "function",
@@ -669,14 +217,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 604,
+          "line": 173,
           "column": 4,
-          "index": 16897
+          "index": 4547
         },
         "end": {
-          "line": 646,
+          "line": 215,
           "column": 5,
-          "index": 18150
+          "index": 5800
         }
       },
       "type": "function",
@@ -701,14 +249,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 652,
+          "line": 221,
           "column": 4,
-          "index": 18339
+          "index": 5989
         },
         "end": {
-          "line": 700,
+          "line": 269,
           "column": 5,
-          "index": 19804
+          "index": 7454
         }
       },
       "type": "function",
@@ -732,14 +280,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 705,
+          "line": 274,
           "column": 4,
-          "index": 19888
+          "index": 7538
         },
         "end": {
-          "line": 723,
+          "line": 292,
           "column": 5,
-          "index": 20421
+          "index": 8071
         }
       },
       "type": "function",
@@ -751,14 +299,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 725,
+          "line": 294,
           "column": 4,
-          "index": 20428
+          "index": 8078
         },
         "end": {
-          "line": 844,
+          "line": 413,
           "column": 5,
-          "index": 23872
+          "index": 11522
         }
       },
       "type": "function",
@@ -784,14 +332,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 851,
+          "line": 420,
           "column": 4,
-          "index": 24125
+          "index": 11775
         },
         "end": {
-          "line": 956,
+          "line": 525,
           "column": 5,
-          "index": 27246
+          "index": 14896
         }
       },
       "type": "function",
@@ -818,14 +366,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 964,
+          "line": 533,
           "column": 4,
-          "index": 27571
+          "index": 15221
         },
         "end": {
-          "line": 1054,
+          "line": 623,
           "column": 5,
-          "index": 30057
+          "index": 17707
         }
       },
       "type": "function",
@@ -836,28 +384,28 @@
       "jsdoc": {
         "raw": [
           "*",
-          "     * Tests the each method of promise, using qx.data.Array which the native Promise",
+          "     * Tests the each method of promise, using qx.data.Array which the Bluebird implementation",
           "     * does not understand.  The values are scalar values",
           "     "
         ],
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Tests the each method of promise, using qx.data.Array which the native Promise\n does not understand.  The values are scalar values</p>"
+            "body": "<p>Tests the each method of promise, using qx.data.Array which the Bluebird implementation\n does not understand.  The values are scalar values</p>"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 1060,
+          "line": 629,
           "column": 4,
-          "index": 30224
+          "index": 17883
         },
         "end": {
-          "line": 1078,
+          "line": 646,
           "column": 5,
-          "index": 30764
+          "index": 18290
         }
       },
       "type": "function",
@@ -868,91 +416,28 @@
       "jsdoc": {
         "raw": [
           "*",
-          "     * Tests the each method of promise, using qx.data.Array which the native Promise",
+          "     * Tests the each method of promise, using qx.data.Array which the Bluebird implementation",
           "     * does not understand.  The values are a mixture of promises and scalar values",
           "     "
         ],
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Tests the each method of promise, using qx.data.Array which the native Promise\n does not understand.  The values are a mixture of promises and scalar values</p>"
+            "body": "<p>Tests the each method of promise, using qx.data.Array which the Bluebird implementation\n does not understand.  The values are a mixture of promises and scalar values</p>"
           }
         ]
       },
       "access": "public",
       "location": {
         "start": {
-          "line": 1084,
+          "line": 652,
           "column": 4,
-          "index": 30957
+          "index": 18492
         },
         "end": {
-          "line": 1126,
+          "line": 694,
           "column": 5,
-          "index": 31977
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testEachReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Checks that the each method will reject if one of the promises in the array rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Checks that the each method will reject if one of the promises in the array rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1131,
-          "column": 4,
-          "index": 32091
-        },
-        "end": {
-          "line": 1144,
-          "column": 5,
-          "index": 32515
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testEachPromiseArray": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `each` method being passed with a promise of an array,",
-          "     * not a straight array",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>each</code> method being passed with a promise of an array,\n not a straight array</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1150,
-          "column": 4,
-          "index": 32638
-        },
-        "end": {
-          "line": 1159,
-          "column": 5,
-          "index": 32926
+          "index": 19512
         }
       },
       "type": "function",
@@ -976,14 +461,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1164,
+          "line": 699,
           "column": 4,
-          "index": 33024
+          "index": 19610
         },
         "end": {
-          "line": 1181,
+          "line": 715,
           "column": 5,
-          "index": 33519
+          "index": 20053
         }
       },
       "type": "function",
@@ -1007,14 +492,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1186,
+          "line": 720,
           "column": 4,
-          "index": 33582
+          "index": 20116
         },
         "end": {
-          "line": 1198,
+          "line": 732,
           "column": 5,
-          "index": 33935
+          "index": 20448
         }
       },
       "type": "function",
@@ -1038,14 +523,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1203,
+          "line": 737,
           "column": 4,
-          "index": 34008
+          "index": 20521
         },
         "end": {
-          "line": 1211,
+          "line": 745,
           "column": 5,
-          "index": 34262
+          "index": 20751
         }
       },
       "type": "function",
@@ -1069,14 +554,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1216,
+          "line": 750,
           "column": 4,
-          "index": 34328
+          "index": 20817
         },
         "end": {
-          "line": 1229,
+          "line": 763,
           "column": 5,
-          "index": 34694
+          "index": 21162
         }
       },
       "type": "function",
@@ -1088,14 +573,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1231,
+          "line": 765,
           "column": 4,
-          "index": 34701
+          "index": 21169
         },
         "end": {
-          "line": 1235,
+          "line": 769,
           "column": 5,
-          "index": 34914
+          "index": 21382
         }
       },
       "type": "function",
@@ -1119,14 +604,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1240,
+          "line": 774,
           "column": 4,
-          "index": 34992
+          "index": 21460
         },
         "end": {
-          "line": 1247,
+          "line": 781,
           "column": 5,
-          "index": 35235
+          "index": 21682
         }
       },
       "type": "function",
@@ -1150,14 +635,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1252,
+          "line": 786,
           "column": 4,
-          "index": 35316
+          "index": 21763
         },
         "end": {
-          "line": 1259,
+          "line": 793,
           "column": 5,
-          "index": 35546
+          "index": 21969
         }
       },
       "type": "function",
@@ -1181,14 +666,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1264,
+          "line": 798,
           "column": 4,
-          "index": 35626
+          "index": 22049
         },
         "end": {
-          "line": 1271,
+          "line": 805,
           "column": 5,
-          "index": 35875
+          "index": 22274
         }
       },
       "type": "function",
@@ -1212,830 +697,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1276,
+          "line": 810,
           "column": 4,
-          "index": 35964
+          "index": 22363
         },
         "end": {
-          "line": 1291,
+          "line": 825,
           "column": 5,
-          "index": 36442
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testRaceResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `race` method when no promises in the array reject",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>race</code> method when no promises in the array reject</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1296,
-          "column": 4,
-          "index": 36533
-        },
-        "end": {
-          "line": 1320,
-          "column": 5,
-          "index": 37250
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testRaceReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `race` method when one promise in the array rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>race</code> method when one promise in the array rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1325,
-          "column": 4,
-          "index": 37342
-        },
-        "end": {
-          "line": 1348,
-          "column": 5,
-          "index": 37978
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testRaceStraightValue": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `race` method when the array contains a straight (i.e. non-promise) value",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>race</code> method when the array contains a straight (i.e. non-promise) value</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1353,
-          "column": 4,
-          "index": 38092
-        },
-        "end": {
-          "line": 1366,
-          "column": 5,
-          "index": 38473
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAnyResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `any` method when all promises in the array resolve",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>any</code> method when all promises in the array resolve</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1371,
-          "column": 4,
-          "index": 38565
-        },
-        "end": {
-          "line": 1395,
-          "column": 5,
-          "index": 39280
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAnyOneReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `any` method when one promise in the array rejects.",
-          "     * The overall result should the result of the first promise that resolves",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>any</code> method when one promise in the array rejects.\n The overall result should the result of the first promise that resolves</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1401,
-          "column": 4,
-          "index": 39451
-        },
-        "end": {
-          "line": 1424,
-          "column": 5,
-          "index": 40139
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAnyAllReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `any` method when all promises in the array reject.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>any</code> method when all promises in the array reject.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1429,
-          "column": 4,
-          "index": 40231
-        },
-        "end": {
-          "line": 1454,
-          "column": 5,
-          "index": 40916
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAnyEmptyArray": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `any` method when an empty array is passed in.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>any</code> method when an empty array is passed in.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1459,
-          "column": 4,
-          "index": 41003
-        },
-        "end": {
-          "line": 1467,
-          "column": 5,
-          "index": 41183
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testAnyStraightValue": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `any` method when a straight (i.e. non-promise value) is passed in.",
-          "     * It should resolve to that value",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>any</code> method when a straight (i.e. non-promise value) is passed in.\n It should resolve to that value</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1473,
-          "column": 4,
-          "index": 41330
-        },
-        "end": {
-          "line": 1488,
-          "column": 5,
-          "index": 41723
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testReduceResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `reduce` succeeds when no promise rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>reduce</code> succeeds when no promise rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1493,
-          "column": 4,
-          "index": 41806
-        },
-        "end": {
-          "line": 1513,
-          "column": 5,
-          "index": 42451
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testReduceOneReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `reduce` rejects when one promise in the array rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>reduce</code> rejects when one promise in the array rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1518,
-          "column": 4,
-          "index": 42547
-        },
-        "end": {
-          "line": 1545,
-          "column": 5,
-          "index": 43320
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testReduceMapperReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `reduce` rejects when the reducer function throws an error",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>reduce</code> rejects when the reducer function throws an error</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1550,
-          "column": 4,
-          "index": 43420
-        },
-        "end": {
-          "line": 1564,
-          "column": 5,
-          "index": 43905
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testFilterResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `filter` succeeds when no promise rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>filter</code> succeeds when no promise rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1569,
-          "column": 4,
-          "index": 43988
-        },
-        "end": {
-          "line": 1594,
-          "column": 5,
-          "index": 44823
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testFilterConcurrency": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests `concurrency` option for method `filter`",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests <code>concurrency</code> option for method <code>filter</code></p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1599,
-          "column": 4,
-          "index": 44900
-        },
-        "end": {
-          "line": 1629,
-          "column": 5,
-          "index": 45711
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testFilterRejectValue": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `filter` rejects when one promise in the array rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>filter</code> rejects when one promise in the array rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1634,
-          "column": 4,
-          "index": 45807
-        },
-        "end": {
-          "line": 1648,
-          "column": 5,
-          "index": 46282
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testFilterRejectFilterer": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that `filter` rejects when the iterator function throws an error",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that <code>filter</code> rejects when the iterator function throws an error</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1653,
-          "column": 4,
-          "index": 46383
-        },
-        "end": {
-          "line": 1669,
-          "column": 5,
-          "index": 46861
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testSomeResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that the `some` method resolves when no promise rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that the <code>some</code> method resolves when no promise rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1674,
-          "column": 4,
-          "index": 46953
-        },
-        "end": {
-          "line": 1699,
-          "column": 5,
-          "index": 47665
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testSomeOneReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests that the `some` method still resolves when one promise rejects",
-          "     * such that enough promises still resolve.",
-          "     * Also tests with a straight value in the array",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests that the <code>some</code> method still resolves when one promise rejects\n such that enough promises still resolve.\n Also tests with a straight value in the array</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1706,
-          "column": 4,
-          "index": 47865
-        },
-        "end": {
-          "line": 1729,
-          "column": 5,
-          "index": 48577
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testSomeTooManyReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures that the `some` method rejects",
-          "     * when too many promises reject such that there aren't enough",
-          "     * resolved promises to satisfy the count",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures that the <code>some</code> method rejects\n when too many promises reject such that there aren't enough\n resolved promises to satisfy the count</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1736,
-          "column": 4,
-          "index": 48759
-        },
-        "end": {
-          "line": 1768,
-          "column": 5,
-          "index": 49663
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures that the `map` method resolves when no promise rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures that the <code>map</code> method resolves when no promise rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1773,
-          "column": 4,
-          "index": 49756
-        },
-        "end": {
-          "line": 1792,
-          "column": 5,
-          "index": 50414
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapConcurrency": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `concurrency` option of the `map` method",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>concurrency</code> option of the <code>map</code> method</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1797,
-          "column": 4,
-          "index": 50495
-        },
-        "end": {
-          "line": 1829,
-          "column": 5,
-          "index": 51396
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapOneReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `map` method when one promise in the array rejects",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>map</code> method when one promise in the array rejects</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1834,
-          "column": 4,
-          "index": 51487
-        },
-        "end": {
-          "line": 1847,
-          "column": 5,
-          "index": 51931
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapMapperReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `map` method rejects when the iterator (mapper) function rejects.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>map</code> method rejects when the iterator (mapper) function rejects.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1852,
-          "column": 4,
-          "index": 52037
-        },
-        "end": {
-          "line": 1867,
-          "column": 5,
-          "index": 52507
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapSeriesResolve": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Ensures the `mapSeries` method resolves when no promise rejects.",
-          "     * Also tests custom context for the iterator function",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Ensures the <code>mapSeries</code> method resolves when no promise rejects.\n Also tests custom context for the iterator function</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1873,
-          "column": 4,
-          "index": 52661
-        },
-        "end": {
-          "line": 1892,
-          "column": 5,
-          "index": 53304
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapSeriesOneReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `mapSeries` method when one promise in the array rejects.",
-          "     * The returned promise should reject.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>mapSeries</code> method when one promise in the array rejects.\n The returned promise should reject.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1898,
-          "column": 4,
-          "index": 53445
-        },
-        "end": {
-          "line": 1912,
-          "column": 5,
-          "index": 53898
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapSeriesMapperReject": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `mapSeries` method when the iterator rejects.",
-          "     * The returned promise should reject.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>mapSeries</code> method when the iterator rejects.\n The returned promise should reject.</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1918,
-          "column": 4,
-          "index": 54027
-        },
-        "end": {
-          "line": 1932,
-          "column": 5,
-          "index": 54508
-        }
-      },
-      "type": "function",
-      "params": [],
-      "appearsIn": []
-    },
-    "testMapSeriesPromiseArray": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Tests the `mapSeries` being passed with the promise of the array,",
-          "     * which is also a qx.data.Array, which the native Promise does not understand",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Tests the <code>mapSeries</code> being passed with the promise of the array,\n which is also a qx.data.Array, which the native Promise does not understand</p>"
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 1938,
-          "column": 4,
-          "index": 54687
-        },
-        "end": {
-          "line": 1948,
-          "column": 5,
-          "index": 55026
+          "index": 22820
         }
       },
       "type": "function",
@@ -2049,14 +718,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 1952,
+          "line": 829,
           "column": 4,
-          "index": 55050
+          "index": 22844
         },
         "end": {
-          "line": 1994,
+          "line": 871,
           "column": 5,
-          "index": 55977
+          "index": 23771
         }
       },
       "appearsIn": []

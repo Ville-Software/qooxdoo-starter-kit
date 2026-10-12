@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337075,
-  "lastModifiedIso": "2026-01-03T20:15:37.075Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/data/controller/ISelection.js",
+  "lastModified": 1739993515874,
+  "lastModifiedIso": "2025-02-19T19:31:55.874Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/data/controller/ISelection.js",
   "type": "interface",
   "location": {
     "start": {

@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337742,
-  "lastModifiedIso": "2026-01-03T20:15:37.742Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/tool/utils/Promisify.js",
+  "lastModified": 1739993516207,
+  "lastModifiedIso": "2025-02-19T19:31:56.207Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/tool/utils/Promisify.js",
   "type": "class",
   "location": {
     "start": {

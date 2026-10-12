@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336884,
-  "lastModifiedIso": "2026-01-03T20:15:36.884Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Icon.js",
+  "lastModified": 1739993515798,
+  "lastModifiedIso": "2025-02-19T19:31:55.798Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/test/theme/manager/Icon.js",
   "type": "class",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 472
     },
     "end": {
-      "line": 145,
+      "line": 137,
       "column": 3,
-      "index": 3758
+      "index": 3668
     }
   },
   "className": "qx.test.theme.manager.Icon",
@@ -57,7 +57,7 @@
       },
       "appearsIn": []
     },
-    "__savedListeners": {
+    "__formerListener": {
       "jsdoc": null,
       "access": "private",
       "location": {
@@ -86,7 +86,7 @@
         "end": {
           "line": 37,
           "column": 5,
-          "index": 1044
+          "index": 1032
         }
       },
       "type": "function",
@@ -100,12 +100,12 @@
         "start": {
           "line": 39,
           "column": 4,
-          "index": 1051
+          "index": 1039
         },
         "end": {
-          "line": 60,
+          "line": 52,
           "column": 5,
-          "index": 1587
+          "index": 1497
         }
       },
       "type": "function",
@@ -117,14 +117,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 62,
+          "line": 54,
           "column": 4,
-          "index": 1594
+          "index": 1504
         },
         "end": {
-          "line": 76,
+          "line": 68,
           "column": 5,
-          "index": 2039
+          "index": 1949
         }
       },
       "type": "function",
@@ -136,14 +136,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 78,
+          "line": 70,
           "column": 4,
-          "index": 2046
+          "index": 1956
         },
         "end": {
-          "line": 96,
+          "line": 88,
           "column": 5,
-          "index": 2597
+          "index": 2507
         }
       },
       "type": "function",
@@ -155,14 +155,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 98,
+          "line": 90,
           "column": 4,
-          "index": 2604
+          "index": 2514
         },
         "end": {
-          "line": 119,
+          "line": 111,
           "column": 5,
-          "index": 3215
+          "index": 3125
         }
       },
       "type": "function",
@@ -174,14 +174,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 121,
+          "line": 113,
           "column": 4,
-          "index": 3222
+          "index": 3132
         },
         "end": {
-          "line": 143,
+          "line": 135,
           "column": 5,
-          "index": 3750
+          "index": 3660
         }
       },
       "type": "function",

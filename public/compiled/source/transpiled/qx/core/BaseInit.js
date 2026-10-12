@@ -68,14 +68,14 @@
     */
 
     statics: {
-      __application__P_55_0: null,
+      __application__P_71_0: null,
       /**
        * Returns the instantiated qooxdoo application.
        *
        * @return {qx.core.Object} The application instance.
        */
       getApplication() {
-        return this.__application__P_55_0 || null;
+        return this.__application__P_71_0 || null;
       },
       /**
        * Runs when the application is loaded. Automatically creates an instance
@@ -83,7 +83,7 @@
        *
        */
       ready() {
-        if (this.__application__P_55_0) {
+        if (this.__application__P_71_0) {
           return;
         }
         if (qx.core.Environment.get("engine.name") == "") {
@@ -101,14 +101,14 @@
         var app = qx.core.Environment.get("qx.application");
         var clazz = qx.Class.getByName(app);
         if (clazz) {
-          this.__application__P_55_0 = new clazz();
+          this.__application__P_71_0 = new clazz();
           var start = new Date();
-          this.__application__P_55_0.main();
+          this.__application__P_71_0.main();
           if (qx.core.Environment.get("qx.debug.startupTimings")) {
             qx.log.Logger.debug(this, "Main runtime: " + (new Date() - start) + "ms");
           }
           var start = new Date();
-          this.__application__P_55_0.finalize();
+          this.__application__P_71_0.finalize();
           if (qx.core.Environment.get("qx.debug.startupTimings")) {
             qx.log.Logger.debug(this, "Finalize runtime: " + (new Date() - start) + "ms");
           }
@@ -123,8 +123,8 @@
        *
        * @param e {qx.event.type.Native} Incoming beforeunload event.
        */
-      __close__P_55_1(e) {
-        var app = this.__application__P_55_0;
+      __close__P_71_1(e) {
+        var app = this.__application__P_71_0;
         if (app) {
           app.close();
         }
@@ -134,8 +134,8 @@
        * created application instance.
        *
        */
-      __shutdown__P_55_2() {
-        var app = this.__application__P_55_0;
+      __shutdown__P_71_2() {
+        var app = this.__application__P_71_0;
         if (app) {
           app.terminate();
         }
@@ -145,4 +145,4 @@
   qx.core.BaseInit.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=BaseInit.js.map?dt=1769806688306
+//# sourceMappingURL=BaseInit.js.map?dt=1791841650900

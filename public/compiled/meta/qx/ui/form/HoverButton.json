@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471336826,
-  "lastModifiedIso": "2026-01-03T20:15:36.826Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/form/HoverButton.js",
+  "lastModified": 1739993515783,
+  "lastModifiedIso": "2025-02-19T19:31:55.783Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/form/HoverButton.js",
   "type": "class",
   "location": {
     "start": {
@@ -448,37 +448,19 @@
       ],
       "mixin": "qx.ui.core.MExecutable"
     },
-    "__commandExecuted": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * @type {Boolean} Whether the command already executed. The protection flag to stop the second command execution.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": ""
-          }
-        ],
-        "@type": [
-          {
-            "name": "@type",
-            "body": "{Boolean} Whether the command already executed. The protection flag to stop the second command execution."
-          }
-        ]
-      },
+    "__semaphore": {
+      "jsdoc": null,
       "access": "private",
       "location": {
         "start": {
-          "line": 68,
+          "line": 64,
           "column": 4,
-          "index": 1837
+          "index": 1697
         },
         "end": {
-          "line": 68,
-          "column": 28,
-          "index": 1861
+          "line": 64,
+          "column": 22,
+          "index": 1715
         }
       },
       "appearsIn": [
@@ -491,14 +473,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 69,
+          "line": 65,
           "column": 4,
-          "index": 1867
+          "index": 1721
         },
         "end": {
-          "line": 69,
+          "line": 65,
           "column": 29,
-          "index": 1892
+          "index": 1746
         }
       },
       "appearsIn": [
@@ -538,14 +520,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 77,
+          "line": 73,
           "column": 4,
-          "index": 2087
+          "index": 1941
         },
         "end": {
-          "line": 81,
+          "line": 77,
           "column": 6,
-          "index": 2307
+          "index": 2161
         }
       },
       "appearsIn": [
@@ -570,14 +552,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 86,
+          "line": 82,
           "column": 4,
-          "index": 2366
+          "index": 2220
         },
         "end": {
-          "line": 99,
+          "line": 95,
           "column": 5,
-          "index": 2655
+          "index": 2491
         }
       },
       "type": "function",
@@ -616,14 +598,14 @@
       "access": "private",
       "location": {
         "start": {
-          "line": 106,
+          "line": 102,
           "column": 4,
-          "index": 2810
+          "index": 2646
         },
         "end": {
-          "line": 115,
+          "line": 113,
           "column": 5,
-          "index": 3038
+          "index": 2912
         }
       },
       "type": "function",
@@ -647,14 +629,14 @@
       "access": "protected",
       "location": {
         "start": {
-          "line": 118,
+          "line": 116,
           "column": 4,
-          "index": 3067
+          "index": 2941
         },
         "end": {
-          "line": 175,
+          "line": 173,
           "column": 5,
-          "index": 5000
+          "index": 4874
         }
       },
       "type": "function",

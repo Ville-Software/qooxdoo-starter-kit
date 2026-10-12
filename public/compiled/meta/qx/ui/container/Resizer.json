@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337818,
-  "lastModifiedIso": "2026-01-03T20:15:37.818Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/container/Resizer.js",
+  "lastModified": 1739993516242,
+  "lastModifiedIso": "2025-02-19T19:31:56.242Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/container/Resizer.js",
   "type": "class",
   "location": {
     "start": {
@@ -36,7 +36,7 @@
       " *   });",
       " *",
       " *   resizer.setLayout(new qx.ui.layout.Canvas());",
-      " *   var text = new qx.ui.form.TextArea(\"Resize menI'm resizable\");",
+      " *   var text = new qx.ui.form.TextArea(\"Resize me\\nI'm resizable\");",
       " *   resizer.add(text, {edge: 0});",
       " *",
       " *   this.getRoot().add(resizer);",
@@ -54,7 +54,7 @@
     "@description": [
       {
         "name": "@description",
-        "body": "<p>The Resizer is a resizable container widget.\n It allows to be resized (not moved), normally in\n the right and/or bottom directions. It is an alternative to splitters.\n<em>Example</em>\n Here is a little example of how to use the widget.\n </p>\n<pre class='javascript'>\n   var resizer = new qx.ui.container.Resizer().set({\n     width: 200,\n     height: 100\n   });\n   resizer.setLayout(new qx.ui.layout.Canvas());\n   var text = new qx.ui.form.TextArea(\"Resize menI'm resizable\");\n   resizer.add(text, {edge: 0});\n   this.getRoot().add(resizer);\n </pre>\n<p>This example creates a resizer, configures it with a canvas layout and\n adds a text area to it.\n<em>External Documentation</em>\n <a href='http://qooxdoo.org/docs/#desktop/widget/resizer.md' target='_blank'>\n Documentation of this widget in the qooxdoo manual.</a></p>"
+        "body": "<p>The Resizer is a resizable container widget.\n It allows to be resized (not moved), normally in\n the right and/or bottom directions. It is an alternative to splitters.\n<em>Example</em>\n Here is a little example of how to use the widget.\n </p>\n<pre class='javascript'>\n   var resizer = new qx.ui.container.Resizer().set({\n     width: 200,\n     height: 100\n   });\n   resizer.setLayout(new qx.ui.layout.Canvas());\n   var text = new qx.ui.form.TextArea(\"Resize me\\nI'm resizable\");\n   resizer.add(text, {edge: 0});\n   this.getRoot().add(resizer);\n </pre>\n<p>This example creates a resizer, configures it with a canvas layout and\n adds a text area to it.\n<em>External Documentation</em>\n <a href='http://qooxdoo.org/docs/#desktop/widget/resizer.md' target='_blank'>\n Documentation of this widget in the qooxdoo manual.</a></p>"
       }
     ]
   },
@@ -113,10 +113,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "resizableRight": {
       "location": {
@@ -146,10 +146,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "resizableBottom": {
       "location": {
@@ -179,10 +179,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "resizableLeft": {
       "location": {
@@ -212,10 +212,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "resizable": {
       "location": {
@@ -252,10 +252,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "resizeSensitivity": {
       "location": {
@@ -285,10 +285,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "useResizeFrame": {
       "location": {
@@ -318,10 +318,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     }
   },
   "members": {
@@ -340,10 +340,10 @@
           "index": 3163
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeFrame": {
       "jsdoc": null,
@@ -360,10 +360,10 @@
           "index": 3188
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeActive": {
       "jsdoc": null,
@@ -380,10 +380,10 @@
           "index": 3214
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeLeft": {
       "jsdoc": null,
@@ -400,10 +400,10 @@
           "index": 3238
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeTop": {
       "jsdoc": null,
@@ -420,10 +420,10 @@
           "index": 3261
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeStart": {
       "jsdoc": null,
@@ -440,10 +440,10 @@
           "index": 3286
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeRange": {
       "jsdoc": null,
@@ -460,10 +460,10 @@
           "index": 3311
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "RESIZE_TOP": {
       "jsdoc": null,
@@ -480,10 +480,10 @@
           "index": 3331
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "RESIZE_BOTTOM": {
       "jsdoc": null,
@@ -500,10 +500,10 @@
           "index": 3353
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "RESIZE_LEFT": {
       "jsdoc": null,
@@ -520,10 +520,10 @@
           "index": 3373
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "RESIZE_RIGHT": {
       "jsdoc": null,
@@ -540,10 +540,10 @@
           "index": 3394
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "_getResizeFrame": {
       "jsdoc": {
@@ -564,9 +564,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget} The resize frame",
-            "type": "qx.ui.core.Widget",
-            "description": "The resize frame"
+            "body": "{qx.ui.core.Widget} The resize frame"
           }
         ]
       },
@@ -585,13 +583,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.Widget"
-      },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__showResizeFrame": {
       "jsdoc": {
@@ -622,10 +617,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__computeResizeResult": {
       "jsdoc": {
@@ -647,18 +642,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} Last pointer event",
-            "paramName": "e",
-            "description": " Last pointer event",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} Last pointer event"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Map} A map with the computed boundaries",
-            "type": "Map<any, any>",
-            "description": "A map with the computed boundaries"
+            "body": "{Map} A map with the computed boundaries"
           }
         ]
       },
@@ -678,17 +668,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
-      "returnType": {
-        "type": "Map<any, any>"
-      },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__resizeCursors": {
       "jsdoc": {
@@ -731,10 +717,10 @@
           "index": 7231
         }
       },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__computeResizeMode": {
       "jsdoc": {
@@ -754,10 +740,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} Last pointer event",
-            "paramName": "e",
-            "description": " Last pointer event",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} Last pointer event"
           }
         ]
       },
@@ -777,14 +760,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__computeResizeActive": {
       "jsdoc": {
@@ -809,39 +791,25 @@
         "@param": [
           {
             "name": "@param",
-            "body": "location {Map} The current location of the widget.",
-            "paramName": "location",
-            "description": " The current location of the widget.",
-            "type": "Map<any, any>"
+            "body": "location {Map} The current location of the widget."
           },
           {
             "name": "@param",
-            "body": "pointerLeft {Integer} The left position of the pointer.",
-            "paramName": "pointerLeft",
-            "description": " The left position of the pointer.",
-            "type": "Integer"
+            "body": "pointerLeft {Integer} The left position of the pointer."
           },
           {
             "name": "@param",
-            "body": "pointerTop {Integer} The top position of the pointer.",
-            "paramName": "pointerTop",
-            "description": " The top position of the pointer.",
-            "type": "Integer"
+            "body": "pointerTop {Integer} The top position of the pointer."
           },
           {
             "name": "@param",
-            "body": "pointerTolerance {Integer} The desired distance to the edge.",
-            "paramName": "pointerTolerance",
-            "description": " The desired distance to the edge.",
-            "type": "Integer"
+            "body": "pointerTolerance {Integer} The desired distance to the edge."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Integer} The resize active number.",
-            "type": "Integer",
-            "description": "The resize active number."
+            "body": "{Integer} The resize active number."
           }
         ]
       },
@@ -861,29 +829,22 @@
       "type": "function",
       "params": [
         {
-          "name": "location",
-          "type": "Map<any, any>"
+          "name": "location"
         },
         {
-          "name": "pointerLeft",
-          "type": "Integer"
+          "name": "pointerLeft"
         },
         {
-          "name": "pointerTop",
-          "type": "Integer"
+          "name": "pointerTop"
         },
         {
-          "name": "pointerTolerance",
-          "type": "Integer"
+          "name": "pointerTolerance"
         }
       ],
-      "returnType": {
-        "type": "Integer"
-      },
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__onResizePointerDown": {
       "jsdoc": {
@@ -903,10 +864,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} The pointer event instance",
-            "paramName": "e",
-            "description": " The pointer event instance",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} The pointer event instance"
           }
         ]
       },
@@ -926,14 +884,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__onResizePointerUp": {
       "jsdoc": {
@@ -953,10 +910,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} The pointer event instance",
-            "paramName": "e",
-            "description": " The pointer event instance",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} The pointer event instance"
           }
         ]
       },
@@ -976,14 +930,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__onResizeLoseCapture": {
       "jsdoc": {
@@ -1003,10 +956,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Event} Lose capture event",
-            "paramName": "e",
-            "description": " Lose capture event",
-            "type": "qx.event.type.Event"
+            "body": "e {qx.event.type.Event} Lose capture event"
           }
         ]
       },
@@ -1026,14 +976,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Event"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__onResizePointerMove": {
       "jsdoc": {
@@ -1053,10 +1002,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} The pointer event instance",
-            "paramName": "e",
-            "description": " The pointer event instance",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} The pointer event instance"
           }
         ]
       },
@@ -1076,14 +1022,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     },
     "__onResizePointerOut": {
       "jsdoc": {
@@ -1103,10 +1048,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Pointer} The pointer event instance",
-            "paramName": "e",
-            "description": " The pointer event instance",
-            "type": "qx.event.type.Pointer"
+            "body": "e {qx.event.type.Pointer} The pointer event instance"
           }
         ]
       },
@@ -1126,14 +1068,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Pointer"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MResizable",
       "appearsIn": [
         "qx.ui.core.MResizable"
-      ],
-      "mixin": "qx.ui.core.MResizable"
+      ]
     }
   },
   "statics": {}

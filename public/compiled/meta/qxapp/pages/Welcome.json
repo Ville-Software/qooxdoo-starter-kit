@@ -1,7 +1,7 @@
 {
   "version": 0.3,
-  "lastModified": 1769806616635,
-  "lastModifiedIso": "2026-01-30T20:56:56.635Z",
+  "lastModified": 1791833751336,
+  "lastModifiedIso": "2026-10-12T19:35:51.336Z",
   "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/Welcome.js",
   "type": "class",
   "location": {
@@ -11,9 +11,9 @@
       "index": 71
     },
     "end": {
-      "line": 74,
+      "line": 62,
       "column": 3,
-      "index": 2048
+      "index": 1832
     }
   },
   "className": "qxapp.pages.Welcome",
@@ -39,7 +39,7 @@
       }
     ]
   },
-  "superClass": "ville.ui.layout.Flex",
+  "superClass": "qx.ui.container.Composite",
   "mixins": [
     "qxapp.pages.MPage"
   ],
@@ -50,12 +50,12 @@
       "start": {
         "line": 13,
         "column": 2,
-        "index": 180
+        "index": 185
       },
       "end": {
-        "line": 73,
+        "line": 61,
         "column": 3,
-        "index": 2044
+        "index": 1828
       }
     }
   },
@@ -94,7 +94,7 @@
       ],
       "mixin": "qxapp.pages.MPage"
     },
-    "componentName": {
+    "pageName": {
       "location": {
         "start": {
           "line": 12,
@@ -104,7 +104,39 @@
         "end": {
           "line": 15,
           "column": 5,
-          "index": 285
+          "index": 276
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's name for the browser title "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's name for the browser title</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 4,
+          "index": 328
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 394
         }
       },
       "json": {

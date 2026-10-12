@@ -56,7 +56,7 @@
     construct(text) {
       qx.html.Node.constructor.call(this, "#text");
       if (text) {
-        this.__text__P_75_0 = text;
+        this.__text__P_85_0 = text;
       }
     },
     /*
@@ -66,12 +66,12 @@
      */
 
     members: {
-      __text__P_75_0: null,
+      __text__P_85_0: null,
       /*
        * @Override
        */
       _createDomElement() {
-        return window.document.createTextNode(this.__text__P_75_0 || "");
+        return window.document.createTextNode(this.__text__P_85_0 || "");
       },
       /*
        * @Override
@@ -85,7 +85,7 @@
       _copyData(fromMarkup, propertiesFromDom) {
         qx.html.Text.superclass.prototype._copyData.call(this, fromMarkup, propertiesFromDom);
         var elem = this._domNode;
-        elem.nodeValue = this.__text__P_75_0 || "";
+        elem.nodeValue = this.__text__P_85_0 || "";
       },
       /*
        * @Override
@@ -99,13 +99,13 @@
       _syncData() {
         qx.html.Text.superclass.prototype._syncData.call(this);
         var elem = this._domNode;
-        elem.nodeValue = this.__text__P_75_0 || "";
+        elem.nodeValue = this.__text__P_85_0 || "";
       },
       /*
        * @Override
        */
       _serializeImpl(serializer) {
-        serializer.rawTextInBody(this.__text__P_75_0);
+        serializer.rawTextInBody(this.__text__P_85_0);
       },
       /**
        * @Override
@@ -120,7 +120,7 @@
        * @param direct {Boolean?} whether to set the DOM node immediately if there is one
        */
       setText(value, direct) {
-        this.__text__P_75_0 = value;
+        this.__text__P_85_0 = value;
         if (direct && this._domNode) {
           this._domNode.nodeValue = value;
         } else {
@@ -134,7 +134,7 @@
        * @return {String} the text node
        */
       getText() {
-        return this.__text__P_75_0;
+        return this.__text__P_85_0;
       }
     },
     /*
@@ -144,7 +144,7 @@
      */
 
     defer(statics) {
-      statics.__deferredCall__P_75_1 = new qx.util.DeferredCall(statics.flush, statics);
+      statics.__deferredCall__P_85_1 = new qx.util.DeferredCall(statics.flush, statics);
     },
     /*
      * ****************************************************************************
@@ -157,10 +157,10 @@
         delete qx.html.Element._modified[this.toHashCode()];
         delete qx.html.Element._scroll[this.toHashCode()];
       }
-      this.__attribValues__P_75_2 = this.__styleValues__P_75_3 = this.__eventValues__P_75_4 = this.__attribJobs__P_75_5 = this.__styleJobs__P_75_6 = this.__lazyScrollIntoViewX__P_75_7 = this.__lazyScrollIntoViewY__P_75_8 = null;
+      this.__attribValues__P_85_2 = this.__styleValues__P_85_3 = this.__eventValues__P_85_4 = this.__attribJobs__P_85_5 = this.__styleJobs__P_85_6 = this.__lazyScrollIntoViewX__P_85_7 = this.__lazyScrollIntoViewY__P_85_8 = null;
     }
   });
   qx.html.Text.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Text.js.map?dt=1769806689169
+//# sourceMappingURL=Text.js.map?dt=1791841651158

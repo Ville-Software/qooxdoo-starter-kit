@@ -4,7 +4,7 @@
       "sourceDir": "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class"
     },
     "qx": {
-      "sourceDir": "/Users/sqville/Herd/qooxdoo-starter-kit/node_modules/@qooxdoo/framework/source/class"
+      "sourceDir": "/usr/local/lib/node_modules/@qooxdoo/framework/source/class"
     }
   },
   "classnames": [
@@ -1565,6 +1565,42 @@
     "ville.cssuc.MCssUtilityClass",
     "ville.cssuc.MControl",
     "ville.ui.menu.NavLink",
-    "qxapp.pages.MPage"
+    "qxapp.pages.MPage",
+    "qxapp.pages.app.AppShell",
+    "qxapp.pages.app.SettingsView",
+    "qxapp.pages.settings.TwoFactor",
+    "qxapp.pages.auth.ConfirmPassword",
+    "ville.cssuc.theme.middleman.Appearance",
+    "ville.cssuc.theme.middleman.Color",
+    "ville.cssuc.theme.middleman.Decoration",
+    "ville.cssuc.theme.middleman.Font",
+    "ville.cssuc.theme.middleman.Image",
+    "ville.cssuc.theme.middleman.Theme",
+    "ville.ui.form.PasswordFieldWrapper",
+    "ville.ui.icon.fluent.Abstract",
+    "ville.ui.icon.fluent.Airplane",
+    "ville.ui.icon.phosphor.Abstract",
+    "ville.ui.icon.phosphor.CaretDown",
+    "ville.ui.icon.phosphor.Chats",
+    "ville.ui.icon.phosphor.Eye",
+    "ville.ui.icon.phosphor.EyeSlash",
+    "ville.ui.icon.phosphor.GearSix",
+    "ville.ui.icon.phosphor.GearSixOld",
+    "ville.ui.icon.phosphor.ImagesSquare",
+    "ville.ui.icon.phosphor.MagnifyingGlass",
+    "ville.ui.icon.phosphor.PlusMinus",
+    "ville.ui.icon.tabler.Abstract",
+    "ville.ui.icon.tabler.IconCheck",
+    "ville.ui.icon.tabler.IconIndeterminate",
+    "ville.ui.icon.tabler.IconMoon",
+    "ville.ui.icon.tabler.IconSun",
+    "ville.ui.navigation.Anchor",
+    "ville.ui.navigation.AnchorButton",
+    "ville.ui.navigation.NavLink",
+    "ville.ui.table.cellrenderer.Default",
+    "ville.ui.table.columnmenu.Button",
+    "ville.ui.table.pane.Pane",
+    "ville.ui.table.pane.Scroller",
+    "ville.ui.table.rowrenderer.Default"
   ]
 }

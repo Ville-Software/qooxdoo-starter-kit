@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471338295,
-  "lastModifiedIso": "2026-01-03T20:15:38.295Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/tree/VirtualTreeItem.js",
+  "lastModified": 1739993516438,
+  "lastModifiedIso": "2025-02-19T19:31:56.438Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/tree/VirtualTreeItem.js",
   "type": "class",
   "location": {
     "start": {
@@ -233,10 +233,8 @@
       ],
       "mixin": "qx.ui.form.MModelProperty",
       "appearsIn": [
-        "qx.ui.tree.core.AbstractItem",
         "qx.ui.form.MModelProperty"
-      ],
-      "overriddenFrom": "qx.ui.tree.core.AbstractItem"
+      ]
     },
     "_onChangeLength": {
       "jsdoc": {

@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337482,
-  "lastModifiedIso": "2026-01-03T20:15:37.482Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/data/controller/MSelection.js",
+  "lastModified": 1739993516109,
+  "lastModifiedIso": "2025-02-19T19:31:56.109Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/data/controller/MSelection.js",
   "type": "mixin",
   "location": {
     "start": {

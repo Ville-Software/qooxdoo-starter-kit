@@ -35,11 +35,11 @@
   qx.Class.define("qx.ui.core.queue.Visibility", {
     statics: {
       /** @type {Array} This contains all the queued widgets for the next flush. */
-      __queue__P_102_0: [],
+      __queue__P_43_0: [],
       /** @type {Map} map of widgets by hash code which are in the queue */
-      __lookup__P_102_1: {},
+      __lookup__P_43_1: {},
       /** @type {Map} Maps hash codes to visibility */
-      __data__P_102_2: {},
+      __data__P_43_2: {},
       /**
        * Clears the cached data of the given widget. Normally only used
        * during interims disposes of one or a few widgets.
@@ -47,11 +47,11 @@
        * @param widget {qx.ui.core.Widget} The widget to clear
        */
       remove(widget) {
-        if (this.__lookup__P_102_1[widget.toHashCode()]) {
-          delete this.__lookup__P_102_1[widget.toHashCode()];
-          qx.lang.Array.remove(this.__queue__P_102_0, widget);
+        if (this.__lookup__P_43_1[widget.toHashCode()]) {
+          delete this.__lookup__P_43_1[widget.toHashCode()];
+          qx.lang.Array.remove(this.__queue__P_43_0, widget);
         }
-        delete this.__data__P_102_2[widget.toHashCode()];
+        delete this.__data__P_43_2[widget.toHashCode()];
       },
       /**
        * Whether the given widget is visible.
@@ -63,7 +63,7 @@
        * @return {Boolean} Whether the widget is visible
        */
       isVisible(widget) {
-        return this.__data__P_102_2[widget.toHashCode()] || false;
+        return this.__data__P_43_2[widget.toHashCode()] || false;
       },
       /**
        * Computes the visibility for the given widget
@@ -71,8 +71,8 @@
        * @param widget {qx.ui.core.Widget} The widget to update
        * @return {Boolean} Whether the widget is visible
        */
-      __computeVisible__P_102_3(widget) {
-        var data = this.__data__P_102_2;
+      __computeVisible__P_43_3(widget) {
+        var data = this.__data__P_43_2;
         var hash = widget.toHashCode();
         var visible;
 
@@ -83,7 +83,7 @@
           // Parent hierarchy
           var parent = widget.$$parent;
           if (parent) {
-            visible = this.__computeVisible__P_102_3(parent);
+            visible = this.__computeVisible__P_43_3(parent);
           } else {
             visible = widget.isRootWidget();
           }
@@ -98,11 +98,11 @@
        * @param widget {qx.ui.core.Widget} The widget to add.
        */
       add(widget) {
-        if (this.__lookup__P_102_1[widget.toHashCode()]) {
+        if (this.__lookup__P_43_1[widget.toHashCode()]) {
           return;
         }
-        this.__queue__P_102_0.unshift(widget);
-        this.__lookup__P_102_1[widget.toHashCode()] = widget;
+        this.__queue__P_43_0.unshift(widget);
+        this.__lookup__P_43_1[widget.toHashCode()] = widget;
         qx.ui.core.queue.Manager.scheduleFlush("visibility");
       },
       /**
@@ -112,8 +112,8 @@
        */
       flush() {
         // Dispose all registered objects
-        var queue = this.__queue__P_102_0;
-        var data = this.__data__P_102_2;
+        var queue = this.__queue__P_43_0;
+        var data = this.__data__P_43_2;
 
         // Dynamically add children to queue
         // Only respect already known widgets because otherwise the children
@@ -146,7 +146,7 @@
 
           // Only update when not already updated by another widget
           if (data[hash] == null) {
-            this.__computeVisible__P_102_3(widget);
+            this.__computeVisible__P_43_3(widget);
           }
 
           // Check for updates required to the appearance.
@@ -157,12 +157,12 @@
         }
 
         // Recreate the array is cheaper compared to keep a sparse array over time
-        this.__queue__P_102_0 = [];
-        this.__lookup__P_102_1 = {};
+        this.__queue__P_43_0 = [];
+        this.__lookup__P_43_1 = {};
       }
     }
   });
   qx.ui.core.queue.Visibility.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Visibility.js.map?dt=1769806690027
+//# sourceMappingURL=Visibility.js.map?dt=1791841650344

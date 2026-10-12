@@ -58,7 +58,7 @@
   qx.Bootstrap.define("qx.bom.element.Transform", {
     statics: {
       /** Internal storage of the CSS names */
-      __cssKeys__P_233_0: qx.core.Environment.get("css.transform"),
+      __cssKeys__P_217_0: qx.core.Environment.get("css.transform"),
       /**
        * Method to apply multiple transforms at once to the given element. It
        * takes a map containing the transforms you want to apply plus the values
@@ -80,8 +80,8 @@
        */
       transform(el, transforms) {
         var transformCss = this.getTransformValue(transforms);
-        if (this.__cssKeys__P_233_0 != null) {
-          var style = this.__cssKeys__P_233_0["name"];
+        if (this.__cssKeys__P_217_0 != null) {
+          var style = this.__cssKeys__P_217_0["name"];
           el.style[style] = transformCss;
         }
       },
@@ -138,8 +138,8 @@
        */
       getCss(transforms) {
         var transformCss = this.getTransformValue(transforms);
-        if (this.__cssKeys__P_233_0 != null) {
-          var style = this.__cssKeys__P_233_0["name"];
+        if (this.__cssKeys__P_217_0 != null) {
+          var style = this.__cssKeys__P_217_0["name"];
           return qx.bom.Style.getCssName(style) + ":" + transformCss + ";";
         }
         return "";
@@ -153,8 +153,8 @@
        *   <code>left top</code>.
        */
       setOrigin(el, value) {
-        if (this.__cssKeys__P_233_0 != null) {
-          el.style[this.__cssKeys__P_233_0["origin"]] = value;
+        if (this.__cssKeys__P_217_0 != null) {
+          el.style[this.__cssKeys__P_217_0["origin"]] = value;
         }
       },
       /**
@@ -165,8 +165,8 @@
        * @return {String} The set property, e.g. <code>50% 50%</code>
        */
       getOrigin(el) {
-        if (this.__cssKeys__P_233_0 != null) {
-          return el.style[this.__cssKeys__P_233_0["origin"]];
+        if (this.__cssKeys__P_217_0 != null) {
+          return el.style[this.__cssKeys__P_217_0["origin"]];
         }
         return "";
       },
@@ -178,8 +178,8 @@
        * @param value {String} Either <code>flat</code> or <code>preserve-3d</code>.
        */
       setStyle(el, value) {
-        if (this.__cssKeys__P_233_0 != null) {
-          el.style[this.__cssKeys__P_233_0["style"]] = value;
+        if (this.__cssKeys__P_217_0 != null) {
+          el.style[this.__cssKeys__P_217_0["style"]] = value;
         }
       },
       /**
@@ -191,8 +191,8 @@
        *   <code>preserve-3d</code>.
        */
       getStyle(el) {
-        if (this.__cssKeys__P_233_0 != null) {
-          return el.style[this.__cssKeys__P_233_0["style"]];
+        if (this.__cssKeys__P_217_0 != null) {
+          return el.style[this.__cssKeys__P_217_0["style"]];
         }
         return "";
       },
@@ -205,8 +205,8 @@
        *   and 5000 give the best results.
        */
       setPerspective(el, value) {
-        if (this.__cssKeys__P_233_0 != null) {
-          el.style[this.__cssKeys__P_233_0["perspective"]] = value + "px";
+        if (this.__cssKeys__P_217_0 != null) {
+          el.style[this.__cssKeys__P_217_0["perspective"]] = value + "px";
         }
       },
       /**
@@ -217,8 +217,8 @@
        * @return {String} The set property, e.g. <code>500</code>
        */
       getPerspective(el) {
-        if (this.__cssKeys__P_233_0 != null) {
-          return el.style[this.__cssKeys__P_233_0["perspective"]];
+        if (this.__cssKeys__P_217_0 != null) {
+          return el.style[this.__cssKeys__P_217_0["perspective"]];
         }
         return "";
       },
@@ -231,8 +231,8 @@
        *   <code>left top</code>.
        */
       setPerspectiveOrigin(el, value) {
-        if (this.__cssKeys__P_233_0 != null) {
-          el.style[this.__cssKeys__P_233_0["perspective-origin"]] = value;
+        if (this.__cssKeys__P_217_0 != null) {
+          el.style[this.__cssKeys__P_217_0["perspective-origin"]] = value;
         }
       },
       /**
@@ -243,13 +243,13 @@
        * @return {String} The set property, e.g. <code>50% 50%</code>
        */
       getPerspectiveOrigin(el) {
-        if (this.__cssKeys__P_233_0 != null) {
-          var value = el.style[this.__cssKeys__P_233_0["perspective-origin"]];
+        if (this.__cssKeys__P_217_0 != null) {
+          var value = el.style[this.__cssKeys__P_217_0["perspective-origin"]];
           if (value != "") {
             return value;
           } else {
-            var valueX = el.style[this.__cssKeys__P_233_0["perspective-origin"] + "X"];
-            var valueY = el.style[this.__cssKeys__P_233_0["perspective-origin"] + "Y"];
+            var valueX = el.style[this.__cssKeys__P_217_0["perspective-origin"] + "X"];
+            var valueY = el.style[this.__cssKeys__P_217_0["perspective-origin"] + "Y"];
             if (valueX != "") {
               return valueX + " " + valueY;
             }
@@ -265,8 +265,8 @@
        * @param value {Boolean} <code>true</code> if the backface should be visible.
        */
       setBackfaceVisibility(el, value) {
-        if (this.__cssKeys__P_233_0 != null) {
-          el.style[this.__cssKeys__P_233_0["backface-visibility"]] = value ? "visible" : "hidden";
+        if (this.__cssKeys__P_217_0 != null) {
+          el.style[this.__cssKeys__P_217_0["backface-visibility"]] = value ? "visible" : "hidden";
         }
       },
       /**
@@ -277,8 +277,8 @@
        * @return {Boolean} <code>true</code>, if the backface is visible.
        */
       getBackfaceVisibility(el) {
-        if (this.__cssKeys__P_233_0 != null) {
-          return el.style[this.__cssKeys__P_233_0["backface-visibility"]] == "visible";
+        if (this.__cssKeys__P_217_0 != null) {
+          return el.style[this.__cssKeys__P_217_0["backface-visibility"]] == "visible";
         }
         return true;
       },
@@ -359,4 +359,4 @@
   qx.bom.element.Transform.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Transform.js.map?dt=1769806696004
+//# sourceMappingURL=Transform.js.map?dt=1791841653064

@@ -59,10 +59,10 @@
       qx.core.Object.constructor.call(this);
 
       // Create data structure, use an array because order matters [BUG #4323]
-      this.__objects__P_210_0 = [];
+      this.__objects__P_175_0 = [];
 
       // Register pointerdown handler
-      qx.event.Registration.addListener(document.documentElement, "pointerdown", this.__onPointerDown__P_210_1, this, true);
+      qx.event.Registration.addListener(document.documentElement, "pointerdown", this.__onPointerDown__P_175_1, this, true);
 
       // Hide all popups on window blur
       qx.bom.Element.addListener(window, "blur", this.hideAll, this);
@@ -83,7 +83,7 @@
     */
 
     members: {
-      __objects__P_210_0: null,
+      __objects__P_175_0: null,
       /**
        * Registers a visible popup.
        *
@@ -95,8 +95,8 @@
             throw new Error("Object is no popup: " + obj);
           }
         }
-        this.__objects__P_210_0.push(obj);
-        this.__updateIndexes__P_210_2();
+        this.__objects__P_175_0.push(obj);
+        this.__updateIndexes__P_175_2();
       },
       /**
        * Removes a popup from the registry
@@ -109,18 +109,18 @@
             throw new Error("Object is no popup: " + obj);
           }
         }
-        qx.lang.Array.remove(this.__objects__P_210_0, obj);
-        this.__updateIndexes__P_210_2();
+        qx.lang.Array.remove(this.__objects__P_175_0, obj);
+        this.__updateIndexes__P_175_2();
       },
       /**
        * Excludes all currently open popups,
        * except those with {@link qx.ui.popup.Popup#autoHide} set to false.
        */
       hideAll() {
-        var l = this.__objects__P_210_0.length,
+        var l = this.__objects__P_175_0.length,
           current = {};
         while (l--) {
-          current = this.__objects__P_210_0[l];
+          current = this.__objects__P_175_0[l];
           if (current.getAutoHide()) {
             current.exclude();
           }
@@ -137,10 +137,10 @@
        * newly added ones on top of existing ones
        *
        */
-      __updateIndexes__P_210_2() {
+      __updateIndexes__P_175_2() {
         var min = 1e7;
-        for (var i = 0; i < this.__objects__P_210_0.length; i++) {
-          this.__objects__P_210_0[i].setZIndex(min++);
+        for (var i = 0; i < this.__objects__P_175_0.length; i++) {
+          this.__objects__P_175_0[i].setZIndex(min++);
         }
       },
       /*
@@ -154,14 +154,14 @@
        *
        * @param e {qx.event.type.Pointer} Pointer event object
        */
-      __onPointerDown__P_210_1(e) {
+      __onPointerDown__P_175_1(e) {
         // Get the corresponding widget of the target since we are dealing with
         // DOM elements here. This is necessary because we have to be aware of
         // Inline applications which are not covering the whole document and
         // therefore are not able to get all pointer events when only the
         // application root is monitored.
         var target = qx.ui.core.Widget.getWidgetByElement(e.getTarget());
-        var reg = this.__objects__P_210_0;
+        var reg = this.__objects__P_175_0;
         for (var i = 0; i < reg.length; i++) {
           var obj = reg[i];
           if (!obj.getAutoHide() || target == obj || this.getContainsFunction()(obj, target)) {
@@ -178,11 +178,11 @@
     */
 
     destruct() {
-      qx.event.Registration.removeListener(document.documentElement, "pointerdown", this.__onPointerDown__P_210_1, this, true);
-      this._disposeArray("__objects__P_210_0");
+      qx.event.Registration.removeListener(document.documentElement, "pointerdown", this.__onPointerDown__P_175_1, this, true);
+      this._disposeArray("__objects__P_175_0");
     }
   });
   qx.ui.popup.Manager.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Manager.js.map?dt=1769806694801
+//# sourceMappingURL=Manager.js.map?dt=1791841652414

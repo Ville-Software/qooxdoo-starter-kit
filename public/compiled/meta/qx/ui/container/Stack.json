@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471338025,
-  "lastModifiedIso": "2026-01-03T20:15:38.025Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/container/Stack.js",
+  "lastModified": 1739993516333,
+  "lastModifiedIso": "2025-02-19T19:31:56.333Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/container/Stack.js",
   "type": "class",
   "location": {
     "start": {
@@ -505,10 +505,10 @@
           "index": 1706
         }
       },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "setValue": {
       "jsdoc": {
@@ -529,21 +529,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "item {null|qx.ui.core.Widget} Item to set as selected value.",
-            "paramName": "item",
-            "description": " Item to set as selected value.",
-            "type": [
-              "null",
-              "qx.ui.core.Widget"
-            ]
+            "body": "item {null|qx.ui.core.Widget} Item to set as selected value."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{null|TypeError} The status of this operation.",
-            "type": "null|TypeError",
-            "description": "The status of this operation."
+            "body": "{null|TypeError} The status of this operation."
           }
         ]
       },
@@ -563,21 +555,14 @@
       "type": "function",
       "params": [
         {
-          "name": "item",
-          "type": [
-            "null",
-            "qx.ui.core.Widget"
-          ]
+          "name": "item"
         }
       ],
-      "returnType": {
-        "type": "null|TypeError"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.form.IField"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "getValue": {
       "jsdoc": {
@@ -597,9 +582,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{null|qx.ui.core.Widget} The currently selected widget or null if there is none.",
-            "type": "null|qx.ui.core.Widget",
-            "description": "The currently selected widget or null if there is none."
+            "body": "{null|qx.ui.core.Widget} The currently selected widget or null if there is none."
           }
         ]
       },
@@ -618,14 +601,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "null|qx.ui.core.Widget"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.form.IField"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "resetValue": {
       "jsdoc": {
@@ -656,11 +636,11 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.form.IField"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "getSelection": {
       "jsdoc": {
@@ -683,9 +663,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget[]} List of items.",
-            "type": "qx.ui.core.Widget[]",
-            "description": "List of items."
+            "body": "{qx.ui.core.Widget[]} List of items."
           }
         ]
       },
@@ -704,14 +682,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.Widget[]"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "setSelection": {
       "jsdoc": {
@@ -733,18 +708,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "items {qx.ui.core.Widget[]} Items to select.",
-            "paramName": "items",
-            "description": " Items to select.",
-            "type": "qx.ui.core.Widget[]"
+            "body": "items {qx.ui.core.Widget[]} Items to select."
           }
         ],
         "@throws": [
           {
             "name": "@throws",
-            "body": "{Error} if one of the items is not a child element and if\n    items contains more than one elements.",
-            "type": "Error",
-            "description": " if one of the items is not a child element and if\n    items contains more than one elements."
+            "body": "{Error} if one of the items is not a child element and if\n    items contains more than one elements."
           }
         ]
       },
@@ -764,15 +734,14 @@
       "type": "function",
       "params": [
         {
-          "name": "items",
-          "type": "qx.ui.core.Widget[]"
+          "name": "items"
         }
       ],
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "resetSelection": {
       "jsdoc": {
@@ -803,11 +772,11 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "isSelected": {
       "jsdoc": {
@@ -829,26 +798,19 @@
         "@param": [
           {
             "name": "@param",
-            "body": "item {qx.ui.core.Widget} Any valid selectable item.",
-            "paramName": "item",
-            "description": " Any valid selectable item.",
-            "type": "qx.ui.core.Widget"
+            "body": "item {qx.ui.core.Widget} Any valid selectable item."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Whether the item is selected.",
-            "type": "boolean",
-            "description": "Whether the item is selected."
+            "body": "{Boolean} Whether the item is selected."
           }
         ],
         "@throws": [
           {
             "name": "@throws",
-            "body": "{Error} if one of the items is not a child element.",
-            "type": "Error",
-            "description": " if one of the items is not a child element."
+            "body": "{Error} if one of the items is not a child element."
           }
         ]
       },
@@ -868,18 +830,14 @@
       "type": "function",
       "params": [
         {
-          "name": "item",
-          "type": "qx.ui.core.Widget"
+          "name": "item"
         }
       ],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "isSelectionEmpty": {
       "jsdoc": {
@@ -899,9 +857,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Whether the selection is empty.",
-            "type": "boolean",
-            "description": "Whether the selection is empty."
+            "body": "{Boolean} Whether the selection is empty."
           }
         ]
       },
@@ -920,14 +876,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "getSelectables": {
       "jsdoc": {
@@ -949,18 +902,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "all {Boolean} true for all selectables, false for the\n   selectables the user can interactively select",
-            "paramName": "all",
-            "description": " true for all selectables, false for the\n   selectables the user can interactively select",
-            "type": "boolean"
+            "body": "all {Boolean} true for all selectables, false for the\n   selectables the user can interactively select"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.Widget[]} The contained items.",
-            "type": "qx.ui.core.Widget[]",
-            "description": "The contained items."
+            "body": "{qx.ui.core.Widget[]} The contained items."
           }
         ]
       },
@@ -980,18 +928,14 @@
       "type": "function",
       "params": [
         {
-          "name": "all",
-          "type": "boolean"
+          "name": "all"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.Widget[]"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling",
         "qx.ui.core.ISingleSelection"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "_onChangeSelected": {
       "jsdoc": {
@@ -1012,10 +956,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {qx.event.type.Data} Data event.",
-            "paramName": "e",
-            "description": " Data event.",
-            "type": "qx.event.type.Data"
+            "body": "e {qx.event.type.Data} Data event."
           }
         ]
       },
@@ -1035,14 +976,13 @@
       "type": "function",
       "params": [
         {
-          "name": "e",
-          "type": "qx.event.type.Data"
+          "name": "e"
         }
       ],
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "__getManager": {
       "jsdoc": {
@@ -1063,9 +1003,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.SingleSelectionManager} Single selection manager.",
-            "type": "qx.ui.core.SingleSelectionManager",
-            "description": "Single selection manager."
+            "body": "{qx.ui.core.SingleSelectionManager} Single selection manager."
           }
         ]
       },
@@ -1084,13 +1022,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.SingleSelectionManager"
-      },
+      "mixin": "qx.ui.core.MSingleSelectionHandling",
       "appearsIn": [
         "qx.ui.core.MSingleSelectionHandling"
-      ],
-      "mixin": "qx.ui.core.MSingleSelectionHandling"
+      ]
     },
     "getChildren": {
       "jsdoc": {
@@ -1111,9 +1046,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)",
-            "type": "qx.ui.core.LayoutItem[]",
-            "description": "The children array (Arrays are\n   reference types, please do not modify them in-place)"
+            "body": "{qx.ui.core.LayoutItem[]} The children array (Arrays are\n   reference types, please do not modify them in-place)"
           }
         ]
       },
@@ -1132,13 +1065,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem[]"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "hasChildren": {
       "jsdoc": {
@@ -1158,9 +1088,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Boolean} Returns <code>true</code> when the widget has children.",
-            "type": "boolean",
-            "description": "Returns <code>true</code> when the widget has children."
+            "body": "{Boolean} Returns <code>true</code> when the widget has children."
           }
         ]
       },
@@ -1179,13 +1107,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "boolean"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "indexOf": {
       "jsdoc": {
@@ -1213,18 +1138,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.Widget} the widget to query for",
-            "paramName": "child",
-            "description": " the widget to query for",
-            "type": "qx.ui.core.Widget"
+            "body": "child {qx.ui.core.Widget} the widget to query for"
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{Integer} The index position or <code>-1</code> when\n   the given widget is no child of this layout.",
-            "type": "Integer",
-            "description": "The index position or <code>-1</code> when\n   the given widget is no child of this layout."
+            "body": "{Integer} The index position or <code>-1</code> when\n   the given widget is no child of this layout."
           }
         ]
       },
@@ -1244,17 +1164,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.Widget"
+          "name": "child"
         }
       ],
-      "returnType": {
-        "type": "Integer"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "add": {
       "jsdoc": {
@@ -1279,19 +1195,11 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the widget to add.",
-            "paramName": "child",
-            "description": " the widget to add.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the widget to add."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -1311,20 +1219,16 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addAt": {
       "jsdoc": {
@@ -1351,26 +1255,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "index {Integer} Index, at which the widget will be inserted",
-            "paramName": "index",
-            "description": " Index, at which the widget will be inserted",
-            "type": "Integer"
+            "body": "index {Integer} Index, at which the widget will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -1390,24 +1283,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addBefore": {
       "jsdoc": {
@@ -1434,26 +1322,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted.",
-            "paramName": "before",
-            "description": " Widget before the new widget will be inserted.",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted."
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -1473,24 +1350,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "before",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "before"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "addAfter": {
       "jsdoc": {
@@ -1517,26 +1389,15 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} Widget to add",
-            "paramName": "child",
-            "description": " Widget to add",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} Widget to add"
           },
           {
             "name": "@param",
-            "body": "after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted",
-            "paramName": "after",
-            "description": " Widget, after which the new widget will be inserted",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted"
           },
           {
             "name": "@param",
-            "body": "options {Map?null} Optional layout data for widget.",
-            "paramName": "options",
-            "description": " Optional layout data for widget.",
-            "optional": true,
-            "defaultValue": "null",
-            "type": "Map"
+            "body": "options {Map?null} Optional layout data for widget."
           }
         ]
       },
@@ -1556,24 +1417,19 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         },
         {
-          "name": "after",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "after"
         },
         {
-          "name": "options",
-          "type": "Map",
-          "optional": true,
-          "defaultValue": "null"
+          "name": "options"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "remove": {
       "jsdoc": {
@@ -1593,10 +1449,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "child {qx.ui.core.LayoutItem} the widget to remove",
-            "paramName": "child",
-            "description": " the widget to remove",
-            "type": "qx.ui.core.LayoutItem"
+            "body": "child {qx.ui.core.LayoutItem} the widget to remove"
           }
         ]
       },
@@ -1616,14 +1469,13 @@
       "type": "function",
       "params": [
         {
-          "name": "child",
-          "type": "qx.ui.core.LayoutItem"
+          "name": "child"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "removeAt": {
       "jsdoc": {
@@ -1649,18 +1501,13 @@
         "@param": [
           {
             "name": "@param",
-            "body": "index {Integer} Index of the widget to remove.",
-            "paramName": "index",
-            "description": " Index of the widget to remove.",
-            "type": "Integer"
+            "body": "index {Integer} Index of the widget to remove."
           }
         ],
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.ui.core.LayoutItem} The child removed.",
-            "type": "qx.ui.core.LayoutItem",
-            "description": "The child removed."
+            "body": "{qx.ui.core.LayoutItem} The child removed."
           }
         ]
       },
@@ -1680,17 +1527,13 @@
       "type": "function",
       "params": [
         {
-          "name": "index",
-          "type": "Integer"
+          "name": "index"
         }
       ],
-      "returnType": {
-        "type": "qx.ui.core.LayoutItem"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     },
     "removeAll": {
       "jsdoc": {
@@ -1710,9 +1553,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{Array} An array of the removed children.",
-            "type": "Array<any>",
-            "description": "An array of the removed children."
+            "body": "{Array} An array of the removed children."
           }
         ]
       },
@@ -1731,13 +1572,10 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "Array<any>"
-      },
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     }
   },
   "statics": {
@@ -1762,10 +1600,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "members {Map} The including classes members map",
-            "paramName": "members",
-            "description": " The including classes members map",
-            "type": "Map<any, any>"
+            "body": "members {Map} The including classes members map"
           }
         ],
         "@deprecated": [
@@ -1791,14 +1626,13 @@
       "type": "function",
       "params": [
         {
-          "name": "members",
-          "type": "Map<any, any>"
+          "name": "members"
         }
       ],
+      "mixin": "qx.ui.core.MChildrenHandling",
       "appearsIn": [
         "qx.ui.core.MChildrenHandling"
-      ],
-      "mixin": "qx.ui.core.MChildrenHandling"
+      ]
     }
   }
 }

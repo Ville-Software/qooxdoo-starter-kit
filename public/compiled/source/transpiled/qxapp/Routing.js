@@ -37,7 +37,7 @@
   qx.Bootstrap.define("qxapp.Routing", {
     implement: [qx.core.IDisposable],
     construct(initialpage) {
-      this.__messaging__P_8_0 = new qx.event.Messaging();
+      this.__messaging__P_9_0 = new qx.event.Messaging();
       window.addEventListener('popstate', function (event) {
         var routing = qx.core.Init.getApplication().getRouting();
         routing.execute(event.state.page.url);
@@ -54,20 +54,20 @@
             return qx.Promise.resolve();
           }
         });
-        this.__inertiaRouter__P_8_1 = Inertia.router;
-        this.__currentPage__P_8_2 = initialpage;
+        this.__inertiaRouter__P_9_1 = Inertia.router;
+        this.__currentPage__P_9_2 = initialpage;
       }
     },
     statics: {
       DEFAULT_PATH: "",
-      __back__P_8_3: [],
-      __forward__P_8_4: []
+      __back__P_9_3: [],
+      __forward__P_9_4: []
     },
     members: {
-      __messaging__P_8_0: null,
-      __currentGetPath__P_8_5: null,
-      __inertiaRouter__P_8_1: null,
-      __currentPage__P_8_2: null,
+      __messaging__P_9_0: null,
+      __currentGetPath__P_9_5: null,
+      __inertiaRouter__P_9_1: null,
+      __currentPage__P_9_2: null,
       /**
        * Initialization method used to execute the get route for the currently set history path.
        * If no path is set, either the given argument named <code>defaultPath</code>
@@ -83,13 +83,13 @@
         }
       },
       getRouter() {
-        return this.__inertiaRouter__P_8_1;
+        return this.__inertiaRouter__P_9_1;
       },
       getCurrentPage() {
-        return this.__currentPage__P_8_2;
+        return this.__currentPage__P_9_2;
       },
       setCurrentPage(page) {
-        this.__currentPage__P_8_2 = page;
+        this.__currentPage__P_9_2 = page;
       },
       /**
        * Checks if path is valid and registered in channel "get" and then just returns it.
@@ -101,7 +101,7 @@
        * @return {String} A valid path.
        */
       _getPathOrFallback(path, defaultPath) {
-        if (path == "" || path == null || !this.__messaging__P_8_0.has("get", path)) {
+        if (path == "" || path == null || !this.__messaging__P_9_0.has("get", path)) {
           path = defaultPath || qxapp.Routing.DEFAULT_PATH;
         }
         return path;
@@ -116,7 +116,7 @@
        * @return {String} Event listener ID
        */
       onGet(route, handler, scope) {
-        return this.__messaging__P_8_0.on("get", route, handler, scope);
+        return this.__messaging__P_9_0.on("get", route, handler, scope);
       },
       /**
        * This is a shorthand for {@link #onGet}.
@@ -139,7 +139,7 @@
        * @return {String} Event listener ID
        */
       onPost(route, handler, scope) {
-        return this.__messaging__P_8_0.on("post", route, handler, scope);
+        return this.__messaging__P_9_0.on("post", route, handler, scope);
       },
       /**
        * Adds a route handler for the "put" operation. The route gets called
@@ -151,7 +151,7 @@
        * @return {String} Event listener ID
        */
       onPut(route, handler, scope) {
-        return this.__messaging__P_8_0.on("put", route, handler, scope);
+        return this.__messaging__P_9_0.on("put", route, handler, scope);
       },
       /**
        * Adds a route handler for the "delete" operation. The route gets called
@@ -163,7 +163,7 @@
        * @return {String} Event listener ID
        */
       onDelete(route, handler, scope) {
-        return this.__messaging__P_8_0.on("delete", route, handler, scope);
+        return this.__messaging__P_9_0.on("delete", route, handler, scope);
       },
       /**
        * Adds a route handler for the "any" operation. The "any" operation is called
@@ -175,7 +175,7 @@
        * @return {String} Event listener ID
        */
       onAny(route, handler, scope) {
-        return this.__messaging__P_8_0.onAny(route, handler, scope);
+        return this.__messaging__P_9_0.onAny(route, handler, scope);
       },
       /**
        * Removes a registered route by the given id.
@@ -183,7 +183,7 @@
        * @param id {String} The id of the registered route
        */
       remove(id) {
-        this.__messaging__P_8_0.remove(id);
+        this.__messaging__P_9_0.remove(id);
       },
       /**
        * Executes the get operation and informs all matching route handler.
@@ -194,8 +194,8 @@
        *
        */
       _executeGet(path, customData, fromEvent) {
-        this.__currentGetPath__P_8_5 = path;
-        var history = this.__getFromHistory__P_8_6(path);
+        this.__currentGetPath__P_9_5 = path;
+        var history = this.__getFromHistory__P_9_6(path);
         if (history) {
           if (!customData) {
             customData = history.data.customData || {};
@@ -203,13 +203,13 @@
             customData.action = history.action;
             customData.fromEvent = fromEvent;
           } else {
-            this.__replaceCustomData__P_8_7(path, customData);
+            this.__replaceCustomData__P_9_7(path, customData);
           }
         } else {
-          this.__addToHistory__P_8_8(path, customData);
-          qxapp.Routing.__forward__P_8_4 = [];
+          this.__addToHistory__P_9_8(path, customData);
+          qxapp.Routing.__forward__P_9_4 = [];
         }
-        this.__messaging__P_8_0.emit("get", path, null, customData);
+        this.__messaging__P_9_0.emit("get", path, null, customData);
       },
       /**
        * Executes the get operation and informs all matching route handler.
@@ -237,7 +237,7 @@
        * @param customData {var} The given custom data that should be propagated
        */
       executePost(path, params, customData) {
-        this.__messaging__P_8_0.emit("post", path, params, customData);
+        this.__messaging__P_9_0.emit("post", path, params, customData);
       },
       /**
        * Executes the put operation and informs all matching route handler.
@@ -247,7 +247,7 @@
        * @param customData {var} The given custom data that should be propagated
        */
       executePut(path, params, customData) {
-        this.__messaging__P_8_0.emit("put", path, params, customData);
+        this.__messaging__P_9_0.emit("put", path, params, customData);
       },
       /**
        * Executes the delete operation and informs all matching route handler.
@@ -257,7 +257,7 @@
        * @param customData {var} The given custom data that should be propagated
        */
       executeDelete(path, params, customData) {
-        this.__messaging__P_8_0.emit("delete", path, params, customData);
+        this.__messaging__P_9_0.emit("delete", path, params, customData);
       },
       /**
        * Adds the custom data of a given path to the history.
@@ -265,8 +265,8 @@
        * @param path {String} The path to store.
        * @param customData {var} The custom data to store
        */
-      __addToHistory__P_8_8(path, customData) {
-        qxapp.Routing.__back__P_8_3.unshift({
+      __addToHistory__P_9_8(path, customData) {
+        qxapp.Routing.__back__P_9_3.unshift({
           path: path,
           customData: customData
         });
@@ -276,8 +276,8 @@
        * @param path {String} The path to replace.
        * @param customData {var} The custom data to store.
        */
-      __replaceCustomData__P_8_7(path, customData) {
-        var register = [qxapp.Routing.__back__P_8_3, qxapp.Routing.__forward__P_8_4];
+      __replaceCustomData__P_9_7(path, customData) {
+        var register = [qxapp.Routing.__back__P_9_3, qxapp.Routing.__forward__P_9_4];
         for (var i = 0; i < register.length; i++) {
           for (var j = 0; j < register[i].length; j++) {
             if (register[i][j].path == path) {
@@ -292,9 +292,9 @@
        * @param path {String} The path of the entry
        * @return {Map|null} The retrieved entry. <code>null</code> when no entry was found.
        */
-      __getFromHistory__P_8_6(path) {
-        var back = qxapp.Routing.__back__P_8_3;
-        var forward = qxapp.Routing.__forward__P_8_4;
+      __getFromHistory__P_9_6(path) {
+        var back = qxapp.Routing.__back__P_9_3;
+        var forward = qxapp.Routing.__forward__P_9_4;
         var found = false;
         var entry = null;
         var length = back.length;
@@ -355,7 +355,7 @@
           };
         }
         var path,
-          back = qxapp.Routing.__back__P_8_3;
+          back = qxapp.Routing.__back__P_9_3;
         if (back.length > 0) {
           // Remove current state
           back.shift();
@@ -377,4 +377,4 @@
   qxapp.Routing.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Routing.js.map?dt=1769806685945
+//# sourceMappingURL=Routing.js.map?dt=1791841649542

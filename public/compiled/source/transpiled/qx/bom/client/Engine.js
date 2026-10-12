@@ -57,7 +57,7 @@
       getVersion() {
         var agent = window.navigator.userAgent;
         var version = "";
-        if (qx.bom.client.Engine.__isMshtml__P_63_0()) {
+        if (qx.bom.client.Engine.__isMshtml__P_50_0()) {
           var isTrident = /Trident\/([^\);]+)(\)|;)/.test(agent);
           if (/MSIE\s+([^\);]+)(\)|;)/.test(agent)) {
             version = RegExp.$1;
@@ -79,7 +79,7 @@
               version = match[1];
             }
           }
-        } else if (qx.bom.client.Engine.__isOpera__P_63_1()) {
+        } else if (qx.bom.client.Engine.__isOpera__P_50_1()) {
           // Opera has a special versioning scheme, where the second part is combined
           // e.g. 8.54 which should be handled like 8.5.4 to be compatible to the
           // common versioning system used by other browsers
@@ -98,7 +98,7 @@
               }
             }
           }
-        } else if (qx.bom.client.Engine.__isWebkit__P_63_2()) {
+        } else if (qx.bom.client.Engine.__isWebkit__P_50_2()) {
           if (/AppleWebKit\/([^ ]+)/.test(agent)) {
             version = RegExp.$1;
 
@@ -108,7 +108,7 @@
               version = version.slice(0, invalidCharacter.index);
             }
           }
-        } else if (qx.bom.client.Engine.__isGecko__P_63_3()) {
+        } else if (qx.bom.client.Engine.__isGecko__P_50_3()) {
           // Parse "rv" section in user agent string
           if (/rv\:([^\);]+)(\)|;)/.test(agent)) {
             version = RegExp.$1;
@@ -132,13 +132,13 @@
        */
       getName() {
         var name;
-        if (qx.bom.client.Engine.__isMshtml__P_63_0()) {
+        if (qx.bom.client.Engine.__isMshtml__P_50_0()) {
           name = "mshtml";
-        } else if (qx.bom.client.Engine.__isOpera__P_63_1()) {
+        } else if (qx.bom.client.Engine.__isOpera__P_50_1()) {
           name = "opera";
-        } else if (qx.bom.client.Engine.__isWebkit__P_63_2()) {
+        } else if (qx.bom.client.Engine.__isWebkit__P_50_2()) {
           name = "webkit";
-        } else if (qx.bom.client.Engine.__isGecko__P_63_3()) {
+        } else if (qx.bom.client.Engine.__isGecko__P_50_3()) {
           name = "gecko";
         } else {
           // check for the fallback
@@ -160,14 +160,14 @@
        *
        * @return {Boolean} true, if its opera (presto powered).
        */
-      __isOpera__P_63_1() {
+      __isOpera__P_50_1() {
         return window.opera && Object.prototype.toString.call(window.opera) == "[object Opera]";
       },
       /**
        * Internal helper for checking for webkit.
        * @return {Boolean} true, if its webkit.
        */
-      __isWebkit__P_63_2() {
+      __isWebkit__P_50_2() {
         return window.navigator.userAgent.indexOf("AppleWebKit/") != -1;
       },
       /**
@@ -187,18 +187,18 @@
        *
        * @return {Boolean} true, if its gecko.
        */
-      __isGecko__P_63_3() {
+      __isGecko__P_50_3() {
         return (window.navigator.mozApps || window.navigator.buildID) && window.navigator.product === "Gecko" && window.navigator.userAgent.indexOf("Trident") == -1;
       },
       /**
        * Internal helper to check for MSHTML.
        * @return {Boolean} true, if its MSHTML.
        */
-      __isMshtml__P_63_0() {
+      __isMshtml__P_50_0() {
         if (window.navigator.cpuClass && (/MSIE\s+([^\);]+)(\)|;)/.test(window.navigator.userAgent) || /Trident\/\d+?\.\d+?/.test(window.navigator.userAgent))) {
           return true;
         }
-        if (qx.bom.client.Engine.__isWindowsPhone__P_63_4()) {
+        if (qx.bom.client.Engine.__isWindowsPhone__P_50_4()) {
           return true;
         }
         return false;
@@ -207,7 +207,7 @@
        * Internal helper to check for Windows phone.
        * @return {Boolean} true, if its Windows phone.
        */
-      __isWindowsPhone__P_63_4() {
+      __isWindowsPhone__P_50_4() {
         return window.navigator.userAgent.indexOf("Windows Phone") > -1;
       }
     },
@@ -219,4 +219,4 @@
   qx.bom.client.Engine.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Engine.js.map?dt=1769806688777
+//# sourceMappingURL=Engine.js.map?dt=1791841650433

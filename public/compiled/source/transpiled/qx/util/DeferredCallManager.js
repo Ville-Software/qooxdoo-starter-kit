@@ -59,9 +59,9 @@
     */
 
     construct() {
-      this.__calls__P_164_0 = {};
-      this.__timeoutWrapper__P_164_1 = qx.lang.Function.bind(this.__timeout__P_164_2, this);
-      this.__hasCalls__P_164_3 = false;
+      this.__calls__P_156_0 = {};
+      this.__timeoutWrapper__P_156_1 = qx.lang.Function.bind(this.__timeout__P_156_2, this);
+      this.__hasCalls__P_156_3 = false;
     },
     /*
     *****************************************************************************
@@ -70,29 +70,29 @@
     */
 
     members: {
-      __timeoutId__P_164_4: null,
-      __currentQueue__P_164_5: null,
-      __calls__P_164_0: null,
-      __hasCalls__P_164_3: null,
-      __timeoutWrapper__P_164_1: null,
+      __timeoutId__P_156_4: null,
+      __currentQueue__P_156_5: null,
+      __calls__P_156_0: null,
+      __hasCalls__P_156_3: null,
+      __timeoutWrapper__P_156_1: null,
       /**
        * Schedule a deferred call
        *
        * @param deferredCall {qx.util.DeferredCall} The call to schedule
        */
       schedule(deferredCall) {
-        if (this.__timeoutId__P_164_4 == null) {
-          this.__timeoutId__P_164_4 = window.setTimeout(this.__timeoutWrapper__P_164_1, 0);
+        if (this.__timeoutId__P_156_4 == null) {
+          this.__timeoutId__P_156_4 = window.setTimeout(this.__timeoutWrapper__P_156_1, 0);
         }
         var callKey = deferredCall.toHashCode();
 
         // the flush is currently running and the call is already
         // scheduled
-        if (this.__currentQueue__P_164_5 && this.__currentQueue__P_164_5[callKey]) {
+        if (this.__currentQueue__P_156_5 && this.__currentQueue__P_156_5[callKey]) {
           return;
         }
-        this.__calls__P_164_0[callKey] = deferredCall;
-        this.__hasCalls__P_164_3 = true;
+        this.__calls__P_156_0[callKey] = deferredCall;
+        this.__hasCalls__P_156_3 = true;
       },
       /**
        * Refresh the timeout if the current one is not active anymore.
@@ -102,8 +102,8 @@
        * DeferredCalls would never fire.
        */
       refreshTimeout() {
-        if (this.__timeoutId__P_164_4 !== null) {
-          this.__timeoutId__P_164_4 = window.setTimeout(this.__timeoutWrapper__P_164_1, 0);
+        if (this.__timeoutId__P_156_4 !== null) {
+          this.__timeoutId__P_156_4 = window.setTimeout(this.__timeoutWrapper__P_156_1, 0);
         }
       },
       /**
@@ -116,16 +116,16 @@
 
         // the flush is currently running and the call is already
         // scheduled -> remove it from the current queue
-        if (this.__currentQueue__P_164_5 && this.__currentQueue__P_164_5[callKey]) {
-          this.__currentQueue__P_164_5[callKey] = null;
+        if (this.__currentQueue__P_156_5 && this.__currentQueue__P_156_5[callKey]) {
+          this.__currentQueue__P_156_5[callKey] = null;
           return;
         }
-        delete this.__calls__P_164_0[callKey];
+        delete this.__calls__P_156_0[callKey];
 
         // stop timer if no other calls are waiting
-        if (qx.lang.Object.isEmpty(this.__calls__P_164_0) && this.__timeoutId__P_164_4 != null) {
-          window.clearTimeout(this.__timeoutId__P_164_4);
-          this.__timeoutId__P_164_4 = null;
+        if (qx.lang.Object.isEmpty(this.__calls__P_156_0) && this.__timeoutId__P_156_4 != null) {
+          window.clearTimeout(this.__timeoutId__P_156_4);
+          this.__timeoutId__P_156_4 = null;
         }
       },
       /**
@@ -133,24 +133,24 @@
        *
        * @signature function()
        */
-      __timeout__P_164_2: qx.event.GlobalError.observeMethod(function () {
-        this.__timeoutId__P_164_4 = null;
+      __timeout__P_156_2: qx.event.GlobalError.observeMethod(function () {
+        this.__timeoutId__P_156_4 = null;
 
         // the queue may change while doing the flush so we work on a copy of
         // the queue and loop while the queue has any entries.
-        while (this.__hasCalls__P_164_3) {
-          this.__currentQueue__P_164_5 = qx.lang.Object.clone(this.__calls__P_164_0);
-          this.__calls__P_164_0 = {};
-          this.__hasCalls__P_164_3 = false;
-          for (var key in this.__currentQueue__P_164_5) {
-            var call = this.__currentQueue__P_164_5[key];
+        while (this.__hasCalls__P_156_3) {
+          this.__currentQueue__P_156_5 = qx.lang.Object.clone(this.__calls__P_156_0);
+          this.__calls__P_156_0 = {};
+          this.__hasCalls__P_156_3 = false;
+          for (var key in this.__currentQueue__P_156_5) {
+            var call = this.__currentQueue__P_156_5[key];
             if (call) {
-              this.__currentQueue__P_164_5[key] = null;
+              this.__currentQueue__P_156_5[key] = null;
               call.call();
             }
           }
         }
-        this.__currentQueue__P_164_5 = null;
+        this.__currentQueue__P_156_5 = null;
       })
     },
     /*
@@ -160,13 +160,13 @@
     */
 
     destruct() {
-      if (this.__timeoutId__P_164_4 != null) {
-        window.clearTimeout(this.__timeoutId__P_164_4);
+      if (this.__timeoutId__P_156_4 != null) {
+        window.clearTimeout(this.__timeoutId__P_156_4);
       }
-      this.__timeoutWrapper__P_164_1 = this.__calls__P_164_0 = null;
+      this.__timeoutWrapper__P_156_1 = this.__calls__P_156_0 = null;
     }
   });
   qx.util.DeferredCallManager.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=DeferredCallManager.js.map?dt=1769806692937
+//# sourceMappingURL=DeferredCallManager.js.map?dt=1791841652203

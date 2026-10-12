@@ -80,7 +80,7 @@
     construct(fontFamily) {
       qx.core.Object.constructor.call(this);
       this.setFontFamily(fontFamily);
-      this.__validators__P_181_0 = {};
+      this.__validators__P_198_0 = {};
     },
     properties: {
       /** The font name that this font is known by */
@@ -134,16 +134,16 @@
     */
 
     members: {
-      __fontFacesQueue__P_181_1: null,
-      __fontFacesCreatedPromise__P_181_2: null,
+      __fontFacesQueue__P_198_1: null,
+      __fontFacesCreatedPromise__P_198_2: null,
       _validators: null,
       getValidator(fontWeight, fontStyle) {
         fontWeight = fontWeight || "normal";
         fontStyle = fontStyle || "normal";
         let id = fontWeight + "::" + fontStyle;
-        let validator = this.__validators__P_181_0[id];
+        let validator = this.__validators__P_198_0[id];
         if (!validator) {
-          validator = this.__validators__P_181_0[id] = new qx.bom.webfonts.Validator(this.getFontFamily(), this.getComparisonString(), fontWeight, fontStyle);
+          validator = this.__validators__P_198_0[id] = new qx.bom.webfonts.Validator(this.getFontFamily(), this.getComparisonString(), fontWeight, fontStyle);
           validator.setTimeout(qx.bom.webfonts.WebFont.VALIDATION_TIMEOUT);
           validator.validate();
         }
@@ -161,7 +161,7 @@
             url += url.indexOf("?") < 0 ? "?" : "&";
             url += this.getVersion();
           }
-          qx.bom.webfonts.WebFontLoader.__loadStylesheet__P_181_3(url);
+          qx.bom.webfonts.WebFontLoader.__loadStylesheet__P_198_3(url);
         });
         let fontFaces = this.getFontFaces();
         if (fontFaces) {
@@ -179,32 +179,32 @@
               });
             }
           });
-          this.__fontFacesQueue__P_181_1 = qx.lang.Array.clone(fontFaces);
-          this.__fontFacesCreatedPromise__P_181_2 = new qx.Promise();
+          this.__fontFacesQueue__P_198_1 = qx.lang.Array.clone(fontFaces);
+          this.__fontFacesCreatedPromise__P_198_2 = new qx.Promise();
         }
-        this.__dequeueFontFaces__P_181_4();
+        this.__dequeueFontFaces__P_198_4();
       },
       async promiseLoaded() {
-        return await this.__fontFacesCreatedPromise__P_181_2;
+        return await this.__fontFacesCreatedPromise__P_198_2;
       },
       /**
        * Adds the font faces in __fontFacesQueue
        */
-      __dequeueFontFaces__P_181_4() {
-        if (this.__fontFacesQueue__P_181_1 == null) {
+      __dequeueFontFaces__P_198_4() {
+        if (this.__fontFacesQueue__P_198_1 == null) {
           return;
         }
-        let fontFace = this.__fontFacesQueue__P_181_1.pop();
-        this.__addFontFace__P_181_5(fontFace);
-        if (this.__fontFacesQueue__P_181_1.length == 0) {
-          this.__fontFacesQueue__P_181_1 = null;
-          this.__fontFacesCreatedPromise__P_181_2.resolve(true);
+        let fontFace = this.__fontFacesQueue__P_198_1.pop();
+        this.__addFontFace__P_198_5(fontFace);
+        if (this.__fontFacesQueue__P_198_1.length == 0) {
+          this.__fontFacesQueue__P_198_1 = null;
+          this.__fontFacesCreatedPromise__P_198_2.resolve(true);
         }
         if (qx.core.Environment.get("engine.name") == "mshtml" && (parseInt(qx.core.Environment.get("engine.version")) < 9 || qx.core.Environment.get("browser.documentmode") < 9)) {
           // old IEs need a break in between adding @font-face rules
-          setTimeout(() => this.__dequeueFontFaces__P_181_4(), 100);
+          setTimeout(() => this.__dequeueFontFaces__P_198_4(), 100);
         } else {
-          this.__dequeueFontFaces__P_181_4();
+          this.__dequeueFontFaces__P_198_4();
         }
       },
       /**
@@ -213,15 +213,15 @@
        * @param {*} fontFace - POJO of from the array in Manifest.json
        * @returns
        */
-      __addFontFace__P_181_5(fontFace) {
+      __addFontFace__P_198_5(fontFace) {
         let fontFamily = fontFace.fontFamily || this.getFontFamily();
         let fontLookupKey = qx.bom.webfonts.WebFontLoader.createFontLookupKey(fontFamily, fontFace.fontWeight || "normal", fontFace.fontStyle || "normal");
-        if (qx.bom.webfonts.WebFontLoader.__addedFontFaces__P_181_6[fontLookupKey]) {
+        if (qx.bom.webfonts.WebFontLoader.__addedFontFaces__P_198_6[fontLookupKey]) {
           return;
         }
-        if (!qx.bom.webfonts.WebFontLoader.__styleSheet__P_181_7) {
+        if (!qx.bom.webfonts.WebFontLoader.__styleSheet__P_198_7) {
           let styleSheet = qx.bom.Stylesheet.createElement();
-          qx.bom.webfonts.WebFontLoader.__styleSheet__P_181_7 = styleSheet;
+          qx.bom.webfonts.WebFontLoader.__styleSheet__P_198_7 = styleSheet;
           {
             styleSheet.ownerNode.setAttribute("data-qx-created-by", qx.bom.webfonts.WebFontLoader.classname);
             styleSheet.ownerNode.$$qxObject = this;
@@ -276,10 +276,10 @@
         rule += "font-style: " + (fontFace.fontStyle || "normal") + ";\n";
         rule += "font-weight: " + (fontFace.fontWeight || "normal") + ";\n";
         rule = "@font-face {\n" + rule + "}\n";
-        let styleSheet = qx.bom.webfonts.WebFontLoader.__styleSheet__P_181_7;
+        let styleSheet = qx.bom.webfonts.WebFontLoader.__styleSheet__P_198_7;
         try {
           if (qx.core.Environment.get("browser.name") == "ie" && qx.core.Environment.get("browser.documentmode") < 9) {
-            let cssText = qx.bom.webfonts.WebFontLoader.__fixCssText__P_181_8(styleSheet.cssText);
+            let cssText = qx.bom.webfonts.WebFontLoader.__fixCssText__P_198_8(styleSheet.cssText);
             cssText += rule;
             styleSheet.cssText = cssText;
           } else {
@@ -291,7 +291,7 @@
             return;
           }
         }
-        qx.bom.webfonts.WebFontLoader.__addedFontFaces__P_181_6[fontLookupKey] = true;
+        qx.bom.webfonts.WebFontLoader.__addedFontFaces__P_198_6[fontLookupKey] = true;
       },
       // property apply
       _applyFontFaces(fontFaces, old) {
@@ -325,12 +325,12 @@
        */
       VALIDATION_TIMEOUT: 5000,
       /** @type{String[]} array of supported font formats, most preferred first */
-      __preferredFormats__P_181_9: null,
+      __preferredFormats__P_198_9: null,
       /** */
-      __loadedStylesheets__P_181_10: {},
-      __addedFontFaces__P_181_6: {},
+      __loadedStylesheets__P_198_10: {},
+      __addedFontFaces__P_198_6: {},
       /** Loader instances indexed by font family name */
-      __loaders__P_181_11: {},
+      __loaders__P_198_11: {},
       /**
        * Gets/creates a loader
        *
@@ -339,9 +339,9 @@
        * @returns
        */
       getLoader(name, create) {
-        let loader = qx.bom.webfonts.WebFontLoader.__loaders__P_181_11[name];
+        let loader = qx.bom.webfonts.WebFontLoader.__loaders__P_198_11[name];
         if (!loader && create) {
-          loader = qx.bom.webfonts.WebFontLoader.__loaders__P_181_11[name] = new qx.bom.webfonts.WebFontLoader(name);
+          loader = qx.bom.webfonts.WebFontLoader.__loaders__P_198_11[name] = new qx.bom.webfonts.WebFontLoader(name);
         }
         return loader;
       },
@@ -350,12 +350,12 @@
        *
        * @param {String} url
        */
-      __loadStylesheet__P_181_3(url) {
-        if (qx.bom.webfonts.WebFontLoader.__loadedStylesheets__P_181_10[url]) {
+      __loadStylesheet__P_198_3(url) {
+        if (qx.bom.webfonts.WebFontLoader.__loadedStylesheets__P_198_10[url]) {
           return;
         }
         qx.bom.Stylesheet.includeFile(url);
-        qx.bom.webfonts.WebFontLoader.__loadedStylesheets__P_181_10[url] = true;
+        qx.bom.webfonts.WebFontLoader.__loadedStylesheets__P_198_10[url] = true;
       },
       /**
        * Creates a lookup key to index the created fonts.
@@ -376,7 +376,7 @@
        * @param sources {String[]} Array of source URLs
        * @return {Map} Map of formats and URLs
        */
-      __getSourcesMap__P_181_12(sources) {
+      __getSourcesMap__P_198_12(sources) {
         var formats = qx.bom.webfonts.WebFontLoader.FONT_FORMATS;
         var sourcesMap = {};
         var reg = new RegExp(".(" + formats.join("|") + ")");
@@ -398,8 +398,8 @@
        * or empty Array if none could be determined
        */
       getPreferredFormats() {
-        if (qx.bom.webfonts.WebFontLoader.__preferredFormats__P_181_9) {
-          return qx.bom.webfonts.WebFontLoader.__preferredFormats__P_181_9;
+        if (qx.bom.webfonts.WebFontLoader.__preferredFormats__P_198_9) {
+          return qx.bom.webfonts.WebFontLoader.__preferredFormats__P_198_9;
         }
         var preferredFormats = [];
         var browser = qx.core.Environment.get("browser.name");
@@ -421,7 +421,7 @@
         if (browser == "mobileSafari" && os == "ios" && osVersion >= 4.1) {
           preferredFormats.push("svg");
         }
-        return qx.bom.webfonts.WebFontLoader.__preferredFormats__P_181_9 = preferredFormats;
+        return qx.bom.webfonts.WebFontLoader.__preferredFormats__P_198_9 = preferredFormats;
       },
       /**
        * IE 6 and 7 omit the trailing quote after the format name when
@@ -431,7 +431,7 @@
        * @param cssText {String} CSS text
        * @return {String} Fixed CSS text
        */
-      __fixCssText__P_181_8(cssText) {
+      __fixCssText__P_198_8(cssText) {
         return cssText.replace("'eot)", "'eot')").replace("('embedded-opentype)", "('embedded-opentype')");
       }
     }
@@ -439,4 +439,4 @@
   qx.bom.webfonts.WebFontLoader.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=WebFontLoader.js.map?dt=1769806693609
+//# sourceMappingURL=WebFontLoader.js.map?dt=1791841652713

@@ -203,7 +203,7 @@
        * This is a method which does nothing than gathering dependencies for the
        * module system. Calling this method is useless because it does nothing.
        */
-      __gatherDependency__P_33_0() {
+      __gatherDependency__P_32_0() {
         {
           qx.event.type.Data;
           qx.event.dispatch.Direct;
@@ -216,7 +216,7 @@
        * Built-in checks
        * The keys could be used in the check of the properties
        */
-      __checks__P_33_1: {
+      __checks__P_32_1: {
         Boolean: "qx.core.Assert.assertBoolean(value, msg) || true",
         String: "qx.core.Assert.assertString(value, msg) || true",
         Number: "qx.core.Assert.assertNumber(value, msg) || true",
@@ -246,7 +246,7 @@
       /**
        * Contains types from {@link #__checks} list which need to be dereferenced
        */
-      __dereference__P_33_2: {
+      __dereference__P_32_2: {
         Node: true,
         Element: true,
         Document: true,
@@ -353,12 +353,12 @@
        *
        * @param clazz {Class} clazz to which the refresher should be added
        */
-      __executeOptimizedRefresh__P_33_3(clazz) {
-        var inheritables = this.__getInheritablesOfClass__P_33_4(clazz);
+      __executeOptimizedRefresh__P_32_3(clazz) {
+        var inheritables = this.__getInheritablesOfClass__P_32_4(clazz);
         if (!inheritables.length) {
           var refresher = function () {};
         } else {
-          refresher = this.__createRefresher__P_33_5(inheritables);
+          refresher = this.__createRefresher__P_32_5(inheritables);
         }
         clazz.prototype.$$refreshInheritables = refresher;
       },
@@ -368,7 +368,7 @@
        * @param clazz {Class} class to get the inheritable properties of
        * @return {String[]} List of property names
        */
-      __getInheritablesOfClass__P_33_4(clazz) {
+      __getInheritablesOfClass__P_32_4(clazz) {
         var inheritable = [];
         while (clazz) {
           var properties = clazz.$$properties;
@@ -391,7 +391,7 @@
        * @param inheritables {String[]} list of inheritable properties
        * @return {Function} refresher function
        */
-      __createRefresher__P_33_5(inheritables) {
+      __createRefresher__P_32_5(inheritables) {
         var inherit = this.$$store.inherit;
         var init = this.$$store.init;
         var refresh = this.$$method.refresh;
@@ -409,7 +409,7 @@
        */
       attachRefreshInheritables(clazz) {
         clazz.prototype.$$refreshInheritables = function () {
-          qx.core.Property.__executeOptimizedRefresh__P_33_3(clazz);
+          qx.core.Property.__executeOptimizedRefresh__P_32_3(clazz);
           return this.$$refreshInheritables();
         };
       },
@@ -422,7 +422,7 @@
        */
       attachMethods(clazz, name, config) {
         // Divide groups from "normal" properties
-        config.group ? this.__attachGroupMethods__P_33_6(clazz, config, name) : this.__attachPropertyMethods__P_33_7(clazz, config, name);
+        config.group ? this.__attachGroupMethods__P_32_6(clazz, config, name) : this.__attachPropertyMethods__P_32_7(clazz, config, name);
       },
       /**
        * Attach group methods
@@ -431,7 +431,7 @@
        * @param config {Map} Property configuration
        * @param name {String} Name of the property
        */
-      __attachGroupMethods__P_33_6(clazz, config, name) {
+      __attachGroupMethods__P_32_6(clazz, config, name) {
         var upname = qx.Bootstrap.firstUp(name);
         var members = clazz.prototype;
         var themeable = config.themeable === true;
@@ -501,7 +501,7 @@
        * @param config {Map} Property configuration
        * @param name {String} Name of the property
        */
-      __attachPropertyMethods__P_33_7(clazz, config, name) {
+      __attachPropertyMethods__P_32_7(clazz, config, name) {
         var upname = qx.Bootstrap.firstUp(name);
         var members = clazz.prototype;
         {
@@ -512,7 +512,7 @@
 
         // Fill dispose value
         if (config.dereference === undefined && typeof config.check === "string") {
-          config.dereference = this.__shouldBeDereferenced__P_33_8(config.check);
+          config.dereference = this.__shouldBeDereferenced__P_32_8(config.check);
         }
         // Check for method name conflicts
         {
@@ -576,9 +576,9 @@
           members[method.getAsync[name]] = new Function("this." + getName + ".$$install && this." + getName + ".$$install.call(this);" + "return this." + getName + "Async.apply(this, arguments);");
         }
         members[method.get[name]].$$install = function () {
-          qx.core.Property.__installOptimizedGetter__P_33_9(clazz, name, "get", arguments);
+          qx.core.Property.__installOptimizedGetter__P_32_9(clazz, name, "get", arguments);
           if (config.async) {
-            qx.core.Property.__installOptimizedGetter__P_33_9(clazz, name, "getAsync", arguments);
+            qx.core.Property.__installOptimizedGetter__P_32_9(clazz, name, "getAsync", arguments);
           }
         };
         var setName = method.set[name] = "set" + upname;
@@ -596,10 +596,10 @@
         }
         method.setImpl[name] = "$$set" + upname + "Impl";
         members[setName].$$install = function () {
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "set");
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "setImpl");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "set");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "setImpl");
           if (config.async) {
-            qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "setAsync");
+            qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "setAsync");
           }
         };
         method.reset[name] = "reset" + upname;
@@ -607,7 +607,7 @@
           return qx.core.Property.executeOptimizedSetter(this, clazz, name, "reset");
         };
         members[method.reset[name]].$$install = function () {
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "reset");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "reset");
         };
         if (config.inheritable || config.apply || config.event || config.deferredInit) {
           method.init[name] = "init" + upname;
@@ -674,11 +674,11 @@
        * @param check {var} The check of the property definition.
        * @return {Boolean} If the dereference key should be set.
        */
-      __shouldBeDereferenced__P_33_8(check) {
-        return !!this.__dereference__P_33_2[check];
+      __shouldBeDereferenced__P_32_8(check) {
+        return !!this.__dereference__P_32_2[check];
       },
       /** @type {Map} Internal data field for error messages used by {@link #error} */
-      __errors__P_33_11: {
+      __errors__P_32_11: {
         0: "Could not change or apply init value after constructing phase!",
         1: "Requires exactly one argument!",
         2: "Undefined value is not allowed!",
@@ -698,7 +698,7 @@
       error(obj, id, property, variant, value) {
         var classname = obj.constructor.classname;
         var msg = "Error in property " + property + " of class " + classname + " in method " + this.$$method[variant][property] + " with incoming value '" + value + "': ";
-        throw new Error(msg + (this.__errors__P_33_11[id] || "Unknown reason: " + id));
+        throw new Error(msg + (this.__errors__P_32_11[id] || "Unknown reason: " + id));
       },
       /**
        * Compiles a string builder object to a function, executes the function and
@@ -712,8 +712,8 @@
        * @param args {arguments} Incoming arguments of wrapper method
        * @return {var} Return value of the generated function
        */
-      __unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code, args) {
-        var fn = this.__installFunctionFromCode__P_33_13(instance.constructor, name, variant, code, args);
+      __unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code, args) {
+        var fn = this.__installFunctionFromCode__P_32_13(instance.constructor, name, variant, code, args);
 
         // Executing new function
         if (args === undefined) {
@@ -733,7 +733,7 @@
        * @param args {arguments} Incoming arguments of wrapper method
        * @return {var} Return value of the generated function
        */
-      __installFunctionFromCode__P_33_13(clazz, name, variant, code, args) {
+      __installFunctionFromCode__P_32_13(clazz, name, variant, code, args) {
         var store = this.$$method[variant][name];
 
         // Output generate code
@@ -766,9 +766,9 @@
        * @return {var} Execute return value of apply generated function, generally the incoming value
        */
       executeOptimizedGetter(instance, clazz, name, variant) {
-        var code = this.__compileGetter__P_33_14(clazz, name, variant);
+        var code = this.__compileGetter__P_32_14(clazz, name, variant);
         var members = clazz.prototype;
-        return this.__unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code);
+        return this.__unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code);
       },
       /**
        * Installs a getter into the class prototype, without executing it
@@ -778,9 +778,9 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __installOptimizedGetter__P_33_9(clazz, name, variant) {
-        var code = this.__compileGetter__P_33_14(clazz, name, variant);
-        this.__installFunctionFromCode__P_33_13(clazz, name, variant, code);
+      __installOptimizedGetter__P_32_9(clazz, name, variant) {
+        var code = this.__compileGetter__P_32_14(clazz, name, variant);
+        this.__installFunctionFromCode__P_32_13(clazz, name, variant, code);
       },
       /**
        * Compiles a getter into a string builder array
@@ -791,7 +791,7 @@
        * @param variant {String} Method variant.
        * @return {String[]} the string builder array
        */
-      __compileGetter__P_33_14(clazz, name, variant) {
+      __compileGetter__P_32_14(clazz, name, variant) {
         var config = clazz.$$properties[name];
         var code = [];
         var store = this.$$store;
@@ -846,9 +846,9 @@
        * @return {var} Execute return value of apply generated function, generally the incoming value
        */
       executeOptimizedSetter(instance, clazz, name, variant, args) {
-        var code = this.__compileSetter__P_33_15(clazz, name, variant);
+        var code = this.__compileSetter__P_32_15(clazz, name, variant);
         var members = clazz.prototype;
-        return this.__unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code, args);
+        return this.__unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code, args);
       },
       /**
        * Installs a setter into the class prototype, without executing it
@@ -859,9 +859,9 @@
        * @param variant {String} Method variant.
        * @return {var} Return value of the generated function
        */
-      __installOptimizedSetter__P_33_10(clazz, name, variant) {
-        var code = this.__compileSetter__P_33_15(clazz, name, variant);
-        return this.__installFunctionFromCode__P_33_13(clazz, name, variant, code);
+      __installOptimizedSetter__P_32_10(clazz, name, variant) {
+        var code = this.__compileSetter__P_32_15(clazz, name, variant);
+        return this.__installFunctionFromCode__P_32_13(clazz, name, variant, code);
       },
       /**
        * Compiles a setter into a string builder array
@@ -873,7 +873,7 @@
        * @param variant {String} Method variant.
        * @return {String[]} the string builder array
        */
-      __compileSetter__P_33_15(clazz, name, variant) {
+      __compileSetter__P_32_15(clazz, name, variant) {
         var config = clazz.$$properties[name];
         var members = clazz.prototype;
         var code = [];
@@ -887,39 +887,39 @@
         }
         var incomingValue = variant === "setImpl" || variant === "setThemed" || variant === "setRuntime" || variant === "init" && config.init === undefined;
         var hasCallback = config.apply || config.event || config.inheritable;
-        var store = this.__getStore__P_33_16(variant, name);
-        this.__emitIsEqualFunction__P_33_17(code, clazz, config, name);
-        this.__emitSetterPreConditions__P_33_18(code, config, name, variant, incomingValue);
+        var store = this.__getStore__P_32_16(variant, name);
+        this.__emitIsEqualFunction__P_32_17(code, clazz, config, name);
+        this.__emitSetterPreConditions__P_32_18(code, config, name, variant, incomingValue);
         if (incomingValue || hasCallback) {
-          this.__emitOldValue__P_33_19(code, config, name);
+          this.__emitOldValue__P_32_19(code, config, name);
         }
         if (incomingValue) {
-          this.__emitIncomingValueTransformation__P_33_20(code, clazz, config, name);
+          this.__emitIncomingValueTransformation__P_32_20(code, clazz, config, name);
         }
         if (hasCallback) {
-          this.__emitOldNewComparison__P_33_21(code, incomingValue, store, variant);
+          this.__emitOldNewComparison__P_32_21(code, incomingValue, store, variant);
         }
         if (config.inheritable) {
           code.push("var inherit=prop.$$inherit;");
         }
         {
           if (incomingValue) {
-            this.__emitIncomingValueValidation__P_33_22(code, config, clazz, name, variant);
+            this.__emitIncomingValueValidation__P_32_22(code, config, clazz, name, variant);
           }
         }
         if (!hasCallback) {
-          this.__emitStoreValue__P_33_23(code, name, variant, incomingValue);
+          this.__emitStoreValue__P_32_23(code, name, variant, incomingValue);
         } else {
-          this.__emitStoreComputedValue__P_33_24(code, config, name, variant, incomingValue);
+          this.__emitStoreComputedValue__P_32_24(code, config, name, variant, incomingValue);
         }
         if (config.inheritable) {
-          this.__emitStoreInheritedPropertyValue__P_33_25(code, config, name, variant);
+          this.__emitStoreInheritedPropertyValue__P_32_25(code, config, name, variant);
         } else if (hasCallback) {
-          this.__emitNormalizeUndefinedValues__P_33_26(code, config, name, variant);
+          this.__emitNormalizeUndefinedValues__P_32_26(code, config, name, variant);
         }
         if (hasCallback) {
           // Emit callback and event firing; Refreshing children (5th parameter) requires the parent/children interface
-          this.__emitCallCallback__P_33_27(code, config, name, variant, !!(config.inheritable && members._getChildren));
+          this.__emitCallCallback__P_32_27(code, config, name, variant, !!(config.inheritable && members._getChildren));
         }
 
         // Return value
@@ -947,7 +947,7 @@
        *
        * @return {Object} the value store
        */
-      __getStore__P_33_16(variant, name) {
+      __getStore__P_32_16(variant, name) {
         if (variant === "setRuntime" || variant === "resetRuntime") {
           var store = this.$$store.runtime[name];
         } else if (variant === "setThemed" || variant === "resetThemed") {
@@ -967,7 +967,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitIsEqualFunction__P_33_17(code, clazz, config, name) {
+      __emitIsEqualFunction__P_32_17(code, clazz, config, name) {
         code.push("var equ=");
         if (typeof config.isEqual === "function") {
           code.push("function(a,b){return !!", clazz.classname, ".$$properties.", name, ".isEqual.call(this,a,b);};");
@@ -996,7 +996,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitSetterPreConditions__P_33_18(code, config, name, variant, incomingValue) {
+      __emitSetterPreConditions__P_32_18(code, config, name, variant, incomingValue) {
         {
           code.push("var prop=qx.core.Property;");
           if (variant === "init") {
@@ -1026,7 +1026,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitIncomingValueTransformation__P_33_20(code, clazz, config, name) {
+      __emitIncomingValueTransformation__P_32_20(code, clazz, config, name) {
         // Call user-provided transform method, if one is provided.  Transform
         // method should either throw an error or return the new value.
         if (config.transform) {
@@ -1054,7 +1054,7 @@
        * @param store {Object} The data store to use for the incoming value
        * @param variant {String} Method variant.
        */
-      __emitOldNewComparison__P_33_21(code, incomingValue, store, variant) {
+      __emitOldNewComparison__P_32_21(code, incomingValue, store, variant) {
         var resetValue = variant === "reset" || variant === "resetThemed" || variant === "resetRuntime";
         if (incomingValue) {
           code.push("if(equ.call(this,this.", store, ",value))return value;");
@@ -1073,7 +1073,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitIncomingValueValidation__P_33_22: qx.core.Environment.select("qx.debug", {
+      __emitIncomingValueValidation__P_32_22: qx.core.Environment.select("qx.debug", {
         true(code, config, clazz, name, variant) {
           // Null check
           if (!config.nullable) {
@@ -1094,8 +1094,8 @@
               code.push("if(value!==inherit)");
             }
             code.push("if(");
-            if (this.__checks__P_33_1[config.check] !== undefined) {
-              code.push("!(", this.__checks__P_33_1[config.check], ")");
+            if (this.__checks__P_32_1[config.check] !== undefined) {
+              code.push("!(", this.__checks__P_32_1[config.check], ")");
             } else if (qx.Class.isDefined(config.check)) {
               code.push('qx.core.Assert.assertInstance(value, qx.Class.getByName("', config.check, '"), msg)');
             } else if (qx.Interface && qx.Interface.isDefined(config.check)) {
@@ -1123,7 +1123,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitStoreValue__P_33_23(code, name, variant, incomingValue) {
+      __emitStoreValue__P_32_23(code, name, variant, incomingValue) {
         if (variant === "setRuntime") {
           code.push("this.", this.$$store.runtime[name], "=value;");
         } else if (variant === "resetRuntime") {
@@ -1153,7 +1153,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitStoreComputedValue__P_33_24(code, config, name, variant, incomingValue) {
+      __emitStoreComputedValue__P_32_24(code, config, name, variant, incomingValue) {
         code.push("var computed;");
 
         // OLD = RUNTIME VALUE
@@ -1329,7 +1329,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitOldValue__P_33_19(code, config, name) {
+      __emitOldValue__P_32_19(code, config, name) {
         if (config.inheritable) {
           code.push("var old=this.", this.$$store.inherit[name], ";");
         } else {
@@ -1368,7 +1368,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitStoreInheritedPropertyValue__P_33_25(code, config, name, variant) {
+      __emitStoreInheritedPropertyValue__P_32_25(code, config, name, variant) {
         code.push("if(computed===undefined||computed===inherit){");
         if (variant === "refresh") {
           code.push("computed=value;");
@@ -1423,7 +1423,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitNormalizeUndefinedValues__P_33_26(code, config, name, variant) {
+      __emitNormalizeUndefinedValues__P_32_26(code, config, name, variant) {
         // Properties which are not inheritable have no possibility to get
         // undefined at this position. (Hint: set(), setRuntime() and setThemed() only allow non undefined values)
         if (variant !== "setImpl" && variant !== "setRuntime" && variant !== "setThemed") {
@@ -1449,7 +1449,7 @@
        * @param variant {String} variant of the method e.g. setThemed
        * @param refresh {Boolean} if true, emit code to update the inherited values of child objects
        */
-      __emitCallCallback__P_33_27(code, config, name, variant, refresh) {
+      __emitCallCallback__P_32_27(code, config, name, variant, refresh) {
         // Execute user configured setter
         code.push("var self=this;", "var promise;");
         if (config.apply) {
@@ -1494,4 +1494,4 @@
   qx.core.Property.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Property.js.map?dt=1769806687175
+//# sourceMappingURL=Property.js.map?dt=1791841650171

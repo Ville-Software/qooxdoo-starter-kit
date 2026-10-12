@@ -11,6 +11,7 @@
     "pageUrl",
     "check",
     "init",
+    "pageName",
     "componentName",
     "qxapp",
     "pages",
@@ -20,8 +21,8 @@
     "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/qxapp/pages/MPage.js"
   ],
   "sourcesContent": [
-    "qx.Mixin.define(\"qxapp.pages.MPage\",\n{\n    properties : {\n\n    /** Page's url made externally available */\n    pageUrl: {\n      check: \"String\",\n      init: null\n    },\n\n    /** Associated Inertia component name */\n    componentName: {\n        check: \"String\",\n        init: null\n    }\n\n  }\n});\n"
+    "qx.Mixin.define(\"qxapp.pages.MPage\",\n{\n    properties : {\n\n    /** Page's url made externally available */\n    pageUrl: {\n      check: \"String\",\n      init: null\n    },\n\n    /** Page's name for the browser title */\n    pageName: {\n      check: \"String\",\n      init: null\n    },\n\n    /** Associated Inertia component name */\n    componentName: {\n        check: \"String\",\n        init: null\n    }\n\n  }\n});\n"
   ],
-  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,mBAAmB,EACnC;IACIC,UAAU,EAAG;MAEb;MACAC,OAAO,EAAE;QACPC,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACR,CAAC;MAED;MACAC,aAAa,EAAE;QACXF,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACV;IAEF;EACF,CAAC,CAAC;EAjBFE,KAAK,CAACC,KAAK,CAACC,KAAK,CAACV,aAAa,GAAGA,aAAa;AAAC",
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,mBAAmB,EACnC;IACIC,UAAU,EAAG;MAEb;MACAC,OAAO,EAAE;QACPC,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACR,CAAC;MAED;MACAC,QAAQ,EAAE;QACRF,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACR,CAAC;MAED;MACAE,aAAa,EAAE;QACXH,KAAK,EAAE,QAAQ;QACfC,IAAI,EAAE;MACV;IAEF;EACF,CAAC,CAAC;EAvBFG,KAAK,CAACC,KAAK,CAACC,KAAK,CAACX,aAAa,GAAGA,aAAa;AAAC",
   "ignoreList": []
 }

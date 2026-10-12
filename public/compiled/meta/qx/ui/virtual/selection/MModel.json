@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337428,
-  "lastModifiedIso": "2026-01-03T20:15:37.428Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/virtual/selection/MModel.js",
+  "lastModified": 1739993516085,
+  "lastModifiedIso": "2025-02-19T19:31:56.085Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/virtual/selection/MModel.js",
   "type": "mixin",
   "location": {
     "start": {

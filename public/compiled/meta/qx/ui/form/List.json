@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337234,
-  "lastModifiedIso": "2026-01-03T20:15:37.234Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/form/List.js",
+  "lastModified": 1739993515931,
+  "lastModifiedIso": "2025-02-19T19:31:55.931Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/form/List.js",
   "type": "class",
   "location": {
     "start": {
@@ -520,10 +520,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "required": {
       "location": {
@@ -556,10 +556,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "invalidMessage": {
       "location": {
@@ -592,10 +592,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "requiredInvalidMessage": {
       "location": {
@@ -629,10 +629,10 @@
           }
         ]
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     }
   },
   "members": {
@@ -3292,10 +3292,10 @@
           "name": "old"
         }
       ],
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "__onChangeLocale": {
       "jsdoc": {
@@ -3322,10 +3322,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "e {Event} the change event",
-            "paramName": "e",
-            "description": " the change event",
-            "type": "Event"
+            "body": "e {Event} the change event"
           }
         ]
       },
@@ -3342,10 +3339,10 @@
           "index": 2607
         }
       },
+      "mixin": "qx.ui.form.MForm",
       "appearsIn": [
         "qx.ui.form.MForm"
-      ],
-      "mixin": "qx.ui.form.MForm"
+      ]
     },
     "__modelSelection": {
       "jsdoc": null,
@@ -3362,10 +3359,10 @@
           "index": 1398
         }
       },
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     },
     "__inSelectionChange": {
       "jsdoc": null,
@@ -3382,10 +3379,10 @@
           "index": 1430
         }
       },
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     },
     "__onModelSelectionChange": {
       "jsdoc": {
@@ -3418,10 +3415,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     },
     "__onModelSelectionArrayChange": {
       "jsdoc": {
@@ -3452,10 +3449,10 @@
       },
       "type": "function",
       "params": [],
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     },
     "getModelSelection": {
       "jsdoc": {
@@ -3479,9 +3476,7 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{qx.data.Array} An array of the models of the selected items.",
-            "type": "qx.data.Array",
-            "description": "An array of the models of the selected items."
+            "body": "{qx.data.Array} An array of the models of the selected items."
           }
         ]
       },
@@ -3500,14 +3495,11 @@
       },
       "type": "function",
       "params": [],
-      "returnType": {
-        "type": "qx.data.Array"
-      },
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection",
         "qx.ui.form.IModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     },
     "setModelSelection": {
       "jsdoc": {
@@ -3535,10 +3527,7 @@
         "@param": [
           {
             "name": "@param",
-            "body": "modelSelection {Array} An array of models, which should be\n   selected.",
-            "paramName": "modelSelection",
-            "description": " An array of models, which should be\n   selected.",
-            "type": "Array<any>"
+            "body": "modelSelection {Array} An array of models, which should be\n   selected."
           }
         ]
       },
@@ -3558,15 +3547,14 @@
       "type": "function",
       "params": [
         {
-          "name": "modelSelection",
-          "type": "Array<any>"
+          "name": "modelSelection"
         }
       ],
+      "mixin": "qx.ui.form.MModelSelection",
       "appearsIn": [
         "qx.ui.form.MModelSelection",
         "qx.ui.form.IModelSelection"
-      ],
-      "mixin": "qx.ui.form.MModelSelection"
+      ]
     }
   },
   "destruct": {

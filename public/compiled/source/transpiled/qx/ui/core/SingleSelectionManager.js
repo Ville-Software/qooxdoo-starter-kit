@@ -63,7 +63,7 @@
       {
         qx.core.Assert.assertInterface(selectionProvider, qx.ui.core.ISingleSelectionProvider, "Invalid selectionProvider!");
       }
-      this.__selectionProvider__P_150_0 = selectionProvider;
+      this.__selectionProvider__P_139_0 = selectionProvider;
     },
     /*
     *****************************************************************************
@@ -90,7 +90,7 @@
       allowEmptySelection: {
         check: "Boolean",
         init: true,
-        apply: "__applyAllowEmptySelection__P_150_1"
+        apply: "__applyAllowEmptySelection__P_139_1"
       }
     },
     /*
@@ -101,9 +101,9 @@
 
     members: {
       /** @type {qx.ui.core.Widget} The selected widget. */
-      __selected__P_150_2: null,
+      __selected__P_139_2: null,
       /** @type {qx.ui.core.ISingleSelectionProvider} The provider for selection management */
-      __selectionProvider__P_150_0: null,
+      __selectionProvider__P_139_0: null,
       /*
       ---------------------------------------------------------------------------
          PUBLIC API
@@ -117,7 +117,7 @@
        *    <code>null</code> if the selection is empty.
        */
       getSelected() {
-        return this.__selected__P_150_2;
+        return this.__selected__P_139_2;
       },
       /**
        * Selects the passed element.
@@ -126,17 +126,17 @@
        * @throws {Error} if the element is not a child element.
        */
       setSelected(item) {
-        if (!this.__isChildElement__P_150_3(item)) {
+        if (!this.__isChildElement__P_139_3(item)) {
           throw new Error("Could not select " + item + ", because it is not a child element!");
         }
-        this.__setSelected__P_150_4(item);
+        this.__setSelected__P_139_4(item);
       },
       /**
        * Reset the current selection. If {@link #allowEmptySelection} is set to
        * <code>true</code> the first element will be selected.
        */
       resetSelected() {
-        this.__setSelected__P_150_4(null);
+        this.__setSelected__P_139_4(null);
       },
       /**
        * Return <code>true</code> if the passed element is selected.
@@ -147,10 +147,10 @@
        * @throws {Error} if the element is not a child element.
        */
       isSelected(item) {
-        if (!this.__isChildElement__P_150_3(item)) {
+        if (!this.__isChildElement__P_139_3(item)) {
           throw new Error("Could not check if " + item + " is selected," + " because it is not a child element!");
         }
-        return this.__selected__P_150_2 === item;
+        return this.__selected__P_139_2 === item;
       },
       /**
        * Returns <code>true</code> if selection is empty.
@@ -159,7 +159,7 @@
        *    <code>false</code> otherwise.
        */
       isSelectionEmpty() {
-        return this.__selected__P_150_2 == null;
+        return this.__selected__P_139_2 == null;
       },
       /**
        * Returns all elements which are selectable.
@@ -169,10 +169,10 @@
        * @return {qx.ui.core.Widget[]} The contained items.
        */
       getSelectables(all) {
-        var items = this.__selectionProvider__P_150_0.getItems();
+        var items = this.__selectionProvider__P_139_0.getItems();
         var result = [];
         for (var i = 0; i < items.length; i++) {
-          if (this.__selectionProvider__P_150_0.isItemSelectable(items[i])) {
+          if (this.__selectionProvider__P_139_0.isItemSelectable(items[i])) {
             result.push(items[i]);
           }
         }
@@ -194,9 +194,9 @@
       */
 
       // apply method
-      __applyAllowEmptySelection__P_150_1(value, old) {
+      __applyAllowEmptySelection__P_139_1(value, old) {
         if (!value) {
-          this.__setSelected__P_150_4(this.__selected__P_150_2);
+          this.__setSelected__P_139_4(this.__selected__P_139_2);
         }
       },
       /*
@@ -213,8 +213,8 @@
        * @param item {qx.ui.core.Widget | null} element to select, or
        *    <code>null</code> to reset selection.
        */
-      __setSelected__P_150_4(item) {
-        var oldSelected = this.__selected__P_150_2;
+      __setSelected__P_139_4(item) {
+        var oldSelected = this.__selected__P_139_2;
         var newSelected = item;
         if (newSelected != null && oldSelected === newSelected) {
           return;
@@ -225,7 +225,7 @@
             newSelected = firstElement;
           }
         }
-        this.__selected__P_150_2 = newSelected;
+        this.__selected__P_139_2 = newSelected;
         this.fireDataEvent("changeSelected", newSelected, oldSelected);
       },
       /**
@@ -235,8 +235,8 @@
        * @return {Boolean} <code>true</code> if element is child element,
        *    <code>false</code> otherwise.
        */
-      __isChildElement__P_150_3(item) {
-        var items = this.__selectionProvider__P_150_0.getItems();
+      __isChildElement__P_139_3(item) {
+        var items = this.__selectionProvider__P_139_0.getItems();
         for (var i = 0; i < items.length; i++) {
           if (items[i] === item) {
             return true;
@@ -251,15 +251,15 @@
      *****************************************************************************
      */
     destruct() {
-      if (this.__selectionProvider__P_150_0.toHashCode) {
-        this._disposeObjects("__selectionProvider__P_150_0");
+      if (this.__selectionProvider__P_139_0.toHashCode) {
+        this._disposeObjects("__selectionProvider__P_139_0");
       } else {
-        this.__selectionProvider__P_150_0 = null;
+        this.__selectionProvider__P_139_0 = null;
       }
-      this._disposeObjects("__selected__P_150_2");
+      this._disposeObjects("__selected__P_139_2");
     }
   });
   qx.ui.core.SingleSelectionManager.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=SingleSelectionManager.js.map?dt=1769806692484
+//# sourceMappingURL=SingleSelectionManager.js.map?dt=1791841651987

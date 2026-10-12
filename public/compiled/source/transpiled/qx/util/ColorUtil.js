@@ -185,13 +185,13 @@
         } else if (this.isSystemColor(str)) {
           throw new Error("Could not convert system colors to RGB: " + str);
         } else if (this.isRgbaString(str)) {
-          color = this.__rgbaStringToRgb__P_82_0(str);
+          color = this.__rgbaStringToRgb__P_90_0(str);
         } else if (this.isRgbString(str)) {
-          color = this.__rgbStringToRgb__P_82_1();
+          color = this.__rgbStringToRgb__P_90_1();
         } else if (this.ishexShortString(str)) {
-          color = this.__hexShortStringToRgb__P_82_2();
+          color = this.__hexShortStringToRgb__P_90_2();
         } else if (this.ishexLongString(str)) {
-          color = this.__hexLongStringToRgb__P_82_3();
+          color = this.__hexLongStringToRgb__P_90_3();
         }
         if (color) {
           // don't mention alpha if the color is opaque
@@ -313,7 +313,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __rgbStringToRgb__P_82_1() {
+      __rgbStringToRgb__P_90_1() {
         var red = parseInt(RegExp.$1, 10);
         var green = parseInt(RegExp.$2, 10);
         var blue = parseInt(RegExp.$3, 10);
@@ -324,7 +324,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __rgbaStringToRgb__P_82_0() {
+      __rgbaStringToRgb__P_90_0() {
         var red = parseInt(RegExp.$1, 10);
         var green = parseInt(RegExp.$2, 10);
         var blue = parseInt(RegExp.$3, 10);
@@ -341,7 +341,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __hexShortStringToRgb__P_82_2() {
+      __hexShortStringToRgb__P_90_2() {
         var red = parseInt(RegExp.$1, 16) * 17;
         var green = parseInt(RegExp.$2, 16) * 17;
         var blue = parseInt(RegExp.$3, 16) * 17;
@@ -353,7 +353,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __hex3StringToRgb__P_82_4() {
+      __hex3StringToRgb__P_90_4() {
         var red = parseInt(RegExp.$1, 16) * 17;
         var green = parseInt(RegExp.$2, 16) * 17;
         var blue = parseInt(RegExp.$3, 16) * 17;
@@ -364,7 +364,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __hex6StringToRgb__P_82_5() {
+      __hex6StringToRgb__P_90_5() {
         var red = parseInt(RegExp.$1, 16) * 16 + parseInt(RegExp.$2, 16);
         var green = parseInt(RegExp.$3, 16) * 16 + parseInt(RegExp.$4, 16);
         var blue = parseInt(RegExp.$5, 16) * 16 + parseInt(RegExp.$6, 16);
@@ -375,7 +375,7 @@
        *
        * @return {Array} an array with red, green, blue
        */
-      __hexLongStringToRgb__P_82_3() {
+      __hexLongStringToRgb__P_90_3() {
         var red = parseInt(RegExp.$1, 16);
         var green = parseInt(RegExp.$2, 16);
         var blue = parseInt(RegExp.$3, 16);
@@ -390,7 +390,7 @@
        */
       hex3StringToRgb(value) {
         if (this.isHex3String(value)) {
-          return this.__hex3StringToRgb__P_82_4(value);
+          return this.__hex3StringToRgb__P_90_4(value);
         }
         throw new Error("Invalid hex3 value: " + value);
       },
@@ -415,7 +415,7 @@
        */
       hex6StringToRgb(value) {
         if (this.isHex6String(value)) {
-          return this.__hex6StringToRgb__P_82_5(value);
+          return this.__hex6StringToRgb__P_90_5(value);
         }
         throw new Error("Invalid hex6 value: " + value);
       },
@@ -427,10 +427,10 @@
        */
       hexStringToRgb(value) {
         if (this.ishexShortString(value)) {
-          return this.__hexShortStringToRgb__P_82_2(value);
+          return this.__hexShortStringToRgb__P_90_2(value);
         }
         if (this.ishexLongString(value)) {
-          return this.__hexLongStringToRgb__P_82_3(value);
+          return this.__hexLongStringToRgb__P_90_3(value);
         }
         throw new Error("Invalid hex value: " + value);
       },
@@ -604,7 +604,7 @@
        * @param hue_tuner {Function}  function
        * @return {String} a valid CSS rgb color string.*
        */
-      __tuner__P_82_6(color, tuneMap, tuner, hue_tuner) {
+      __tuner__P_90_6(color, tuneMap, tuner, hue_tuner) {
         var rgba = this.stringToRgb(color);
         for (var key in tuneMap) {
           if (tuneMap[key] == 0) {
@@ -700,7 +700,7 @@
        */
 
       scale(color, scaleMap) {
-        return this.__tuner__P_82_6(color, scaleMap, function (value, scale, max) {
+        return this.__tuner__P_90_6(color, scaleMap, function (value, scale, max) {
           if (value > max) {
             value = max;
           }
@@ -735,7 +735,7 @@
        * @return {String} a valid CSS rgb color string.
        */
       adjust(color, adjustMap) {
-        return this.__tuner__P_82_6(color, adjustMap, function (value, offset, max) {
+        return this.__tuner__P_90_6(color, adjustMap, function (value, offset, max) {
           value += offset;
           if (value > max) {
             return max;
@@ -814,4 +814,4 @@
   qx.util.ColorUtil.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=ColorUtil.js.map?dt=1769806689434
+//# sourceMappingURL=ColorUtil.js.map?dt=1791841651235

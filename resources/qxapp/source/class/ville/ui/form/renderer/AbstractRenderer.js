@@ -7,7 +7,7 @@
  */
 qx.Class.define("ville.ui.form.renderer.AbstractRenderer", {
   type: "abstract",
-  extend: ville.ui.core.Widget,
+  extend: qx.ui.core.Widget,
   implement: qx.ui.form.renderer.IFormRenderer,
 
   /**

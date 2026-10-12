@@ -11,11 +11,17 @@
 /**
  * This is the main application class of "qxapp"
  *
- * @asset(qxapp/*)
+ * @external(mantine/core/styles/baseline.css)
+ * @external(mantine/core/styles/default-css-variables.css)
+ * @external(mantine/core/styles/global.css)
+ * @external(qxapp/mantine-style-classes.css)
+ * @external(mantine/core/styles/ScrollArea.css)
+ *
+ * @requires(ville.cssuc.MCssUtilityClass)
  */
 qx.Class.define("qxapp.Application",
 {
-  extend : ville.ui.application.Standalone,
+  extend : qx.application.Standalone,
 
   /*
   *****************************************************************************
@@ -40,6 +46,9 @@ qx.Class.define("qxapp.Application",
      */
     main()
     {
+
+      qx.Class.include(qx.ui.core.Widget, ville.cssuc.MCssUtilityClass);
+
       // Call super class
       super.main();
 
@@ -52,6 +61,9 @@ qx.Class.define("qxapp.Application",
         qx.log.appender.Console;
       }
 
+      // IDEA: Set the project's name dynamically
+      //this.__appclassname = this.classname.split(".")[0];
+
       /*
       -------------------------------------------------------------------------
         Below is your actual application code...
@@ -61,14 +73,19 @@ qx.Class.define("qxapp.Application",
       var approot = this.getRoot();
 
       // Change root dark body bg to a darker black
-      var RootStyleUpdate = new ville.ui.basic.Element("style");
+      /*var RootStyleUpdate = new ville.ui.basic.Element("style");
       RootStyleUpdate.setAttribute("html",`:root[data-mantine-color-scheme='dark'] {
         --mantine-color-text: '#fafafa';
         --mantine-color-body: '#0a0a0a'}`);
-      //approot.add(RootStyleUpdate);
+      approot.add(RootStyleUpdate);*/
 
-      // Setup global routing
-      const InitialPage = JSON.parse(document.getElementById('app').dataset.page);
+      /**
+       * Setup global routing
+       *
+       * The qx.core.Environment variable "inertia.rootView" is assigned by the project's compile.json
+       * and needs to match the value for $rootView configured in your Laravel app's HandleInertiaRequests.php file
+       */
+      const InitialPage = JSON.parse(document.getElementById(qx.core.Environment.get("inertia.rootView")).dataset.page);
       this.initRouting(InitialPage);
 
       // load first page if not logged in
@@ -76,8 +93,8 @@ qx.Class.define("qxapp.Application",
         var curpg = this.__routing.getCurrentPage();
         var clazznm = curpg.component;
         qx.io.PartLoader.require([clazznm],() => {
-            this.__stack = new ville.ui.layout.Stack();
-            approot.add(this.__stack);
+            this.__stack = new qx.ui.container.Stack();
+            approot.add(this.__stack, { edge : 0 });
             var clazz = qx.Class.getByName(`qxapp.pages.${clazznm}`);
             this.__stack.add(new clazz());
         }, this);
@@ -123,11 +140,11 @@ qx.Class.define("qxapp.Application",
             this.__stack = null;
         }
 
-        qx.io.PartLoader.require(["appshell"],() => {
-            this.__app = new ville.ui.layout.Stack();
-            const appshell = new qxapp.app.AppShell();
+        qx.io.PartLoader.require(["app.AppShell"],() => {
+            this.__app = new qx.ui.container.Stack();
+            const appshell = new qxapp.pages.app.AppShell();
             this.__app.add(appshell);
-            this.getRoot().add(this.__app);
+            this.getRoot().add(this.__app, { edge : 0 });
         }, this);
 
     },

@@ -8,6 +8,12 @@ qx.Mixin.define("qxapp.pages.MPage",
       init: null
     },
 
+    /** Page's name for the browser title */
+    pageName: {
+      check: "String",
+      init: null
+    },
+
     /** Associated Inertia component name */
     componentName: {
         check: "String",

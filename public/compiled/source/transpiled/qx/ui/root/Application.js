@@ -114,14 +114,14 @@
      */
     construct(doc) {
       // Symbolic links
-      this.__window__P_100_0 = qx.dom.Node.getWindow(doc);
-      this.__doc__P_100_1 = doc;
+      this.__window__P_34_0 = qx.dom.Node.getWindow(doc);
+      this.__doc__P_34_1 = doc;
 
       // Base call
       qx.ui.root.Abstract.constructor.call(this);
 
       // Resize handling
-      qx.event.Registration.addListener(this.__window__P_100_0, "resize", this._onResize, this);
+      qx.event.Registration.addListener(this.__window__P_34_0, "resize", this._onResize, this);
 
       // Use a hard-coded canvas layout
       this._setLayout(new qx.ui.layout.Canvas());
@@ -137,7 +137,7 @@
       this.getContentElement().setStyle("-webkit-backface-visibility", "hidden");
 
       // prevent scrolling on touch devices
-      this.addListener("touchmove", this.__stopScrolling__P_100_2, this);
+      this.addListener("touchmove", this.__stopScrolling__P_34_2, this);
 
       // handle focus for iOS which seems to deny any focus action
       if (qx.core.Environment.get("os.name") == "ios") {
@@ -159,8 +159,8 @@
     */
 
     members: {
-      __window__P_100_0: null,
-      __doc__P_100_1: null,
+      __window__P_34_0: null,
+      __doc__P_34_1: null,
       // overridden
       /**
        * Create the widget's container HTML element.
@@ -169,7 +169,7 @@
        * @return {qx.html.Element} The container HTML element
        */
       _createContentElement() {
-        var doc = this.__doc__P_100_1;
+        var doc = this.__doc__P_34_1;
         if (qx.core.Environment.get("engine.name") == "webkit") {
           // In the "DOMContentLoaded" event of WebKit (Safari, Chrome) no body
           // element seems to be available in the DOM, if the HTML file did not
@@ -220,8 +220,8 @@
       },
       // overridden
       _computeSizeHint() {
-        var width = qx.bom.Viewport.getWidth(this.__window__P_100_0);
-        var height = qx.bom.Viewport.getHeight(this.__window__P_100_0);
+        var width = qx.bom.Viewport.getWidth(this.__window__P_34_0);
+        var height = qx.bom.Viewport.getHeight(this.__window__P_34_0);
         return {
           minWidth: width,
           width: width,
@@ -243,7 +243,7 @@
        * the native page scrolling.
        * @param e {qx.event.type.Touch} The qooxdoo touch event.
        */
-      __stopScrolling__P_100_2(e) {
+      __stopScrolling__P_34_2(e) {
         var node = e.getOriginalTarget();
         while (node && node.style) {
           var touchAction = qx.bom.element.Style.get(node, "touch-action") !== "none" && qx.bom.element.Style.get(node, "touch-action") !== "";
@@ -273,10 +273,10 @@
     */
 
     destruct() {
-      this.__window__P_100_0 = this.__doc__P_100_1 = null;
+      this.__window__P_34_0 = this.__doc__P_34_1 = null;
     }
   });
   qx.ui.root.Application.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Application.js.map?dt=1769806689972
+//# sourceMappingURL=Application.js.map?dt=1791841650208

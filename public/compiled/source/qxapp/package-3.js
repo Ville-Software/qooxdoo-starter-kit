@@ -1,41 +1,565 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
-      "qx.bom.client.Engine": {
-        "require": true,
+      "qx.Bootstrap": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.dom.Node": {},
+      "qx.bom.element.Dimension": {},
+      "qx.bom.Document": {},
+      "qx.bom.Viewport": {},
+      "qx.bom.Stylesheet": {},
+      "qxWeb": {
         "defer": "runtime"
+      },
+      "qx.bom.element.Location": {},
+      "qx.lang.String": {},
+      "qx.bom.element.Style": {},
+      "qx.bom.element.Class": {}
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2011-2012 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Martin Wittemann (wittemann)
+       * Daniel Wagner (danielwagner)
+  
+  ************************************************************************ */
+  /**
+   * CSS/Style property manipulation module
+   * @group (Core)
+   */
+  qx.Bootstrap.define("qx.module.Css", {
+    statics: {
+      /**
+       * INTERNAL
+       *
+       * Returns the rendered height of the first element in the collection.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the height of a <em>non displayed</em> element
+       * @return {Number} The first item's rendered height
+       */
+      _getHeight(force) {
+        var elem = this[0];
+        if (elem) {
+          if (qx.dom.Node.isElement(elem)) {
+            var elementHeight;
+            if (force) {
+              var stylesToSwap = {
+                display: "block",
+                position: "absolute",
+                visibility: "hidden"
+              };
+              elementHeight = qx.module.Css.__swap__P_168_0(elem, stylesToSwap, "_getHeight", this);
+            } else {
+              elementHeight = qx.bom.element.Dimension.getHeight(elem);
+            }
+            return elementHeight;
+          } else if (qx.dom.Node.isDocument(elem)) {
+            return qx.bom.Document.getHeight(qx.dom.Node.getWindow(elem));
+          } else if (qx.dom.Node.isWindow(elem)) {
+            return qx.bom.Viewport.getHeight(elem);
+          }
+        }
+        return null;
+      },
+      /**
+       * INTERNAL
+       *
+       * Returns the rendered width of the first element in the collection
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the width of a <em>non displayed</em> element
+       * @return {Number} The first item's rendered width
+       */
+      _getWidth(force) {
+        var elem = this[0];
+        if (elem) {
+          if (qx.dom.Node.isElement(elem)) {
+            var elementWidth;
+            if (force) {
+              var stylesToSwap = {
+                display: "block",
+                position: "absolute",
+                visibility: "hidden"
+              };
+              elementWidth = qx.module.Css.__swap__P_168_0(elem, stylesToSwap, "_getWidth", this);
+            } else {
+              elementWidth = qx.bom.element.Dimension.getWidth(elem);
+            }
+            return elementWidth;
+          } else if (qx.dom.Node.isDocument(elem)) {
+            return qx.bom.Document.getWidth(qx.dom.Node.getWindow(elem));
+          } else if (qx.dom.Node.isWindow(elem)) {
+            return qx.bom.Viewport.getWidth(elem);
+          }
+        }
+        return null;
+      },
+      /**
+       * INTERNAL
+       *
+       * Returns the content height of the first element in the collection.
+       * This is the maximum height the element can use, excluding borders,
+       * margins, padding or scroll bars.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the content height of a <em>non displayed</em> element
+       * @return {Number} Computed content height
+       */
+      _getContentHeight(force) {
+        var obj = this[0];
+        if (qx.dom.Node.isElement(obj)) {
+          var contentHeight;
+          if (force) {
+            var stylesToSwap = {
+              position: "absolute",
+              visibility: "hidden",
+              display: "block"
+            };
+            contentHeight = qx.module.Css.__swap__P_168_0(obj, stylesToSwap, "_getContentHeight", this);
+          } else {
+            contentHeight = qx.bom.element.Dimension.getContentHeight(obj);
+          }
+          return contentHeight;
+        }
+        return null;
+      },
+      /**
+       * INTERNAL
+       *
+       * Returns the content width of the first element in the collection.
+       * This is the maximum width the element can use, excluding borders,
+       * margins, padding or scroll bars.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the content width of a <em>non displayed</em> element
+       * @return {Number} Computed content width
+       */
+      _getContentWidth(force) {
+        var obj = this[0];
+        if (qx.dom.Node.isElement(obj)) {
+          var contentWidth;
+          if (force) {
+            var stylesToSwap = {
+              position: "absolute",
+              visibility: "hidden",
+              display: "block"
+            };
+            contentWidth = qx.module.Css.__swap__P_168_0(obj, stylesToSwap, "_getContentWidth", this);
+          } else {
+            contentWidth = qx.bom.element.Dimension.getContentWidth(obj);
+          }
+          return contentWidth;
+        }
+        return null;
+      },
+      /**
+       * Maps HTML elements to their default "display" style values.
+       */
+      __displayDefaults__P_168_1: {},
+      /**
+       * Attempts tp determine the default "display" style value for
+       * elements with the given tag name.
+       *
+       * @param tagName {String} Tag name
+       * @param  doc {Document?} Document element. Default: The current document
+       * @return {String} The default "display" value, e.g. <code>inline</code>
+       * or <code>block</code>
+       */
+      __getDisplayDefault__P_168_2(tagName, doc) {
+        var defaults = qx.module.Css.__displayDefaults__P_168_1;
+        if (!defaults[tagName]) {
+          var docu = doc || document;
+          var tempEl = qxWeb(docu.createElement(tagName)).appendTo(doc.body);
+          defaults[tagName] = tempEl.getStyle("display");
+          tempEl.remove();
+        }
+        return defaults[tagName] || "";
+      },
+      /**
+       * Swaps the given styles of the element and execute the callback
+       * before the original values are restored.
+       *
+       * Finally returns the return value of the callback.
+       *
+       * @param element {Element} the DOM element to operate on
+       * @param styles {Map} the styles to swap
+       * @param methodName {String} the callback functions name
+       * @param context {Object} the context in which the callback should be called
+       * @return {Object} the return value of the callback
+       */
+      __swap__P_168_0(element, styles, methodName, context) {
+        // get the current values
+        var currentValues = {};
+        for (var styleProperty in styles) {
+          currentValues[styleProperty] = element.style[styleProperty];
+          element.style[styleProperty] = styles[styleProperty];
+        }
+        var value = context[methodName]();
+        for (var styleProperty in currentValues) {
+          element.style[styleProperty] = currentValues[styleProperty];
+        }
+        return value;
+      },
+      /**
+       * Includes a Stylesheet file
+       *
+       * @attachStatic {qxWeb}
+       * @param uri {String} The stylesheet's URI
+       * @param doc {Document?} Document to modify
+       */
+      includeStylesheet(uri, doc) {
+        qx.bom.Stylesheet.includeFile(uri, doc);
+      }
+    },
+    members: {
+      /**
+       * Returns the rendered height of the first element in the collection.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the height of a <em>non displayed</em> element
+       * @return {Number} The first item's rendered height
+       */
+      getHeight(force) {
+        return this._getHeight(force);
+      },
+      /**
+       * Returns the rendered width of the first element in the collection
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the width of a <em>non displayed</em> element
+       * @return {Number} The first item's rendered width
+       */
+      getWidth(force) {
+        return this._getWidth(force);
+      },
+      /**
+       * Returns the content height of the first element in the collection.
+       * This is the maximum height the element can use, excluding borders,
+       * margins, padding or scroll bars.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the content height of a <em>non displayed</em> element
+       * @return {Number} Computed content height
+       */
+      getContentHeight(force) {
+        return this._getContentHeight(force);
+      },
+      /**
+       * Returns the content width of the first element in the collection.
+       * This is the maximum width the element can use, excluding borders,
+       * margins, padding or scroll bars.
+       * @attach {qxWeb}
+       * @param force {Boolean?false} When true also get the content width of a <em>non displayed</em> element
+       * @return {Number} Computed content width
+       */
+      getContentWidth(force) {
+        return this._getContentWidth(force);
+      },
+      /**
+       * Shows any elements with "display: none" in the collection. If an element
+       * was hidden by using the {@link #hide} method, its previous
+       * "display" style value will be re-applied. Otherwise, the
+       * default "display" value for the element type will be applied.
+       *
+       * @attach {qxWeb}
+       * @return {qxWeb} The collection for chaining
+       */
+      show() {
+        this._forEachElementWrapped(function (item) {
+          var currentVal = item.getStyle("display");
+          var prevVal = item[0].$$qPrevDisp;
+          var newVal;
+          if (currentVal == "none") {
+            if (prevVal && prevVal != "none") {
+              newVal = prevVal;
+            } else {
+              var doc = qxWeb.getDocument(item[0]);
+              newVal = qx.module.Css.__getDisplayDefault__P_168_2(item[0].tagName, doc);
+            }
+            item.setStyle("display", newVal);
+            item[0].$$qPrevDisp = "none";
+          }
+        });
+        return this;
+      },
+      /**
+       * Hides all elements in the collection by setting their "display"
+       * style to "none". The previous value is stored so it can be re-applied
+       * when {@link #show} is called.
+       *
+       * @attach {qxWeb}
+       * @return {qxWeb} The collection for chaining
+       */
+      hide() {
+        this._forEachElementWrapped(function (item) {
+          var prevStyle = item.getStyle("display");
+          if (prevStyle !== "none") {
+            item[0].$$qPrevDisp = prevStyle;
+            item.setStyle("display", "none");
+          }
+        });
+        return this;
+      },
+      /**
+       * Returns the distance between the first element in the collection and its
+       * offset parent
+       *
+       * @attach {qxWeb}
+       * @return {Map} a map with the keys <code>left</code> and <code>top</code>
+       * containing the distance between the elements
+       */
+      getPosition() {
+        var obj = this[0];
+        if (qx.dom.Node.isElement(obj)) {
+          return qx.bom.element.Location.getPosition(obj);
+        }
+        return null;
+      },
+      /**
+       * Returns the computed location of the given element in the context of the
+       * document dimensions.
+       *
+       * Supported modes:
+       *
+       * * <code>margin</code>: Calculate from the margin box of the element (bigger than the visual appearance: including margins of given element)
+       * * <code>box</code>: Calculates the offset box of the element (default, uses the same size as visible)
+       * * <code>border</code>: Calculate the border box (useful to align to border edges of two elements).
+       * * <code>scroll</code>: Calculate the scroll box (relevant for absolute positioned content).
+       * * <code>padding</code>: Calculate the padding box (relevant for static/relative positioned content).
+       *
+       * @attach {qxWeb}
+       * @param mode {String?box} A supported option. See comment above.
+       * @return {Map} A map with the keys <code>left</code>, <code>top</code>,
+       * <code>right</code> and <code>bottom</code> which contains the distance
+       * of the element relative to the document.
+       */
+      getOffset(mode) {
+        var elem = this[0];
+        if (elem && qx.dom.Node.isElement(elem)) {
+          return qx.bom.element.Location.get(elem, mode);
+        }
+        return null;
+      },
+      /**
+       * Modifies the given style property on all elements in the collection.
+       *
+       * @attach {qxWeb}
+       * @param name {String} Name of the style property to modify
+       * @param value {var} The value to apply
+       * @return {qxWeb} The collection for chaining
+       */
+      setStyle(name, value) {
+        if (/\w-\w/.test(name)) {
+          name = qx.lang.String.camelCase(name);
+        }
+        this._forEachElement(function (item) {
+          qx.bom.element.Style.set(item, name, value);
+        });
+        return this;
+      },
+      /**
+       * Returns the value of the given style property for the first item in the
+       * collection.
+       *
+       * @attach {qxWeb}
+       * @param name {String} Style property name
+       * @return {var} Style property value
+       */
+      getStyle(name) {
+        if (this[0] && qx.dom.Node.isElement(this[0])) {
+          if (/\w-\w/.test(name)) {
+            name = qx.lang.String.camelCase(name);
+          }
+          return qx.bom.element.Style.get(this[0], name);
+        }
+        return null;
+      },
+      /**
+       * Sets multiple style properties for each item in the collection.
+       *
+       * @attach {qxWeb}
+       * @param styles {Map} A map of style property name/value pairs
+       * @return {qxWeb} The collection for chaining
+       */
+      setStyles(styles) {
+        for (var name in styles) {
+          this.setStyle(name, styles[name]);
+        }
+        return this;
+      },
+      /**
+       * Returns the values of multiple style properties for each item in the
+       * collection
+       *
+       * @attach {qxWeb}
+       * @param names {String[]} List of style property names
+       * @return {Map} Map of style property name/value pairs
+       */
+      getStyles(names) {
+        var styles = {};
+        for (var i = 0; i < names.length; i++) {
+          styles[names[i]] = this.getStyle(names[i]);
+        }
+        return styles;
+      },
+      /**
+       * Adds a class name to each element in the collection
+       *
+       * @attach {qxWeb}
+       * @param name {String} Class name
+       * @return {qxWeb} The collection for chaining
+       */
+      addClass(name) {
+        this._forEachElement(function (item) {
+          qx.bom.element.Class.add(item, name);
+        });
+        return this;
+      },
+      /**
+       * Adds multiple class names to each element in the collection
+       *
+       * @attach {qxWeb}
+       * @param names {String[]} List of class names to add
+       * @return {qxWeb} The collection for chaining
+       */
+      addClasses(names) {
+        this._forEachElement(function (item) {
+          qx.bom.element.Class.addClasses(item, names);
+        });
+        return this;
+      },
+      /**
+       * Removes a class name from each element in the collection
+       *
+       * @attach {qxWeb}
+       * @param name {String} The class name to remove
+       * @return {qxWeb} The collection for chaining
+       */
+      removeClass(name) {
+        this._forEachElement(function (item) {
+          qx.bom.element.Class.remove(item, name);
+        });
+        return this;
+      },
+      /**
+       * Removes multiple class names from each element in the collection.
+       * Use {@link qx.module.Attribute#removeAttribute} to remove all classes.
+       *
+       * @attach {qxWeb}
+       * @param names {String[]} List of class names to remove
+       * @return {qxWeb} The collection for chaining
+       */
+      removeClasses(names) {
+        this._forEachElement(function (item) {
+          qx.bom.element.Class.removeClasses(item, names);
+        });
+        return this;
+      },
+      /**
+       * Checks if the first element in the collection has the given class name
+       *
+       * @attach {qxWeb}
+       * @param name {String} Class name to check for
+       * @return {Boolean} <code>true</code> if the first item has the given class name
+       */
+      hasClass(name) {
+        if (!this[0] || !qx.dom.Node.isElement(this[0])) {
+          return false;
+        }
+        return qx.bom.element.Class.has(this[0], name);
+      },
+      /**
+       * Returns the class name of the first element in the collection
+       *
+       * @attach {qxWeb}
+       * @return {String} Class name
+       */
+      getClass() {
+        if (!this[0] || !qx.dom.Node.isElement(this[0])) {
+          return "";
+        }
+        return qx.bom.element.Class.get(this[0]);
+      },
+      /**
+       * Toggles the given class name on each item in the collection
+       *
+       * @attach {qxWeb}
+       * @param name {String} Class name
+       * @return {qxWeb} The collection for chaining
+       */
+      toggleClass(name) {
+        var bCls = qx.bom.element.Class;
+        this._forEachElement(function (item) {
+          bCls.has(item, name) ? bCls.remove(item, name) : bCls.add(item, name);
+        });
+        return this;
+      },
+      /**
+       * Toggles the given list of class names on each item in the collection
+       *
+       * @attach {qxWeb}
+       * @param names {String[]} Class names
+       * @return {qxWeb} The collection for chaining
+       */
+      toggleClasses(names) {
+        for (var i = 0, l = names.length; i < l; i++) {
+          this.toggleClass(names[i]);
+        }
+        return this;
+      },
+      /**
+       * Replaces a class name on each element in the collection
+       *
+       * @attach {qxWeb}
+       * @param oldName {String} Class name to remove
+       * @param newName {String} Class name to add
+       * @return {qxWeb} The collection for chaining
+       */
+      replaceClass(oldName, newName) {
+        this._forEachElement(function (item) {
+          qx.bom.element.Class.replace(item, oldName, newName);
+        });
+        return this;
+      }
+    },
+    defer(statics) {
+      qxWeb.$attachAll(this);
+      // manually attach private method which is ignored by attachAll
+      qxWeb.$attach({
+        _getWidth: statics._getWidth,
+        _getHeight: statics._getHeight,
+        _getContentHeight: statics._getContentHeight,
+        _getContentWidth: statics._getContentWidth
+      });
+    }
+  });
+  qx.module.Css.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.bom.client.Engine": {
+        "require": true
+      },
+      "qx.lang.normalize.Array": {
+        "require": true
       },
       "qx.core.Environment": {
         "defer": "load",
         "require": true
       },
-      "qx.Class": {
+      "qx.Bootstrap": {
         "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.Object": {
-        "construct": true,
-        "require": true
-      },
-      "qx.event.IEventHandler": {
-        "require": true
-      },
-      "qx.core.IDisposable": {
-        "require": true
-      },
-      "qx.event.Registration": {
-        "defer": "runtime",
-        "require": true
-      },
-      "qx.lang.Function": {},
-      "qx.bom.client.Browser": {
-        "require": true
-      },
-      "qx.bom.Event": {},
-      "qx.bom.client.Runtime": {
-        "require": true
-      },
-      "qx.event.GlobalError": {
         "require": true
       }
     },
@@ -44,15 +568,6 @@
       "required": {
         "engine.name": {
           "className": "qx.bom.client.Engine"
-        },
-        "browser.documentmode": {
-          "className": "qx.bom.client.Browser"
-        },
-        "runtime.name": {
-          "className": "qx.bom.client.Runtime"
-        },
-        "qx.globalErrorHandling": {
-          "className": "qx.event.GlobalError"
         }
       }
     }
@@ -65,7 +580,7 @@
      http://qooxdoo.org
   
      Copyright:
-       2007-2008 1&1 Internet AG, Germany, http://www.1und1.de
+       2007-2009 1&1 Internet AG, Germany, http://www.1und1.de
   
      License:
        MIT: https://opensource.org/licenses/MIT
@@ -75,18 +590,47 @@
        * Sebastian Werner (wpbasti)
        * Fabian Jakobs (fjakobs)
   
+     ======================================================================
+  
+     This class uses ideas and code snippets presented at
+     http://webreflection.blogspot.com/2008/05/habemus-array-unlocked-length-in-ie8.html
+     http://webreflection.blogspot.com/2008/05/stack-and-arrayobject-how-to-create.html
+  
+     Author:
+       Andrea Giammarchi
+  
+     License:
+       MIT: http://www.opensource.org/licenses/mit-license.php
+  
+     ======================================================================
+  
+     This class uses documentation of the native Array methods from the MDC
+     documentation of Mozilla.
+  
+     License:
+       CC Attribution-Sharealike License:
+       http://creativecommons.org/licenses/by-sa/2.5/
+  
   ************************************************************************ */
 
   /**
-   * This handler provides events for qooxdoo application startup/shutdown logic.
+   * This class is the common superclass for most array classes in
+   * qooxdoo. It supports all of the shiny 1.6 JavaScript array features
+   * like <code>forEach</code> and <code>map</code>.
    *
-   * NOTE: Instances of this class must be disposed of after use
+   * This class may be instantiated instead of the native Array if
+   * one wants to work with a feature-unified Array instead of the native
+   * one. This class uses native features whereever possible but fills
+   * all missing implementations with custom ones.
+   *
+   * Through the ability to extend from this class one could add even
+   * more utility features on top of it.
    *
    * @require(qx.bom.client.Engine)
+   * @require(qx.lang.normalize.Array)
    */
-  qx.Class.define("qx.event.handler.Application", {
-    extend: qx.core.Object,
-    implement: [qx.event.IEventHandler, qx.core.IDisposable],
+  qx.Bootstrap.define("qx.type.BaseArray", {
+    extend: Array,
     /*
     *****************************************************************************
        CONSTRUCTOR
@@ -94,70 +638,27 @@
     */
 
     /**
-     * Create a new instance
+     * Creates a new Array with the given length or the listed elements.
      *
-     * @param manager {qx.event.Manager} Event manager for the window to use
+     * <pre class="javascript">
+     * var arr1 = new qx.type.BaseArray(arrayLength);
+     * var arr2 = new qx.type.BaseArray(item0, item1, ..., itemN);
+     * </pre>
+     *
+     * * <code>arrayLength</code>: The initial length of the array. You can access
+     * this value using the length property. If the value specified is not a
+     * number, an array of length 1 is created, with the first element having
+     * the specified value. The maximum length allowed for an
+     * array is 2^32-1, i.e. 4,294,967,295.
+     * * <code>itemN</code>:  A value for the element in that position in the
+     * array. When this form is used, the array is initialized with the specified
+     * values as its elements, and the array's length property is set to the
+     * number of arguments.
+     *
+     * @param length_or_items {Integer|var?null} The initial length of the array
+     *        OR an argument list of values.
      */
-    construct(manager) {
-      qx.core.Object.constructor.call(this);
-
-      // Define shorthands
-      this._window = manager.getWindow();
-      this.__domReady__P_54_0 = false;
-      this.__loaded__P_54_1 = false;
-      this.__isReady__P_54_2 = false;
-      this.__isInitialized__P_54_3 = false;
-      this.__isUnloaded__P_54_4 = false;
-
-      // Initialize observers
-      this._initObserver();
-
-      // Store instance (only supported for main app window, this
-      // is the reason why this is OK here)
-      qx.event.handler.Application.$$instance = this;
-    },
-    /*
-    *****************************************************************************
-       STATICS
-    *****************************************************************************
-    */
-
-    statics: {
-      /** @type {Integer} Priority of this handler */
-      PRIORITY: qx.event.Registration.PRIORITY_NORMAL,
-      /** @type {Map} Supported event types */
-      SUPPORTED_TYPES: {
-        ready: 1,
-        shutdown: 1
-      },
-      /** @type {Integer} Which target check to use */
-      TARGET_CHECK: qx.event.IEventHandler.TARGET_WINDOW,
-      /** @type {Integer} Whether the method "canHandleEvent" must be called */
-      IGNORE_CAN_HANDLE: true,
-      /**
-       * Sends the currently running application the ready signal. Used
-       * exclusively by package loader system.
-       *
-       * @internal
-       */
-      onScriptLoaded() {
-        var inst = qx.event.handler.Application.$$instance;
-        if (inst) {
-          inst.__fireReady__P_54_5();
-        }
-      },
-      /**
-       * Notifies that the application has finished initialization
-       *
-       * @internal
-       */
-      onAppInstanceInitialized() {
-        var inst = qx.event.handler.Application.$$instance;
-        if (inst) {
-          inst.__fireAppInstanceInitialized__P_54_6();
-        }
-      }
-    },
+    construct(length_or_items) {},
     /*
     *****************************************************************************
        MEMBERS
@@ -165,729 +666,426 @@
     */
 
     members: {
-      /*
-      ---------------------------------------------------------------------------
-        EVENT HANDLER INTERFACE
-      ---------------------------------------------------------------------------
-      */
-
-      // interface implementation
-      canHandleEvent(target, type) {},
-      // interface implementation
-      registerEvent(target, type, capture) {
-        // Nothing needs to be done here
-      },
-      // interface implementation
-      unregisterEvent(target, type, capture) {
-        // Nothing needs to be done here
-      },
-      __isReady__P_54_2: null,
-      __isInitialized__P_54_3: null,
-      __domReady__P_54_0: null,
-      __loaded__P_54_1: null,
-      __isUnloaded__P_54_4: null,
-      /*
-      ---------------------------------------------------------------------------
-        USER ACCESS
-      ---------------------------------------------------------------------------
-      */
-
       /**
-       * Fires a global ready event.
+       * Converts a base array to a native Array
        *
+       * @signature function()
+       * @return {Array} The native array
        */
-      __fireReady__P_54_5() {
-        // Wrapper qxloader needed to be compatible with old generator
-        if (!this.__isReady__P_54_2 && this.__domReady__P_54_0 && qx.$$loader.scriptLoaded) {
-          // If qooxdoo is loaded within a frame in IE, the document is ready before
-          // the "ready" listener can be added. To avoid any startup issue check
-          // for the availability of the "ready" listener before firing the event.
-          // So at last the native "load" will trigger the "ready" event.
-          if (qx.core.Environment.get("engine.name") == "mshtml") {
-            if (qx.event.Registration.hasListener(this._window, "ready")) {
-              this.__isReady__P_54_2 = true;
+      toArray: null,
+      /**
+       * Returns the current number of items stored in the Array
+       *
+       * @signature function()
+       * @return {Integer} number of items
+       */
+      valueOf: null,
+      /**
+       * Removes the last element from an array and returns that element.
+       *
+       * This method modifies the array.
+       *
+       * @signature function()
+       * @return {var} The last element of the array.
+       */
+      pop: null,
+      /**
+       * Adds one or more elements to the end of an array and returns the new length of the array.
+       *
+       * This method modifies the array.
+       *
+       * @signature function(varargs)
+       * @param varargs {var} The elements to add to the end of the array.
+       * @return {Integer} The new array's length
+       */
+      push: null,
+      /**
+       * Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.
+       *
+       * This method modifies the array.
+       *
+       * @signature function()
+       * @return {Array} Returns the modified array (works in place)
+       */
+      reverse: null,
+      /**
+       * Removes the first element from an array and returns that element.
+       *
+       * This method modifies the array.
+       *
+       * @signature function()
+       * @return {var} The first element of the array.
+       */
+      shift: null,
+      /**
+       * Sorts the elements of an array.
+       *
+       * This method modifies the array.
+       *
+       * @signature function(compareFunction)
+       * @param compareFunction {Function?null} Specifies a function that defines the sort order. If omitted,
+       *   the array is sorted lexicographically (in dictionary order) according to the string conversion of each element.
+       * @return {Array} Returns the modified array (works in place)
+       */
+      sort: null,
+      /**
+       * Adds and/or removes elements from an array.
+       *
+       * @signature function(index, howMany, varargs)
+       * @param index {Integer} Index at which to start changing the array. If negative, will begin
+       *   that many elements from the end.
+       * @param howMany {Integer} An integer indicating the number of old array elements to remove.
+       *   If <code>howMany</code> is 0, no elements are removed. In this case, you should specify
+       *   at least one new element.
+       * @param varargs {var?null} The elements to add to the array. If you don't specify any elements,
+       *   splice simply removes elements from the array.
+       * @return {qx.type.BaseArray} New array with the removed elements.
+       */
+      splice: null,
+      /**
+       * Adds one or more elements to the front of an array and returns the new length of the array.
+       *
+       * This method modifies the array.
+       *
+       * @signature function(varargs)
+       * @param varargs {var} The elements to add to the front of the array.
+       * @return {Integer} The new array's length
+       */
+      unshift: null,
+      /**
+       * Returns a new array comprised of this array joined with other array(s) and/or value(s).
+       *
+       * This method does not modify the array and returns a modified copy of the original.
+       *
+       * @signature function(varargs)
+       * @param varargs {Array|var} Arrays and/or values to concatenate to the resulting array.
+       * @return {qx.type.BaseArray} New array built of the given arrays or values.
+       */
+      concat: null,
+      /**
+       * Joins all elements of an array into a string.
+       *
+       * @signature function(separator)
+       * @param separator {String} Specifies a string to separate each element of the array. The separator is
+       *   converted to a string if necessary. If omitted, the array elements are separated with a comma.
+       * @return {String} The stringified values of all elements divided by the given separator.
+       */
+      join: null,
+      /**
+       * Extracts a section of an array and returns a new array.
+       *
+       * @signature function(begin, end)
+       * @param begin {Integer} Zero-based index at which to begin extraction. As a negative index, start indicates
+       *   an offset from the end of the sequence. slice(-2) extracts the second-to-last element and the last element
+       *   in the sequence.
+       * @param end {Integer?length} Zero-based index at which to end extraction. slice extracts up to but not including end.
+       *   <code>slice(1,4)</code> extracts the second element through the fourth element (elements indexed 1, 2, and 3).
+       *   As a negative index, end indicates an offset from the end of the sequence. slice(2,-1) extracts the third element through the second-to-last element in the sequence.
+       *   If end is omitted, slice extracts to the end of the sequence.
+       * @return {qx.type.BaseArray} An new array which contains a copy of the given region.
+       */
+      slice: null,
+      /**
+       * Returns a string representing the array and its elements. Overrides the Object.prototype.toString method.
+       *
+       * @signature function()
+       * @return {String} The string representation of the array.
+       */
+      toString: null,
+      /**
+       * Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+       *
+       * @signature function(searchElement, fromIndex)
+       * @param searchElement {var} Element to locate in the array.
+       * @param fromIndex {Integer?0} The index at which to begin the search. Defaults to 0, i.e. the
+       *   whole array will be searched. If the index is greater than or equal to the length of the
+       *   array, -1 is returned, i.e. the array will not be searched. If negative, it is taken as
+       *   the offset from the end of the array. Note that even when the index is negative, the array
+       *   is still searched from front to back. If the calculated index is less than 0, the whole
+       *   array will be searched.
+       * @return {Integer} The index of the given element
+       */
+      indexOf: null,
+      /**
+       * Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.
+       *
+       * @signature function(searchElement, fromIndex)
+       * @param searchElement {var} Element to locate in the array.
+       * @param fromIndex {Integer?length} The index at which to start searching backwards. Defaults to
+       *   the array's length, i.e. the whole array will be searched. If the index is greater than
+       *   or equal to the length of the array, the whole array will be searched. If negative, it
+       *   is taken as the offset from the end of the array. Note that even when the index is
+       *   negative, the array is still searched from back to front. If the calculated index is
+       *   less than 0, -1 is returned, i.e. the array will not be searched.
+       * @return {Integer} The index of the given element
+       */
+      lastIndexOf: null,
+      /**
+       * Executes a provided function once per array element.
+       *
+       * <code>forEach</code> executes the provided function (<code>callback</code>) once for each
+       * element present in the array.  <code>callback</code> is invoked only for indexes of the array
+       * which have assigned values; it is not invoked for indexes which have been deleted or which
+       * have never been assigned values.
+       *
+       * <code>callback</code> is invoked with three arguments: the value of the element, the index
+       * of the element, and the Array object being traversed.
+       *
+       * If a <code>obj</code> parameter is provided to <code>forEach</code>, it will be used
+       * as the <code>this</code> for each invocation of the <code>callback</code>.  If it is not
+       * provided, or is <code>null</code>, the global object associated with <code>callback</code>
+       * is used instead.
+       *
+       * <code>forEach</code> does not mutate the array on which it is called.
+       *
+       * The range of elements processed by <code>forEach</code> is set before the first invocation of
+       * <code>callback</code>.  Elements which are appended to the array after the call to
+       * <code>forEach</code> begins will not be visited by <code>callback</code>. If existing elements
+       * of the array are changed, or deleted, their value as passed to <code>callback</code> will be
+       * the value at the time <code>forEach</code> visits them; elements that are deleted are not visited.
+       *
+       * @signature function(callback, obj)
+       * @param callback {Function} Function to execute for each element.
+       * @param obj {Object} Object to use as this when executing callback.
+       */
+      forEach: null,
+      /**
+       * Creates a new array with all elements that pass the test implemented by the provided
+       * function.
+       *
+       * <code>filter</code> calls a provided <code>callback</code> function once for each
+       * element in an array, and constructs a new array of all the values for which
+       * <code>callback</code> returns a true value.  <code>callback</code> is invoked only
+       * for indexes of the array which have assigned values; it is not invoked for indexes
+       * which have been deleted or which have never been assigned values.  Array elements which
+       * do not pass the <code>callback</code> test are simply skipped, and are not included
+       * in the new array.
+       *
+       * <code>callback</code> is invoked with three arguments: the value of the element, the
+       * index of the element, and the Array object being traversed.
+       *
+       * If a <code>obj</code> parameter is provided to <code>filter</code>, it will
+       * be used as the <code>this</code> for each invocation of the <code>callback</code>.
+       * If it is not provided, or is <code>null</code>, the global object associated with
+       * <code>callback</code> is used instead.
+       *
+       * <code>filter</code> does not mutate the array on which it is called. The range of
+       * elements processed by <code>filter</code> is set before the first invocation of
+       * <code>callback</code>. Elements which are appended to the array after the call to
+       * <code>filter</code> begins will not be visited by <code>callback</code>. If existing
+       * elements of the array are changed, or deleted, their value as passed to <code>callback</code>
+       * will be the value at the time <code>filter</code> visits them; elements that are deleted
+       * are not visited.
+       *
+       * @signature function(callback, obj)
+       * @param callback {Function} Function to test each element of the array.
+       * @param obj {Object} Object to use as <code>this</code> when executing <code>callback</code>.
+       * @return {qx.type.BaseArray} The newly created array with all matching elements
+       */
+      filter: null,
+      /**
+       * Creates a new array with the results of calling a provided function on every element in this array.
+       *
+       * <code>map</code> calls a provided <code>callback</code> function once for each element in an array,
+       * in order, and constructs a new array from the results.  <code>callback</code> is invoked only for
+       * indexes of the array which have assigned values; it is not invoked for indexes which have been
+       * deleted or which have never been assigned values.
+       *
+       * <code>callback</code> is invoked with three arguments: the value of the element, the index of the
+       * element, and the Array object being traversed.
+       *
+       * If a <code>obj</code> parameter is provided to <code>map</code>, it will be used as the
+       * <code>this</code> for each invocation of the <code>callback</code>. If it is not provided, or is
+       * <code>null</code>, the global object associated with <code>callback</code> is used instead.
+       *
+       * <code>map</code> does not mutate the array on which it is called.
+       *
+       * The range of elements processed by <code>map</code> is set before the first invocation of
+       * <code>callback</code>. Elements which are appended to the array after the call to <code>map</code>
+       * begins will not be visited by <code>callback</code>.  If existing elements of the array are changed,
+       * or deleted, their value as passed to <code>callback</code> will be the value at the time
+       * <code>map</code> visits them; elements that are deleted are not visited.
+       *
+       * @signature function(callback, obj)
+       * @param callback {Function} Function produce an element of the new Array from an element of the current one.
+       * @param obj {Object} Object to use as <code>this</code> when executing <code>callback</code>.
+       * @return {qx.type.BaseArray} A new array which contains the return values of every item executed through the given function
+       */
+      map: null,
+      /**
+       * Tests whether some element in the array passes the test implemented by the provided function.
+       *
+       * <code>some</code> executes the <code>callback</code> function once for each element present in
+       * the array until it finds one where <code>callback</code> returns a true value. If such an element
+       * is found, <code>some</code> immediately returns <code>true</code>. Otherwise, <code>some</code>
+       * returns <code>false</code>. <code>callback</code> is invoked only for indexes of the array which
+       * have assigned values; it is not invoked for indexes which have been deleted or which have never
+       * been assigned values.
+       *
+       * <code>callback</code> is invoked with three arguments: the value of the element, the index of the
+       * element, and the Array object being traversed.
+       *
+       * If a <code>obj</code> parameter is provided to <code>some</code>, it will be used as the
+       * <code>this</code> for each invocation of the <code>callback</code>. If it is not provided, or is
+       * <code>null</code>, the global object associated with <code>callback</code> is used instead.
+       *
+       * <code>some</code> does not mutate the array on which it is called.
+       *
+       * The range of elements processed by <code>some</code> is set before the first invocation of
+       * <code>callback</code>.  Elements that are appended to the array after the call to <code>some</code>
+       * begins will not be visited by <code>callback</code>. If an existing, unvisited element of the array
+       * is changed by <code>callback</code>, its value passed to the visiting <code>callback</code> will
+       * be the value at the time that <code>some</code> visits that element's index; elements that are
+       * deleted are not visited.
+       *
+       * @signature function(callback, obj)
+       * @param callback {Function} Function to test for each element.
+       * @param obj {Object} Object to use as <code>this</code> when executing <code>callback</code>.
+       * @return {Boolean} Whether at least one elements passed the test
+       */
+      some: null,
+      /**
+       * Tests whether all elements in the array pass the test implemented by the provided function.
+       *
+       * <code>every</code> executes the provided <code>callback</code> function once for each element
+       * present in the array until it finds one where <code>callback</code> returns a false value. If
+       * such an element is found, the <code>every</code> method immediately returns <code>false</code>.
+       * Otherwise, if <code>callback</code> returned a true value for all elements, <code>every</code>
+       * will return <code>true</code>.  <code>callback</code> is invoked only for indexes of the array
+       * which have assigned values; it is not invoked for indexes which have been deleted or which have
+       * never been assigned values.
+       *
+       * <code>callback</code> is invoked with three arguments: the value of the element, the index of
+       * the element, and the Array object being traversed.
+       *
+       * If a <code>obj</code> parameter is provided to <code>every</code>, it will be used as
+       * the <code>this</code> for each invocation of the <code>callback</code>. If it is not provided,
+       * or is <code>null</code>, the global object associated with <code>callback</code> is used instead.
+       *
+       * <code>every</code> does not mutate the array on which it is called. The range of elements processed
+       * by <code>every</code> is set before the first invocation of <code>callback</code>. Elements which
+       * are appended to the array after the call to <code>every</code> begins will not be visited by
+       * <code>callback</code>.  If existing elements of the array are changed, their value as passed
+       * to <code>callback</code> will be the value at the time <code>every</code> visits them; elements
+       * that are deleted are not visited.
+       *
+       * @signature function(callback, obj)
+       * @param callback {Function} Function to test for each element.
+       * @param obj {Object} Object to use as <code>this</code> when executing <code>callback</code>.
+       * @return {Boolean} Whether all elements passed the test
+       */
+      every: null
+    }
+  });
+  (function () {
+    function createStackConstructor(stack) {
+      // In IE don't inherit from Array but use an empty object as prototype
+      // and copy the methods from Array
+      if (qx.core.Environment.get("engine.name") == "mshtml") {
+        Stack.prototype = {
+          length: 0,
+          $$isArray: true
+        };
+        var args = "pop.push.reverse.shift.sort.splice.unshift.join.slice".split(".");
+        for (var length = args.length; length;) {
+          Stack.prototype[args[--length]] = Array.prototype[args[length]];
+        }
+      }
 
-              // Fire user event
-              qx.event.Registration.fireEvent(this._window, "ready");
-            }
+      // Remember Array's slice method
+      var slice = Array.prototype.slice;
+
+      // Fix "concat" method
+      Stack.prototype.concat = function () {
+        var constructor = this.slice(0);
+        for (var i = 0, length = arguments.length; i < length; i++) {
+          var copy;
+          if (arguments[i] instanceof Stack) {
+            copy = slice.call(arguments[i], 0);
+          } else if (arguments[i] instanceof Array) {
+            copy = arguments[i];
           } else {
-            this.__isReady__P_54_2 = true;
-
-            // Fire user event
-            qx.event.Registration.fireEvent(this._window, "ready");
+            copy = [arguments[i]];
           }
+          constructor.push.apply(constructor, copy);
         }
-      },
-      /**
-       * Fires a global "appinitialized" event.
-       *
-       */
-      __fireAppInstanceInitialized__P_54_6() {
-        this.__isInitialized__P_54_3 = true;
+        return constructor;
+      };
 
-        // Fire user event
-        qx.event.Registration.fireEvent(this._window, "appinitialized");
-      },
-      /**
-       * Whether the application is ready.
-       *
-       * @return {Boolean} ready status
-       */
-      isApplicationReady() {
-        return this.__isReady__P_54_2;
-      },
-      /**
-       * Whether the application is initialized
-       *
-       * @return {Boolean} initialization status
-       */
-      isApplicationInitialized() {
-        return this.__isInitialized__P_54_3;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        OBSERVER INIT/STOP
-      ---------------------------------------------------------------------------
-      */
+      // Fix "toString" method
+      Stack.prototype.toString = function () {
+        return slice.call(this, 0).toString();
+      };
 
-      /**
-       * Initializes the native application event listeners.
-       *
-       */
-      _initObserver() {
-        // in Firefox the loader script sets the ready state
-        if (qx.$$domReady || document.readyState == "complete" || document.readyState == "ready") {
-          this.__domReady__P_54_0 = true;
-          this.__fireReady__P_54_5();
-        } else {
-          this._onNativeLoadWrapped = qx.lang.Function.bind(this._onNativeLoad, this);
-          if (qx.core.Environment.get("engine.name") == "gecko" || qx.core.Environment.get("engine.name") == "opera" || qx.core.Environment.get("engine.name") == "webkit" || qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("browser.documentmode") > 8) {
-            // Using native method supported by Mozilla, Webkit, Opera and IE >= 9
-            qx.bom.Event.addNativeListener(this._window, "DOMContentLoaded", this._onNativeLoadWrapped);
-          } else if (typeof document !== "undefined") {
-            var self = this;
+      // Fix "toLocaleString"
+      Stack.prototype.toLocaleString = function () {
+        return slice.call(this, 0).toLocaleString();
+      };
 
-            // Continually check to see if the document is ready
-            var timer = function () {
-              try {
-                // If IE is used, use the trick by Diego Perini
-                // http://javascript.nwbox.com/IEContentLoaded/
-                document.documentElement.doScroll("left");
-                if (document.body) {
-                  self._onNativeLoadWrapped();
-                }
-              } catch (error) {
-                window.setTimeout(timer, 100);
-              }
-            };
-            timer();
-          }
+      // Fix constructor
+      Stack.prototype.constructor = Stack;
 
-          // Additional load listener as fallback
-          qx.bom.Event.addNativeListener(this._window, "load", this._onNativeLoadWrapped);
-        }
-        if (qx.core.Environment.get("runtime.name") == "rhino" || qx.core.Environment.get("runtime.name") == "node.js") {
-          return;
-        }
-        this._onNativeUnloadWrapped = qx.lang.Function.bind(this._onNativeUnload, this);
-        qx.bom.Event.addNativeListener(this._window, "unload", this._onNativeUnloadWrapped);
-      },
-      /**
-       * Disconnect the native application event listeners.
-       *
-       */
-      _stopObserver() {
-        if (this._onNativeLoadWrapped) {
-          qx.bom.Event.removeNativeListener(this._window, "load", this._onNativeLoadWrapped);
-        }
-        qx.bom.Event.removeNativeListener(this._window, "unload", this._onNativeUnloadWrapped);
-        this._onNativeLoadWrapped = null;
-        this._onNativeUnloadWrapped = null;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        NATIVE LISTENER
-      ---------------------------------------------------------------------------
-      */
+      // Add JS 1.6 Array features
+      Stack.prototype.indexOf = Array.prototype.indexOf;
+      Stack.prototype.lastIndexOf = Array.prototype.lastIndexOf;
+      Stack.prototype.forEach = Array.prototype.forEach;
+      Stack.prototype.some = Array.prototype.some;
+      Stack.prototype.every = Array.prototype.every;
+      var filter = Array.prototype.filter;
+      var map = Array.prototype.map;
 
-      /**
-       * When qx.globalErrorHandling is enabled the callback will observed
-       */
-      _onNativeLoad() {
-        var callback = qx.core.Environment.select("qx.globalErrorHandling", {
-          true: qx.event.GlobalError.observeMethod(this.__onNativeLoadHandler__P_54_7),
-          false: this.__onNativeLoadHandler__P_54_7
-        });
-        callback.apply(this, arguments);
-      },
-      /**
-       * Event listener for native load event
-       */
-      __onNativeLoadHandler__P_54_7() {
-        this.__domReady__P_54_0 = true;
-        this.__fireReady__P_54_5();
-      },
-      /**
-       * When qx.globalErrorHandling is enabled the callback will observed
-       */
-      _onNativeUnload() {
-        var callback = qx.core.Environment.select("qx.globalErrorHandling", {
-          true: qx.event.GlobalError.observeMethod(this.__onNativeUnloadHandler__P_54_8),
-          false: this.__onNativeUnloadHandler__P_54_8
-        });
-        callback.apply(this, arguments);
-      },
-      /**
-       * Event listener for native unload event
-       */
-      __onNativeUnloadHandler__P_54_8() {
-        if (!this.__isUnloaded__P_54_4) {
-          this.__isUnloaded__P_54_4 = true;
-          try {
-            // Fire user event
-            qx.event.Registration.fireEvent(this._window, "shutdown");
-          } catch (e) {
-            // IE doesn't execute the "finally" block if no "catch" block is present
-            throw e;
-          }
-        }
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
+      // Fix methods which generates a new instance
+      // to return an instance of the same class
+      Stack.prototype.filter = function () {
+        var ret = new this.constructor();
+        ret.push.apply(ret, filter.apply(this, arguments));
+        return ret;
+      };
+      Stack.prototype.map = function () {
+        var ret = new this.constructor();
+        ret.push.apply(ret, map.apply(this, arguments));
+        return ret;
+      };
+      Stack.prototype.slice = function () {
+        var ret = new this.constructor();
+        ret.push.apply(ret, Array.prototype.slice.apply(this, arguments));
+        return ret;
+      };
+      Stack.prototype.splice = function () {
+        var ret = new this.constructor();
+        ret.push.apply(ret, Array.prototype.splice.apply(this, arguments));
+        return ret;
+      };
 
-    destruct() {
-      this._stopObserver();
-      this._window = null;
-    },
-    /*
-    *****************************************************************************
-       DEFER
-    *****************************************************************************
-    */
+      // Add new "toArray" method for convert a base array to a native Array
+      Stack.prototype.toArray = function () {
+        return Array.prototype.slice.call(this, 0);
+      };
 
-    defer(statics) {
-      qx.event.Registration.addHandler(statics);
+      // Add valueOf() to return the length
+      Stack.prototype.valueOf = function () {
+        return this.length;
+      };
+
+      // Return final class
+      return Stack;
     }
-  });
-  qx.event.handler.Application.$$dbClassInfo = $$dbClassInfo;
+    function Stack(length) {
+      if (arguments.length === 1 && typeof length === "number") {
+        this.length = -1 < length && length === length >> 0.5 ? length : this.push(length);
+      } else if (arguments.length) {
+        this.push.apply(this, arguments);
+      }
+    }
+    function PseudoArray() {}
+    PseudoArray.prototype = [];
+    Stack.prototype = new PseudoArray();
+    Stack.prototype.length = 0;
+    qx.type.BaseArray = createStackConstructor(Stack);
+  })();
+  qx.type.BaseArray.$$dbClassInfo = $$dbClassInfo;
 })();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.core.Environment": {
-        "defer": "load",
-        "require": true
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.bom.client.Engine": {
-        "require": true
-      },
-      "qx.log.Logger": {},
-      "qx.bom.client.OperatingSystem": {
-        "require": true
-      },
-      "qx.Bootstrap": {},
-      "qx.event.handler.Application": {}
-    },
-    "environment": {
-      "provided": [],
-      "required": {
-        "engine.name": {
-          "className": "qx.bom.client.Engine"
-        },
-        "engine.version": {
-          "className": "qx.bom.client.Engine"
-        },
-        "os.name": {
-          "className": "qx.bom.client.OperatingSystem"
-        },
-        "qx.debug.startupTimings": {},
-        "qx.application": {}
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2011 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Daniel Wagner (d_wagner)
-       * John Spackman
-  
-  ************************************************************************ */
-
-  /**
-   * This is the base class for non-browser qooxdoo applications.
-   */
-  qx.Class.define("qx.core.BaseInit", {
-    /*
-    *****************************************************************************
-       STATICS
-    *****************************************************************************
-    */
-
-    statics: {
-      __application__P_55_0: null,
-      /**
-       * Returns the instantiated qooxdoo application.
-       *
-       * @return {qx.core.Object} The application instance.
-       */
-      getApplication() {
-        return this.__application__P_55_0 || null;
-      },
-      /**
-       * Runs when the application is loaded. Automatically creates an instance
-       * of the class defined by the setting <code>qx.application</code>.
-       *
-       */
-      ready() {
-        if (this.__application__P_55_0) {
-          return;
-        }
-        if (qx.core.Environment.get("engine.name") == "") {
-          qx.log.Logger.warn("Could not detect engine!");
-        }
-        if (qx.core.Environment.get("engine.version") == "") {
-          qx.log.Logger.warn("Could not detect the version of the engine!");
-        }
-        if (qx.core.Environment.get("os.name") == "") {
-          qx.log.Logger.warn("Could not detect operating system!");
-        }
-        if (qx.core.Environment.get("qx.debug.startupTimings")) {
-          qx.log.Logger.debug(this, "Load runtime: " + (new Date() - qx.Bootstrap.LOADSTART) + "ms");
-        }
-        var app = qx.core.Environment.get("qx.application");
-        var clazz = qx.Class.getByName(app);
-        if (clazz) {
-          this.__application__P_55_0 = new clazz();
-          var start = new Date();
-          this.__application__P_55_0.main();
-          if (qx.core.Environment.get("qx.debug.startupTimings")) {
-            qx.log.Logger.debug(this, "Main runtime: " + (new Date() - start) + "ms");
-          }
-          var start = new Date();
-          this.__application__P_55_0.finalize();
-          if (qx.core.Environment.get("qx.debug.startupTimings")) {
-            qx.log.Logger.debug(this, "Finalize runtime: " + (new Date() - start) + "ms");
-          }
-          qx.event.handler.Application.onAppInstanceInitialized();
-        } else {
-          qx.log.Logger.warn("Missing application class: " + app);
-        }
-      },
-      /**
-       * Runs before the document is unloaded. Calls the application's close
-       * method to check if the unload process should be stopped.
-       *
-       * @param e {qx.event.type.Native} Incoming beforeunload event.
-       */
-      __close__P_55_1(e) {
-        var app = this.__application__P_55_0;
-        if (app) {
-          app.close();
-        }
-      },
-      /**
-       * Runs when the document is unloaded. Automatically terminates a previously
-       * created application instance.
-       *
-       */
-      __shutdown__P_55_2() {
-        var app = this.__application__P_55_0;
-        if (app) {
-          app.terminate();
-        }
-      }
-    }
-  });
-  qx.core.BaseInit.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.event.handler.Application": {
-        "require": true,
-        "defer": "runtime"
-      },
-      "qx.event.handler.Window": {
-        "require": true,
-        "defer": "runtime"
-      },
-      "qx.event.dispatch.Direct": {
-        "require": true,
-        "defer": "runtime"
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.BaseInit": {
-        "require": true
-      },
-      "qx.event.Registration": {
-        "defer": "runtime"
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-  
-  ************************************************************************ */
-
-  /**
-   * This is the base class for all qooxdoo applications.
-   *
-   * @require(qx.event.handler.Application)
-   * @require(qx.event.handler.Window)
-   * @require(qx.event.dispatch.Direct)
-   */
-  qx.Class.define("qx.core.Init", {
-    /*
-    *****************************************************************************
-       STATICS
-    *****************************************************************************
-    */
-
-    statics: {
-      /**
-       * Returns the instantiated qooxdoo application.
-       *
-       * @return {qx.core.Object} The application instance.
-       */
-      getApplication: qx.core.BaseInit.getApplication,
-      /**
-       * Runs when the application is loaded. Automatically creates an instance
-       * of the class defined by the setting <code>qx.application</code>.
-       *
-       */
-      ready: qx.core.BaseInit.ready,
-      /**
-       * Runs before the document is unloaded. Calls the application's close
-       * method to check if the unload process should be stopped.
-       *
-       * @param e {qx.event.type.Native} Incoming beforeunload event.
-       */
-      __close__P_10_0(e) {
-        var app = this.getApplication();
-        if (app) {
-          e.setReturnValue(app.close());
-        }
-      },
-      /**
-       * Runs when the document is unloaded. Automatically terminates a previously
-       * created application instance.
-       *
-       */
-      __shutdown__P_10_1() {
-        var app = this.getApplication();
-        if (app) {
-          app.terminate();
-        }
-      }
-    },
-    /*
-    *****************************************************************************
-       DEFER
-    *****************************************************************************
-    */
-
-    defer(statics) {
-      qx.event.Registration.addListener(window, "ready", statics.ready, statics);
-      qx.event.Registration.addListener(window, "shutdown", statics.__shutdown__P_10_1, statics);
-      qx.event.Registration.addListener(window, "beforeunload", statics.__close__P_10_0, statics);
-    }
-  });
-  qx.core.Init.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Interface": {
-        "usage": "dynamic",
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-  
-  ************************************************************************ */
-
-  /**
-   * This interface defines what an application class has to implement.
-   */
-  qx.Interface.define("qx.application.IApplication", {
-    members: {
-      /**
-       * Called when the application relevant classes are loaded and ready.
-       *
-       */
-      main() {},
-      /**
-       * Called when the application's main method was executed to handle
-       * "final" tasks like rendering or retrieving data.
-       *
-       */
-      finalize() {},
-      /**
-       * Called in the document.beforeunload event of the browser. If the method
-       * returns a string value, the user will be asked by the browser, whether
-       * he really wants to leave the page. The return string will be displayed in
-       * the message box.
-       *
-       * @return {String?null} message text on unloading the page
-       */
-      close() {},
-      /**
-       * This method contains the last code which is run inside the page and may contain cleanup code.
-       *
-       */
-      terminate() {}
-    }
-  });
-  qx.application.IApplication.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.module.Animation": {},
-      "qx.core.Init": {
-        "require": true
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.Object": {
-        "require": true
-      },
-      "qx.application.IApplication": {
-        "require": true
-      },
-      "qx.locale.MTranslation": {
-        "require": true
-      },
-      "qx.theme.manager.Meta": {},
-      "qx.ui.tooltip.Manager": {},
-      "qx.ui.style.Stylesheet": {},
-      "qx.ui.core.queue.Manager": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-  
-  ************************************************************************ */
-
-  /**
-   * Abstract base class for GUI applications using qooxdoo widgets.
-   *
-   * @require(qx.core.Init)
-   * @use(qx.module.Animation)
-   */
-  qx.Class.define("qx.application.AbstractGui", {
-    type: "abstract",
-    extend: qx.core.Object,
-    implement: [qx.application.IApplication],
-    include: qx.locale.MTranslation,
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      /** @type {qx.ui.core.Widget} The root widget */
-      __root__P_99_0: null,
-      /**
-       * Create the root widget. This method is abstract and must be overridden
-       * by sub classes.
-       *
-       * @return {qx.ui.core.Widget} The root widget. This widget must be configured
-       *     with a {@link qx.ui.layout.Basic} or {@link qx.ui.layout.Canvas} layout.
-       */
-      _createRootWidget() {
-        throw new Error("Abstract method call");
-      },
-      /**
-       * Returns the application's root widget. The root widgets can act as container
-       * for popups. It is configured with a {@link qx.ui.layout.Basic} (if the
-       * application is an inline application) layout or a {@link qx.ui.layout.Canvas}
-       * (if the application is a standalone application) layout .
-       *
-       * The root has the same add method as the configured layout
-       * ({@link qx.ui.layout.Basic} or {@link qx.ui.layout.Canvas}).
-       *
-       * @return {qx.ui.core.Widget} The application's root widget.
-       */
-      getRoot() {
-        return this.__root__P_99_0;
-      },
-      // interface method
-      main() {
-        // Initialize themes
-        qx.theme.manager.Meta.getInstance().initialize();
-
-        // Initialize tooltip manager
-        qx.ui.tooltip.Manager.getInstance();
-        var rule = ["-webkit-touch-callout: none;", "-ms-touch-select: none;", "-webkit-tap-highlight-color: rgba(0,0,0,0);", "-webkit-tap-highlight-color: transparent;"].join("");
-        qx.ui.style.Stylesheet.getInstance().addRule("*", rule);
-        this.__root__P_99_0 = this._createRootWidget();
-
-        // make sure we start with a good scroll position
-        window.scrollTo(0, 0);
-      },
-      // interface method
-      finalize() {
-        this.render();
-      },
-      /**
-       * Updates the GUI rendering
-       *
-       */
-      render() {
-        qx.ui.core.queue.Manager.flush();
-      },
-      // interface method
-      close(val) {
-        // empty
-      },
-      // interface method
-      terminate() {
-        // empty
-      }
-    }
-  });
-  qx.application.AbstractGui.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.core.Init": {
-        "require": true
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.application.AbstractGui": {
-        "require": true
-      },
-      "qx.ui.root.Application": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-  
-  ************************************************************************ */
-
-  /**
-   * For a GUI application that looks & feels like native desktop application
-   * (often called "RIA" - Rich Internet Application).
-   *
-   * Such a stand-alone application typically creates and updates all content
-   * dynamically. Often it is called a "single-page application", since the
-   * document itself is never reloaded or changed. Communication with the server
-   * is done with AJAX.
-   *
-   * @require(qx.core.Init)
-   */
-  qx.Class.define("qx.application.Standalone", {
-    extend: qx.application.AbstractGui,
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      _createRootWidget() {
-        return new qx.ui.root.Application(document);
-      }
-    }
-  });
-  qx.application.Standalone.$$dbClassInfo = $$dbClassInfo;
-})();
-//# sourceMappingURL=package-3.js.map?dt=1769807053831
+//# sourceMappingURL=package-3.js.map?dt=1791845587427
 qx.$$packageData['3'] = {
   "locales": {},
   "resources": {},

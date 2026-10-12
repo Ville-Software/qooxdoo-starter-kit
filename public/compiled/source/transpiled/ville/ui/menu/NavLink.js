@@ -9,66 +9,56 @@
         "construct": true,
         "require": true
       },
-      "ville.ui.core.MWidget": {
-        "require": true
-      },
       "qx.ui.core.Widget": {},
-      "qx.html.Element": {},
-      "ville.ui.basic.Label": {}
+      "qx.html.Element": {}
     }
   };
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
   /**
-   * Menu Button
-   * @external(mantine/core/styles/UnstyledButton.css)
-   * @external(mantine/core/styles/NavLink.css)
-   * @external(mantine/core/styles/Menu.css)
+   * Button
+   *
+   *
+   * Data attributes:
+   * data-variant
+   * data-disabled
+   * data-loading
+   * data-block
+   *
+   * @childControl inlineicon {qx.ui.core.Widget}
+   *
    */
   qx.Class.define("ville.ui.menu.NavLink", {
     extend: qx.ui.menu.RadioButton,
-    include: ville.ui.core.MWidget,
-    construct(label, variant, sectionLeft, sectionRight, component) {
-      if (component != null) this.__componenttag__P_14_0 = component;
-      qx.ui.menu.RadioButton.constructor.call(this);
-      this.setExcludeBoundsFromDom(true);
-      this.setClearAllInlineStyles(true);
-      this.setCssUtilityClass("mantine-focus-auto m_99ac2aa1 mantine-Menu-item m_87cf2631 mantine-UnstyledButton-root");
-      if (variant) {
-        this.setVariant(variant);
+    construct(label, menu, component) {
+      if (component != null) {
+        this.__componenttag__P_18_0 = component;
+      }
+      qx.ui.menu.RadioButton.constructor.call(this, label, menu);
+
+      /*if (icon != null) {
+          if (qx.lang.Type.isString(icon)) {
+              super(label, icon, command, menu);
+          } else {
+              super(label, null, command, menu);
+              this.setInlineIcon(icon);
+              this._createChildControl("inlineicon");
+          }
       } else {
-        this.initVariant();
-      }
-      if (sectionLeft != null) {
-        this.setSectionLeft(sectionLeft);
-      }
-      if (label != null) {
-        this.setLabel(label);
-      }
-      if (sectionRight != null) {
-        this.setSectionRight(sectionRight);
-      }
+          super(label, null, command, menu);
+      }*/
     },
     properties: {
-      variant: {
-        init: "default",
-        check: ["default", "filled", "light", "outline", "subtle", "transparent", "white"],
-        apply: "_applyVariant",
-        themeable: true,
-        event: "changeVariant"
-      },
-      sectionLeft: {
+      inlineIcon: {
         check: "qx.ui.core.Widget",
-        apply: "_applySectionLeft",
+        apply: "_applyInlineIcon",
         nullable: true,
         themeable: true,
-        event: "changeSectionLeft"
+        event: "changeInlineIcon"
       },
-      sectionRight: {
-        check: "qx.ui.core.Widget",
-        apply: "_applySectionRight",
-        nullable: true,
-        themeable: true,
-        event: "changeSectionRight"
+      // overridden
+      appearance: {
+        refine: true,
+        init: "menu-navlink"
       },
       href: {
         apply: "_applyHref",
@@ -82,107 +72,96 @@
       }
     },
     members: {
-      __componenttag__P_14_0: "a",
+      __componenttag__P_18_0: "a",
       // overridden
       _createContentElement() {
-        return new qx.html.Element(this.__componenttag__P_14_0);
+        return new qx.html.Element(this.__componenttag__P_18_0);
       },
       // overridden
       _createChildControlImpl(id, hash) {
         var control;
         switch (id) {
-          case "label":
-            control = new ville.ui.basic.Label(null, "div");
+          case "inlineicon":
+            control = this.getInlineIcon();
             control.setAnonymous(true);
-            control.setCssUtilityClass("m_5476e0d3 mantine-Menu-itemLabel");
-            this._add(control);
-            break;
-          case "sectionleft":
-            control = new ville.ui.basic.Label(null, "div");
-            control.setAnonymous(true);
-            control.setCssUtilityClass("m_8b75e504 mantine-Menu-itemSection");
-            control.setAttribute("data-position", "left");
-            this._add(control);
-            break;
-          case "sectionright":
-            control = new ville.ui.basic.Label();
-            control.setAnonymous(true);
-            control.setCssUtilityClass("m_8b75e504 mantine-Menu-itemSection");
-            control.getContentElement().setAttribute("data-position", "right");
-            this._add(control);
+            control.getContentElement().setAttribute("data-position", "left");
+            this.getContentElement().setAttribute("data-with-left-section", true);
+            this._add(control, {
+              column: 0
+            });
+            if (control == null) {
+              control.exclude();
+            }
             break;
         }
         return control || ville.ui.menu.NavLink.superclass.prototype._createChildControlImpl.call(this, id);
       },
+      // overridden
+      _applyEnabled(value, old) {
+        ville.ui.menu.NavLink.superclass.prototype._applyEnabled.call(this, value, old);
+        if (value === false) {
+          // villeui-mantine attriubute setting
+          this.getContentElement().setAttribute("data-disabled", true);
+          //this.getContentElement().removeClass("mantine-active");
+        } else {
+          // villeui-mantine attriubute setting
+          this.getContentElement().removeAttribute("data-disabled");
+          //this.getContentElement().addClass("mantine-active");
+        }
+      },
+      // property apply
+      _applyInlineIcon(value, old) {
+        if (this.getIcon() != null) {
+          value.exclude();
+        } else {
+          if (old) this._removeAt(0);
+          if (value) this.getChildControl("inlineicon", true);
+        }
+      },
+      // overridden
+      /*_handleIcon() {
+           if (this.getIcon() == null) {
+               this._excludeChildControl("icon");
+           } else {
+               this._showChildControl("icon");
+           }
+            if (this.getInlineIcon() == null) {
+               this._excludeChildControl("inlineicon");
+           } else {
+               if (this.getIcon() == null)
+                   this._showChildControl("inlineicon");
+           }
+       },*/
+
       // property apply
       _applyVariant(value, old) {
         if (value) {
-          this.setAttribute("data-variant", value);
-        }
-      },
-      // overridden
-      // Replaced by Section Left and Right
-      _applyIcon(value, old) {},
-      // overridden
-      _applyShow(value, old) {},
-      // overridden
-      _applyLabel(value, old) {
-        var label = this.getChildControl("label");
-        if (label) {
-          label.setValue(value);
-        }
-      },
-      _applySectionLeft(value, old) {
-        var section = this.getChildControl("sectionleft");
-        if (section) {
-          if (old) {
-            section.removeAll();
-          }
-          if (value) {
-            section.add(value);
-            this.setAttribute("data-with-left-section", "true");
-          } else {
-            this.removeAttribute("data-with-left-section");
-          }
-        }
-      },
-      _applySectionRight(value, old) {
-        var section = this.getChildControl("sectionright");
-        if (section) {
-          if (old) {
-            section.removeAll();
-          }
-          if (value) {
-            section.add(value);
-            this.setAttribute("data-with-right-section", "true");
-          } else {
-            this.removeAttribute("data-with-right-section");
-          }
+          this.getContentElement().setAttribute("data-variant", value);
         }
       },
       // property apply
       _applyHref(value) {
         // only apply if tag is an anchor "a"
-        if (this.__componenttag__P_14_0 == "a") {
+        if (this.__componenttag__P_18_0 === "a") {
           if (value) {
-            this.setAttribute("href", value);
-            this.__clickpreventListnerId__P_14_1 = this.addListener("click", e => {
+            this.getContentElement().setAttribute("href", value);
+            this.__clickpreventListnerId__P_18_1 = this.addListener("click", e => {
               e.preventDefault();
             });
           } else {
-            this.removeAttribute("href");
-            if (this.__clickpreventListnerId__P_14_1 != null) this.removeListener(this.__clickpreventListnerId__P_14_1);
+            this.getContentElement().removeAttribute("href");
+            if (this.__clickpreventListnerId__P_18_1 !== null) this.getContentElement().removeListener(this.__clickpreventListnerId__P_18_1);
           }
         }
       },
       // property apply
       _applyTarget(value) {
         // only apply if tag is an anchor "a"
-        if (this.__componenttag__P_14_0 == "a") {
+        if (this.__componenttag__P_18_0 === "a") {
           if (value) {
-            this.setAttribute("target", value);
+            this.getContentElement().setAttribute("target", value);
           } else {
-            this.removeAttribute("target");
+            this.getContentElement().removeAttribute("target");
           }
         }
       }
@@ -191,4 +170,4 @@
   ville.ui.menu.NavLink.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=NavLink.js.map?dt=1769806686050
+//# sourceMappingURL=NavLink.js.map?dt=1791841649756

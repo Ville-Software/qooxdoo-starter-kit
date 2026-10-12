@@ -73,7 +73,7 @@
       // may get called after "clearInterval" (i.e. after the timer is disposed)
       // and we must be able to handle this.
       var self = this;
-      this.__oninterval__P_188_0 = function () {
+      this.__oninterval__P_172_0 = function () {
         self._oninterval.call(self);
       };
     },
@@ -117,13 +117,13 @@
 
         // Bug #3481: append original function to timer instance so it can be
         // read by a debugger
-        timer.__onceFunc__P_188_1 = func;
+        timer.__onceFunc__P_172_1 = func;
 
         // Add event listener to interval
         timer.addListener("interval", function (e) {
           timer.stop();
           func.call(obj, e);
-          delete timer.__onceFunc__P_188_1;
+          delete timer.__onceFunc__P_172_1;
           timer.dispose();
           obj = null;
         }, obj);
@@ -168,8 +168,8 @@
     */
 
     members: {
-      __intervalHandler__P_188_2: null,
-      __oninterval__P_188_0: null,
+      __intervalHandler__P_172_2: null,
+      __oninterval__P_172_0: null,
       /*
       ---------------------------------------------------------------------------
         APPLY ROUTINES
@@ -195,10 +195,10 @@
        */
       _applyEnabled(value, old) {
         if (old) {
-          window.clearInterval(this.__intervalHandler__P_188_2);
-          this.__intervalHandler__P_188_2 = null;
+          window.clearInterval(this.__intervalHandler__P_172_2);
+          this.__intervalHandler__P_172_2 = null;
         } else if (value) {
-          this.__intervalHandler__P_188_2 = window.setInterval(this.__oninterval__P_188_0, this.getInterval());
+          this.__intervalHandler__P_172_2 = window.setInterval(this.__oninterval__P_172_0, this.getInterval());
         }
       },
       /*
@@ -275,13 +275,13 @@
     */
 
     destruct() {
-      if (this.__intervalHandler__P_188_2) {
-        window.clearInterval(this.__intervalHandler__P_188_2);
+      if (this.__intervalHandler__P_172_2) {
+        window.clearInterval(this.__intervalHandler__P_172_2);
       }
-      this.__intervalHandler__P_188_2 = this.__oninterval__P_188_0 = null;
+      this.__intervalHandler__P_172_2 = this.__oninterval__P_172_0 = null;
     }
   });
   qx.event.Timer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Timer.js.map?dt=1769806693885
+//# sourceMappingURL=Timer.js.map?dt=1791841652392

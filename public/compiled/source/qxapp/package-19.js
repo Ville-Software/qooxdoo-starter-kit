@@ -1,302 +1,20 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
-      "qx.Mixin": {
-        "usage": "dynamic",
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2009 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Martin Wittemann (martinwittemann)
-  
-  ************************************************************************ */
-  /**
-   * Can be included for implementing {@link qx.ui.form.IModel}. It only contains
-   * a nullable property named 'model' with a 'changeModel' event.
-   */
-  qx.Mixin.define("qx.ui.form.MModelProperty", {
-    properties: {
-      /**
-       * Model property for storing additional information for the including
-       * object. It can act as value property on form items for example.
-       *
-       * Be careful using that property as this is used for the
-       * {@link qx.ui.form.MModelSelection} it has some restrictions:
-       *
-       * * Don't use equal models in one widget using the
-       *     {@link qx.ui.form.MModelSelection}.
-       *
-       * * Avoid setting only some model properties if the widgets are added to
-       *     a {@link qx.ui.form.MModelSelection} widget.
-       *
-       * Both restrictions result of the fact, that the set models are deputies
-       * for their widget.
-       */
-      model: {
-        nullable: true,
-        event: "changeModel",
-        apply: "_applyModel",
-        dereference: true
-      }
-    },
-    members: {
-      // apply method
-      _applyModel(value, old) {
-        // Empty implementation
-      }
-    }
-  });
-  qx.ui.form.MModelProperty.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Interface": {
-        "usage": "dynamic",
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Martin Wittemann (martinwittemann)
-  
-  ************************************************************************ */
-
-  /**
-   * Each object which wants to store data representative for the real item
-   * should implement this interface.
-   */
-  qx.Interface.define("qx.ui.form.IModel", {
-    /*
-    *****************************************************************************
-       EVENTS
-    *****************************************************************************
-    */
-
-    events: {
-      /** Fired when the model data changes */
-      changeModel: "qx.event.type.Data"
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      /**
-       * Set the representative data for the item.
-       *
-       * @param value {var} The data.
-       */
-      setModel(value) {},
-      /**
-       * Returns the representative data for the item
-       *
-       * @return {var} The data.
-       */
-      getModel() {},
-      /**
-       * Sets the representative data to null.
-       */
-      resetModel() {}
-    }
-  });
-  qx.ui.form.IModel.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.core.Environment": {
-        "defer": "load",
-        "usage": "dynamic",
-        "require": true
-      },
       "qx.Class": {
         "usage": "dynamic",
         "require": true
       },
-      "qx.ui.layout.Abstract": {
-        "require": true
-      },
-      "qx.lang.Array": {},
-      "qx.ui.layout.Util": {},
-      "qx.ui.menu.Menu": {}
-    },
-    "environment": {
-      "provided": [],
-      "required": {
-        "qx.debug": {
-          "load": true
-        }
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * Layout used for the menu buttons which may contain four elements. A icon,
-   * a label, a shortcut text and an arrow (for a sub menu)
-   *
-   * @internal
-   */
-  qx.Class.define("qx.ui.menu.ButtonLayout", {
-    extend: qx.ui.layout.Abstract,
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      // overridden
-      verifyLayoutProperty: qx.core.Environment.select("qx.debug", {
-        true(item, name, value) {
-          this.assert(name == "column", "The property '" + name + "' is not supported by the MenuButton layout!");
-        },
-        false: null
-      }),
-      // overridden
-      renderLayout(availWidth, availHeight, padding) {
-        var children = this._getLayoutChildren();
-        var child;
-        var column;
-        var columnChildren = [];
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-          column = child.getLayoutProperties().column;
-          columnChildren[column] = child;
-        }
-        var menu = this.__getMenu__P_197_0(children[0]);
-        var columns = menu.getColumnSizes();
-        var spacing = menu.getSpacingX();
-
-        // stretch label column
-        var neededWidth = qx.lang.Array.sum(columns) + spacing * (columns.length - 1);
-        if (neededWidth < availWidth) {
-          columns[1] += availWidth - neededWidth;
-        }
-        var left = padding.left,
-          top = padding.top;
-        var Util = qx.ui.layout.Util;
-        for (var i = 0, l = columns.length; i < l; i++) {
-          child = columnChildren[i];
-          if (child) {
-            var hint = child.getSizeHint();
-            var childTop = top + Util.computeVerticalAlignOffset(child.getAlignY() || "middle", hint.height, availHeight, 0, 0);
-            var offsetLeft = Util.computeHorizontalAlignOffset(child.getAlignX() || "left", hint.width, columns[i], child.getMarginLeft(), child.getMarginRight());
-            child.renderLayout(left + offsetLeft, childTop, hint.width, hint.height);
-          }
-          if (columns[i] > 0) {
-            left += columns[i] + spacing;
-          }
-        }
-      },
-      /**
-       * Get the widget's menu
-       *
-       * @param widget {qx.ui.core.Widget} the widget to get the menu for
-       * @return {qx.ui.menu.Menu} the menu
-       */
-      __getMenu__P_197_0(widget) {
-        while (!(widget instanceof qx.ui.menu.Menu)) {
-          widget = widget.getLayoutParent();
-        }
-        return widget;
-      },
-      // overridden
-      _computeSizeHint() {
-        var children = this._getLayoutChildren();
-        var neededHeight = 0;
-        var neededWidth = 0;
-        for (var i = 0, l = children.length; i < l; i++) {
-          var hint = children[i].getSizeHint();
-          neededWidth += hint.width;
-          neededHeight = Math.max(neededHeight, hint.height);
-        }
-        return {
-          width: neededWidth,
-          height: neededHeight
-        };
-      }
-    }
-  });
-  qx.ui.menu.ButtonLayout.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.menu.AbstractButton": {
+      "qx.ui.basic.Atom": {
         "construct": true,
         "require": true
       },
-      "qx.ui.form.MModelProperty": {
+      "qx.ui.core.MExecutable": {
         "require": true
       },
-      "qx.ui.form.IRadioItem": {
+      "qx.ui.form.IExecutable": {
         "require": true
-      },
-      "qx.ui.form.IBooleanForm": {
-        "require": true
-      },
-      "qx.ui.form.IModel": {
-        "require": true
-      },
-      "qx.ui.form.RadioGroup": {}
+      }
     }
   };
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
@@ -320,14 +38,41 @@
   ************************************************************************ */
 
   /**
-   * Renders a special radio button inside a menu. The button behaves like
-   * a normal {@link qx.ui.form.RadioButton} and shows a radio icon when
-   * checked; normally shows no icon when not checked (depends on the theme).
+   * A Button widget which supports various states and allows it to be used
+   * via the mouse, touch, pen and the keyboard.
+   *
+   * If the user presses the button by clicking on it, or the <code>Enter</code> or
+   * <code>Space</code> keys, the button fires an {@link qx.ui.core.MExecutable#execute} event.
+   *
+   * If the {@link qx.ui.core.MExecutable#command} property is set, the
+   * command is executed as well.
+   *
+   * *Example*
+   *
+   * Here is a little example of how to use the widget.
+   *
+   * <pre class='javascript'>
+   *   var button = new qx.ui.form.Button("Hello World");
+   *
+   *   button.addListener("execute", function(e) {
+   *     alert("Button was clicked");
+   *   }, this);
+   *
+   *   this.getRoot().add(button);
+   * </pre>
+   *
+   * This example creates a button with the label "Hello World" and attaches an
+   * event listener to the {@link #execute} event.
+   *
+   * *External Documentation*
+   *
+   * <a href='http://qooxdoo.org/docs/#desktop/widget/button.md' target='_blank'>
+   * Documentation of this widget in the qooxdoo manual.</a>
    */
-  qx.Class.define("qx.ui.menu.RadioButton", {
-    extend: qx.ui.menu.AbstractButton,
-    include: [qx.ui.form.MModelProperty],
-    implement: [qx.ui.form.IRadioItem, qx.ui.form.IBooleanForm, qx.ui.form.IModel],
+  qx.Class.define("qx.ui.form.Button", {
+    extend: qx.ui.basic.Atom,
+    include: [qx.ui.core.MExecutable],
+    implement: [qx.ui.form.IExecutable],
     /*
     *****************************************************************************
        CONSTRUCTOR
@@ -335,26 +80,46 @@
     */
 
     /**
-     * @param label {String} Initial label
-     * @param menu {qx.ui.menu.Menu} Initial sub menu
+     * @param label {String} label of the atom
+     * @param icon {String?null} Icon URL of the atom
+     * @param command {qx.ui.command.Command?null} Command instance to connect with
      */
-    construct(label, menu) {
-      qx.ui.menu.AbstractButton.constructor.call(this);
+    construct(label, icon, command) {
+      qx.ui.basic.Atom.constructor.call(this, label, icon);
+      if (command != null) {
+        this.setCommand(command);
+      }
 
       // ARIA attrs
-      // Important: (Grouped) radio btns should be children of a div with role 'radiogroup'
-      const contentEl = this.getContentElement();
-      contentEl.setAttribute("role", "radio");
-      contentEl.setAttribute("aria-checked", false);
+      this.getContentElement().setAttribute("role", "button");
 
-      // Initialize with incoming arguments
-      if (label != null) {
-        this.setLabel(label);
-      }
-      if (menu != null) {
-        this.setMenu(menu);
-      }
-      this.addListener("execute", this._onExecute, this);
+      // Add listeners
+      this.addListener("pointerover", this._onPointerOver);
+      this.addListener("pointerout", this._onPointerOut);
+      this.addListener("pointerdown", this._onPointerDown);
+      this.addListener("pointerup", this._onPointerUp);
+
+      // it seems that touching a button (at least on ios and android)
+      // does not immediately focus it before triggering the tap event
+      // this causes problem with change events for any input field that
+      // previously held focus, as their change event will arrive AFTER
+      // the execute event on the button ... 
+      // we have to call focus on the dom element itself, to make
+      // sure we are in time. Otherwhise the virtual dom in qooxdoo will
+      // delay the effect and the fix will only work when tapping 'slowly' ... 
+      this.addListenerOnce('appear', () => {
+        let el = this.getContentElement().getDomElement();
+        this.addListener('touchstart', () => {
+          el.focus();
+        });
+      });
+      this.addListener("tap", this._onTap);
+      this.addListener("keydown", this._onKeyDown);
+      this.addListener("keyup", this._onKeyUp);
+      // Stop events
+      this.addListener("dblclick", function (e) {
+        e.stopPropagation();
+      });
     },
     /*
     *****************************************************************************
@@ -366,21 +131,12 @@
       // overridden
       appearance: {
         refine: true,
-        init: "menu-radiobutton"
+        init: "button"
       },
-      /** The value of the widget. True, if the widget is checked. */
-      value: {
-        check: "Boolean",
-        nullable: true,
-        event: "changeValue",
-        apply: "_applyValue",
-        init: false
-      },
-      /** The assigned qx.ui.form.RadioGroup which handles the switching between registered buttons */
-      group: {
-        check: "qx.ui.form.RadioGroup",
-        nullable: true,
-        apply: "_applyGroup"
+      // overridden
+      focusable: {
+        refine: true,
+        init: true
       }
     },
     /*
@@ -389,47 +145,449 @@
     *****************************************************************************
     */
     /* eslint-disable @qooxdoo/qx/no-refs-in-members */
-
     members: {
-      // overridden (from MExecutable to keep the icon out of the binding)
+      // overridden
       /**
-       * @lint ignoreReferenceField(_bindableProperties)
+       * @lint ignoreReferenceField(_forwardStates)
        */
-      _bindableProperties: ["enabled", "label", "toolTipText", "value", "menu"],
-      // property apply
-      _applyValue(value, old) {
-        value ? this.addState("checked") : this.removeState("checked");
+      _forwardStates: {
+        focused: true,
+        hovered: true,
+        pressed: true,
+        disabled: true
+      },
+      /*
+      ---------------------------------------------------------------------------
+        USER API
+      ---------------------------------------------------------------------------
+      */
 
-        // ARIA attrs
-        this.getContentElement().setAttribute("aria-checked", Boolean(value));
-      },
-      // property apply
-      _applyGroup(value, old) {
-        if (old) {
-          old.remove(this);
+      /**
+       * Manually press the button
+       */
+      press() {
+        if (this.hasState("abandoned")) {
+          return;
         }
-        if (value) {
-          value.add(this);
+        this.addState("pressed");
+      },
+      /**
+       * Manually release the button
+       */
+      release() {
+        if (this.hasState("pressed")) {
+          this.removeState("pressed");
         }
       },
       /**
-       * Handler for the execute event.
-       *
-       * @param e {qx.event.type.Event} The execute event.
+       * Completely reset the button (remove all states)
        */
-      _onExecute(e) {
-        var grp = this.getGroup();
-        if (grp && grp.getAllowEmptySelection()) {
-          this.toggleValue();
-        } else {
-          this.setValue(true);
+      reset() {
+        this.removeState("pressed");
+        this.removeState("abandoned");
+        this.removeState("hovered");
+      },
+      /*
+      ---------------------------------------------------------------------------
+        EVENT LISTENERS
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * Listener method for "pointerover" event
+       * <ul>
+       * <li>Adds state "hovered"</li>
+       * <li>Removes "abandoned" and adds "pressed" state (if "abandoned" state is set)</li>
+       * </ul>
+       *
+       * @param e {qx.event.type.Pointer} Mouse event
+       */
+      _onPointerOver(e) {
+        if (!this.isEnabled() || e.getTarget() !== this) {
+          return;
+        }
+        if (this.hasState("abandoned")) {
+          this.removeState("abandoned");
+          this.addState("pressed");
+        }
+        this.addState("hovered");
+      },
+      /**
+       * Listener method for "pointerout" event
+       * <ul>
+       * <li>Removes "hovered" state</li>
+       * <li>Adds "abandoned" and removes "pressed" state (if "pressed" state is set)</li>
+       * </ul>
+       *
+       * @param e {qx.event.type.Pointer} Mouse event
+       */
+      _onPointerOut(e) {
+        if (!this.isEnabled() || e.getTarget() !== this) {
+          return;
+        }
+        this.removeState("hovered");
+        if (this.hasState("pressed")) {
+          this.removeState("pressed");
+          this.addState("abandoned");
+        }
+      },
+      /**
+       * Listener method for "pointerdown" event
+       * <ul>
+       * <li>Removes "abandoned" state</li>
+       * <li>Adds "pressed" state</li>
+       * </ul>
+       *
+       * @param e {qx.event.type.Pointer} Mouse event
+       */
+      _onPointerDown(e) {
+        if (!e.isLeftPressed()) {
+          return;
+        }
+        e.stopPropagation();
+
+        // Activate capturing if the button get a pointerout while
+        // the button is pressed.
+        this.capture();
+        this.removeState("abandoned");
+        this.addState("pressed");
+      },
+      /**
+       * Listener method for "pointerup" event
+       * <ul>
+       * <li>Removes "pressed" state (if set)</li>
+       * <li>Removes "abandoned" state (if set)</li>
+       * <li>Adds "hovered" state (if "abandoned" state is not set)</li>
+       *</ul>
+       *
+       * @param e {qx.event.type.Pointer} Mouse event
+       */
+      _onPointerUp(e) {
+        this.releaseCapture();
+
+        // We must remove the states before executing the command
+        // because in cases were the window lost the focus while
+        // executing we get the capture phase back (mouseout).
+        var hasPressed = this.hasState("pressed");
+        var hasAbandoned = this.hasState("abandoned");
+        if (hasPressed) {
+          this.removeState("pressed");
+        }
+        if (hasAbandoned) {
+          this.removeState("abandoned");
+        }
+        e.stopPropagation();
+      },
+      /**
+       * Listener method for "tap" event which stops the propagation.
+       *
+       * @param e {qx.event.type.Pointer} Pointer event
+       */
+      _onTap(e) {
+        // "execute" is fired here so that the button can be dragged
+        // without executing it (e.g. in a TabBar with overflow)
+        this.execute();
+        e.stopPropagation();
+      },
+      /**
+       * Listener method for "keydown" event.<br/>
+       * Removes "abandoned" and adds "pressed" state
+       * for the keys "Enter" or "Space"
+       *
+       * @param e {Event} Key event
+       */
+      _onKeyDown(e) {
+        switch (e.getKeyIdentifier()) {
+          case "Enter":
+          case "Space":
+            this.removeState("abandoned");
+            this.addState("pressed");
+            e.stopPropagation();
+        }
+      },
+      /**
+       * Listener method for "keyup" event.<br/>
+       * Removes "abandoned" and "pressed" state (if "pressed" state is set)
+       * for the keys "Enter" or "Space"
+       *
+       * @param e {Event} Key event
+       */
+      _onKeyUp(e) {
+        switch (e.getKeyIdentifier()) {
+          case "Enter":
+          case "Space":
+            if (this.hasState("pressed")) {
+              this.removeState("abandoned");
+              this.removeState("pressed");
+              this.execute();
+              e.stopPropagation();
+            }
         }
       }
     }
   });
-  qx.ui.menu.RadioButton.$$dbClassInfo = $$dbClassInfo;
+  qx.ui.form.Button.$$dbClassInfo = $$dbClassInfo;
 })();
-//# sourceMappingURL=package-19.js.map?dt=1769807054240
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.ui.form.Button": {
+        "construct": true,
+        "require": true
+      },
+      "qx.ui.menu.Menu": {},
+      "qx.ui.core.FocusHandler": {},
+      "qx.ui.menu.Manager": {}
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+       * Andreas Ecker (ecker)
+  
+  ************************************************************************ */
+
+  /**
+   * A button which opens the connected menu when tapping on it.
+   */
+  qx.Class.define("qx.ui.form.MenuButton", {
+    extend: qx.ui.form.Button,
+    /*
+    *****************************************************************************
+       CONSTRUCTOR
+    *****************************************************************************
+    */
+
+    /**
+     * @param label {String} Initial label
+     * @param icon {String?null} Initial icon
+     * @param menu {qx.ui.menu.Menu} Connect to menu instance
+     */
+    construct(label, icon, menu) {
+      qx.ui.form.Button.constructor.call(this, label, icon);
+
+      // Initialize properties
+      if (menu != null) {
+        this.setMenu(menu);
+      }
+
+      // ARIA attrs
+      this.getContentElement().setAttribute("role", "button");
+    },
+    /*
+    *****************************************************************************
+       PROPERTIES
+    *****************************************************************************
+    */
+
+    properties: {
+      /** The menu instance to show when tapping on the button */
+      menu: {
+        check: "qx.ui.menu.Menu",
+        nullable: true,
+        apply: "_applyMenu",
+        event: "changeMenu"
+      },
+      // overridden
+      appearance: {
+        refine: true,
+        init: "menubutton"
+      }
+    },
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      /*
+      ---------------------------------------------------------------------------
+        PROPERTY APPLY ROUTINES
+      ---------------------------------------------------------------------------
+      */
+      // overridden
+      _applyVisibility(value, old) {
+        qx.ui.form.MenuButton.superclass.prototype._applyVisibility.call(this, value, old);
+
+        // hide the menu too
+        var menu = this.getMenu();
+        if (value != "visible" && menu) {
+          menu.hide();
+        }
+      },
+      // property apply
+      _applyMenu(value, old) {
+        if (old) {
+          old.removeListener("changeVisibility", this._onMenuChange, this);
+          old.resetOpener();
+        }
+        if (value) {
+          value.addListener("changeVisibility", this._onMenuChange, this);
+          value.setOpener(this);
+          value.removeState("submenu");
+          value.removeState("contextmenu");
+        }
+
+        // ARIA attrs
+        const contentEl = this.getContentElement();
+        if (!contentEl) {
+          return;
+        }
+        if (value) {
+          contentEl.setAttribute("aria-haspopup", "menu");
+          contentEl.setAttribute("aria-expanded", value.isVisible());
+          contentEl.setAttribute("aria-controls", value.getContentElement().getAttribute("id"));
+        } else {
+          contentEl.removeAttribute("aria-haspopup");
+          contentEl.removeAttribute("aria-expanded");
+          contentEl.removeAttribute("aria-controls");
+        }
+      },
+      /*
+      ---------------------------------------------------------------------------
+        HELPER METHODS
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * Positions and shows the attached menu widget.
+       *
+       * @param selectFirst {Boolean?false} Whether the first menu button should be selected
+       */
+      open(selectFirst) {
+        var menu = this.getMenu();
+        if (menu) {
+          // Focus this button when the menu opens
+          if (this.isFocusable() && !qx.ui.core.FocusHandler.getInstance().isFocused(this)) {
+            this.focus();
+          }
+          // Hide all menus first
+          qx.ui.menu.Manager.getInstance().hideAll();
+
+          // Open the attached menu
+          menu.setOpener(this);
+          menu.open();
+
+          // Select first item
+          if (selectFirst) {
+            var first = menu.getSelectables()[0];
+            if (first) {
+              menu.setSelectedButton(first);
+            }
+          }
+        }
+      },
+      /*
+      ---------------------------------------------------------------------------
+        EVENT LISTENERS
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * Listener for visibility property changes of the attached menu
+       *
+       * @param e {qx.event.type.Data} Property change event
+       */
+      _onMenuChange(e) {
+        var menu = this.getMenu();
+        const menuVisible = menu.isVisible();
+        if (menuVisible) {
+          this.addState("pressed");
+        } else {
+          this.removeState("pressed");
+        }
+
+        // ARIA attrs
+        this.getContentElement().setAttribute("aria-expanded", menuVisible);
+      },
+      // overridden
+      _onPointerDown(e) {
+        // call the base function to get into the capture phase [BUG #4340]
+        qx.ui.form.MenuButton.superclass.prototype._onPointerDown.call(this, e);
+
+        // only open on left clicks [BUG #5125]
+        if (e.getButton() != "left") {
+          return;
+        }
+        var menu = this.getMenu();
+        if (menu) {
+          // Toggle sub menu visibility
+          if (!menu.isVisible()) {
+            this.open();
+          } else {
+            menu.exclude();
+          }
+
+          // Event is processed, stop it for others
+          e.stopPropagation();
+        }
+      },
+      // overridden
+      _onPointerUp(e) {
+        // call base for firing the execute event
+        qx.ui.form.MenuButton.superclass.prototype._onPointerUp.call(this, e);
+
+        // Just stop propagation to stop menu manager
+        // from getting the event
+        e.stopPropagation();
+      },
+      // overridden
+      _onPointerOver(e) {
+        // Add hovered state
+        this.addState("hovered");
+      },
+      // overridden
+      _onPointerOut(e) {
+        // Just remove the hover state
+        this.removeState("hovered");
+      },
+      // overridden
+      _onKeyDown(e) {
+        switch (e.getKeyIdentifier()) {
+          case "Space":
+          case "Enter":
+            this.removeState("abandoned");
+            this.addState("pressed");
+            var menu = this.getMenu();
+            if (menu) {
+              // Toggle sub menu visibility
+              if (!menu.isVisible()) {
+                this.open();
+              } else {
+                menu.exclude();
+              }
+            }
+            e.stopPropagation();
+        }
+      },
+      // overridden
+      _onKeyUp(e) {
+        // no action required here
+      }
+    }
+  });
+  qx.ui.form.MenuButton.$$dbClassInfo = $$dbClassInfo;
+})();
+//# sourceMappingURL=package-19.js.map?dt=1791845587551
 qx.$$packageData['19'] = {
   "locales": {},
   "resources": {},

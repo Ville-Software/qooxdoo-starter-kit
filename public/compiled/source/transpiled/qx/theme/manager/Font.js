@@ -118,7 +118,7 @@
         // the theme and are not updating the cache
         var theme = this.getTheme();
         if (theme !== null && theme.fonts[value]) {
-          let createdFonts = this.__initialiseFonts__P_117_0(theme.fonts);
+          let createdFonts = this.__initialiseFonts__P_141_0(theme.fonts);
           let font = createdFonts[value] || null;
           if (font) {
             cache[value] = font;
@@ -127,11 +127,11 @@
         }
         {
           if (theme) {
-            if (!this.__warnedMissingFonts__P_117_1) {
-              this.__warnedMissingFonts__P_117_1 = {};
+            if (!this.__warnedMissingFonts__P_141_1) {
+              this.__warnedMissingFonts__P_141_1 = {};
             }
-            if (!this.__warnedMissingFonts__P_117_1[value]) {
-              this.__warnedMissingFonts__P_117_1[value] = true;
+            if (!this.__warnedMissingFonts__P_141_1[value]) {
+              this.__warnedMissingFonts__P_141_1[value] = true;
               this.debug(`Cannot resolve a font named ${value} - available fonts are ${Object.keys(theme.fonts).join(", ")}`);
             }
           }
@@ -156,7 +156,7 @@
         // the theme and are not updating the cache
         var theme = this.getTheme();
         if (theme !== null && value && theme.fonts[value]) {
-          var fontClass = this.__getFontClass__P_117_2(theme.fonts[value]);
+          var fontClass = this.__getFontClass__P_141_2(theme.fonts[value]);
           var font = new fontClass();
 
           // Inject information about custom charcter set tests before we apply the
@@ -175,7 +175,7 @@
        * @param fonts {Map} all fonts of the theme
        * @param fontName {String} font name to include
        */
-      __resolveInclude__P_117_3(fonts, fontName) {
+      __resolveInclude__P_141_3(fonts, fontName) {
         if (fonts[fontName].include) {
           // get font infos out of the font theme
           var fontToInclude = fonts[fonts[fontName].include];
@@ -184,7 +184,7 @@
           fonts[fontName].include = null;
           delete fonts[fontName].include;
           fonts[fontName] = qx.lang.Object.mergeWith(fonts[fontName], fontToInclude, false);
-          this.__resolveInclude__P_117_3(fonts, fontName);
+          this.__resolveInclude__P_141_3(fonts, fontName);
         }
       },
       /**
@@ -193,13 +193,13 @@
        * @param {Map<String,Object>} fontDefs indexed by font ID
        * @return {Map<String,qx.bom.Font>} created fonts
        */
-      __initialiseFonts__P_117_0(fontDefs) {
+      __initialiseFonts__P_141_0(fontDefs) {
         let webFontDefs = [];
         let createdFonts = {};
         for (var fontId in fontDefs) {
           let fontDef = fontDefs[fontId];
           if (fontDef.include && fontDefs[fontDef.include]) {
-            this.__resolveInclude__P_117_3(fontDefs, fontId);
+            this.__resolveInclude__P_141_3(fontDefs, fontId);
           }
           if (fontDef.fontName) {
             let preset = this._manifestFonts[fontDef.fontName];
@@ -247,7 +247,7 @@
           if (fontDef.css || fontDef.fontFaces) {
             webFontDefs.push(fontDef);
           }
-          var fontClass = this.__getFontClass__P_117_2(fontDef);
+          var fontClass = this.__getFontClass__P_141_2(fontDef);
           var font = new fontClass();
 
           // Inject information about custom charcter set tests before we apply the
@@ -294,7 +294,7 @@
         }
         if (value) {
           var fonts = this._manifestFonts ? Object.assign(value.fonts, this._manifestFonts) : value.fonts;
-          createdFonts = this.__initialiseFonts__P_117_0(fonts);
+          createdFonts = this.__initialiseFonts__P_141_0(fonts);
         }
         this._setDynamic(createdFonts);
       },
@@ -304,7 +304,7 @@
        * @param config {Map} The font's configuration map
        * @return {Class}
        */
-      __getFontClass__P_117_2(config) {
+      __getFontClass__P_141_2(config) {
         if (config.fontFaces || config.css) {
           return qx.bom.webfonts.WebFont;
         }
@@ -332,4 +332,4 @@
   qx.theme.manager.Font.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Font.js.map?dt=1769806690418
+//# sourceMappingURL=Font.js.map?dt=1791841652009

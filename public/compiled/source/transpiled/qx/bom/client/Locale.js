@@ -63,7 +63,7 @@
        * @internal
        */
       getLocale() {
-        var locale = qx.bom.client.Locale.__getNavigatorLocale__P_169_0();
+        var locale = qx.bom.client.Locale.__getNavigatorLocale__P_124_0();
         var index = locale.indexOf("-");
         if (index != -1) {
           locale = locale.substr(0, index);
@@ -78,7 +78,7 @@
        * @internal
        */
       getVariant() {
-        var locale = qx.bom.client.Locale.__getNavigatorLocale__P_169_0();
+        var locale = qx.bom.client.Locale.__getNavigatorLocale__P_124_0();
         var variant = "";
         var index = locale.indexOf("-");
         if (index != -1) {
@@ -91,7 +91,7 @@
        *
        * @return {String} The language set by the navigator.
        */
-      __getNavigatorLocale__P_169_0() {
+      __getNavigatorLocale__P_124_0() {
         var locale = navigator.userLanguage || navigator.language || "";
 
         // Android Bug: Android does not return the system language from the
@@ -121,4 +121,4 @@
   qx.bom.client.Locale.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Locale.js.map?dt=1769806693018
+//# sourceMappingURL=Locale.js.map?dt=1791841651748

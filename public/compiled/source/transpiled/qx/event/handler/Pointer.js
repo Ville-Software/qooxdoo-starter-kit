@@ -120,15 +120,15 @@
      */
     construct(manager) {
       // Define shorthands
-      this.__manager__P_126_0 = manager;
-      this.__window__P_126_1 = manager.getWindow();
-      this.__root__P_126_2 = this.__window__P_126_1.document;
-      qx.event.handler.PointerCore.apply(this, [this.__root__P_126_2]);
+      this.__manager__P_127_0 = manager;
+      this.__window__P_127_1 = manager.getWindow();
+      this.__root__P_127_2 = this.__window__P_127_1.document;
+      qx.event.handler.PointerCore.apply(this, [this.__root__P_127_2]);
     },
     members: {
-      __manager__P_126_0: null,
-      __window__P_126_1: null,
-      __root__P_126_2: null,
+      __manager__P_127_0: null,
+      __window__P_127_1: null,
+      __root__P_127_2: null,
       // interface implementation
       canHandleEvent(target, type) {},
       // interface implementation
@@ -186,12 +186,12 @@
           });
           qx.event.Utils.then(tracker, function () {
             if ((domEvent.getPointerType() !== "mouse" || domEvent.button <= qx.event.handler.PointerCore.LEFT_BUTTON) && (type == "pointerdown" || type == "pointerup" || type == "pointermove" || type == "pointercancel")) {
-              return qx.event.Registration.fireEvent(self.__root__P_126_2, qx.event.handler.PointerCore.POINTER_TO_GESTURE_MAPPING[type], qx.event.type.Pointer, [domEvent, target, null, false, false]);
+              return qx.event.Registration.fireEvent(self.__root__P_127_2, qx.event.handler.PointerCore.POINTER_TO_GESTURE_MAPPING[type], qx.event.type.Pointer, [domEvent, target, null, false, false]);
             }
           });
           qx.event.Utils.then(tracker, function () {
             // Fire user action event
-            return qx.event.Registration.fireEvent(self.__window__P_126_1, "useraction", qx.event.type.Data, [type]);
+            return qx.event.Registration.fireEvent(self.__window__P_127_1, "useraction", qx.event.type.Data, [type]);
           });
           return tracker.promise;
         }
@@ -208,8 +208,8 @@
        * Dispose this object
        */
       dispose() {
-        this.__callBase__P_126_3("dispose");
-        this.__manager__P_126_0 = this.__window__P_126_1 = this.__root__P_126_2 = null;
+        this.__callBase__P_127_3("dispose");
+        this.__manager__P_127_0 = this.__window__P_127_1 = this.__root__P_127_2 = null;
       },
       /**
        * Call overridden method.
@@ -217,7 +217,7 @@
        * @param method {String} Name of the overridden method.
        * @param args {Array} Arguments.
        */
-      __callBase__P_126_3(method, args) {
+      __callBase__P_127_3(method, args) {
         qx.event.handler.PointerCore.prototype[method].apply(this, args || []);
       }
     },
@@ -229,4 +229,4 @@
   qx.event.handler.Pointer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Pointer.js.map?dt=1769806690811
+//# sourceMappingURL=Pointer.js.map?dt=1791841651832

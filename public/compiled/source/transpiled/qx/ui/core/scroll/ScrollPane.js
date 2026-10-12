@@ -113,7 +113,7 @@
     */
 
     members: {
-      __frame__P_222_0: null,
+      __frame__P_146_0: null,
       /*
       ---------------------------------------------------------------------------
         CONTENT MANAGEMENT
@@ -322,17 +322,17 @@
         this.stopScrollAnimation();
         if (duration) {
           var from = this.getScrollX();
-          this.__frame__P_222_0 = new qx.bom.AnimationFrame();
-          this.__frame__P_222_0.on("end", function () {
+          this.__frame__P_146_0 = new qx.bom.AnimationFrame();
+          this.__frame__P_146_0.on("end", function () {
             this.setScrollX(value);
-            this.__frame__P_222_0 = null;
+            this.__frame__P_146_0 = null;
             this.fireEvent("scrollAnimationEnd");
           }, this);
-          this.__frame__P_222_0.on("frame", function (timePassed) {
+          this.__frame__P_146_0.on("frame", function (timePassed) {
             var newX = parseInt(timePassed / duration * (value - from) + from);
             this.setScrollX(newX);
           }, this);
-          this.__frame__P_222_0.startSequence(duration);
+          this.__frame__P_146_0.startSequence(duration);
         } else {
           this.setScrollX(value);
         }
@@ -353,17 +353,17 @@
         this.stopScrollAnimation();
         if (duration) {
           var from = this.getScrollY();
-          this.__frame__P_222_0 = new qx.bom.AnimationFrame();
-          this.__frame__P_222_0.on("end", function () {
+          this.__frame__P_146_0 = new qx.bom.AnimationFrame();
+          this.__frame__P_146_0.on("end", function () {
             this.setScrollY(value);
-            this.__frame__P_222_0 = null;
+            this.__frame__P_146_0 = null;
             this.fireEvent("scrollAnimationEnd");
           }, this);
-          this.__frame__P_222_0.on("frame", function (timePassed) {
+          this.__frame__P_146_0.on("frame", function (timePassed) {
             var newY = parseInt(timePassed / duration * (value - from) + from);
             this.setScrollY(newY);
           }, this);
-          this.__frame__P_222_0.startSequence(duration);
+          this.__frame__P_146_0.startSequence(duration);
         } else {
           this.setScrollY(value);
         }
@@ -390,9 +390,9 @@
        * If an scroll animation is running, it will be stopped with that method.
        */
       stopScrollAnimation() {
-        if (this.__frame__P_222_0) {
-          this.__frame__P_222_0.cancelSequence();
-          this.__frame__P_222_0 = null;
+        if (this.__frame__P_146_0) {
+          this.__frame__P_146_0.cancelSequence();
+          this.__frame__P_146_0 = null;
         }
       },
       /*
@@ -432,4 +432,4 @@
   qx.ui.core.scroll.ScrollPane.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=ScrollPane.js.map?dt=1769806695310
+//# sourceMappingURL=ScrollPane.js.map?dt=1791841652090

@@ -411,7 +411,7 @@
         construct.self = clazz.constructor = proto.constructor = clazz;
       },
       /** Private list of classes which have a defer method that needs to be executed */
-      __pendingDefers__P_32_0: [],
+      __pendingDefers__P_31_0: [],
       /**
        * Adds a callback for a class so that it's defer method can be called, either after all classes
        * are loaded or when absolutely necessary because of load-time requirements of other classes.
@@ -421,7 +421,7 @@
        */
       addPendingDefer(clazz, cb) {
         if (qx.$$loader && qx.$$loader.delayDefer) {
-          this.__pendingDefers__P_32_0.push(clazz);
+          this.__pendingDefers__P_31_0.push(clazz);
           clazz.$$pendingDefer = cb;
         } else {
           cb.call(clazz);
@@ -494,8 +494,8 @@
           return clazz;
         };
         if (!dbClassInfo) {
-          var pendingDefers = this.__pendingDefers__P_32_0;
-          this.__pendingDefers__P_32_0 = [];
+          var pendingDefers = this.__pendingDefers__P_31_0;
+          this.__pendingDefers__P_31_0 = [];
           pendingDefers.forEach(execute);
           return;
         }
@@ -555,7 +555,7 @@
        * @internal
        * @type {String[]}
        */
-      __shadowedKeys__P_32_1: ["isPrototypeOf", "hasOwnProperty", "toLocaleString", "toString", "valueOf", "propertyIsEnumerable", "constructor"],
+      __shadowedKeys__P_31_1: ["isPrototypeOf", "hasOwnProperty", "toLocaleString", "toString", "valueOf", "propertyIsEnumerable", "constructor"],
       /**
        * Get the keys of a map as array as returned by a "for ... in" statement.
        *
@@ -581,7 +581,7 @@
           // IE does not return "shadowed" keys even if they are defined directly
           // in the object. This is incompatible with the ECMA standard!!
           // This is why this checks are needed.
-          var shadowedKeys = qx.Bootstrap.__shadowedKeys__P_32_1;
+          var shadowedKeys = qx.Bootstrap.__shadowedKeys__P_31_1;
           for (var i = 0, a = shadowedKeys, l = a.length; i < l; i++) {
             if (hasOwnProperty.call(map, a[i])) {
               arr.push(a[i]);
@@ -614,7 +614,7 @@
        * @internal
        * @type {Map}
        */
-      __classToTypeMap__P_32_2: {
+      __classToTypeMap__P_31_2: {
         "[object String]": "String",
         "[object Array]": "Array",
         "[object Object]": "Object",
@@ -714,7 +714,7 @@
           return "Null";
         }
         var classString = Object.prototype.toString.call(value);
-        return qx.Bootstrap.__classToTypeMap__P_32_2[classString] || classString.slice(8, -1);
+        return qx.Bootstrap.__classToTypeMap__P_31_2[classString] || classString.slice(8, -1);
       },
       /**
        * Whether the value is a string.
@@ -745,13 +745,10 @@
         return value !== null && (value instanceof Array || value && qx.data && qx.data.IListData && qx.util.OOUtil.hasInterface(value.constructor, qx.data.IListData) || qx.Bootstrap.getClass(value) === "Array" || !!value && !!value.$$isArray);
       },
       /**
-       * Whether the value is an POJO (ie {foo: 1})
-       * or an object which is created from a ES6-style class or prototypical-inheritance-based class;
-       * If you need to determine whether something is a POJO and not created from a class, use isPojo instead
+       * Whether the value is an object. Note that built-in types like Window are
+       * not reported to be objects.
        *
-       * Note that built-in types like Window are not deemed to be objects.
-       *
-       * @param {*} value value to check.
+       * @param value {var} Value to check.
        * @return {Boolean} Whether the value is an object.
        */
       isObject(value) {
@@ -888,13 +885,13 @@
        * */
       inShutDown: false,
       /** @type {Map} Internal data structure to store objects */
-      __registry__P_46_0: {},
+      __registry__P_56_0: {},
       /** @type {Integer} Next new hash code. */
-      __nextHash__P_46_1: 0,
+      __nextHash__P_56_1: 0,
       /** @type {String} Post id for hash code creation. */
-      __postId__P_46_2: "",
+      __postId__P_56_2: "",
       /** @type {Map} Object hashes to stack traces (for dispose profiling only) */
-      __stackTraces__P_46_3: {},
+      __stackTraces__P_56_3: {},
       /**
        * Registers an object into the database. This adds a hashcode
        * to the object (if not already done before) and stores it under
@@ -908,7 +905,7 @@
        * @param obj {Object} Any object with a dispose() method
        */
       register(obj) {
-        var registry = this.__registry__P_46_0;
+        var registry = this.__registry__P_56_0;
         if (!registry) {
           return;
         }
@@ -930,7 +927,7 @@
         if (hash == null) {
           return;
         }
-        var registry = this.__registry__P_46_0;
+        var registry = this.__registry__P_56_0;
         if (registry && registry[hash]) {
           delete registry[hash];
         }
@@ -967,7 +964,7 @@
        * @return {String}
        */
       createHashCode() {
-        var hash = String(this.__nextHash__P_46_1++ + this.__postId__P_46_2);
+        var hash = String(this.__nextHash__P_56_1++ + this.__postId__P_56_2);
         return hash;
       },
       /**
@@ -1006,7 +1003,7 @@
        * @return {qx.core.Object} The corresponding object or <code>null</code>.
        */
       fromHashCode(hash, suppressWarnings) {
-        var obj = this.__registry__P_46_0[hash] || null;
+        var obj = this.__registry__P_56_0[hash] || null;
         if (!obj && !suppressWarnings) {
           qx.log.Logger.warn(this, "Object with hash code " + hash + " does not exist (since Qooxdoo 6.0 fromHashCode requires that you explicitly register objects with qx.core.ObjectRegistry.register)");
         }
@@ -1020,7 +1017,7 @@
        * @return {qx.core.Object} The corresponding object or <code>null</code>.
        */
       hasHashCode(hash) {
-        return !!this.__registry__P_46_0[hash];
+        return !!this.__registry__P_56_0[hash];
       },
       /**
        * Disposing all registered object and cleaning up registry. This is
@@ -1032,7 +1029,7 @@
        */
       shutdown() {
         this.inShutDown = true;
-        var registry = this.__registry__P_46_0;
+        var registry = this.__registry__P_56_0;
         var hashes = [];
         for (var hash in registry) {
           hashes.push(hash);
@@ -1065,7 +1062,7 @@
           break;
         }
         qx.Bootstrap.debug(this, "Disposed " + l + " objects");
-        delete this.__registry__P_46_0;
+        delete this.__registry__P_56_0;
       },
       /**
        * Returns the object registry.
@@ -1073,7 +1070,7 @@
        * @return {Object} The registry
        */
       getRegistry() {
-        return this.__registry__P_46_0;
+        return this.__registry__P_56_0;
       },
       /**
        * Returns the next hash code that will be used.
@@ -1082,7 +1079,7 @@
        * @internal
        */
       getNextHash() {
-        return this.__nextHash__P_46_1;
+        return this.__nextHash__P_56_1;
       },
       /**
        * Returns the postfix that identifies the current iframe
@@ -1091,7 +1088,7 @@
        * @internal
        */
       getPostId() {
-        return this.__postId__P_46_2;
+        return this.__postId__P_56_2;
       },
       /**
        * Returns the map of stack traces recorded when objects are registered
@@ -1100,7 +1097,7 @@
        * @internal
        */
       getStackTraces() {
-        return this.__stackTraces__P_46_3;
+        return this.__stackTraces__P_56_3;
       }
     },
     defer(statics) {
@@ -1108,12 +1105,12 @@
         var frames = window.top.frames;
         for (var i = 0; i < frames.length; i++) {
           if (frames[i] === window) {
-            statics.__postId__P_46_2 = "-" + (i + 1);
+            statics.__postId__P_56_2 = "-" + (i + 1);
             return;
           }
         }
       }
-      statics.__postId__P_46_2 = "-0";
+      statics.__postId__P_56_2 = "-0";
     }
   });
   qx.core.ObjectRegistry.$$dbClassInfo = $$dbClassInfo;
@@ -1997,7 +1994,7 @@
       /** Map containing the asynchronous check functions. */
       _asyncChecks: {},
       /** Internal cache for all checks. */
-      __cache__P_31_0: {},
+      __cache__P_30_0: {},
       /**
        * Internal map for environment keys to check methods.
        * Gets populated dynamically at runtime.
@@ -2019,7 +2016,6 @@
         "qx.dynlocale": true,
         "qx.dyntheme": true,
         "qx.blankpage": "qx/static/blank.html",
-        "qx.data.marshal.Json.breakOnNonPojos": false,
         "qx.debug.databinding": false,
         "qx.debug.dispose": false,
         "qx.debug.startupTimings": false,
@@ -2061,8 +2057,8 @@
        */
       get(key) {
         // check the cache
-        if (this.__cache__P_31_0[key] != undefined) {
-          return this.__cache__P_31_0[key];
+        if (this.__cache__P_30_0[key] != undefined) {
+          return this.__cache__P_30_0[key];
         }
 
         // search for a matching check
@@ -2070,7 +2066,7 @@
         if (check) {
           // execute the check and write the result in the cache
           var value = check();
-          this.__cache__P_31_0[key] = value;
+          this.__cache__P_30_0[key] = value;
           return value;
         }
 
@@ -2080,7 +2076,7 @@
           var clazz = classAndMethod[0];
           var method = classAndMethod[1];
           var value = clazz[method](); // call the check method
-          this.__cache__P_31_0[key] = value;
+          this.__cache__P_30_0[key] = value;
           return value;
         }
 
@@ -2127,17 +2123,17 @@
       getAsync(key, callback, self) {
         // check the cache
         var env = this;
-        if (this.__cache__P_31_0[key] != undefined) {
+        if (this.__cache__P_30_0[key] != undefined) {
           // force async behavior
           window.setTimeout(function () {
-            callback.call(self, env.__cache__P_31_0[key]);
+            callback.call(self, env.__cache__P_30_0[key]);
           }, 0);
           return;
         }
         var check = this._asyncChecks[key];
         if (check) {
           check(function (result) {
-            env.__cache__P_31_0[key] = result;
+            env.__cache__P_30_0[key] = result;
             callback.call(self, result);
           });
           return;
@@ -2150,7 +2146,7 @@
           var method = classAndMethod[1];
           clazz[method](function (result) {
             // call the check method
-            env.__cache__P_31_0[key] = result;
+            env.__cache__P_30_0[key] = result;
             callback.call(self, result);
           });
           return;
@@ -2172,7 +2168,7 @@
        *   check of the key.
        */
       select(key, values) {
-        return this.__pickFromValues__P_31_1(this.get(key), values);
+        return this.__pickFromValues__P_30_1(this.get(key), values);
       },
       /**
        * Selects the proper function dependent on the asynchronous check.
@@ -2187,7 +2183,7 @@
        */
       selectAsync(key, values, self) {
         this.getAsync(key, function (result) {
-          var value = this.__pickFromValues__P_31_1(key, values);
+          var value = this.__pickFromValues__P_30_1(key, values);
           value.call(self, result);
         }, this);
       },
@@ -2201,7 +2197,7 @@
        * @param values {Map} A map containing some keys.
        * @return {var} The value stored as values[key] usually.
        */
-      __pickFromValues__P_31_1(key, values) {
+      __pickFromValues__P_30_1(key, values) {
         var value = values[key];
         if (values.hasOwnProperty(key)) {
           return value;
@@ -2248,7 +2244,7 @@
        * @param key {String} The key of the check.
        */
       invalidateCacheKey(key) {
-        delete this.__cache__P_31_0[key];
+        delete this.__cache__P_30_0[key];
       },
       /**
        * Add a check to the environment class. If there is already a check
@@ -2270,7 +2266,7 @@
             this._checks[key] = check;
             // otherwise, create a check function and use that
           } else {
-            this._checks[key] = this.__createCheck__P_31_2(check);
+            this._checks[key] = this.__createCheck__P_30_2(check);
           }
         }
       },
@@ -2321,12 +2317,12 @@
         if (key === undefined) {
           throw new TypeError("Key must be provided to set an environment setting.");
         }
-        if (this.__environmentBackup__P_31_3 === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined) {
           qx.Bootstrap.warn("Modifying environment settings at runtime is enabled. This is a security risk and should not be done in production code.");
-          this.__environmentBackup__P_31_3 = Object.assign({}, this.__cache__P_31_0);
-          this.__checksBackup__P_31_4 = Object.assign({}, this._checks);
+          this.__environmentBackup__P_30_3 = Object.assign({}, this.__cache__P_30_0);
+          this.__checksBackup__P_30_4 = Object.assign({}, this._checks);
         }
-        this.__cache__P_31_0[key] = value;
+        this.__cache__P_30_0[key] = value;
         delete this._checks[key];
         delete this._checksMap[key];
       } : undefined,
@@ -2340,10 +2336,10 @@
         if (key === undefined) {
           throw new TypeError("Key must be provided to remove an environment setting.");
         }
-        if (this.__environmentBackup__P_31_3 === undefined || this.__environmentBackup__P_31_3[key] === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined || this.__environmentBackup__P_30_3[key] === undefined) {
           throw new TypeError(`Environment setting "${key}" does not exist.`);
         }
-        delete this.__cache__P_31_0[key];
+        delete this.__cache__P_30_0[key];
         delete this._checks[key];
         delete this._checksMap[key];
       } : undefined,
@@ -2354,22 +2350,22 @@
        * @param key {String?} The key of the environment setting to reset. If not provided, all settings are reset.
        */
       reset: qx.Bootstrap.getEnvironmentSetting("qx.environment.allowRuntimeMutations") ? function (key) {
-        if (this.__environmentBackup__P_31_3 === undefined) {
+        if (this.__environmentBackup__P_30_3 === undefined) {
           // no backup available, nothing to reset
           return;
         }
-        if (key !== undefined && this.__environmentBackup__P_31_3[key] === undefined) {
+        if (key !== undefined && this.__environmentBackup__P_30_3[key] === undefined) {
           throw new TypeError(`Environment setting "${key}" does not exist.`);
         }
         if (key === undefined) {
           // reset all keys
-          this.__cache__P_31_0 = Object.assign({}, this.__environmentBackup__P_31_3);
-          this._checks = Object.assign({}, this.__checksBackup__P_31_4);
+          this.__cache__P_30_0 = Object.assign({}, this.__environmentBackup__P_30_3);
+          this._checks = Object.assign({}, this.__checksBackup__P_30_4);
           return;
         }
         // only reset the particular key 
-        this.__cache__P_31_0[key] = this.__environmentBackup__P_31_3[key];
-        this._checks[key] = this.__checksBackup__P_31_4[key];
+        this.__cache__P_30_0[key] = this.__environmentBackup__P_30_3[key];
+        this._checks[key] = this.__checksBackup__P_30_4[key];
       } : undefined,
       /**
        * Initializer for the default values of the framework settings.
@@ -2387,12 +2383,12 @@
       /**
        * Import checks from global qx.$$environment into the Environment class.
        */
-      __importFromGenerator__P_31_5() {
+      __importFromGenerator__P_30_5() {
         // import the environment map
         if (qx && qx.$$environment) {
           for (var key in qx.$$environment) {
             var value = qx.$$environment[key];
-            this._checks[key] = this.__createCheck__P_31_2(value);
+            this._checks[key] = this.__createCheck__P_30_2(value);
           }
         }
       },
@@ -2400,7 +2396,7 @@
        * Checks the URL for environment settings and imports these into the
        * Environment class.
        */
-      __importFromUrl__P_31_6() {
+      __importFromUrl__P_30_6() {
         if (window.document && window.document.location) {
           var urlChecks = window.document.location.search.slice(1).split("&");
           for (var i = 0; i < urlChecks.length; i++) {
@@ -2419,7 +2415,7 @@
             } else if (/^(\d|\.)+$/.test(value)) {
               value = parseFloat(value);
             }
-            this._checks[key] = this.__createCheck__P_31_2(value);
+            this._checks[key] = this.__createCheck__P_30_2(value);
           }
         }
       },
@@ -2429,7 +2425,7 @@
        * @param value {var} The value which should be returned.
        * @return {Function} A function which could be used by a test.
        */
-      __createCheck__P_31_2(value) {
+      __createCheck__P_30_2(value) {
         return qx.Bootstrap.bind(function (value) {
           return value;
         }, null, value);
@@ -2439,10 +2435,10 @@
       // create default values for the environment class
       statics._initDefaultQxValues();
       // load the checks from the generator
-      statics.__importFromGenerator__P_31_5();
+      statics.__importFromGenerator__P_30_5();
       // load the checks from the url
       if (statics.get("qx.allowUrlSettings") === true) {
-        statics.__importFromUrl__P_31_6();
+        statics.__importFromUrl__P_30_6();
       }
     },
     environment: {
@@ -3433,7 +3429,7 @@
 
           // Validate incoming data
           {
-            this.__validateConfig__P_30_0(name, config);
+            this.__validateConfig__P_29_0(name, config);
           }
 
           // Create interface from statics
@@ -3532,13 +3528,13 @@
        *   will return a boolean instead of throwing an exception
        * @return {Boolean} <code>true</code> if all members are supported
        */
-      __checkMembers__P_30_1(object, clazz, iface, wrap, shouldThrow) {
+      __checkMembers__P_29_1(object, clazz, iface, wrap, shouldThrow) {
         // Validate members
         var members = iface.$$members;
         if (members) {
           for (var key in members) {
             if (qx.Bootstrap.isFunction(members[key])) {
-              var isPropertyMethod = this.__isPropertyMethod__P_30_2(clazz, key);
+              var isPropertyMethod = this.__isPropertyMethod__P_29_2(clazz, key);
               var hasMemberFunction = isPropertyMethod || qx.Bootstrap.isFunction(object[key]);
               if (!hasMemberFunction) {
                 if (shouldThrow) {
@@ -3552,7 +3548,7 @@
               // can easily be checked by the recursive hasInterface method.
               var shouldWrapFunction = wrap === true && !isPropertyMethod && !qx.util.OOUtil.hasInterface(clazz, iface);
               if (shouldWrapFunction) {
-                object[key] = this.__wrapInterfaceMember__P_30_3(iface, object[key], key, members[key]);
+                object[key] = this.__wrapInterfaceMember__P_29_3(iface, object[key], key, members[key]);
               }
             } else {
               // Other members are not checked more detailed because of
@@ -3581,7 +3577,7 @@
        * @return {Boolean} true, if the method will be generated by the property
        *   system.
        */
-      __isPropertyMethod__P_30_2(clazz, methodName) {
+      __isPropertyMethod__P_29_2(clazz, methodName) {
         var match = methodName.match(/^(is|toggle|get|set|reset)(.*)$/);
         if (!match) {
           return false;
@@ -3606,7 +3602,7 @@
        *   will return a boolean instead of throwing an exception
        * @return {Boolean} <code>true</code> if all properties are supported
        */
-      __checkProperties__P_30_4(clazz, iface, shouldThrow) {
+      __checkProperties__P_29_4(clazz, iface, shouldThrow) {
         if (iface.$$properties) {
           for (var key in iface.$$properties) {
             if (!qx.util.OOUtil.getPropertyDefinition(clazz, key)) {
@@ -3631,7 +3627,7 @@
        *   will return a boolean instead of throwing an exception
        * @return {Boolean} <code>true</code> if all events are supported
        */
-      __checkEvents__P_30_5(clazz, iface, shouldThrow) {
+      __checkEvents__P_29_5(clazz, iface, shouldThrow) {
         if (iface.$$events) {
           for (var key in iface.$$events) {
             if (!qx.util.OOUtil.supportsEvent(clazz, key)) {
@@ -3657,9 +3653,9 @@
        */
       assertObject(object, iface) {
         var clazz = object.constructor;
-        this.__checkMembers__P_30_1(object, clazz, iface, false, true);
-        this.__checkProperties__P_30_4(clazz, iface, true);
-        this.__checkEvents__P_30_5(clazz, iface, true);
+        this.__checkMembers__P_29_1(object, clazz, iface, false, true);
+        this.__checkProperties__P_29_4(clazz, iface, true);
+        this.__checkEvents__P_29_5(clazz, iface, true);
 
         // Validate extends, recursive
         var extend = iface.$$extends;
@@ -3678,9 +3674,9 @@
        *     check parameters etc.
        */
       assert(clazz, iface, wrap) {
-        this.__checkMembers__P_30_1(clazz.prototype, clazz, iface, wrap, true);
-        this.__checkProperties__P_30_4(clazz, iface, true);
-        this.__checkEvents__P_30_5(clazz, iface, true);
+        this.__checkMembers__P_29_1(clazz.prototype, clazz, iface, wrap, true);
+        this.__checkProperties__P_29_4(clazz, iface, true);
+        this.__checkEvents__P_29_5(clazz, iface, true);
 
         // Validate extends, recursive
         var extend = iface.$$extends;
@@ -3700,7 +3696,7 @@
        */
       objectImplements(object, iface) {
         var clazz = object.constructor;
-        if (!this.__checkMembers__P_30_1(object, clazz, iface) || !this.__checkProperties__P_30_4(clazz, iface) || !this.__checkEvents__P_30_5(clazz, iface)) {
+        if (!this.__checkMembers__P_29_1(object, clazz, iface) || !this.__checkProperties__P_29_4(clazz, iface) || !this.__checkEvents__P_29_5(clazz, iface)) {
           return false;
         }
 
@@ -3724,7 +3720,7 @@
        * @return {Boolean} <code>true</code> if interface is implemented
        */
       classImplements(clazz, iface) {
-        if (!this.__checkMembers__P_30_1(clazz.prototype, clazz, iface) || !this.__checkProperties__P_30_4(clazz, iface) || !this.__checkEvents__P_30_5(clazz, iface)) {
+        if (!this.__checkMembers__P_29_1(clazz.prototype, clazz, iface) || !this.__checkProperties__P_29_4(clazz, iface) || !this.__checkEvents__P_29_5(clazz, iface)) {
           return false;
         }
 
@@ -3770,7 +3766,7 @@
        *   Otherwise an exception is thrown.
        * @return {Function} wrapped function
        */
-      __wrapInterfaceMember__P_30_3: qx.core.Environment.select("qx.debug", {
+      __wrapInterfaceMember__P_29_3: qx.core.Environment.select("qx.debug", {
         true(iface, origFunction, functionName, preCondition) {
           function wrappedFunction() {
             // call precondition
@@ -3791,7 +3787,7 @@
         default(iface, origFunction, functionName, preCondition) {}
       }),
       /** @type {Map} allowed keys in interface definition */
-      __allowedKeys__P_30_6: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_29_6: qx.core.Environment.select("qx.debug", {
         true: {
           extend: "object",
           // Interface | Interface[]
@@ -3812,11 +3808,11 @@
        * @param name {String} The name of the class
        * @param config {Map} Configuration map
        */
-      __validateConfig__P_30_0: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_29_0: qx.core.Environment.select("qx.debug", {
         true(name, config) {
           {
             // Validate keys
-            var allowed = this.__allowedKeys__P_30_6;
+            var allowed = this.__allowedKeys__P_29_6;
             for (var key in config) {
               if (allowed[key] === undefined) {
                 throw new Error('The configuration key "' + key + '" in class "' + name + '" is not allowed!');
@@ -3993,7 +3989,7 @@
 
           // Validate incoming data
           {
-            this.__validateConfig__P_22_0(name, config);
+            this.__validateConfig__P_11_0(name, config);
           }
 
           // Create Interface from statics
@@ -4259,7 +4255,7 @@
       /** Registers all defined mixins */
       $$registry: {},
       /** @type {Map} allowed keys in mixin definition */
-      __allowedKeys__P_22_1: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_11_1: qx.core.Environment.select("qx.debug", {
         true: {
           include: "object",
           // Mixin | Mixin[]
@@ -4286,10 +4282,10 @@
        * @param name {String} The name of the class
        * @param config {Map} Configuration map
        */
-      __validateConfig__P_22_0: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_11_0: qx.core.Environment.select("qx.debug", {
         true(name, config) {
           // Validate keys
-          var allowed = this.__allowedKeys__P_22_1;
+          var allowed = this.__allowedKeys__P_11_1;
           for (var key in config) {
             if (!allowed[key]) {
               throw new Error('The configuration key "' + key + '" in mixin "' + name + '" is not allowed!');
@@ -5469,7 +5465,7 @@
        * This is a method which does nothing than gathering dependencies for the
        * module system. Calling this method is useless because it does nothing.
        */
-      __gatherDependency__P_33_0() {
+      __gatherDependency__P_32_0() {
         {
           qx.event.type.Data;
           qx.event.dispatch.Direct;
@@ -5482,7 +5478,7 @@
        * Built-in checks
        * The keys could be used in the check of the properties
        */
-      __checks__P_33_1: {
+      __checks__P_32_1: {
         Boolean: "qx.core.Assert.assertBoolean(value, msg) || true",
         String: "qx.core.Assert.assertString(value, msg) || true",
         Number: "qx.core.Assert.assertNumber(value, msg) || true",
@@ -5512,7 +5508,7 @@
       /**
        * Contains types from {@link #__checks} list which need to be dereferenced
        */
-      __dereference__P_33_2: {
+      __dereference__P_32_2: {
         Node: true,
         Element: true,
         Document: true,
@@ -5619,12 +5615,12 @@
        *
        * @param clazz {Class} clazz to which the refresher should be added
        */
-      __executeOptimizedRefresh__P_33_3(clazz) {
-        var inheritables = this.__getInheritablesOfClass__P_33_4(clazz);
+      __executeOptimizedRefresh__P_32_3(clazz) {
+        var inheritables = this.__getInheritablesOfClass__P_32_4(clazz);
         if (!inheritables.length) {
           var refresher = function () {};
         } else {
-          refresher = this.__createRefresher__P_33_5(inheritables);
+          refresher = this.__createRefresher__P_32_5(inheritables);
         }
         clazz.prototype.$$refreshInheritables = refresher;
       },
@@ -5634,7 +5630,7 @@
        * @param clazz {Class} class to get the inheritable properties of
        * @return {String[]} List of property names
        */
-      __getInheritablesOfClass__P_33_4(clazz) {
+      __getInheritablesOfClass__P_32_4(clazz) {
         var inheritable = [];
         while (clazz) {
           var properties = clazz.$$properties;
@@ -5657,7 +5653,7 @@
        * @param inheritables {String[]} list of inheritable properties
        * @return {Function} refresher function
        */
-      __createRefresher__P_33_5(inheritables) {
+      __createRefresher__P_32_5(inheritables) {
         var inherit = this.$$store.inherit;
         var init = this.$$store.init;
         var refresh = this.$$method.refresh;
@@ -5675,7 +5671,7 @@
        */
       attachRefreshInheritables(clazz) {
         clazz.prototype.$$refreshInheritables = function () {
-          qx.core.Property.__executeOptimizedRefresh__P_33_3(clazz);
+          qx.core.Property.__executeOptimizedRefresh__P_32_3(clazz);
           return this.$$refreshInheritables();
         };
       },
@@ -5688,7 +5684,7 @@
        */
       attachMethods(clazz, name, config) {
         // Divide groups from "normal" properties
-        config.group ? this.__attachGroupMethods__P_33_6(clazz, config, name) : this.__attachPropertyMethods__P_33_7(clazz, config, name);
+        config.group ? this.__attachGroupMethods__P_32_6(clazz, config, name) : this.__attachPropertyMethods__P_32_7(clazz, config, name);
       },
       /**
        * Attach group methods
@@ -5697,7 +5693,7 @@
        * @param config {Map} Property configuration
        * @param name {String} Name of the property
        */
-      __attachGroupMethods__P_33_6(clazz, config, name) {
+      __attachGroupMethods__P_32_6(clazz, config, name) {
         var upname = qx.Bootstrap.firstUp(name);
         var members = clazz.prototype;
         var themeable = config.themeable === true;
@@ -5767,7 +5763,7 @@
        * @param config {Map} Property configuration
        * @param name {String} Name of the property
        */
-      __attachPropertyMethods__P_33_7(clazz, config, name) {
+      __attachPropertyMethods__P_32_7(clazz, config, name) {
         var upname = qx.Bootstrap.firstUp(name);
         var members = clazz.prototype;
         {
@@ -5778,7 +5774,7 @@
 
         // Fill dispose value
         if (config.dereference === undefined && typeof config.check === "string") {
-          config.dereference = this.__shouldBeDereferenced__P_33_8(config.check);
+          config.dereference = this.__shouldBeDereferenced__P_32_8(config.check);
         }
         // Check for method name conflicts
         {
@@ -5842,9 +5838,9 @@
           members[method.getAsync[name]] = new Function("this." + getName + ".$$install && this." + getName + ".$$install.call(this);" + "return this." + getName + "Async.apply(this, arguments);");
         }
         members[method.get[name]].$$install = function () {
-          qx.core.Property.__installOptimizedGetter__P_33_9(clazz, name, "get", arguments);
+          qx.core.Property.__installOptimizedGetter__P_32_9(clazz, name, "get", arguments);
           if (config.async) {
-            qx.core.Property.__installOptimizedGetter__P_33_9(clazz, name, "getAsync", arguments);
+            qx.core.Property.__installOptimizedGetter__P_32_9(clazz, name, "getAsync", arguments);
           }
         };
         var setName = method.set[name] = "set" + upname;
@@ -5862,10 +5858,10 @@
         }
         method.setImpl[name] = "$$set" + upname + "Impl";
         members[setName].$$install = function () {
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "set");
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "setImpl");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "set");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "setImpl");
           if (config.async) {
-            qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "setAsync");
+            qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "setAsync");
           }
         };
         method.reset[name] = "reset" + upname;
@@ -5873,7 +5869,7 @@
           return qx.core.Property.executeOptimizedSetter(this, clazz, name, "reset");
         };
         members[method.reset[name]].$$install = function () {
-          qx.core.Property.__installOptimizedSetter__P_33_10(clazz, name, "reset");
+          qx.core.Property.__installOptimizedSetter__P_32_10(clazz, name, "reset");
         };
         if (config.inheritable || config.apply || config.event || config.deferredInit) {
           method.init[name] = "init" + upname;
@@ -5940,11 +5936,11 @@
        * @param check {var} The check of the property definition.
        * @return {Boolean} If the dereference key should be set.
        */
-      __shouldBeDereferenced__P_33_8(check) {
-        return !!this.__dereference__P_33_2[check];
+      __shouldBeDereferenced__P_32_8(check) {
+        return !!this.__dereference__P_32_2[check];
       },
       /** @type {Map} Internal data field for error messages used by {@link #error} */
-      __errors__P_33_11: {
+      __errors__P_32_11: {
         0: "Could not change or apply init value after constructing phase!",
         1: "Requires exactly one argument!",
         2: "Undefined value is not allowed!",
@@ -5964,7 +5960,7 @@
       error(obj, id, property, variant, value) {
         var classname = obj.constructor.classname;
         var msg = "Error in property " + property + " of class " + classname + " in method " + this.$$method[variant][property] + " with incoming value '" + value + "': ";
-        throw new Error(msg + (this.__errors__P_33_11[id] || "Unknown reason: " + id));
+        throw new Error(msg + (this.__errors__P_32_11[id] || "Unknown reason: " + id));
       },
       /**
        * Compiles a string builder object to a function, executes the function and
@@ -5978,8 +5974,8 @@
        * @param args {arguments} Incoming arguments of wrapper method
        * @return {var} Return value of the generated function
        */
-      __unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code, args) {
-        var fn = this.__installFunctionFromCode__P_33_13(instance.constructor, name, variant, code, args);
+      __unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code, args) {
+        var fn = this.__installFunctionFromCode__P_32_13(instance.constructor, name, variant, code, args);
 
         // Executing new function
         if (args === undefined) {
@@ -5999,7 +5995,7 @@
        * @param args {arguments} Incoming arguments of wrapper method
        * @return {var} Return value of the generated function
        */
-      __installFunctionFromCode__P_33_13(clazz, name, variant, code, args) {
+      __installFunctionFromCode__P_32_13(clazz, name, variant, code, args) {
         var store = this.$$method[variant][name];
 
         // Output generate code
@@ -6032,9 +6028,9 @@
        * @return {var} Execute return value of apply generated function, generally the incoming value
        */
       executeOptimizedGetter(instance, clazz, name, variant) {
-        var code = this.__compileGetter__P_33_14(clazz, name, variant);
+        var code = this.__compileGetter__P_32_14(clazz, name, variant);
         var members = clazz.prototype;
-        return this.__unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code);
+        return this.__unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code);
       },
       /**
        * Installs a getter into the class prototype, without executing it
@@ -6044,9 +6040,9 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __installOptimizedGetter__P_33_9(clazz, name, variant) {
-        var code = this.__compileGetter__P_33_14(clazz, name, variant);
-        this.__installFunctionFromCode__P_33_13(clazz, name, variant, code);
+      __installOptimizedGetter__P_32_9(clazz, name, variant) {
+        var code = this.__compileGetter__P_32_14(clazz, name, variant);
+        this.__installFunctionFromCode__P_32_13(clazz, name, variant, code);
       },
       /**
        * Compiles a getter into a string builder array
@@ -6057,7 +6053,7 @@
        * @param variant {String} Method variant.
        * @return {String[]} the string builder array
        */
-      __compileGetter__P_33_14(clazz, name, variant) {
+      __compileGetter__P_32_14(clazz, name, variant) {
         var config = clazz.$$properties[name];
         var code = [];
         var store = this.$$store;
@@ -6112,9 +6108,9 @@
        * @return {var} Execute return value of apply generated function, generally the incoming value
        */
       executeOptimizedSetter(instance, clazz, name, variant, args) {
-        var code = this.__compileSetter__P_33_15(clazz, name, variant);
+        var code = this.__compileSetter__P_32_15(clazz, name, variant);
         var members = clazz.prototype;
-        return this.__unwrapFunctionFromCode__P_33_12(instance, members, name, variant, code, args);
+        return this.__unwrapFunctionFromCode__P_32_12(instance, members, name, variant, code, args);
       },
       /**
        * Installs a setter into the class prototype, without executing it
@@ -6125,9 +6121,9 @@
        * @param variant {String} Method variant.
        * @return {var} Return value of the generated function
        */
-      __installOptimizedSetter__P_33_10(clazz, name, variant) {
-        var code = this.__compileSetter__P_33_15(clazz, name, variant);
-        return this.__installFunctionFromCode__P_33_13(clazz, name, variant, code);
+      __installOptimizedSetter__P_32_10(clazz, name, variant) {
+        var code = this.__compileSetter__P_32_15(clazz, name, variant);
+        return this.__installFunctionFromCode__P_32_13(clazz, name, variant, code);
       },
       /**
        * Compiles a setter into a string builder array
@@ -6139,7 +6135,7 @@
        * @param variant {String} Method variant.
        * @return {String[]} the string builder array
        */
-      __compileSetter__P_33_15(clazz, name, variant) {
+      __compileSetter__P_32_15(clazz, name, variant) {
         var config = clazz.$$properties[name];
         var members = clazz.prototype;
         var code = [];
@@ -6153,39 +6149,39 @@
         }
         var incomingValue = variant === "setImpl" || variant === "setThemed" || variant === "setRuntime" || variant === "init" && config.init === undefined;
         var hasCallback = config.apply || config.event || config.inheritable;
-        var store = this.__getStore__P_33_16(variant, name);
-        this.__emitIsEqualFunction__P_33_17(code, clazz, config, name);
-        this.__emitSetterPreConditions__P_33_18(code, config, name, variant, incomingValue);
+        var store = this.__getStore__P_32_16(variant, name);
+        this.__emitIsEqualFunction__P_32_17(code, clazz, config, name);
+        this.__emitSetterPreConditions__P_32_18(code, config, name, variant, incomingValue);
         if (incomingValue || hasCallback) {
-          this.__emitOldValue__P_33_19(code, config, name);
+          this.__emitOldValue__P_32_19(code, config, name);
         }
         if (incomingValue) {
-          this.__emitIncomingValueTransformation__P_33_20(code, clazz, config, name);
+          this.__emitIncomingValueTransformation__P_32_20(code, clazz, config, name);
         }
         if (hasCallback) {
-          this.__emitOldNewComparison__P_33_21(code, incomingValue, store, variant);
+          this.__emitOldNewComparison__P_32_21(code, incomingValue, store, variant);
         }
         if (config.inheritable) {
           code.push("var inherit=prop.$$inherit;");
         }
         {
           if (incomingValue) {
-            this.__emitIncomingValueValidation__P_33_22(code, config, clazz, name, variant);
+            this.__emitIncomingValueValidation__P_32_22(code, config, clazz, name, variant);
           }
         }
         if (!hasCallback) {
-          this.__emitStoreValue__P_33_23(code, name, variant, incomingValue);
+          this.__emitStoreValue__P_32_23(code, name, variant, incomingValue);
         } else {
-          this.__emitStoreComputedValue__P_33_24(code, config, name, variant, incomingValue);
+          this.__emitStoreComputedValue__P_32_24(code, config, name, variant, incomingValue);
         }
         if (config.inheritable) {
-          this.__emitStoreInheritedPropertyValue__P_33_25(code, config, name, variant);
+          this.__emitStoreInheritedPropertyValue__P_32_25(code, config, name, variant);
         } else if (hasCallback) {
-          this.__emitNormalizeUndefinedValues__P_33_26(code, config, name, variant);
+          this.__emitNormalizeUndefinedValues__P_32_26(code, config, name, variant);
         }
         if (hasCallback) {
           // Emit callback and event firing; Refreshing children (5th parameter) requires the parent/children interface
-          this.__emitCallCallback__P_33_27(code, config, name, variant, !!(config.inheritable && members._getChildren));
+          this.__emitCallCallback__P_32_27(code, config, name, variant, !!(config.inheritable && members._getChildren));
         }
 
         // Return value
@@ -6213,7 +6209,7 @@
        *
        * @return {Object} the value store
        */
-      __getStore__P_33_16(variant, name) {
+      __getStore__P_32_16(variant, name) {
         if (variant === "setRuntime" || variant === "resetRuntime") {
           var store = this.$$store.runtime[name];
         } else if (variant === "setThemed" || variant === "resetThemed") {
@@ -6233,7 +6229,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitIsEqualFunction__P_33_17(code, clazz, config, name) {
+      __emitIsEqualFunction__P_32_17(code, clazz, config, name) {
         code.push("var equ=");
         if (typeof config.isEqual === "function") {
           code.push("function(a,b){return !!", clazz.classname, ".$$properties.", name, ".isEqual.call(this,a,b);};");
@@ -6262,7 +6258,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitSetterPreConditions__P_33_18(code, config, name, variant, incomingValue) {
+      __emitSetterPreConditions__P_32_18(code, config, name, variant, incomingValue) {
         {
           code.push("var prop=qx.core.Property;");
           if (variant === "init") {
@@ -6292,7 +6288,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitIncomingValueTransformation__P_33_20(code, clazz, config, name) {
+      __emitIncomingValueTransformation__P_32_20(code, clazz, config, name) {
         // Call user-provided transform method, if one is provided.  Transform
         // method should either throw an error or return the new value.
         if (config.transform) {
@@ -6320,7 +6316,7 @@
        * @param store {Object} The data store to use for the incoming value
        * @param variant {String} Method variant.
        */
-      __emitOldNewComparison__P_33_21(code, incomingValue, store, variant) {
+      __emitOldNewComparison__P_32_21(code, incomingValue, store, variant) {
         var resetValue = variant === "reset" || variant === "resetThemed" || variant === "resetRuntime";
         if (incomingValue) {
           code.push("if(equ.call(this,this.", store, ",value))return value;");
@@ -6339,7 +6335,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitIncomingValueValidation__P_33_22: qx.core.Environment.select("qx.debug", {
+      __emitIncomingValueValidation__P_32_22: qx.core.Environment.select("qx.debug", {
         true(code, config, clazz, name, variant) {
           // Null check
           if (!config.nullable) {
@@ -6360,8 +6356,8 @@
               code.push("if(value!==inherit)");
             }
             code.push("if(");
-            if (this.__checks__P_33_1[config.check] !== undefined) {
-              code.push("!(", this.__checks__P_33_1[config.check], ")");
+            if (this.__checks__P_32_1[config.check] !== undefined) {
+              code.push("!(", this.__checks__P_32_1[config.check], ")");
             } else if (qx.Class.isDefined(config.check)) {
               code.push('qx.core.Assert.assertInstance(value, qx.Class.getByName("', config.check, '"), msg)');
             } else if (qx.Interface && qx.Interface.isDefined(config.check)) {
@@ -6389,7 +6385,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitStoreValue__P_33_23(code, name, variant, incomingValue) {
+      __emitStoreValue__P_32_23(code, name, variant, incomingValue) {
         if (variant === "setRuntime") {
           code.push("this.", this.$$store.runtime[name], "=value;");
         } else if (variant === "resetRuntime") {
@@ -6419,7 +6415,7 @@
        * @param variant {String} Method variant.
        * @param incomingValue {Boolean} Whether the setter has an incoming value
        */
-      __emitStoreComputedValue__P_33_24(code, config, name, variant, incomingValue) {
+      __emitStoreComputedValue__P_32_24(code, config, name, variant, incomingValue) {
         code.push("var computed;");
 
         // OLD = RUNTIME VALUE
@@ -6595,7 +6591,7 @@
        * @param config {Object} The property configuration map
        * @param name {String} name of the property
        */
-      __emitOldValue__P_33_19(code, config, name) {
+      __emitOldValue__P_32_19(code, config, name) {
         if (config.inheritable) {
           code.push("var old=this.", this.$$store.inherit[name], ";");
         } else {
@@ -6634,7 +6630,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitStoreInheritedPropertyValue__P_33_25(code, config, name, variant) {
+      __emitStoreInheritedPropertyValue__P_32_25(code, config, name, variant) {
         code.push("if(computed===undefined||computed===inherit){");
         if (variant === "refresh") {
           code.push("computed=value;");
@@ -6689,7 +6685,7 @@
        * @param name {String} name of the property
        * @param variant {String} Method variant.
        */
-      __emitNormalizeUndefinedValues__P_33_26(code, config, name, variant) {
+      __emitNormalizeUndefinedValues__P_32_26(code, config, name, variant) {
         // Properties which are not inheritable have no possibility to get
         // undefined at this position. (Hint: set(), setRuntime() and setThemed() only allow non undefined values)
         if (variant !== "setImpl" && variant !== "setRuntime" && variant !== "setThemed") {
@@ -6715,7 +6711,7 @@
        * @param variant {String} variant of the method e.g. setThemed
        * @param refresh {Boolean} if true, emit code to update the inherited values of child objects
        */
-      __emitCallCallback__P_33_27(code, config, name, variant, refresh) {
+      __emitCallCallback__P_32_27(code, config, name, variant, refresh) {
         // Execute user configured setter
         code.push("var self=this;", "var promise;");
         if (config.apply) {
@@ -7067,7 +7063,7 @@
        * A static reference to the property implementation in the case it
        * should be included.
        */
-      __Property__P_4_0: true ? qx.core.Property : null,
+      __Property__P_5_0: true ? qx.core.Property : null,
       /*
       ---------------------------------------------------------------------------
          PUBLIC METHODS
@@ -7144,7 +7140,7 @@
        */
       define(name, config) {
         try {
-          return this.__defineImpl__P_4_1(name, config);
+          return this.__defineImpl__P_5_1(name, config);
         } catch (ex) {
           qx.Class.$$brokenClassDefinitions = true;
           throw ex;
@@ -7158,7 +7154,7 @@
        * @param {*} config @see `define()`
        * @returns  @see `define()`
        */
-      __defineImpl__P_4_1(name, config) {
+      __defineImpl__P_5_1(name, config) {
         if (!config) {
           config = {};
         }
@@ -7183,7 +7179,7 @@
         // Validate incoming data
         {
           try {
-            this.__validateConfig__P_4_2(name, config);
+            this.__validateConfig__P_5_2(name, config);
           } catch (ex) {
             if (implicitType) {
               ex.message = 'Assumed static class because no "extend" key was found. ' + ex.message;
@@ -7193,40 +7189,40 @@
         }
 
         // Create the class
-        var clazz = this.__createClass__P_4_3(name, config.type, config.extend, config.statics, config.construct, config.destruct, config.include);
+        var clazz = this.__createClass__P_5_3(name, config.type, config.extend, config.statics, config.construct, config.destruct, config.include);
 
         // Initialise class and constructor/destructor annotations
         ["@", "@construct", "@destruct"].forEach(function (id) {
-          this.__attachAnno__P_4_4(clazz, id, null, config[id]);
+          this.__attachAnno__P_5_4(clazz, id, null, config[id]);
         }, this);
 
         // Members, properties, events and mixins are only allowed for non-static classes
         if (config.extend) {
           // Attach properties
           if (config.properties) {
-            this.__addProperties__P_4_5(clazz, config.properties, true);
+            this.__addProperties__P_5_5(clazz, config.properties, true);
           }
 
           // Attach members
           if (config.members) {
-            this.__addMembers__P_4_6(clazz, config.members, true, true, false);
+            this.__addMembers__P_5_6(clazz, config.members, true, true, false);
           }
 
           // Process events
           if (config.events) {
-            this.__addEvents__P_4_7(clazz, config.events, true);
+            this.__addEvents__P_5_7(clazz, config.events, true);
           }
 
           //Process cached objects
           if (config.objects) {
-            this.__addObjects__P_4_8(clazz, config.objects);
+            this.__addObjects__P_5_8(clazz, config.objects);
           }
 
           // Include mixins
           // Must be the last here to detect conflicts
           if (config.include) {
             for (var i = 0, l = config.include.length; i < l; i++) {
-              this.__addMixin__P_4_9(clazz, config.include[i], false);
+              this.__addMixin__P_5_9(clazz, config.include[i], false);
             }
           }
         }
@@ -7245,11 +7241,11 @@
         // Interface support for non-static classes
         if (config.implement) {
           for (var i = 0, l = config.implement.length; i < l; i++) {
-            this.__addInterface__P_4_10(clazz, config.implement[i]);
+            this.__addInterface__P_5_10(clazz, config.implement[i]);
           }
         }
         {
-          this.__validateAbstractInterfaces__P_4_11(clazz);
+          this.__validateAbstractInterfaces__P_5_11(clazz);
         }
 
         // Process defer
@@ -7264,7 +7260,7 @@
                 properties[name] = config;
 
                 // execute generic property handler
-                qx.Class.__addProperties__P_4_5(clazz, properties, true);
+                qx.Class.__addProperties__P_5_5(clazz, properties, true);
               }
             });
           });
@@ -7339,7 +7335,7 @@
           }
           qx.Mixin.isCompatible(mixin, clazz);
         }
-        qx.Class.__addMixin__P_4_9(clazz, mixin, false);
+        qx.Class.__addMixin__P_5_9(clazz, mixin, false);
       },
       /**
        * Include all features of the given mixin into the class. The mixin may
@@ -7362,7 +7358,7 @@
           }
           qx.Mixin.isCompatible(mixin, clazz);
         }
-        qx.Class.__addMixin__P_4_9(clazz, mixin, true);
+        qx.Class.__addMixin__P_5_9(clazz, mixin, true);
         return qx.Class.getByName(clazz.classname);
       },
       /**
@@ -7654,7 +7650,7 @@
       /** Stores all defined classes */
       $$registry: qx.Bootstrap.$$registry,
       /** @type {Map} allowed keys in non-static class definition */
-      __allowedKeys__P_4_12: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_5_12: qx.core.Environment.select("qx.debug", {
         true: {
           "@": "object",
           "@construct": "object",
@@ -7688,7 +7684,7 @@
         default: null
       }),
       /** @type {Map} allowed keys in static class definition */
-      __staticAllowedKeys__P_4_13: qx.core.Environment.select("qx.debug", {
+      __staticAllowedKeys__P_5_13: qx.core.Environment.select("qx.debug", {
         true: {
           "@": "object",
           type: "string",
@@ -7708,7 +7704,7 @@
        * @param name {String} The name of the class
        * @param config {Map} Configuration map
        */
-      __validateConfig__P_4_2: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_5_2: qx.core.Environment.select("qx.debug", {
         true(name, config) {
           // Validate type
           if (config.type && !(config.type === "static" || config.type === "abstract" || config.type === "singleton")) {
@@ -7721,7 +7717,7 @@
           }
 
           // Validate keys
-          var allowed = config.type === "static" ? this.__staticAllowedKeys__P_4_13 : this.__allowedKeys__P_4_12;
+          var allowed = config.type === "static" ? this.__staticAllowedKeys__P_5_13 : this.__allowedKeys__P_5_12;
           for (var key in config) {
             if (!(key in allowed)) {
               throw new Error('The configuration key "' + key + '" in class "' + name + '" is not allowed!');
@@ -7813,7 +7809,7 @@
        * @signature function(clazz)
        * @param clazz {Class} The configured class.
        */
-      __validateAbstractInterfaces__P_4_11: qx.core.Environment.select("qx.debug", {
+      __validateAbstractInterfaces__P_5_11: qx.core.Environment.select("qx.debug", {
         true(clazz) {
           var superclass = clazz.superclass;
           while (superclass) {
@@ -7839,7 +7835,7 @@
        * @param key {String} Name of the annotated item
        * @param anno {Object} Annotation object
        */
-      __attachAnno__P_4_4(clazz, group, key, anno) {
+      __attachAnno__P_5_4(clazz, group, key, anno) {
         if (anno !== undefined) {
           if (clazz.$$annotations === undefined) {
             clazz.$$annotations = {};
@@ -7869,7 +7865,7 @@
        * @param mixins {Mixin[]} array of mixins of the class
        * @return {Class} The generated class
        */
-      __createClass__P_4_3(name, type, extend, statics, construct, destruct, mixins) {
+      __createClass__P_5_3(name, type, extend, statics, construct, destruct, mixins) {
         var isStrictMode = function () {
           return typeof this == "undefined";
         };
@@ -7883,9 +7879,9 @@
           if (extend) {
             // Create default constructor
             if (!construct) {
-              construct = this.__createDefaultConstructor__P_4_14();
+              construct = this.__createDefaultConstructor__P_5_14();
             }
-            clazz = this.__wrapConstructor__P_4_15(construct, name, type);
+            clazz = this.__wrapConstructor__P_5_15(construct, name, type);
 
             // Add singleton getInstance()
             if (type === "singleton") {
@@ -7919,7 +7915,7 @@
               }
 
               // Attach annotations
-              this.__attachAnno__P_4_4(clazz, "statics", key, statics["@" + key]);
+              this.__attachAnno__P_5_4(clazz, "statics", key, statics["@" + key]);
             }
           }
         }
@@ -7977,7 +7973,7 @@
        * @param events {Map} map of event names the class fires.
        * @param patch {Boolean ? false} Enable redefinition of event type?
        */
-      __addEvents__P_4_7(clazz, events, patch) {
+      __addEvents__P_5_7(clazz, events, patch) {
         {
           if (typeof events !== "object" || qx.Bootstrap.getClass(events) === "Array") {
             throw new Error(clazz.classname + ": the events must be defined as map!");
@@ -8005,7 +8001,7 @@
           clazz.$$events = events;
         }
       },
-      __addObjects__P_4_8(clazz, objects) {
+      __addObjects__P_5_8(clazz, objects) {
         function validateCachedObject(key, value) {
           if (typeof value !== "function") {
             throw new Error("Invalid cached object definition for " + key + " in " + clazz.classname);
@@ -8032,7 +8028,7 @@
        * @param patch {Boolean ? false} Overwrite property with the limitations of a property
                  which means you are able to refine but not to replace (esp. for new properties)
        */
-      __addProperties__P_4_5(clazz, properties, patch) {
+      __addProperties__P_5_5(clazz, properties, patch) {
         // check for the property module
 
         {
@@ -8050,7 +8046,7 @@
 
           // Check incoming configuration
           {
-            this.__validateProperty__P_4_16(clazz, name, config, patch);
+            this.__validateProperty__P_5_16(clazz, name, config, patch);
           }
 
           // Store name into configuration
@@ -8079,22 +8075,22 @@
             if (config.async) {
               event[config.event + "Async"] = "qx.event.type.Data";
             }
-            this.__addEvents__P_4_7(clazz, event, patch);
+            this.__addEvents__P_5_7(clazz, event, patch);
           }
 
           // Remember inheritable properties
           if (config.inheritable) {
-            this.__Property__P_4_0.$$inheritable[name] = true;
+            this.__Property__P_5_0.$$inheritable[name] = true;
             if (!proto.$$refreshInheritables) {
-              this.__Property__P_4_0.attachRefreshInheritables(clazz);
+              this.__Property__P_5_0.attachRefreshInheritables(clazz);
             }
           }
           if (!config.refine) {
-            this.__Property__P_4_0.attachMethods(clazz, name, config);
+            this.__Property__P_5_0.attachMethods(clazz, name, config);
           }
 
           // Add annotations
-          this.__attachAnno__P_4_4(clazz, "properties", name, config["@"]);
+          this.__attachAnno__P_5_4(clazz, "properties", name, config["@"]);
         }
       },
       /**
@@ -8106,7 +8102,7 @@
        * @param config {Map} configuration map
        * @param patch {Boolean ? false} enable refine/patch?
        */
-      __validateProperty__P_4_16: qx.core.Environment.select("qx.debug", {
+      __validateProperty__P_5_16: qx.core.Environment.select("qx.debug", {
         true(clazz, name, config, patch) {
           // check for properties
 
@@ -8135,7 +8131,7 @@
           }
 
           // Check 0.7 keys
-          var allowed = config.group ? this.__Property__P_4_0.$$allowedGroupKeys : this.__Property__P_4_0.$$allowedKeys;
+          var allowed = config.group ? this.__Property__P_5_0.$$allowedGroupKeys : this.__Property__P_5_0.$$allowedKeys;
           for (var key in config) {
             if (allowed[key] === undefined) {
               throw new Error('The configuration key "' + key + '" of property "' + name + '" in class "' + clazz.classname + '" is not allowed!');
@@ -8171,7 +8167,7 @@
        * @param wrap {Boolean ? false} Whether the member method should be wrapped.
        *     this is needed to allow base calls in patched mixin members.
        */
-      __addMembers__P_4_6(clazz, members, patch, base, wrap) {
+      __addMembers__P_5_6(clazz, members, patch, base, wrap) {
         var proto = clazz.prototype;
         var key, member;
         qx.Bootstrap.setDisplayNames(members, clazz.classname + ".prototype");
@@ -8201,7 +8197,7 @@
           if (key.charAt(0) === "@") {
             var annoKey = key.substring(1);
             if (members[annoKey] === undefined) {
-              this.__attachAnno__P_4_4(clazz, "members", annoKey, members[key]);
+              this.__attachAnno__P_5_4(clazz, "members", annoKey, members[key]);
             }
             continue;
           }
@@ -8235,7 +8231,7 @@
           proto[key] = member;
 
           // Attach annotations
-          this.__attachAnno__P_4_4(clazz, "members", key, members["@" + key]);
+          this.__attachAnno__P_5_4(clazz, "members", key, members["@" + key]);
         }
       },
       /**
@@ -8244,7 +8240,7 @@
        * @param clazz {Class} class to add interface to
        * @param iface {Interface} the Interface to add
        */
-      __addInterface__P_4_10(clazz, iface) {
+      __addInterface__P_5_10(clazz, iface) {
         {
           if (!clazz || !iface) {
             throw new Error("Incomplete parameters!");
@@ -8280,7 +8276,7 @@
        * @param mixin {Mixin} Include all features of this mixin
        * @param patch {Boolean} Overwrite existing fields, functions and properties
        */
-      __addMixin__P_4_9(clazz, mixin, patch) {
+      __addMixin__P_5_9(clazz, mixin, patch) {
         {
           if (!clazz || !mixin) {
             throw new Error("Incomplete parameters!");
@@ -8298,17 +8294,17 @@
 
           // Attach events
           if (entry.$$events) {
-            this.__addEvents__P_4_7(clazz, entry.$$events, patch);
+            this.__addEvents__P_5_7(clazz, entry.$$events, patch);
           }
 
           // Attach properties (Properties are already readonly themselves, no patch handling needed)
           if (entry.$$properties) {
-            this.__addProperties__P_4_5(clazz, entry.$$properties, patch);
+            this.__addProperties__P_5_5(clazz, entry.$$properties, patch);
           }
 
           // Attach members (Respect patch setting, but dont apply base variables)
           if (entry.$$members) {
-            this.__addMembers__P_4_6(clazz, entry.$$members, patch, patch, patch);
+            this.__addMembers__P_5_6(clazz, entry.$$members, patch, patch, patch);
           }
         }
 
@@ -8333,7 +8329,7 @@
        *
        * @return {Function} The default constructor.
        */
-      __createDefaultConstructor__P_4_14() {
+      __createDefaultConstructor__P_5_14() {
         function defaultConstructor() {
           defaultConstructor.base.apply(this, arguments);
         }
@@ -8348,7 +8344,7 @@
        * @param type {String} the user specified class type
        * @return {Function} The wrapped constructor
        */
-      __wrapConstructor__P_4_15(construct, name, type) {
+      __wrapConstructor__P_5_15(construct, name, type) {
         var wrapper = function () {
           var clazz = wrapper;
           {
@@ -8808,11 +8804,11 @@
           while ((hit = lineRe.exec(error.stack)) != null) {
             url = hit[1];
             lineNumber = hit[2];
-            className = this.__fileNameToClassName__P_92_0(url);
+            className = this.__fileNameToClassName__P_97_0(url);
             trace.push(className + ":" + lineNumber);
           }
           if (trace.length > 0) {
-            return this.__formatStackTrace__P_92_1(trace);
+            return this.__formatStackTrace__P_97_1(trace);
           }
           /*
            * Chrome trace info comes in three flavors:
@@ -8826,12 +8822,12 @@
           while ((hit = lineRe.exec(error.stack)) != null) {
             var fileMatch = fileReParens.exec(hit[1]);
             if (fileMatch) {
-              className = this.__fileNameToClassName__P_92_0(fileMatch[2]);
+              className = this.__fileNameToClassName__P_97_0(fileMatch[2]);
               trace.push(className + fileMatch[3]);
             } else {
               fileMatch = fileRe.exec(hit[1]);
               if (fileMatch) {
-                className = this.__fileNameToClassName__P_92_0(fileMatch[1]);
+                className = this.__fileNameToClassName__P_97_0(fileMatch[1]);
                 trace.push(className + fileMatch[2]);
               } else {
                 trace.push(hit[1]);
@@ -8854,11 +8850,11 @@
             lineNumber = hit[1];
             columnNumber = hit[2];
             url = hit[3];
-            className = this.__fileNameToClassName__P_92_0(url);
+            className = this.__fileNameToClassName__P_97_0(url);
             trace.push(className + ":" + lineNumber + ":" + columnNumber);
           }
           if (trace.length > 0) {
-            return this.__formatStackTrace__P_92_1(trace);
+            return this.__formatStackTrace__P_97_1(trace);
           }
 
           // older Opera style
@@ -8866,7 +8862,7 @@
           while ((hit = lineRe.exec(stacktrace)) != null) {
             lineNumber = hit[1];
             url = hit[2];
-            className = this.__fileNameToClassName__P_92_0(url);
+            className = this.__fileNameToClassName__P_97_0(url);
             trace.push(className + ":" + lineNumber);
           }
         } else if (error.message && error.message.indexOf("Backtrace:") >= 0) {
@@ -8877,15 +8873,15 @@
             var reResult = lines[i].match(/\s*Line ([0-9]+) of.* (\S.*)/);
             if (reResult && reResult.length >= 2) {
               lineNumber = reResult[1];
-              fileName = this.__fileNameToClassName__P_92_0(reResult[2]);
+              fileName = this.__fileNameToClassName__P_97_0(reResult[2]);
               trace.push(fileName + ":" + lineNumber);
             }
           }
         } else if (error.sourceURL && error.line) {
           // Safari
-          trace.push(this.__fileNameToClassName__P_92_0(error.sourceURL) + ":" + error.line);
+          trace.push(this.__fileNameToClassName__P_97_0(error.sourceURL) + ":" + error.line);
         }
-        return this.__formatStackTrace__P_92_1(trace);
+        return this.__formatStackTrace__P_97_1(trace);
       },
       /**
        * Converts the URL of a JavaScript file to a class name using either a
@@ -8895,7 +8891,7 @@
        * @param fileName {String} URL of the JavaScript file
        * @return {String} Result of the conversion
        */
-      __fileNameToClassName__P_92_0(fileName) {
+      __fileNameToClassName__P_97_0(fileName) {
         if (typeof qx.dev.StackTrace.FILENAME_TO_CLASSNAME == "function") {
           var convertedName = qx.dev.StackTrace.FILENAME_TO_CLASSNAME(fileName);
           if (true && !qx.lang.Type.isString(convertedName)) {
@@ -8903,7 +8899,7 @@
           }
           return convertedName;
         }
-        return qx.dev.StackTrace.__fileNameToClassNameDefault__P_92_2(fileName);
+        return qx.dev.StackTrace.__fileNameToClassNameDefault__P_97_2(fileName);
       },
       /**
        * Converts the URL of a JavaScript file to a class name if the file is
@@ -8913,7 +8909,7 @@
        * @return {String} class name of the file if conversion was possible.
        * Otherwise the fileName is returned unmodified.
        */
-      __fileNameToClassNameDefault__P_92_2(fileName) {
+      __fileNameToClassNameDefault__P_97_2(fileName) {
         var scriptDir = "/source/class/";
         var jsPos = fileName.indexOf(scriptDir);
         if (jsPos < 0) {
@@ -8935,7 +8931,7 @@
        * @param trace {String[]} Stack trace information
        * @return {String[]} Formatted stack trace info
        */
-      __formatStackTrace__P_92_1(trace) {
+      __formatStackTrace__P_97_1(trace) {
         if (typeof qx.dev.StackTrace.FORMAT_STACKTRACE == "function") {
           trace = qx.dev.StackTrace.FORMAT_STACKTRACE(trace);
           // Can't use qx.core.Assert here since it throws an AssertionError which
@@ -9009,17 +9005,17 @@
     },
     members: {
       //Next slot in ringbuffer to use
-      __nextIndexToStoreTo__P_185_0: 0,
+      __nextIndexToStoreTo__P_193_0: 0,
       //Number of elements in ring buffer
-      __entriesStored__P_185_1: 0,
+      __entriesStored__P_193_1: 0,
       //Was a mark set?
-      __isMarkActive__P_185_2: false,
+      __isMarkActive__P_193_2: false,
       //How many elements were stored since setting of mark?
-      __entriesStoredSinceMark__P_185_3: 0,
+      __entriesStoredSinceMark__P_193_3: 0,
       //ring buffer
-      __entries__P_185_4: null,
+      __entries__P_193_4: null,
       //Maximum number of messages to store. Could be converted to a qx property.
-      __maxEntries__P_185_5: null,
+      __maxEntries__P_193_5: null,
       /**
        * Set the maximum number of messages to hold. If null the number of
        * messages is not limited.
@@ -9029,7 +9025,7 @@
        * @param maxEntries {Integer} the maximum number of messages to hold
        */
       setMaxEntries(maxEntries) {
-        this.__maxEntries__P_185_5 = maxEntries;
+        this.__maxEntries__P_193_5 = maxEntries;
         this.clear();
       },
       /**
@@ -9038,7 +9034,7 @@
        * @return {Integer}
        */
       getMaxEntries() {
-        return this.__maxEntries__P_185_5;
+        return this.__maxEntries__P_193_5;
       },
       /**
        * Adds a single entry
@@ -9046,18 +9042,18 @@
        * @param entry {var} The data to store
        */
       addEntry(entry) {
-        this.__entries__P_185_4[this.__nextIndexToStoreTo__P_185_0] = entry;
-        this.__nextIndexToStoreTo__P_185_0 = this.__addToIndex__P_185_6(this.__nextIndexToStoreTo__P_185_0, 1);
+        this.__entries__P_193_4[this.__nextIndexToStoreTo__P_193_0] = entry;
+        this.__nextIndexToStoreTo__P_193_0 = this.__addToIndex__P_193_6(this.__nextIndexToStoreTo__P_193_0, 1);
 
         //Count # of stored entries
         var max = this.getMaxEntries();
-        if (this.__entriesStored__P_185_1 < max) {
-          this.__entriesStored__P_185_1++;
+        if (this.__entriesStored__P_193_1 < max) {
+          this.__entriesStored__P_193_1++;
         }
 
         //Count # of stored elements since last mark call
-        if (this.__isMarkActive__P_185_2 && this.__entriesStoredSinceMark__P_185_3 < max) {
-          this.__entriesStoredSinceMark__P_185_3++;
+        if (this.__isMarkActive__P_193_2 && this.__entriesStoredSinceMark__P_193_3 < max) {
+          this.__entriesStoredSinceMark__P_193_3++;
         }
       },
       /**
@@ -9065,21 +9061,21 @@
        * @return {Integer}
        */
       getNumEntriesStored() {
-        return this.__entriesStored__P_185_1;
+        return this.__entriesStored__P_193_1;
       },
       /**
        * Remembers the current position in the ring buffer
        *
        */
       mark() {
-        this.__isMarkActive__P_185_2 = true;
-        this.__entriesStoredSinceMark__P_185_3 = 0;
+        this.__isMarkActive__P_193_2 = true;
+        this.__entriesStoredSinceMark__P_193_3 = 0;
       },
       /**
        * Removes the current mark position
        */
       clearMark() {
-        this.__isMarkActive__P_185_2 = false;
+        this.__isMarkActive__P_193_2 = false;
       },
       /**
        * Returns all stored entries. Mark is ignored.
@@ -9101,25 +9097,25 @@
        */
       getEntries(count, startingFromMark) {
         //Trim count so it does not exceed ringbuffer size
-        if (count > this.__entriesStored__P_185_1) {
-          count = this.__entriesStored__P_185_1;
+        if (count > this.__entriesStored__P_193_1) {
+          count = this.__entriesStored__P_193_1;
         }
 
         // Trim count so it does not exceed last call to mark (if mark was called
         // and startingFromMark was true)
-        if (startingFromMark && this.__isMarkActive__P_185_2 && count > this.__entriesStoredSinceMark__P_185_3) {
-          count = this.__entriesStoredSinceMark__P_185_3;
+        if (startingFromMark && this.__isMarkActive__P_193_2 && count > this.__entriesStoredSinceMark__P_193_3) {
+          count = this.__entriesStoredSinceMark__P_193_3;
         }
         if (count > 0) {
-          var indexOfYoungestElementInHistory = this.__addToIndex__P_185_6(this.__nextIndexToStoreTo__P_185_0, -1);
-          var startIndex = this.__addToIndex__P_185_6(indexOfYoungestElementInHistory, -count + 1);
+          var indexOfYoungestElementInHistory = this.__addToIndex__P_193_6(this.__nextIndexToStoreTo__P_193_0, -1);
+          var startIndex = this.__addToIndex__P_193_6(indexOfYoungestElementInHistory, -count + 1);
           var result;
           if (startIndex <= indexOfYoungestElementInHistory) {
             //Requested segment not wrapping around ringbuffer boundary, get in one run
-            result = this.__entries__P_185_4.slice(startIndex, indexOfYoungestElementInHistory + 1);
+            result = this.__entries__P_193_4.slice(startIndex, indexOfYoungestElementInHistory + 1);
           } else {
             //Requested segment wrapping around ringbuffer boundary, get two parts & concat
-            result = this.__entries__P_185_4.slice(startIndex, this.__entriesStored__P_185_1).concat(this.__entries__P_185_4.slice(0, indexOfYoungestElementInHistory + 1));
+            result = this.__entries__P_193_4.slice(startIndex, this.__entriesStored__P_193_1).concat(this.__entries__P_193_4.slice(0, indexOfYoungestElementInHistory + 1));
           }
         } else {
           result = [];
@@ -9130,10 +9126,10 @@
        * Clears all entries
        */
       clear() {
-        this.__entries__P_185_4 = new Array(this.getMaxEntries());
-        this.__entriesStored__P_185_1 = 0;
-        this.__entriesStoredSinceMark__P_185_3 = 0;
-        this.__nextIndexToStoreTo__P_185_0 = 0;
+        this.__entries__P_193_4 = new Array(this.getMaxEntries());
+        this.__entriesStored__P_193_1 = 0;
+        this.__entriesStoredSinceMark__P_193_3 = 0;
+        this.__nextIndexToStoreTo__P_193_0 = 0;
       },
       /**
        * Adds a number to an ringbuffer index. Does a modulus calculation,
@@ -9144,7 +9140,7 @@
        * @param addMe {Number} The number to add.
        * @return {Number} The new index
        */
-      __addToIndex__P_185_6(idx, addMe) {
+      __addToIndex__P_193_6(idx, addMe) {
         var max = this.getMaxEntries();
         var result = (idx + addMe) % max;
 
@@ -9359,14 +9355,14 @@
       ---------------------------------------------------------------------------
       */
 
-      __level__P_42_0: "debug",
+      __level__P_59_0: "debug",
       /**
        * Configures the minimum log level required for new messages.
        *
        * @param value {String} One of "debug", "info", "warn" or "error".
        */
       setLevel(value) {
-        this.__level__P_42_0 = value;
+        this.__level__P_59_0 = value;
       },
       /**
        * Returns the currently configured minimum log level required for new
@@ -9375,7 +9371,7 @@
        * @return {Integer} Debug level
        */
       getLevel() {
-        return this.__level__P_42_0;
+        return this.__level__P_59_0;
       },
       /**
        * Configures the number of messages to be kept in the buffer.
@@ -9383,7 +9379,7 @@
        * @param value {Integer} Any positive integer
        */
       setTreshold(value) {
-        this.__buffer__P_42_1.setMaxMessages(value);
+        this.__buffer__P_59_1.setMaxMessages(value);
       },
       /**
        * Returns the currently configured number of messages to be kept in the
@@ -9392,7 +9388,7 @@
        * @return {Integer} Treshold value
        */
       getTreshold() {
-        return this.__buffer__P_42_1.getMaxMessages();
+        return this.__buffer__P_59_1.getMaxMessages();
       },
       /*
       ---------------------------------------------------------------------------
@@ -9401,13 +9397,13 @@
       */
 
       /** @type {Map} Map of all known appenders by ID */
-      __appenders__P_42_2: [],
+      __appenders__P_59_2: [],
       /** @type {Map} Map of all known appenders by name */
-      __appendersByName__P_42_3: {},
+      __appendersByName__P_59_3: {},
       /** @type {Array} Array of filters to apply when selecting appenders to append to */
-      __filters__P_42_4: [],
+      __filters__P_59_4: [],
       /** @type {Integer} Last free appender ID */
-      __id__P_42_5: 0,
+      __id__P_59_5: 0,
       /**
        * Registers the given appender and inserts the last cached messages.
        *
@@ -9423,17 +9419,17 @@
         }
 
         // Register appender
-        var id = this.__id__P_42_5++;
+        var id = this.__id__P_59_5++;
         var appenderName = appender.appenderName || appender.classname;
-        this.__appenders__P_42_2[id] = appender;
-        this.__appendersByName__P_42_3[appenderName] = appender;
+        this.__appenders__P_59_2[id] = appender;
+        this.__appendersByName__P_59_3[appenderName] = appender;
         appender.$$id = id;
 
         // Insert previous messages
-        var entries = this.__buffer__P_42_1.getAllLogEvents();
+        var entries = this.__buffer__P_59_1.getAllLogEvents();
         for (var i = 0, l = entries.length; i < l; i++) {
           var entry = entries[i];
-          var appenders = this.__getAppenders__P_42_6(entry.loggerName, entry.level);
+          var appenders = this.__getAppenders__P_59_6(entry.loggerName, entry.level);
           if (appenders[appenderName]) {
             appender.process(entry);
           }
@@ -9450,8 +9446,8 @@
           return;
         }
         var appenderName = appender.appenderName || appender.classname;
-        delete this.__appendersByName__P_42_3[appenderName];
-        delete this.__appenders__P_42_2[id];
+        delete this.__appendersByName__P_59_3[appenderName];
+        delete this.__appenders__P_59_2[id];
         delete appender.$$id;
       },
       /**
@@ -9501,9 +9497,9 @@
         if (typeof logger == "string") {
           logger = new RegExp(logger);
         }
-        this.__filters__P_42_4.push({
+        this.__filters__P_59_4.push({
           loggerMatch: logger,
-          level: level || this.__level__P_42_0,
+          level: level || this.__level__P_59_0,
           appenderName: appenderName
         });
       },
@@ -9511,7 +9507,7 @@
        * Reset all filters
        */
       resetFilters() {
-        this.__filters__P_42_4 = [];
+        this.__filters__P_59_4 = [];
       },
       /*
       ---------------------------------------------------------------------------
@@ -9528,7 +9524,7 @@
        *   does not keep references to other objects.
        */
       debug(object, message) {
-        qx.log.Logger.__log__P_42_7("debug", arguments);
+        qx.log.Logger.__log__P_59_7("debug", arguments);
       },
       /**
        * Sending a message at level "info" to the logger.
@@ -9539,7 +9535,7 @@
        *   does not keep references to other objects.
        */
       info(object, message) {
-        qx.log.Logger.__log__P_42_7("info", arguments);
+        qx.log.Logger.__log__P_59_7("info", arguments);
       },
       /**
        * Sending a message at level "warn" to the logger.
@@ -9550,7 +9546,7 @@
        *   does not keep references to other objects.
        */
       warn(object, message) {
-        qx.log.Logger.__log__P_42_7("warn", arguments);
+        qx.log.Logger.__log__P_59_7("warn", arguments);
       },
       /**
        * Sending a message at level "error" to the logger.
@@ -9561,7 +9557,7 @@
        *   does not keep references to other objects.
        */
       error(object, message) {
-        qx.log.Logger.__log__P_42_7("error", arguments);
+        qx.log.Logger.__log__P_59_7("error", arguments);
       },
       /**
        * Prints the current stack trace at level "info"
@@ -9576,7 +9572,7 @@
           var trace = qx.dev.StackTrace.getStackTrace();
           var args = qx.lang.Array.fromArguments(arguments);
           args.push(trace.join("\n"));
-          qx.log.Logger.__log__P_42_7("trace", args);
+          qx.log.Logger.__log__P_59_7("trace", args);
         }
       },
       /**
@@ -9692,7 +9688,7 @@
        *
        */
       clear() {
-        this.__buffer__P_42_1.clearHistory();
+        this.__buffer__P_59_1.clearHistory();
       },
       /*
       ---------------------------------------------------------------------------
@@ -9701,9 +9697,9 @@
       */
 
       /** @type {qx.log.appender.RingBuffer} Message buffer of previously fired messages. */
-      __buffer__P_42_1: new qx.log.appender.RingBuffer(50),
+      __buffer__P_59_1: new qx.log.appender.RingBuffer(50),
       /** @type {Map} Numeric translation of log levels */
-      __levels__P_42_8: {
+      __levels__P_59_8: {
         trace: 0,
         debug: 1,
         info: 2,
@@ -9711,14 +9707,14 @@
         error: 4
       },
       /** @type {Map} cache of appenders for a given logger and level */
-      __appendersCache__P_42_9: {},
+      __appendersCache__P_59_9: {},
       /**
        * Detects the name of the logger to use for an object
        *
        * @param object {Object} Contextual object (either instance or static class)
        * @return {String} Logger name
        */
-      __getLoggerName__P_42_10(object) {
+      __getLoggerName__P_59_10(object) {
         if (object) {
           if (object.classname) {
             return object.classname;
@@ -9737,8 +9733,8 @@
        * @return {Boolean} True if the logger is enabled
        */
       isLoggerEnabled(level, object) {
-        var loggerName = this.__getLoggerName__P_42_10(object);
-        var appenders = this.__getAppenders__P_42_6(loggerName, level);
+        var loggerName = this.__getLoggerName__P_59_10(object);
+        var appenders = this.__getAppenders__P_59_6(loggerName, level);
         return !!Object.keys(appenders).length;
       },
       /**
@@ -9748,11 +9744,11 @@
        * @param args {Array} List of other arguments, where the first is
        *   taken as the context object.
        */
-      __log__P_42_7(level, args) {
+      __log__P_59_7(level, args) {
         // Get object and determine appenders
         var object = args.length < 2 ? null : args[0];
-        var loggerName = this.__getLoggerName__P_42_10(object);
-        var appenders = this.__getAppenders__P_42_6(loggerName, level);
+        var loggerName = this.__getLoggerName__P_59_10(object);
+        var appenders = this.__getAppenders__P_59_6(loggerName, level);
         if (!Object.keys(appenders).length) {
           return;
         }
@@ -9761,7 +9757,7 @@
         var start = object ? 1 : 0;
         var items = [];
         for (var i = start, l = args.length; i < l; i++) {
-          items.push(this.__serialize__P_42_11(args[i], true));
+          items.push(this.__serialize__P_59_11(args[i], true));
         }
 
         // Build entry
@@ -9787,7 +9783,7 @@
             entry.clazz = object.constructor;
           }
         }
-        this.__buffer__P_42_1.process(entry);
+        this.__buffer__P_59_1.process(entry);
 
         // Send to appenders
         for (var classname in appenders) {
@@ -9801,27 +9797,27 @@
        * @param level {String} the minimum logging level to use the appender
        * @return {Array} list of appenders
        */
-      __getAppenders__P_42_6(className, level) {
-        var levels = this.__levels__P_42_8;
+      __getAppenders__P_59_6(className, level) {
+        var levels = this.__levels__P_59_8;
 
         // If no filters, then all appenders apply
-        if (!this.__filters__P_42_4.length) {
+        if (!this.__filters__P_59_4.length) {
           // Check the default level
-          if (levels[level] < levels[this.__level__P_42_0]) {
+          if (levels[level] < levels[this.__level__P_59_0]) {
             return [];
           }
-          return this.__appendersByName__P_42_3;
+          return this.__appendersByName__P_59_3;
         }
 
         // Check the cache
         var cacheId = className + "|" + level;
-        var appenders = this.__appendersCache__P_42_9[cacheId];
+        var appenders = this.__appendersCache__P_59_9[cacheId];
         if (appenders !== undefined) {
           return appenders;
         }
         appenders = {};
-        for (var i = 0; i < this.__filters__P_42_4.length; i++) {
-          var filter = this.__filters__P_42_4[i];
+        for (var i = 0; i < this.__filters__P_59_4.length; i++) {
+          var filter = this.__filters__P_59_4[i];
 
           // Filters only apply to certain levels
           if (levels[level] < levels[filter.level]) {
@@ -9836,13 +9832,13 @@
           // Test
           if (!filter.loggerMatch || filter.loggerMatch.test(className)) {
             if (filter.appenderName) {
-              appenders[filter.appenderName] = this.__appendersByName__P_42_3[filter.appenderName];
+              appenders[filter.appenderName] = this.__appendersByName__P_59_3[filter.appenderName];
             } else {
-              return this.__appendersCache__P_42_9[cacheId] = this.__appendersByName__P_42_3;
+              return this.__appendersCache__P_59_9[cacheId] = this.__appendersByName__P_59_3;
             }
           }
         }
-        return this.__appendersCache__P_42_9[cacheId] = appenders;
+        return this.__appendersCache__P_59_9[cacheId] = appenders;
       },
       /**
        * Detects the type of the variable given.
@@ -9853,7 +9849,7 @@
        *   "function", "array", "error", "map",
        *   "class", "instance", "node", "stringify", "unknown"
        */
-      __detect__P_42_12(value) {
+      __detect__P_59_12(value) {
         if (value === undefined) {
           return "undefined";
         } else if (value === null) {
@@ -9897,8 +9893,8 @@
        * @return {Map} Contains the keys <code>type</code>, <code>text</code> and
        * <code>trace</code>.
        */
-      __serialize__P_42_11(value, deep) {
-        var type = this.__detect__P_42_12(value);
+      __serialize__P_59_11(value, deep) {
+        var type = this.__detect__P_59_12(value);
         var text = "unknown";
         var trace = [];
         switch (type) {
@@ -9946,7 +9942,7 @@
                   text.push("...(+" + (l - i) + ")");
                   break;
                 }
-                text.push(this.__serialize__P_42_11(value[i], false));
+                text.push(this.__serialize__P_59_11(value[i], false));
               }
             } else {
               text = "[...(" + value.length + ")]";
@@ -9973,7 +9969,7 @@
 
                 // Additional storage of hash-key
                 key = sorted[i];
-                temp = this.__serialize__P_42_11(value[key], false);
+                temp = this.__serialize__P_59_11(value[key], false);
                 temp.key = key;
                 text.push(temp);
               }
@@ -9996,7 +9992,7 @@
     defer(statics) {
       var logs = qx.Bootstrap.$$logs;
       for (var i = 0; i < logs.length; i++) {
-        statics.__log__P_42_7(logs[i][0], logs[i][1]);
+        statics.__log__P_59_7(logs[i][0], logs[i][1]);
       }
       qx.Bootstrap.debug = statics.debug;
       qx.Bootstrap.info = statics.info;
@@ -10421,7 +10417,7 @@
       getVersion() {
         var agent = window.navigator.userAgent;
         var version = "";
-        if (qx.bom.client.Engine.__isMshtml__P_63_0()) {
+        if (qx.bom.client.Engine.__isMshtml__P_50_0()) {
           var isTrident = /Trident\/([^\);]+)(\)|;)/.test(agent);
           if (/MSIE\s+([^\);]+)(\)|;)/.test(agent)) {
             version = RegExp.$1;
@@ -10443,7 +10439,7 @@
               version = match[1];
             }
           }
-        } else if (qx.bom.client.Engine.__isOpera__P_63_1()) {
+        } else if (qx.bom.client.Engine.__isOpera__P_50_1()) {
           // Opera has a special versioning scheme, where the second part is combined
           // e.g. 8.54 which should be handled like 8.5.4 to be compatible to the
           // common versioning system used by other browsers
@@ -10462,7 +10458,7 @@
               }
             }
           }
-        } else if (qx.bom.client.Engine.__isWebkit__P_63_2()) {
+        } else if (qx.bom.client.Engine.__isWebkit__P_50_2()) {
           if (/AppleWebKit\/([^ ]+)/.test(agent)) {
             version = RegExp.$1;
 
@@ -10472,7 +10468,7 @@
               version = version.slice(0, invalidCharacter.index);
             }
           }
-        } else if (qx.bom.client.Engine.__isGecko__P_63_3()) {
+        } else if (qx.bom.client.Engine.__isGecko__P_50_3()) {
           // Parse "rv" section in user agent string
           if (/rv\:([^\);]+)(\)|;)/.test(agent)) {
             version = RegExp.$1;
@@ -10496,13 +10492,13 @@
        */
       getName() {
         var name;
-        if (qx.bom.client.Engine.__isMshtml__P_63_0()) {
+        if (qx.bom.client.Engine.__isMshtml__P_50_0()) {
           name = "mshtml";
-        } else if (qx.bom.client.Engine.__isOpera__P_63_1()) {
+        } else if (qx.bom.client.Engine.__isOpera__P_50_1()) {
           name = "opera";
-        } else if (qx.bom.client.Engine.__isWebkit__P_63_2()) {
+        } else if (qx.bom.client.Engine.__isWebkit__P_50_2()) {
           name = "webkit";
-        } else if (qx.bom.client.Engine.__isGecko__P_63_3()) {
+        } else if (qx.bom.client.Engine.__isGecko__P_50_3()) {
           name = "gecko";
         } else {
           // check for the fallback
@@ -10524,14 +10520,14 @@
        *
        * @return {Boolean} true, if its opera (presto powered).
        */
-      __isOpera__P_63_1() {
+      __isOpera__P_50_1() {
         return window.opera && Object.prototype.toString.call(window.opera) == "[object Opera]";
       },
       /**
        * Internal helper for checking for webkit.
        * @return {Boolean} true, if its webkit.
        */
-      __isWebkit__P_63_2() {
+      __isWebkit__P_50_2() {
         return window.navigator.userAgent.indexOf("AppleWebKit/") != -1;
       },
       /**
@@ -10551,18 +10547,18 @@
        *
        * @return {Boolean} true, if its gecko.
        */
-      __isGecko__P_63_3() {
+      __isGecko__P_50_3() {
         return (window.navigator.mozApps || window.navigator.buildID) && window.navigator.product === "Gecko" && window.navigator.userAgent.indexOf("Trident") == -1;
       },
       /**
        * Internal helper to check for MSHTML.
        * @return {Boolean} true, if its MSHTML.
        */
-      __isMshtml__P_63_0() {
+      __isMshtml__P_50_0() {
         if (window.navigator.cpuClass && (/MSIE\s+([^\);]+)(\)|;)/.test(window.navigator.userAgent) || /Trident\/\d+?\.\d+?/.test(window.navigator.userAgent))) {
           return true;
         }
-        if (qx.bom.client.Engine.__isWindowsPhone__P_63_4()) {
+        if (qx.bom.client.Engine.__isWindowsPhone__P_50_4()) {
           return true;
         }
         return false;
@@ -10571,7 +10567,7 @@
        * Internal helper to check for Windows phone.
        * @return {Boolean} true, if its Windows phone.
        */
-      __isWindowsPhone__P_63_4() {
+      __isWindowsPhone__P_50_4() {
         return window.navigator.userAgent.indexOf("Windows Phone") > -1;
       }
     },
@@ -10668,7 +10664,7 @@
        * @return {String} The name of the current browser.
        */
       detectName(agent) {
-        var reg = new RegExp("(" + qx.bom.client.Browser.__agents__P_116_0 + ")(/|)?([0-9]+.[0-9])?");
+        var reg = new RegExp("(" + qx.bom.client.Browser.__agents__P_115_0 + ")(/|)?([0-9]+.[0-9])?");
         var match = agent.match(reg);
         if (!match) {
           return "";
@@ -10717,7 +10713,7 @@
        */
       getVersion() {
         var agent = navigator.userAgent;
-        var reg = new RegExp("(" + qx.bom.client.Browser.__agents__P_116_0 + ")(/| )([0-9]+.[0-9])");
+        var reg = new RegExp("(" + qx.bom.client.Browser.__agents__P_115_0 + ")(/| )([0-9]+.[0-9])");
         var match = agent.match(reg);
         if (!match) {
           return "";
@@ -10776,7 +10772,7 @@
       /**
        * Internal helper map for picking the right browser names to check.
        */
-      __agents__P_116_0: {
+      __agents__P_115_0: {
         // Safari should be the last one to check, because some other Webkit-based browsers
         // use this identifier together with their own one.
         // "Version" is used in Safari 4 to define the Safari version. After "Safari" they place the
@@ -11353,14 +11349,14 @@
    */
   qx.Bootstrap.define("qx.event.GlobalError", {
     statics: {
-      __callback__P_94_0: null,
-      __originalOnError__P_94_1: null,
-      __context__P_94_2: null,
+      __callback__P_98_0: null,
+      __originalOnError__P_98_1: null,
+      __context__P_98_2: null,
       /**
        * Little helper to check if the global error handling is enabled.
        * @return {Boolean} <code>true</code>, if it is enabled.
        */
-      __isGlobalErrorHandlingEnabled__P_94_3() {
+      __isGlobalErrorHandlingEnabled__P_98_3() {
         if (qx.core && qx.core.Environment) {
           return qx.core.Environment.get("qx.globalErrorHandling");
         } else {
@@ -11375,30 +11371,30 @@
        * @param context {Object?window} The "this" context of the callback function
        */
       setErrorHandler(callback, context) {
-        this.__callback__P_94_0 = callback || null;
-        this.__context__P_94_2 = context || window;
-        if (this.__isGlobalErrorHandlingEnabled__P_94_3()) {
+        this.__callback__P_98_0 = callback || null;
+        this.__context__P_98_2 = context || window;
+        if (this.__isGlobalErrorHandlingEnabled__P_98_3()) {
           // wrap the original onerror
           if (callback && window.onerror) {
-            var wrappedHandler = qx.Bootstrap.bind(this.__onErrorWindow__P_94_4, this);
-            if (this.__originalOnError__P_94_1 == null) {
-              this.__originalOnError__P_94_1 = window.onerror;
+            var wrappedHandler = qx.Bootstrap.bind(this.__onErrorWindow__P_98_4, this);
+            if (this.__originalOnError__P_98_1 == null) {
+              this.__originalOnError__P_98_1 = window.onerror;
             }
             var self = this;
             window.onerror = function (msg, uri, lineNumber) {
-              self.__originalOnError__P_94_1(msg, uri, lineNumber);
+              self.__originalOnError__P_98_1(msg, uri, lineNumber);
               wrappedHandler(msg, uri, lineNumber);
             };
           }
           if (callback && !window.onerror) {
-            window.onerror = qx.Bootstrap.bind(this.__onErrorWindow__P_94_4, this);
+            window.onerror = qx.Bootstrap.bind(this.__onErrorWindow__P_98_4, this);
           }
 
           // reset
-          if (this.__callback__P_94_0 == null) {
-            if (this.__originalOnError__P_94_1 != null) {
-              window.onerror = this.__originalOnError__P_94_1;
-              this.__originalOnError__P_94_1 = null;
+          if (this.__callback__P_98_0 == null) {
+            if (this.__originalOnError__P_98_1 != null) {
+              window.onerror = this.__originalOnError__P_98_1;
+              this.__originalOnError__P_98_1 = null;
             } else {
               window.onerror = null;
             }
@@ -11416,8 +11412,8 @@
        * @param columnNumber {Integer} column number of error
        * @param exception {Error} orginal error
        */
-      __onErrorWindow__P_94_4(msg, uri, lineNumber, columnNumber, exception) {
-        if (this.__callback__P_94_0) {
+      __onErrorWindow__P_98_4(msg, uri, lineNumber, columnNumber, exception) {
+        if (this.__callback__P_98_0) {
           this.handleError(new qx.core.WindowError(msg, uri, lineNumber, columnNumber, exception));
         }
       },
@@ -11429,10 +11425,10 @@
        * @return {Function} The function wrapped with error handling code
        */
       observeMethod(method) {
-        if (this.__isGlobalErrorHandlingEnabled__P_94_3()) {
+        if (this.__isGlobalErrorHandlingEnabled__P_98_3()) {
           var self = this;
           return function () {
-            if (!self.__callback__P_94_0) {
+            if (!self.__callback__P_98_0) {
               return method.apply(this, arguments);
             }
             try {
@@ -11451,8 +11447,8 @@
        * @param ex {qx.core.WindowError|Error} Exception to delegate
        */
       handleError(ex) {
-        if (this.__callback__P_94_0) {
-          this.__callback__P_94_0.call(this.__context__P_94_2, ex);
+        if (this.__callback__P_98_0) {
+          this.__callback__P_98_0.call(this.__context__P_98_2, ex);
         }
       }
     },
@@ -11561,9 +11557,9 @@
      */
     construct(win, registration) {
       // Assign window object
-      this.__window__P_130_0 = win;
-      this.__windowId__P_130_1 = qx.core.ObjectRegistry.toHashCode(win);
-      this.__registration__P_130_2 = registration;
+      this.__window__P_121_0 = win;
+      this.__windowId__P_121_1 = qx.core.ObjectRegistry.toHashCode(win);
+      this.__registration__P_121_2 = registration;
 
       // Register to the page unload event.
       // Only for iframes and other secondary documents.
@@ -11581,16 +11577,16 @@
       }
 
       // Registry for event listeners
-      this.__listeners__P_130_3 = new Map();
+      this.__listeners__P_121_3 = new Map();
 
       // The handler and dispatcher instances
-      this.__handlers__P_130_4 = {};
-      this.__dispatchers__P_130_5 = {};
-      this.__handlerCache__P_130_6 = {};
-      this.__clearBlackList__P_130_7 = new qx.util.DeferredCall(function () {
-        this.__blacklist__P_130_8 = null;
+      this.__handlers__P_121_4 = {};
+      this.__dispatchers__P_121_5 = {};
+      this.__handlerCache__P_121_6 = {};
+      this.__clearBlackList__P_121_7 = new qx.util.DeferredCall(function () {
+        this.__blacklist__P_121_8 = null;
       }, this);
-      this.__clearBlackList__P_130_7.$$blackListCleaner = true;
+      this.__clearBlackList__P_121_7.$$blackListCleaner = true;
     },
     /*
     *****************************************************************************
@@ -11600,7 +11596,7 @@
 
     statics: {
       /** @type {Integer} Last used ID for an event */
-      __lastUnique__P_130_9: 0,
+      __lastUnique__P_121_9: 0,
       /**
        * Returns an unique ID which may be used in combination with a target and
        * a type to identify an event entry.
@@ -11608,12 +11604,12 @@
        * @return {String} The next free identifier (auto-incremented)
        */
       getNextUniqueId() {
-        return this.__lastUnique__P_130_9++ + "";
+        return this.__lastUnique__P_121_9++ + "";
       },
       /**
        * @type {Array} private list of global event monitor functions
        */
-      __globalEventMonitors__P_130_10: [],
+      __globalEventMonitors__P_121_10: [],
       /**
        * Adds a global event monitor function which is called for each event fired
        * anywhere in the application. The function is called with the signature
@@ -11627,7 +11623,7 @@
       addGlobalEventMonitor(fn, context) {
         qx.core.Assert.assertFunction(fn);
         fn.$$context = context;
-        this.__globalEventMonitors__P_130_10.push(fn);
+        this.__globalEventMonitors__P_121_10.push(fn);
       },
       /**
        * Removes a global event monitor function that had
@@ -11636,13 +11632,13 @@
        */
       removeGlobalEventMonitor(fn) {
         qx.core.Assert.assertFunction(fn);
-        qx.lang.Array.remove(this.__globalEventMonitors__P_130_10, fn);
+        qx.lang.Array.remove(this.__globalEventMonitors__P_121_10, fn);
       },
       /**
        * Remove all registered event monitors
        */
       resetGlobalEventMonitors() {
-        qx.event.Manager.__globalEventMonitors__P_130_10 = [];
+        qx.event.Manager.__globalEventMonitors__P_121_10 = [];
       },
       /**
        * Returns the global event monitor. Not compatible with the {@link
@@ -11652,7 +11648,7 @@
        * @return {Function?} the global monitor function
        */
       getGlobalEventMonitor() {
-        return this.__globalEventMonitors__P_130_10[0];
+        return this.__globalEventMonitors__P_121_10[0];
       },
       /**
        * Sets the global event monitor. Not compatible with the {@link
@@ -11664,7 +11660,7 @@
        */
       setGlobalEventMonitor(fn) {
         qx.core.Assert.assertFunction(fn);
-        this.__globalEventMonitors__P_130_10[0] = fn;
+        this.__globalEventMonitors__P_121_10[0] = fn;
       }
     },
     /*
@@ -11674,16 +11670,16 @@
     */
 
     members: {
-      __registration__P_130_2: null,
-      __listeners__P_130_3: null,
-      __dispatchers__P_130_5: null,
-      __disposeWrapper__P_130_11: null,
-      __handlers__P_130_4: null,
-      __handlerCache__P_130_6: null,
-      __window__P_130_0: null,
-      __windowId__P_130_1: null,
-      __blacklist__P_130_8: null,
-      __clearBlackList__P_130_7: null,
+      __registration__P_121_2: null,
+      __listeners__P_121_3: null,
+      __dispatchers__P_121_5: null,
+      __disposeWrapper__P_121_11: null,
+      __handlers__P_121_4: null,
+      __handlerCache__P_121_6: null,
+      __window__P_121_0: null,
+      __windowId__P_121_1: null,
+      __blacklist__P_121_8: null,
+      __clearBlackList__P_121_7: null,
       /*
       ---------------------------------------------------------------------------
         HELPERS
@@ -11696,7 +11692,7 @@
        * @return {Window} DOM window instance
        */
       getWindow() {
-        return this.__window__P_130_0;
+        return this.__window__P_121_0;
       },
       /**
        * Get the hashcode of the manager's window
@@ -11704,7 +11700,7 @@
        * @return {String} The window's hashcode
        */
       getWindowId() {
-        return this.__windowId__P_130_1;
+        return this.__windowId__P_121_1;
       },
       /**
        * Returns an instance of the given handler class for this manager(window).
@@ -11713,11 +11709,11 @@
        * @return {Object} The instance used by this manager
        */
       getHandler(clazz) {
-        var handler = this.__handlers__P_130_4[clazz.classname];
+        var handler = this.__handlers__P_121_4[clazz.classname];
         if (handler) {
           return handler;
         }
-        return this.__handlers__P_130_4[clazz.classname] = new clazz(this);
+        return this.__handlers__P_121_4[clazz.classname] = new clazz(this);
       },
       /**
        * Returns an instance of the given dispatcher class for this manager(window).
@@ -11726,11 +11722,11 @@
        * @return {Object} The instance used by this manager
        */
       getDispatcher(clazz) {
-        var dispatcher = this.__dispatchers__P_130_5[clazz.classname];
+        var dispatcher = this.__dispatchers__P_121_5[clazz.classname];
         if (dispatcher) {
           return dispatcher;
         }
-        return this.__dispatchers__P_130_5[clazz.classname] = new clazz(this, this.__registration__P_130_2);
+        return this.__dispatchers__P_121_5[clazz.classname] = new clazz(this, this.__registration__P_121_2);
       },
       /*
       ---------------------------------------------------------------------------
@@ -11754,7 +11750,7 @@
        */
       getListeners(target, type, capture) {
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           return null;
         }
@@ -11793,34 +11789,30 @@
        * @return {Object} All registered listeners. The key is the hash code for an object.
        */
       getAllListeners() {
-        return Object.fromEntries(this.__listeners__P_130_3.entries().map(_ref => {
-          let [targetKey, targetMap] = _ref;
-          return [targetKey, Object.fromEntries(targetMap.entries().map(_ref2 => {
-            let [entryKey, entryMap] = _ref2;
-            var listeners = [...entryMap.values()];
-            var proxy = new Proxy(listeners, {
-              deleteProperty(target, property) {
-                if (property !== "length") {
-                  var listener = target[property];
-                  entryMap.delete(listener.unique);
-                }
-                delete target[property];
-                return true;
-              },
-              set(target, property, value, receiver) {
-                if (property !== "length") {
-                  if (!value.unique) {
-                    throw new Error("Cannot store a listener without a unique id. Use addListener()");
-                  }
-                  entryMap[value.unique] = value;
-                }
-                target[property] = value;
-                return true;
+        return Object.fromEntries(this.__listeners__P_121_3.entries().map(([targetKey, targetMap]) => [targetKey, Object.fromEntries(targetMap.entries().map(([entryKey, entryMap]) => {
+          var listeners = [...entryMap.values()];
+          var proxy = new Proxy(listeners, {
+            deleteProperty(target, property) {
+              if (property !== "length") {
+                var listener = target[property];
+                entryMap.delete(listener.unique);
               }
-            });
-            return [entryKey, proxy];
-          }))];
-        }));
+              delete target[property];
+              return true;
+            },
+            set(target, property, value, receiver) {
+              if (property !== "length") {
+                if (!value.unique) {
+                  throw new Error("Cannot store a listener without a unique id. Use addListener()");
+                }
+                entryMap[value.unique] = value;
+              }
+              target[property] = value;
+              return true;
+            }
+          });
+          return [entryKey, proxy];
+        }))]));
       },
       /**
        * Returns a serialized array of all events attached on the given target.
@@ -11831,7 +11823,7 @@
        */
       serializeListeners(target) {
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         var result = [];
         if (targetMap) {
           var indexOf, type, capture;
@@ -11864,7 +11856,7 @@
        */
       toggleAttachedEvents(target, enable) {
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (targetMap) {
           var indexOf, type, capture;
           for (const entryKey of targetMap.keys()) {
@@ -11873,9 +11865,9 @@
             capture = entryKey.charCodeAt(indexOf + 1) === 99; // checking for character "c".
 
             if (enable) {
-              this.__registerAtHandler__P_130_12(target, type, capture);
+              this.__registerAtHandler__P_121_12(target, type, capture);
             } else {
-              this.__unregisterAtHandler__P_130_13(target, type, capture);
+              this.__unregisterAtHandler__P_121_13(target, type, capture);
             }
           }
         }
@@ -11898,7 +11890,7 @@
           }
         }
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           return false;
         }
@@ -11929,10 +11921,10 @@
           }
         }
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           targetMap = new Map();
-          this.__listeners__P_130_3.set(targetKey, targetMap);
+          this.__listeners__P_121_3.set(targetKey, targetMap);
         }
         for (var listKey in list) {
           var item = list[listKey];
@@ -11946,7 +11938,7 @@
             // This is the first event listener for this type and target
             // Inform the event handler about the new event
             // they perform the event registration at DOM level if needed
-            this.__registerAtHandler__P_130_12(target, item.type, item.capture);
+            this.__registerAtHandler__P_121_12(target, item.type, item.capture);
           }
 
           // Add listener to map
@@ -11989,10 +11981,10 @@
           }
         }
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           targetMap = new Map();
-          this.__listeners__P_130_3.set(targetKey, targetMap);
+          this.__listeners__P_121_3.set(targetKey, targetMap);
         }
         var entryKey = type + (capture ? "|capture" : "|bubble");
         var entryMap = targetMap.get(entryKey);
@@ -12004,7 +11996,7 @@
           // This is the first event listener for this type and target
           // Inform the event handler about the new event
           // they perform the event registration at DOM level if needed
-          this.__registerAtHandler__P_130_12(target, type, capture);
+          this.__registerAtHandler__P_121_12(target, type, capture);
         }
 
         // Add listener to map
@@ -12041,7 +12033,7 @@
         // Please note:
         // Identical operator does not work in IE (as of version 7) because
         // document.parentWindow is not identical to window. Crazy stuff.
-        else if (target == this.__window__P_130_0) {
+        else if (target == this.__window__P_121_0) {
           isWindow = true;
           key = "WIN_" + type;
         } else if (target.classname) {
@@ -12050,11 +12042,11 @@
         } else {
           key = "UNKNOWN_" + target + "_" + type;
         }
-        var cache = this.__handlerCache__P_130_6;
+        var cache = this.__handlerCache__P_121_6;
         if (cache[key]) {
           return cache[key];
         }
-        var classes = this.__registration__P_130_2.getHandlers();
+        var classes = this.__registration__P_121_2.getHandlers();
         var IEventHandler = qx.event.IEventHandler;
         var clazz, instance, supportedTypes, targetCheck;
         for (var i = 0, l = classes.length; i < l; i++) {
@@ -12102,7 +12094,7 @@
        *         capturing phase or the bubbling phase of the event.
        * @throws {Error} if there is no handler for the event
        */
-      __registerAtHandler__P_130_12(target, type, capture) {
+      __registerAtHandler__P_121_12(target, type, capture) {
         var handler = this.findHandler(target, type);
         if (handler) {
           handler.registerEvent(target, type, capture);
@@ -12139,7 +12131,7 @@
           }
         }
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           return false;
         }
@@ -12149,15 +12141,12 @@
           return false;
         }
         var deleted = false;
-        for (const [entryKey, entry] of entryMap.entries().filter(_ref3 => {
-          let [eK, e] = _ref3;
-          return e.handler === listener && e.context === self;
-        })) {
+        for (const [entryKey, entry] of entryMap.entries().filter(([eK, e]) => e.handler === listener && e.context === self)) {
           deleted = true;
           entryMap.delete(entryKey);
-          this.__addToBlacklist__P_130_14(entryKey);
+          this.__addToBlacklist__P_121_14(entryKey);
           if (entryMap.size === 0) {
-            this.__unregisterAtHandler__P_130_13(target, type, capture);
+            this.__unregisterAtHandler__P_121_13(target, type, capture);
           }
         }
         return deleted;
@@ -12181,7 +12170,7 @@
         var capture = split[1].charCodeAt(0) === 99; // detect leading "c"
         var unique = split[2];
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           return false;
         }
@@ -12193,9 +12182,9 @@
         var entry = entryMap.get(unique);
         if (entry) {
           entryMap.delete(unique);
-          this.__addToBlacklist__P_130_14(entry.unique);
+          this.__addToBlacklist__P_121_14(entry.unique);
           if (entryMap.size === 0) {
-            this.__unregisterAtHandler__P_130_13(target, type, capture);
+            this.__unregisterAtHandler__P_121_13(target, type, capture);
           }
           return true;
         }
@@ -12209,7 +12198,7 @@
        */
       removeAllListeners(target) {
         var targetKey = target.$$hash || qx.core.ObjectRegistry.toHashCode(target);
-        var targetMap = this.__listeners__P_130_3.get(targetKey);
+        var targetMap = this.__listeners__P_121_3.get(targetKey);
         if (!targetMap) {
           return false;
         }
@@ -12221,15 +12210,15 @@
             // This is quite expensive, see bug #1283
             split = entryKey.split("|");
             for (const uniqueKey of entryMap.keys()) {
-              this.__addToBlacklist__P_130_14(uniqueKey);
+              this.__addToBlacklist__P_121_14(uniqueKey);
             }
             entryMap.clear();
             type = split[0];
             capture = split[1] === "capture";
-            this.__unregisterAtHandler__P_130_13(target, type, capture);
+            this.__unregisterAtHandler__P_121_13(target, type, capture);
           }
         }
-        this.__listeners__P_130_3.delete(targetKey);
+        this.__listeners__P_121_3.delete(targetKey);
         return true;
       },
       /**
@@ -12242,7 +12231,7 @@
        * @internal
        */
       deleteAllListeners(targetKey) {
-        this.__listeners__P_130_3.delete(targetKey);
+        this.__listeners__P_121_3.delete(targetKey);
       },
       /**
        * This method is called each time the an event listener for one of the
@@ -12255,7 +12244,7 @@
        *         capturing phase or the bubbling phase of the event.
        * @throws {Error} if there is no handler for the event
        */
-      __unregisterAtHandler__P_130_13(target, type, capture) {
+      __unregisterAtHandler__P_121_13(target, type, capture) {
         var handler = this.findHandler(target, type);
         if (handler) {
           handler.unregisterEvent(target, type, capture);
@@ -12294,7 +12283,7 @@
         }
 
         // Show the decentrally fired events to one or more global monitor functions
-        var monitors = qx.event.Manager.__globalEventMonitors__P_130_10;
+        var monitors = qx.event.Manager.__globalEventMonitors__P_121_10;
         if (monitors.length) {
           for (var i = 0; i < monitors.length; i++) {
             var preventDefault = event.getDefaultPrevented();
@@ -12324,7 +12313,7 @@
         }
 
         // Interacion data
-        var classes = this.__registration__P_130_2.getDispatchers();
+        var classes = this.__registration__P_121_2.getDispatchers();
         var instance;
 
         // Loop through the dispatchers
@@ -12360,25 +12349,25 @@
        */
       dispose() {
         // Remove from manager list
-        this.__registration__P_130_2.removeManager(this);
-        qx.util.DisposeUtil.disposeMap(this, "__handlers__P_130_4");
-        qx.util.DisposeUtil.disposeMap(this, "__dispatchers__P_130_5");
+        this.__registration__P_121_2.removeManager(this);
+        qx.util.DisposeUtil.disposeMap(this, "__handlers__P_121_4");
+        qx.util.DisposeUtil.disposeMap(this, "__dispatchers__P_121_5");
 
         // Dispose data fields
-        this.__listeners__P_130_3 = this.__window__P_130_0 = this.__disposeWrapper__P_130_11 = null;
-        this.__registration__P_130_2 = this.__handlerCache__P_130_6 = null;
+        this.__listeners__P_121_3 = this.__window__P_121_0 = this.__disposeWrapper__P_121_11 = null;
+        this.__registration__P_121_2 = this.__handlerCache__P_121_6 = null;
       },
       /**
        * Add event to blacklist.
        *
        * @param uid {String} unique event id
        */
-      __addToBlacklist__P_130_14(uid) {
-        if (this.__blacklist__P_130_8 === null) {
-          this.__blacklist__P_130_8 = {};
-          this.__clearBlackList__P_130_7.schedule();
+      __addToBlacklist__P_121_14(uid) {
+        if (this.__blacklist__P_121_8 === null) {
+          this.__blacklist__P_121_8 = {};
+          this.__clearBlackList__P_121_7.schedule();
         }
-        this.__blacklist__P_130_8[uid] = true;
+        this.__blacklist__P_121_8[uid] = true;
       },
       /**
        * Check if the event with the given id has been removed and is therefore blacklisted for event handling
@@ -12387,7 +12376,7 @@
        * @return {boolean}
        */
       isBlacklisted(uid) {
-        return this.__blacklist__P_130_8 !== null && this.__blacklist__P_130_8[uid] === true;
+        return this.__blacklist__P_121_8 !== null && this.__blacklist__P_121_8[uid] === true;
       }
     }
   });
@@ -15137,41 +15126,14 @@
        */
       isArray: qx.Bootstrap.isArray,
       /**
+       * Whether the value is an object. Note that built-in types like Window are
+       * not reported to be objects.
        *
-       * Whether the value is an POJO (ie {})
-       * or an object which is created from a ES6-style class or prototypical-inheritance-based class;
-       * if you need to determine whether something is a POJO and not created from a class, use isPojo instead
-       *
-       * Note that built-in types like Window are not deemed to be objects.
        * @signature function(value)
-       * @param {*} value value to check.
+       * @param value {var} Value to check.
        * @return {Boolean} Whether the value is an object.
        */
       isObject: qx.Bootstrap.isObject,
-      /**
-       * Whether the value is strictly a POJO.
-       * Its prototype chain must not contain any constructors which are not the Object constructor i.e. traditional prototype-based classes or ES6 classes.
-       *
-       * @param {*} value
-       * @returns {Boolean} Whether the value is strictly a POJO.
-       */
-      isPojo(value) {
-        if (qx.Bootstrap.getClass(value) != "Object") {
-          return false;
-        }
-        let prototype = Object.getPrototypeOf(value);
-        while (true) {
-          if (prototype === Object.prototype) {
-            return true;
-          }
-          if (prototype.constructor && prototype.constructor !== Object.prototype.constructor) {
-            return false;
-          }
-
-          //loop tail
-          prototype = Object.getPrototypeOf(prototype);
-        }
-      },
       /**
        * Whether the value is a function.
        *
@@ -15323,7 +15285,7 @@
    */
   qx.Bootstrap.define("qx.core.Assert", {
     statics: {
-      __logError__P_53_0: true,
+      __logError__P_39_0: true,
       /**
        * Assert that the condition evaluates to <code>true</code>. An
        * {@link AssertionError} is thrown if otherwise.
@@ -15339,12 +15301,12 @@
        *                         (much better performance)
        *
        */
-      __fail__P_53_1(comment, msgvarargs) {
+      __fail__P_39_1(comment, msgvarargs) {
         // Build up message from message varargs. It's not really important
         // how long this takes as it is done only when assertion is triggered
         var msg = "";
         for (var i = 1, l = arguments.length; i < l; i++) {
-          msg = msg + this.__toString__P_53_2(arguments[i] === undefined ? "'undefined'" : arguments[i]);
+          msg = msg + this.__toString__P_39_2(arguments[i] === undefined ? "'undefined'" : arguments[i]);
         }
         var fullComment = "";
         if (msg) {
@@ -15355,12 +15317,12 @@
         var errorMsg = "Assertion error! " + fullComment;
         if (qx.Class && qx.Class.isDefined("qx.core.AssertionError")) {
           var err = new qx.core.AssertionError(comment, msg);
-          if (this.__logError__P_53_0) {
+          if (this.__logError__P_39_0) {
             qx.Bootstrap.error(errorMsg + "\n Stack trace: \n" + err.getStackTrace());
           }
           throw err;
         } else {
-          if (this.__logError__P_53_0) {
+          if (this.__logError__P_39_0) {
             qx.Bootstrap.error(errorMsg);
           }
           throw new Error(errorMsg);
@@ -15372,7 +15334,7 @@
        * @param value {var} any value
        * @return {String} a string representation of the value
        */
-      __toString__P_53_2(value) {
+      __toString__P_39_2(value) {
         var stringValue;
         if (value === null) {
           stringValue = "null";
@@ -15397,7 +15359,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assert(condition, msg) {
-        condition == true || this.__fail__P_53_1(msg || "", "Called assert with 'false'");
+        condition == true || this.__fail__P_39_1(msg || "", "Called assert with 'false'");
       },
       /**
        * Raise an {@link AssertionError}.
@@ -15407,7 +15369,7 @@
        */
       fail(msg, compact) {
         var msgvarargs = compact ? "" : "Called fail().";
-        this.__fail__P_53_1(msg || "", msgvarargs);
+        this.__fail__P_39_1(msg || "", msgvarargs);
       },
       /**
        * Assert that the value is <code>true</code> (Identity check).
@@ -15417,7 +15379,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertTrue(value, msg) {
-        value === true || this.__fail__P_53_1(msg || "", "Called assertTrue with '", value, "'");
+        value === true || this.__fail__P_39_1(msg || "", "Called assertTrue with '", value, "'");
       },
       /**
        * Assert that the value is <code>false</code> (Identity check).
@@ -15427,7 +15389,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertFalse(value, msg) {
-        value === false || this.__fail__P_53_1(msg || "", "Called assertFalse with '", value, "'");
+        value === false || this.__fail__P_39_1(msg || "", "Called assertFalse with '", value, "'");
       },
       /**
        * Assert that both values are equal. (Uses the equality operator
@@ -15438,7 +15400,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertEquals(expected, found, msg) {
-        expected == found || this.__fail__P_53_1(msg || "", "Expected '", expected, "' but found '", found, "'!");
+        expected == found || this.__fail__P_39_1(msg || "", "Expected '", expected, "' but found '", found, "'!");
       },
       /**
        * Assert that both values are not equal. (Uses the not equality operator
@@ -15449,7 +15411,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNotEquals(expected, found, msg) {
-        expected != found || this.__fail__P_53_1(msg || "", "Expected '", expected, "' to be not equal with '", found, "'!");
+        expected != found || this.__fail__P_39_1(msg || "", "Expected '", expected, "' to be not equal with '", found, "'!");
       },
       /**
        * Assert that both float values are equal. This might be needed because
@@ -15462,7 +15424,7 @@
       assertEqualsFloat(expected, found, msg) {
         this.assertNumber(expected);
         this.assertNumber(found);
-        qx.lang.Number.equals(expected, found) || this.__fail__P_53_1(msg || "", "Expected '", expected, "' to be equal with '", found, "'!");
+        qx.lang.Number.equals(expected, found) || this.__fail__P_39_1(msg || "", "Expected '", expected, "' to be equal with '", found, "'!");
       },
       /**
        * Assert that both float values are not equal. This might be needed
@@ -15475,7 +15437,7 @@
       assertNotEqualsFloat(expected, found, msg) {
         this.assertNumber(expected);
         this.assertNumber(found);
-        !qx.lang.Number.equals(expected, found) || this.__fail__P_53_1(msg || "", "Expected '", expected, "' to be not equal with '", found, "'!");
+        !qx.lang.Number.equals(expected, found) || this.__fail__P_39_1(msg || "", "Expected '", expected, "' to be not equal with '", found, "'!");
       },
       /**
        * Assert that both values are identical. (Uses the identity operator
@@ -15486,7 +15448,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertIdentical(expected, found, msg) {
-        expected === found || this.__fail__P_53_1(msg || "", "Expected '", expected, "' (identical) but found '", found, "'!");
+        expected === found || this.__fail__P_39_1(msg || "", "Expected '", expected, "' (identical) but found '", found, "'!");
       },
       /**
        * Assert that both values are not identical. (Uses the not identity operator
@@ -15497,7 +15459,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNotIdentical(expected, found, msg) {
-        expected !== found || this.__fail__P_53_1(msg || "", "Expected '", expected, "' to be not identical with '", found, "'!");
+        expected !== found || this.__fail__P_39_1(msg || "", "Expected '", expected, "' to be not identical with '", found, "'!");
       },
       /**
        * Assert that the value is not <code>undefined</code>.
@@ -15506,7 +15468,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNotUndefined(value, msg) {
-        value !== undefined || this.__fail__P_53_1(msg || "", "Expected value not to be undefined but found undefined!");
+        value !== undefined || this.__fail__P_39_1(msg || "", "Expected value not to be undefined but found undefined!");
       },
       /**
        * Assert that the value is <code>undefined</code>.
@@ -15515,7 +15477,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertUndefined(value, msg) {
-        value === undefined || this.__fail__P_53_1(msg || "", "Expected value to be undefined but found ", value, "!");
+        value === undefined || this.__fail__P_39_1(msg || "", "Expected value to be undefined but found ", value, "!");
       },
       /**
        * Assert that the value is not <code>null</code>.
@@ -15524,7 +15486,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNotNull(value, msg) {
-        value !== null || this.__fail__P_53_1(msg || "", "Expected value not to be null but found null!");
+        value !== null || this.__fail__P_39_1(msg || "", "Expected value not to be null but found null!");
       },
       /**
        * Assert that the value is <code>null</code>.
@@ -15533,7 +15495,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNull(value, msg) {
-        value === null || this.__fail__P_53_1(msg || "", "Expected value to be null but found ", value, "!");
+        value === null || this.__fail__P_39_1(msg || "", "Expected value to be null but found ", value, "!");
       },
       /**
        * Assert that the first two arguments are equal, when serialized into
@@ -15556,7 +15518,7 @@
       assertMatch(str, re, msg) {
         this.assertString(str);
         this.assert(qx.lang.Type.isRegExp(re) || qx.lang.Type.isString(re), "The parameter 're' must be a string or a regular expression.");
-        str.search(re) >= 0 || this.__fail__P_53_1(msg || "", "The String '", str, "' does not match the regular expression '", re.toString(), "'!");
+        str.search(re) >= 0 || this.__fail__P_39_1(msg || "", "The String '", str, "' does not match the regular expression '", re.toString(), "'!");
       },
       /**
        * Assert that the number of arguments is within the given range
@@ -15568,7 +15530,7 @@
        */
       assertArgumentsCount(args, minCount, maxCount, msg) {
         var argCount = args.length;
-        argCount >= minCount && argCount <= maxCount || this.__fail__P_53_1(msg || "", "Wrong number of arguments given. Expected '", minCount, "' to '", maxCount, "' arguments but found '", argCount, "' arguments.");
+        argCount >= minCount && argCount <= maxCount || this.__fail__P_39_1(msg || "", "Wrong number of arguments given. Expected '", minCount, "' to '", maxCount, "' arguments but found '", argCount, "' arguments.");
       },
       /**
        * Assert that an event is fired.
@@ -15602,7 +15564,7 @@
             /* ignore */
           }
         }
-        called === true || this.__fail__P_53_1(msg || "", "Event (", event, ") not fired.");
+        called === true || this.__fail__P_39_1(msg || "", "Event (", event, ") not fired.");
       },
       /**
        * Assert that an event is not fired.
@@ -15620,7 +15582,7 @@
         };
         var id = obj.addListener(event, listener, obj);
         invokeFunc.call();
-        called === false || this.__fail__P_53_1(msg || "", "Event (", event, ") was fired.");
+        called === false || this.__fail__P_39_1(msg || "", "Event (", event, ") was fired.");
         obj.removeListenerById(id);
       },
       /**
@@ -15638,17 +15600,17 @@
         var exception = exception || Error;
         var error;
         try {
-          this.__logError__P_53_0 = false;
+          this.__logError__P_39_0 = false;
           callback();
         } catch (ex) {
           error = ex;
         } finally {
-          this.__logError__P_53_0 = true;
+          this.__logError__P_39_0 = true;
         }
         if (error == null) {
-          this.__fail__P_53_1(msg || "", "The function did not raise an exception!");
+          this.__fail__P_39_1(msg || "", "The function did not raise an exception!");
         }
-        error instanceof exception || this.__fail__P_53_1(msg || "", "The raised exception does not have the expected type! ", exception, " != ", error);
+        error instanceof exception || this.__fail__P_39_1(msg || "", "The raised exception does not have the expected type! ", exception, " != ", error);
         if (re) {
           this.assertMatch(error.toString(), re, msg);
         }
@@ -15661,7 +15623,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertInArray(value, array, msg) {
-        array.indexOf(value) !== -1 || this.__fail__P_53_1(msg || "", "The value '", value, "' must have any of the values defined in the array '", array, "'");
+        array.indexOf(value) !== -1 || this.__fail__P_39_1(msg || "", "The value '", value, "' must have any of the values defined in the array '", array, "'");
       },
       /**
        * Assert that the value is NOT an item in the given array
@@ -15671,7 +15633,7 @@
        * @param msg {String?} Message to be shown if the assertion fails
        */
       assertNotInArray(value, array, msg) {
-        array.indexOf(value) === -1 || this.__fail__P_53_1(msg || "", qx.lang.String.format("The value '%1' must not have any of the values defined in the array '%2'", [value, array]));
+        array.indexOf(value) === -1 || this.__fail__P_39_1(msg || "", qx.lang.String.format("The value '%1' must not have any of the values defined in the array '%2'", [value, array]));
       },
       /**
        * Assert that both array have identical array items.
@@ -15701,7 +15663,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertKeyInMap(value, map, msg) {
-        map[value] !== undefined || this.__fail__P_53_1(msg || "", "The value '", value, "' must must be a key of the map '", map, "'");
+        map[value] !== undefined || this.__fail__P_39_1(msg || "", "The value '", value, "' must must be a key of the map '", map, "'");
       },
       /**
        * Assert that the value is a function.
@@ -15710,7 +15672,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertFunction(value, msg) {
-        qx.lang.Type.isFunction(value) || this.__fail__P_53_1(msg || "", "Expected value to be typeof function but found ", value, "!");
+        qx.lang.Type.isFunction(value) || this.__fail__P_39_1(msg || "", "Expected value to be typeof function but found ", value, "!");
       },
       /**
        * Assert that the value is a function or an async function.
@@ -15719,7 +15681,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertFunctionOrAsyncFunction(value, msg) {
-        qx.lang.Type.isFunctionOrAsyncFunction(value) || this.__fail__P_53_1(msg || "", "Expected value to be typeof function or typeof async function but found ", value, "!");
+        qx.lang.Type.isFunctionOrAsyncFunction(value) || this.__fail__P_39_1(msg || "", "Expected value to be typeof function or typeof async function but found ", value, "!");
       },
       /**
        * Assert that the value is a string.
@@ -15728,7 +15690,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertString(value, msg) {
-        qx.lang.Type.isString(value) || this.__fail__P_53_1(msg || "", "Expected value to be a string but found ", value, "!");
+        qx.lang.Type.isString(value) || this.__fail__P_39_1(msg || "", "Expected value to be a string but found ", value, "!");
       },
       /**
        * Assert that the value is a boolean.
@@ -15737,7 +15699,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertBoolean(value, msg) {
-        qx.lang.Type.isBoolean(value) || this.__fail__P_53_1(msg || "", "Expected value to be a boolean but found ", value, "!");
+        qx.lang.Type.isBoolean(value) || this.__fail__P_39_1(msg || "", "Expected value to be a boolean but found ", value, "!");
       },
       /**
        * Assert that the value is a number.
@@ -15746,7 +15708,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertNumber(value, msg) {
-        qx.lang.Type.isNumber(value) && isFinite(value) || this.__fail__P_53_1(msg || "", "Expected value to be a number but found ", value, "!");
+        qx.lang.Type.isNumber(value) && isFinite(value) || this.__fail__P_39_1(msg || "", "Expected value to be a number but found ", value, "!");
       },
       /**
        * Assert that the value is a number >= 0.
@@ -15755,7 +15717,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertPositiveNumber(value, msg) {
-        qx.lang.Type.isNumber(value) && isFinite(value) && value >= 0 || this.__fail__P_53_1(msg || "", "Expected value to be a number >= 0 but found ", value, "!");
+        qx.lang.Type.isNumber(value) && isFinite(value) && value >= 0 || this.__fail__P_39_1(msg || "", "Expected value to be a number >= 0 but found ", value, "!");
       },
       /**
        * Assert that the value is an integer.
@@ -15764,7 +15726,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertInteger(value, msg) {
-        qx.lang.Type.isNumber(value) && isFinite(value) && value % 1 === 0 || this.__fail__P_53_1(msg || "", "Expected value to be an integer but found ", value, "!");
+        qx.lang.Type.isNumber(value) && isFinite(value) && value % 1 === 0 || this.__fail__P_39_1(msg || "", "Expected value to be an integer but found ", value, "!");
       },
       /**
        * Assert that the value is an integer >= 0.
@@ -15774,7 +15736,7 @@
        */
       assertPositiveInteger(value, msg) {
         var condition = qx.lang.Type.isNumber(value) && isFinite(value) && value % 1 === 0 && value >= 0;
-        condition || this.__fail__P_53_1(msg || "", "Expected value to be an integer >= 0 but found ", value, "!");
+        condition || this.__fail__P_39_1(msg || "", "Expected value to be an integer >= 0 but found ", value, "!");
       },
       /**
        * Assert that the value is inside the given range.
@@ -15785,7 +15747,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertInRange(value, min, max, msg) {
-        value >= min && value <= max || this.__fail__P_53_1(msg || "", qx.lang.String.format("Expected value '%1' to be in the range '%2'..'%3'!", [value, min, max]));
+        value >= min && value <= max || this.__fail__P_39_1(msg || "", qx.lang.String.format("Expected value '%1' to be in the range '%2'..'%3'!", [value, min, max]));
       },
       /**
        * Assert that the value is an object.
@@ -15795,7 +15757,7 @@
        */
       assertObject(value, msg) {
         var condition = value !== null && (qx.lang.Type.isObject(value) || typeof value === "object");
-        condition || this.__fail__P_53_1(msg || "", "Expected value to be typeof object but found ", value, "!");
+        condition || this.__fail__P_39_1(msg || "", "Expected value to be typeof object but found ", value, "!");
       },
       /**
        * Assert that the value is an array.
@@ -15804,7 +15766,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertArray(value, msg) {
-        qx.lang.Type.isArray(value) || this.__fail__P_53_1(msg || "", "Expected value to be an array but found ", value, "!");
+        qx.lang.Type.isArray(value) || this.__fail__P_39_1(msg || "", "Expected value to be an array but found ", value, "!");
       },
       /**
        * Assert that the value is a map either created using <code>new Object</code>
@@ -15814,7 +15776,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertMap(value, msg) {
-        qx.lang.Type.isObject(value) || this.__fail__P_53_1(msg || "", "Expected value to be a map but found ", value, "!");
+        qx.lang.Type.isObject(value) || this.__fail__P_39_1(msg || "", "Expected value to be a map but found ", value, "!");
       },
       /**
        * Assert that the value is a regular expression.
@@ -15823,7 +15785,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertRegExp(value, msg) {
-        qx.lang.Type.isRegExp(value) || this.__fail__P_53_1(msg || "", "Expected value to be a regular expression but found ", value, "!");
+        qx.lang.Type.isRegExp(value) || this.__fail__P_39_1(msg || "", "Expected value to be a regular expression but found ", value, "!");
       },
       /**
        * Assert that the value has the given type using the <code>typeof</code>
@@ -15837,7 +15799,7 @@
        */
       assertType(value, type, msg) {
         this.assertString(type, "Invalid argument 'type'");
-        typeof value === type || this.__fail__P_53_1(msg || "", "Expected value to be typeof '", type, "' but found ", value, "!");
+        typeof value === type || this.__fail__P_39_1(msg || "", "Expected value to be typeof '", type, "' but found ", value, "!");
       },
       /**
        * Assert that the value is an instance of the given class.
@@ -15848,7 +15810,7 @@
        */
       assertInstance(value, clazz, msg) {
         var className = clazz.classname || clazz + "";
-        value instanceof clazz || this.__fail__P_53_1(msg || "", "Expected value to be instanceof '", className, "' but found ", value, "!");
+        value instanceof clazz || this.__fail__P_39_1(msg || "", "Expected value to be instanceof '", className, "' but found ", value, "!");
       },
       /**
        * Assert that the value implements the given interface.
@@ -15858,7 +15820,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertInterface(value, iface, msg) {
-        qx.Class && qx.Class.implementsInterface(value, iface) || this.__fail__P_53_1(msg || "", "Expected object '", value, "' to implement the interface '", iface, "'!");
+        qx.Class && qx.Class.implementsInterface(value, iface) || this.__fail__P_39_1(msg || "", "Expected object '", value, "' to implement the interface '", iface, "'!");
       },
       /**
        * Assert that the value represents the given CSS color value. This method
@@ -15878,10 +15840,10 @@
         try {
           var valueRgb = ColorUtil.stringToRgb(value);
         } catch (ex) {
-          this.__fail__P_53_1(msg || "", "Expected value to be the CSS color '", expected, "' (rgb(", expectedRgb.join(","), ")), but found value '", value, "', which cannot be converted to a CSS color!");
+          this.__fail__P_39_1(msg || "", "Expected value to be the CSS color '", expected, "' (rgb(", expectedRgb.join(","), ")), but found value '", value, "', which cannot be converted to a CSS color!");
         }
         var condition = expectedRgb[0] == valueRgb[0] && expectedRgb[1] == valueRgb[1] && expectedRgb[2] == valueRgb[2];
-        condition || this.__fail__P_53_1(msg || "", "Expected value to be the CSS color '", expectedRgb, "' (rgb(", expectedRgb.join(","), ")), but found value '", value, "' (rgb(", valueRgb.join(","), "))!");
+        condition || this.__fail__P_39_1(msg || "", "Expected value to be the CSS color '", expectedRgb, "' (rgb(", expectedRgb.join(","), ")), but found value '", value, "' (rgb(", valueRgb.join(","), "))!");
       },
       /**
        * Assert that the value is a DOM element.
@@ -15891,7 +15853,7 @@
        */
       assertElement(value, msg) {
         // see qx.dom.Node.isElement
-        !!(value && value.nodeType === 1) || this.__fail__P_53_1(msg || "", "Expected value to be a DOM element but found  '", value, "'!");
+        !!(value && value.nodeType === 1) || this.__fail__P_39_1(msg || "", "Expected value to be a DOM element but found  '", value, "'!");
       },
       /**
        * Assert that the value is an instance of {@link qx.core.Object}.
@@ -15900,7 +15862,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertQxObject(value, msg) {
-        this.__isQxInstance__P_53_3(value, "qx.core.Object") || this.__fail__P_53_1(msg || "", "Expected value to be a qooxdoo object but found ", value, "!");
+        this.__isQxInstance__P_39_3(value, "qx.core.Object") || this.__fail__P_39_1(msg || "", "Expected value to be a qooxdoo object but found ", value, "!");
       },
       /**
        * Assert that the value is an instance of {@link qx.ui.core.Widget}.
@@ -15909,7 +15871,7 @@
        * @param msg {String?} Message to be shown if the assertion fails.
        */
       assertQxWidget(value, msg) {
-        this.__isQxInstance__P_53_3(value, "qx.ui.core.Widget") || this.__fail__P_53_1(msg || "", "Expected value to be a qooxdoo widget but found ", value, "!");
+        this.__isQxInstance__P_39_3(value, "qx.ui.core.Widget") || this.__fail__P_39_1(msg || "", "Expected value to be a qooxdoo widget but found ", value, "!");
       },
       /**
        * Internal helper for checking the instance of a qooxdoo object using the
@@ -15920,7 +15882,7 @@
        * @return {Boolean} <code>true</code> if the object is an instance of the
        * class
        */
-      __isQxInstance__P_53_3(object, classname) {
+      __isQxInstance__P_39_3(object, classname) {
         if (!object) {
           return false;
         }
@@ -16539,7 +16501,7 @@
     */
 
     members: {
-      __Property__P_48_0: true ? qx.core.Property : null,
+      __Property__P_63_0: true ? qx.core.Property : null,
       /*
       ---------------------------------------------------------------------------
         BASICS
@@ -16652,8 +16614,8 @@
         var clazz = this.constructor;
         var clone = new clazz();
         var props = qx.Class.getProperties(clazz);
-        var user = this.__Property__P_48_0.$$store.user;
-        var setter = this.__Property__P_48_0.$$method.set;
+        var user = this.__Property__P_63_0.$$store.user;
+        var setter = this.__Property__P_63_0.$$method.set;
         var name;
 
         // Iterate through properties
@@ -16674,7 +16636,7 @@
       */
 
       /** @type {Map} stored user data */
-      __userData__P_48_1: null,
+      __userData__P_63_1: null,
       /**
        * Store user defined data inside the object.
        *
@@ -16682,10 +16644,10 @@
        * @param value {Object} the value of the user data
        */
       setUserData(key, value) {
-        if (!this.__userData__P_48_1) {
-          this.__userData__P_48_1 = {};
+        if (!this.__userData__P_63_1) {
+          this.__userData__P_63_1 = {};
         }
-        this.__userData__P_48_1[key] = value;
+        this.__userData__P_63_1[key] = value;
       },
       /**
        * Load user defined data from the object
@@ -16694,17 +16656,17 @@
        * @return {Object} the user data
        */
       getUserData(key) {
-        if (!this.__userData__P_48_1) {
+        if (!this.__userData__P_63_1) {
           return null;
         }
-        var data = this.__userData__P_48_1[key];
+        var data = this.__userData__P_63_1[key];
         return data === undefined ? null : data;
       },
       /**
        * Clears all user defined data from the object.
        */
       resetUserData() {
-        this.__userData__P_48_1 = null;
+        this.__userData__P_63_1 = null;
       },
       /*
       ---------------------------------------------------------------------------
@@ -16883,14 +16845,14 @@
       qx.core.ObjectRegistry.unregister(this);
 
       // Cleanup user data
-      this.__userData__P_48_1 = null;
+      this.__userData__P_63_1 = null;
 
       // only of properties are available
       {
         // Cleanup properties
         var clazz = this.constructor;
         var properties;
-        var store = this.__Property__P_48_0.$$store;
+        var store = this.__Property__P_63_0.$$store;
         var storeUser = store.user;
         var storeTheme = store.theme;
         var storeInherit = store.inherit;
@@ -17469,8 +17431,8 @@
     */
 
     members: {
-      __data__P_93_0: null,
-      __old__P_93_1: null,
+      __data__P_68_0: null,
+      __old__P_68_1: null,
       /**
        * Initializes an event object.
        *
@@ -17486,8 +17448,8 @@
        */
       init(data, old, cancelable) {
         qx.event.type.Data.superclass.prototype.init.call(this, false, cancelable);
-        this.__data__P_93_0 = data;
-        this.__old__P_93_1 = old;
+        this.__data__P_68_0 = data;
+        this.__old__P_68_1 = old;
         return this;
       },
       /**
@@ -17501,8 +17463,8 @@
        */
       clone(embryo) {
         var clone = qx.event.type.Data.superclass.prototype.clone.call(this, embryo);
-        clone.__data__P_93_0 = this.__data__P_93_0;
-        clone.__old__P_93_1 = this.__old__P_93_1;
+        clone.__data__P_68_0 = this.__data__P_68_0;
+        clone.__old__P_68_1 = this.__old__P_68_1;
         return clone;
       },
       /**
@@ -17512,7 +17474,7 @@
        * @return {var} The new data of the event
        */
       getData() {
-        return this.__data__P_93_0;
+        return this.__data__P_68_0;
       },
       /**
        * The old data of the event sending this data event.
@@ -17521,7 +17483,7 @@
        * @return {var} The old data of the event
        */
       getOldData() {
-        return this.__old__P_93_1;
+        return this.__old__P_68_1;
       }
     }
   });
@@ -17733,10 +17695,6 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
-      "qx.core.Environment": {
-        "defer": "load",
-        "require": true
-      },
       "qx.Class": {
         "usage": "dynamic",
         "require": true
@@ -17756,20 +17714,13 @@
       "qx.bom.Event": {},
       "qx.lang.Type": {},
       "qx.event.GlobalError": {},
-      "qx.promise.NativeWrapper": {
-        "defer": "runtime"
-      },
-      "qx.promise.BluebirdImpl": {
+      "qx.core.Environment": {
         "defer": "runtime"
       }
     },
     "environment": {
-      "provided": ["qx.promise.warnings"],
-      "required": {
-        "qx.Promise.useNativePromise": {
-          "defer": true
-        }
-      }
+      "provided": ["qx.promise.warnings", "qx.promise.longStackTraces"],
+      "required": {}
     }
   };
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
@@ -17781,6 +17732,7 @@
   
      Copyright:
        2016 Zenesis Limited, http://www.zenesis.com
+       BluebirdJS Copyright (c) 2013-2016 Petka Antonov http://bluebirdjs.com/
   
      License:
        MIT: https://opensource.org/licenses/MIT
@@ -17793,8 +17745,11 @@
 
   /**
    * This class adds Promise/A+ support to Qooxdoo, as specified at
-   * https://github.com/promises-aplus/promises-spec
-  
+   * https://github.com/promises-aplus/promises-spec and using the Bluebird Promise
+   * library (http://bluebirdjs.com/) to implement it.  The official Promise/A+ API)
+   * is mirrored exactly, and a number of extension methods are added with the BluebirdJS
+   * API for inspiration (many/most of the extension functions are taken verbatim).
+   *
    * There are two ways to bind a 'this' value to callbacks - the first is to
    * append a context method to methods like then(), and the second is to specify
    * the context as the second parameter to the constructor and all callbacks will
@@ -17825,9 +17780,18 @@
    *      // 'this' is preserved from the outer scope
    *    }, this);
    *  </pre>
-   * @ignore(process.*)
    *
    */
+
+  /**
+   @ignore(process.*)
+   @ignore(global.*)
+   @ignore(Symbol.*)
+   @ignore(chrome.*)
+  */
+
+  /* global global, setImmediate, chrome, _dereq_ */
+  /* eslint-disable no-global-assign */
   qx.Class.define("qx.Promise", {
     extend: qx.core.Object,
     /**
@@ -17838,18 +17802,14 @@
      * parameters, the promise can be externally resolved or rejected by calling the
      * <code>resolve()</code> or <code>reject()</code> methods.
      *
-     * @overload
      * @param fn {Function} the promise function called with <code>(resolve, reject)</code>
      * @param context {Object?} optional context for all callbacks
-     *
-     * @overload
-     * @param promise {qx.promise.NativeWrapper | qx.promise.BluebirdImpl.Bluebird} a promise to wrap
      */
     construct(fn, context) {
       qx.core.Object.constructor.call(this);
-      qx.Promise.__initialize__P_52_0();
-      if (fn instanceof qx.Promise.Impl) {
-        this.__p__P_52_1 = fn;
+      qx.Promise.__initialize__P_67_0();
+      if (fn instanceof qx.Promise.Bluebird) {
+        this.__p__P_67_1 = fn;
       } else if (fn) {
         if (context !== undefined && context !== null) {
           fn = fn.bind(context);
@@ -17862,7 +17822,7 @@
               var args = qx.lang.Array.fromArguments(arguments);
               if (reason === undefined) {
                 args.shift();
-                args.unshift(qx.Promise.__DEFAULT_ERROR__P_52_2);
+                args.unshift(qx.Promise.__DEFAULT_ERROR__P_67_2);
               } else if (reason && !(reason instanceof Error)) {
                 self.error("Calling reject with non-error object, createdAt=" + JSON.stringify(self.$$createdAt || null));
               }
@@ -17870,32 +17830,28 @@
             });
           };
         }
-        this.__p__P_52_1 = new qx.Promise.Impl(fn);
+        this.__p__P_67_1 = new qx.Promise.Bluebird(fn);
       } else {
-        this.__p__P_52_1 = new qx.Promise.Impl(this.__externalPromise__P_52_3.bind(this));
+        this.__p__P_67_1 = new qx.Promise.Bluebird(this.__externalPromise__P_67_3.bind(this));
       }
-      qx.core.Assert.assertTrue(!this.__p__P_52_1.$$qxPromise);
-      this.__p__P_52_1.$$qxPromise = this;
+      qx.core.Assert.assertTrue(!this.__p__P_67_1.$$qxPromise);
+      this.__p__P_67_1.$$qxPromise = this;
       if (context !== undefined && context !== null) {
-        this.__p__P_52_1 = this.__p__P_52_1.bind(context);
+        this.__p__P_67_1 = this.__p__P_67_1.bind(context);
       }
     },
     /**
      * Destructor
      */
     destruct() {
-      delete this.__p__P_52_1.$$qxPromise;
-      delete this.__p__P_52_1;
+      delete this.__p__P_67_1.$$qxPromise;
+      delete this.__p__P_67_1;
     },
     members: {
       /** The Promise */
-      __p__P_52_1: null,
+      __p__P_67_1: null,
       /** Stores data for completing the promise externally */
-      __external__P_52_4: null,
-      /**
-       * Whether the depracation warning of qx.Promise#cancel has been shown
-       */
-      __cancelWarningShown__P_52_5: false,
+      __external__P_67_4: null,
       /* *********************************************************************************
        *
        * Promise API methods
@@ -17941,7 +17897,7 @@
        * @return {qx.Promise} the new promise
        */
       bind(context) {
-        return qx.Promise.__wrap__P_52_6(this.__p__P_52_1.bind(context));
+        return qx.Promise.__wrap__P_67_5(this.__p__P_67_1.bind(context));
       },
       /**
        * Like calling <code>.then</code>, but the fulfillment value must be an array, which is flattened
@@ -17981,20 +17937,8 @@
       },
       /**
        * Cancel this promise. Will not do anything if this promise is already settled.
-       *
-       * @deprecated
-       * While Bluebird supports this feature,
-       * this is not ratified by ES6 and there are no plans to add this to the native promise any time soon.
        */
       cancel() {
-        {
-          if (qx.core.Environment.get("qx.Promise.useNativePromise")) {
-            throw new Error("qx.Promise.cancel is not supported when the environment key 'qx.Promise.useNativePromise' is true");
-          } else if (!qx.Promise.__cancelWarningShown__P_52_5) {
-            qx.Promise.__cancelWarningShown__P_52_5 = true;
-            console.warn("qx.Promise.cancel is deprecated and will be removed in the future");
-          }
-        }
         return this._callMethod("cancel", arguments);
       },
       /**
@@ -18051,23 +17995,24 @@
        * function returns a promise or a thenable, then the result of the promise is awaited, before continuing with
        * next iteration.
        *
+       * @param iterable {Iterable} An iterable object, such as an Array
        * @param iterator {Function} the callback, with <code>(value, index, length)</code>
        * @return {qx.Promise}
        */
-      forEach(iterator) {
+      forEach(iterable, iterator) {
         return this._callIterableMethod("each", arguments);
       },
       /**
        * Same as {@link qx.Promise.filter} except that it iterates over the value of this promise, when it is fulfilled;
        * iterates over all the values into an array and filter the array to another using the given filterer function.
        *
+       * @param iterable {Iterable} An iterable object, such as an Array
        * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} Either:
-       *   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>
-       * Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator
+       * @param options {Object?} options; can be:
+       *  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>
        * @return {qx.Promise}
        */
-      filter(iterator, options) {
+      filter(iterable, iterator, options) {
         return this._callIterableMethod("filter", arguments);
       },
       /**
@@ -18083,13 +18028,13 @@
        * has items in random order, it means that .map can be used for concurrency coordination unlike
        * .all.
        *
+       * @param iterable {Iterable} An iterable object, such as an Array
        * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} Either:
-       *   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>
-       * Or: any other object (subclass of qx.core.Object), in which case this will be the context for the iterator
+       * @param options {Object?} options; can be:
+       *  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>
        * @return {qx.Promise}
        */
-      map(iterator, options) {
+      map(iterable, iterator, options) {
         return this._callIterableMethod("map", arguments);
       },
       /**
@@ -18105,10 +18050,11 @@
        * If any promise in the input array is rejected or any promise returned by the iterator function is
        * rejected, the result will be rejected as well.
        *
+       * @param iterable {Iterable} An iterable object, such as an Array
        * @param iterator {Function} the callback, with <code>(value, index, length)</code>
        * @return {qx.Promise}
        */
-      mapSeries(iterator) {
+      mapSeries(iterable, iterator) {
         return this._callIterableMethod("mapSeries", arguments);
       },
       /**
@@ -18128,18 +18074,19 @@
        * qx.Promise.reduce will start calling the reducer as soon as possible, this is why you might want to
        * use it over qx.Promise.all (which awaits for the entire array before you can call Array#reduce on it).
        *
+       * @param iterable {Iterable} An iterable object, such as an Array
        * @param reducer {Function} the callback, with <code>(value, index, length)</code>
        * @param initialValue {Object?} optional initial value
        * @return {qx.Promise}
        */
-      reduce(reducer, initialValue) {
+      reduce(iterable, reducer, initialValue) {
         return this._callIterableMethod("reduce", arguments);
       },
       /**
        * External promise handler
        */
-      __externalPromise__P_52_3(resolve, reject) {
-        this.__external__P_52_4 = {
+      __externalPromise__P_67_3(resolve, reject) {
+        this.__external__P_67_4 = {
           resolve: resolve,
           reject: reject,
           complete: false
@@ -18148,27 +18095,27 @@
       /**
        * Returns the data stored by __externalPromise, throws an exception once processed
        */
-      __getPendingExternal__P_52_7() {
-        if (!this.__external__P_52_4) {
+      __getPendingExternal__P_67_6() {
+        if (!this.__external__P_67_4) {
           throw new Error("Promise cannot be resolved externally");
         }
-        if (this.__external__P_52_4.complete) {
+        if (this.__external__P_67_4.complete) {
           throw new Error("Promise has already been resolved or rejected");
         }
-        this.__external__P_52_4.complete = true;
-        return this.__external__P_52_4;
+        this.__external__P_67_4.complete = true;
+        return this.__external__P_67_4;
       },
       /**
        * Resolves an external promise
        */
       resolve(value) {
-        this.__getPendingExternal__P_52_7().resolve(value);
+        this.__getPendingExternal__P_67_6().resolve(value);
       },
       /**
        * Rejects an external promise
        */
       reject(reason) {
-        this.__getPendingExternal__P_52_7().reject(reason);
+        this.__getPendingExternal__P_67_6().reject(reason);
       },
       /* *********************************************************************************
        *
@@ -18180,25 +18127,23 @@
        * Helper method used to call Promise methods which iterate over an array
        */
       _callIterableMethod(methodName, args) {
-        args = qx.Promise.__bindArgs__P_52_8(args);
-        return qx.Promise.__wrap__P_52_6(this.__p__P_52_1.then(function (value) {
-          var newP = qx.Promise.Impl.resolve(value instanceof qx.data.Array ? value.toArray() : value);
-          return qx.Promise.__wrap__P_52_6(newP[methodName].apply(newP, args));
+        args = qx.Promise.__bindArgs__P_67_7(args);
+        return qx.Promise.__wrap__P_67_5(this.__p__P_67_1.then(function (value) {
+          var newP = qx.Promise.Bluebird.resolve(value instanceof qx.data.Array ? value.toArray() : value);
+          return qx.Promise.__wrap__P_67_5(newP[methodName].apply(newP, args));
         }));
       },
       /**
        * Helper method used to call a Promise method
        */
       _callMethod(methodName, args) {
-        args = qx.Promise.__bindArgs__P_52_8(args);
-        return qx.Promise.__wrap__P_52_6(this.__p__P_52_1[methodName].apply(this.__p__P_52_1, args));
+        args = qx.Promise.__bindArgs__P_67_7(args);
+        return qx.Promise.__wrap__P_67_5(this.__p__P_67_1[methodName].apply(this.__p__P_67_1, args));
       },
       /**
        * Returns the actual Promise implementation.
-       * If the environment key `qx.Promise.useNativePromise` is set to true,
-       * it will be qx.promise.NativeWrapper, otherwise it will be qx.promise.BluebirdImpl.Bluebird.
        *
-       * The underlying implementation may change without
+       * Note that Bluebird is the current implementation, and may change without
        * notice in the future; if you use this API you accept that this is a private
        * implementation detail exposed for debugging or diagnosis purposes only.  For
        * this reason, the toPromise() method is listed as deprecated starting from the
@@ -18206,19 +18151,20 @@
        * @deprecated {6.0} this API method is subject to change
        */
       toPromise() {
-        return this.__p__P_52_1;
+        return this.__p__P_67_1;
       }
     },
     statics: {
-      /**
-       * Internal implementation of the promise. Either Bluebird or the native Promise wrapper
-       * (qx.promise.NativeWrapper) depending on the environment setting `qx.Promise.useNativePromise`.
-       */
-      Impl: null,
+      /** Bluebird Promise library; always available */
+      Bluebird: null,
+      /** Native Promise library; only available if the browser supports it */
+      Native: null,
+      /** Promise library, either the Native one or a Polyfill; reliable choice for native Promises */
+      Promise: null,
       /** This is used to suppress warnings about rejections without an Error object, only used if
        * the reason is undefined
        */
-      __DEFAULT_ERROR__P_52_2: new Error("Default Error"),
+      __DEFAULT_ERROR__P_67_2: new Error("Default Error"),
       /* *********************************************************************************
        *
        * Promise API methods
@@ -18242,9 +18188,7 @@
        * @returns {Boolean} true if it is a promise
        */
       isPromise(value) {
-        if (!value || typeof value.then != "function") {
-          return false;
-        }
+        if (!value || typeof value.then != "function") return false;
         {
           if (typeof value.finally != "function" || typeof value.catch != "function") {
             qx.log.Logger.warn(qx.Promise, 'Calling `isPromise` on a "thenable" instance but the object does not also support `.catch` and/or `.finally`');
@@ -18268,7 +18212,7 @@
         if (value instanceof qx.Promise) {
           promise = value;
         } else {
-          promise = qx.Promise.__wrap__P_52_6(qx.Promise.Impl.resolve(value));
+          promise = qx.Promise.__wrap__P_67_5(qx.Promise.Bluebird.resolve(value));
         }
         if (context !== undefined) {
           promise = promise.bind(context);
@@ -18285,11 +18229,11 @@
         var args = qx.lang.Array.fromArguments(arguments);
         if (reason === undefined) {
           args.shift();
-          args.unshift(qx.Promise.__DEFAULT_ERROR__P_52_2);
+          args.unshift(qx.Promise.__DEFAULT_ERROR__P_67_2);
         } else if (!(reason instanceof Error)) {
           qx.log.Logger.warn("Rejecting a promise with a non-Error value");
         }
-        var promise = qx.Promise.__callStaticMethod__P_52_9("reject", args, 0);
+        var promise = qx.Promise.__callStaticMethod__P_67_8("reject", args, 0);
         if (context !== undefined) {
           promise = promise.bind(context);
         }
@@ -18331,7 +18275,7 @@
        * @return {qx.Promise}
        */
       all(iterable) {
-        return qx.Promise.__callStaticMethod__P_52_9("all", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("all", arguments);
       },
       /**
        * Returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves
@@ -18340,7 +18284,7 @@
        * @return {qx.Promise}
        */
       race(iterable) {
-        return qx.Promise.__callStaticMethod__P_52_9("race", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("race", arguments);
       },
       /* *********************************************************************************
        *
@@ -18356,7 +18300,7 @@
        * @return {qx.Promise}
        */
       any(iterable) {
-        return qx.Promise.__callStaticMethod__P_52_9("any", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("any", arguments);
       },
       /**
        * Given an Iterable (arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix
@@ -18369,7 +18313,7 @@
        * @return {qx.Promise}
        */
       some(iterable, count) {
-        return qx.Promise.__callStaticMethod__P_52_9("some", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("some", arguments);
       },
       /**
        * Iterate over an array, or a promise of an array, which contains promises (or a mix of promises and values)
@@ -18386,7 +18330,7 @@
        * @return {qx.Promise}
        */
       forEach(iterable, iterator) {
-        return qx.Promise.__callStaticMethod__P_52_9("each", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("each", arguments);
       },
       /**
        * Given an Iterable(arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix of
@@ -18413,7 +18357,7 @@
        * @return {qx.Promise}
        */
       filter(iterable, iterator, options) {
-        return qx.Promise.__callStaticMethod__P_52_9("filter", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("filter", arguments);
       },
       /**
        * Given an <code>Iterable</code> (arrays are <code>Iterable</code>), or a promise of an
@@ -18457,7 +18401,7 @@
        * @return {qx.Promise}
        */
       map(iterable, iterator, options) {
-        return qx.Promise.__callStaticMethod__P_52_9("map", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("map", arguments);
       },
       /**
        * Given an <code>Iterable</code>(arrays are <code>Iterable</code>), or a promise of an
@@ -18495,7 +18439,7 @@
        * @return {qx.Promise}
        */
       mapSeries(iterable, iterator) {
-        return qx.Promise.__callStaticMethod__P_52_9("mapSeries", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("mapSeries", arguments);
       },
       /**
        * Given an <code>Iterable</code> (arrays are <code>Iterable</code>), or a promise of an
@@ -18534,7 +18478,7 @@
        * @return {qx.Promise}
        */
       reduce(iterable, reducer, initialValue) {
-        return qx.Promise.__callStaticMethod__P_52_9("reduce", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("reduce", arguments);
       },
       /**
        * Returns a new function that wraps the given function fn. The new function will always return a promise that is
@@ -18543,9 +18487,9 @@
        * @return {Function}
        */
       method(cb) {
-        var wrappedCb = qx.Promise.Impl.method(cb);
+        var wrappedCb = qx.Promise.Bluebird.method(cb);
         return function () {
-          return qx.Promise.__wrap__P_52_6(wrappedCb.apply(this, arguments));
+          return qx.Promise.__wrap__P_67_5(wrappedCb.apply(this, arguments));
         };
       },
       /**
@@ -18563,7 +18507,7 @@
        * @return {qx.Promise}
        */
       props(input) {
-        return qx.Promise.__callStaticMethod__P_52_9("props", arguments);
+        return qx.Promise.__callStaticMethod__P_67_8("props", arguments);
       },
       /**
        * Returns a new function that wraps a function that is in node.js
@@ -18618,23 +18562,8 @@
        *
        * @return {qx.Promise}
        */
-      promisify(f) {
-        return function () {
-          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
-          return new qx.Promise((resolve, reject) => {
-            function callback(err, result) {
-              if (err) {
-                reject(err);
-              } else {
-                resolve(result);
-              }
-            }
-            args.push(callback);
-            f.call(this, ...args);
-          });
-        };
+      promisify(f, options) {
+        return qx.Promise.__callStaticMethod__P_67_8("promisify", arguments);
       },
       /* *********************************************************************************
        *
@@ -18642,28 +18571,40 @@
        *
        */
 
+      /**
+       * Called when the Bluebird Promise class is loaded
+       * @param Promise {Class} the Promise class
+       */
+      __attachBluebird__P_67_9(Promise) {
+        qx.Promise.Bluebird = Promise;
+        Promise.config({
+          warnings: true,
+          longStackTraces: true,
+          cancellation: true
+        });
+      },
       /** Whether one-time initialisaton has happened */
-      __initialized__P_52_10: false,
+      __initialized__P_67_10: false,
       /**
        * One-time initializer
        */
-      __initialize__P_52_0() {
-        if (qx.Promise.__initialized__P_52_10) {
+      __initialize__P_67_0() {
+        if (qx.Promise.__initialized__P_67_10) {
           return;
         }
-        qx.Promise.__initialized__P_52_10 = true;
+        qx.Promise.__initialized__P_67_10 = true;
         var isNode = typeof process !== "undefined";
         if (isNode) {
-          process.on("unhandledRejection", qx.Promise.__onUnhandledRejection__P_52_11.bind(this));
+          process.on("unhandledRejection", qx.Promise.__onUnhandledRejection__P_67_11.bind(this));
         } else {
-          qx.bom.Event.addNativeListener(window, "unhandledrejection", qx.Promise.__onUnhandledRejection__P_52_11.bind(this));
+          qx.bom.Event.addNativeListener(window, "unhandledrejection", qx.Promise.__onUnhandledRejection__P_67_11.bind(this));
         }
       },
       /**
        * Handles unhandled errors and passes them through to Qooxdoo's global error handler
        * @param e {NativeEvent}
        */
-      __onUnhandledRejection__P_52_11(e) {
+      __onUnhandledRejection__P_67_11(e) {
         if (qx.lang.Type.isFunction(e.preventDefault)) {
           e.preventDefault();
         }
@@ -18683,8 +18624,8 @@
        * @param value {Object}
        * @return {Object}
        */
-      __wrap__P_52_6(value) {
-        if (value instanceof qx.Promise.Impl) {
+      __wrap__P_67_5(value) {
+        if (value instanceof qx.Promise.Bluebird) {
           if (value.$$qxPromise) {
             value = value.$$qxPromise;
           } else {
@@ -18702,7 +18643,7 @@
        * 	this is used to determine whether the last value is for binding (default is 1)
        * @return {Array} array of new arguments with functions bound as necessary
        */
-      __bindArgs__P_52_8(args, minArgs) {
+      __bindArgs__P_67_7(args, minArgs) {
         args = qx.lang.Array.fromArguments(args);
         if (minArgs === undefined) {
           minArgs = 1;
@@ -18721,21 +18662,21 @@
         return args;
       },
       /**
-       * Helper method used to call a Promise method in the underlying implementation
+       * Helper method used to call a Bluebird Promise method
        * @param methodName {String} method name to call
        * @param args {Array} arguments to pass
        * @param minArgs {Integer?} {@see __bindArgs}
        * @return {Object?}
        */
-      __callStaticMethod__P_52_9(methodName, args, minArgs) {
-        args = qx.Promise.__bindArgs__P_52_8(args, minArgs);
-        return qx.Promise.__wrap__P_52_6(qx.Promise.Impl[methodName].apply(qx.Promise.Impl, qx.Promise.__mapArgs__P_52_12(args)));
+      __callStaticMethod__P_67_8(methodName, args, minArgs) {
+        args = qx.Promise.__bindArgs__P_67_7(args, minArgs);
+        return qx.Promise.__wrap__P_67_5(qx.Promise.Bluebird[methodName].apply(qx.Promise.Bluebird, qx.Promise.__mapArgs__P_67_12(args)));
       },
       /**
        * Maps all arguments ready for passing to a Bluebird function; qx.data.Array are
        * translated to native arrays and qx.Promise to Promise.  This is not recursive.
        */
-      __mapArgs__P_52_12(args) {
+      __mapArgs__P_67_12(args) {
         var dest = [];
         args.forEach(function (arg) {
           if (arg instanceof qx.data.Array) {
@@ -18749,1063 +18690,14 @@
         return dest;
       }
     },
-    environment: {
-      /**
-       * Whether to use the native Promise as the underlying implementation for qx.Promise
-       * instead of Bluebird.
-       */
-      "qx.Promise.useNativePromise": false,
-      "qx.promise.longStackTraces": false
-    },
     defer(statics, members) {
+      statics.Promise = statics.Native = window.Promise;
       var debug = true;
       qx.core.Environment.add("qx.promise.warnings", debug);
-      let Impl;
-      if (qx.core.Environment.get("qx.Promise.useNativePromise")) {
-        Impl = qx.promise.NativeWrapper;
-      } else {
-        Impl = qx.promise.BluebirdImpl.Bluebird;
-      }
-      statics.Impl = Impl;
+      qx.core.Environment.add("qx.promise.longStackTraces", false);
     }
   });
-  qx.Promise.$$dbClassInfo = $$dbClassInfo;
-})();
 
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.Object": {
-        "construct": true,
-        "require": true
-      },
-      "qx.Promise": {},
-      "qx.util.ConcurrencyLimiter": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2016 Zenesis Limited, http://www.zenesis.com
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-   * John Spackman (john.spackman@zenesis.com)
-   * Patryk Malinowski (pmalinowski@vmn.digital)
-  
-   ************************************************************************ */
-
-  /**
-   * Wrapper around a native promise, adding some extra helpful methods which are found in Bluebird.js,
-   * such as .map, .reduce, .filter, and many more.
-   *
-   * @ignore(AggregateError)
-   */
-  qx.Class.define("qx.promise.NativeWrapper", {
-    extend: qx.core.Object,
-    /**
-     * @overload
-     * @param {(resolve: Function, reject: Function) => void} arg0 The executor for the promise
-     *
-     * @overload
-     * Wraps a native promise in the wrapper class
-     * @param {Promise} arg0 A native Promise
-     */
-    construct(arg0) {
-      qx.core.Object.constructor.call(this);
-      if (typeof arg0 === "function") {
-        this.__promise__P_140_0 = new Promise(arg0);
-      } else if (typeof arg0 === "object" && arg0.constructor === Promise) {
-        this.__promise__P_140_0 = arg0;
-      }
-    },
-    members: {
-      /**
-       * @type {Object} The context that this promise is bound to
-       */
-      __context__P_140_1: null,
-      /**
-       * Creates a new promise just like this one, but with a context set
-       * @see
-       * @param {Object} context
-       * @returns
-       */
-      bind(context) {
-        let promise = new qx.promise.NativeWrapper(this.__promise__P_140_0);
-        return promise.__setContext__P_140_2(context);
-      },
-      /**
-       * Same as for Native Promise
-       * @returns {qx.promise.NativeWrapper}
-       */
-      then(onResolved, onRejected) {
-        onResolved = onResolved.bind(this.__context__P_140_1);
-        if (onRejected) {
-          onRejected = onRejected.bind(this.__context__P_140_1);
-        }
-        return qx.promise.NativeWrapper.__wrap__P_140_3(this.__promise__P_140_0.then(onResolved, onRejected)).__setContext__P_140_2(this.__context__P_140_1);
-      },
-      /**
-       * Same as for Native Promise
-       * @returns {qx.promise.NativeWrapper}
-       */
-      catch(handler) {
-        handler = handler.bind(this.__context__P_140_1);
-        return qx.promise.NativeWrapper.__wrap__P_140_3(this.__promise__P_140_0.catch(handler)).__setContext__P_140_2(this.__context__P_140_1);
-      },
-      /**
-       * Same as for Native Promise
-       * @returns {qx.promise.NativeWrapper}
-       */
-      spread(fulfilledHandler) {
-        return this.then(values => fulfilledHandler(...values));
-      },
-      /**
-       * Same as for Native Promise
-       * @returns {qx.promise.NativeWrapper}
-       */
-      finally(handler) {
-        handler = handler.bind(this.__context__P_140_1);
-        return qx.promise.NativeWrapper.__wrap__P_140_3(this.__promise__P_140_0.finally(handler)).__setContext__P_140_2(this.__context__P_140_1);
-      },
-      /**
-       * Due to the high complexity of implementing this feature, it is not supported in qx.promise.NativeWrapper
-       */
-      cancel() {
-        throw new Error("qx.promise.NativeWrapper does not support canceling promises");
-      },
-      /**
-       * Note: Only call when this promise will resolve to an array
-       * Same as Promise.all, but passed with the array that this promise resolves to
-       * @returns {qx.promise.NativeWrapper}
-       */
-      all() {
-        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
-        return qx.promise.NativeWrapper.all(this, ...args);
-      },
-      /**
-       * Note: Only call when this promise will resolve to an array
-       * Same as Promise.race, but passed with the array that this promise resolves to
-       * @returns {qx.promise.NativeWrapper}
-       */
-      race() {
-        return qx.promise.NativeWrapper.race(this);
-      },
-      /**
-       * Note: Only call when this promise will resolve to an array
-       * Same as Promise.any, but passed with the array that this promise resolves to
-       * @returns {qx.promise.NativeWrapper}
-       */
-      any() {
-        return qx.promise.NativeWrapper.any(this);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.some} except that it iterates over the value of this promise, when
-       * it is fulfilled; return a promise that is fulfilled as soon as count promises are fulfilled
-       * in the array. The fulfillment value is an array with count values in the order they were fulfilled.
-       *
-       * @param count {Integer}
-       * @return {qx.promise.NativeWrapper}
-       */
-      some(count) {
-        return qx.promise.NativeWrapper.some(this, count);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.each} except that it iterates over the value of this promise, when
-       * it is fulfilled; iterates over the values with the given <code>iterator</code> function with the signature
-       * <code>(value, index, length)</code> where <code>value</code> is the resolved value. Iteration happens
-       * serially. If any promise is rejected the returned promise is rejected as well.
-       *
-       * Resolves to the original array unmodified, this method is meant to be used for side effects. If the iterator
-       * function returns a promise or a thenable, then the result of the promise is awaited, before continuing with
-       * next iteration.
-       *
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      each(iterator) {
-        return qx.promise.NativeWrapper.each(this, iterator);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.filter} except that it iterates over the value of this promise, when it is fulfilled;
-       * iterates over all the values into an array and filter the array to another using the given filterer function.
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} options; can be:
-       *  <code>concurrency</code> max nuber of simultaneous filters, default is <code>Infinity</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      filter(iterator, options) {
-        return qx.promise.NativeWrapper.filter(this, iterator, options);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.map} except that it iterates over the value of this promise, when it is fulfilled;
-       * iterates over all the values into an array and map the array to another using the given mapper function.
-       *
-       * Promises returned by the mapper function are awaited for and the returned promise doesn't fulfill
-       * until all mapped promises have fulfilled as well. If any promise in the array is rejected, or
-       * any promise returned by the mapper function is rejected, the returned promise is rejected as well.
-       *
-       * The mapper function for a given item is called as soon as possible, that is, when the promise
-       * for that item's index in the input array is fulfilled. This doesn't mean that the result array
-       * has items in random order, it means that .map can be used for concurrency coordination unlike
-       * .all.
-       *
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} * A native object with one key: <code>concurrency</code>: max number of simultaneous maps, default is <code>Infinity</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      map(iterator, options) {
-        return qx.promise.NativeWrapper.map(this, iterator, options);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.mapSeries} except that it iterates over the value of this promise, when
-       * it is fulfilled; iterates over all the values into an array and iterate over the array serially,
-       * in-order.
-       *
-       * Returns a promise for an array that contains the values returned by the iterator function in their
-       * respective positions. The iterator won't be called for an item until its previous item, and the
-       * promise returned by the iterator for that item are fulfilled. This results in a mapSeries kind of
-       * utility but it can also be used simply as a side effect iterator similar to Array#forEach.
-       *
-       * If any promise in the input array is rejected or any promise returned by the iterator function is
-       * rejected, the result will be rejected as well.
-       *
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      mapSeries(iterator, options) {
-        return qx.promise.NativeWrapper.mapSeries(this, iterator, options);
-      },
-      /**
-       * Same as {@link qx.promise.NativeWrapper.reduce} except that it iterates over the value of this promise, when
-       * it is fulfilled; iterates over all the values in the <code>Iterable</code> into an array and
-       * reduce the array to a value using the given reducer function.
-       *
-       * If the reducer function returns a promise, then the result of the promise is awaited, before
-       * continuing with next iteration. If any promise in the array is rejected or a promise returned
-       * by the reducer function is rejected, the result is rejected as well.
-       *
-       * If initialValue is undefined (or a promise that resolves to undefined) and the iterable contains
-       * only 1 item, the callback will not be called and the iterable's single item is returned. If the
-       * iterable is empty, the callback will not be called and initialValue is returned (which may be
-       * undefined).
-       *
-       * qx.promise.NativeWrapper.reduce will start calling the reducer as soon as possible, this is why you might want to
-       * use it over qx.promise.NativeWrapper.all (which awaits for the entire array before you can call Array#reduce on it).
-       *
-       * @param reducer {Function} the callback, with <code>(value, index, length)</code>
-       * @param initialValue {Object?} optional initial value
-       * @return {qx.promise.NativeWrapper}
-       */
-      reduce(reducer, initialValue) {
-        return qx.promise.NativeWrapper.reduce(this, reducer, initialValue);
-      },
-      /**
-       *
-       * @param {Object} context
-       * @returns {qx.promise.NativeWrapper} this object to support chaining
-       */
-      __setContext__P_140_2(context) {
-        this.__context__P_140_1 = context;
-        return this;
-      }
-    },
-    statics: {
-      /**
-       * Wraps a promise in a qx.promise.NativeWrapper
-       * @param {Promise} promise
-       * @returns
-       */
-      __wrap__P_140_3(promise) {
-        {
-          if (promise.constructor !== Promise) {
-            throw new Error("Only native promises can be wrapped!");
-          }
-        }
-        return new qx.promise.NativeWrapper(promise);
-      },
-      /**
-       * Returns a Promise object that is resolved with the given value. If the value is a thenable (i.e.
-       * has a then method), the returned promise will "follow" that thenable, adopting its eventual
-       * state; otherwise the returned promise will be fulfilled with the value. Generally, if you
-       * don't know if a value is a promise or not, Promise.resolve(value) it instead and work with
-       * the return value as a promise.
-       *
-       * @param value {Object}
-       * @return {qx.promise.NativeWrapper}
-       */
-      resolve(value) {
-        return qx.promise.NativeWrapper.__wrap__P_140_3(Promise.resolve(value));
-      },
-      /**
-       * Returns a Promise object that is rejected with the given reason.
-       * @param reason {Object?} Reason why this Promise rejected. A warning is generated if not instanceof Error. If undefined, a default Error is used.
-       * @return {qx.promise.NativeWrapper}
-       */
-      reject(reason) {
-        return qx.promise.NativeWrapper.__wrap__P_140_3(Promise.reject(reason));
-      },
-      /**
-       * Returns a promise that resolves when all of the promises in the object properties have resolved,
-       * or rejects with the reason of the first passed promise that rejects.  The result of each property
-       * is placed back in the object, replacing the promise.  Note that non-promise values are untouched.
-       *
-       * @param value {var} An object
-       * @return {qx.promise.NativeWrapper}
-       */
-      allOf(value) {
-        function action(value) {
-          var arr = [];
-          var names = [];
-          for (var name in value) {
-            if (value.hasOwnProperty(name) && qx.Promise.isPromise(value[name])) {
-              arr.push(value[name]);
-              names.push(name);
-            }
-          }
-          return qx.promise.NativeWrapper.all(arr).then(function (arr) {
-            arr.forEach(function (item, index) {
-              value[names[index]] = item;
-            });
-            return value;
-          });
-        }
-        return qx.Promise.isPromise(value) ? value.then(action) : action(value);
-      },
-      /**
-       * Returns a promise that resolves when all of the promises in the iterable argument have resolved,
-       * or rejects with the reason of the first passed promise that rejects.  Note that non-promise values
-       * are untouched.
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @return {qx.promise.NativeWrapper}
-       */
-      all(iterable) {
-        return qx.promise.NativeWrapper.resolve(iterable).then(iterable => qx.promise.NativeWrapper.__wrap__P_140_3(Promise.all(iterable)));
-      },
-      /**
-       * Returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves
-       * or rejects, with the value or reason from that promise.
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @return {qx.promise.NativeWrapper}
-       */
-      race(iterable) {
-        return qx.promise.NativeWrapper.resolve(iterable).then(iterableResolved => new qx.promise.NativeWrapper(Promise.race(iterableResolved)));
-      },
-      /* *********************************************************************************
-       *
-       * Extension API methods
-       *
-       */
-
-      /**
-       * Like Promise.some, with 1 as count. However, if the promise fulfills, the fulfillment value is not an
-       * array of 1 but the value directly.
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @return {qx.promise.NativeWrapper}
-       */
-      any(iterable) {
-        return qx.promise.NativeWrapper.resolve(iterable).then(iterableResolved => new qx.promise.NativeWrapper(Promise.any(iterableResolved)));
-      },
-      /**
-       * Given an Iterable (arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix
-       * of promises and values), iterate over all the values in the Iterable into an array and return a promise
-       * that is fulfilled as soon as count promises are fulfilled in the array. The fulfillment value is an
-       * array with count values in the order they were fulfilled.
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param count {Integer}
-       * @return {qx.promise.NativeWrapper}
-       */
-      some(iterable, count) {
-        return new qx.promise.NativeWrapper((resolve, reject) => {
-          qx.promise.NativeWrapper.resolve(iterable).then(iterable => {
-            let resolved = [];
-            let rejected = [];
-            let minToReject = iterable.length - count + 1;
-            const onResolved = value => {
-              if (resolved.length >= count) {
-                return;
-              }
-              resolved.push(value);
-              if (resolved.length == count) {
-                resolve(resolved);
-              }
-            };
-            const onRejected = reason => {
-              rejected.push(reason);
-              if (--minToReject == 0) {
-                reject(new AggregateError(rejected));
-              }
-            };
-            iterable.forEach((elem, index) => {
-              if (qx.Promise.isPromise(elem)) {
-                elem.then(onResolved, onRejected);
-              } else {
-                onResolved(elem);
-              }
-            });
-          });
-        });
-      },
-      /**
-       * Iterate over an array, or a promise of an array, which contains promises (or a mix of promises and values)
-       * with the given <code>iterator</code> function with the signature <code>(value, index, length)</code> where
-       * <code>value</code> is the resolved value of a respective promise in the input array. Iteration happens
-       * serially. If any promise in the input array is rejected the returned promise is rejected as well.
-       *
-       * Resolves to the original array unmodified, this method is meant to be used for side effects. If the iterator
-       * function returns a promise or a thenable, then the result of the promise is awaited, before continuing with
-       * next iteration.
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      each(iterable, iterator) {
-        let f = async () => {
-          let iterableValue = await iterable;
-          let index = 0;
-          for (let item of iterableValue) {
-            let itemResolved = await item;
-            await iterator(itemResolved, index++, iterable.length);
-          }
-        };
-        return new qx.promise.NativeWrapper(f());
-      },
-      /**
-       * Given an Iterable(arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix of
-       * promises and values), iterate over all the values in the Iterable into an array and filter the array to
-       * another using the given filterer function.
-       *
-       * It is essentially an efficient shortcut for doing a .map and then Array#filter:
-       * <pre>
-       *   qx.promise.NativeWrapper.map(valuesToBeFiltered, function(value, index, length) {
-       *       return Promise.all([filterer(value, index, length), value]);
-       *   }).then(function(values) {
-       *       return values.filter(function(stuff) {
-       *           return stuff[0] == true
-       *       }).map(function(stuff) {
-       *           return stuff[1];
-       *       });
-       *   });
-       * </pre>
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} Either:
-       *   A native object with one key: <code>concurrency</code>: max number of simultaneous filters, default is <code>Infinity</code>
-       * Or: any other object, in which case this will be the context for the iterator
-       * @return {qx.promise.NativeWrapper}
-       */
-      filter(iterable, iterator, options) {
-        let limiter = new qx.util.ConcurrencyLimiter(options?.concurrency);
-        const doit = async () => {
-          let iterableResolved = await iterable;
-          let resultsPromises = iterableResolved.map((item, index) => limiter.add(async () => {
-            let itemResolved = await item;
-            let keep = await iterator(itemResolved, index, iterableResolved.length);
-            return {
-              keep,
-              val: itemResolved
-            };
-          }));
-          let values = await qx.promise.NativeWrapper.all(resultsPromises);
-          return values.filter(_ref => {
-            let {
-              keep
-            } = _ref;
-            return keep;
-          }).map(_ref2 => {
-            let {
-              val
-            } = _ref2;
-            return val;
-          });
-        };
-        return new qx.promise.NativeWrapper(doit());
-      },
-      /**
-       * Given an <code>Iterable</code> (arrays are <code>Iterable</code>), or a promise of an
-       * <code>Iterable</code>, which produces promises (or a mix of promises and values), iterate over
-       * all the values in the <code>Iterable</code> into an array and map the array to another using
-       * the given mapper function.
-       *
-       * Promises returned by the mapper function are awaited for and the returned promise doesn't fulfill
-       * until all mapped promises have fulfilled as well. If any promise in the array is rejected, or
-       * any promise returned by the mapper function is rejected, the returned promise is rejected as well.
-       *
-       * The mapper function for a given item is called as soon as possible, that is, when the promise
-       * for that item's index in the input array is fulfilled. This doesn't mean that the result array
-       * has items in random order, it means that .map can be used for concurrency coordination unlike
-       * .all.
-       *
-       * A common use of Promise.map is to replace the .push+Promise.all boilerplate:
-       *
-       * <pre>
-       *   var promises = [];
-       *   for (var i = 0; i < fileNames.length; ++i) {
-       *       promises.push(fs.readFileAsync(fileNames[i]));
-       *   }
-       *   qx.promise.NativeWrapper.all(promises).then(function() {
-       *       console.log("done");
-       *   });
-       *
-       *   // Using Promise.map:
-       *   qx.promise.NativeWrapper.map(fileNames, function(fileName) {
-       *       // Promise.map awaits for returned promises as well.
-       *       return fs.readFileAsync(fileName);
-       *   }).then(function() {
-       *       console.log("done");
-       *   });
-       * </pre>
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @param options {Object?} * A native object with one key: <code>concurrency</code>: max number of simultaneous maps, default is <code>Infinity</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      map(iterable, iterator, options) {
-        return qx.promise.NativeWrapper.resolve(iterable).then(iterable => {
-          let limiter = new qx.util.ConcurrencyLimiter(options?.concurrency);
-          let resultsPromises = iterable.map((item, index) => limiter.add(async () => {
-            let itemResolved = await item;
-            let result = await iterator(itemResolved, index, iterable.length);
-            return result;
-          }));
-          return qx.promise.NativeWrapper.all(resultsPromises);
-        });
-      },
-      /**
-       * Given an <code>Iterable</code>(arrays are <code>Iterable</code>), or a promise of an
-       * <code>Iterable</code>, which produces promises (or a mix of promises and values), iterate over
-       * all the values in the <code>Iterable</code> into an array and iterate over the array serially,
-       * in-order.
-       *
-       * Returns a promise for an array that contains the values returned by the iterator function in their
-       * respective positions. The iterator won't be called for an item until its previous item, and the
-       * promise returned by the iterator for that item are fulfilled. This results in a mapSeries kind of
-       * utility but it can also be used simply as a side effect iterator similar to Array#forEach.
-       *
-       * If any promise in the input array is rejected or any promise returned by the iterator function is
-       * rejected, the result will be rejected as well.
-       *
-       * Example where .mapSeries(the instance method) is used for iterating with side effects:
-       *
-       * <pre>
-       * // Source: http://jakearchibald.com/2014/es7-async-functions/
-       * function loadStory() {
-       *   return getJSON('story.json')
-       *     .then(function(story) {
-       *       addHtmlToPage(story.heading);
-       *       return story.chapterURLs.map(getJSON);
-       *     })
-       *     .mapSeries(function(chapter) { addHtmlToPage(chapter.html); })
-       *     .then(function() { addTextToPage("All done"); })
-       *     .catch(function(err) { addTextToPage("Argh, broken: " + err.message); })
-       *     .then(function() { document.querySelector('.spinner').style.display = 'none'; });
-       * }
-       * </pre>
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param iterator {Function} the callback, with <code>(value, index, length)</code>
-       * @return {qx.promise.NativeWrapper}
-       */
-      mapSeries(iterable, iterator) {
-        return new qx.promise.NativeWrapper(async (resolve, reject) => {
-          let failed = false;
-          const fail = reason => {
-            if (!failed) {
-              failed = true;
-              reject(reason);
-            }
-          };
-
-          //We must handle the rejections of promises ASAP
-          //to prevent unhandled promise rejections
-          qx.promise.NativeWrapper.all(iterable).catch(fail);
-          let result = [];
-          iterable = await iterable;
-          try {
-            let index = 0;
-            for (let promise of iterable) {
-              let value = await promise;
-              let mapped = await iterator(value, index++, iterable.length);
-              result.push(mapped);
-            }
-          } catch (ex) {
-            fail(ex);
-          }
-          resolve(result);
-        });
-      },
-      /**
-       * Given an <code>Iterable</code> (arrays are <code>Iterable</code>), or a promise of an
-       * <code>Iterable</code>, which produces promises (or a mix of promises and values), iterate
-       * over all the values in the <code>Iterable</code> into an array and reduce the array to a
-       * value using the given reducer function.
-       *
-       * If the reducer function returns a promise, then the result of the promise is awaited, before
-       * continuing with next iteration. If any promise in the array is rejected or a promise returned
-       * by the reducer function is rejected, the result is rejected as well.
-       *
-       * Read given files sequentially while summing their contents as an integer. Each file contains
-       * just the text 10.
-       *
-       * <pre>
-       *   qx.promise.NativeWrapper.reduce(["file1.txt", "file2.txt", "file3.txt"], function(total, fileName) {
-       *       return fs.readFileAsync(fileName, "utf8").then(function(contents) {
-       *           return total + parseInt(contents, 10);
-       *       });
-       *   }, 0).then(function(total) {
-       *       //Total is 30
-       *   });
-       * </pre>
-       *
-       * If initialValue is undefined (or a promise that resolves to undefined) and the iterable contains
-       * only 1 item, the callback will not be called and the iterable's single item is returned. If the
-       * iterable is empty, the callback will not be called and initialValue is returned (which may be
-       * undefined).
-       *
-       * Promise.reduce will start calling the reducer as soon as possible, this is why you might want to
-       * use it over Promise.all (which awaits for the entire array before you can call Array#reduce on it).
-       *
-       * @param iterable {Iterable} An iterable object, such as an Array
-       * @param reducer {Function} the callback, with <code>(value, index, length)</code>
-       * @param initialValue {Object?} optional initial value
-       * @return {qx.promise.NativeWrapper}
-       */
-      reduce(iterable, reducer, initialValue) {
-        return new qx.promise.NativeWrapper(async (resolve, reject) => {
-          let failed = false;
-          function fail(reason) {
-            if (!failed) {
-              failed = true;
-              reject(reason);
-            }
-          }
-          try {
-            let iterableResolved = await iterable;
-
-            //We must handle the rejections of promises ASAP
-            //to prevent unhandled promise rejections
-            iterableResolved.forEach((item, index) => {
-              if (qx.Promise.isPromise(item)) {
-                item.catch(fail);
-              }
-            });
-            let accum = initialValue;
-            let index = 0;
-            for (let promise of iterableResolved) {
-              let data = await promise;
-              accum = await reducer(accum, data, index, iterableResolved.length);
-              index++;
-            }
-            resolve(accum);
-          } catch (ex) {
-            fail(ex);
-          }
-        });
-      },
-      /**
-       * Returns a new function that wraps the given function fn. The new function will always return a promise that is
-       * fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
-       * @param cb {Function}
-       * @return {Function}
-       */
-      method(cb) {
-        var _this = this;
-        return function () {
-          for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-            args[_key2] = arguments[_key2];
-          }
-          return new qx.promise.NativeWrapper(resolve => resolve(cb.call(_this.__context__P_140_1, ...args)));
-        };
-      },
-      /**
-       * Like .all but for object properties or Maps* entries instead of iterated values. Returns a promise that
-       * is fulfilled when all the properties of the object or the Map's' values** are fulfilled. The promise's
-       * fulfillment value is an object or a Map with fulfillment values at respective keys to the original object
-       * or a Map. If any promise in the object or Map rejects, the returned promise is rejected with the rejection
-       * reason.
-       *
-       * If object is a trusted Promise, then it will be treated as a promise for object rather than for its
-       * properties. All other objects (except Maps) are treated for their properties as is returned by
-       * Object.keys - the object's own enumerable properties.
-       *
-       * @param input {Object} An Object
-       * @return {qx.promise.NativeWrapper}
-       */
-      props(input) {
-        return qx.promise.NativeWrapper.resolve(input).then(input => {
-          let entries = Object.entries(input);
-          let promises = entries.map(entry => new qx.promise.NativeWrapper(async resolve => {
-            const value = await entry[1];
-            resolve([entry[0], value]);
-          }));
-          return qx.promise.NativeWrapper.all(promises).then(values => {
-            let result = {};
-            values.forEach(entry => {
-              result[entry[0]] = entry[1];
-            });
-            return result;
-          });
-        });
-      }
-    }
-  });
-  qx.promise.NativeWrapper.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.Object": {
-        "require": true
-      },
-      "qx.core.IDisposable": {
-        "require": true
-      },
-      "qx.lang.Function": {
-        "construct": true
-      },
-      "qx.lang.Object": {},
-      "qx.event.GlobalError": {
-        "usage": "dynamic",
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * This class manages the timer used for deferred calls. All
-   * {@link qx.util.DeferredCall} instances use the single timer from this class.
-   *
-   * NOTE: Instances of this class must be disposed of after use
-   *
-   */
-  qx.Class.define("qx.util.DeferredCallManager", {
-    extend: qx.core.Object,
-    type: "singleton",
-    implement: [qx.core.IDisposable],
-    /*
-    *****************************************************************************
-       CONSTRUCTOR
-    *****************************************************************************
-    */
-
-    construct() {
-      this.__calls__P_164_0 = {};
-      this.__timeoutWrapper__P_164_1 = qx.lang.Function.bind(this.__timeout__P_164_2, this);
-      this.__hasCalls__P_164_3 = false;
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __timeoutId__P_164_4: null,
-      __currentQueue__P_164_5: null,
-      __calls__P_164_0: null,
-      __hasCalls__P_164_3: null,
-      __timeoutWrapper__P_164_1: null,
-      /**
-       * Schedule a deferred call
-       *
-       * @param deferredCall {qx.util.DeferredCall} The call to schedule
-       */
-      schedule(deferredCall) {
-        if (this.__timeoutId__P_164_4 == null) {
-          this.__timeoutId__P_164_4 = window.setTimeout(this.__timeoutWrapper__P_164_1, 0);
-        }
-        var callKey = deferredCall.toHashCode();
-
-        // the flush is currently running and the call is already
-        // scheduled
-        if (this.__currentQueue__P_164_5 && this.__currentQueue__P_164_5[callKey]) {
-          return;
-        }
-        this.__calls__P_164_0[callKey] = deferredCall;
-        this.__hasCalls__P_164_3 = true;
-      },
-      /**
-       * Refresh the timeout if the current one is not active anymore.
-       * This is a very special case which can happen in unit tests using
-       * fakeTimers, which overrides the window.setTimeout function (amongst others)
-       * after restoring the sinon sandbox the timeout must be refreshed otherwise
-       * DeferredCalls would never fire.
-       */
-      refreshTimeout() {
-        if (this.__timeoutId__P_164_4 !== null) {
-          this.__timeoutId__P_164_4 = window.setTimeout(this.__timeoutWrapper__P_164_1, 0);
-        }
-      },
-      /**
-       * Cancel a scheduled deferred call
-       *
-       * @param deferredCall {qx.util.DeferredCall} The call to schedule
-       */
-      cancel(deferredCall) {
-        var callKey = deferredCall.toHashCode();
-
-        // the flush is currently running and the call is already
-        // scheduled -> remove it from the current queue
-        if (this.__currentQueue__P_164_5 && this.__currentQueue__P_164_5[callKey]) {
-          this.__currentQueue__P_164_5[callKey] = null;
-          return;
-        }
-        delete this.__calls__P_164_0[callKey];
-
-        // stop timer if no other calls are waiting
-        if (qx.lang.Object.isEmpty(this.__calls__P_164_0) && this.__timeoutId__P_164_4 != null) {
-          window.clearTimeout(this.__timeoutId__P_164_4);
-          this.__timeoutId__P_164_4 = null;
-        }
-      },
-      /**
-       * Helper function for the timer.
-       *
-       * @signature function()
-       */
-      __timeout__P_164_2: qx.event.GlobalError.observeMethod(function () {
-        this.__timeoutId__P_164_4 = null;
-
-        // the queue may change while doing the flush so we work on a copy of
-        // the queue and loop while the queue has any entries.
-        while (this.__hasCalls__P_164_3) {
-          this.__currentQueue__P_164_5 = qx.lang.Object.clone(this.__calls__P_164_0);
-          this.__calls__P_164_0 = {};
-          this.__hasCalls__P_164_3 = false;
-          for (var key in this.__currentQueue__P_164_5) {
-            var call = this.__currentQueue__P_164_5[key];
-            if (call) {
-              this.__currentQueue__P_164_5[key] = null;
-              call.call();
-            }
-          }
-        }
-        this.__currentQueue__P_164_5 = null;
-      })
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      if (this.__timeoutId__P_164_4 != null) {
-        window.clearTimeout(this.__timeoutId__P_164_4);
-      }
-      this.__timeoutWrapper__P_164_1 = this.__calls__P_164_0 = null;
-    }
-  });
-  qx.util.DeferredCallManager.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.util.DeferredCallManager": {
-        "require": true,
-        "construct": true
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.core.Object": {
-        "construct": true,
-        "require": true
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2007-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * This class represents a wrapper for functions, which should be called after
-   * the current thread of JavaScript has finished and the control is returned to
-   * the browser. The wrapped function will at most be called once after the control
-   * has been given back to the browser, independent of the number of {@link #call}
-   * calls.
-   *
-   * This class does not need to be disposed, although doing so will cancel any
-   * pending call
-   *
-   * @require(qx.util.DeferredCallManager)
-   */
-  qx.Class.define("qx.util.DeferredCall", {
-    extend: qx.core.Object,
-    /*
-    *****************************************************************************
-       CONSTRUCTOR
-    *****************************************************************************
-    */
-
-    /**
-     * @param callback {Function} The callback
-     * @param context {Object?window} the context in which the function will be called.
-     */
-    construct(callback, context) {
-      qx.core.Object.constructor.call(this);
-      this.__callback__P_78_0 = callback;
-      this.__context__P_78_1 = context || null;
-      this.__manager__P_78_2 = qx.util.DeferredCallManager.getInstance();
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __callback__P_78_0: null,
-      __context__P_78_1: null,
-      __manager__P_78_2: null,
-      /**
-       * Prevent the callback from being called.
-       */
-      cancel() {
-        this.__manager__P_78_2.cancel(this);
-      },
-      /**
-       * Issue a deferred call of the callback.
-       */
-      schedule() {
-        this.__manager__P_78_2.schedule(this);
-      },
-      /**
-       * Calls the callback directly.
-       */
-      call() {
-        {
-          // warn if the context is disposed
-          var context = this.__context__P_78_1;
-          if (context && context.isDisposed && context.isDisposed()) {
-            this.warn("The context object '" + context + "' of the defered call '" + this + "'is already disposed.");
-          }
-        }
-        this.__context__P_78_1 ? this.__callback__P_78_0.apply(this.__context__P_78_1) : this.__callback__P_78_0();
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      this.cancel();
-      this.__context__P_78_1 = this.__callback__P_78_0 = this.__manager__P_78_2 = null;
-    }
-  });
-  qx.util.DeferredCall.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.Promise": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /**
-   * Bluebird implementation for the qx.Promise API
-   *
-   *
-   *@ignore(global.*)
-   *@ignore(Symbol.*)
-   *@ignore(chrome.*)
-   *
-   */
-
-  /* global global, setImmediate, chrome, _dereq_ */
-  /* eslint-disable no-global-assign */
-  qx.Class.define("qx.promise.BluebirdImpl", {
-    type: "static",
-    statics: {
-      /**
-       * The Bluebird Promise class
-       * Always available
-       */
-      Bluebird: null,
-      /**
-       * Called when the Bluebird Promise class is loaded
-       * @param Promise {Class} the Promise class
-       */
-      __attachBluebird__P_141_0(Promise) {
-        qx.promise.BluebirdImpl.Bluebird = Promise;
-        Promise.config({
-          warnings: true,
-          longStackTraces: true,
-          cancellation: true
-        });
-      }
-    }
-  });
   /*eslint curly: ["off"]*/
   /**
    * @lint ignoreUnused(exports)
@@ -19881,7 +18773,7 @@
      * Features enabled: core, race, call_get, generators, map, nodeify, promisify, props, reduce, settle, some, using, timers, filter, any, each
      */
     !function (e) {
-      qx.promise.BluebirdImpl.__attachBluebird__P_141_0(e());
+      qx.Promise.__attachBluebird__P_67_9(e());
     }(function () {
       var define, module, exports;
       return function e(t, n, r) {
@@ -20807,10 +19699,10 @@
                 }
                 if (trace !== undefined) {
                   trace.attachExtraTrace(error);
-                } else if (!error.__stackCleaned____P_141_1) {
+                } else if (!error.__stackCleaned____P_67_13) {
                   var parsed = parseStackAndMessage(error);
                   util.notEnumerableProp(error, "stack", parsed.message + "\n" + parsed.stack.join("\n"));
-                  util.notEnumerableProp(error, "__stackCleaned____P_141_1", true);
+                  util.notEnumerableProp(error, "__stackCleaned____P_67_13", true);
                 }
               }
             }
@@ -21123,7 +20015,7 @@
               }
             };
             CapturedTrace.prototype.attachExtraTrace = function (error) {
-              if (error.__stackCleaned____P_141_1) return;
+              if (error.__stackCleaned____P_67_13) return;
               this.uncycle();
               var parsed = parseStackAndMessage(error);
               var message = parsed.message;
@@ -21136,7 +20028,7 @@
               removeCommonRoots(stacks);
               removeDuplicateOrEmptyJumps(stacks);
               util.notEnumerableProp(error, "stack", reconstructStack(message, stacks));
-              util.notEnumerableProp(error, "__stackCleaned____P_141_1", true);
+              util.notEnumerableProp(error, "__stackCleaned____P_67_13", true);
             };
             var captureStackTrace = function stackDetection() {
               var v8stackFramePattern = /^\s*at\s*/;
@@ -22984,9 +21876,9 @@
             var TypeError = _dereq_("./errors").TypeError;
             var defaultSuffix = "Async";
             var defaultPromisified = {
-              __isPromisified____P_141_2: true
+              __isPromisified____P_67_14: true
             };
-            var noCopyProps = ["arity", "length", "name", "arguments", "caller", "callee", "prototype", "__isPromisified____P_141_2"];
+            var noCopyProps = ["arity", "length", "name", "arguments", "caller", "callee", "prototype", "__isPromisified____P_67_14"];
             var noCopyPropsPattern = new RegExp("^(?:" + noCopyProps.join("|") + ")$");
             var defaultFilter = function (name) {
               return util.isIdentifier(name) && name.charAt(0) !== "_" && name !== "constructor";
@@ -22996,7 +21888,7 @@
             }
             function isPromisified(fn) {
               try {
-                return fn.__isPromisified____P_141_2 === true;
+                return fn.__isPromisified____P_67_14 === true;
               } catch (e) {
                 return false;
               }
@@ -23036,7 +21928,7 @@
               return str.replace(/([$])/, "\\$");
             };
             var makeNodePromisifiedEval;
-            function makeNodePromisifiedClosure(callback, receiver, _, fn, ____P_141_3, multiArgs) {
+            function makeNodePromisifiedClosure(callback, receiver, _, fn, ____P_67_15, multiArgs) {
               var defaultThis = function () {
                 return this;
               }();
@@ -23059,7 +21951,7 @@
                 if (!promise._isFateSealed()) promise._setAsyncGuaranteed();
                 return promise;
               }
-              util.notEnumerableProp(promisified, "__isPromisified____P_141_2", true);
+              util.notEnumerableProp(promisified, "__isPromisified____P_67_14", true);
               return promisified;
             }
             var makeNodePromisified = canEvaluate ? makeNodePromisifiedEval : makeNodePromisifiedClosure;
@@ -23076,7 +21968,7 @@
                   var promisified = promisifier(fn, function () {
                     return makeNodePromisified(key, THIS, key, fn, suffix, multiArgs);
                   });
-                  util.notEnumerableProp(promisified, "__isPromisified____P_141_2", true);
+                  util.notEnumerableProp(promisified, "__isPromisified____P_67_14", true);
                   obj[promisifiedKey] = promisified;
                 }
               }
@@ -23784,11 +22676,11 @@
             PromiseInspection.prototype.isCancelled = function () {
               return (this._bitField & 8454144) !== 0;
             };
-            Promise.prototype.__isCancelled__P_141_4 = function () {
+            Promise.prototype.__isCancelled__P_67_16 = function () {
               return (this._bitField & 65536) === 65536;
             };
             Promise.prototype._isCancelled = function () {
-              return this._target().__isCancelled__P_141_4();
+              return this._target().__isCancelled__P_67_16();
             };
             Promise.prototype.isCancelled = function () {
               return (this._target()._bitField & 8454144) !== 0;
@@ -24504,7 +23396,7 @@
       }, {}, [4])(4);
     });
   })();
-  qx.promise.BluebirdImpl.$$dbClassInfo = $$dbClassInfo;
+  qx.Promise.$$dbClassInfo = $$dbClassInfo;
 })();
 
 (function () {
@@ -24584,23 +23476,23 @@
       /**
        * Unicode letters.  they are taken from Steve Levithan's excellent XRegExp library [http://xregexp.com/addons/unicode/unicode-base.js]
        */
-      __unicodeLetters__P_18_0: "0041-005A0061-007A00AA00B500BA00C0-00D600D8-00F600F8-02C102C6-02D102E0-02E402EC02EE0370-037403760377037A-037D03860388-038A038C038E-03A103A3-03F503F7-0481048A-05250531-055605590561-058705D0-05EA05F0-05F20621-064A066E066F0671-06D306D506E506E606EE06EF06FA-06FC06FF07100712-072F074D-07A507B107CA-07EA07F407F507FA0800-0815081A082408280904-0939093D09500958-0961097109720979-097F0985-098C098F09900993-09A809AA-09B009B209B6-09B909BD09CE09DC09DD09DF-09E109F009F10A05-0A0A0A0F0A100A13-0A280A2A-0A300A320A330A350A360A380A390A59-0A5C0A5E0A72-0A740A85-0A8D0A8F-0A910A93-0AA80AAA-0AB00AB20AB30AB5-0AB90ABD0AD00AE00AE10B05-0B0C0B0F0B100B13-0B280B2A-0B300B320B330B35-0B390B3D0B5C0B5D0B5F-0B610B710B830B85-0B8A0B8E-0B900B92-0B950B990B9A0B9C0B9E0B9F0BA30BA40BA8-0BAA0BAE-0BB90BD00C05-0C0C0C0E-0C100C12-0C280C2A-0C330C35-0C390C3D0C580C590C600C610C85-0C8C0C8E-0C900C92-0CA80CAA-0CB30CB5-0CB90CBD0CDE0CE00CE10D05-0D0C0D0E-0D100D12-0D280D2A-0D390D3D0D600D610D7A-0D7F0D85-0D960D9A-0DB10DB3-0DBB0DBD0DC0-0DC60E01-0E300E320E330E40-0E460E810E820E840E870E880E8A0E8D0E94-0E970E99-0E9F0EA1-0EA30EA50EA70EAA0EAB0EAD-0EB00EB20EB30EBD0EC0-0EC40EC60EDC0EDD0F000F40-0F470F49-0F6C0F88-0F8B1000-102A103F1050-1055105A-105D106110651066106E-10701075-1081108E10A0-10C510D0-10FA10FC1100-1248124A-124D1250-12561258125A-125D1260-1288128A-128D1290-12B012B2-12B512B8-12BE12C012C2-12C512C8-12D612D8-13101312-13151318-135A1380-138F13A0-13F41401-166C166F-167F1681-169A16A0-16EA1700-170C170E-17111720-17311740-17511760-176C176E-17701780-17B317D717DC1820-18771880-18A818AA18B0-18F51900-191C1950-196D1970-19741980-19AB19C1-19C71A00-1A161A20-1A541AA71B05-1B331B45-1B4B1B83-1BA01BAE1BAF1C00-1C231C4D-1C4F1C5A-1C7D1CE9-1CEC1CEE-1CF11D00-1DBF1E00-1F151F18-1F1D1F20-1F451F48-1F4D1F50-1F571F591F5B1F5D1F5F-1F7D1F80-1FB41FB6-1FBC1FBE1FC2-1FC41FC6-1FCC1FD0-1FD31FD6-1FDB1FE0-1FEC1FF2-1FF41FF6-1FFC2071207F2090-209421022107210A-211321152119-211D212421262128212A-212D212F-2139213C-213F2145-2149214E218321842C00-2C2E2C30-2C5E2C60-2CE42CEB-2CEE2D00-2D252D30-2D652D6F2D80-2D962DA0-2DA62DA8-2DAE2DB0-2DB62DB8-2DBE2DC0-2DC62DC8-2DCE2DD0-2DD62DD8-2DDE2E2F300530063031-3035303B303C3041-3096309D-309F30A1-30FA30FC-30FF3105-312D3131-318E31A0-31B731F0-31FF3400-4DB54E00-9FCBA000-A48CA4D0-A4FDA500-A60CA610-A61FA62AA62BA640-A65FA662-A66EA67F-A697A6A0-A6E5A717-A71FA722-A788A78BA78CA7FB-A801A803-A805A807-A80AA80C-A822A840-A873A882-A8B3A8F2-A8F7A8FBA90A-A925A930-A946A960-A97CA984-A9B2A9CFAA00-AA28AA40-AA42AA44-AA4BAA60-AA76AA7AAA80-AAAFAAB1AAB5AAB6AAB9-AABDAAC0AAC2AADB-AADDABC0-ABE2AC00-D7A3D7B0-D7C6D7CB-D7FBF900-FA2DFA30-FA6DFA70-FAD9FB00-FB06FB13-FB17FB1DFB1F-FB28FB2A-FB36FB38-FB3CFB3EFB40FB41FB43FB44FB46-FBB1FBD3-FD3DFD50-FD8FFD92-FDC7FDF0-FDFBFE70-FE74FE76-FEFCFF21-FF3AFF41-FF5AFF66-FFBEFFC2-FFC7FFCA-FFCFFFD2-FFD7FFDA-FFDC",
+      __unicodeLetters__P_10_0: "0041-005A0061-007A00AA00B500BA00C0-00D600D8-00F600F8-02C102C6-02D102E0-02E402EC02EE0370-037403760377037A-037D03860388-038A038C038E-03A103A3-03F503F7-0481048A-05250531-055605590561-058705D0-05EA05F0-05F20621-064A066E066F0671-06D306D506E506E606EE06EF06FA-06FC06FF07100712-072F074D-07A507B107CA-07EA07F407F507FA0800-0815081A082408280904-0939093D09500958-0961097109720979-097F0985-098C098F09900993-09A809AA-09B009B209B6-09B909BD09CE09DC09DD09DF-09E109F009F10A05-0A0A0A0F0A100A13-0A280A2A-0A300A320A330A350A360A380A390A59-0A5C0A5E0A72-0A740A85-0A8D0A8F-0A910A93-0AA80AAA-0AB00AB20AB30AB5-0AB90ABD0AD00AE00AE10B05-0B0C0B0F0B100B13-0B280B2A-0B300B320B330B35-0B390B3D0B5C0B5D0B5F-0B610B710B830B85-0B8A0B8E-0B900B92-0B950B990B9A0B9C0B9E0B9F0BA30BA40BA8-0BAA0BAE-0BB90BD00C05-0C0C0C0E-0C100C12-0C280C2A-0C330C35-0C390C3D0C580C590C600C610C85-0C8C0C8E-0C900C92-0CA80CAA-0CB30CB5-0CB90CBD0CDE0CE00CE10D05-0D0C0D0E-0D100D12-0D280D2A-0D390D3D0D600D610D7A-0D7F0D85-0D960D9A-0DB10DB3-0DBB0DBD0DC0-0DC60E01-0E300E320E330E40-0E460E810E820E840E870E880E8A0E8D0E94-0E970E99-0E9F0EA1-0EA30EA50EA70EAA0EAB0EAD-0EB00EB20EB30EBD0EC0-0EC40EC60EDC0EDD0F000F40-0F470F49-0F6C0F88-0F8B1000-102A103F1050-1055105A-105D106110651066106E-10701075-1081108E10A0-10C510D0-10FA10FC1100-1248124A-124D1250-12561258125A-125D1260-1288128A-128D1290-12B012B2-12B512B8-12BE12C012C2-12C512C8-12D612D8-13101312-13151318-135A1380-138F13A0-13F41401-166C166F-167F1681-169A16A0-16EA1700-170C170E-17111720-17311740-17511760-176C176E-17701780-17B317D717DC1820-18771880-18A818AA18B0-18F51900-191C1950-196D1970-19741980-19AB19C1-19C71A00-1A161A20-1A541AA71B05-1B331B45-1B4B1B83-1BA01BAE1BAF1C00-1C231C4D-1C4F1C5A-1C7D1CE9-1CEC1CEE-1CF11D00-1DBF1E00-1F151F18-1F1D1F20-1F451F48-1F4D1F50-1F571F591F5B1F5D1F5F-1F7D1F80-1FB41FB6-1FBC1FBE1FC2-1FC41FC6-1FCC1FD0-1FD31FD6-1FDB1FE0-1FEC1FF2-1FF41FF6-1FFC2071207F2090-209421022107210A-211321152119-211D212421262128212A-212D212F-2139213C-213F2145-2149214E218321842C00-2C2E2C30-2C5E2C60-2CE42CEB-2CEE2D00-2D252D30-2D652D6F2D80-2D962DA0-2DA62DA8-2DAE2DB0-2DB62DB8-2DBE2DC0-2DC62DC8-2DCE2DD0-2DD62DD8-2DDE2E2F300530063031-3035303B303C3041-3096309D-309F30A1-30FA30FC-30FF3105-312D3131-318E31A0-31B731F0-31FF3400-4DB54E00-9FCBA000-A48CA4D0-A4FDA500-A60CA610-A61FA62AA62BA640-A65FA662-A66EA67F-A697A6A0-A6E5A717-A71FA722-A788A78BA78CA7FB-A801A803-A805A807-A80AA80C-A822A840-A873A882-A8B3A8F2-A8F7A8FBA90A-A925A930-A946A960-A97CA984-A9B2A9CFAA00-AA28AA40-AA42AA44-AA4BAA60-AA76AA7AAA80-AAAFAAB1AAB5AAB6AAB9-AABDAAC0AAC2AADB-AADDABC0-ABE2AC00-D7A3D7B0-D7C6D7CB-D7FBF900-FA2DFA30-FA6DFA70-FAD9FB00-FB06FB13-FB17FB1DFB1F-FB28FB2A-FB36FB38-FB3CFB3EFB40FB41FB43FB44FB46-FBB1FBD3-FD3DFD50-FD8FFD92-FDC7FDF0-FDFBFE70-FE74FE76-FEFCFF21-FF3AFF41-FF5AFF66-FFBEFFC2-FFC7FFCA-FFCFFFD2-FFD7FFDA-FFDC",
       /**
        * A RegExp that matches the first letter in a word - unicode aware
        */
-      __unicodeFirstLetterInWordRegexp__P_18_1: null,
+      __unicodeFirstLetterInWordRegexp__P_10_1: null,
       /**
        * @type {Map} Cache for often used string operations [camelCasing and hyphenation]
        * e.g. marginTop => margin-top
        */
-      __camelCaseMap__P_18_2: {},
+      __camelCaseMap__P_10_2: {},
       /**
        * {Map} Cache for often used hyphenation operations
        * e.g. marginTop => margin-top
        */
-      __hyphenationMap__P_18_3: {},
+      __hyphenationMap__P_10_3: {},
       /** @type{Map<char, String} character types, key is the character and the vaklue is `upper`, `lower`, or `digit` */
-      __characterTypes__P_18_4: null,
+      __characterTypes__P_10_4: null,
       /**
        * Converts a hyphenated string (separated by '-') to camel case.
        *
@@ -24611,12 +23503,12 @@
        * @return {String} camelcase string
        */
       camelCase(str) {
-        var result = this.__camelCaseMap__P_18_2[str];
+        var result = this.__camelCaseMap__P_10_2[str];
         if (!result) {
           result = str.replace(/\-([a-z])/g, function (match, chr) {
             return chr.toUpperCase();
           });
-          this.__camelCaseMap__P_18_2[str] = result;
+          this.__camelCaseMap__P_10_2[str] = result;
         }
         return result;
       },
@@ -24630,12 +23522,12 @@
        * @return {String} hyphenated string
        */
       hyphenate(str) {
-        var result = this.__hyphenationMap__P_18_3[str];
+        var result = this.__hyphenationMap__P_10_3[str];
         if (!result) {
           result = str.replace(/[A-Z]/g, function (match) {
             return "-" + match.charAt(0).toLowerCase();
           });
-          this.__hyphenationMap__P_18_3[str] = result;
+          this.__hyphenationMap__P_10_3[str] = result;
         }
         return result;
       },
@@ -24649,15 +23541,15 @@
        * @return {String} capitalized string
        */
       capitalize(str) {
-        if (this.__unicodeFirstLetterInWordRegexp__P_18_1 === null) {
+        if (this.__unicodeFirstLetterInWordRegexp__P_10_1 === null) {
           var unicodeEscapePrefix = "\\u";
-          this.__unicodeFirstLetterInWordRegexp__P_18_1 = new RegExp("(^|[^" + this.__unicodeLetters__P_18_0.replace(/[0-9A-F]{4}/g, function (match) {
+          this.__unicodeFirstLetterInWordRegexp__P_10_1 = new RegExp("(^|[^" + this.__unicodeLetters__P_10_0.replace(/[0-9A-F]{4}/g, function (match) {
             return unicodeEscapePrefix + match;
-          }) + "])[" + this.__unicodeLetters__P_18_0.replace(/[0-9A-F]{4}/g, function (match) {
+          }) + "])[" + this.__unicodeLetters__P_10_0.replace(/[0-9A-F]{4}/g, function (match) {
             return unicodeEscapePrefix + match;
           }) + "]", "g");
         }
-        return str.replace(this.__unicodeFirstLetterInWordRegexp__P_18_1, function (match) {
+        return str.replace(this.__unicodeFirstLetterInWordRegexp__P_10_1, function (match) {
           return match.toUpperCase();
         });
       },
@@ -24667,7 +23559,7 @@
        * @returns {Boolean}
        */
       isUpperCase(str) {
-        return qx.lang.String.__characterRx__P_18_5.upper.test(str);
+        return qx.lang.String.__characterRx__P_10_5.upper.test(str);
       },
       /**
        * Detects whether the string is all lower case
@@ -24675,7 +23567,7 @@
        * @returns {Boolean}
        */
       isLowerCase(str) {
-        return qx.lang.String.__characterRx__P_18_5.lower.test(str);
+        return qx.lang.String.__characterRx__P_10_5.lower.test(str);
       },
       /**
        * Detects whether the string is all letters
@@ -24683,7 +23575,7 @@
        * @returns {Boolean}
        */
       isLetters(str) {
-        return qx.lang.String.__characterRx__P_18_5.letter.test(str);
+        return qx.lang.String.__characterRx__P_10_5.letter.test(str);
       },
       /**
        * Detects whether the string is all digits
@@ -24691,7 +23583,7 @@
        * @returns {Boolean}
        */
       isDigits(str) {
-        return qx.lang.String.__characterRx__P_18_5.digit.test(str);
+        return qx.lang.String.__characterRx__P_10_5.digit.test(str);
       },
       /**
        * Removes all extraneous whitespace from a string and trims it
@@ -24901,7 +23793,7 @@
       }
     },
     defer(statics) {
-      statics.__characterRx__P_18_5 = {
+      statics.__characterRx__P_10_5 = {
         letter: RegExp(/^\p{General_Category=Letter}+$/u),
         upper: RegExp(/^\p{General_Category=Uppercase_Letter}+$/u),
         lower: RegExp(/^\p{General_Category=Lowercase_Letter}+$/u),
@@ -24957,9 +23849,9 @@
   qx.Class.define("qx.data.SingleValueBinding", {
     statics: {
       /** internal reference for all bindings indexed by source object */
-      __bindings__P_189_0: {},
+      __bindings__P_196_0: {},
       /** internal reference for all bindings indexed by target object */
-      __bindingsByTarget__P_189_1: {},
+      __bindingsByTarget__P_196_1: {},
       /**
        * The function is responsible for binding a source objects property to
        * a target objects property. Both properties have to have the usual qooxdoo
@@ -25054,13 +23946,13 @@
         }
 
         // set up the target binding
-        var targetListenerMap = this.__setUpTargetBinding__P_189_2(sourceObject, sourcePropertyChain, targetObject, targetPropertyChain, options);
+        var targetListenerMap = this.__setUpTargetBinding__P_196_2(sourceObject, sourcePropertyChain, targetObject, targetPropertyChain, options);
 
         // get the property names
         var propertyNames = sourcePropertyChain.split(".");
 
         // stuff that's needed to store for the listener function
-        var arrayIndexValues = this.__checkForArrayInPropertyChain__P_189_3(propertyNames);
+        var arrayIndexValues = this.__checkForArrayInPropertyChain__P_196_3(propertyNames);
         var sources = [];
         var listeners = [];
         var listenerIds = [];
@@ -25080,7 +23972,7 @@
               // push the array change event
               eventNames.push("change");
             } else {
-              var eventName = this.__getEventNameForProperty__P_189_4(source, propertyName);
+              var eventName = this.__getEventNameForProperty__P_196_4(source, propertyName);
               if (!eventName) {
                 if (i == 0) {
                   // the root property can not change --> error
@@ -25091,7 +23983,7 @@
                 }
 
                 // call the converter if no event could be found on binding creation
-                initialPromise = this.__setInitialValue__P_189_5(undefined, targetObject, targetPropertyChain, options, sourceObject);
+                initialPromise = this.__setInitialValue__P_196_5(undefined, targetObject, targetPropertyChain, options, sourceObject);
                 break;
               }
               eventNames.push(eventName);
@@ -25109,18 +24001,18 @@
                 var currentValue = source.getItem(itemIndex);
 
                 // set the initial value
-                initialPromise = this.__setInitialValue__P_189_5(currentValue, targetObject, targetPropertyChain, options, sourceObject);
+                initialPromise = this.__setInitialValue__P_196_5(currentValue, targetObject, targetPropertyChain, options, sourceObject);
 
                 // bind the event
-                listenerIds[i] = this.__bindEventToProperty__P_189_6(source, eventNames[i], targetObject, targetPropertyChain, options, arrayIndexValues[i]);
+                listenerIds[i] = this.__bindEventToProperty__P_196_6(source, eventNames[i], targetObject, targetPropertyChain, options, arrayIndexValues[i]);
               } else {
                 // try to set the initial value
                 if (propertyNames[i] != null && source["get" + qx.lang.String.firstUp(propertyNames[i])] != null) {
                   var currentValue = source["get" + qx.lang.String.firstUp(propertyNames[i])]();
-                  initialPromise = this.__setInitialValue__P_189_5(currentValue, targetObject, targetPropertyChain, options, sourceObject);
+                  initialPromise = this.__setInitialValue__P_196_5(currentValue, targetObject, targetPropertyChain, options, sourceObject);
                 }
                 // bind the property
-                listenerIds[i] = this.__bindEventToProperty__P_189_6(source, eventNames[i], targetObject, targetPropertyChain, options);
+                listenerIds[i] = this.__bindEventToProperty__P_196_6(source, eventNames[i], targetObject, targetPropertyChain, options);
               }
 
               // if its not the last property
@@ -25139,7 +24031,7 @@
               };
 
               // create a listener
-              var listener = qx.lang.Function.bind(this.__chainListener__P_189_7, this, context);
+              var listener = qx.lang.Function.bind(this.__chainListener__P_196_7, this, context);
 
               // store the listener for further processing
               listeners.push(listener);
@@ -25163,7 +24055,7 @@
             }
             if (!source) {
               // call the converter if no source could be found on binding creation
-              this.__setInitialValue__P_189_5(source, targetObject, targetPropertyChain, options, sourceObject);
+              this.__setInitialValue__P_196_5(source, targetObject, targetPropertyChain, options, sourceObject);
               break;
             }
           }
@@ -25200,7 +24092,7 @@
         };
 
         // store the bindings
-        this.__storeBinding__P_189_8(id, sourceObject, sourcePropertyChain, targetObject, targetPropertyChain);
+        this.__storeBinding__P_196_8(id, sourceObject, sourcePropertyChain, targetObject, targetPropertyChain);
         return id;
       },
       /**
@@ -25208,7 +24100,7 @@
        *
        * @param context {Map} The current context for the listener.
        */
-      __chainListener__P_189_7(context) {
+      __chainListener__P_196_7(context) {
         // invoke the onUpdate method
         if (context.options && context.options.onUpdate) {
           context.options.onUpdate(context.sources[context.index], context.targetObject);
@@ -25252,12 +24144,12 @@
                 ignoreConverter = match ? match.length > 0 : false;
               }
               if (!ignoreConverter) {
-                this.__setTargetValue__P_189_9(context.targetObject, context.targetPropertyChain, context.options.converter());
+                this.__setTargetValue__P_196_9(context.targetObject, context.targetPropertyChain, context.options.converter());
               } else {
-                this.__resetTargetValue__P_189_10(context.targetObject, context.targetPropertyChain);
+                this.__resetTargetValue__P_196_10(context.targetObject, context.targetPropertyChain);
               }
             } else {
-              this.__resetTargetValue__P_189_10(context.targetObject, context.targetPropertyChain);
+              this.__resetTargetValue__P_196_10(context.targetObject, context.targetPropertyChain);
             }
             break;
           }
@@ -25269,28 +24161,28 @@
               // set the initial value
               var itemIndex = context.arrayIndexValues[j] === "last" ? source.length - 1 : context.arrayIndexValues[j];
               var currentValue = source.getItem(itemIndex);
-              this.__setInitialValue__P_189_5(currentValue, context.targetObject, context.targetPropertyChain, context.options, context.sources[context.index]);
+              this.__setInitialValue__P_196_5(currentValue, context.targetObject, context.targetPropertyChain, context.options, context.sources[context.index]);
 
               // bind the item event to the new target
-              context.listenerIds[j] = this.__bindEventToProperty__P_189_6(source, "change", context.targetObject, context.targetPropertyChain, context.options, context.arrayIndexValues[j]);
+              context.listenerIds[j] = this.__bindEventToProperty__P_196_6(source, "change", context.targetObject, context.targetPropertyChain, context.options, context.arrayIndexValues[j]);
             } else {
               if (context.propertyNames[j] != null && source["get" + qx.lang.String.firstUp(context.propertyNames[j])] != null) {
                 var currentValue = source["get" + qx.lang.String.firstUp(context.propertyNames[j])]();
-                this.__setInitialValue__P_189_5(currentValue, context.targetObject, context.targetPropertyChain, context.options, context.sources[context.index]);
+                this.__setInitialValue__P_196_5(currentValue, context.targetObject, context.targetPropertyChain, context.options, context.sources[context.index]);
               }
-              var eventName = this.__getEventNameForProperty__P_189_4(source, context.propertyNames[j]);
+              var eventName = this.__getEventNameForProperty__P_196_4(source, context.propertyNames[j]);
               if (!eventName) {
                 context.sources[j] = null;
-                this.__resetTargetValue__P_189_10(context.targetObject, context.targetPropertyChain);
+                this.__resetTargetValue__P_196_10(context.targetObject, context.targetPropertyChain);
                 return;
               }
               // bind the last property to the new target
-              context.listenerIds[j] = this.__bindEventToProperty__P_189_6(source, eventName, context.targetObject, context.targetPropertyChain, context.options);
+              context.listenerIds[j] = this.__bindEventToProperty__P_196_6(source, eventName, context.targetObject, context.targetPropertyChain, context.options);
             }
           } else {
             // check if a listener already created
             if (context.listeners[j] == null) {
-              var listener = qx.lang.Function.bind(this.__chainListener__P_189_7, this, context);
+              var listener = qx.lang.Function.bind(this.__chainListener__P_196_7, this, context);
 
               // store the listener for further processing
               context.listeners.push(listener);
@@ -25299,11 +24191,11 @@
             if (qx.Class.implementsInterface(source, qx.data.IListData)) {
               var eventName = "change";
             } else {
-              var eventName = this.__getEventNameForProperty__P_189_4(source, context.propertyNames[j]);
+              var eventName = this.__getEventNameForProperty__P_196_4(source, context.propertyNames[j]);
             }
             if (!eventName) {
               context.sources[j] = null;
-              this.__resetTargetValue__P_189_10(context.targetObject, context.targetPropertyChain);
+              this.__resetTargetValue__P_196_10(context.targetObject, context.targetPropertyChain);
               return;
             }
             context.listenerIds[j] = source.addListener(eventName, context.listeners[j]);
@@ -25326,10 +24218,10 @@
        *   converter.
        * @return {var} A map containing the listener ids and the targets.
        */
-      __setUpTargetBinding__P_189_2(sourceObject, sourcePropertyChain, targetObject, targetPropertyChain, options) {
+      __setUpTargetBinding__P_196_2(sourceObject, sourcePropertyChain, targetObject, targetPropertyChain, options) {
         // get the property names
         var propertyNames = targetPropertyChain.split(".");
-        var arrayIndexValues = this.__checkForArrayInPropertyChain__P_189_3(propertyNames);
+        var arrayIndexValues = this.__checkForArrayInPropertyChain__P_196_3(propertyNames);
         var targets = [];
         var listeners = [];
         var listenerIds = [];
@@ -25343,7 +24235,7 @@
             // push the array change event
             eventNames.push("change");
           } else {
-            var eventName = this.__getEventNameForProperty__P_189_4(target, propertyNames[i]);
+            var eventName = this.__getEventNameForProperty__P_196_4(target, propertyNames[i]);
             if (!eventName) {
               // if the event names could not be terminated,
               // just ignore the target chain listening
@@ -25397,7 +24289,7 @@
               if (qx.Class.implementsInterface(target, qx.data.IListData)) {
                 var eventName = "change";
               } else {
-                var eventName = qx.data.SingleValueBinding.__getEventNameForProperty__P_189_4(target, propertyNames[j]);
+                var eventName = qx.data.SingleValueBinding.__getEventNameForProperty__P_196_4(target, propertyNames[j]);
                 if (!eventName) {
                   // if the event name could not be terminated,
                   // ignore the rest
@@ -25452,8 +24344,8 @@
         var value = this.resolvePropertyChain(sourceObject, sourcePropertyChain);
 
         // convert the data before setting
-        value = qx.data.SingleValueBinding.__convertValue__P_189_11(value, targetObject, targetPropertyChain, options, sourceObject);
-        this.__setTargetValue__P_189_9(targetObject, targetPropertyChain, value);
+        value = qx.data.SingleValueBinding.__convertValue__P_196_11(value, targetObject, targetPropertyChain, options, sourceObject);
+        this.__setTargetValue__P_196_9(targetObject, targetPropertyChain, value);
       },
       /**
        * Internal helper for getting the current set value at the property chain.
@@ -25464,8 +24356,8 @@
        * @return {var?undefined} Returns the set value if defined.
        */
       resolvePropertyChain(o, propertyChain) {
-        var properties = this.__getPropertyChainArray__P_189_12(propertyChain);
-        return this.__getTargetFromChain__P_189_13(o, properties, properties.length);
+        var properties = this.__getPropertyChainArray__P_196_12(propertyChain);
+        return this.__getTargetFromChain__P_196_13(o, properties, properties.length);
       },
       /**
        * Tries to return a fitting event name to the given source object and
@@ -25480,9 +24372,9 @@
        * @param propertyName {String} The name of the property.
        * @return {String|null} The name of the corresponding event or null.
        */
-      __getEventNameForProperty__P_189_4(source, propertyName) {
+      __getEventNameForProperty__P_196_4(source, propertyName) {
         // get the current event name from the property definition
-        var eventName = this.__getEventForProperty__P_189_14(source, propertyName);
+        var eventName = this.__getEventForProperty__P_196_14(source, propertyName);
         // if no event name could be found
         if (eventName == null) {
           // check if the propertyName is the event name
@@ -25506,17 +24398,17 @@
        * @param targetPropertyChain {String} The names of the properties,
        *   separated with a dot.
        */
-      __resetTargetValue__P_189_10(targetObject, targetPropertyChain) {
+      __resetTargetValue__P_196_10(targetObject, targetPropertyChain) {
         // get the last target object of the chain
-        var properties = this.__getPropertyChainArray__P_189_12(targetPropertyChain);
-        var target = this.__getTargetFromChain__P_189_13(targetObject, properties);
+        var properties = this.__getPropertyChainArray__P_196_12(targetPropertyChain);
+        var target = this.__getTargetFromChain__P_196_13(targetObject, properties);
         if (target != null) {
           // get the name of the last property
           var lastProperty = properties[properties.length - 1];
           // check for an array and set the value to null
-          var index = this.__getArrayIndex__P_189_15(lastProperty);
+          var index = this.__getArrayIndex__P_196_15(lastProperty);
           if (index) {
-            this.__setTargetValue__P_189_9(targetObject, targetPropertyChain, null);
+            this.__setTargetValue__P_196_9(targetObject, targetPropertyChain, null);
             return;
           }
 
@@ -25542,16 +24434,16 @@
        *   separated with a dot.
        * @param value {var} The value to set.
        */
-      __setTargetValue__P_189_9(targetObject, targetPropertyChain, value) {
+      __setTargetValue__P_196_9(targetObject, targetPropertyChain, value) {
         // get the last target object of the chain
-        var properties = this.__getPropertyChainArray__P_189_12(targetPropertyChain);
-        var target = this.__getTargetFromChain__P_189_13(targetObject, properties);
+        var properties = this.__getPropertyChainArray__P_196_12(targetPropertyChain);
+        var target = this.__getTargetFromChain__P_196_13(targetObject, properties);
         if (target) {
           // get the name of the last property
           var lastProperty = properties[properties.length - 1];
 
           // check for array notation
-          var index = this.__getArrayIndex__P_189_15(lastProperty);
+          var index = this.__getArrayIndex__P_196_15(lastProperty);
           if (index) {
             if (index === "last") {
               // check for the 'last' notation
@@ -25574,7 +24466,7 @@
        * @return {String|null} Array index or null if the property name does
        * not use bracket notation
        */
-      __getArrayIndex__P_189_15(propertyName) {
+      __getArrayIndex__P_196_15(propertyName) {
         var arrayExp = /^\[(\d+|last)\]$/;
         var arrayMatch = propertyName.match(arrayExp);
         if (arrayMatch) {
@@ -25588,7 +24480,7 @@
        * @param targetPropertyChain {String} property chain
        * @return {String[]} Array of property names
        */
-      __getPropertyChainArray__P_189_12(targetPropertyChain) {
+      __getPropertyChainArray__P_196_12(targetPropertyChain) {
         // split properties (dot notation) and array indexes (bracket notation)
         return targetPropertyChain.replace(/\[/g, ".[").split(".").filter(function (prop) {
           return prop !== "";
@@ -25606,7 +24498,7 @@
        * @return {qx.core.Object|null} The object on which the last property
        *   should be set.
        */
-      __getTargetFromChain__P_189_13(targetObject, targetProperties, index) {
+      __getTargetFromChain__P_196_13(targetObject, targetProperties, index) {
         index = index || targetProperties.length - 1;
         var target = targetObject;
         for (var i = 0; target !== null && i < index; i++) {
@@ -25614,7 +24506,7 @@
             var property = targetProperties[i];
 
             // array notation
-            var arrIndex = this.__getArrayIndex__P_189_15(property);
+            var arrIndex = this.__getArrayIndex__P_196_15(property);
             if (arrIndex) {
               if (arrIndex === "last") {
                 // check for the 'last' notation
@@ -25644,18 +24536,18 @@
        * @param sourceObject {qx.core.Object} The source object of the binding (
        *   used for the onUpdate callback).
        */
-      __setInitialValue__P_189_5(value, targetObject, targetPropertyChain, options, sourceObject) {
+      __setInitialValue__P_196_5(value, targetObject, targetPropertyChain, options, sourceObject) {
         // first convert the initial value
-        value = this.__convertValue__P_189_11(value, targetObject, targetPropertyChain, options, sourceObject);
+        value = this.__convertValue__P_196_11(value, targetObject, targetPropertyChain, options, sourceObject);
 
         // check if the converted value is undefined
         if (value === undefined) {
-          this.__resetTargetValue__P_189_10(targetObject, targetPropertyChain);
+          this.__resetTargetValue__P_196_10(targetObject, targetPropertyChain);
         }
         // only set the initial value if one is given (may be null)
         if (value !== undefined) {
           try {
-            var result = this.__setTargetValue__P_189_9(targetObject, targetPropertyChain, value);
+            var result = this.__setTargetValue__P_196_9(targetObject, targetPropertyChain, value);
 
             // tell the user that the setter was invoked probably
             if (options && options.onUpdate) {
@@ -25683,7 +24575,7 @@
        * @return {Array} An array containing the values of the array properties
        *   corresponding to the property names.
        */
-      __checkForArrayInPropertyChain__P_189_3(propertyNames) {
+      __checkForArrayInPropertyChain__P_196_3(propertyNames) {
         // array for the values of the array properties
         var arrayIndexValues = [];
 
@@ -25757,7 +24649,7 @@
        *   there is no property definition for the target object and target
        *   property.
        */
-      __bindEventToProperty__P_189_6(sourceObject, sourceEvent, targetObject, targetProperty, options, arrayIndex) {
+      __bindEventToProperty__P_196_6(sourceObject, sourceEvent, targetObject, targetProperty, options, arrayIndex) {
         // checks
         {
           // check for the data event
@@ -25777,7 +24669,7 @@
 
             // reset the target if the data is not set
             if (data === undefined) {
-              qx.data.SingleValueBinding.__resetTargetValue__P_189_10(targetObject, targetProperty);
+              qx.data.SingleValueBinding.__resetTargetValue__P_196_10(targetObject, targetProperty);
             }
 
             // only do something if the current array has been changed
@@ -25794,7 +24686,7 @@
           // debug message
 
           // convert the data
-          data = qx.data.SingleValueBinding.__convertValue__P_189_11(data, targetObject, targetProperty, options, sourceObject);
+          data = qx.data.SingleValueBinding.__convertValue__P_196_11(data, targetObject, targetProperty, options, sourceObject);
 
           // debug message
 
@@ -25802,9 +24694,9 @@
           var result;
           try {
             if (data !== undefined) {
-              result = qx.data.SingleValueBinding.__setTargetValue__P_189_9(targetObject, targetProperty, data);
+              result = qx.data.SingleValueBinding.__setTargetValue__P_196_9(targetObject, targetProperty, data);
             } else {
-              result = qx.data.SingleValueBinding.__resetTargetValue__P_189_10(targetObject, targetProperty);
+              result = qx.data.SingleValueBinding.__resetTargetValue__P_196_10(targetObject, targetProperty);
             }
 
             // tell the user that the setter was invoked probably
@@ -25847,23 +24739,23 @@
        * @param targetProperty {String} The name of the property on the target
        *   object.
        */
-      __storeBinding__P_189_8(id, sourceObject, sourceEvent, targetObject, targetProperty) {
+      __storeBinding__P_196_8(id, sourceObject, sourceEvent, targetObject, targetProperty) {
         var hash;
 
         // add the listener id to the internal registry
         hash = sourceObject.toHashCode();
-        if (this.__bindings__P_189_0[hash] === undefined) {
-          this.__bindings__P_189_0[hash] = [];
+        if (this.__bindings__P_196_0[hash] === undefined) {
+          this.__bindings__P_196_0[hash] = [];
         }
         var binding = [id, sourceObject, sourceEvent, targetObject, targetProperty];
-        this.__bindings__P_189_0[hash].push(binding);
+        this.__bindings__P_196_0[hash].push(binding);
 
         // add same binding data indexed by target object
         hash = targetObject.toHashCode();
-        if (this.__bindingsByTarget__P_189_1[hash] === undefined) {
-          this.__bindingsByTarget__P_189_1[hash] = [];
+        if (this.__bindingsByTarget__P_196_1[hash] === undefined) {
+          this.__bindingsByTarget__P_196_1[hash] = [];
         }
-        this.__bindingsByTarget__P_189_1[hash].push(binding);
+        this.__bindingsByTarget__P_196_1[hash].push(binding);
       },
       /**
        * This method takes the given value, checks if the user has given a
@@ -25884,7 +24776,7 @@
        * @throws {qx.core.AssertionError} If there is no property definition
        *   of the given target object and target property.
        */
-      __convertValue__P_189_11(value, targetObject, targetPropertyChain, options, sourceObject) {
+      __convertValue__P_196_11(value, targetObject, targetPropertyChain, options, sourceObject) {
         // do the conversion given by the user
         if (options && options.converter) {
           var model;
@@ -25894,8 +24786,8 @@
           return options.converter(value, model, sourceObject, targetObject);
           // try default conversion
         } else {
-          var properties = this.__getPropertyChainArray__P_189_12(targetPropertyChain);
-          var target = this.__getTargetFromChain__P_189_13(targetObject, properties);
+          var properties = this.__getPropertyChainArray__P_196_12(targetPropertyChain);
+          var target = this.__getTargetFromChain__P_196_13(targetObject, properties);
           var lastProperty = targetPropertyChain.substring(targetPropertyChain.lastIndexOf(".") + 1, targetPropertyChain.length);
 
           // if no target is currently available, return the original value
@@ -25904,7 +24796,7 @@
           }
           var propertieDefinition = qx.Class.getPropertyDefinition(target.constructor, lastProperty);
           var check = propertieDefinition == null ? "" : propertieDefinition.check;
-          return this.__defaultConversion__P_189_16(value, check);
+          return this.__defaultConversion__P_196_16(value, check);
         }
       },
       /**
@@ -25918,7 +24810,7 @@
        * @throws {qx.core.AssertionError} If there is no property definition of
        *   the given object property pair.
        */
-      __getEventForProperty__P_189_14(sourceObject, sourceProperty) {
+      __getEventForProperty__P_196_14(sourceObject, sourceProperty) {
         // get the event name
         var propertieDefinition = qx.Class.getPropertyDefinition(sourceObject.constructor, sourceProperty);
         if (propertieDefinition == null) {
@@ -25934,7 +24826,7 @@
        *   contains the target type.
        * @return {Integer|String|Float} The converted data
        */
-      __defaultConversion__P_189_16(data, targetCheck) {
+      __defaultConversion__P_196_16(data, targetCheck) {
         var dataType = qx.lang.Type.getClass(data);
 
         // to integer
@@ -26007,14 +24899,14 @@
             if (bindings[i][0] == id) {
               // remove binding data from internal reference indexed by target object
               var target = bindings[i][3];
-              if (this.__bindingsByTarget__P_189_1[target.toHashCode()]) {
-                qx.lang.Array.remove(this.__bindingsByTarget__P_189_1[target.toHashCode()], bindings[i]);
+              if (this.__bindingsByTarget__P_196_1[target.toHashCode()]) {
+                qx.lang.Array.remove(this.__bindingsByTarget__P_196_1[target.toHashCode()], bindings[i]);
               }
 
               // remove binding data from internal reference indexed by source object
               var source = bindings[i][1];
-              if (this.__bindings__P_189_0[source.toHashCode()]) {
-                qx.lang.Array.remove(this.__bindings__P_189_0[source.toHashCode()], bindings[i]);
+              if (this.__bindings__P_196_0[source.toHashCode()]) {
+                qx.lang.Array.remove(this.__bindings__P_196_0[source.toHashCode()], bindings[i]);
               }
               return;
             }
@@ -26048,8 +24940,8 @@
           }
         }
         var hash = object.toHashCode();
-        delete this.__bindings__P_189_0[hash];
-        delete this.__bindingsByTarget__P_189_1[hash];
+        delete this.__bindings__P_196_0[hash];
+        delete this.__bindingsByTarget__P_196_1[hash];
       },
       /**
        * Removes all bindings between given objects.
@@ -26097,10 +24989,10 @@
         var hash = object.toHashCode();
 
         // get all bindings of object as source
-        var sourceBindings = this.__bindings__P_189_0[hash];
+        var sourceBindings = this.__bindings__P_196_0[hash];
 
         // get all bindings of object as target
-        var targetBindings = this.__bindingsByTarget__P_189_1[hash];
+        var targetBindings = this.__bindingsByTarget__P_196_1[hash];
         if (!sourceBindings && !targetBindings) {
           return [];
         }
@@ -26120,17 +25012,17 @@
        */
       removeAllBindings() {
         // go through all registered objects
-        for (var hash in this.__bindings__P_189_0) {
+        for (var hash in this.__bindings__P_196_0) {
           var object = qx.core.ObjectRegistry.fromHashCode(hash);
           // check for the object, perhaps its already deleted
           if (object == null) {
-            delete this.__bindings__P_189_0[hash];
+            delete this.__bindings__P_196_0[hash];
             continue;
           }
           this.removeAllBindingsForObject(object);
         }
         // reset the bindings map
-        this.__bindings__P_189_0 = {};
+        this.__bindings__P_196_0 = {};
       },
       /**
        * Returns a map containing for every bound object an array of data binding
@@ -26141,7 +25033,7 @@
        * @return {Map} Map containing all bindings.
        */
       getAllBindings() {
-        return this.__bindings__P_189_0;
+        return this.__bindings__P_196_0;
       },
       /**
        * Debug function which shows some valuable information about the given
@@ -26153,10 +25045,10 @@
       showBindingInLog(object, id) {
         var binding;
         // go through all bindings of the given object
-        for (var i = 0; i < this.__bindings__P_189_0[object.toHashCode()].length; i++) {
+        for (var i = 0; i < this.__bindings__P_196_0[object.toHashCode()].length; i++) {
           // the first array item is the id
-          if (this.__bindings__P_189_0[object.toHashCode()][i][0] == id) {
-            binding = this.__bindings__P_189_0[object.toHashCode()][i];
+          if (this.__bindings__P_196_0[object.toHashCode()][i][0] == id) {
+            binding = this.__bindings__P_196_0[object.toHashCode()][i];
             break;
           }
         }
@@ -26174,11 +25066,11 @@
        */
       showAllBindingsInLog() {
         // go through all objects in the registry
-        for (var hash in this.__bindings__P_189_0) {
+        for (var hash in this.__bindings__P_196_0) {
           var object = qx.core.ObjectRegistry.fromHashCode(hash);
           if (object) {
-            for (var i = 0; i < this.__bindings__P_189_0[hash].length; i++) {
-              this.showBindingInLog(object, this.__bindings__P_189_0[hash][i][0]);
+            for (var i = 0; i < this.__bindings__P_196_0[hash].length; i++) {
+              this.showBindingInLog(object, this.__bindings__P_196_0[hash][i][0]);
             }
           }
         }
@@ -26474,7 +25366,7 @@
         return "";
       },
       /** Maps user agent names to system IDs */
-      __ids__P_96_0: {
+      __ids__P_103_0: {
         // Windows
         "Windows NT 10.0": "10",
         "Windows NT 6.3": "8.1",
@@ -26532,9 +25424,9 @@
        *   could not be detected.
        */
       getVersion() {
-        var version = qx.bom.client.OperatingSystem.__getVersionForDesktopOs__P_96_1(navigator.userAgent);
+        var version = qx.bom.client.OperatingSystem.__getVersionForDesktopOs__P_103_1(navigator.userAgent);
         if (version == null) {
-          version = qx.bom.client.OperatingSystem.__getVersionForMobileOs__P_96_2(navigator.userAgent);
+          version = qx.bom.client.OperatingSystem.__getVersionForMobileOs__P_103_2(navigator.userAgent);
         }
         if (version != null) {
           return version;
@@ -26547,15 +25439,15 @@
        * @param userAgent {String} userAgent parameter, needed for detection.
        * @return {String} version number as string or null.
        */
-      __getVersionForDesktopOs__P_96_1(userAgent) {
+      __getVersionForDesktopOs__P_103_1(userAgent) {
         var str = [];
-        for (var key in qx.bom.client.OperatingSystem.__ids__P_96_0) {
+        for (var key in qx.bom.client.OperatingSystem.__ids__P_103_0) {
           str.push(key);
         }
         var reg = new RegExp("(" + str.join("|").replace(/\./g, ".") + ")", "g");
         var match = reg.exec(userAgent);
         if (match && match[1]) {
-          return qx.bom.client.OperatingSystem.__ids__P_96_0[match[1]];
+          return qx.bom.client.OperatingSystem.__ids__P_103_0[match[1]];
         }
         return null;
       },
@@ -26564,7 +25456,7 @@
        * @param userAgent {String} userAgent parameter, needed for detection.
        * @return {String} version number as string or null.
        */
-      __getVersionForMobileOs__P_96_2(userAgent) {
+      __getVersionForMobileOs__P_103_2(userAgent) {
         var windows = userAgent.indexOf("Windows Phone") != -1;
         var android = userAgent.indexOf("Android") != -1;
         var iOs = userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false;
@@ -26652,12 +25544,12 @@
        * Internal lookup table to map property names to CSS names
        * @internal
        */
-      __cssName__P_161_0: {},
+      __cssName__P_154_0: {},
       /**
        * A reference to the native CSS.supports function (supportsCSS in Opera)
        * @internal
        */
-      __supports__P_161_1: null,
+      __supports__P_154_1: null,
       /**
        * Takes the name of a style property and returns the name the browser uses
        * for its implementation, which might include a vendor prefix.
@@ -26694,7 +25586,7 @@
        * @return {String} CSS property
        */
       getCssName(propertyName) {
-        var cssName = this.__cssName__P_161_0[propertyName];
+        var cssName = this.__cssName__P_154_0[propertyName];
         if (!cssName) {
           // all vendor prefixes (except for "ms") start with an uppercase letter
           cssName = propertyName.replace(/[A-Z]/g, function (match) {
@@ -26705,7 +25597,7 @@
           if (/^ms/.test(cssName)) {
             cssName = "-" + cssName;
           }
-          this.__cssName__P_161_0[propertyName] = cssName;
+          this.__cssName__P_154_0[propertyName] = cssName;
         }
         return cssName;
       },
@@ -26732,8 +25624,8 @@
         for (var i = 0, l = vendorPrefixes.length; i < l; i++) {
           var supported = false;
           var prefixedVal = vendorPrefixes[i] ? "-" + vendorPrefixes[i].toLowerCase() + "-" + value : value;
-          if (qx.bom.Style.__supports__P_161_1) {
-            supported = qx.bom.Style.__supports__P_161_1.call(win, cssProperty, prefixedVal);
+          if (qx.bom.Style.__supports__P_154_1) {
+            supported = qx.bom.Style.__supports__P_154_1.call(win, cssProperty, prefixedVal);
           } else {
             element.style.cssText += cssProperty + ":" + prefixedVal + ";";
             supported = typeof element.style[propertyName] == "string" && element.style[propertyName] !== "";
@@ -26747,9 +25639,9 @@
     },
     defer(statics) {
       if (window.CSS && window.CSS.supports) {
-        qx.bom.Style.__supports__P_161_1 = window.CSS.supports.bind(window.CSS);
+        qx.bom.Style.__supports__P_154_1 = window.CSS.supports.bind(window.CSS);
       } else if (window.supportsCSS) {
-        qx.bom.Style.__supports__P_161_1 = window.supportsCSS.bind(window);
+        qx.bom.Style.__supports__P_154_1 = window.supportsCSS.bind(window);
       }
     }
   });
@@ -26812,11 +25704,11 @@
       if (inst.stacktrace) {
         this.stacktrace = inst.stacktrace;
       }
-      this.__failMessage__P_171_0 = failMessage;
-      this.__uri__P_171_1 = uri || "";
-      this.__lineNumber__P_171_2 = lineNumber === undefined ? -1 : lineNumber;
-      this.__columnNumber__P_171_3 = columnNumber === undefined ? -1 : columnNumber;
-      this.__sourceException__P_171_4 = sourceException;
+      this.__failMessage__P_166_0 = failMessage;
+      this.__uri__P_166_1 = uri || "";
+      this.__lineNumber__P_166_2 = lineNumber === undefined ? -1 : lineNumber;
+      this.__columnNumber__P_166_3 = columnNumber === undefined ? -1 : columnNumber;
+      this.__sourceException__P_166_4 = sourceException;
     },
     /*
     *****************************************************************************
@@ -26825,18 +25717,18 @@
     */
 
     members: {
-      __failMessage__P_171_0: null,
-      __uri__P_171_1: null,
-      __lineNumber__P_171_2: null,
-      __columnNumber__P_171_3: null,
-      __sourceException__P_171_4: null,
+      __failMessage__P_166_0: null,
+      __uri__P_166_1: null,
+      __lineNumber__P_166_2: null,
+      __columnNumber__P_166_3: null,
+      __sourceException__P_166_4: null,
       /**
        * Returns the error message.
        *
        * @return {String} error message
        */
       toString() {
-        return this.__failMessage__P_171_0;
+        return this.__failMessage__P_166_0;
       },
       /**
        * Get the URI where error was raised
@@ -26844,7 +25736,7 @@
        * @return {String} URI where error was raised
        */
       getUri() {
-        return this.__uri__P_171_1;
+        return this.__uri__P_166_1;
       },
       /**
        * Get the line number where the error was raised
@@ -26852,7 +25744,7 @@
        * @return {Integer} The line number where the error was raised
        */
       getLineNumber() {
-        return this.__lineNumber__P_171_2;
+        return this.__lineNumber__P_166_2;
       },
       /**
        * Get the column number where the error was raised
@@ -26860,7 +25752,7 @@
        * @return {Integer} The line number where the error was raised
        */
       getColumnNumber() {
-        return this.__columnNumber__P_171_3;
+        return this.__columnNumber__P_166_3;
       },
       /**
        * Get the source exception
@@ -26868,7 +25760,7 @@
        * @return {Error} The source error
        */
       getSourceException() {
-        return this.__sourceException__P_171_4;
+        return this.__sourceException__P_166_4;
       }
     }
   });
@@ -26923,8 +25815,8 @@
       if (qx.Bootstrap.DEBUG) {
         qx.core.Assert.assertNotUndefined(exc);
       }
-      this.__failMessage__P_172_0 = "GlobalError: " + (exc && exc.message ? exc.message : exc);
-      var inst = Error.call(this, this.__failMessage__P_172_0);
+      this.__failMessage__P_167_0 = "GlobalError: " + (exc && exc.message ? exc.message : exc);
+      var inst = Error.call(this, this.__failMessage__P_167_0);
       // map stack trace properties since they're not added by Error's constructor
       if (exc && exc.stack) {
         this.stack = exc.stack;
@@ -26935,20 +25827,20 @@
       if (inst.stacktrace) {
         this.stacktrace = inst.stacktrace;
       }
-      this.__arguments__P_172_1 = args;
-      this.__exc__P_172_2 = exc;
+      this.__arguments__P_167_1 = args;
+      this.__exc__P_167_2 = exc;
     },
     members: {
-      __exc__P_172_2: null,
-      __arguments__P_172_1: null,
-      __failMessage__P_172_0: null,
+      __exc__P_167_2: null,
+      __arguments__P_167_1: null,
+      __failMessage__P_167_0: null,
       /**
        * Returns the error message.
        *
        * @return {String} error message
        */
       toString() {
-        return this.__failMessage__P_172_0;
+        return this.__failMessage__P_167_0;
       },
       /**
        * Returns the arguments which are
@@ -26956,7 +25848,7 @@
        * @return {Object} arguments
        */
       getArguments() {
-        return this.__arguments__P_172_1;
+        return this.__arguments__P_167_1;
       },
       /**
        * Get the source exception
@@ -26964,11 +25856,298 @@
        * @return {Error} source exception
        */
       getSourceException() {
-        return this.__exc__P_172_2;
+        return this.__exc__P_167_2;
       }
     }
   });
   qx.core.GlobalError.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.core.Object": {
+        "require": true
+      },
+      "qx.core.IDisposable": {
+        "require": true
+      },
+      "qx.lang.Function": {
+        "construct": true
+      },
+      "qx.lang.Object": {},
+      "qx.event.GlobalError": {
+        "usage": "dynamic",
+        "require": true
+      }
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+       * Fabian Jakobs (fjakobs)
+  
+  ************************************************************************ */
+
+  /**
+   * This class manages the timer used for deferred calls. All
+   * {@link qx.util.DeferredCall} instances use the single timer from this class.
+   *
+   * NOTE: Instances of this class must be disposed of after use
+   *
+   */
+  qx.Class.define("qx.util.DeferredCallManager", {
+    extend: qx.core.Object,
+    type: "singleton",
+    implement: [qx.core.IDisposable],
+    /*
+    *****************************************************************************
+       CONSTRUCTOR
+    *****************************************************************************
+    */
+
+    construct() {
+      this.__calls__P_156_0 = {};
+      this.__timeoutWrapper__P_156_1 = qx.lang.Function.bind(this.__timeout__P_156_2, this);
+      this.__hasCalls__P_156_3 = false;
+    },
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      __timeoutId__P_156_4: null,
+      __currentQueue__P_156_5: null,
+      __calls__P_156_0: null,
+      __hasCalls__P_156_3: null,
+      __timeoutWrapper__P_156_1: null,
+      /**
+       * Schedule a deferred call
+       *
+       * @param deferredCall {qx.util.DeferredCall} The call to schedule
+       */
+      schedule(deferredCall) {
+        if (this.__timeoutId__P_156_4 == null) {
+          this.__timeoutId__P_156_4 = window.setTimeout(this.__timeoutWrapper__P_156_1, 0);
+        }
+        var callKey = deferredCall.toHashCode();
+
+        // the flush is currently running and the call is already
+        // scheduled
+        if (this.__currentQueue__P_156_5 && this.__currentQueue__P_156_5[callKey]) {
+          return;
+        }
+        this.__calls__P_156_0[callKey] = deferredCall;
+        this.__hasCalls__P_156_3 = true;
+      },
+      /**
+       * Refresh the timeout if the current one is not active anymore.
+       * This is a very special case which can happen in unit tests using
+       * fakeTimers, which overrides the window.setTimeout function (amongst others)
+       * after restoring the sinon sandbox the timeout must be refreshed otherwise
+       * DeferredCalls would never fire.
+       */
+      refreshTimeout() {
+        if (this.__timeoutId__P_156_4 !== null) {
+          this.__timeoutId__P_156_4 = window.setTimeout(this.__timeoutWrapper__P_156_1, 0);
+        }
+      },
+      /**
+       * Cancel a scheduled deferred call
+       *
+       * @param deferredCall {qx.util.DeferredCall} The call to schedule
+       */
+      cancel(deferredCall) {
+        var callKey = deferredCall.toHashCode();
+
+        // the flush is currently running and the call is already
+        // scheduled -> remove it from the current queue
+        if (this.__currentQueue__P_156_5 && this.__currentQueue__P_156_5[callKey]) {
+          this.__currentQueue__P_156_5[callKey] = null;
+          return;
+        }
+        delete this.__calls__P_156_0[callKey];
+
+        // stop timer if no other calls are waiting
+        if (qx.lang.Object.isEmpty(this.__calls__P_156_0) && this.__timeoutId__P_156_4 != null) {
+          window.clearTimeout(this.__timeoutId__P_156_4);
+          this.__timeoutId__P_156_4 = null;
+        }
+      },
+      /**
+       * Helper function for the timer.
+       *
+       * @signature function()
+       */
+      __timeout__P_156_2: qx.event.GlobalError.observeMethod(function () {
+        this.__timeoutId__P_156_4 = null;
+
+        // the queue may change while doing the flush so we work on a copy of
+        // the queue and loop while the queue has any entries.
+        while (this.__hasCalls__P_156_3) {
+          this.__currentQueue__P_156_5 = qx.lang.Object.clone(this.__calls__P_156_0);
+          this.__calls__P_156_0 = {};
+          this.__hasCalls__P_156_3 = false;
+          for (var key in this.__currentQueue__P_156_5) {
+            var call = this.__currentQueue__P_156_5[key];
+            if (call) {
+              this.__currentQueue__P_156_5[key] = null;
+              call.call();
+            }
+          }
+        }
+        this.__currentQueue__P_156_5 = null;
+      })
+    },
+    /*
+    *****************************************************************************
+       DESTRUCTOR
+    *****************************************************************************
+    */
+
+    destruct() {
+      if (this.__timeoutId__P_156_4 != null) {
+        window.clearTimeout(this.__timeoutId__P_156_4);
+      }
+      this.__timeoutWrapper__P_156_1 = this.__calls__P_156_0 = null;
+    }
+  });
+  qx.util.DeferredCallManager.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.util.DeferredCallManager": {
+        "require": true,
+        "construct": true
+      },
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.core.Object": {
+        "construct": true,
+        "require": true
+      }
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2007-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Fabian Jakobs (fjakobs)
+  
+  ************************************************************************ */
+
+  /**
+   * This class represents a wrapper for functions, which should be called after
+   * the current thread of JavaScript has finished and the control is returned to
+   * the browser. The wrapped function will at most be called once after the control
+   * has been given back to the browser, independent of the number of {@link #call}
+   * calls.
+   *
+   * This class does not need to be disposed, although doing so will cancel any
+   * pending call
+   *
+   * @require(qx.util.DeferredCallManager)
+   */
+  qx.Class.define("qx.util.DeferredCall", {
+    extend: qx.core.Object,
+    /*
+    *****************************************************************************
+       CONSTRUCTOR
+    *****************************************************************************
+    */
+
+    /**
+     * @param callback {Function} The callback
+     * @param context {Object?window} the context in which the function will be called.
+     */
+    construct(callback, context) {
+      qx.core.Object.constructor.call(this);
+      this.__callback__P_87_0 = callback;
+      this.__context__P_87_1 = context || null;
+      this.__manager__P_87_2 = qx.util.DeferredCallManager.getInstance();
+    },
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      __callback__P_87_0: null,
+      __context__P_87_1: null,
+      __manager__P_87_2: null,
+      /**
+       * Prevent the callback from being called.
+       */
+      cancel() {
+        this.__manager__P_87_2.cancel(this);
+      },
+      /**
+       * Issue a deferred call of the callback.
+       */
+      schedule() {
+        this.__manager__P_87_2.schedule(this);
+      },
+      /**
+       * Calls the callback directly.
+       */
+      call() {
+        {
+          // warn if the context is disposed
+          var context = this.__context__P_87_1;
+          if (context && context.isDisposed && context.isDisposed()) {
+            this.warn("The context object '" + context + "' of the defered call '" + this + "'is already disposed.");
+          }
+        }
+        this.__context__P_87_1 ? this.__callback__P_87_0.apply(this.__context__P_87_1) : this.__callback__P_87_0();
+      }
+    },
+    /*
+    *****************************************************************************
+       DESTRUCTOR
+    *****************************************************************************
+    */
+
+    destruct() {
+      this.cancel();
+      this.__context__P_87_1 = this.__callback__P_87_0 = this.__manager__P_87_2 = null;
+    }
+  });
+  qx.util.DeferredCall.$$dbClassInfo = $$dbClassInfo;
 })();
 
 (function () {
@@ -27031,7 +26210,7 @@
      */
     construct(size) {
       qx.core.Object.constructor.call(this);
-      this.__pool__P_106_0 = {};
+      this.__pool__P_40_0 = {};
       if (size != null) {
         this.setSize(size);
       }
@@ -27067,7 +26246,7 @@
 
     members: {
       /** @type {Map} Stores arrays of instances for all managed classes */
-      __pool__P_106_0: null,
+      __pool__P_40_0: null,
       /*
       ---------------------------------------------------------------------------
         IMPL
@@ -27092,7 +26271,7 @@
           throw new Error("Class needs to be defined!");
         }
         var obj = null;
-        var pool = this.__pool__P_106_0[clazz.classname];
+        var pool = this.__pool__P_40_0[clazz.classname];
         if (pool) {
           obj = pool.pop();
         }
@@ -27116,16 +26295,16 @@
        */
       poolObject(obj) {
         // Dispose check
-        if (!this.__pool__P_106_0) {
+        if (!this.__pool__P_40_0) {
           return;
         }
         var classname = obj.classname;
-        var pool = this.__pool__P_106_0[classname];
+        var pool = this.__pool__P_40_0[classname];
         if (obj.$$pooled) {
           throw new Error("Object is already pooled: " + obj);
         }
         if (!pool) {
-          this.__pool__P_106_0[classname] = pool = [];
+          this.__pool__P_40_0[classname] = pool = [];
         }
 
         // Check to see whether the pool for this type is already full
@@ -27150,7 +26329,7 @@
     */
 
     destruct() {
-      var pool = this.__pool__P_106_0;
+      var pool = this.__pool__P_40_0;
       var classname, list, i, l;
       for (classname in pool) {
         list = pool[classname];
@@ -27158,7 +26337,7 @@
           list[i].dispose();
         }
       }
-      delete this.__pool__P_106_0;
+      delete this.__pool__P_40_0;
     }
   });
   qx.util.ObjectPool.$$dbClassInfo = $$dbClassInfo;
@@ -27338,7 +26517,7 @@
        * @param newPromise {qx.Promise} the new promise
        * @return {qx.Promise} the new promise
        */
-      __push__P_125_0(tracker, newPromise) {
+      __push__P_105_0(tracker, newPromise) {
         {
           if (tracker.promises === undefined) {
             tracker.promises = [];
@@ -27371,10 +26550,10 @@
           }
           if (tracker.promise) {
             if (qx.lang.Type.isPromise(fn)) {
-              this.__push__P_125_0(tracker, tracker.promise.then(fn));
+              this.__push__P_105_0(tracker, tracker.promise.then(fn));
             } else {
               var self = this;
-              this.__push__P_125_0(tracker, tracker.promise.then(function (result) {
+              this.__push__P_105_0(tracker, tracker.promise.then(function (result) {
                 if (tracker.rejected) {
                   return null;
                 }
@@ -27385,15 +26564,15 @@
                 return result;
               }));
             }
-            this.__addCatcher__P_125_1(tracker);
+            this.__addCatcher__P_105_1(tracker);
             return tracker.promise;
           }
           if (qx.lang.Type.isPromise(fn)) {
-            return this.__thenPromise__P_125_2(tracker, fn);
+            return this.__thenPromise__P_105_2(tracker, fn);
           }
           var result = fn(tracker.result);
           if (qx.lang.Type.isPromise(result)) {
-            return this.__thenPromise__P_125_2(tracker, result);
+            return this.__thenPromise__P_105_2(tracker, result);
           }
           tracker.result = result;
           if (result === qx.event.Utils.ABORT) {
@@ -27419,15 +26598,15 @@
        * @param newPromise {qx.Promise} the new promise
        * @return {qx.Promise} the new promise
        */
-      __thenPromise__P_125_2(tracker, newPromise) {
+      __thenPromise__P_105_2(tracker, newPromise) {
         if (tracker.promise) {
-          this.__push__P_125_0(tracker, tracker.promise.then(function () {
+          this.__push__P_105_0(tracker, tracker.promise.then(function () {
             return newPromise;
           }));
         } else {
-          this.__push__P_125_0(tracker, newPromise);
+          this.__push__P_105_0(tracker, newPromise);
         }
-        this.__addCatcher__P_125_1(tracker);
+        this.__addCatcher__P_105_1(tracker);
         return tracker.promise;
       },
       /**
@@ -27445,7 +26624,7 @@
         if (tracker.promise) {
           throw new Error("Rejecting Event");
         }
-        var result = this.__catcher__P_125_3(tracker);
+        var result = this.__catcher__P_105_3(tracker);
         return result === undefined ? this.ABORT : result;
       },
       /**
@@ -27453,10 +26632,10 @@
        *
        * @param tracker {Object} the tracker object
        */
-      __addCatcher__P_125_1(tracker) {
+      __addCatcher__P_105_1(tracker) {
         if (tracker.promise && tracker.catch) {
           if (!tracker.promise["qx.event.Utils.hasCatcher"]) {
-            this.__push__P_125_0(tracker, tracker.promise.catch(this.__catcher__P_125_3.bind(this, tracker)));
+            this.__push__P_105_0(tracker, tracker.promise.catch(this.__catcher__P_105_3.bind(this, tracker)));
             tracker.promise["qx.event.Utils.hasCatcher"] = true;
           }
         }
@@ -27468,7 +26647,7 @@
        *
        * @param tracker {Object} the tracker object
        */
-      __catcher__P_125_3(tracker, err) {
+      __catcher__P_105_3(tracker, err) {
         var fn = tracker.catch;
         if (fn) {
           tracker.catch = null;
@@ -27507,7 +26686,7 @@
         } else {
           tracker.catch = fn;
         }
-        this.__addCatcher__P_125_1(tracker);
+        this.__addCatcher__P_105_1(tracker);
       },
       /**
        * Calls a listener, converting propagationStopped into a rejection
@@ -27904,7 +27083,7 @@
         // if the child supports chaining
         if (value instanceof qx.core.Object && qx.Class.hasMixin(value.constructor, qx.data.marshal.MEventBubbling)) {
           // create the listener
-          var listener = qx.lang.Function.bind(this.__changePropertyListener__P_191_0, this, name);
+          var listener = qx.lang.Function.bind(this.__changePropertyListener__P_190_0, this, name);
 
           // add the listener
           var id = value.addListener("changeBubble", listener, this);
@@ -27924,7 +27103,7 @@
        * @param e {qx.event.type.Data} The date event fired by the property
        *   change.
        */
-      __changePropertyListener__P_191_0(name, e) {
+      __changePropertyListener__P_190_0(name, e) {
         var data = e.getData();
         var value = data.value;
         var old = data.old;
@@ -28048,37 +27227,37 @@
       qx.core.Object.constructor.call(this);
       // if no argument is given
       if (param == undefined) {
-        this.__array__P_139_0 = [];
+        this.__array__P_120_0 = [];
 
         // check for elements (create the array)
       } else if (arguments.length > 1) {
         // create an empty array and go through every argument and push it
-        this.__array__P_139_0 = [];
+        this.__array__P_120_0 = [];
         for (var i = 0; i < arguments.length; i++) {
-          this.__array__P_139_0.push(arguments[i]);
+          this.__array__P_120_0.push(arguments[i]);
         }
 
         // check for a number (length)
       } else if (typeof param == "number") {
-        this.__array__P_139_0 = new Array(param);
+        this.__array__P_120_0 = new Array(param);
         // check for an array itself
       } else if (param instanceof Array) {
-        this.__array__P_139_0 = qx.lang.Array.clone(param);
+        this.__array__P_120_0 = qx.lang.Array.clone(param);
 
         // error case
       } else {
-        this.__array__P_139_0 = [];
+        this.__array__P_120_0 = [];
         this.dispose();
         throw new Error("Type of the parameter not supported!");
       }
 
       // propagate changes
-      for (var i = 0; i < this.__array__P_139_0.length; i++) {
-        this._applyEventPropagation(this.__array__P_139_0[i], null, i);
+      for (var i = 0; i < this.__array__P_120_0.length; i++) {
+        this._applyEventPropagation(this.__array__P_120_0[i], null, i);
       }
 
       // update the length at startup
-      this.__updateLength__P_139_1();
+      this.__updateLength__P_120_1();
 
       // work against the console printout of the array
       {
@@ -28127,7 +27306,7 @@
     },
     members: {
       // private members
-      __array__P_139_0: null,
+      __array__P_120_0: null,
       /**
        * Returns an iterator, ie an object which follows the "Iterator Protocol" so that
        * arrays can be used natively in `for...of`.  See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
@@ -28162,9 +27341,9 @@
       concat(array) {
         array = qx.lang.Array.toNativeArray(array);
         if (array) {
-          var newArray = this.__array__P_139_0.concat(array);
+          var newArray = this.__array__P_120_0.concat(array);
         } else {
-          var newArray = this.__array__P_139_0.concat();
+          var newArray = this.__array__P_120_0.concat();
         }
         return new qx.data.Array(newArray);
       },
@@ -28178,7 +27357,7 @@
        * @return {String} The array as a string.
        */
       join(connector) {
-        return this.__array__P_139_0.join(connector);
+        return this.__array__P_120_0.join(connector);
       },
       /**
        * Removes and returns the last element of the array.
@@ -28187,8 +27366,8 @@
        * @return {var} The last element of the array.
        */
       pop() {
-        var item = this.__array__P_139_0.pop();
-        this.__updateLength__P_139_1();
+        var item = this.__array__P_120_0.pop();
+        this.__updateLength__P_120_1();
         // remove the possible added event listener
         this._registerEventChaining(null, item, this.length - 1);
         // fire change bubble event
@@ -28217,8 +27396,8 @@
        */
       push(varargs) {
         for (var i = 0; i < arguments.length; i++) {
-          this.__array__P_139_0.push(arguments[i]);
-          this.__updateLength__P_139_1();
+          this.__array__P_120_0.push(arguments[i]);
+          this.__updateLength__P_120_1();
           // apply to every pushed item an event listener for the bubbling
           this._registerEventChaining(arguments[i], null, this.length - 1);
 
@@ -28249,9 +27428,9 @@
         if (this.length == 0) {
           return;
         }
-        var oldArray = this.__array__P_139_0.concat();
-        this.__array__P_139_0.reverse();
-        this.__updateEventPropagation__P_139_2(0, this.length);
+        var oldArray = this.__array__P_120_0.concat();
+        this.__array__P_120_0.reverse();
+        this.__updateEventPropagation__P_120_2(0, this.length);
         this.fireDataEvent("change", {
           start: 0,
           end: this.length - 1,
@@ -28262,8 +27441,8 @@
 
         // fire change bubbles event
         this.fireDataEvent("changeBubble", {
-          value: this.__array__P_139_0,
-          name: "0-" + (this.__array__P_139_0.length - 1),
+          value: this.__array__P_120_0,
+          name: "0-" + (this.__array__P_120_0.length - 1),
           old: oldArray,
           item: this
         });
@@ -28279,12 +27458,12 @@
         if (this.length == 0) {
           return;
         }
-        var item = this.__array__P_139_0.shift();
-        this.__updateLength__P_139_1();
+        var item = this.__array__P_120_0.shift();
+        this.__updateLength__P_120_1();
         // remove the possible added event listener
         this._registerEventChaining(null, item, this.length - 1);
         // as every item has changed its position, we need to update the event bubbling
-        this.__updateEventPropagation__P_139_2(0, this.length);
+        this.__updateEventPropagation__P_120_2(0, this.length);
 
         // fire change bubbles event
         this.fireDataEvent("changeBubble", {
@@ -28315,7 +27494,7 @@
        * @return {qx.data.Array} A new array containing the given range of values.
        */
       slice(from, to) {
-        return new qx.data.Array(this.__array__P_139_0.slice(from, to));
+        return new qx.data.Array(this.__array__P_120_0.slice(from, to));
       },
       /**
        * Method to remove and add new elements to the array. A change event
@@ -28332,14 +27511,14 @@
        */
       splice(startIndex, amount, varargs) {
         // store the old length
-        var oldLength = this.__array__P_139_0.length;
+        var oldLength = this.__array__P_120_0.length;
 
         // invoke the slice on the array
-        var returnArray = this.__array__P_139_0.splice.apply(this.__array__P_139_0, arguments);
+        var returnArray = this.__array__P_120_0.splice.apply(this.__array__P_120_0, arguments);
 
         // fire a change event for the length
-        if (this.__array__P_139_0.length != oldLength) {
-          this.__updateLength__P_139_1();
+        if (this.__array__P_120_0.length != oldLength) {
+          this.__updateLength__P_120_1();
         } else if (amount == arguments.length - 2) {
           // if we added as much items as we removed
           var addedItems = qx.lang.Array.fromArguments(arguments, 2);
@@ -28391,7 +27570,7 @@
           this._registerEventChaining(arguments[i], null, startIndex + (i - 2));
         }
         // apply event chaining for every item moved
-        this.__updateEventPropagation__P_139_2(startIndex + (arguments.length - 2) - amount, this.length);
+        this.__updateEventPropagation__P_120_2(startIndex + (arguments.length - 2) - amount, this.length);
 
         // fire the changeBubble event
         if (removed || added) {
@@ -28442,14 +27621,14 @@
         if (this.length == 0) {
           return;
         }
-        var oldArray = this.__array__P_139_0.concat();
-        this.__array__P_139_0.sort.apply(this.__array__P_139_0, arguments);
+        var oldArray = this.__array__P_120_0.concat();
+        this.__array__P_120_0.sort.apply(this.__array__P_120_0, arguments);
 
         // prevent changeBubble event if nothing has been changed
-        if (qx.lang.Array.equals(this.__array__P_139_0, oldArray) === true) {
+        if (qx.lang.Array.equals(this.__array__P_120_0, oldArray) === true) {
           return;
         }
-        this.__updateEventPropagation__P_139_2(0, this.length);
+        this.__updateEventPropagation__P_120_2(0, this.length);
         this.fireDataEvent("change", {
           start: 0,
           end: this.length - 1,
@@ -28460,7 +27639,7 @@
 
         // fire change bubbles event
         this.fireDataEvent("changeBubble", {
-          value: this.__array__P_139_0,
+          value: this.__array__P_120_0,
           name: "0-" + (this.length - 1),
           old: oldArray,
           item: this
@@ -28475,16 +27654,16 @@
        */
       unshift(varargs) {
         for (var i = arguments.length - 1; i >= 0; i--) {
-          this.__array__P_139_0.unshift(arguments[i]);
-          this.__updateLength__P_139_1();
+          this.__array__P_120_0.unshift(arguments[i]);
+          this.__updateLength__P_120_1();
           // apply to every item an event listener for the bubbling
-          this.__updateEventPropagation__P_139_2(0, this.length);
+          this.__updateEventPropagation__P_120_2(0, this.length);
 
           // fire change bubbles event
           this.fireDataEvent("changeBubble", {
-            value: [this.__array__P_139_0[0]],
+            value: [this.__array__P_120_0[0]],
             name: "0",
-            old: [this.__array__P_139_0[1]],
+            old: [this.__array__P_120_0[1]],
             item: this
           });
 
@@ -28508,7 +27687,7 @@
        * @return {Array} The native array.
        */
       toArray() {
-        return this.__array__P_139_0;
+        return this.__array__P_120_0;
       },
       /**
        * Replacement function for the getting of the array value.
@@ -28519,7 +27698,7 @@
        * @return {var} The element at the given index.
        */
       getItem(index) {
-        return this.__array__P_139_0[index];
+        return this.__array__P_120_0[index];
       },
       /**
        * Replacement function for the setting of an array value.
@@ -28531,17 +27710,17 @@
        * @param item {var} The new item to set.
        */
       setItem(index, item) {
-        var oldItem = this.__array__P_139_0[index];
+        var oldItem = this.__array__P_120_0[index];
         // ignore settings of already set items [BUG #4106]
         if (oldItem === item) {
           return;
         }
-        this.__array__P_139_0[index] = item;
+        this.__array__P_120_0[index] = item;
         // set an event listener for the bubbling
         this._registerEventChaining(item, oldItem, index);
         // only update the length if its changed
-        if (this.length != this.__array__P_139_0.length) {
-          this.__updateLength__P_139_1();
+        if (this.length != this.__array__P_120_0.length) {
+          this.__updateLength__P_120_1();
         }
 
         // fire change bubbles event
@@ -28578,7 +27757,7 @@
        * @return {Number} The Index of the given item.
        */
       indexOf(item) {
-        return this.__array__P_139_0.indexOf(item);
+        return this.__array__P_120_0.indexOf(item);
       },
       /**
        * Returns the last index of the item in the array. If the item is not in the
@@ -28588,15 +27767,15 @@
        * @return {Number} The Index of the given item.
        */
       lastIndexOf(item) {
-        return this.__array__P_139_0.lastIndexOf(item);
+        return this.__array__P_120_0.lastIndexOf(item);
       },
       /**
        * Returns the toString of the original Array
        * @return {String} The array as a string.
        */
       toString() {
-        if (this.__array__P_139_0 != null) {
-          return this.__array__P_139_0.toString();
+        if (this.__array__P_120_0 != null) {
+          return this.__array__P_120_0.toString();
         }
         return "";
       },
@@ -28623,7 +27802,7 @@
        * @return {Boolean} true, if the array contains the given item.
        */
       includes(item) {
-        return this.__array__P_139_0.indexOf(item) !== -1;
+        return this.__array__P_120_0.indexOf(item) !== -1;
       },
       /**
        * Return a copy of the given arr
@@ -28689,8 +27868,8 @@
        */
       removeAll() {
         // remove all possible added event listeners
-        for (var i = 0; i < this.__array__P_139_0.length; i++) {
-          this._registerEventChaining(null, this.__array__P_139_0[i], i);
+        for (var i = 0; i < this.__array__P_120_0.length; i++) {
+          this._registerEventChaining(null, this.__array__P_120_0[i], i);
         }
 
         // ignore if array is empty
@@ -28700,11 +27879,11 @@
 
         // store the old data
         var oldLength = this.getLength();
-        var items = this.__array__P_139_0.concat();
+        var items = this.__array__P_120_0.concat();
 
         // change the length
-        this.__array__P_139_0.length = 0;
-        this.__updateLength__P_139_1();
+        this.__array__P_120_0.length = 0;
+        this.__updateLength__P_120_1();
 
         // fire change bubbles event
         this.fireDataEvent("changeBubble", {
@@ -28740,15 +27919,15 @@
         {
           qx.core.Assert.assertArray(array, "The parameter must be an array.");
         }
-        var oldLength = this.__array__P_139_0.length;
-        Array.prototype.push.apply(this.__array__P_139_0, array);
+        var oldLength = this.__array__P_120_0.length;
+        Array.prototype.push.apply(this.__array__P_120_0, array);
 
         // add a listener to the new items
         for (var i = 0; i < array.length; i++) {
           this._registerEventChaining(array[i], null, oldLength + i);
         }
         var oldLength = this.length;
-        this.__updateLength__P_139_1();
+        this.__updateLength__P_120_1();
 
         // fire change bubbles
         var name = oldLength == this.length - 1 ? oldLength : oldLength + "-" + (this.length - 1);
@@ -28865,7 +28044,7 @@
        * @param context {var?} The context in which the callback will be invoked.
        */
       forEach(callback, context) {
-        this.__array__P_139_0.forEach((element, index) => callback.call(context, element, index, this));
+        this.__array__P_120_0.forEach((element, index) => callback.call(context, element, index, this));
       },
       /*
       ---------------------------------------------------------------------------
@@ -28886,7 +28065,7 @@
        *  which passed the test.
        */
       filter(callback, self) {
-        return new qx.data.Array(this.__array__P_139_0.filter(callback, self));
+        return new qx.data.Array(this.__array__P_120_0.filter(callback, self));
       },
       /**
        * Creates a new array with the results of calling a provided function on every
@@ -28901,7 +28080,7 @@
        * @return {qx.data.Array} A new array instance containing the new created items.
        */
       map(callback, self) {
-        return new qx.data.Array(this.__array__P_139_0.map(callback, self));
+        return new qx.data.Array(this.__array__P_120_0.map(callback, self));
       },
       /**
        * Finds the first matching element in the array which passes the test implemented by the
@@ -28915,7 +28094,7 @@
        * @return {var|undefined} The found item.
        */
       find(callback, self) {
-        return this.__array__P_139_0.find(callback, self);
+        return this.__array__P_120_0.find(callback, self);
       },
       /**
        * Tests whether any element in the array passes the test implemented by the
@@ -28929,7 +28108,7 @@
        * @return {Boolean} <code>true</code>, if any element passed the test function.
        */
       some(callback, self) {
-        return this.__array__P_139_0.some(callback, self);
+        return this.__array__P_120_0.some(callback, self);
       },
       /**
        * Tests whether every element in the array passes the test implemented by the
@@ -28943,7 +28122,7 @@
        * @return {Boolean} <code>true</code>, if every element passed the test function.
        */
       every(callback, self) {
-        return this.__array__P_139_0.every(callback, self);
+        return this.__array__P_120_0.every(callback, self);
       },
       /**
        * Apply a function against an accumulator and each value of the array
@@ -28959,7 +28138,7 @@
        * @return {var} The returned value of the last accumulator call.
        */
       reduce(callback, initValue) {
-        return this.__array__P_139_0.reduce(callback, initValue);
+        return this.__array__P_120_0.reduce(callback, initValue);
       },
       /**
        * Apply a function against an accumulator and each value of the array
@@ -28975,7 +28154,7 @@
        * @return {var} The returned value of the last accumulator call.
        */
       reduceRight(callback, initValue) {
-        return this.__array__P_139_0.reduceRight(callback, initValue);
+        return this.__array__P_120_0.reduceRight(callback, initValue);
       },
       /*
       ---------------------------------------------------------------------------
@@ -28987,9 +28166,9 @@
        * Every time the length will be updated, a {@link #changeLength} data
        * event will be fired.
        */
-      __updateLength__P_139_1() {
+      __updateLength__P_120_1() {
         var oldLength = this.length;
-        this.length = this.__array__P_139_0.length;
+        this.length = this.__array__P_120_0.length;
         this.fireDataEvent("changeLength", this.length, oldLength);
       },
       /**
@@ -28997,9 +28176,9 @@
        * @param from {Number} Start index.
        * @param to {Number} End index.
        */
-      __updateEventPropagation__P_139_2(from, to) {
+      __updateEventPropagation__P_120_2(from, to) {
         for (var i = from; i < to; i++) {
-          this._registerEventChaining(this.__array__P_139_0[i], this.__array__P_139_0[i], i);
+          this._registerEventChaining(this.__array__P_120_0[i], this.__array__P_120_0[i], i);
         }
       }
     },
@@ -29010,8 +28189,8 @@
     */
 
     destruct() {
-      for (var i = 0; i < this.__array__P_139_0.length; i++) {
-        var item = this.__array__P_139_0[i];
+      for (var i = 0; i < this.__array__P_120_0.length; i++) {
+        var item = this.__array__P_120_0[i];
         this._applyEventPropagation(null, item, i);
 
         // dispose the items on auto dispose
@@ -29019,7 +28198,7 @@
           item.dispose();
         }
       }
-      this.__array__P_139_0 = null;
+      this.__array__P_120_0 = null;
     },
     defer(statics) {
       statics.prototype[Symbol.iterator] = function () {
@@ -29080,7 +28259,7 @@
       if (inst.stacktrace) {
         this.stacktrace = inst.stacktrace;
       }
-      this.__comment__P_165_0 = comment || "";
+      this.__comment__P_157_0 = comment || "";
       // opera 10 crashes if the message is an empty string!!!?!?!
       this.message = failMessage || qx.type.BaseError.DEFAULTMESSAGE;
     },
@@ -29099,8 +28278,8 @@
     */
 
     members: {
-      __sTrace__P_165_1: null,
-      __comment__P_165_0: null,
+      __sTrace__P_157_1: null,
+      __comment__P_157_0: null,
       /** @type {String} Fail message provided by the assertion */
       message: null,
       /**
@@ -29109,7 +28288,7 @@
        * @return {String} The comment passed to the assertion call
        */
       getComment() {
-        return this.__comment__P_165_0;
+        return this.__comment__P_157_0;
       },
       /**
        * Get the error message
@@ -29117,7 +28296,7 @@
        * @return {String} The error message
        */
       toString() {
-        return this.__comment__P_165_0 + (this.message ? ": " + this.message : "");
+        return this.__comment__P_157_0 + (this.message ? ": " + this.message : "");
       }
     }
   });
@@ -29177,7 +28356,7 @@
      */
     construct(comment, failMessage) {
       qx.type.BaseError.call(this, comment, failMessage);
-      this.__trace__P_142_0 = qx.dev.StackTrace.getStackTrace();
+      this.__trace__P_114_0 = qx.dev.StackTrace.getStackTrace();
     },
     /*
     *****************************************************************************
@@ -29186,14 +28365,14 @@
     */
 
     members: {
-      __trace__P_142_0: null,
+      __trace__P_114_0: null,
       /**
        * Stack trace of the error
        *
        * @return {String[]} The stack trace of the location the exception was thrown
        */
       getStackTrace() {
-        return this.__trace__P_142_0;
+        return this.__trace__P_114_0;
       }
     }
   });
@@ -30726,90 +29905,37 @@
         "usage": "dynamic",
         "require": true
       },
-      "qx.core.Object": {
-        "construct": true,
+      "qx.type.BaseError": {
         "require": true
       }
     }
   };
   qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Martin Wittemann (martinwittemann)
+  
+  ************************************************************************ */
+
   /**
-   * Utility class to limit the number of concurrent executions of async functions.
-   *
-   * @typedef {Object} TaskEntry
-   * @template T
-   * @property {() => Promise<T>} task The function to execute.
-   * @property {(value: T) => void} resolve The function to call when the task resolves.
-   * @property {(reason: any) => void} reject The function to call when the task rejects.
+   * A validation Error which should be thrown if a validation fails.
    */
-  qx.Class.define("qx.util.ConcurrencyLimiter", {
-    extend: qx.core.Object,
-    /**
-     * @param {Number?Infinity} limit The maximum number of concurrent executions. If Infinity, no limit is applied.
-     */
-    construct() {
-      let limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Infinity;
-      qx.core.Object.constructor.call(this);
-      this.__limit__P_192_0 = limit;
-      this.__queue__P_192_1 = [];
-      this.__running__P_192_2 = 0;
-    },
-    members: {
-      /**
-       * @type {TaskEntry<*>[]}
-       * The tasks that are waiting to be executed
-       */
-      __queue__P_192_1: null,
-      /**
-       * Number of currently running tasks.
-       */
-      __running__P_192_2: null,
-      /**
-       * Queues a function to be executed.
-       * If the limit is reached, the function will be put on hold until a slot is available.
-       *
-       * @template T
-       * @param {() => Promise<T>} task The function to execute.
-       * @returns {Promise<T>} The promise that will be resolved when the function is executed.
-       *  If the function rejects, the promise will also reject.
-       */
-      add(task) {
-        return new Promise((resolve, reject) => {
-          this.__queue__P_192_1.push({
-            task,
-            resolve,
-            reject
-          });
-          this.__checkQueue__P_192_3();
-        });
-      },
-      /**
-       * Checks the queue to see if anything can be executed,
-       * and executes the next item in the queue if the limit is not reached.
-       * Once the item has finished executing, it will check the queue again.
-       */
-      __checkQueue__P_192_3() {
-        if (this.__running__P_192_2 == this.__limit__P_192_0) {
-          return;
-        }
-        let next = this.__queue__P_192_1.shift();
-        if (!next) {
-          return;
-        }
-        let {
-          task,
-          resolve,
-          reject
-        } = next;
-        this.__running__P_192_2++;
-        task().then(resolve, reject).finally(() => {
-          this.__running__P_192_2--;
-          this.__checkQueue__P_192_3();
-        });
-      }
-    }
+  qx.Class.define("qx.core.ValidationError", {
+    extend: qx.type.BaseError
   });
-  qx.util.ConcurrencyLimiter.$$dbClassInfo = $$dbClassInfo;
+  qx.core.ValidationError.$$dbClassInfo = $$dbClassInfo;
 })();
 
 (function () {
@@ -30967,7 +30093,7 @@
        * @return {Boolean} The result of the comparison
        */
       equals(object1, object2) {
-        return qx.lang.Object.__equals__P_71_0(object1, object2, [], []);
+        return qx.lang.Object.__equals__P_44_0(object1, object2, [], []);
       },
       /**
        * Internal recursive comparison function for equals
@@ -30979,7 +30105,7 @@
        * @return {Boolean} The result of the comparison
        *
        */
-      __equals__P_71_0(object1, object2, aStack, bStack) {
+      __equals__P_44_0(object1, object2, aStack, bStack) {
         // Identical objects are equal. `0 === -0`, but they aren't identical.
         // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
         if (object1 === object2) {
@@ -31047,7 +30173,7 @@
           if (result) {
             // Deep compare the contents, ignoring non-numeric properties.
             while (size--) {
-              if (!(result = qx.lang.Object.__equals__P_71_0(object1[size], object2[size], aStack, bStack))) {
+              if (!(result = qx.lang.Object.__equals__P_44_0(object1[size], object2[size], aStack, bStack))) {
                 break;
               }
             }
@@ -31059,7 +30185,7 @@
               // Count the expected number of properties.
               size++;
               // Deep compare each member.
-              if (!(result = Object.prototype.hasOwnProperty.call(object2, key) && qx.lang.Object.__equals__P_71_0(object1[key], object2[key], aStack, bStack))) {
+              if (!(result = Object.prototype.hasOwnProperty.call(object2, key) && qx.lang.Object.__equals__P_44_0(object1[key], object2[key], aStack, bStack))) {
                 break;
               }
             }
@@ -31167,12 +30293,59 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
+      "qx.bom.client.Engine": {
+        "require": true,
+        "defer": "runtime"
+      },
+      "qx.core.Environment": {
+        "defer": "load",
+        "require": true
+      },
       "qx.Class": {
         "usage": "dynamic",
         "require": true
       },
-      "qx.type.BaseError": {
+      "qx.core.Object": {
+        "construct": true,
         "require": true
+      },
+      "qx.event.IEventHandler": {
+        "require": true
+      },
+      "qx.core.IDisposable": {
+        "require": true
+      },
+      "qx.event.Registration": {
+        "defer": "runtime",
+        "require": true
+      },
+      "qx.lang.Function": {},
+      "qx.bom.client.Browser": {
+        "require": true
+      },
+      "qx.bom.Event": {},
+      "qx.bom.client.Runtime": {
+        "require": true
+      },
+      "qx.event.GlobalError": {
+        "require": true
+      }
+    },
+    "environment": {
+      "provided": [],
+      "required": {
+        "engine.name": {
+          "className": "qx.bom.client.Engine"
+        },
+        "browser.documentmode": {
+          "className": "qx.bom.client.Browser"
+        },
+        "runtime.name": {
+          "className": "qx.bom.client.Runtime"
+        },
+        "qx.globalErrorHandling": {
+          "className": "qx.event.GlobalError"
+        }
       }
     }
   };
@@ -31184,24 +30357,315 @@
      http://qooxdoo.org
   
      Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+       2007-2008 1&1 Internet AG, Germany, http://www.1und1.de
   
      License:
        MIT: https://opensource.org/licenses/MIT
        See the LICENSE file in the project's top-level directory for details.
   
      Authors:
-       * Martin Wittemann (martinwittemann)
+       * Sebastian Werner (wpbasti)
+       * Fabian Jakobs (fjakobs)
   
   ************************************************************************ */
 
   /**
-   * A validation Error which should be thrown if a validation fails.
+   * This handler provides events for qooxdoo application startup/shutdown logic.
+   *
+   * NOTE: Instances of this class must be disposed of after use
+   *
+   * @require(qx.bom.client.Engine)
    */
-  qx.Class.define("qx.core.ValidationError", {
-    extend: qx.type.BaseError
+  qx.Class.define("qx.event.handler.Application", {
+    extend: qx.core.Object,
+    implement: [qx.event.IEventHandler, qx.core.IDisposable],
+    /*
+    *****************************************************************************
+       CONSTRUCTOR
+    *****************************************************************************
+    */
+
+    /**
+     * Create a new instance
+     *
+     * @param manager {qx.event.Manager} Event manager for the window to use
+     */
+    construct(manager) {
+      qx.core.Object.constructor.call(this);
+
+      // Define shorthands
+      this._window = manager.getWindow();
+      this.__domReady__P_70_0 = false;
+      this.__loaded__P_70_1 = false;
+      this.__isReady__P_70_2 = false;
+      this.__isInitialized__P_70_3 = false;
+      this.__isUnloaded__P_70_4 = false;
+
+      // Initialize observers
+      this._initObserver();
+
+      // Store instance (only supported for main app window, this
+      // is the reason why this is OK here)
+      qx.event.handler.Application.$$instance = this;
+    },
+    /*
+    *****************************************************************************
+       STATICS
+    *****************************************************************************
+    */
+
+    statics: {
+      /** @type {Integer} Priority of this handler */
+      PRIORITY: qx.event.Registration.PRIORITY_NORMAL,
+      /** @type {Map} Supported event types */
+      SUPPORTED_TYPES: {
+        ready: 1,
+        shutdown: 1
+      },
+      /** @type {Integer} Which target check to use */
+      TARGET_CHECK: qx.event.IEventHandler.TARGET_WINDOW,
+      /** @type {Integer} Whether the method "canHandleEvent" must be called */
+      IGNORE_CAN_HANDLE: true,
+      /**
+       * Sends the currently running application the ready signal. Used
+       * exclusively by package loader system.
+       *
+       * @internal
+       */
+      onScriptLoaded() {
+        var inst = qx.event.handler.Application.$$instance;
+        if (inst) {
+          inst.__fireReady__P_70_5();
+        }
+      },
+      /**
+       * Notifies that the application has finished initialization
+       *
+       * @internal
+       */
+      onAppInstanceInitialized() {
+        var inst = qx.event.handler.Application.$$instance;
+        if (inst) {
+          inst.__fireAppInstanceInitialized__P_70_6();
+        }
+      }
+    },
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      /*
+      ---------------------------------------------------------------------------
+        EVENT HANDLER INTERFACE
+      ---------------------------------------------------------------------------
+      */
+
+      // interface implementation
+      canHandleEvent(target, type) {},
+      // interface implementation
+      registerEvent(target, type, capture) {
+        // Nothing needs to be done here
+      },
+      // interface implementation
+      unregisterEvent(target, type, capture) {
+        // Nothing needs to be done here
+      },
+      __isReady__P_70_2: null,
+      __isInitialized__P_70_3: null,
+      __domReady__P_70_0: null,
+      __loaded__P_70_1: null,
+      __isUnloaded__P_70_4: null,
+      /*
+      ---------------------------------------------------------------------------
+        USER ACCESS
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * Fires a global ready event.
+       *
+       */
+      __fireReady__P_70_5() {
+        // Wrapper qxloader needed to be compatible with old generator
+        if (!this.__isReady__P_70_2 && this.__domReady__P_70_0 && qx.$$loader.scriptLoaded) {
+          // If qooxdoo is loaded within a frame in IE, the document is ready before
+          // the "ready" listener can be added. To avoid any startup issue check
+          // for the availability of the "ready" listener before firing the event.
+          // So at last the native "load" will trigger the "ready" event.
+          if (qx.core.Environment.get("engine.name") == "mshtml") {
+            if (qx.event.Registration.hasListener(this._window, "ready")) {
+              this.__isReady__P_70_2 = true;
+
+              // Fire user event
+              qx.event.Registration.fireEvent(this._window, "ready");
+            }
+          } else {
+            this.__isReady__P_70_2 = true;
+
+            // Fire user event
+            qx.event.Registration.fireEvent(this._window, "ready");
+          }
+        }
+      },
+      /**
+       * Fires a global "appinitialized" event.
+       *
+       */
+      __fireAppInstanceInitialized__P_70_6() {
+        this.__isInitialized__P_70_3 = true;
+
+        // Fire user event
+        qx.event.Registration.fireEvent(this._window, "appinitialized");
+      },
+      /**
+       * Whether the application is ready.
+       *
+       * @return {Boolean} ready status
+       */
+      isApplicationReady() {
+        return this.__isReady__P_70_2;
+      },
+      /**
+       * Whether the application is initialized
+       *
+       * @return {Boolean} initialization status
+       */
+      isApplicationInitialized() {
+        return this.__isInitialized__P_70_3;
+      },
+      /*
+      ---------------------------------------------------------------------------
+        OBSERVER INIT/STOP
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * Initializes the native application event listeners.
+       *
+       */
+      _initObserver() {
+        // in Firefox the loader script sets the ready state
+        if (qx.$$domReady || document.readyState == "complete" || document.readyState == "ready") {
+          this.__domReady__P_70_0 = true;
+          this.__fireReady__P_70_5();
+        } else {
+          this._onNativeLoadWrapped = qx.lang.Function.bind(this._onNativeLoad, this);
+          if (qx.core.Environment.get("engine.name") == "gecko" || qx.core.Environment.get("engine.name") == "opera" || qx.core.Environment.get("engine.name") == "webkit" || qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("browser.documentmode") > 8) {
+            // Using native method supported by Mozilla, Webkit, Opera and IE >= 9
+            qx.bom.Event.addNativeListener(this._window, "DOMContentLoaded", this._onNativeLoadWrapped);
+          } else if (typeof document !== "undefined") {
+            var self = this;
+
+            // Continually check to see if the document is ready
+            var timer = function () {
+              try {
+                // If IE is used, use the trick by Diego Perini
+                // http://javascript.nwbox.com/IEContentLoaded/
+                document.documentElement.doScroll("left");
+                if (document.body) {
+                  self._onNativeLoadWrapped();
+                }
+              } catch (error) {
+                window.setTimeout(timer, 100);
+              }
+            };
+            timer();
+          }
+
+          // Additional load listener as fallback
+          qx.bom.Event.addNativeListener(this._window, "load", this._onNativeLoadWrapped);
+        }
+        if (qx.core.Environment.get("runtime.name") == "rhino" || qx.core.Environment.get("runtime.name") == "node.js") {
+          return;
+        }
+        this._onNativeUnloadWrapped = qx.lang.Function.bind(this._onNativeUnload, this);
+        qx.bom.Event.addNativeListener(this._window, "unload", this._onNativeUnloadWrapped);
+      },
+      /**
+       * Disconnect the native application event listeners.
+       *
+       */
+      _stopObserver() {
+        if (this._onNativeLoadWrapped) {
+          qx.bom.Event.removeNativeListener(this._window, "load", this._onNativeLoadWrapped);
+        }
+        qx.bom.Event.removeNativeListener(this._window, "unload", this._onNativeUnloadWrapped);
+        this._onNativeLoadWrapped = null;
+        this._onNativeUnloadWrapped = null;
+      },
+      /*
+      ---------------------------------------------------------------------------
+        NATIVE LISTENER
+      ---------------------------------------------------------------------------
+      */
+
+      /**
+       * When qx.globalErrorHandling is enabled the callback will observed
+       */
+      _onNativeLoad() {
+        var callback = qx.core.Environment.select("qx.globalErrorHandling", {
+          true: qx.event.GlobalError.observeMethod(this.__onNativeLoadHandler__P_70_7),
+          false: this.__onNativeLoadHandler__P_70_7
+        });
+        callback.apply(this, arguments);
+      },
+      /**
+       * Event listener for native load event
+       */
+      __onNativeLoadHandler__P_70_7() {
+        this.__domReady__P_70_0 = true;
+        this.__fireReady__P_70_5();
+      },
+      /**
+       * When qx.globalErrorHandling is enabled the callback will observed
+       */
+      _onNativeUnload() {
+        var callback = qx.core.Environment.select("qx.globalErrorHandling", {
+          true: qx.event.GlobalError.observeMethod(this.__onNativeUnloadHandler__P_70_8),
+          false: this.__onNativeUnloadHandler__P_70_8
+        });
+        callback.apply(this, arguments);
+      },
+      /**
+       * Event listener for native unload event
+       */
+      __onNativeUnloadHandler__P_70_8() {
+        if (!this.__isUnloaded__P_70_4) {
+          this.__isUnloaded__P_70_4 = true;
+          try {
+            // Fire user event
+            qx.event.Registration.fireEvent(this._window, "shutdown");
+          } catch (e) {
+            // IE doesn't execute the "finally" block if no "catch" block is present
+            throw e;
+          }
+        }
+      }
+    },
+    /*
+    *****************************************************************************
+       DESTRUCTOR
+    *****************************************************************************
+    */
+
+    destruct() {
+      this._stopObserver();
+      this._window = null;
+    },
+    /*
+    *****************************************************************************
+       DEFER
+    *****************************************************************************
+    */
+
+    defer(statics) {
+      qx.event.Registration.addHandler(statics);
+    }
   });
-  qx.core.ValidationError.$$dbClassInfo = $$dbClassInfo;
+  qx.event.handler.Application.$$dbClassInfo = $$dbClassInfo;
 })();
 
 (function () {
@@ -31517,8 +30981,8 @@
        */
       _onNative() {
         var callback = qx.core.Environment.select("qx.globalErrorHandling", {
-          true: qx.event.GlobalError.observeMethod(this.__onNativeHandler__P_43_0),
-          false: this.__onNativeHandler__P_43_0
+          true: qx.event.GlobalError.observeMethod(this.__onNativeHandler__P_60_0),
+          false: this.__onNativeHandler__P_60_0
         });
         callback.apply(this, arguments);
       },
@@ -31528,7 +30992,7 @@
        * @param e {Event} Native event
        * @return {String|undefined}
        */
-      __onNativeHandler__P_43_0(e) {
+      __onNativeHandler__P_60_0(e) {
         if (this.isDisposed()) {
           return;
         }
@@ -31589,30 +31053,172 @@
     "dependsOn": {
       "qx.core.Environment": {
         "defer": "load",
-        "usage": "dynamic",
         "require": true
       },
       "qx.Class": {
         "usage": "dynamic",
         "require": true
       },
-      "qx.core.Object": {
-        "construct": true,
+      "qx.bom.client.Engine": {
         "require": true
       },
-      "qx.util.PropertyUtil": {},
-      "qx.ui.core.queue.Layout": {},
-      "qx.core.Init": {},
-      "qx.ui.core.queue.Visibility": {},
-      "qx.lang.Object": {},
-      "qx.theme.manager.Meta": {}
+      "qx.log.Logger": {},
+      "qx.bom.client.OperatingSystem": {
+        "require": true
+      },
+      "qx.Bootstrap": {},
+      "qx.event.handler.Application": {}
     },
     "environment": {
       "provided": [],
       "required": {
-        "qx.dyntheme": {
-          "load": true
+        "engine.name": {
+          "className": "qx.bom.client.Engine"
+        },
+        "engine.version": {
+          "className": "qx.bom.client.Engine"
+        },
+        "os.name": {
+          "className": "qx.bom.client.OperatingSystem"
+        },
+        "qx.debug.startupTimings": {},
+        "qx.application": {}
+      }
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2011 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+       * Daniel Wagner (d_wagner)
+       * John Spackman
+  
+  ************************************************************************ */
+
+  /**
+   * This is the base class for non-browser qooxdoo applications.
+   */
+  qx.Class.define("qx.core.BaseInit", {
+    /*
+    *****************************************************************************
+       STATICS
+    *****************************************************************************
+    */
+
+    statics: {
+      __application__P_71_0: null,
+      /**
+       * Returns the instantiated qooxdoo application.
+       *
+       * @return {qx.core.Object} The application instance.
+       */
+      getApplication() {
+        return this.__application__P_71_0 || null;
+      },
+      /**
+       * Runs when the application is loaded. Automatically creates an instance
+       * of the class defined by the setting <code>qx.application</code>.
+       *
+       */
+      ready() {
+        if (this.__application__P_71_0) {
+          return;
         }
+        if (qx.core.Environment.get("engine.name") == "") {
+          qx.log.Logger.warn("Could not detect engine!");
+        }
+        if (qx.core.Environment.get("engine.version") == "") {
+          qx.log.Logger.warn("Could not detect the version of the engine!");
+        }
+        if (qx.core.Environment.get("os.name") == "") {
+          qx.log.Logger.warn("Could not detect operating system!");
+        }
+        if (qx.core.Environment.get("qx.debug.startupTimings")) {
+          qx.log.Logger.debug(this, "Load runtime: " + (new Date() - qx.Bootstrap.LOADSTART) + "ms");
+        }
+        var app = qx.core.Environment.get("qx.application");
+        var clazz = qx.Class.getByName(app);
+        if (clazz) {
+          this.__application__P_71_0 = new clazz();
+          var start = new Date();
+          this.__application__P_71_0.main();
+          if (qx.core.Environment.get("qx.debug.startupTimings")) {
+            qx.log.Logger.debug(this, "Main runtime: " + (new Date() - start) + "ms");
+          }
+          var start = new Date();
+          this.__application__P_71_0.finalize();
+          if (qx.core.Environment.get("qx.debug.startupTimings")) {
+            qx.log.Logger.debug(this, "Finalize runtime: " + (new Date() - start) + "ms");
+          }
+          qx.event.handler.Application.onAppInstanceInitialized();
+        } else {
+          qx.log.Logger.warn("Missing application class: " + app);
+        }
+      },
+      /**
+       * Runs before the document is unloaded. Calls the application's close
+       * method to check if the unload process should be stopped.
+       *
+       * @param e {qx.event.type.Native} Incoming beforeunload event.
+       */
+      __close__P_71_1(e) {
+        var app = this.__application__P_71_0;
+        if (app) {
+          app.close();
+        }
+      },
+      /**
+       * Runs when the document is unloaded. Automatically terminates a previously
+       * created application instance.
+       *
+       */
+      __shutdown__P_71_2() {
+        var app = this.__application__P_71_0;
+        if (app) {
+          app.terminate();
+        }
+      }
+    }
+  });
+  qx.core.BaseInit.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.event.handler.Application": {
+        "require": true,
+        "defer": "runtime"
+      },
+      "qx.event.handler.Window": {
+        "require": true,
+        "defer": "runtime"
+      },
+      "qx.event.dispatch.Direct": {
+        "require": true,
+        "defer": "runtime"
+      },
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.core.BaseInit": {
+        "require": true
+      },
+      "qx.event.Registration": {
+        "defer": "runtime"
       }
     }
   };
@@ -31632,835 +31238,136 @@
   
      Authors:
        * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
   
   ************************************************************************ */
 
   /**
-   * The base class of all items, which should be laid out using a layout manager
-   * {@link qx.ui.layout.Abstract}.
+   * This is the base class for all qooxdoo applications.
+   *
+   * @require(qx.event.handler.Application)
+   * @require(qx.event.handler.Window)
+   * @require(qx.event.dispatch.Direct)
    */
-  qx.Class.define("qx.ui.core.LayoutItem", {
-    type: "abstract",
-    extend: qx.core.Object,
-    construct() {
-      qx.core.Object.constructor.call(this);
-
-      // dynamic theme switch
-    },
+  qx.Class.define("qx.core.Init", {
     /*
     *****************************************************************************
-       PROPERTIES
+       STATICS
     *****************************************************************************
     */
 
-    properties: {
-      /*
-      ---------------------------------------------------------------------------
-        DIMENSION
-      ---------------------------------------------------------------------------
-      */
-
+    statics: {
       /**
-       * The user provided minimal width.
+       * Returns the instantiated qooxdoo application.
        *
-       * Also take a look at the related properties {@link #width} and {@link #maxWidth}.
+       * @return {qx.core.Object} The application instance.
        */
-      minWidth: {
-        check: "Integer",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
-      },
+      getApplication: qx.core.BaseInit.getApplication,
       /**
-       * The <code>LayoutItem</code>'s preferred width.
+       * Runs when the application is loaded. Automatically creates an instance
+       * of the class defined by the setting <code>qx.application</code>.
        *
-       * The computed width may differ from the given width due to
-       * stretching. Also take a look at the related properties
-       * {@link #minWidth} and {@link #maxWidth}.
        */
-      width: {
-        check: "Integer",
-        event: "changeWidth",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
+      ready: qx.core.BaseInit.ready,
+      /**
+       * Runs before the document is unloaded. Calls the application's close
+       * method to check if the unload process should be stopped.
+       *
+       * @param e {qx.event.type.Native} Incoming beforeunload event.
+       */
+      __close__P_15_0(e) {
+        var app = this.getApplication();
+        if (app) {
+          e.setReturnValue(app.close());
+        }
       },
       /**
-       * The user provided maximal width.
+       * Runs when the document is unloaded. Automatically terminates a previously
+       * created application instance.
        *
-       * Also take a look at the related properties {@link #width} and {@link #minWidth}.
        */
-      maxWidth: {
-        check: "Integer",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
-      },
-      /**
-       * The user provided minimal height.
-       *
-       * Also take a look at the related properties {@link #height} and {@link #maxHeight}.
-       */
-      minHeight: {
-        check: "Integer",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
-      },
-      /**
-       * The item's preferred height.
-       *
-       * The computed height may differ from the given height due to
-       * stretching. Also take a look at the related properties
-       * {@link #minHeight} and {@link #maxHeight}.
-       */
-      height: {
-        check: "Integer",
-        event: "changeHeight",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
-      },
-      /**
-       * The user provided maximum height.
-       *
-       * Also take a look at the related properties {@link #height} and {@link #minHeight}.
-       */
-      maxHeight: {
-        check: "Integer",
-        nullable: true,
-        apply: "_applyDimension",
-        init: null,
-        themeable: true
-      },
-      /*
-      ---------------------------------------------------------------------------
-        STRETCHING
-      ---------------------------------------------------------------------------
-      */
-
-      /** Whether the item can grow horizontally. */
-      allowGrowX: {
-        check: "Boolean",
-        apply: "_applyStretching",
-        init: true,
-        themeable: true
-      },
-      /** Whether the item can shrink horizontally. */
-      allowShrinkX: {
-        check: "Boolean",
-        apply: "_applyStretching",
-        init: true,
-        themeable: true
-      },
-      /** Whether the item can grow vertically. */
-      allowGrowY: {
-        check: "Boolean",
-        apply: "_applyStretching",
-        init: true,
-        themeable: true
-      },
-      /** Whether the item can shrink vertically. */
-      allowShrinkY: {
-        check: "Boolean",
-        apply: "_applyStretching",
-        init: true,
-        themeable: true
-      },
-      /** Growing and shrinking in the horizontal direction */
-      allowStretchX: {
-        group: ["allowGrowX", "allowShrinkX"],
-        mode: "shorthand",
-        themeable: true
-      },
-      /** Growing and shrinking in the vertical direction */
-      allowStretchY: {
-        group: ["allowGrowY", "allowShrinkY"],
-        mode: "shorthand",
-        themeable: true
-      },
-      /*
-      ---------------------------------------------------------------------------
-        MARGIN
-      ---------------------------------------------------------------------------
-      */
-
-      /** Margin of the widget (top) */
-      marginTop: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyMargin",
-        themeable: true
-      },
-      /** Margin of the widget (right) */
-      marginRight: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyMargin",
-        themeable: true
-      },
-      /** Margin of the widget (bottom) */
-      marginBottom: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyMargin",
-        themeable: true
-      },
-      /** Margin of the widget (left) */
-      marginLeft: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyMargin",
-        themeable: true
-      },
-      /**
-       * The 'margin' property is a shorthand property for setting 'marginTop',
-       * 'marginRight', 'marginBottom' and 'marginLeft' at the same time.
-       *
-       * If four values are specified they apply to top, right, bottom and left respectively.
-       * If there is only one value, it applies to all sides, if there are two or three,
-       * the missing values are taken from the opposite side.
-       */
-      margin: {
-        group: ["marginTop", "marginRight", "marginBottom", "marginLeft"],
-        mode: "shorthand",
-        themeable: true
-      },
-      /*
-      ---------------------------------------------------------------------------
-        ALIGN
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Horizontal alignment of the item in the parent layout.
-       *
-       * Note: Item alignment is only supported by {@link LayoutItem} layouts where
-       * it would have a visual effect. Except for {@link Spacer}, which provides
-       * blank space for layouts, all classes that inherit {@link LayoutItem} support alignment.
-       */
-      alignX: {
-        check: ["left", "center", "right"],
-        nullable: true,
-        apply: "_applyAlign",
-        themeable: true
-      },
-      /**
-       * Vertical alignment of the item in the parent layout.
-       *
-       * Note: Item alignment is only supported by {@link LayoutItem} layouts where
-       * it would have a visual effect. Except for {@link Spacer}, which provides
-       * blank space for layouts, all classes that inherit {@link LayoutItem} support alignment.
-       */
-      alignY: {
-        check: ["top", "middle", "bottom", "baseline"],
-        nullable: true,
-        apply: "_applyAlign",
-        themeable: true
+      __shutdown__P_15_1() {
+        var app = this.getApplication();
+        if (app) {
+          app.terminate();
+        }
       }
     },
     /*
     *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-    /* eslint-disable @qooxdoo/qx/no-refs-in-members */
-    members: {
-      /*
-      ---------------------------------------------------------------------------
-        DYNAMIC THEME SWITCH SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Handler for the dynamic theme change.
-       * @signature function()
-       */
-      _onChangeTheme: qx.core.Environment.select("qx.dyntheme", {
-        true() {
-          // reset all themeable properties
-          var props = qx.util.PropertyUtil.getAllProperties(this.constructor);
-          for (var name in props) {
-            var desc = props[name];
-            // only themeable properties not having a user value
-            if (desc.themeable) {
-              var userValue = qx.util.PropertyUtil.getUserValue(this, name);
-              if (userValue == null) {
-                qx.util.PropertyUtil.resetThemed(this, name);
-              }
-            }
-          }
-        },
-        false: null
-      }),
-      /*
-      ---------------------------------------------------------------------------
-        LAYOUT PROCESS
-      ---------------------------------------------------------------------------
-      */
-
-      /** @type {Integer} The computed height */
-      __computedHeightForWidth__P_36_0: null,
-      /** @type {Map} The computed size of the layout item */
-      __computedLayout__P_36_1: null,
-      /** @type {Boolean} Whether the current layout is valid */
-      __hasInvalidLayout__P_36_2: null,
-      /** @type {Map} Cached size hint */
-      __sizeHint__P_36_3: null,
-      /** @type {Boolean} Whether the margins have changed and must be updated */
-      __updateMargin__P_36_4: null,
-      /** @type {Map} user provided bounds of the widget, which override the layout manager */
-      __userBounds__P_36_5: null,
-      /** @type {Map} The item's layout properties */
-      __layoutProperties__P_36_6: null,
-      /**
-       * Get the computed location and dimension as computed by
-       * the layout manager.
-       *
-       * @return {Map|null} The location and dimensions in pixel
-       *    (if the layout is valid). Contains the keys
-       *    <code>width</code>, <code>height</code>, <code>left</code> and
-       *    <code>top</code>.
-       */
-      getBounds() {
-        return this.__userBounds__P_36_5 || this.__computedLayout__P_36_1 || null;
-      },
-      /**
-       * Reconfigure number of separators
-       */
-      clearSeparators() {
-        // empty template
-      },
-      /**
-       * Renders a separator between two children
-       *
-       * @param separator {String|qx.ui.decoration.IDecorator} The separator to render
-       * @param bounds {Map} Contains the left and top coordinate and the width and height
-       *    of the separator to render.
-       */
-      renderSeparator(separator, bounds) {
-        // empty template
-      },
-      /**
-       * Used by the layout engine to apply coordinates and dimensions.
-       *
-       * @param left {Integer} Any integer value for the left position,
-       *   always in pixels
-       * @param top {Integer} Any integer value for the top position,
-       *   always in pixels
-       * @param width {Integer} Any positive integer value for the width,
-       *   always in pixels
-       * @param height {Integer} Any positive integer value for the height,
-       *   always in pixels
-       * @return {Map} A map of which layout sizes changed.
-       */
-      renderLayout(left, top, width, height) {
-        {
-          if (this.getBypassRenderLayout()) return null;
-        }
-
-        // do not render if the layout item is already disposed
-        if (this.isDisposed()) {
-          return null;
-        }
-        {
-          var msg = "Something went wrong with the layout of " + this.toString() + "!";
-          this.assertInteger(left, "Wrong 'left' argument. " + msg);
-          this.assertInteger(top, "Wrong 'top' argument. " + msg);
-          this.assertInteger(width, "Wrong 'width' argument. " + msg);
-          this.assertInteger(height, "Wrong 'height' argument. " + msg);
-
-          // this.assertInRange(width, this.getMinWidth() || -1, this.getMaxWidth() || 32000);
-          // this.assertInRange(height, this.getMinHeight() || -1, this.getMaxHeight() || 32000);
-        }
-
-        // Detect size changes
-
-        // Dynamically create data structure for computed layout
-        var computed = this.__computedLayout__P_36_1;
-        if (!computed) {
-          computed = this.__computedLayout__P_36_1 = {};
-        }
-
-        // Detect changes
-        var changes = {};
-        if (left !== computed.left || top !== computed.top) {
-          changes.position = true;
-          computed.left = left;
-          computed.top = top;
-        }
-        if (width !== computed.width || height !== computed.height) {
-          changes.size = true;
-          computed.width = width;
-          computed.height = height;
-        }
-
-        // Clear invalidation marker
-        if (this.__hasInvalidLayout__P_36_2) {
-          changes.local = true;
-          delete this.__hasInvalidLayout__P_36_2;
-        }
-        if (this.__updateMargin__P_36_4) {
-          changes.margin = true;
-          delete this.__updateMargin__P_36_4;
-        }
-
-        /*
-         * Height for width support
-         *
-         * Results into a re-layout which means that width/height is applied in the next iteration.
-         *
-         * Note that it is important that this happens after the above first pass at calculating a
-         * computed size because otherwise getBounds() will return null, and this will cause an
-         * issue where the existing size is expected to have already been applied by the layout.
-         * See https://github.com/qooxdoo/qooxdoo/issues/9553
-         */
-        if (this.getHeight() == null && this._hasHeightForWidth()) {
-          var flowHeight = this._getHeightForWidth(width);
-          if (flowHeight != null && flowHeight !== this.__computedHeightForWidth__P_36_0) {
-            // This variable is used in the next computation of the size hint
-            this.__computedHeightForWidth__P_36_0 = flowHeight;
-
-            // Re-add to layout queue
-            qx.ui.core.queue.Layout.add(this);
-          }
-        }
-
-        // Returns changes, especially for deriving classes
-        return changes;
-      },
-      /**
-       * Whether the item should be excluded from the layout
-       *
-       * @return {Boolean} Should the item be excluded by the layout
-       */
-      isExcluded() {
-        return false;
-      },
-      /**
-       * Whether the layout of this item (to layout the children)
-       * is valid.
-       *
-       * @return {Boolean} Returns <code>true</code>
-       */
-      hasValidLayout() {
-        return !this.__hasInvalidLayout__P_36_2;
-      },
-      /**
-       * Indicate that the item has layout changes and propagate this information
-       * up the item hierarchy.
-       *
-       */
-      scheduleLayoutUpdate() {
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /**
-       * Called by the layout manager to mark this item's layout as invalid.
-       * This function should clear all layout relevant caches.
-       */
-      invalidateLayoutCache() {
-        // this.debug("Mark layout invalid!");
-
-        this.__hasInvalidLayout__P_36_2 = true;
-        this.__sizeHint__P_36_3 = null;
-      },
-      /**
-       * A size hint computes the dimensions of a widget. It returns
-       * the recommended dimensions as well as the min and max dimensions.
-       * The min and max values already respect the stretching properties.
-       *
-       * <h3>Wording</h3>
-       * <ul>
-       * <li>User value: Value defined by the widget user, using the size properties</li>
-       *
-       * <li>Layout value: The value computed by {@link qx.ui.core.Widget#_getContentHint}</li>
-       * </ul>
-       *
-       * <h3>Algorithm</h3>
-       * <ul>
-       * <li>minSize: If the user min size is not null, the user value is taken,
-       *     otherwise the layout value is used.</li>
-       *
-       * <li>(preferred) size: If the user value is not null the user value is used,
-       *     otherwise the layout value is used.</li>
-       *
-       * <li>max size: Same as the preferred size.</li>
-       * </ul>
-       *
-       * @param compute {Boolean?true} Automatically compute size hint if currently not
-       *   cached?
-       * @return {Map} The map with the preferred width/height and the allowed
-       *   minimum and maximum values in cases where shrinking or growing
-       *   is required.
-       */
-      getSizeHint(compute) {
-        var hint = this.__sizeHint__P_36_3;
-        if (hint) {
-          return hint;
-        }
-        if (compute === false) {
-          return null;
-        }
-
-        // Compute as defined
-        hint = this.__sizeHint__P_36_3 = this._computeSizeHint();
-
-        // Respect height for width
-        if (this._hasHeightForWidth() && this.__computedHeightForWidth__P_36_0 && this.getHeight() == null) {
-          hint.height = this.__computedHeightForWidth__P_36_0;
-        }
-
-        // normalize width
-        if (hint.minWidth > hint.width) {
-          hint.width = hint.minWidth;
-        }
-        if (hint.maxWidth < hint.width) {
-          hint.width = hint.maxWidth;
-        }
-        if (!this.getAllowGrowX()) {
-          hint.maxWidth = hint.width;
-        }
-        if (!this.getAllowShrinkX()) {
-          hint.minWidth = hint.width;
-        }
-
-        // normalize height
-        if (hint.minHeight > hint.height) {
-          hint.height = hint.minHeight;
-        }
-        if (hint.maxHeight < hint.height) {
-          hint.height = hint.maxHeight;
-        }
-        if (!this.getAllowGrowY()) {
-          hint.maxHeight = hint.height;
-        }
-        if (!this.getAllowShrinkY()) {
-          hint.minHeight = hint.height;
-        }
-
-        // Finally return
-        return hint;
-      },
-      /**
-       * Computes the size hint of the layout item.
-       *
-       * @return {Map} The map with the preferred width/height and the allowed
-       *   minimum and maximum values.
-       */
-      _computeSizeHint() {
-        var minWidth = this.getMinWidth() || 0;
-        var minHeight = this.getMinHeight() || 0;
-        var width = this.getWidth() || minWidth;
-        var height = this.getHeight() || minHeight;
-        var maxWidth = this.getMaxWidth() || Infinity;
-        var maxHeight = this.getMaxHeight() || Infinity;
-        return {
-          minWidth: minWidth,
-          width: width,
-          maxWidth: maxWidth,
-          minHeight: minHeight,
-          height: height,
-          maxHeight: maxHeight
-        };
-      },
-      /**
-       * Whether the item supports height for width.
-       *
-       * @return {Boolean} Whether the item supports height for width
-       */
-      _hasHeightForWidth() {
-        var layout = this._getLayout();
-        if (layout) {
-          return layout.hasHeightForWidth();
-        }
-        return false;
-      },
-      /**
-       * If an item wants to trade height for width it has to implement this
-       * method and return the preferred height of the item if it is resized to
-       * the given width. This function returns <code>null</code> if the item
-       * do not support height for width.
-       *
-       * @param width {Integer} The computed width
-       * @return {Integer} The desired height
-       */
-      _getHeightForWidth(width) {
-        var layout = this._getLayout();
-        if (layout && layout.hasHeightForWidth()) {
-          return layout.getHeightForWidth(width);
-        }
-        return null;
-      },
-      /**
-       * Get the widget's layout manager.
-       *
-       * @return {qx.ui.layout.Abstract} The widget's layout manager
-       */
-      _getLayout() {
-        return null;
-      },
-      // property apply
-      _applyMargin() {
-        this.__updateMargin__P_36_4 = true;
-        var parent = this.$$parent;
-        if (parent) {
-          parent.updateLayoutProperties();
-        }
-      },
-      // property apply
-      _applyAlign() {
-        var parent = this.$$parent;
-        if (parent) {
-          parent.updateLayoutProperties();
-        }
-      },
-      // property apply
-      _applyDimension() {
-        qx.ui.core.queue.Layout.add(this);
-      },
-      // property apply
-      _applyStretching() {
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        SUPPORT FOR USER BOUNDARIES
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Whether user bounds are set on this layout item
-       *
-       * @return {Boolean} Whether user bounds are set on this layout item
-       */
-      hasUserBounds() {
-        return !!this.__userBounds__P_36_5;
-      },
-      /**
-       * Set user bounds of the widget. Widgets with user bounds are sized and
-       * positioned manually and are ignored by any layout manager.
-       *
-       * @param left {Integer} left position (relative to the parent)
-       * @param top {Integer} top position (relative to the parent)
-       * @param width {Integer} width of the layout item
-       * @param height {Integer} height of the layout item
-       */
-      setUserBounds(left, top, width, height) {
-        if (!this.__userBounds__P_36_5) {
-          var parent = this.$$parent;
-          if (parent) {
-            parent.updateLayoutProperties();
-          }
-        }
-        this.__userBounds__P_36_5 = {
-          left: left,
-          top: top,
-          width: width,
-          height: height
-        };
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /**
-       * Clear the user bounds. After this call the layout item is laid out by
-       * the layout manager again.
-       *
-       */
-      resetUserBounds() {
-        if (this.__userBounds__P_36_5) {
-          delete this.__userBounds__P_36_5;
-          var parent = this.$$parent;
-          if (parent) {
-            parent.updateLayoutProperties();
-          }
-          qx.ui.core.queue.Layout.add(this);
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        LAYOUT PROPERTIES
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * @type {Map} Empty storage pool
-       *
-       * @lint ignoreReferenceField(__emptyProperties)
-       */
-      __emptyProperties__P_36_7: {},
-      /**
-       * Stores the given layout properties
-       *
-       * @param props {Map} Incoming layout property data
-       */
-      setLayoutProperties(props) {
-        if (props == null) {
-          return;
-        }
-        var storage = this.__layoutProperties__P_36_6;
-        if (!storage) {
-          storage = this.__layoutProperties__P_36_6 = {};
-        }
-
-        // Check values through parent
-        var parent = this.getLayoutParent();
-        if (parent) {
-          parent.updateLayoutProperties(props);
-        }
-
-        // Copy over values
-        for (var key in props) {
-          if (props[key] == null) {
-            delete storage[key];
-          } else {
-            storage[key] = props[key];
-          }
-        }
-      },
-      /**
-       * Returns currently stored layout properties
-       *
-       * @return {Map} Returns a map of layout properties
-       */
-      getLayoutProperties() {
-        return this.__layoutProperties__P_36_6 || this.__emptyProperties__P_36_7;
-      },
-      /**
-       * Removes all stored layout properties.
-       *
-       */
-      clearLayoutProperties() {
-        delete this.__layoutProperties__P_36_6;
-      },
-      /**
-       * Should be executed on every change of layout properties.
-       *
-       * This also includes "virtual" layout properties like margin or align
-       * when they have an effect on the parent and not on the widget itself.
-       *
-       * This method is always executed on the parent not on the
-       * modified widget itself.
-       *
-       * @param props {Map?null} Optional map of known layout properties
-       */
-      updateLayoutProperties(props) {
-        var layout = this._getLayout();
-        if (layout) {
-          // Verify values through underlying layout
-          {
-            if (props) {
-              for (var key in props) {
-                if (props[key] !== null) {
-                  layout.verifyLayoutProperty(this, key, props[key]);
-                }
-              }
-            }
-          }
-
-          // Precomputed and cached children data need to be
-          // rebuild on upcoming (re-)layout.
-          layout.invalidateChildrenCache();
-        }
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        HIERARCHY SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Returns the application root
-       *
-       * @return {qx.ui.root.Abstract} The currently used root
-       */
-      getApplicationRoot() {
-        return qx.core.Init.getApplication().getRoot();
-      },
-      /**
-       * Get the items parent. Even if the item has been added to a
-       * layout, the parent is always a child of the containing item. The parent
-       * item may be <code>null</code>.
-       *
-       * @return {qx.ui.core.Widget|null} The parent.
-       */
-      getLayoutParent() {
-        return this.$$parent || null;
-      },
-      /**
-       * Set the parent
-       *
-       * @param parent {qx.ui.core.Widget|null} The new parent.
-       */
-      setLayoutParent(parent) {
-        if (this.$$parent === parent) {
-          return;
-        }
-        this.$$parent = parent || null;
-        qx.ui.core.queue.Visibility.add(this);
-      },
-      /**
-       * Whether the item is a root item and directly connected to
-       * the DOM.
-       *
-       * @return {Boolean} Whether the item a root item
-       */
-      isRootWidget() {
-        return false;
-      },
-      /**
-       * Returns the root item. The root item is the item which
-       * is directly inserted into an existing DOM node at HTML level.
-       * This is often the BODY element of a typical web page.
-       *
-       * @return {qx.ui.core.Widget} The root item (if available)
-       */
-      _getRoot() {
-        var parent = this;
-        while (parent) {
-          if (parent.isRootWidget()) {
-            return parent;
-          }
-          parent = parent.$$parent;
-        }
-        return null;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CLONE SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      // overridden
-      clone() {
-        var clone = qx.ui.core.LayoutItem.superclass.prototype.clone.call(this);
-        var props = this.__layoutProperties__P_36_6;
-        if (props) {
-          clone.__layoutProperties__P_36_6 = qx.lang.Object.clone(props);
-        }
-        return clone;
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
+       DEFER
     *****************************************************************************
     */
 
-    destruct() {
-      // remove dynamic theme listener
-      if (false && this.__changeThemeLayoutItemListenerId__P_36_8) {
-        qx.theme.manager.Meta.getInstance().removeListenerById(this.__changeThemeLayoutItemListenerId__P_36_8);
-      }
-      this.$$parent = this.$$subparent = this.__layoutProperties__P_36_6 = this.__computedLayout__P_36_1 = this.__userBounds__P_36_5 = this.__sizeHint__P_36_3 = null;
+    defer(statics) {
+      qx.event.Registration.addListener(window, "ready", statics.ready, statics);
+      qx.event.Registration.addListener(window, "shutdown", statics.__shutdown__P_15_1, statics);
+      qx.event.Registration.addListener(window, "beforeunload", statics.__close__P_15_0, statics);
     }
   });
-  qx.ui.core.LayoutItem.$$dbClassInfo = $$dbClassInfo;
+  qx.core.Init.$$dbClassInfo = $$dbClassInfo;
+})();
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.Interface": {
+        "usage": "dynamic",
+        "require": true
+      }
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+  
+  ************************************************************************ */
+
+  /**
+   * This interface defines what an application class has to implement.
+   */
+  qx.Interface.define("qx.application.IApplication", {
+    members: {
+      /**
+       * Called when the application relevant classes are loaded and ready.
+       *
+       */
+      main() {},
+      /**
+       * Called when the application's main method was executed to handle
+       * "final" tasks like rendering or retrieving data.
+       *
+       */
+      finalize() {},
+      /**
+       * Called in the document.beforeunload event of the browser. If the method
+       * returns a string value, the user will be asked by the browser, whether
+       * he really wants to leave the page. The return string will be displayed in
+       * the message box.
+       *
+       * @return {String?null} message text on unloading the page
+       */
+      close() {},
+      /**
+       * This method contains the last code which is run inside the page and may contain cleanup code.
+       *
+       */
+      terminate() {}
+    }
+  });
+  qx.application.IApplication.$$dbClassInfo = $$dbClassInfo;
 })();
 
 (function () {
@@ -32592,4685 +31499,26 @@
 (function () {
   var $$dbClassInfo = {
     "dependsOn": {
-      "qx.ui.core.EventHandler": {},
-      "qx.event.handler.DragDrop": {},
-      "qx.core.Environment": {
-        "defer": "load",
+      "qx.module.Animation": {},
+      "qx.core.Init": {
         "require": true
       },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.core.LayoutItem": {
-        "construct": true,
-        "require": true
-      },
-      "qx.locale.MTranslation": {
-        "require": true
-      },
-      "qx.core.IDisposable": {
-        "require": true
-      },
-      "qx.ui.tooltip.ToolTip": {},
-      "qx.ui.menu.Menu": {},
-      "qx.core.Assert": {},
-      "qx.util.ObjectPool": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.layout.Abstract": {},
-      "qx.ui.core.queue.Layout": {},
-      "qx.ui.core.queue.Visibility": {},
-      "qx.lang.Object": {},
-      "qx.theme.manager.Decoration": {},
-      "qx.ui.core.queue.Manager": {},
-      "qx.html.Element": {},
-      "qx.lang.Array": {},
-      "qx.event.Registration": {},
-      "qx.event.dispatch.MouseCapture": {},
-      "qx.Bootstrap": {},
-      "qx.locale.Manager": {},
-      "qx.bom.client.Engine": {
-        "require": true
-      },
-      "qx.theme.manager.Color": {},
-      "qx.lang.Type": {},
-      "qx.ui.core.queue.Appearance": {},
-      "qx.theme.manager.Appearance": {},
-      "qx.core.Property": {},
-      "qx.ui.core.DragDropCursor": {},
-      "qx.bom.element.Location": {},
-      "qx.ui.core.queue.Dispose": {},
-      "qx.core.ObjectRegistry": {},
-      "qx.ui.core.queue.Widget": {}
-    },
-    "environment": {
-      "provided": [],
-      "required": {
-        "engine.name": {
-          "className": "qx.bom.client.Engine"
-        }
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /* ************************************************************************
-  
-  
-  
-  ************************************************************************ */
-
-  /**
-   * This is the base class for all widgets.
-   *
-   * *External Documentation*
-   *
-   * <a href='http://qooxdoo.org/docs/#core/' target='_blank'>
-   * Documentation of this widget in the qooxdoo manual.</a>
-   *
-   * NOTE: Instances of this class must be disposed of after use
-   *
-   * @use(qx.ui.core.EventHandler)
-   * @use(qx.event.handler.DragDrop)
-   * @asset(qx/static/blank.gif)
-   *
-   * @ignore(qx.ui.root.Inline)
-   */
-  qx.Class.define("qx.ui.core.Widget", {
-    extend: qx.ui.core.LayoutItem,
-    include: [qx.locale.MTranslation],
-    implement: [qx.core.IDisposable],
-    /*
-    *****************************************************************************
-       CONSTRUCTOR
-    *****************************************************************************
-    */
-
-    construct() {
-      qx.ui.core.LayoutItem.constructor.call(this);
-
-      // Create basic element
-      this.__contentElement__P_37_0 = this.__createContentElement__P_37_1();
-
-      // Initialize properties
-      this.initFocusable();
-      this.initSelectable();
-      this.initNativeContextMenu();
-    },
-    /*
-    *****************************************************************************
-       EVENTS
-    *****************************************************************************
-    */
-
-    events: {
-      /**
-       * Fired after the widget appears on the screen.
-       */
-      appear: "qx.event.type.Event",
-      /**
-       * Fired after the widget disappears from the screen.
-       */
-      disappear: "qx.event.type.Event",
-      /**
-       * Fired after the creation of a child control. The passed data is the
-       * newly created child widget.
-       */
-      createChildControl: "qx.event.type.Data",
-      /**
-       * Fired on resize (after layout) of the widget.
-       * The data property of the event contains the widget's computed location
-       * and dimension as returned by {@link qx.ui.core.LayoutItem#getBounds}
-       */
-      resize: "qx.event.type.Data",
-      /**
-       * Fired on move (after layout) of the widget.
-       * The data property of the event contains the widget's computed location
-       * and dimension as returned by {@link qx.ui.core.LayoutItem#getBounds}
-       */
-      move: "qx.event.type.Data",
-      /**
-       * Fired after the appearance has been applied. This happens before the
-       * widget becomes visible, on state and appearance changes. The data field
-       * contains the state map. This can be used to react on state changes or to
-       * read properties set by the appearance.
-       */
-      syncAppearance: "qx.event.type.Data",
-      /** Fired if the mouse cursor moves over the widget.
-       *  The data property of the event contains the widget's computed location
-       *  and dimension as returned by {@link qx.ui.core.LayoutItem#getBounds}
-       */
-      mousemove: "qx.event.type.Mouse",
-      /**
-       * Fired if the mouse cursor enters the widget.
-       *
-       * Note: This event is also dispatched if the widget is disabled!
-       */
-      mouseover: "qx.event.type.Mouse",
-      /**
-       * Fired if the mouse cursor leaves widget.
-       *
-       * Note: This event is also dispatched if the widget is disabled!
-       */
-      mouseout: "qx.event.type.Mouse",
-      /** Mouse button is pressed on the widget. */
-      mousedown: "qx.event.type.Mouse",
-      /** Mouse button is released on the widget. */
-      mouseup: "qx.event.type.Mouse",
-      /** Widget is clicked using left or middle button.
-          {@link qx.event.type.Mouse#getButton} for more details.*/
-      click: "qx.event.type.Mouse",
-      /** Widget is clicked using a non primary button.
-          {@link qx.event.type.Mouse#getButton} for more details.*/
-      auxclick: "qx.event.type.Mouse",
-      /** Widget is double clicked using left or middle button.
-          {@link qx.event.type.Mouse#getButton} for more details.*/
-      dblclick: "qx.event.type.Mouse",
-      /** Widget is clicked using the right mouse button. */
-      contextmenu: "qx.event.type.Mouse",
-      /** Fired before the context menu is opened. */
-      beforeContextmenuOpen: "qx.event.type.Data",
-      /** Fired if the mouse wheel is used over the widget. */
-      mousewheel: "qx.event.type.MouseWheel",
-      /** Fired if a touch at the screen is started. */
-      touchstart: "qx.event.type.Touch",
-      /** Fired if a touch at the screen has ended. */
-      touchend: "qx.event.type.Touch",
-      /** Fired during a touch at the screen. */
-      touchmove: "qx.event.type.Touch",
-      /** Fired if a touch at the screen is canceled. */
-      touchcancel: "qx.event.type.Touch",
-      /** Fired when a pointer taps on the screen. */
-      tap: "qx.event.type.Tap",
-      /** Fired when a pointer holds on the screen. */
-      longtap: "qx.event.type.Tap",
-      /** Fired when a pointer taps twice on the screen. */
-      dbltap: "qx.event.type.Tap",
-      /** Fired when a pointer swipes over the screen. */
-      swipe: "qx.event.type.Touch",
-      /** Fired when two pointers performing a rotate gesture on the screen. */
-      rotate: "qx.event.type.Rotate",
-      /** Fired when two pointers performing a pinch in/out gesture on the screen. */
-      pinch: "qx.event.type.Pinch",
-      /** Fired when an active pointer moves on the screen (after pointerdown till pointerup). */
-      track: "qx.event.type.Track",
-      /** Fired when an active pointer moves on the screen or the mouse wheel is used. */
-      roll: "qx.event.type.Roll",
-      /** Fired if a pointer (mouse/touch/pen) moves or changes any of it's values. */
-      pointermove: "qx.event.type.Pointer",
-      /** Fired if a pointer (mouse/touch/pen) hovers the widget. */
-      pointerover: "qx.event.type.Pointer",
-      /** Fired if a pointer (mouse/touch/pen) leaves this widget. */
-      pointerout: "qx.event.type.Pointer",
-      /**
-       * Fired if a pointer (mouse/touch/pen) button is pressed or
-       * a finger touches the widget.
-       */
-      pointerdown: "qx.event.type.Pointer",
-      /**
-       * Fired if all pointer (mouse/touch/pen) buttons are released or
-       * the finger is lifted from the widget.
-       */
-      pointerup: "qx.event.type.Pointer",
-      /** Fired if a pointer (mouse/touch/pen) action is canceled. */
-      pointercancel: "qx.event.type.Pointer",
-      /** This event if fired if a keyboard key is released. */
-      keyup: "qx.event.type.KeySequence",
-      /**
-       * This event if fired if a keyboard key is pressed down. This event is
-       * only fired once if the user keeps the key pressed for a while.
-       */
-      keydown: "qx.event.type.KeySequence",
-      /**
-       * This event is fired any time a key is pressed. It will be repeated if
-       * the user keeps the key pressed. The pressed key can be determined using
-       * {@link qx.event.type.KeySequence#getKeyIdentifier}.
-       */
-      keypress: "qx.event.type.KeySequence",
-      /**
-       * This event is fired if the pressed key or keys result in a printable
-       * character. Since the character is not necessarily associated with a
-       * single physical key press, the event does not have a key identifier
-       * getter. This event gets repeated if the user keeps pressing the key(s).
-       *
-       * The unicode code of the pressed key can be read using
-       * {@link qx.event.type.KeyInput#getCharCode}.
-       */
-      keyinput: "qx.event.type.KeyInput",
-      /**
-       * The event is fired when the widget gets focused. Only widgets which are
-       * {@link #focusable} receive this event.
-       */
-      focus: "qx.event.type.Focus",
-      /**
-       * The event is fired when the widget gets blurred. Only widgets which are
-       * {@link #focusable} receive this event.
-       */
-      blur: "qx.event.type.Focus",
-      /**
-       * When the widget itself or any child of the widget receive the focus.
-       */
-      focusin: "qx.event.type.Focus",
-      /**
-       * When the widget itself or any child of the widget lost the focus.
-       */
-      focusout: "qx.event.type.Focus",
-      /**
-       * When the widget gets active (receives keyboard events etc.)
-       */
-      activate: "qx.event.type.Focus",
-      /**
-       * When the widget gets inactive
-       */
-      deactivate: "qx.event.type.Focus",
-      /**
-       * Fired if the widget becomes the capturing widget by a call to {@link #capture}.
-       */
-      capture: "qx.event.type.Event",
-      /**
-       * Fired if the widget looses the capturing mode by a call to
-       * {@link #releaseCapture} or a mouse click.
-       */
-      losecapture: "qx.event.type.Event",
-      /**
-       * Fired on the drop target when the drag&drop action is finished
-       * successfully. This event is normally used to transfer the data
-       * from the drag to the drop target.
-       *
-       * Modeled after the WHATWG specification of Drag&Drop:
-       * http://www.whatwg.org/specs/web-apps/current-work/#dnd
-       */
-      drop: "qx.event.type.Drag",
-      /**
-       * Fired on a potential drop target when leaving it.
-       *
-       * Modeled after the WHATWG specification of Drag&Drop:
-       * http://www.whatwg.org/specs/web-apps/current-work/#dnd
-       */
-      dragleave: "qx.event.type.Drag",
-      /**
-       * Fired on a potential drop target when reaching it via the pointer.
-       * This event can be canceled if none of the incoming data types
-       * are supported.
-       *
-       * Modeled after the WHATWG specification of Drag&Drop:
-       * http://www.whatwg.org/specs/web-apps/current-work/#dnd
-       */
-      dragover: "qx.event.type.Drag",
-      /**
-       * Fired during the drag. Contains the current pointer coordinates
-       * using {@link qx.event.type.Drag#getDocumentLeft} and
-       * {@link qx.event.type.Drag#getDocumentTop}
-       *
-       * Modeled after the WHATWG specification of Drag&Drop:
-       * http://www.whatwg.org/specs/web-apps/current-work/#dnd
-       */
-      drag: "qx.event.type.Drag",
-      /**
-       * Initiate the drag-and-drop operation. This event is cancelable
-       * when the drag operation is currently not allowed/possible.
-       *
-       * Modeled after the WHATWG specification of Drag&Drop:
-       * http://www.whatwg.org/specs/web-apps/current-work/#dnd
-       */
-      dragstart: "qx.event.type.Drag",
-      /**
-       * Fired on the source (drag) target every time a drag session was ended.
-       */
-      dragend: "qx.event.type.Drag",
-      /**
-       * Fired when the drag configuration has been modified e.g. the user
-       * pressed a key which changed the selected action. This event will be
-       * fired on the draggable and the droppable element. In case of the
-       * droppable element, you can cancel the event and prevent a drop based on
-       * e.g. the current action.
-       */
-      dragchange: "qx.event.type.Drag",
-      /**
-       * Fired when the drop was successfully done and the target widget
-       * is now asking for data. The listener should transfer the data,
-       * respecting the selected action, to the event. This can be done using
-       * the event's {@link qx.event.type.Drag#addData} method.
-       */
-      droprequest: "qx.event.type.Drag"
-    },
-    /*
-    *****************************************************************************
-       PROPERTIES
-    *****************************************************************************
-    */
-
-    properties: {
-      /*
-      ---------------------------------------------------------------------------
-        PADDING
-      ---------------------------------------------------------------------------
-      */
-
-      /** Padding of the widget (top) */
-      paddingTop: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyPadding",
-        themeable: true
-      },
-      /** Padding of the widget (right) */
-      paddingRight: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyPadding",
-        themeable: true
-      },
-      /** Padding of the widget (bottom) */
-      paddingBottom: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyPadding",
-        themeable: true
-      },
-      /** Padding of the widget (left) */
-      paddingLeft: {
-        check: "Integer",
-        init: 0,
-        apply: "_applyPadding",
-        themeable: true
-      },
-      /**
-       * The 'padding' property is a shorthand property for setting 'paddingTop',
-       * 'paddingRight', 'paddingBottom' and 'paddingLeft' at the same time.
-       *
-       * If four values are specified they apply to top, right, bottom and left respectively.
-       * If there is only one value, it applies to all sides, if there are two or three,
-       * the missing values are taken from the opposite side.
-       */
-      padding: {
-        group: ["paddingTop", "paddingRight", "paddingBottom", "paddingLeft"],
-        mode: "shorthand",
-        themeable: true
-      },
-      /*
-      ---------------------------------------------------------------------------
-        STYLING PROPERTIES
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * The z-index property sets the stack order of an element. An element with
-       * greater stack order is always in front of another element with lower stack order.
-       */
-      zIndex: {
-        nullable: true,
-        init: 10,
-        apply: "_applyZIndex",
-        event: "changeZIndex",
-        check: "Integer",
-        themeable: true
-      },
-      /**
-       * The decorator property points to an object, which is responsible
-       * for drawing the widget's decoration, e.g. border, background or shadow.
-       *
-       * This can be a decorator object or a string pointing to a decorator
-       * defined in the decoration theme.
-       */
-      decorator: {
-        nullable: true,
-        init: null,
-        apply: "_applyDecorator",
-        event: "changeDecorator",
-        check: "Decorator",
-        themeable: true
-      },
-      /**
-       * The background color the rendered widget.
-       */
-      backgroundColor: {
-        nullable: true,
-        check: "Color",
-        apply: "_applyBackgroundColor",
-        event: "changeBackgroundColor",
-        themeable: true
-      },
-      /**
-       * The text color the rendered widget.
-       */
-      textColor: {
-        nullable: true,
-        check: "Color",
-        apply: "_applyTextColor",
-        event: "changeTextColor",
-        themeable: true,
-        inheritable: true
-      },
-      /**
-       * The widget's font. The value is either a font name defined in the font
-       * theme or an instance of {@link qx.bom.Font}.
-       */
-      font: {
-        nullable: true,
-        apply: "_applyFont",
-        check: "Font",
-        event: "changeFont",
-        themeable: true,
-        inheritable: true,
-        dereference: true
-      },
-      /**
-       * Mapping to native style property opacity.
-       *
-       * The uniform opacity setting to be applied across an entire object.
-       * Behaves like the new CSS-3 Property.
-       * Any values outside the range 0.0 (fully transparent) to 1.0
-       * (fully opaque) will be clamped to this range.
-       */
-      opacity: {
-        check: "Number",
-        apply: "_applyOpacity",
-        themeable: true,
-        nullable: true,
-        init: null
-      },
-      /**
-       * Mapping to native style property cursor.
-       *
-       * The name of the cursor to show when the pointer is over the widget.
-       * This is any valid CSS2 cursor name defined by W3C.
-       *
-       * The following values are possible crossbrowser:
-       * <ul><li>default</li>
-       * <li>crosshair</li>
-       * <li>pointer</li>
-       * <li>move</li>
-       * <li>n-resize</li>
-       * <li>ne-resize</li>
-       * <li>e-resize</li>
-       * <li>se-resize</li>
-       * <li>s-resize</li>
-       * <li>sw-resize</li>
-       * <li>w-resize</li>
-       * <li>nw-resize</li>
-       * <li>nesw-resize</li>
-       * <li>nwse-resize</li>
-       * <li>text</li>
-       * <li>wait</li>
-       * <li>help </li>
-       * </ul>
-       */
-      cursor: {
-        check: "String",
-        apply: "_applyCursor",
-        themeable: true,
-        inheritable: true,
-        nullable: true,
-        init: null
-      },
-      /**
-       * Sets the tooltip instance to use for this widget. If only the tooltip
-       * text and icon have to be set its better to use the {@link #toolTipText}
-       * and {@link #toolTipIcon} properties since they use a shared tooltip
-       * instance.
-       *
-       * If this property is set the {@link #toolTipText} and {@link #toolTipIcon}
-       * properties are ignored.
-       */
-      toolTip: {
-        check: "qx.ui.tooltip.ToolTip",
-        nullable: true
-      },
-      /**
-       * The text of the widget's tooltip. This text can contain HTML markup.
-       * The text is displayed using a shared tooltip instance. If the tooltip
-       * must be customized beyond the text and an icon {@link #toolTipIcon}, the
-       * {@link #toolTip} property has to be used
-       */
-      toolTipText: {
-        check: "String",
-        nullable: true,
-        event: "changeToolTipText",
-        apply: "_applyToolTipText"
-      },
-      /**
-       * The icon URI of the widget's tooltip. This icon is displayed using a shared
-       * tooltip instance. If the tooltip must be customized beyond the tooltip text
-       * {@link #toolTipText} and the icon, the {@link #toolTip} property has to be
-       * used.
-       */
-      toolTipIcon: {
-        check: "String",
-        nullable: true,
-        event: "changeToolTipText"
-      },
-      /**
-       * Controls if a tooltip should shown or not.
-       */
-      blockToolTip: {
-        check: "Boolean",
-        init: false
-      },
-      /**
-       * Forces to show tooltip when widget is disabled.
-       */
-      showToolTipWhenDisabled: {
-        check: "Boolean",
-        init: false
-      },
-      /*
-      ---------------------------------------------------------------------------
-        MANAGEMENT PROPERTIES
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Controls the visibility. Valid values are:
-       *
-       * <ul>
-       *   <li><b>visible</b>: Render the widget</li>
-       *   <li><b>hidden</b>: Hide the widget but don't relayout the widget's parent.</li>
-       *   <li><b>excluded</b>: Hide the widget and relayout the parent as if the
-       *     widget was not a child of its parent.</li>
-       * </ul>
-       */
-      visibility: {
-        check: ["visible", "hidden", "excluded"],
-        init: "visible",
-        apply: "_applyVisibility",
-        event: "changeVisibility"
-      },
-      /**
-       * Whether the widget is enabled. Disabled widgets are usually grayed out
-       * and do not process user created events. While in the disabled state most
-       * user input events are blocked. Only the {@link #pointerover} and
-       * {@link #pointerout} events will be dispatched.
-       */
-      enabled: {
-        init: true,
-        check: "Boolean",
-        inheritable: true,
-        apply: "_applyEnabled",
-        event: "changeEnabled"
-      },
-      /**
-       * Whether the widget is anonymous.
-       *
-       * Anonymous widgets are ignored in the event hierarchy. This is useful
-       * for combined widgets where the internal structure do not have a custom
-       * appearance with a different styling from the element around. This is
-       * especially true for widgets like checkboxes or buttons where the text
-       * or icon are handled synchronously for state changes to the outer widget.
-       */
-      anonymous: {
-        init: false,
-        check: "Boolean",
-        apply: "_applyAnonymous"
-      },
-      /**
-       * Defines the tab index of an widget. If widgets with tab indexes are part
-       * of the current focus root these elements are sorted in first priority. Afterwards
-       * the sorting continues by rendered position, zIndex and other criteria.
-       *
-       * Please note: The value must be between 1 and 32000.
-       */
-      tabIndex: {
-        check: "Integer",
-        nullable: true,
-        apply: "_applyTabIndex"
-      },
-      /**
-       * Whether the widget is focusable e.g. rendering a focus border and visualize
-       * as active element.
-       *
-       * See also {@link #isTabable} which allows runtime checks for
-       * <code>isChecked</code> or other stuff to test whether the widget is
-       * reachable via the TAB key.
-       */
-      focusable: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyFocusable"
-      },
-      /**
-       * If this property is enabled, the widget and all of its child widgets
-       * will never get focused. The focus keeps at the currently
-       * focused widget.
-       *
-       * This only works for widgets which are not {@link #focusable}.
-       *
-       * This is mainly useful for widget authors. Please use with caution!
-       */
-      keepFocus: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyKeepFocus"
-      },
-      /**
-       * If this property if enabled, the widget and all of its child widgets
-       * will never get activated. The activation keeps at the currently
-       * activated widget.
-       *
-       * This is mainly useful for widget authors. Please use with caution!
-       */
-      keepActive: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyKeepActive"
-      },
-      /** Whether the widget acts as a source for drag&drop operations */
-      draggable: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyDraggable"
-      },
-      /** Whether the widget acts as a target for drag&drop operations */
-      droppable: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyDroppable"
-      },
-      /**
-       * Whether the widget contains content which may be selected by the user.
-       *
-       * If the value set to <code>true</code> the native browser selection can
-       * be used for text selection. But it is normally useful for
-       * forms fields, longer texts/documents, editors, etc.
-       */
-      selectable: {
-        check: "Boolean",
-        init: false,
-        event: "changeSelectable",
-        apply: "_applySelectable"
-      },
-      /**
-       * Whether to show a context menu and which one
-       */
-      contextMenu: {
-        check: "qx.ui.menu.Menu",
-        apply: "_applyContextMenu",
-        nullable: true,
-        event: "changeContextMenu"
-      },
-      /**
-       * Whether the native context menu should be enabled for this widget. To
-       * globally enable the native context menu set the {@link #nativeContextMenu}
-       * property of the root widget ({@link qx.ui.root.Abstract}) to
-       * <code>true</code>.
-       */
-      nativeContextMenu: {
-        check: "Boolean",
-        init: false,
-        themeable: true,
-        event: "changeNativeContextMenu",
-        apply: "_applyNativeContextMenu"
-      },
-      /**
-       * The appearance ID. This ID is used to identify the appearance theme
-       * entry to use for this widget. This controls the styling of the element.
-       */
-      appearance: {
-        check: "String",
-        init: "widget",
-        apply: "_applyAppearance",
-        event: "changeAppearance"
-      }
-    },
-    /*
-    *****************************************************************************
-       STATICS
-    *****************************************************************************
-    */
-
-    statics: {
-      /** Whether the widget should print out hints and debug messages */
-      DEBUG: false,
-      /** Whether to throw an error on focus/blur if the widget is unfocusable */
-      UNFOCUSABLE_WIDGET_FOCUS_BLUR_ERROR: true,
-      /**
-       * Returns the widget, which contains the given DOM element.
-       *
-       * @param element {Element} The DOM element to search the widget for.
-       * @param considerAnonymousState {Boolean?false} If true, anonymous widget
-       *   will not be returned.
-       * @return {qx.ui.core.Widget} The widget containing the element.
-       */
-      getWidgetByElement(element, considerAnonymousState) {
-        while (element) {
-          {
-            qx.core.Assert.assertTrue(!element.$$qxObjectHash && !element.$$qxObject || element.$$qxObject && element.$$qxObjectHash && element.$$qxObject.toHashCode() === element.$$qxObjectHash);
-          }
-          var widget = element.$$qxObject;
-
-          // check for anonymous widgets
-          if (widget) {
-            if (!considerAnonymousState || !widget.getAnonymous()) {
-              return widget;
-            }
-          }
-
-          // Fix for FF, which occasionally breaks (BUG#3525)
-          try {
-            element = element.parentNode;
-          } catch (e) {
-            return null;
-          }
-        }
-        return null;
-      },
-      /**
-       * Whether the "parent" widget contains the "child" widget.
-       *
-       * @param parent {qx.ui.core.Widget} The parent widget
-       * @param child {qx.ui.core.Widget} The child widget
-       * @return {Boolean} Whether one of the "child"'s parents is "parent"
-       */
-      contains(parent, child) {
-        while (child) {
-          child = child.getLayoutParent();
-          if (parent == child) {
-            return true;
-          }
-        }
-        return false;
-      },
-      /** @type {Map} Contains all pooled separators for reuse */
-      __separatorPool__P_37_2: new qx.util.ObjectPool()
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __contentElement__P_37_0: null,
-      __initialAppearanceApplied__P_37_3: null,
-      __toolTipTextListenerId__P_37_4: null,
-      /*
-      ---------------------------------------------------------------------------
-        LAYOUT INTERFACE
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * @type {qx.ui.layout.Abstract} The connected layout manager
-       */
-      __layoutManager__P_37_5: null,
-      // overridden
-      _getLayout() {
-        return this.__layoutManager__P_37_5;
-      },
-      /**
-       * Set a layout manager for the widget. A a layout manager can only be connected
-       * with one widget. Reset the connection with a previous widget first, if you
-       * like to use it in another widget instead.
-       *
-       * @param layout {qx.ui.layout.Abstract} The new layout or
-       *     <code>null</code> to reset the layout.
-       */
-      _setLayout(layout) {
-        {
-          if (layout) {
-            this.assertInstance(layout, qx.ui.layout.Abstract);
-          }
-        }
-        if (this.__layoutManager__P_37_5) {
-          this.__layoutManager__P_37_5.connectToWidget(null);
-        }
-        if (layout) {
-          layout.connectToWidget(this);
-        }
-        this.__layoutManager__P_37_5 = layout;
-        qx.ui.core.queue.Layout.add(this);
-      },
-      // overridden
-      setLayoutParent(parent) {
-        if (this.$$parent === parent) {
-          return;
-        }
-        var content = this.getContentElement();
-        if (this.$$parent && !this.$$parent.$$disposed) {
-          this.$$parent.getContentElement().remove(content);
-        }
-        this.$$parent = parent || null;
-        if (parent && !parent.$$disposed) {
-          this.$$parent.getContentElement().add(content);
-        }
-
-        // Update inheritable properties
-        this.$$refreshInheritables();
-
-        // Update visibility cache
-        qx.ui.core.queue.Visibility.add(this);
-      },
-      /** @type {Boolean} Whether insets have changed and must be updated */
-      _updateInsets: null,
-      // overridden
-      renderLayout(left, top, width, height) {
-        var changes = qx.ui.core.Widget.superclass.prototype.renderLayout.call(this, left, top, width, height);
-
-        // Directly return if superclass has detected that no
-        // changes needs to be applied
-        if (!changes) {
-          return null;
-        }
-        if (qx.lang.Object.isEmpty(changes) && !this._updateInsets) {
-          return null;
-        }
-        var content = this.getContentElement();
-        var inner = changes.size || this._updateInsets;
-        var pixel = "px";
-        var contentStyles = {};
-        // Move content to new position
-        if (changes.position) {
-          contentStyles.left = left + pixel;
-          contentStyles.top = top + pixel;
-        }
-        if (inner || changes.margin) {
-          contentStyles.width = width + pixel;
-          contentStyles.height = height + pixel;
-        }
-        {
-          var incstyles = true;
-          this.assert(qx.Class.hasProperty(this.constructor, "excludeBoundsFromDom"), "Missing ExcludeBoundsFromDom property.");
-          if (this.getExcludeBoundsFromDom()) {
-            incstyles = false;
-          }
-          if (incstyles) {
-            if (Object.keys(contentStyles).length > 0) {
-              content.setStyles(contentStyles);
-            }
-          } else {
-            if (qx.Class.hasProperty(this.constructor, "excludeBoundsFromDomMods")) {
-              if (this.getExcludeBoundsFromDomMods()) {
-                if (Object.keys(contentStyles).length > 0) {
-                  for (const bound of this.getExcludeBoundsFromDomMods()) {
-                    delete contentStyles[bound];
-                  }
-                  content.setStyles(contentStyles);
-                }
-              }
-            }
-          }
-        }
-        if (inner || changes.local || changes.margin) {
-          if (this.__layoutManager__P_37_5 && this.hasLayoutChildren()) {
-            var inset = this.getInsets();
-            var innerWidth = width - inset.left - inset.right;
-            var innerHeight = height - inset.top - inset.bottom;
-            var decorator = this.getDecorator();
-            var decoratorPadding = {
-              left: 0,
-              right: 0,
-              top: 0,
-              bottom: 0
-            };
-            if (decorator) {
-              decorator = qx.theme.manager.Decoration.getInstance().resolve(decorator);
-              decoratorPadding = decorator.getPadding();
-            }
-            var padding = {
-              top: this.getPaddingTop() + decoratorPadding.top,
-              right: this.getPaddingRight() + decoratorPadding.right,
-              bottom: this.getPaddingBottom() + decoratorPadding.bottom,
-              left: this.getPaddingLeft() + decoratorPadding.left
-            };
-            this.__layoutManager__P_37_5.renderLayout(innerWidth, innerHeight, padding);
-          } else if (this.hasLayoutChildren()) {
-            throw new Error("At least one child in control " + this._findTopControl() + " requires a layout, but no one was defined!");
-          }
-        }
-
-        // Fire events
-        if (changes.position && this.hasListener("move")) {
-          this.fireDataEvent("move", this.getBounds());
-        }
-        if (changes.size && this.hasListener("resize")) {
-          this.fireDataEvent("resize", this.getBounds());
-        }
-
-        // Cleanup flags
-        delete this._updateInsets;
-        return changes;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        SEPARATOR SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      __separators__P_37_6: null,
-      // overridden
-      clearSeparators() {
-        var reg = this.__separators__P_37_6;
-        if (!reg) {
-          return;
-        }
-        var pool = qx.ui.core.Widget.__separatorPool__P_37_2;
-        var content = this.getContentElement();
-        var widget;
-        for (var i = 0, l = reg.length; i < l; i++) {
-          widget = reg[i];
-          pool.poolObject(widget);
-          content.remove(widget.getContentElement());
-        }
-
-        // Clear registry
-        reg.length = 0;
-      },
-      // overridden
-      renderSeparator(separator, bounds) {
-        // Insert
-        var widget = qx.ui.core.Widget.__separatorPool__P_37_2.getObject(qx.ui.core.Widget);
-        widget.set({
-          decorator: separator
-        });
-        var elem = widget.getContentElement();
-        this.getContentElement().add(elem);
-
-        // Move
-        var domEl = elem.getDomElement();
-        // use the DOM element because the cache of the qx.html.Element could be
-        // wrong due to changes made by the decorators which work on the DOM element too
-        if (domEl) {
-          domEl.style.top = bounds.top + "px";
-          domEl.style.left = bounds.left + "px";
-          domEl.style.width = bounds.width + "px";
-          domEl.style.height = bounds.height + "px";
-        } else {
-          elem.setStyles({
-            left: bounds.left + "px",
-            top: bounds.top + "px",
-            width: bounds.width + "px",
-            height: bounds.height + "px"
-          });
-        }
-
-        // Remember element
-        if (!this.__separators__P_37_6) {
-          this.__separators__P_37_6 = [];
-        }
-        this.__separators__P_37_6.push(widget);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        SIZE HINTS
-      ---------------------------------------------------------------------------
-      */
-
-      // overridden
-      _computeSizeHint() {
-        // Start with the user defined values
-        var width = this.getWidth();
-        var minWidth = this.getMinWidth();
-        var maxWidth = this.getMaxWidth();
-        var height = this.getHeight();
-        var minHeight = this.getMinHeight();
-        var maxHeight = this.getMaxHeight();
-        {
-          if (minWidth !== null && maxWidth !== null) {
-            this.assert(minWidth <= maxWidth, "minWidth is larger than maxWidth!");
-          }
-          if (minHeight !== null && maxHeight !== null) {
-            this.assert(minHeight <= maxHeight, "minHeight is larger than maxHeight!");
-          }
-        }
-
-        // Ask content
-        var contentHint = this._getContentHint();
-        var insets = this.getInsets();
-        var insetX = insets.left + insets.right;
-        var insetY = insets.top + insets.bottom;
-        if (width == null) {
-          width = contentHint.width + insetX;
-        }
-        if (height == null) {
-          height = contentHint.height + insetY;
-        }
-        if (minWidth == null) {
-          minWidth = insetX;
-          if (contentHint.minWidth != null) {
-            minWidth += contentHint.minWidth;
-            // do not apply bigger min width than max width [BUG #5008]
-            if (minWidth > maxWidth && maxWidth != null) {
-              minWidth = maxWidth;
-            }
-          }
-        }
-        if (minHeight == null) {
-          minHeight = insetY;
-          if (contentHint.minHeight != null) {
-            minHeight += contentHint.minHeight;
-            // do not apply bigger min height than max height [BUG #5008]
-            if (minHeight > maxHeight && maxHeight != null) {
-              minHeight = maxHeight;
-            }
-          }
-        }
-        if (maxWidth == null) {
-          if (contentHint.maxWidth == null) {
-            maxWidth = Infinity;
-          } else {
-            maxWidth = contentHint.maxWidth + insetX;
-            // do not apply bigger min width than max width [BUG #5008]
-            if (maxWidth < minWidth && minWidth != null) {
-              maxWidth = minWidth;
-            }
-          }
-        }
-        if (maxHeight == null) {
-          if (contentHint.maxHeight == null) {
-            maxHeight = Infinity;
-          } else {
-            maxHeight = contentHint.maxHeight + insetY;
-            // do not apply bigger min width than max width [BUG #5008]
-            if (maxHeight < minHeight && minHeight != null) {
-              maxHeight = minHeight;
-            }
-          }
-        }
-
-        // Build size hint and return
-        return {
-          width: width,
-          minWidth: minWidth,
-          maxWidth: maxWidth,
-          height: height,
-          minHeight: minHeight,
-          maxHeight: maxHeight
-        };
-      },
-      // overridden
-      invalidateLayoutCache() {
-        qx.ui.core.Widget.superclass.prototype.invalidateLayoutCache.call(this);
-        if (this.__layoutManager__P_37_5) {
-          this.__layoutManager__P_37_5.invalidateLayoutCache();
-        }
-      },
-      /**
-       * Returns the recommended/natural dimensions of the widget's content.
-       *
-       * For labels and images this may be their natural size when defined without
-       * any dimensions. For containers this may be the recommended size of the
-       * underlying layout manager.
-       *
-       * Developer note: This can be overwritten by the derived classes to allow
-       * a custom handling here.
-       *
-       * @return {Map}
-       */
-      _getContentHint() {
-        var layout = this.__layoutManager__P_37_5;
-        if (layout) {
-          if (this.hasLayoutChildren()) {
-            var hint = layout.getSizeHint();
-            {
-              var msg = "The layout of the widget" + this.toString() + " returned an invalid size hint!";
-              this.assertInteger(hint.width, "Wrong 'left' argument. " + msg);
-              this.assertInteger(hint.height, "Wrong 'top' argument. " + msg);
-            }
-            return hint;
-          } else {
-            return {
-              width: 0,
-              height: 0
-            };
-          }
-        } else {
-          return {
-            width: 100,
-            height: 50
-          };
-        }
-      },
-      // overridden
-      _getHeightForWidth(width) {
-        // Prepare insets
-        var insets = this.getInsets();
-        var insetX = insets.left + insets.right;
-        var insetY = insets.top + insets.bottom;
-
-        // Compute content width
-        var contentWidth = width - insetX;
-
-        // Compute height
-        var contentHeight = 0;
-        var layout = this._getLayout();
-        if (layout && layout.hasHeightForWidth()) {
-          contentHeight = layout.getHeightForWidth(contentWidth);
-        } else {
-          contentHeight = this._getContentHeightForWidth(contentWidth);
-        }
-
-        // Computed box height
-        var height = contentHeight + insetY;
-        return height;
-      },
-      /**
-       * Returns the computed height for the given width.
-       *
-       * @abstract
-       * @param width {Integer} Incoming width (as limitation)
-       * @return {Integer} Computed height while respecting the given width.
-       */
-      _getContentHeightForWidth(width) {
-        throw new Error("Abstract method call: _getContentHeightForWidth()!");
-      },
-      /*
-      ---------------------------------------------------------------------------
-        INSET CALCULATION SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Returns the sum of the widget's padding and border width.
-       *
-       * @return {Map} Contains the keys <code>top</code>, <code>right</code>,
-       *   <code>bottom</code> and <code>left</code>. All values are integers.
-       */
-      getInsets() {
-        var top = this.getPaddingTop();
-        var right = this.getPaddingRight();
-        var bottom = this.getPaddingBottom();
-        var left = this.getPaddingLeft();
-        if (this.getDecorator()) {
-          var decorator = qx.theme.manager.Decoration.getInstance().resolve(this.getDecorator());
-          var inset = decorator.getInsets();
-          {
-            this.assertNumber(inset.top, "Invalid top decorator inset detected: " + inset.top);
-            this.assertNumber(inset.right, "Invalid right decorator inset detected: " + inset.right);
-            this.assertNumber(inset.bottom, "Invalid bottom decorator inset detected: " + inset.bottom);
-            this.assertNumber(inset.left, "Invalid left decorator inset detected: " + inset.left);
-          }
-          top += inset.top;
-          right += inset.right;
-          bottom += inset.bottom;
-          left += inset.left;
-        }
-        return {
-          top: top,
-          right: right,
-          bottom: bottom,
-          left: left
-        };
-      },
-      /*
-      ---------------------------------------------------------------------------
-        COMPUTED LAYOUT SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Returns the widget's computed inner size as available
-       * through the layout process.
-       *
-       * This function is guaranteed to return a correct value
-       * during a {@link #resize} or {@link #move} event dispatch.
-       *
-       * @return {Map} The widget inner dimension in pixel (if the layout is
-       *    valid). Contains the keys <code>width</code> and <code>height</code>.
-       */
-      getInnerSize() {
-        var computed = this.getBounds();
-        if (!computed) {
-          return null;
-        }
-
-        // Return map data
-        var insets = this.getInsets();
-        return {
-          width: computed.width - insets.left - insets.right,
-          height: computed.height - insets.top - insets.bottom
-        };
-      },
-      /*
-      ---------------------------------------------------------------------------
-        ANIMATION SUPPORT: USER API
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Fade out this widget.
-       * @param duration {Number} Time in ms.
-       * @return {qx.bom.element.AnimationHandle} The animation handle to react for
-       *   the fade animation.
-       */
-      fadeOut(duration) {
-        return this.getContentElement().fadeOut(duration);
-      },
-      /**
-       * Fade in the widget.
-       * @param duration {Number} Time in ms.
-       * @return {qx.bom.element.AnimationHandle} The animation handle to react for
-       *   the fade animation.
-       */
-      fadeIn(duration) {
-        return this.getContentElement().fadeIn(duration);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        VISIBILITY SUPPORT: USER API
-      ---------------------------------------------------------------------------
-      */
-
-      // property apply
-      _applyAnonymous(value) {
-        if (value) {
-          this.getContentElement().setAttribute("qxanonymous", "true");
-        } else {
-          this.getContentElement().removeAttribute("qxanonymous");
-        }
-      },
-      /**
-       * Make this widget visible.
-       *
-       */
-      show() {
-        this.setVisibility("visible");
-      },
-      /**
-       * Hide this widget.
-       *
-       */
-      hide() {
-        this.setVisibility("hidden");
-      },
-      /**
-       * Hide this widget and exclude it from the underlying layout.
-       *
-       */
-      exclude() {
-        this.setVisibility("excluded");
-      },
-      /**
-       * Whether the widget is locally visible.
-       *
-       * Note: This method does not respect the hierarchy.
-       *
-       * @return {Boolean} Returns <code>true</code> when the widget is visible
-       */
-      isVisible() {
-        return this.getVisibility() === "visible";
-      },
-      /**
-       * Whether the widget is locally hidden.
-       *
-       * Note: This method does not respect the hierarchy.
-       *
-       * @return {Boolean} Returns <code>true</code> when the widget is hidden
-       */
-      isHidden() {
-        return this.getVisibility() !== "visible";
-      },
-      /**
-       * Whether the widget is locally excluded.
-       *
-       * Note: This method does not respect the hierarchy.
-       *
-       * @return {Boolean} Returns <code>true</code> when the widget is excluded
-       */
-      isExcluded() {
-        return this.getVisibility() === "excluded";
-      },
-      /**
-       * Detects if the widget and all its parents are visible.
-       *
-       * WARNING: Please use this method with caution because it flushes the
-       * internal queues which might be an expensive operation.
-       *
-       * @return {Boolean} true, if the widget is currently on the screen
-       */
-      isSeeable() {
-        // Flush the queues because to detect if the widget ins visible, the
-        // queues need to be flushed (see bug #5254)
-        qx.ui.core.queue.Manager.flush();
-        // if the element is already rendered, a check for the offsetWidth is enough
-        var element = this.getContentElement().getDomElement();
-        if (element) {
-          // will also be 0 if the parents are not visible
-          return element.offsetWidth > 0;
-        }
-        // if no element is available, it can not be visible
-        return false;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CREATION OF HTML ELEMENTS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Create the widget's content HTML element.
-       *
-       * @return {qx.html.Element} The content HTML element
-       */
-      __createContentElement__P_37_1() {
-        var el = this._createContentElement();
-        el.connectObject(this);
-
-        // make sure to allow all pointer events
-        el.setStyles({
-          "touch-action": "none",
-          "-ms-touch-action": "none"
-        });
-        {
-          el.setAttribute("qxClass", this.classname);
-        }
-        var styles = {
-          zIndex: 10,
-          boxSizing: "border-box"
-        };
-        if (!qx.ui.root.Inline || !(this instanceof qx.ui.root.Inline)) {
-          styles.position = "absolute";
-        }
-        el.setStyles(styles);
-        return el;
-      },
-      /**
-       * Creates the content element. The style properties
-       * position and zIndex are modified from the Widget
-       * core.
-       *
-       * This function may be overridden to customize a class
-       * content.
-       *
-       * @return {qx.html.Element} The widget's content element
-       */
-      _createContentElement() {
-        return new qx.html.Element("div", {
-          overflowX: "hidden",
-          overflowY: "hidden"
-        });
-      },
-      /**
-       * Returns the element wrapper of the widget's content element.
-       * This method exposes widget internal and must be used with caution!
-       *
-       * @return {qx.html.Element} The widget's content element
-       */
-      getContentElement() {
-        return this.__contentElement__P_37_0;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CHILDREN HANDLING
-      ---------------------------------------------------------------------------
-      */
-
-      /** @type {qx.ui.core.LayoutItem[]} List of all child widgets */
-      __widgetChildren__P_37_7: null,
-      /**
-       * Returns all children, which are layout relevant. This excludes all widgets,
-       * which have a {@link qx.ui.core.Widget#visibility} value of <code>exclude</code>.
-       *
-       * @internal
-       * @return {qx.ui.core.Widget[]} All layout relevant children.
-       */
-      getLayoutChildren() {
-        var children = this.__widgetChildren__P_37_7;
-        if (!children) {
-          return this.__emptyChildren__P_37_8;
-        }
-        var layoutChildren;
-        for (var i = 0, l = children.length; i < l; i++) {
-          var child = children[i];
-          if (child.hasUserBounds() || child.isExcluded()) {
-            if (layoutChildren == null) {
-              layoutChildren = children.concat();
-            }
-            qx.lang.Array.remove(layoutChildren, child);
-          }
-        }
-        return layoutChildren || children;
-      },
-      /**
-       * Marks the layout of this widget as invalid and triggers a layout update.
-       * This is a shortcut for <code>qx.ui.core.queue.Layout.add(this);</code>.
-       */
-      scheduleLayoutUpdate() {
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /**
-       * Resets the cache for children which should be laid out.
-       */
-      invalidateLayoutChildren() {
-        var layout = this.__layoutManager__P_37_5;
-        if (layout) {
-          layout.invalidateChildrenCache();
-        }
-        qx.ui.core.queue.Layout.add(this);
-      },
-      /**
-       * Returns whether the layout has children, which are layout relevant. This
-       * excludes all widgets, which have a {@link qx.ui.core.Widget#visibility}
-       * value of <code>exclude</code>.
-       *
-       * @return {Boolean} Whether the layout has layout relevant children
-       */
-      hasLayoutChildren() {
-        var children = this.__widgetChildren__P_37_7;
-        if (!children) {
-          return false;
-        }
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-          if (!child.hasUserBounds() && !child.isExcluded()) {
-            return true;
-          }
-        }
-        return false;
-      },
-      /**
-       * Returns the widget which contains the children and
-       * is relevant for laying them out. This is from the user point of
-       * view and may not be identical to the technical structure.
-       *
-       * @return {qx.ui.core.Widget} Widget which contains the children.
-       */
-      getChildrenContainer() {
-        return this;
-      },
-      /**
-       * @type {Array} Placeholder for children list in empty widgets.
-       *     Mainly to keep instance number low.
-       *
-       * @lint ignoreReferenceField(__emptyChildren)
-       */
-      __emptyChildren__P_37_8: [],
-      /**
-       * Returns the children list
-       *
-       * @return {qx.ui.core.LayoutItem[]} The children array (Arrays are
-       *   reference types, so please do not modify it in-place).
-       */
-      _getChildren() {
-        return this.__widgetChildren__P_37_7 || this.__emptyChildren__P_37_8;
-      },
-      /**
-       * Returns the index position of the given widget if it is
-       * a child widget. Otherwise it returns <code>-1</code>.
-       *
-       * @param child {qx.ui.core.Widget} the widget to query for
-       * @return {Integer} The index position or <code>-1</code> when
-       *   the given widget is no child of this layout.
-       */
-      _indexOf(child) {
-        var children = this.__widgetChildren__P_37_7;
-        if (!children) {
-          return -1;
-        }
-        return children.indexOf(child);
-      },
-      /**
-       * Whether the widget contains children.
-       *
-       * @return {Boolean} Returns <code>true</code> when the widget has children.
-       */
-      _hasChildren() {
-        var children = this.__widgetChildren__P_37_7;
-        return children != null && !!children[0];
-      },
-      /**
-       * Recursively adds all children to the given queue
-       *
-       * @param queue {Array} The queue to add widgets to
-       */
-      addChildrenToQueue(queue) {
-        var children = this.__widgetChildren__P_37_7;
-        if (!children) {
-          return;
-        }
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-          queue.push(child);
-          child.addChildrenToQueue(queue);
-        }
-      },
-      /**
-       * Adds a new child widget.
-       *
-       * The supported keys of the layout options map depend on the layout manager
-       * used to position the widget. The options are documented in the class
-       * documentation of each layout manager {@link qx.ui.layout}.
-       *
-       * @param child {qx.ui.core.LayoutItem} the widget to add.
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      _add(child, options) {
-        {
-          this.assertInstance(child, qx.ui.core.LayoutItem.constructor, "'Child' must be an instance of qx.ui.core.LayoutItem!");
-        }
-
-        // When moving in the same widget, remove widget first
-        if (child.getLayoutParent() == this) {
-          qx.lang.Array.remove(this.__widgetChildren__P_37_7, child);
-        }
-        if (this.__widgetChildren__P_37_7) {
-          this.__widgetChildren__P_37_7.push(child);
-        } else {
-          this.__widgetChildren__P_37_7 = [child];
-        }
-        this.__addHelper__P_37_9(child, options);
-      },
-      /**
-       * Add a child widget at the specified index
-       *
-       * @param child {qx.ui.core.LayoutItem} widget to add
-       * @param index {Integer} Index, at which the widget will be inserted. If no
-       *   widget exists at the given index, the new widget gets appended to the
-       *   current list of children.
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      _addAt(child, index, options) {
-        if (!this.__widgetChildren__P_37_7) {
-          this.__widgetChildren__P_37_7 = [];
-        }
-
-        // When moving in the same widget, remove widget first
-        if (child.getLayoutParent() == this) {
-          qx.lang.Array.remove(this.__widgetChildren__P_37_7, child);
-        }
-        var ref = this.__widgetChildren__P_37_7[index];
-        if (ref === child) {
-          child.setLayoutProperties(options);
-        }
-        if (ref) {
-          qx.lang.Array.insertBefore(this.__widgetChildren__P_37_7, child, ref);
-        } else {
-          this.__widgetChildren__P_37_7.push(child);
-        }
-        this.__addHelper__P_37_9(child, options);
-      },
-      /**
-       * Add a widget before another already inserted widget
-       *
-       * @param child {qx.ui.core.LayoutItem} widget to add
-       * @param before {qx.ui.core.LayoutItem} widget before the new widget will be inserted.
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      _addBefore(child, before, options) {
-        {
-          this.assertInArray(before, this._getChildren(), "The 'before' widget is not a child of this widget!");
-        }
-        if (child == before) {
-          return;
-        }
-        if (!this.__widgetChildren__P_37_7) {
-          this.__widgetChildren__P_37_7 = [];
-        }
-
-        // When moving in the same widget, remove widget first
-        if (child.getLayoutParent() == this) {
-          qx.lang.Array.remove(this.__widgetChildren__P_37_7, child);
-        }
-        qx.lang.Array.insertBefore(this.__widgetChildren__P_37_7, child, before);
-        this.__addHelper__P_37_9(child, options);
-      },
-      /**
-       * Add a widget after another already inserted widget
-       *
-       * @param child {qx.ui.core.LayoutItem} widget to add
-       * @param after {qx.ui.core.LayoutItem} widget, after which the new widget will
-       *   be inserted
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      _addAfter(child, after, options) {
-        {
-          this.assertInArray(after, this._getChildren(), "The 'after' widget is not a child of this widget!");
-        }
-        if (child == after) {
-          return;
-        }
-        if (!this.__widgetChildren__P_37_7) {
-          this.__widgetChildren__P_37_7 = [];
-        }
-
-        // When moving in the same widget, remove widget first
-        if (child.getLayoutParent() == this) {
-          qx.lang.Array.remove(this.__widgetChildren__P_37_7, child);
-        }
-        qx.lang.Array.insertAfter(this.__widgetChildren__P_37_7, child, after);
-        this.__addHelper__P_37_9(child, options);
-      },
-      /**
-       * Remove the given child widget.
-       *
-       * @param child {qx.ui.core.LayoutItem} the widget to remove
-       */
-      _remove(child) {
-        if (!this.__widgetChildren__P_37_7) {
-          throw new Error("This widget has no children!");
-        }
-        qx.lang.Array.remove(this.__widgetChildren__P_37_7, child);
-        this.__removeHelper__P_37_10(child);
-      },
-      /**
-       * Remove the widget at the specified index.
-       *
-       * @param index {Integer} Index of the widget to remove.
-       * @return {qx.ui.core.LayoutItem} The removed item.
-       */
-      _removeAt(index) {
-        if (!this.__widgetChildren__P_37_7) {
-          throw new Error("This widget has no children!");
-        }
-        var child = this.__widgetChildren__P_37_7[index];
-        qx.lang.Array.removeAt(this.__widgetChildren__P_37_7, index);
-        this.__removeHelper__P_37_10(child);
-        return child;
-      },
-      /**
-       * Remove all children.
-       *
-       * @return {Array} An array containing the removed children.
-       */
-      _removeAll() {
-        if (!this.__widgetChildren__P_37_7) {
-          return [];
-        }
-
-        // Working on a copy to make it possible to clear the
-        // internal array before calling setLayoutParent()
-        var children = this.__widgetChildren__P_37_7.concat();
-        this.__widgetChildren__P_37_7.length = 0;
-        for (var i = children.length - 1; i >= 0; i--) {
-          this.__removeHelper__P_37_10(children[i]);
-        }
-        qx.ui.core.queue.Layout.add(this);
-        return children;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CHILDREN HANDLING - TEMPLATE METHODS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * This method gets called each time after a child widget was added and can
-       * be overridden to get notified about child adds.
-       *
-       * @signature function(child)
-       * @param child {qx.ui.core.LayoutItem} The added child.
-       */
-      _afterAddChild: null,
-      /**
-       * This method gets called each time after a child widget was removed and
-       * can be overridden to get notified about child removes.
-       *
-       * @signature function(child)
-       * @param child {qx.ui.core.LayoutItem} The removed child.
-       */
-      _afterRemoveChild: null,
-      /*
-      ---------------------------------------------------------------------------
-        CHILDREN HANDLING - IMPLEMENTATION
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Convenience function to add a child widget. It will insert the child to
-       * the parent widget and schedule a layout update.
-       *
-       * @param child {qx.ui.core.LayoutItem} The child to add.
-       * @param options {Map|null} Optional layout data for the widget.
-       */
-      __addHelper__P_37_9(child, options) {
-        {
-          this.assertInstance(child, qx.ui.core.LayoutItem, "Invalid widget to add: " + child);
-          this.assertNotIdentical(child, this, "Could not add widget to itself: " + child);
-          if (options != null) {
-            this.assertType(options, "object", "Invalid layout data: " + options);
-          }
-        }
-
-        // Remove from old parent
-        var parent = child.getLayoutParent();
-        if (parent && parent != this) {
-          parent._remove(child);
-        }
-
-        // Remember parent
-        child.setLayoutParent(this);
-
-        // Import options: This call will
-        //  - clear the layout's children cache as well and
-        //  - add its parent (this widget) to the layout queue
-        if (options) {
-          child.setLayoutProperties(options);
-        } else {
-          this.updateLayoutProperties();
-        }
-
-        // call the template method
-        if (this._afterAddChild) {
-          this._afterAddChild(child);
-        }
-      },
-      /**
-       * Convenience function to remove a child widget. It will remove it
-       * from the parent widget and schedule a layout update.
-       *
-       * @param child {qx.ui.core.LayoutItem} The child to remove.
-       */
-      __removeHelper__P_37_10(child) {
-        {
-          this.assertNotUndefined(child);
-        }
-        if (child.getLayoutParent() !== this) {
-          throw new Error("Remove Error: " + child + " is not a child of this widget!");
-        }
-
-        // Clear parent connection
-        child.setLayoutParent(null);
-
-        // clear the layout's children cache
-        if (this.__layoutManager__P_37_5) {
-          this.__layoutManager__P_37_5.invalidateChildrenCache();
-        }
-
-        // Add to layout queue
-        qx.ui.core.queue.Layout.add(this);
-
-        // call the template method
-        if (this._afterRemoveChild) {
-          this._afterRemoveChild(child);
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        EVENTS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Enables pointer event capturing. All pointer events will dispatched on this
-       * widget until capturing is disabled using {@link #releaseCapture} or a
-       * pointer button is clicked. If the widgets becomes the capturing widget the
-       * {@link #capture} event is fired. Once it loses capture mode the
-       * {@link #losecapture} event is fired.
-       *
-       * @param capture {Boolean?true} If true all events originating in
-       *   the container are captured. If false events originating in the container
-       *   are not captured.
-       */
-      capture(capture) {
-        this.getContentElement().capture(capture);
-      },
-      /**
-       * Disables pointer capture mode enabled by {@link #capture}.
-       */
-      releaseCapture() {
-        this.getContentElement().releaseCapture();
-      },
-      /**
-       * Checks if pointer event capturing is enabled for this widget.
-       *
-       * @return {Boolean} <code>true</code> if capturing is active
-       */
-      isCapturing() {
-        var el = this.getContentElement().getDomElement();
-        if (!el) {
-          return false;
-        }
-        var manager = qx.event.Registration.getManager(el);
-        var dispatcher = manager.getDispatcher(qx.event.dispatch.MouseCapture);
-        return el == dispatcher.getCaptureElement();
-      },
-      /*
-      ---------------------------------------------------------------------------
-        PADDING SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      // property apply
-      _applyPadding(value, old, name) {
-        this._updateInsets = true;
-        qx.ui.core.queue.Layout.add(this);
-        this.__updateContentPadding__P_37_11(name, value);
-      },
-      /**
-       * Helper to updated the css padding of the content element considering the
-       * padding of the decorator.
-       * @param style {String} The name of the css padding property e.g. <code>paddingTop</code>
-       * @param value {Number} The value to set.
-       */
-      __updateContentPadding__P_37_11(style, value) {
-        var content = this.getContentElement();
-        var decorator = this.getDecorator();
-        decorator = qx.theme.manager.Decoration.getInstance().resolve(decorator);
-        if (decorator) {
-          var direction = qx.Bootstrap.firstLow(style.replace("padding", ""));
-          value += decorator.getPadding()[direction] || 0;
-        }
-        content.setStyle(style, value + "px");
-      },
-      /*
-      ---------------------------------------------------------------------------
-        DECORATION SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      // property apply
-      _applyDecorator(value, old) {
-        var content = this.getContentElement();
-        if (old) {
-          old = qx.theme.manager.Decoration.getInstance().getCssClassName(old);
-          content.removeClass(old);
-        }
-        if (value) {
-          value = qx.theme.manager.Decoration.getInstance().addCssClass(value);
-          content.addClass(value);
-        }
-        if (value || old) {
-          qx.ui.core.queue.Layout.add(this);
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        OTHER PROPERTIES
-      ---------------------------------------------------------------------------
-      */
-
-      // property apply
-      _applyToolTipText(value, old) {
-        {
-          if (this.__toolTipTextListenerId__P_37_4) {
-            return;
-          }
-          var manager = qx.locale.Manager.getInstance();
-          this.__toolTipTextListenerId__P_37_4 = manager.addListener("changeLocale", () => {
-            var toolTipText = this.getToolTipText();
-            if (toolTipText && toolTipText.translate) {
-              this.setToolTipText(toolTipText.translate());
-            }
-          });
-        }
-      },
-      // property apply
-      _applyTextColor(value, old) {
-        // empty template
-      },
-      // property apply
-      _applyZIndex(value, old) {
-        this.getContentElement().setStyle("zIndex", value == null ? 0 : value);
-      },
-      // property apply
-      _applyVisibility(value, old) {
-        var content = this.getContentElement();
-        if (content) {
-          if (value === "visible") {
-            content.show();
-          } else {
-            content.hide();
-          } // only force a layout update if visibility change from/to "exclude"
-        }
-        var parent = this.$$parent;
-        if (parent && (old == null || value == null || old === "excluded" || value === "excluded")) {
-          parent.invalidateLayoutChildren();
-        }
-
-        // Update visibility cache
-        qx.ui.core.queue.Visibility.add(this);
-      },
-      // property apply
-      _applyOpacity(value, old) {
-        this.getContentElement().setStyle("opacity", value == 1 ? null : value);
-      },
-      // property apply
-      _applyCursor(value, old) {
-        if (value == null && !this.isSelectable()) {
-          value = "default";
-        }
-        {
-          if (!this.getExcludeBoundsFromDom()) {
-            this.getContentElement().setStyle("cursor", value, qx.core.Environment.get("engine.name") == "opera");
-          }
-        }
-      },
-      // property apply
-      _applyBackgroundColor(value, old) {
-        var color = this.getBackgroundColor();
-        var content = this.getContentElement();
-        var resolved = qx.theme.manager.Color.getInstance().resolve(color);
-        content.setStyle("backgroundColor", resolved);
-      },
-      // property apply
-      _applyFont(value, old) {
-        // empty template
-      },
-      // ---------------------------------------------------------------------------
-      // DYNAMIC THEME SWITCH SUPPORT
-      // ---------------------------------------------------------------------------
-      // overridden
-      _onChangeTheme() {
-        if (this.isDisposed()) {
-          return;
-        }
-        qx.ui.core.Widget.superclass.prototype._onChangeTheme.call(this); // update the appearance
-        this.updateAppearance(); // DECORATOR //
-        var value = this.getDecorator();
-        this._applyDecorator(null, value);
-        this._applyDecorator(value); // FONT //
-        value = this.getFont();
-        if (qx.lang.Type.isString(value)) {
-          this._applyFont(value, value);
-        }
-
-        // TEXT COLOR //
-        value = this.getTextColor();
-        if (qx.lang.Type.isString(value)) {
-          this._applyTextColor(value, value);
-        }
-
-        // BACKGROUND COLOR //
-        value = this.getBackgroundColor();
-        if (qx.lang.Type.isString(value)) {
-          this._applyBackgroundColor(value, value);
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        STATE HANDLING
-      ---------------------------------------------------------------------------
-      */
-
-      /** @type {Map} The current widget states */
-      __states__P_37_12: null,
-      /** @type {Boolean} Whether the widget has state changes which are not yet queued */
-      $$stateChanges: null,
-      /** @type {Map} Can be overridden to forward states to the child controls. */
-      _forwardStates: null,
-      /**
-       * Returns whether a state is set.
-       *
-       * @param state {String} the state to check.
-       * @return {Boolean} whether the state is set.
-       */
-      hasState(state) {
-        var states = this.__states__P_37_12;
-        return !!states && !!states[state];
-      },
-      /**
-       * Sets a state.
-       *
-       * @param state {String} The state to add
-       */
-      addState(state) {
-        // Dynamically create state map
-        var states = this.__states__P_37_12;
-        if (!states) {
-          states = this.__states__P_37_12 = {};
-        }
-        if (states[state]) {
-          return;
-        }
-
-        // Add state and queue
-        this.__states__P_37_12[state] = true;
-
-        // Fast path for hovered state
-        if (state === "hovered") {
-          this.syncAppearance();
-        } else if (!qx.ui.core.queue.Visibility.isVisible(this)) {
-          this.$$stateChanges = true;
-        } else {
-          qx.ui.core.queue.Appearance.add(this);
-        }
-
-        // Forward state change to child controls
-        var forward = this._forwardStates;
-        var controls = this.__childControls__P_37_13;
-        if (forward && forward[state] && controls) {
-          var control;
-          for (var id in controls) {
-            control = controls[id];
-            if (control instanceof qx.ui.core.Widget) {
-              controls[id].addState(state);
-            }
-          }
-        }
-      },
-      /**
-       * Clears a state.
-       *
-       * @param state {String} the state to clear.
-       */
-      removeState(state) {
-        // Check for existing state
-        var states = this.__states__P_37_12;
-        if (!states || !states[state]) {
-          return;
-        }
-
-        // Clear state and queue
-        delete this.__states__P_37_12[state];
-
-        // Fast path for hovered state
-        if (state === "hovered") {
-          this.syncAppearance();
-        } else if (!qx.ui.core.queue.Visibility.isVisible(this)) {
-          this.$$stateChanges = true;
-        } else {
-          qx.ui.core.queue.Appearance.add(this);
-        }
-
-        // Forward state change to child controls
-        var forward = this._forwardStates;
-        var controls = this.__childControls__P_37_13;
-        if (forward && forward[state] && controls) {
-          for (var id in controls) {
-            var control = controls[id];
-            if (control instanceof qx.ui.core.Widget) {
-              control.removeState(state);
-            }
-          }
-        }
-      },
-      /**
-       * Replaces the first state with the second one.
-       *
-       * This method is ideal for state transitions e.g. normal => selected.
-       *
-       * @param old {String} Previous state
-       * @param value {String} New state
-       */
-      replaceState(old, value) {
-        var states = this.__states__P_37_12;
-        if (!states) {
-          states = this.__states__P_37_12 = {};
-        }
-        if (!states[value]) {
-          states[value] = true;
-        }
-        if (states[old]) {
-          delete states[old];
-        }
-        if (!qx.ui.core.queue.Visibility.isVisible(this)) {
-          this.$$stateChanges = true;
-        } else {
-          qx.ui.core.queue.Appearance.add(this);
-        }
-
-        // Forward state change to child controls
-        var forward = this._forwardStates;
-        var controls = this.__childControls__P_37_13;
-        if (forward && forward[value] && controls) {
-          for (var id in controls) {
-            var control = controls[id];
-            if (control instanceof qx.ui.core.Widget) {
-              control.replaceState(old, value);
-            }
-          }
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        APPEARANCE SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /** @type {String} The currently compiled selector to lookup the matching appearance */
-      __appearanceSelector__P_37_14: null,
-      /** @type {Boolean} Whether the selectors needs to be recomputed before updating appearance */
-      __updateSelector__P_37_15: null,
-      /**
-       * Renders the appearance using the current widget states.
-       *
-       * Used exclusively by {qx.ui.core.queue.Appearance}.
-       */
-      syncAppearance() {
-        var states = this.__states__P_37_12;
-        var selector = this.__appearanceSelector__P_37_14;
-        var manager = qx.theme.manager.Appearance.getInstance();
-
-        // Cache deep accessor
-        var styler = qx.core.Property.$$method.setThemed;
-        var unstyler = qx.core.Property.$$method.resetThemed;
-
-        // Check for requested selector update
-        if (this.__updateSelector__P_37_15) {
-          // Clear flag
-          delete this.__updateSelector__P_37_15;
-
-          // Check if the selector was created previously
-          if (selector) {
-            // Query old selector
-            var oldData = manager.styleFrom(selector, states, null, this.getAppearance());
-
-            // Clear current selector (to force recompute)
-            selector = null;
-          }
-        }
-
-        // Build selector
-        if (!selector) {
-          var obj = this;
-          var id = [];
-          do {
-            id.push(obj.$$subcontrol || obj.getAppearance());
-          } while (obj = obj.$$subparent);
-
-          // Combine parent control IDs, add top level appearance, filter result
-          // to not include positioning information anymore (e.g. #3)
-          selector = id.reverse().join("/").replace(/#[0-9]+/g, "");
-          this.__appearanceSelector__P_37_14 = selector;
-        }
-
-        // Query current selector
-        var newData = manager.styleFrom(selector, states, null, this.getAppearance());
-        if (newData) {
-          if (oldData) {
-            for (var prop in oldData) {
-              if (newData[prop] === undefined) {
-                this[unstyler[prop]]();
-              }
-            }
-          }
-
-          // Check property availability of new data
-          {
-            for (var prop in newData) {
-              if (!this[styler[prop]]) {
-                throw new Error(this.classname + ' has no themeable property "' + prop + '" while styling ' + selector);
-              }
-            }
-          }
-
-          // Apply new data
-          for (var prop in newData) {
-            newData[prop] === undefined ? this[unstyler[prop]]() : this[styler[prop]](newData[prop]);
-          }
-        } else if (oldData) {
-          // Clear old data
-          for (var prop in oldData) {
-            this[unstyler[prop]]();
-          }
-        }
-        this.fireDataEvent("syncAppearance", this.__states__P_37_12);
-      },
-      // property apply
-      _applyAppearance(value, old) {
-        this.updateAppearance();
-      },
-      /**
-       * Helper method called from the visibility queue to detect outstanding changes
-       * to the appearance.
-       *
-       * @internal
-       */
-      checkAppearanceNeeds() {
-        // CASE 1: Widget has never got an appearance already because it was never
-        // visible before. Normally add it to the queue is the easiest way to update it.
-        if (!this.__initialAppearanceApplied__P_37_3) {
-          qx.ui.core.queue.Appearance.add(this);
-          this.__initialAppearanceApplied__P_37_3 = true;
-        }
-
-        // CASE 2: Widget has got an appearance before, but was hidden for some time
-        // which results into maybe omitted state changes have not been applied.
-        // In this case the widget is already queued in the appearance. This is basically
-        // what all addState/removeState do, but the queue itself may not have been registered
-        // to be flushed
-        else if (this.$$stateChanges) {
-          qx.ui.core.queue.Appearance.add(this);
-          delete this.$$stateChanges;
-        }
-      },
-      /**
-       * Refreshes the appearance of this widget and all
-       * registered child controls.
-       */
-      updateAppearance() {
-        // Clear selector
-        this.__updateSelector__P_37_15 = true;
-
-        // Add to appearance queue
-        qx.ui.core.queue.Appearance.add(this);
-
-        // Update child controls
-        var controls = this.__childControls__P_37_13;
-        if (controls) {
-          var obj;
-          for (var id in controls) {
-            obj = controls[id];
-            if (obj instanceof qx.ui.core.Widget) {
-              obj.updateAppearance();
-            }
-          }
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        WIDGET QUEUE
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * This method is called during the flush of the
-       * {@link qx.ui.core.queue.Widget widget queue}.
-       *
-       * @param jobs {Map} A map of jobs.
-       */
-      syncWidget(jobs) {
-        // empty implementation
-      },
-      /*
-      ---------------------------------------------------------------------------
-      EVENT SUPPORT
-      ---------------------------------------------------------------------------
-      */ /**
-         * Returns the next event target in the parent chain. May
-         * also return the widget itself if it is not anonymous.
-         *
-         * @return {qx.ui.core.Widget} A working event target of this widget.
-         *    May be <code>null</code> as well.
-         */
-      getEventTarget() {
-        var target = this;
-        while (target.getAnonymous()) {
-          target = target.getLayoutParent();
-          if (!target) {
-            return null;
-          }
-        }
-        return target;
-      },
-      /**
-       * Returns the next focus target in the parent chain. May
-       * also return the widget itself if it is not anonymous and focusable.
-       *
-       * @return {qx.ui.core.Widget} A working focus target of this widget.
-       *    May be <code>null</code> as well.
-       */
-      getFocusTarget() {
-        var target = this;
-        if (!target.getEnabled()) {
-          return null;
-        }
-        while (target.getAnonymous() || !target.getFocusable()) {
-          target = target.getLayoutParent();
-          if (!target || !target.getEnabled()) {
-            return null;
-          }
-        }
-        return target;
-      },
-      /**
-       * Returns the element which should be focused.
-       *
-       * @return {qx.html.Element} The html element to focus.
-       */
-      getFocusElement() {
-        return this.getContentElement();
-      },
-      /**
-       * Whether the widget is reachable by pressing the TAB key.
-       *
-       * Normally tests for both, the focusable property and a positive or
-       * undefined tabIndex property. The widget must have a DOM element
-       * since only visible widgets are tabable.
-       *
-       * @return {Boolean} Whether the element is tabable.
-       */
-      isTabable() {
-        return !!this.getContentElement().getDomElement() && this.isFocusable();
-      },
-      // property apply
-      _applyFocusable(value, old) {
-        var target = this.getFocusElement();
-
-        // Apply native tabIndex attribute
-        if (value) {
-          var tabIndex = this.getTabIndex();
-          if (tabIndex == null) {
-            tabIndex = 1;
-          }
-          target.setAttribute("tabIndex", tabIndex);
-
-          // Omit native dotted outline border
-          {
-            if (this.getExcludeBoundsFromDom()) {
-              target.removeStyle("outline");
-            }
-          }
-        } else {
-          if (target.isNativelyFocusable()) {
-            target.setAttribute("tabIndex", -1);
-          } else if (old) {
-            target.setAttribute("tabIndex", null);
-          }
-        }
-      },
-      // property apply
-      _applyKeepFocus(value) {
-        var target = this.getFocusElement();
-        target.setAttribute("qxKeepFocus", value ? "on" : null);
-      },
-      // property apply
-      _applyKeepActive(value) {
-        var target = this.getContentElement();
-        target.setAttribute("qxKeepActive", value ? "on" : null);
-      },
-      // property apply
-      _applyTabIndex(value) {
-        if (value == null) {
-          value = 1;
-        } else if (value < 1 || value > 32000) {
-          throw new Error("TabIndex property must be between 1 and 32000");
-        }
-        if (this.getFocusable() && value != null) {
-          this.getFocusElement().setAttribute("tabIndex", value);
-        }
-      },
-      // property apply
-      _applySelectable(value, old) {
-        // Re-apply cursor if not in "initSelectable"
-        if (old !== null) {
-          this._applyCursor(this.getCursor());
-        }
-
-        // Apply qooxdoo attribute
-        this.getContentElement().setSelectable(value);
-      },
-      // property apply
-      _applyEnabled(value, old) {
-        if (value === false) {
-          this.addState("disabled");
-
-          // hovered not configured in widget, but as this is a
-          // standardized name in qooxdoo and we never want a hover
-          // state for disabled widgets, remove this state every time
-          this.removeState("hovered");
-
-          // Blur when focused
-          if (this.isFocusable()) {
-            // Remove focused state
-            this.removeState("focused");
-
-            // Remove tabIndex
-            this._applyFocusable(false, true);
-          }
-
-          // Remove draggable
-          if (this.isDraggable()) {
-            this._applyDraggable(false, true);
-          }
-
-          // Remove droppable
-          if (this.isDroppable()) {
-            this._applyDroppable(false, true);
-          }
-        } else {
-          this.removeState("disabled");
-
-          // Re-add tabIndex
-          if (this.isFocusable()) {
-            this._applyFocusable(true, false);
-          }
-
-          // Re-add draggable
-          if (this.isDraggable()) {
-            this._applyDraggable(true, false);
-          }
-
-          // Re-add droppable
-          if (this.isDroppable()) {
-            this._applyDroppable(true, false);
-          }
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CONTEXT MENU
-      ---------------------------------------------------------------------------
-      */
-
-      // property apply
-      _applyNativeContextMenu(value, old, name) {
-        // empty body to allow overriding
-      },
-      // property apply
-      _applyContextMenu(value, old) {
-        if (old) {
-          old.removeState("contextmenu");
-          if (old.getOpener() == this) {
-            old.resetOpener();
-          }
-          if (!value) {
-            this.removeListener("contextmenu", this._onContextMenuOpen);
-            this.removeListener("longtap", this._onContextMenuOpen);
-            old.removeListener("changeVisibility", this._onBeforeContextMenuOpen, this);
-          }
-        }
-        if (value) {
-          value.setOpener(this);
-          value.addState("contextmenu");
-          if (!old) {
-            this.addListener("contextmenu", this._onContextMenuOpen);
-            this.addListener("longtap", this._onContextMenuOpen);
-            value.addListener("changeVisibility", this._onBeforeContextMenuOpen, this);
-          }
-        }
-      },
-      /**
-       * Event listener for <code>contextmenu</code> event
-       *
-       * @param e {qx.event.type.Pointer} The event object
-       */
-      _onContextMenuOpen(e) {
-        // only allow long tap context menu on touch interactions
-        if (e.getType() == "longtap") {
-          if (e.getPointerType() !== "touch") {
-            return;
-          }
-        }
-        this.getContextMenu().openAtPointer(e);
-
-        // Do not show native menu
-        // don't open any other contextmenus
-        e.stop();
-      },
-      /**
-       * Event listener for <code>beforeContextmenuOpen</code> event
-       *
-       * @param e {qx.event.type.Data} The data event
-       */
-      _onBeforeContextMenuOpen(e) {
-        if (e.getData() == "visible" && this.hasListener("beforeContextmenuOpen")) {
-          this.fireDataEvent("beforeContextmenuOpen", e);
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        USEFUL COMMON EVENT LISTENERS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Event listener which stops a bubbling event from
-       * propagates further.
-       *
-       * @param e {qx.event.type.Event} Any bubbling event
-       */
-      _onStopEvent(e) {
-        e.stopPropagation();
-      },
-      /*
-      ---------------------------------------------------------------------------
-        DRAG & DROP SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Helper to return a instance of a {@link qx.ui.core.DragDropCursor}.
-       * If you want to use your own DragDropCursor, override this method
-       * and return your custom instance.
-       * @return {qx.ui.core.DragDropCursor} A drag drop cursor implementation.
-       */
-      _getDragDropCursor() {
-        return qx.ui.core.DragDropCursor.getInstance();
-      },
-      // property apply
-      _applyDraggable(value, old) {
-        if (!this.isEnabled() && value === true) {
-          value = false;
-        }
-
-        // Force cursor creation
-        this._getDragDropCursor();
-
-        // Process listeners
-        if (value) {
-          this.addListener("dragstart", this._onDragStart);
-          this.addListener("drag", this._onDrag);
-          this.addListener("dragend", this._onDragEnd);
-          this.addListener("dragchange", this._onDragChange);
-        } else {
-          this.removeListener("dragstart", this._onDragStart);
-          this.removeListener("drag", this._onDrag);
-          this.removeListener("dragend", this._onDragEnd);
-          this.removeListener("dragchange", this._onDragChange);
-        }
-
-        // Sync DOM attribute
-        this.getContentElement().setAttribute("qxDraggable", value ? "on" : null);
-      },
-      // property apply
-      _applyDroppable(value, old) {
-        if (!this.isEnabled() && value === true) {
-          value = false;
-        }
-
-        // Sync DOM attribute
-        this.getContentElement().setAttribute("qxDroppable", value ? "on" : null);
-      },
-      /**
-       * Event listener for own <code>dragstart</code> event.
-       *
-       * @param e {qx.event.type.Drag} Drag event
-       */
-      _onDragStart(e) {
-        this._getDragDropCursor().placeToPointer(e);
-        this.getApplicationRoot().setGlobalCursor("default");
-      },
-      /**
-       * Event listener for own <code>drag</code> event.
-       *
-       * @param e {qx.event.type.Drag} Drag event
-       */
-      _onDrag(e) {
-        this._getDragDropCursor().placeToPointer(e);
-      },
-      /**
-       * Event listener for own <code>dragend</code> event.
-       *
-       * @param e {qx.event.type.Drag} Drag event
-       */
-      _onDragEnd(e) {
-        this._getDragDropCursor().moveTo(-1000, -1000);
-        this.getApplicationRoot().resetGlobalCursor();
-      },
-      /**
-       * Event listener for own <code>dragchange</code> event.
-       *
-       * @param e {qx.event.type.Drag} Drag event
-       */
-      _onDragChange(e) {
-        var cursor = this._getDragDropCursor();
-        var action = e.getCurrentAction();
-        action ? cursor.setAction(action) : cursor.resetAction();
-      },
-      /*
-      ---------------------------------------------------------------------------
-        VISUALIZE FOCUS STATES
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Event handler which is executed when the widget receives the focus.
-       *
-       * This method is used by the {@link qx.ui.core.FocusHandler} to
-       * apply states etc. to a focused widget.
-       *
-       * @internal
-       */
-      visualizeFocus() {
-        this.addState("focused");
-      },
-      /**
-       * Event handler which is executed when the widget lost the focus.
-       *
-       * This method is used by the {@link qx.ui.core.FocusHandler} to
-       * remove states etc. from a previously focused widget.
-       *
-       * @internal
-       */
-      visualizeBlur() {
-        this.removeState("focused");
-      },
-      /*
-      ---------------------------------------------------------------------------
-        SCROLL CHILD INTO VIEW
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * The method scrolls the given item into view.
-       *
-       * @param child {qx.ui.core.Widget} Child to scroll into view
-       * @param alignX {String?null} Alignment of the item. Allowed values:
-       *   <code>left</code> or <code>right</code>. Could also be null.
-       *   Without a given alignment the method tries to scroll the widget
-       *   with the minimum effort needed.
-       * @param alignY {String?null} Alignment of the item. Allowed values:
-       *   <code>top</code> or <code>bottom</code>. Could also be null.
-       *   Without a given alignment the method tries to scroll the widget
-       *   with the minimum effort needed.
-       * @param direct {Boolean?true} Whether the execution should be made
-       *   directly when possible
-       */
-      scrollChildIntoView(child, alignX, alignY, direct) {
-        // Scroll directly on default
-        direct = typeof direct == "undefined" ? true : direct;
-
-        // Always lazy scroll when either
-        // - the child
-        // - its layout parent
-        // - its siblings
-        // have layout changes scheduled.
-        //
-        // This is to make sure that the scroll position is computed
-        // after layout changes have been applied to the DOM. Note that changes
-        // scheduled for the grand parent (and up) are not tracked and need to
-        // be signaled manually.
-        var Layout = qx.ui.core.queue.Layout;
-        var parent;
-
-        // Child
-        if (direct) {
-          direct = !Layout.isScheduled(child);
-          parent = child.getLayoutParent();
-
-          // Parent
-          if (direct && parent) {
-            direct = !Layout.isScheduled(parent);
-
-            // Siblings
-            if (direct) {
-              parent.getChildren().forEach(function (sibling) {
-                direct = direct && !Layout.isScheduled(sibling);
-              });
-            }
-          }
-        }
-        this.scrollChildIntoViewX(child, alignX, direct);
-        this.scrollChildIntoViewY(child, alignY, direct);
-      },
-      /**
-       * The method scrolls the given item into view (x-axis only).
-       *
-       * @param child {qx.ui.core.Widget} Child to scroll into view
-       * @param align {String?null} Alignment of the item. Allowed values:
-       *   <code>left</code> or <code>right</code>. Could also be null.
-       *   Without a given alignment the method tries to scroll the widget
-       *   with the minimum effort needed.
-       * @param direct {Boolean?true} Whether the execution should be made
-       *   directly when possible
-       */
-      scrollChildIntoViewX(child, align, direct) {
-        this.getContentElement().scrollChildIntoViewX(child.getContentElement(), align, direct);
-      },
-      /**
-       * The method scrolls the given item into view (y-axis only).
-       *
-       * @param child {qx.ui.core.Widget} Child to scroll into view
-       * @param align {String?null} Alignment of the element. Allowed values:
-       *   <code>top</code> or <code>bottom</code>. Could also be null.
-       *   Without a given alignment the method tries to scroll the widget
-       *   with the minimum effort needed.
-       * @param direct {Boolean?true} Whether the execution should be made
-       *   directly when possible
-       */
-      scrollChildIntoViewY(child, align, direct) {
-        this.getContentElement().scrollChildIntoViewY(child.getContentElement(), align, direct);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        FOCUS SYSTEM USER ACCESS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Focus this widget.
-       *
-       */
-      focus() {
-        if (this.isFocusable()) {
-          this.getFocusElement().focus();
-        } else if (qx.ui.core.Widget.UNFOCUSABLE_WIDGET_FOCUS_BLUR_ERROR) {
-          throw new Error("Widget is not focusable!");
-        }
-      },
-      /**
-       * Remove focus from this widget.
-       *
-       */
-      blur() {
-        if (this.isFocusable()) {
-          this.getFocusElement().blur();
-        } else if (qx.ui.core.Widget.UNFOCUSABLE_WIDGET_FOCUS_BLUR_ERROR) {
-          throw new Error("Widget is not focusable!");
-        }
-      },
-      /**
-       * Activate this widget e.g. for keyboard events.
-       *
-       */
-      activate() {
-        this.getContentElement().activate();
-      },
-      /**
-       * Deactivate this widget e.g. for keyboard events.
-       *
-       */
-      deactivate() {
-        this.getContentElement().deactivate();
-      },
-      /**
-       * Focus this widget when using the keyboard. This is
-       * mainly thought for the advanced qooxdoo keyboard handling
-       * and should not be used by the application developer.
-       *
-       * @internal
-       */
-      tabFocus() {
-        this.getFocusElement().focus();
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CHILD CONTROL SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Whether the given ID is assigned to a child control.
-       *
-       * @param id {String} ID of the child control
-       * @return {Boolean} <code>true</code> when the child control is registered.
-       */
-      hasChildControl(id) {
-        if (!this.__childControls__P_37_13) {
-          return false;
-        }
-        return !!this.__childControls__P_37_13[id];
-      },
-      /** @type {Map} Map of instantiated child controls */
-      __childControls__P_37_13: null,
-      /**
-       * Returns a map of all already created child controls
-       *
-       * @return {Map} mapping of child control id to the child widget.
-       */
-      _getCreatedChildControls() {
-        return this.__childControls__P_37_13;
-      },
-      /**
-       * Returns the child control from the given ID. Returns
-       * <code>null</code> when the child control is unknown.
-       *
-       * It is designed for widget authors, who want to access child controls,
-       * which are created by the widget itself.
-       *
-       * <b>Warning</b>: This method exposes widget internals and modifying the
-       * returned sub widget may bring the widget into an inconsistent state.
-       * Accessing child controls defined in a super class or in an foreign class
-       * is not supported. Do not use it if the result can be achieved using public
-       * API or theming.
-       *
-       * @param id {String} ID of the child control
-       * @param notcreate {Boolean?false} Whether the child control
-       *    should not be created dynamically if not yet available.
-       * @return {qx.ui.core.Widget} Child control
-       */
-      getChildControl(id, notcreate) {
-        if (!this.__childControls__P_37_13) {
-          if (notcreate) {
-            return null;
-          }
-          this.__childControls__P_37_13 = {};
-        }
-        var control = this.__childControls__P_37_13[id];
-        if (control) {
-          return control;
-        }
-        if (notcreate === true) {
-          return null;
-        }
-        return this._createChildControl(id);
-      },
-      /**
-       * Shows the given child control by ID
-       *
-       * @param id {String} ID of the child control
-       * @return {qx.ui.core.Widget} the child control
-       */
-      _showChildControl(id) {
-        var control = this.getChildControl(id);
-        control.show();
-        return control;
-      },
-      /**
-       * Excludes the given child control by ID
-       *
-       * @param id {String} ID of the child control
-       */
-      _excludeChildControl(id) {
-        var control = this.getChildControl(id, true);
-        if (control) {
-          control.exclude();
-        }
-      },
-      /**
-       * Whether the given child control is visible.
-       *
-       * @param id {String} ID of the child control
-       * @return {Boolean} <code>true</code> when the child control is visible.
-       */
-      _isChildControlVisible(id) {
-        var control = this.getChildControl(id, true);
-        if (control) {
-          return control.isVisible();
-        }
-        return false;
-      },
-      /**
-       * Release the child control by ID and decouple the
-       * child from the parent. This method does not dispose the child control.
-       *
-       * @param id {String} ID of the child control
-       * @return {qx.ui.core.Widget} The released control
-       */
-      _releaseChildControl(id) {
-        var control = this.getChildControl(id, false);
-        if (!control) {
-          throw new Error("Unsupported control: " + id);
-        }
-
-        // remove connection to parent
-        delete control.$$subcontrol;
-        delete control.$$subparent;
-
-        // remove state forwarding
-        var states = this.__states__P_37_12;
-        var forward = this._forwardStates;
-        if (states && forward && control instanceof qx.ui.core.Widget) {
-          for (var state in states) {
-            if (forward[state]) {
-              control.removeState(state);
-            }
-          }
-        }
-        delete this.__childControls__P_37_13[id];
-        return control;
-      },
-      /**
-       * Force the creation of the given child control by ID.
-       *
-       * Do not override this method! Override {@link #_createChildControlImpl}
-       * instead if you need to support new controls.
-       *
-       * @param id {String} ID of the child control
-       * @return {qx.ui.core.Widget} The created control
-       * @throws {Error} when the control was created before
-       */
-      _createChildControl(id) {
-        if (!this.__childControls__P_37_13) {
-          this.__childControls__P_37_13 = {};
-        } else if (this.__childControls__P_37_13[id]) {
-          throw new Error("Child control '" + id + "' already created!");
-        }
-        var pos = id.indexOf("#");
-        try {
-          if (pos == -1) {
-            var control = this._createChildControlImpl(id);
-          } else {
-            var control = this._createChildControlImpl(id.substring(0, pos), id.substring(pos + 1, id.length));
-          }
-        } catch (exc) {
-          exc.message = "Exception while creating child control '" + id + "' of widget " + this.toString() + ": " + exc.message;
-          throw exc;
-        }
-        if (!control) {
-          throw new Error("Unsupported control: " + id);
-        }
-
-        // Establish connection to parent
-        control.$$subcontrol = id;
-        control.$$subparent = this;
-
-        // Support for state forwarding
-        var states = this.__states__P_37_12;
-        var forward = this._forwardStates;
-        if (states && forward && control instanceof qx.ui.core.Widget) {
-          for (var state in states) {
-            if (forward[state]) {
-              control.addState(state);
-            }
-          }
-        }
-
-        // If the appearance is already synced after the child control
-        // we need to update the appearance now, because the selector
-        // might be not correct in certain cases.
-        if (control.$$resyncNeeded) {
-          delete control.$$resyncNeeded;
-          control.updateAppearance();
-        }
-        this.fireDataEvent("createChildControl", control);
-
-        // Register control and return
-        return this.__childControls__P_37_13[id] = control;
-      },
-      /**
-       * Internal method to create child controls. This method
-       * should be overwritten by classes which extends this one
-       * to support new child control types.
-       *
-       * @param id {String} ID of the child control. If a # is used, the id is
-       *   the part in front of the #.
-       * @param hash {String?undefined} If a child control name contains a #,
-       *   all text following the # will be the hash argument.
-       * @return {qx.ui.core.Widget} The created control or <code>null</code>
-       */
-      _createChildControlImpl(id, hash) {
-        return null;
-      },
-      /**
-       * Dispose all registered controls. This is automatically
-       * executed by the widget.
-       *
-       */
-      _disposeChildControls() {
-        var controls = this.__childControls__P_37_13;
-        if (!controls) {
-          return;
-        }
-        var Widget = qx.ui.core.Widget;
-        for (var id in controls) {
-          var control = controls[id];
-          if (!Widget.contains(this, control)) {
-            control.destroy();
-          } else {
-            control.dispose();
-          }
-        }
-        delete this.__childControls__P_37_13;
-      },
-      /**
-       * Finds and returns the top level control. This is the first
-       * widget which is not a child control of any other widget.
-       *
-       * @return {qx.ui.core.Widget} The top control
-       */
-      _findTopControl() {
-        var obj = this;
-        while (obj) {
-          if (!obj.$$subparent) {
-            return obj;
-          }
-          obj = obj.$$subparent;
-        }
-        return null;
-      },
-      /**
-       * Return the ID (name) if this instance was a created as a child control of another widget.
-       *
-       * See the first parameter id in {@link qx.ui.core.Widget#_createChildControlImpl}
-       *
-       * @return {String|null} ID of the current widget or null if it was not created as a subcontrol
-       */
-      getSubcontrolId() {
-        return this.$$subcontrol || null;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        LOWER LEVEL ACCESS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Computes the location of the content element in context of the document
-       * dimensions.
-       *
-       * Supported modes:
-       *
-       * * <code>margin</code>: Calculate from the margin box of the element
-       *   (bigger than the visual appearance: including margins of given element)
-       * * <code>box</code>: Calculates the offset box of the element (default,
-       *   uses the same size as visible)
-       * * <code>border</code>: Calculate the border box (useful to align to
-       *   border edges of two elements).
-       * * <code>scroll</code>: Calculate the scroll box (relevant for absolute
-       *   positioned content).
-       * * <code>padding</code>: Calculate the padding box (relevant for
-       *   static/relative positioned content).
-       *
-       * @param mode {String?box} A supported option. See comment above.
-       * @return {Map} Returns a map with <code>left</code>, <code>top</code>,
-       *   <code>right</code> and <code>bottom</code> which contains the distance
-       *   of the element relative to the document.
-       */
-      getContentLocation(mode) {
-        var domEl = this.getContentElement().getDomElement();
-        return domEl ? qx.bom.element.Location.get(domEl, mode) : null;
-      },
-      /**
-       * Directly modifies the relative left position in relation
-       * to the parent element.
-       *
-       * Use with caution! This may be used for animations, drag&drop
-       * or other cases where high performance location manipulation
-       * is important. Otherwise please use {@link qx.ui.core.LayoutItem#setUserBounds} instead.
-       *
-       * @param value {Integer} Left position
-       */
-      setDomLeft(value) {
-        var domEl = this.getContentElement().getDomElement();
-        if (domEl) {
-          domEl.style.left = value + "px";
-        } else {
-          throw new Error("DOM element is not yet created!");
-        }
-      },
-      /**
-       * Directly modifies the relative top position in relation
-       * to the parent element.
-       *
-       * Use with caution! This may be used for animations, drag&drop
-       * or other cases where high performance location manipulation
-       * is important. Otherwise please use {@link qx.ui.core.LayoutItem#setUserBounds} instead.
-       *
-       * @param value {Integer} Top position
-       */
-      setDomTop(value) {
-        var domEl = this.getContentElement().getDomElement();
-        if (domEl) {
-          domEl.style.top = value + "px";
-        } else {
-          throw new Error("DOM element is not yet created!");
-        }
-      },
-      /**
-       * Directly modifies the relative left and top position in relation
-       * to the parent element.
-       *
-       * Use with caution! This may be used for animations, drag&drop
-       * or other cases where high performance location manipulation
-       * is important. Otherwise please use {@link qx.ui.core.LayoutItem#setUserBounds} instead.
-       *
-       * @param left {Integer} Left position
-       * @param top {Integer} Top position
-       */
-      setDomPosition(left, top) {
-        var domEl = this.getContentElement().getDomElement();
-        if (domEl) {
-          domEl.style.left = left + "px";
-          domEl.style.top = top + "px";
-        } else {
-          throw new Error("DOM element is not yet created!");
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        ARIA attrs support
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Sets the string which labels this widget. This will be read out by screenreaders. Needed if there is no
-       * readable text/label in this widget which would automatically act as aria-label.
-       * @param label {String} Labelling Text
-       */
-      setAriaLabel(label) {
-        this.getContentElement().setAttribute("aria-label", label);
-      },
-      /**
-       * Marks that this widget gets labelled by another widget. This will be read out by screenreaders as first
-       * information.
-       * Similiar to aria-label, difference being that the labelling widget is an different widget and multiple
-       * widgets can be added.
-       * @param labelWidgets {qx.ui.core.Widget[]} Indefinite Number of labelling Widgets
-       */
-      addAriaLabelledBy() {
-        for (var _len = arguments.length, labelWidgets = new Array(_len), _key = 0; _key < _len; _key++) {
-          labelWidgets[_key] = arguments[_key];
-        }
-        this.__addAriaXBy__P_37_16(labelWidgets, "aria-labelledby");
-      },
-      /**
-       * Marks that this widget gets described by another widget. This will be read out by screenreaders as last
-       * information. Multiple Widgets possible.
-       * @param describingWidgets {qx.ui.core.Widget[]} Indefinite Number of describing Widgets
-       */
-      addAriaDescribedBy() {
-        for (var _len2 = arguments.length, describingWidgets = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          describingWidgets[_key2] = arguments[_key2];
-        }
-        this.__addAriaXBy__P_37_16(describingWidgets, "aria-describedby");
-      },
-      /**
-       * Sets either aria-labelledby or aria-describedby
-       * @param widgets {qx.ui.core.Widget[]} Indefinite Number of widgets
-       * @param ariaAttr {String} aria-labelledby | aria-describedby
-       */
-      __addAriaXBy__P_37_16(widgets, ariaAttr) {
-        if (!["aria-labelledby", "aria-describedby"].includes(ariaAttr)) {
-          throw new Error("Only aria-labelledby or aria-describedby allowed!");
-        }
-        let idArr = [];
-        for (const widget of widgets) {
-          if (!(widget instanceof qx.ui.core.Widget)) {
-            throw new Error("Given widget " + widget + " is not an instance of qx.ui.core.Widget!");
-          }
-          const contentEl = widget.getContentElement();
-          let widgetId = contentEl.getAttribute("id");
-          if (!widgetId) {
-            widgetId = `label-${widget.toHashCode()}`;
-            contentEl.setAttribute("id", widgetId);
-          }
-          if (!idArr.includes(widgetId)) {
-            idArr.push(widgetId);
-          }
-        }
-        if (idArr.length === 0) {
-          return;
-        }
-        const idStr = idArr.join(" ");
-        const contentEl = this.getContentElement();
-        let res = contentEl.getAttribute(ariaAttr);
-        res = res ? `${res} ${idStr}` : idStr;
-        contentEl.setAttribute(ariaAttr, res);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        ENHANCED DISPOSE SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Removes this widget from its parent and disposes it.
-       *
-       * Please note that the widget is not disposed synchronously. The
-       * real dispose happens after the next queue flush.
-       *
-       */
-      destroy() {
-        if (this.$$disposed) {
-          return;
-        }
-
-        // We may be deferring disposing, but we can at least prevent
-        // listener handlers from being called. We don't know exactly
-        // what listeners have already been disposed at this point.
-        qx.event.Registration.removeAllListeners(this);
-        var parent = this.$$parent;
-        if (parent) {
-          parent._remove(this);
-        }
-        qx.ui.core.queue.Dispose.add(this);
-      },
-      /*
-      ---------------------------------------------------------------------------
-        CLONE SUPPORT
-      ---------------------------------------------------------------------------
-      */
-
-      // overridden
-      clone() {
-        var clone = qx.ui.core.Widget.superclass.prototype.clone.call(this);
-        if (this.getChildren) {
-          var children = this.getChildren();
-          for (var i = 0, l = children.length; i < l; i++) {
-            clone.add(children[i].clone());
-          }
-        }
-        return clone;
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      // Some dispose stuff is not needed in global shutdown, otherwise
-      // it just slows down things a bit, so do not do them.
-      if (!qx.core.ObjectRegistry.inShutDown) {
-        {
-          if (this.__toolTipTextListenerId__P_37_4) {
-            qx.locale.Manager.getInstance().removeListenerById(this.__toolTipTextListenerId__P_37_4);
-          }
-        }
-
-        // Remove widget pointer from DOM
-        var contentEl = this.getContentElement();
-        if (contentEl) {
-          contentEl.disconnectWidget(this);
-        }
-
-        // Clean up all child controls
-        this._disposeChildControls();
-
-        // Remove from ui queues
-        qx.ui.core.queue.Appearance.remove(this);
-        qx.ui.core.queue.Layout.remove(this);
-        qx.ui.core.queue.Visibility.remove(this);
-        qx.ui.core.queue.Widget.remove(this);
-      }
-      if (this.getContextMenu()) {
-        this.setContextMenu(null);
-      }
-
-      // pool decorators if not in global shutdown
-      if (!qx.core.ObjectRegistry.inShutDown) {
-        this.clearSeparators();
-        this.__separators__P_37_6 = null;
-      } else {
-        this._disposeArray("__separators__P_37_6");
-      }
-
-      // Clear children array
-      this._disposeArray("__widgetChildren__P_37_7");
-
-      // Cleanup map of appearance states
-      this.__states__P_37_12 = this.__childControls__P_37_13 = null;
-
-      // Dispose layout manager and HTML elements
-      this._disposeObjects("__layoutManager__P_37_5", "__contentElement__P_37_0");
-    }
-  });
-  qx.ui.core.Widget.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Mixin": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.log.Logger": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * This mixin exposes all basic methods to manage widget children as public methods.
-   * It can only be included into instances of {@link Widget}.
-   *
-   * To optimize the method calls the including widget should call the method
-   * {@link #remap} in its defer function. This will map the protected
-   * methods to the public ones and save one method call for each function.
-   */
-  qx.Mixin.define("qx.ui.core.MChildrenHandling", {
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      /**
-       * Returns the children list
-       *
-       * @return {qx.ui.core.LayoutItem[]} The children array (Arrays are
-       *   reference types, please do not modify them in-place)
-       */
-      getChildren() {
-        return this._getChildren();
-      },
-      /**
-       * Whether the widget contains children.
-       *
-       * @return {Boolean} Returns <code>true</code> when the widget has children.
-       */
-      hasChildren() {
-        return this._hasChildren();
-      },
-      /**
-       * Returns the index position of the given widget if it is
-       * a child widget. Otherwise it returns <code>-1</code>.
-       *
-       * This method works on the widget's children list. Some layout managers
-       * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional
-       * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})
-       * ignore the children order for the layout process.
-       *
-       * @param child {qx.ui.core.Widget} the widget to query for
-       * @return {Integer} The index position or <code>-1</code> when
-       *   the given widget is no child of this layout.
-       */
-      indexOf(child) {
-        return this._indexOf(child);
-      },
-      /**
-       * Adds a new child widget.
-       *
-       * The supported keys of the layout options map depend on the layout manager
-       * used to position the widget. The options are documented in the class
-       * documentation of each layout manager {@link qx.ui.layout}.
-       *
-       * @param child {qx.ui.core.LayoutItem} the widget to add.
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      add(child, options) {
-        this._add(child, options);
-      },
-      /**
-       * Add a child widget at the specified index
-       *
-       * This method works on the widget's children list. Some layout managers
-       * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional
-       * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})
-       * ignore the children order for the layout process.
-       *
-       * @param child {qx.ui.core.LayoutItem} Widget to add
-       * @param index {Integer} Index, at which the widget will be inserted
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      addAt(child, index, options) {
-        this._addAt(child, index, options);
-      },
-      /**
-       * Add a widget before another already inserted widget
-       *
-       * This method works on the widget's children list. Some layout managers
-       * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional
-       * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})
-       * ignore the children order for the layout process.
-       *
-       * @param child {qx.ui.core.LayoutItem} Widget to add
-       * @param before {qx.ui.core.LayoutItem} Widget before the new widget will be inserted.
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      addBefore(child, before, options) {
-        this._addBefore(child, before, options);
-      },
-      /**
-       * Add a widget after another already inserted widget
-       *
-       * This method works on the widget's children list. Some layout managers
-       * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional
-       * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})
-       * ignore the children order for the layout process.
-       *
-       * @param child {qx.ui.core.LayoutItem} Widget to add
-       * @param after {qx.ui.core.LayoutItem} Widget, after which the new widget will be inserted
-       * @param options {Map?null} Optional layout data for widget.
-       */
-      addAfter(child, after, options) {
-        this._addAfter(child, after, options);
-      },
-      /**
-       * Remove the given child widget.
-       *
-       * @param child {qx.ui.core.LayoutItem} the widget to remove
-       */
-      remove(child) {
-        this._remove(child);
-      },
-      /**
-       * Remove the widget at the specified index.
-       *
-       * This method works on the widget's children list. Some layout managers
-       * (e.g. {@link qx.ui.layout.HBox}) use the children order as additional
-       * layout information. Other layout manager (e.g. {@link qx.ui.layout.Grid})
-       * ignore the children order for the layout process.
-       *
-       * @param index {Integer} Index of the widget to remove.
-       * @return {qx.ui.core.LayoutItem} The child removed.
-       */
-      removeAt(index) {
-        return this._removeAt(index);
-      },
-      /**
-       * Remove all children.
-       *
-       * @return {Array} An array of the removed children.
-       */
-      removeAll() {
-        return this._removeAll();
-      }
-    },
-    /*
-    *****************************************************************************
-       STATICS
-    *****************************************************************************
-    */
-
-    statics: {
-      /**
-       * Mapping of protected methods to public.
-       * This omits an additional function call when using these methods. Call
-       * this methods in the defer block of the including class.
-       *
-       * @param members {Map} The including classes members map
-       * @deprecated {7.0} this is not necessary in modern compilers and leads to unexpected behaviour
-       */
-      remap(members) {
-        {
-          qx.log.Logger.debug("Calling qx.ui.core.MChildrenHandling.remap is deprecated, please dont use it");
-        }
-        members.getChildren = members._getChildren;
-        members.hasChildren = members._hasChildren;
-        members.indexOf = members._indexOf;
-        members.add = members._add;
-        members.addAt = members._addAt;
-        members.addBefore = members._addBefore;
-        members.addAfter = members._addAfter;
-        members.remove = members._remove;
-        members.removeAt = members._removeAt;
-        members.removeAll = members._removeAll;
-      }
-    }
-  });
-  qx.ui.core.MChildrenHandling.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Mixin": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.core.Blocker": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * This mixin blocks events and can be included into all widgets.
-   *
-   * The {@link #block} and {@link #unblock} methods provided by this mixin can be used
-   * to block any event from the widget. When blocked,
-   * the blocker widget overlays the widget to block, including the padding area.
-   *
-   * The ({@link #blockContent} method can be used to block child widgets with a
-   * zIndex below a certain value.
-   */
-  qx.Mixin.define("qx.ui.core.MBlocker", {
-    properties: {
-      /**
-       * Color of the blocker
-       */
-      blockerColor: {
-        check: "Color",
-        init: null,
-        nullable: true,
-        apply: "_applyBlockerColor",
-        themeable: true
-      },
-      /**
-       * Opacity of the blocker
-       */
-      blockerOpacity: {
-        check: "Number",
-        init: 1,
-        apply: "_applyBlockerOpacity",
-        themeable: true
-      }
-    },
-    members: {
-      __blocker__P_173_0: null,
-      /**
-       * Template method for creating the blocker item.
-       * @return {qx.ui.core.Blocker} The blocker to use.
-       */
-      _createBlocker() {
-        return new qx.ui.core.Blocker(this);
-      },
-      // property apply
-      _applyBlockerColor(value, old) {
-        this.getBlocker().setColor(value);
-      },
-      // property apply
-      _applyBlockerOpacity(value, old) {
-        this.getBlocker().setOpacity(value);
-      },
-      /**
-       * Block all events from this widget by placing a transparent overlay widget,
-       * which receives all events, exactly over the widget.
-       */
-      block() {
-        this.getBlocker().block();
-      },
-      /**
-       * Returns whether the widget is blocked.
-       *
-       * @return {Boolean} Whether the widget is blocked.
-       */
-      isBlocked() {
-        return this.__blocker__P_173_0 && this.__blocker__P_173_0.isBlocked();
-      },
-      /**
-       * Unblock the widget blocked by {@link #block}, but it takes care of
-       * the amount of {@link #block} calls. The blocker is only removed if
-       * the number of {@link #unblock} calls is identical to {@link #block} calls.
-       */
-      unblock() {
-        if (this.__blocker__P_173_0) {
-          this.__blocker__P_173_0.unblock();
-        }
-      },
-      /**
-       * Unblock the widget blocked by {@link #block}, but it doesn't take care of
-       * the amount of {@link #block} calls. The blocker is directly removed.
-       */
-      forceUnblock() {
-        if (this.__blocker__P_173_0) {
-          this.__blocker__P_173_0.forceUnblock();
-        }
-      },
-      /**
-       * Block direct child widgets with a zIndex below <code>zIndex</code>
-       *
-       * @param zIndex {Integer} All child widgets with a zIndex below this value
-       *     will be blocked
-       */
-      blockContent(zIndex) {
-        this.getBlocker().blockContent(zIndex);
-      },
-      /**
-       * Get the blocker
-       *
-       * @return {qx.ui.core.Blocker} The blocker
-       */
-      getBlocker() {
-        if (!this.__blocker__P_173_0) {
-          this.__blocker__P_173_0 = this._createBlocker();
-        }
-        return this.__blocker__P_173_0;
-      }
-    },
-    destruct() {
-      this._disposeObjects("__blocker__P_173_0");
-    }
-  });
-  qx.ui.core.MBlocker.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Mixin": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.Class": {},
-      "qx.lang.Array": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * This mixin implements the key methods of the {@link qx.ui.window.IDesktop}.
-   *
-   * @ignore(qx.ui.window.Window)
-   * @ignore(qx.ui.window.Window.*)
-   */
-  qx.Mixin.define("qx.ui.window.MDesktop", {
-    /*
-    *****************************************************************************
-       PROPERTIES
-    *****************************************************************************
-    */
-
-    properties: {
-      /**
-       * The currently active window
-       */
-      activeWindow: {
-        check: "qx.ui.window.Window",
-        apply: "_applyActiveWindow",
-        event: "changeActiveWindow",
-        init: null,
-        nullable: true
-      }
-    },
-    events: {
-      /**
-       * Fired when a window was added.
-       */
-      windowAdded: "qx.event.type.Data",
-      /**
-       * Fired when a window was removed.
-       */
-      windowRemoved: "qx.event.type.Data"
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __windows__P_174_0: null,
-      __manager__P_174_1: null,
-      /**
-       * Get the desktop's window manager. Each desktop must have a window manager.
-       * If none is configured the default window manager {@link qx.ui.window.Window#DEFAULT_MANAGER_CLASS}
-       * is used.
-       *
-       * @return {qx.ui.window.IWindowManager} The desktop's window manager
-       */
-      getWindowManager() {
-        if (!this.__manager__P_174_1) {
-          this.setWindowManager(new qx.ui.window.Window.DEFAULT_MANAGER_CLASS());
-        }
-        return this.__manager__P_174_1;
-      },
-      /**
-       * Whether the configured layout supports a maximized window
-       * e.g. is a Canvas.
-       *
-       * @return {Boolean} Whether the layout supports maximized windows
-       */
-      supportsMaximize() {
-        return true;
-      },
-      /**
-       * Sets the desktop's window manager
-       *
-       * @param manager {qx.ui.window.IWindowManager} The window manager
-       */
-      setWindowManager(manager) {
-        if (this.__manager__P_174_1) {
-          this.__manager__P_174_1.setDesktop(null);
-        }
-        manager.setDesktop(this);
-        this.__manager__P_174_1 = manager;
-      },
-      /**
-       * Event handler. Called if one of the managed windows changes its active
-       * state.
-       *
-       * @param e {qx.event.type.Event} the event object.
-       */
-      _onChangeActive(e) {
-        if (e.getData()) {
-          this.setActiveWindow(e.getTarget());
-        } else if (this.getActiveWindow() == e.getTarget()) {
-          this.setActiveWindow(null);
-        }
-      },
-      // property apply
-      _applyActiveWindow(value, old) {
-        this.getWindowManager().changeActiveWindow(value, old);
-        this.getWindowManager().updateStack();
-      },
-      /**
-       * Event handler. Called if one of the managed windows changes its modality
-       *
-       * @param e {qx.event.type.Event} the event object.
-       */
-      _onChangeModal(e) {
-        this.getWindowManager().updateStack();
-      },
-      /**
-       * Event handler. Called if one of the managed windows changes its visibility
-       * state.
-       */
-      _onChangeVisibility() {
-        this.getWindowManager().updateStack();
-      },
-      /**
-       * Overrides the method {@link qx.ui.core.Widget#_afterAddChild}
-       *
-       * @param win {qx.ui.core.Widget} added widget
-       */
-      _afterAddChild(win) {
-        if (qx.Class.isDefined("qx.ui.window.Window") && win instanceof qx.ui.window.Window) {
-          this._addWindow(win);
-        }
-      },
-      /**
-       * Handles the case, when a window is added to the desktop.
-       *
-       * @param win {qx.ui.window.Window} Window, which has been added
-       */
-      _addWindow(win) {
-        if (!this.getWindows().includes(win)) {
-          this.getWindows().push(win);
-          this.fireDataEvent("windowAdded", win);
-          win.addListener("changeActive", this._onChangeActive, this);
-          win.addListener("changeModal", this._onChangeModal, this);
-          win.addListener("changeVisibility", this._onChangeVisibility, this);
-        }
-        if (win.getActive()) {
-          this.setActiveWindow(win);
-        }
-        this.getWindowManager().updateStack();
-      },
-      /**
-       * Overrides the method {@link qx.ui.core.Widget#_afterRemoveChild}
-       *
-       * @param win {qx.ui.core.Widget} removed widget
-       */
-      _afterRemoveChild(win) {
-        if (qx.Class.isDefined("qx.ui.window.Window") && win instanceof qx.ui.window.Window) {
-          this._removeWindow(win);
-        }
-      },
-      /**
-       * Handles the case, when a window is removed from the desktop.
-       *
-       * @param win {qx.ui.window.Window} Window, which has been removed
-       */
-      _removeWindow(win) {
-        if (this.getWindows().includes(win)) {
-          qx.lang.Array.remove(this.getWindows(), win);
-          this.fireDataEvent("windowRemoved", win);
-          win.removeListener("changeActive", this._onChangeActive, this);
-          win.removeListener("changeModal", this._onChangeModal, this);
-          win.removeListener("changeVisibility", this._onChangeVisibility, this);
-          this.getWindowManager().updateStack();
-        }
-      },
-      /**
-       * Get a list of all windows added to the desktop (including hidden windows)
-       *
-       * @return {qx.ui.window.Window[]} Array of managed windows
-       */
-      getWindows() {
-        if (!this.__windows__P_174_0) {
-          this.__windows__P_174_0 = [];
-        }
-        return this.__windows__P_174_0;
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      this._disposeArray("__windows__P_174_0");
-      this._disposeObjects("__manager__P_174_1");
-    }
-  });
-  qx.ui.window.MDesktop.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.core.Environment": {
-        "defer": "load",
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.Class": {
-        "usage": "dynamic",
-        "require": true
-      },
-      "qx.ui.core.Widget": {
-        "construct": true,
-        "require": true
-      },
-      "qx.ui.core.MChildrenHandling": {
-        "defer": "runtime",
-        "require": true
-      },
-      "qx.ui.core.MBlocker": {
-        "require": true
-      },
-      "qx.ui.window.MDesktop": {
-        "require": true
-      },
-      "qx.ui.core.FocusHandler": {
-        "construct": true
-      },
-      "qx.ui.core.queue.Visibility": {
-        "construct": true
-      },
-      "qx.bom.client.Engine": {
-        "require": true
-      },
-      "qx.bom.Stylesheet": {},
-      "qx.bom.element.Cursor": {},
-      "qx.dom.Node": {},
-      "qx.bom.client.Event": {
-        "require": true
-      },
-      "qx.bom.Event": {}
-    },
-    "environment": {
-      "provided": [],
-      "required": {
-        "engine.name": {
-          "load": true,
-          "className": "qx.bom.client.Engine"
-        },
-        "event.help": {
-          "className": "qx.bom.client.Event"
-        }
-      }
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Fabian Jakobs (fjakobs)
-  
-  ************************************************************************ */
-
-  /**
-   * Shared implementation for all root widgets.
-   */
-  qx.Class.define("qx.ui.root.Abstract", {
-    type: "abstract",
-    extend: qx.ui.core.Widget,
-    include: [qx.ui.core.MChildrenHandling, qx.ui.core.MBlocker, qx.ui.window.MDesktop],
-    /*
-    *****************************************************************************
-       CONSTRUCTOR
-    *****************************************************************************
-    */
-
-    construct() {
-      qx.ui.core.Widget.constructor.call(this);
-
-      // Register as root for the focus handler
-      qx.ui.core.FocusHandler.getInstance().addRoot(this);
-
-      // Directly add to visibility queue
-      qx.ui.core.queue.Visibility.add(this);
-      this.initNativeHelp();
-      this.addListener("keypress", this.__preventScrollWhenFocused__P_95_0, this);
-    },
-    /*
-    *****************************************************************************
-       PROPERTIES
-    *****************************************************************************
-    */
-
-    properties: {
-      // overridden
-      appearance: {
-        refine: true,
-        init: "root"
-      },
-      // overridden
-      enabled: {
-        refine: true,
-        init: true
-      },
-      // overridden
-      focusable: {
-        refine: true,
-        init: true
-      },
-      /**
-       *  Sets the global cursor style
-       *
-       *  The name of the cursor to show when the mouse pointer is over the widget.
-       *  This is any valid CSS2 cursor name defined by W3C.
-       *
-       *  The following values are possible:
-       *  <ul><li>default</li>
-       *  <li>crosshair</li>
-       *  <li>pointer (hand is the ie name and will mapped to pointer in non-ie).</li>
-       *  <li>move</li>
-       *  <li>n-resize</li>
-       *  <li>ne-resize</li>
-       *  <li>e-resize</li>
-       *  <li>se-resize</li>
-       *  <li>s-resize</li>
-       *  <li>sw-resize</li>
-       *  <li>w-resize</li>
-       *  <li>nw-resize</li>
-       *  <li>text</li>
-       *  <li>wait</li>
-       *  <li>help </li>
-       *  <li>url([file]) = self defined cursor, file should be an ANI- or CUR-type</li>
-       *  </ul>
-       *
-       * Please note that in the current implementation this has no effect in IE.
-       */
-      globalCursor: {
-        check: "String",
-        nullable: true,
-        themeable: true,
-        apply: "_applyGlobalCursor",
-        event: "changeGlobalCursor"
-      },
-      /**
-       * Whether the native context menu should be globally enabled. Setting this
-       * property to <code>true</code> will allow native context menus in all
-       * child widgets of this root.
-       */
-      nativeContextMenu: {
-        refine: true,
-        init: false
-      },
-      /**
-       * If the user presses F1 in IE by default the onhelp event is fired and
-       * IE’s help window is opened. Setting this property to <code>false</code>
-       * prevents this behavior.
-       */
-      nativeHelp: {
-        check: "Boolean",
-        init: false,
-        apply: "_applyNativeHelp"
-      }
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __globalCursorStyleSheet__P_95_1: null,
-      // overridden
-      isRootWidget() {
-        return true;
-      },
-      /**
-       * Get the widget's layout manager.
-       *
-       * @return {qx.ui.layout.Abstract} The widget's layout manager
-       */
-      getLayout() {
-        return this._getLayout();
-      },
-      // property apply
-      _applyGlobalCursor: qx.core.Environment.select("engine.name", {
-        mshtml(value, old) {
-          // empty implementation
-        },
-        // This would be the optimal solution.
-        // For performance reasons this is impractical in IE
-        default(value, old) {
-          var Stylesheet = qx.bom.Stylesheet;
-          var sheet = this.__globalCursorStyleSheet__P_95_1;
-          if (!sheet) {
-            this.__globalCursorStyleSheet__P_95_1 = sheet = Stylesheet.createElement();
-          }
-          Stylesheet.removeAllRules(sheet);
-          if (value) {
-            Stylesheet.addRule(sheet, "*", qx.bom.element.Cursor.compile(value).replace(";", "") + " !important");
-          }
-        }
-      }),
-      // property apply
-      _applyNativeContextMenu(value, old) {
-        if (value) {
-          this.removeListener("contextmenu", this._onNativeContextMenu, this, true);
-        } else {
-          this.addListener("contextmenu", this._onNativeContextMenu, this, true);
-        }
-      },
-      /**
-       * Stops the <code>contextmenu</code> event from showing the native context menu
-       *
-       * @param e {qx.event.type.Mouse} The event object
-       */
-      _onNativeContextMenu(e) {
-        if (e.getTarget().getNativeContextMenu()) {
-          return;
-        }
-        e.preventDefault();
-      },
-      /**
-       * Fix unexpected scrolling when pressing "Space" while a widget is focused.
-       *
-       * @param e {qx.event.type.KeySequence} The KeySequence event
-       */
-      __preventScrollWhenFocused__P_95_0(e) {
-        // Require space pressed
-        if (e.getKeyIdentifier() !== "Space") {
-          return;
-        }
-        var target = e.getTarget();
-
-        // Require focused. Allow scroll when container or root widget.
-        var focusHandler = qx.ui.core.FocusHandler.getInstance();
-        if (!focusHandler.isFocused(target)) {
-          return;
-        }
-
-        // Require that widget does not accept text input
-        var el = target.getContentElement();
-        var nodeName = el.getNodeName();
-        var domEl = el.getDomElement();
-        if (nodeName === "input" || nodeName === "textarea" || domEl && domEl.contentEditable === "true") {
-          return;
-        }
-
-        // do not prevent "space" key for natively focusable elements
-        nodeName = qx.dom.Node.getName(e.getOriginalTarget());
-        if (nodeName && ["input", "textarea", "select", "a"].indexOf(nodeName) > -1) {
-          return;
-        }
-
-        // Ultimately, prevent default
-        e.preventDefault();
-      },
-      // property apply
-      _applyNativeHelp(value, old) {
-        if (qx.core.Environment.get("event.help")) {
-          if (old === false) {
-            qx.bom.Event.removeNativeListener(document, "help", function () {
-              return false;
-            });
-          }
-          if (value === false) {
-            qx.bom.Event.addNativeListener(document, "help", function () {
-              return false;
-            });
-          }
-        }
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      this.__globalCursorStyleSheet__P_95_1 = null;
-    },
-    /*
-    *****************************************************************************
-       DEFER
-    *****************************************************************************
-    */
-
-    defer(statics, members) {
-      qx.ui.core.MChildrenHandling.remap(members);
-    }
-  });
-  qx.ui.root.Abstract.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
       "qx.Class": {
         "usage": "dynamic",
         "require": true
       },
       "qx.core.Object": {
-        "construct": true,
         "require": true
       },
-      "qx.bom.element.Location": {},
-      "qx.ui.core.Widget": {}
-    }
-  };
-  qx.Bootstrap.executePendingDefers($$dbClassInfo);
-  /* ************************************************************************
-  
-     qooxdoo - the new era of web development
-  
-     http://qooxdoo.org
-  
-     Copyright:
-       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
-  
-     License:
-       MIT: https://opensource.org/licenses/MIT
-       See the LICENSE file in the project's top-level directory for details.
-  
-     Authors:
-       * Sebastian Werner (wpbasti)
-       * Andreas Ecker (ecker)
-  
-  ************************************************************************ */
-
-  /**
-   * Each focus root delegates the focus handling to instances of the FocusHandler.
-   */
-  qx.Class.define("qx.ui.core.FocusHandler", {
-    extend: qx.core.Object,
-    type: "singleton",
-    /*
-    *****************************************************************************
-       CONSTRUCTOR
-    *****************************************************************************
-    */
-
-    construct() {
-      qx.core.Object.constructor.call(this);
-
-      // Create data structure
-      this.__roots__P_61_0 = {};
-    },
-    /*
-    ***********************************************
-      PROPERTIES
-    ***********************************************
-    */
-    properties: {
-      /**
-       * Activate changing focus with the tab key (default: true)
-       */
-      useTabNavigation: {
-        check: "Boolean",
-        init: true
-      }
-    },
-    /*
-    *****************************************************************************
-       MEMBERS
-    *****************************************************************************
-    */
-
-    members: {
-      __roots__P_61_0: null,
-      __activeChild__P_61_1: null,
-      __focusedChild__P_61_2: null,
-      __currentRoot__P_61_3: null,
-      /**
-       * Connects to a top-level root element (which initially receives
-       * all events of the root). This are normally all page and application
-       * roots, but no inline roots (they are typically sitting inside
-       * another root).
-       *
-       * @param root {qx.ui.root.Abstract} Any root
-       */
-      connectTo(root) {
-        // this.debug("Connect to: " + root);
-        root.addListener("keypress", this.__onKeyPress__P_61_4, this);
-        root.addListener("focusin", this._onFocusIn, this, true);
-        root.addListener("focusout", this._onFocusOut, this, true);
-        root.addListener("activate", this._onActivate, this, true);
-        root.addListener("deactivate", this._onDeactivate, this, true);
-      },
-      /**
-       * Registers a widget as a focus root. A focus root comes
-       * with an separate tab sequence handling.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to register
-       */
-      addRoot(widget) {
-        // this.debug("Add focusRoot: " + widget);
-        this.__roots__P_61_0[widget.toHashCode()] = widget;
-      },
-      /**
-       * Deregisters a previous added widget.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to deregister
-       */
-      removeRoot(widget) {
-        // this.debug("Remove focusRoot: " + widget);
-        delete this.__roots__P_61_0[widget.toHashCode()];
-      },
-      /**
-       * Get the active widget
-       *
-       * @return {qx.ui.core.Widget|null} The active widget or <code>null</code>
-       *    if no widget is active
-       */
-      getActiveWidget() {
-        return this.__activeChild__P_61_1;
-      },
-      /**
-       * Whether the given widget is the active one
-       *
-       * @param widget {qx.ui.core.Widget} The widget to check
-       * @return {Boolean} <code>true</code> if the given widget is active
-       */
-      isActive(widget) {
-        return this.__activeChild__P_61_1 == widget;
-      },
-      /**
-       * Get the focused widget
-       *
-       * @return {qx.ui.core.Widget|null} The focused widget or <code>null</code>
-       *    if no widget has the focus
-       */
-      getFocusedWidget() {
-        return this.__focusedChild__P_61_2;
-      },
-      /**
-       * Whether the given widget is the focused one.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to check
-       * @return {Boolean} <code>true</code> if the given widget is focused
-       */
-      isFocused(widget) {
-        return this.__focusedChild__P_61_2 == widget;
-      },
-      /**
-       * Whether the given widgets acts as a focus root.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to check
-       * @return {Boolean} <code>true</code> if the given widget is a focus root
-       */
-      isFocusRoot(widget) {
-        return !!this.__roots__P_61_0[widget.toHashCode()];
-      },
-      /*
-      ---------------------------------------------------------------------------
-        EVENT HANDLER
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Internal event handler for activate event.
-       *
-       * @param e {qx.event.type.Focus} Focus event
-       */
-      _onActivate(e) {
-        var target = e.getTarget();
-        this.__activeChild__P_61_1 = target;
-        //this.debug("active: " + target);
-
-        var root = this.__findFocusRoot__P_61_5(target);
-        if (root != this.__currentRoot__P_61_3) {
-          this.__currentRoot__P_61_3 = root;
-        }
-      },
-      /**
-       * Internal event handler for deactivate event.
-       *
-       * @param e {qx.event.type.Focus} Focus event
-       */
-      _onDeactivate(e) {
-        var target = e.getTarget();
-        if (this.__activeChild__P_61_1 == target) {
-          this.__activeChild__P_61_1 = null;
-        }
-      },
-      /**
-       * Internal event handler for focusin event.
-       *
-       * @param e {qx.event.type.Focus} Focus event
-       */
-      _onFocusIn(e) {
-        var target = e.getTarget();
-        if (target != this.__focusedChild__P_61_2) {
-          this.__focusedChild__P_61_2 = target;
-          target.visualizeFocus();
-        }
-      },
-      /**
-       * Internal event handler for focusout event.
-       *
-       * @param e {qx.event.type.Focus} Focus event
-       */
-      _onFocusOut(e) {
-        var target = e.getTarget();
-        if (target == this.__focusedChild__P_61_2) {
-          this.__focusedChild__P_61_2 = null;
-          target.visualizeBlur();
-        }
-      },
-      /**
-       * Internal event handler for TAB key.
-       *
-       * @param e {qx.event.type.KeySequence} Key event
-       */
-      __onKeyPress__P_61_4(e) {
-        if (e.getKeyIdentifier() != "Tab" || !this.isUseTabNavigation()) {
-          return;
-        }
-        if (!this.__currentRoot__P_61_3) {
-          return;
-        }
-
-        // Stop all key-events with a TAB keycode
-        e.stopPropagation();
-        e.preventDefault();
-
-        // Support shift key to reverse widget detection order
-        var current = this.__focusedChild__P_61_2;
-        if (!e.isShiftPressed()) {
-          var next = current ? this.__getWidgetAfter__P_61_6(current) : this.__getFirstWidget__P_61_7();
-        } else {
-          var next = current ? this.__getWidgetBefore__P_61_8(current) : this.__getLastWidget__P_61_9();
-        }
-
-        // If there was a widget found, focus it
-        if (next) {
-          next.tabFocus();
-        }
-      },
-      /*
-      ---------------------------------------------------------------------------
-        UTILS
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Finds the next focus root, starting with the given widget.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to find a focus root for.
-       * @return {qx.ui.core.Widget|null} The focus root for the given widget or
-       * <code>true</code> if no focus root could be found
-       */
-      __findFocusRoot__P_61_5(widget) {
-        var roots = this.__roots__P_61_0;
-        while (widget) {
-          if (roots[widget.toHashCode()]) {
-            return widget;
-          }
-          widget = widget.getLayoutParent();
-        }
-        return null;
-      },
-      /*
-      ---------------------------------------------------------------------------
-        TAB SUPPORT IMPLEMENTATION
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Compares the order of two widgets
-       *
-       * @param widget1 {qx.ui.core.Widget} Widget A
-       * @param widget2 {qx.ui.core.Widget} Widget B
-       * @return {Integer} A sort() compatible integer with values
-       *   small than 0, exactly 0 or bigger than 0.
-       */
-      __compareTabOrder__P_61_10(widget1, widget2) {
-        if (widget1 === widget2) {
-          return 0;
-        }
-
-        // Sort-Check #1: Tab-Index
-        var tab1 = widget1.getTabIndex() || 0;
-        var tab2 = widget2.getTabIndex() || 0;
-        if (tab1 != tab2) {
-          return tab1 - tab2;
-        }
-
-        // Computing location
-        var el1 = widget1.getContentElement().getDomElement();
-        var el2 = widget2.getContentElement().getDomElement();
-        var Location = qx.bom.element.Location;
-        var loc1 = Location.get(el1);
-        var loc2 = Location.get(el2);
-
-        // Sort-Check #2: Top-Position
-        if (loc1.top != loc2.top) {
-          return loc1.top - loc2.top;
-        }
-
-        // Sort-Check #3: Left-Position
-        if (loc1.left != loc2.left) {
-          return loc1.left - loc2.left;
-        }
-
-        // Sort-Check #4: zIndex
-        var z1 = widget1.getZIndex();
-        var z2 = widget2.getZIndex();
-        if (z1 != z2) {
-          return z1 - z2;
-        }
-        return 0;
-      },
-      /**
-       * Returns the first widget.
-       *
-       * @return {qx.ui.core.Widget} Returns the first (positioned) widget from
-       *    the current root.
-       */
-      __getFirstWidget__P_61_7() {
-        return this.__getFirst__P_61_11(this.__currentRoot__P_61_3, null);
-      },
-      /**
-       * Returns the last widget.
-       *
-       * @return {qx.ui.core.Widget} Returns the last (positioned) widget from
-       *    the current root.
-       */
-      __getLastWidget__P_61_9() {
-        return this.__getLast__P_61_12(this.__currentRoot__P_61_3, null);
-      },
-      /**
-       * Returns the widget after the given one.
-       *
-       * @param widget {qx.ui.core.Widget} Widget to start with
-       * @return {qx.ui.core.Widget} The found widget.
-       */
-      __getWidgetAfter__P_61_6(widget) {
-        var root = this.__currentRoot__P_61_3;
-        if (root == widget) {
-          return this.__getFirstWidget__P_61_7();
-        }
-        while (widget && widget.getAnonymous()) {
-          widget = widget.getLayoutParent();
-        }
-        if (widget == null) {
-          return [];
-        }
-        var result = [];
-        this.__collectAllAfter__P_61_13(root, widget, result);
-        result.sort(this.__compareTabOrder__P_61_10);
-        var len = result.length;
-        return len > 0 ? result[0] : this.__getFirstWidget__P_61_7();
-      },
-      /**
-       * Returns the widget before the given one.
-       *
-       * @param widget {qx.ui.core.Widget} Widget to start with
-       * @return {qx.ui.core.Widget} The found widget.
-       */
-      __getWidgetBefore__P_61_8(widget) {
-        var root = this.__currentRoot__P_61_3;
-        if (root == widget) {
-          return this.__getLastWidget__P_61_9();
-        }
-        while (widget && widget.getAnonymous()) {
-          widget = widget.getLayoutParent();
-        }
-        if (widget == null) {
-          return [];
-        }
-        var result = [];
-        this.__collectAllBefore__P_61_14(root, widget, result);
-        result.sort(this.__compareTabOrder__P_61_10);
-        var len = result.length;
-        return len > 0 ? result[len - 1] : this.__getLastWidget__P_61_9();
-      },
-      /*
-      ---------------------------------------------------------------------------
-        INTERNAL API USED BY METHODS ABOVE
-      ---------------------------------------------------------------------------
-      */
-
-      /**
-       * Collects all widgets which are after the given widget in
-       * the given parent widget. Append all found children to the
-       * <code>list</code>.
-       *
-       * @param parent {qx.ui.core.Widget} Parent widget
-       * @param widget {qx.ui.core.Widget} Child widget to start with
-       * @param result {Array} Result list
-       */
-      __collectAllAfter__P_61_13(parent, widget, result) {
-        var children = parent.getLayoutChildren();
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-
-          // Filter spacers etc.
-          if (!(child instanceof qx.ui.core.Widget)) {
-            continue;
-          }
-          if (!this.isFocusRoot(child) && child.isEnabled() && child.isVisible()) {
-            if (child.isTabable() && this.__compareTabOrder__P_61_10(widget, child) < 0) {
-              result.push(child);
-            }
-            this.__collectAllAfter__P_61_13(child, widget, result);
-          }
-        }
-      },
-      /**
-       * Collects all widgets which are before the given widget in
-       * the given parent widget. Append all found children to the
-       * <code>list</code>.
-       *
-       * @param parent {qx.ui.core.Widget} Parent widget
-       * @param widget {qx.ui.core.Widget} Child widget to start with
-       * @param result {Array} Result list
-       */
-      __collectAllBefore__P_61_14(parent, widget, result) {
-        var children = parent.getLayoutChildren();
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-
-          // Filter spacers etc.
-          if (!(child instanceof qx.ui.core.Widget)) {
-            continue;
-          }
-          if (!this.isFocusRoot(child) && child.isEnabled() && child.isVisible()) {
-            if (child.isTabable() && this.__compareTabOrder__P_61_10(widget, child) > 0) {
-              result.push(child);
-            }
-            this.__collectAllBefore__P_61_14(child, widget, result);
-          }
-        }
-      },
-      /**
-       * Find first (positioned) widget. (Sorted by coordinates, zIndex, etc.)
-       *
-       * @param parent {qx.ui.core.Widget} Parent widget
-       * @param firstWidget {qx.ui.core.Widget?null} Current first widget
-       * @return {qx.ui.core.Widget} The first (positioned) widget
-       */
-      __getFirst__P_61_11(parent, firstWidget) {
-        var children = parent.getLayoutChildren();
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-
-          // Filter spacers etc.
-          if (!(child instanceof qx.ui.core.Widget)) {
-            continue;
-          }
-
-          // Ignore focus roots completely
-          if (!this.isFocusRoot(child) && child.isEnabled() && child.isVisible()) {
-            if (child.isTabable()) {
-              if (firstWidget == null || this.__compareTabOrder__P_61_10(child, firstWidget) < 0) {
-                firstWidget = child;
-              }
-            }
-
-            // Deep iteration into children hierarchy
-            firstWidget = this.__getFirst__P_61_11(child, firstWidget);
-          }
-        }
-        return firstWidget;
-      },
-      /**
-       * Find last (positioned) widget. (Sorted by coordinates, zIndex, etc.)
-       *
-       * @param parent {qx.ui.core.Widget} Parent widget
-       * @param lastWidget {qx.ui.core.Widget?null} Current last widget
-       * @return {qx.ui.core.Widget} The last (positioned) widget
-       */
-      __getLast__P_61_12(parent, lastWidget) {
-        var children = parent.getLayoutChildren();
-        var child;
-        for (var i = 0, l = children.length; i < l; i++) {
-          child = children[i];
-
-          // Filter spacers etc.
-          if (!(child instanceof qx.ui.core.Widget)) {
-            continue;
-          }
-
-          // Ignore focus roots completely
-          if (!this.isFocusRoot(child) && child.isEnabled() && child.isVisible()) {
-            if (child.isTabable()) {
-              if (lastWidget == null || this.__compareTabOrder__P_61_10(child, lastWidget) > 0) {
-                lastWidget = child;
-              }
-            }
-
-            // Deep iteration into children hierarchy
-            lastWidget = this.__getLast__P_61_12(child, lastWidget);
-          }
-        }
-        return lastWidget;
-      }
-    },
-    /*
-    *****************************************************************************
-       DESTRUCTOR
-    *****************************************************************************
-    */
-
-    destruct() {
-      this._disposeMap("__roots__P_61_0");
-      this.__focusedChild__P_61_2 = this.__activeChild__P_61_1 = this.__currentRoot__P_61_3 = null;
-    }
-  });
-  qx.ui.core.FocusHandler.$$dbClassInfo = $$dbClassInfo;
-})();
-
-(function () {
-  var $$dbClassInfo = {
-    "dependsOn": {
-      "qx.Class": {
-        "usage": "dynamic",
+      "qx.application.IApplication": {
         "require": true
       },
-      "qx.lang.Array": {},
+      "qx.locale.MTranslation": {
+        "require": true
+      },
+      "qx.theme.manager.Meta": {},
+      "qx.ui.tooltip.Manager": {},
+      "qx.ui.style.Stylesheet": {},
       "qx.ui.core.queue.Manager": {}
     }
   };
@@ -37294,142 +31542,150 @@
   ************************************************************************ */
 
   /**
-   * Keeps data about the visibility of all widgets. Updates the internal
-   * tree when widgets are added, removed or modify their visibility.
+   * Abstract base class for GUI applications using qooxdoo widgets.
+   *
+   * @require(qx.core.Init)
+   * @use(qx.module.Animation)
    */
-  qx.Class.define("qx.ui.core.queue.Visibility", {
-    statics: {
-      /** @type {Array} This contains all the queued widgets for the next flush. */
-      __queue__P_102_0: [],
-      /** @type {Map} map of widgets by hash code which are in the queue */
-      __lookup__P_102_1: {},
-      /** @type {Map} Maps hash codes to visibility */
-      __data__P_102_2: {},
+  qx.Class.define("qx.application.AbstractGui", {
+    type: "abstract",
+    extend: qx.core.Object,
+    implement: [qx.application.IApplication],
+    include: qx.locale.MTranslation,
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      /** @type {qx.ui.core.Widget} The root widget */
+      __root__P_33_0: null,
       /**
-       * Clears the cached data of the given widget. Normally only used
-       * during interims disposes of one or a few widgets.
+       * Create the root widget. This method is abstract and must be overridden
+       * by sub classes.
        *
-       * @param widget {qx.ui.core.Widget} The widget to clear
+       * @return {qx.ui.core.Widget} The root widget. This widget must be configured
+       *     with a {@link qx.ui.layout.Basic} or {@link qx.ui.layout.Canvas} layout.
        */
-      remove(widget) {
-        if (this.__lookup__P_102_1[widget.toHashCode()]) {
-          delete this.__lookup__P_102_1[widget.toHashCode()];
-          qx.lang.Array.remove(this.__queue__P_102_0, widget);
-        }
-        delete this.__data__P_102_2[widget.toHashCode()];
+      _createRootWidget() {
+        throw new Error("Abstract method call");
       },
       /**
-       * Whether the given widget is visible.
+       * Returns the application's root widget. The root widgets can act as container
+       * for popups. It is configured with a {@link qx.ui.layout.Basic} (if the
+       * application is an inline application) layout or a {@link qx.ui.layout.Canvas}
+       * (if the application is a standalone application) layout .
        *
-       * Please note that the information given by this method is queued and may not be accurate
-       * until the next queue flush happens.
+       * The root has the same add method as the configured layout
+       * ({@link qx.ui.layout.Basic} or {@link qx.ui.layout.Canvas}).
        *
-       * @param widget {qx.ui.core.Widget} The widget to query
-       * @return {Boolean} Whether the widget is visible
+       * @return {qx.ui.core.Widget} The application's root widget.
        */
-      isVisible(widget) {
-        return this.__data__P_102_2[widget.toHashCode()] || false;
+      getRoot() {
+        return this.__root__P_33_0;
+      },
+      // interface method
+      main() {
+        // Initialize themes
+        qx.theme.manager.Meta.getInstance().initialize();
+
+        // Initialize tooltip manager
+        qx.ui.tooltip.Manager.getInstance();
+        var rule = ["-webkit-touch-callout: none;", "-ms-touch-select: none;", "-webkit-tap-highlight-color: rgba(0,0,0,0);", "-webkit-tap-highlight-color: transparent;"].join("");
+        qx.ui.style.Stylesheet.getInstance().addRule("*", rule);
+        this.__root__P_33_0 = this._createRootWidget();
+
+        // make sure we start with a good scroll position
+        window.scrollTo(0, 0);
+      },
+      // interface method
+      finalize() {
+        this.render();
       },
       /**
-       * Computes the visibility for the given widget
+       * Updates the GUI rendering
        *
-       * @param widget {qx.ui.core.Widget} The widget to update
-       * @return {Boolean} Whether the widget is visible
        */
-      __computeVisible__P_102_3(widget) {
-        var data = this.__data__P_102_2;
-        var hash = widget.toHashCode();
-        var visible;
-
-        // Respect local value
-        if (widget.isExcluded()) {
-          visible = false;
-        } else {
-          // Parent hierarchy
-          var parent = widget.$$parent;
-          if (parent) {
-            visible = this.__computeVisible__P_102_3(parent);
-          } else {
-            visible = widget.isRootWidget();
-          }
-        }
-        return data[hash] = visible;
+      render() {
+        qx.ui.core.queue.Manager.flush();
       },
-      /**
-       * Adds a widget to the queue.
-       *
-       * Should only be used by {@link qx.ui.core.Widget}.
-       *
-       * @param widget {qx.ui.core.Widget} The widget to add.
-       */
-      add(widget) {
-        if (this.__lookup__P_102_1[widget.toHashCode()]) {
-          return;
-        }
-        this.__queue__P_102_0.unshift(widget);
-        this.__lookup__P_102_1[widget.toHashCode()] = widget;
-        qx.ui.core.queue.Manager.scheduleFlush("visibility");
+      // interface method
+      close(val) {
+        // empty
       },
-      /**
-       * Flushes the visibility queue.
-       *
-       * This is used exclusively by the {@link qx.ui.core.queue.Manager}.
-       */
-      flush() {
-        // Dispose all registered objects
-        var queue = this.__queue__P_102_0;
-        var data = this.__data__P_102_2;
-
-        // Dynamically add children to queue
-        // Only respect already known widgets because otherwise the children
-        // are also already in the queue (added on their own)
-        for (var i = queue.length - 1; i >= 0; i--) {
-          var hash = queue[i].toHashCode();
-          if (data[hash] != null) {
-            // recursive method call which adds widgets to the queue so be
-            // careful with that one (performance critical)
-            queue[i].addChildrenToQueue(queue);
-          }
-        }
-
-        // Cache old data, clear current data
-        // Do this before starting with recomputation because
-        // new data may also be added by related widgets and not
-        // only the widget itself.
-        var oldData = {};
-        for (var i = queue.length - 1; i >= 0; i--) {
-          var hash = queue[i].toHashCode();
-          oldData[hash] = data[hash];
-          data[hash] = null;
-        }
-
-        // Finally recompute
-        for (var i = queue.length - 1; i >= 0; i--) {
-          var widget = queue[i];
-          var hash = widget.toHashCode();
-          queue.splice(i, 1);
-
-          // Only update when not already updated by another widget
-          if (data[hash] == null) {
-            this.__computeVisible__P_102_3(widget);
-          }
-
-          // Check for updates required to the appearance.
-          // Hint: Invisible widgets are ignored inside appearance flush
-          if (data[hash] && data[hash] != oldData[hash]) {
-            widget.checkAppearanceNeeds();
-          }
-        }
-
-        // Recreate the array is cheaper compared to keep a sparse array over time
-        this.__queue__P_102_0 = [];
-        this.__lookup__P_102_1 = {};
+      // interface method
+      terminate() {
+        // empty
       }
     }
   });
-  qx.ui.core.queue.Visibility.$$dbClassInfo = $$dbClassInfo;
+  qx.application.AbstractGui.$$dbClassInfo = $$dbClassInfo;
 })();
-//# sourceMappingURL=package-1.js.map?dt=1769807053616
+
+(function () {
+  var $$dbClassInfo = {
+    "dependsOn": {
+      "qx.core.Init": {
+        "require": true
+      },
+      "qx.Class": {
+        "usage": "dynamic",
+        "require": true
+      },
+      "qx.application.AbstractGui": {
+        "require": true
+      },
+      "qx.ui.root.Application": {}
+    }
+  };
+  qx.Bootstrap.executePendingDefers($$dbClassInfo);
+  /* ************************************************************************
+  
+     qooxdoo - the new era of web development
+  
+     http://qooxdoo.org
+  
+     Copyright:
+       2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+  
+     License:
+       MIT: https://opensource.org/licenses/MIT
+       See the LICENSE file in the project's top-level directory for details.
+  
+     Authors:
+       * Sebastian Werner (wpbasti)
+  
+  ************************************************************************ */
+
+  /**
+   * For a GUI application that looks & feels like native desktop application
+   * (often called "RIA" - Rich Internet Application).
+   *
+   * Such a stand-alone application typically creates and updates all content
+   * dynamically. Often it is called a "single-page application", since the
+   * document itself is never reloaded or changed. Communication with the server
+   * is done with AJAX.
+   *
+   * @require(qx.core.Init)
+   */
+  qx.Class.define("qx.application.Standalone", {
+    extend: qx.application.AbstractGui,
+    /*
+    *****************************************************************************
+       MEMBERS
+    *****************************************************************************
+    */
+
+    members: {
+      _createRootWidget() {
+        return new qx.ui.root.Application(document);
+      }
+    }
+  });
+  qx.application.Standalone.$$dbClassInfo = $$dbClassInfo;
+})();
+//# sourceMappingURL=package-1.js.map?dt=1791845587359
 qx.$$packageData['1'] = {
   "locales": {},
   "resources": {},

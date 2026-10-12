@@ -1,7 +1,7 @@
 {
   "version": 0.3,
-  "lastModified": 1769800207935,
-  "lastModifiedIso": "2026-01-30T19:10:07.935Z",
+  "lastModified": 1791835265531,
+  "lastModifiedIso": "2026-10-12T20:01:05.531Z",
   "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/auth/Login.js",
   "type": "class",
   "location": {
@@ -13,7 +13,7 @@
     "end": {
       "line": 147,
       "column": 3,
-      "index": 5495
+      "index": 5735
     }
   },
   "className": "qxapp.pages.auth.Login",
@@ -31,7 +31,7 @@
       }
     ]
   },
-  "superClass": "ville.ui.layout.Center",
+  "superClass": "qx.ui.container.Composite",
   "mixins": [
     "qxapp.pages.MPage"
   ],
@@ -42,12 +42,12 @@
       "start": {
         "line": 11,
         "column": 2,
-        "index": 139
+        "index": 142
       },
       "end": {
         "line": 145,
         "column": 3,
-        "index": 5490
+        "index": 5730
       }
     }
   },
@@ -86,7 +86,7 @@
       ],
       "mixin": "qxapp.pages.MPage"
     },
-    "componentName": {
+    "pageName": {
       "location": {
         "start": {
           "line": 12,
@@ -96,7 +96,39 @@
         "end": {
           "line": 15,
           "column": 5,
-          "index": 285
+          "index": 276
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's name for the browser title "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's name for the browser title</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 4,
+          "index": 328
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 394
         }
       },
       "json": {

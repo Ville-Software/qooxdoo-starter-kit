@@ -58,7 +58,7 @@
      */
     construct(size) {
       qx.core.Object.constructor.call(this);
-      this.__pool__P_106_0 = {};
+      this.__pool__P_40_0 = {};
       if (size != null) {
         this.setSize(size);
       }
@@ -94,7 +94,7 @@
 
     members: {
       /** @type {Map} Stores arrays of instances for all managed classes */
-      __pool__P_106_0: null,
+      __pool__P_40_0: null,
       /*
       ---------------------------------------------------------------------------
         IMPL
@@ -119,7 +119,7 @@
           throw new Error("Class needs to be defined!");
         }
         var obj = null;
-        var pool = this.__pool__P_106_0[clazz.classname];
+        var pool = this.__pool__P_40_0[clazz.classname];
         if (pool) {
           obj = pool.pop();
         }
@@ -143,16 +143,16 @@
        */
       poolObject(obj) {
         // Dispose check
-        if (!this.__pool__P_106_0) {
+        if (!this.__pool__P_40_0) {
           return;
         }
         var classname = obj.classname;
-        var pool = this.__pool__P_106_0[classname];
+        var pool = this.__pool__P_40_0[classname];
         if (obj.$$pooled) {
           throw new Error("Object is already pooled: " + obj);
         }
         if (!pool) {
-          this.__pool__P_106_0[classname] = pool = [];
+          this.__pool__P_40_0[classname] = pool = [];
         }
 
         // Check to see whether the pool for this type is already full
@@ -177,7 +177,7 @@
     */
 
     destruct() {
-      var pool = this.__pool__P_106_0;
+      var pool = this.__pool__P_40_0;
       var classname, list, i, l;
       for (classname in pool) {
         list = pool[classname];
@@ -185,10 +185,10 @@
           list[i].dispose();
         }
       }
-      delete this.__pool__P_106_0;
+      delete this.__pool__P_40_0;
     }
   });
   qx.util.ObjectPool.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=ObjectPool.js.map?dt=1769806690184
+//# sourceMappingURL=ObjectPool.js.map?dt=1791841650321

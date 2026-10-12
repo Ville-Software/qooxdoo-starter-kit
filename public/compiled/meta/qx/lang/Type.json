@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471338218,
-  "lastModifiedIso": "2026-01-03T20:15:38.218Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/lang/Type.js",
+  "lastModified": 1739993516407,
+  "lastModifiedIso": "2025-02-19T19:31:56.407Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/lang/Type.js",
   "type": "bootstrap",
   "location": {
     "start": {
@@ -11,9 +11,9 @@
       "index": 559
     },
     "end": {
-      "line": 215,
+      "line": 182,
       "column": 3,
-      "index": 6807
+      "index": 5770
     }
   },
   "className": "qx.lang.Type",
@@ -215,21 +215,18 @@
       "jsdoc": {
         "raw": [
           "*",
+          "     * Whether the value is an object. Note that built-in types like Window are",
+          "     * not reported to be objects.",
           "     *",
-          "     * Whether the value is an POJO (ie {})",
-          "     * or an object which is created from a ES6-style class or prototypical-inheritance-based class;",
-          "     * if you need to determine whether something is a POJO and not created from a class, use isPojo instead",
-          "     *",
-          "     * Note that built-in types like Window are not deemed to be objects.",
           "     * @signature function(value)",
-          "     * @param {*} value value to check.",
+          "     * @param value {var} Value to check.",
           "     * @return {Boolean} Whether the value is an object.",
           "     "
         ],
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Whether the value is an POJO (ie {})\n or an object which is created from a ES6-style class or prototypical-inheritance-based class;\n if you need to determine whether something is a POJO and not created from a class, use isPojo instead\n Note that built-in types like Window are not deemed to be objects.</p>"
+            "body": "<p>Whether the value is an object. Note that built-in types like Window are\n not reported to be objects.</p>"
           }
         ],
         "@signature": [
@@ -241,10 +238,10 @@
         "@param": [
           {
             "name": "@param",
-            "body": "{*} value value to check.",
+            "body": "value {var} Value to check.",
             "paramName": "value",
-            "description": "value to check.",
-            "type": "*"
+            "description": " Value to check.",
+            "type": "var"
           }
         ],
         "@return": [
@@ -259,76 +256,16 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 65,
+          "line": 62,
           "column": 4,
-          "index": 1933
+          "index": 1715
         },
         "end": {
-          "line": 65,
+          "line": 62,
           "column": 35,
-          "index": 1964
+          "index": 1746
         }
       },
-      "returnType": {
-        "type": "boolean"
-      },
-      "appearsIn": []
-    },
-    "isPojo": {
-      "jsdoc": {
-        "raw": [
-          "*",
-          "     * Whether the value is strictly a POJO.",
-          "     * Its prototype chain must not contain any constructors which are not the Object constructor i.e. traditional prototype-based classes or ES6 classes.",
-          "     *",
-          "     * @param {*} value",
-          "     * @returns {Boolean} Whether the value is strictly a POJO.",
-          "     "
-        ],
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Whether the value is strictly a POJO.\n Its prototype chain must not contain any constructors which are not the Object constructor i.e. traditional prototype-based classes or ES6 classes.</p>"
-          }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "{*} value",
-            "paramName": "value",
-            "description": "",
-            "type": "*"
-          }
-        ],
-        "@return": [
-          {
-            "name": "@return",
-            "body": "{Boolean} Whether the value is strictly a POJO.",
-            "type": "boolean",
-            "description": "Whether the value is strictly a POJO."
-          }
-        ]
-      },
-      "access": "public",
-      "location": {
-        "start": {
-          "line": 74,
-          "column": 4,
-          "index": 2282
-        },
-        "end": {
-          "line": 95,
-          "column": 5,
-          "index": 2783
-        }
-      },
-      "type": "function",
-      "params": [
-        {
-          "name": "value",
-          "type": "*"
-        }
-      ],
       "returnType": {
         "type": "boolean"
       },
@@ -378,14 +315,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 104,
+          "line": 71,
           "column": 4,
-          "index": 2987
+          "index": 1950
         },
         "end": {
-          "line": 104,
+          "line": 71,
           "column": 39,
-          "index": 3022
+          "index": 1985
         }
       },
       "returnType": {
@@ -437,14 +374,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 113,
+          "line": 80,
           "column": 4,
-          "index": 3268
+          "index": 2231
         },
         "end": {
-          "line": 113,
+          "line": 80,
           "column": 69,
-          "index": 3333
+          "index": 2296
         }
       },
       "returnType": {
@@ -489,14 +426,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 121,
+          "line": 88,
           "column": 4,
-          "index": 3523
+          "index": 2486
         },
         "end": {
-          "line": 123,
+          "line": 90,
           "column": 5,
-          "index": 3594
+          "index": 2557
         }
       },
       "type": "function",
@@ -553,14 +490,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 136,
+          "line": 103,
           "column": 4,
-          "index": 3976
+          "index": 2939
         },
         "end": {
-          "line": 146,
+          "line": 113,
           "column": 5,
-          "index": 4480
+          "index": 3443
         }
       },
       "type": "function",
@@ -612,14 +549,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 154,
+          "line": 121,
           "column": 4,
-          "index": 4648
+          "index": 3611
         },
         "end": {
-          "line": 164,
+          "line": 131,
           "column": 5,
-          "index": 5156
+          "index": 4119
         }
       },
       "type": "function",
@@ -671,14 +608,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 172,
+          "line": 139,
           "column": 4,
-          "index": 5318
+          "index": 4281
         },
         "end": {
-          "line": 182,
+          "line": 149,
           "column": 5,
-          "index": 5814
+          "index": 4777
         }
       },
       "type": "function",
@@ -730,14 +667,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 190,
+          "line": 157,
           "column": 4,
-          "index": 5978
+          "index": 4941
         },
         "end": {
-          "line": 200,
+          "line": 167,
           "column": 5,
-          "index": 6478
+          "index": 5441
         }
       },
       "type": "function",
@@ -792,14 +729,14 @@
       "access": "public",
       "location": {
         "start": {
-          "line": 211,
+          "line": 178,
           "column": 4,
-          "index": 6716
+          "index": 5679
         },
         "end": {
-          "line": 213,
+          "line": 180,
           "column": 5,
-          "index": 6799
+          "index": 5762
         }
       },
       "type": "function",

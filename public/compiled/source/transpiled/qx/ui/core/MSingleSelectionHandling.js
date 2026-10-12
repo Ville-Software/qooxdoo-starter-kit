@@ -63,7 +63,7 @@
 
     members: {
       /** @type {qx.ui.core.SingleSelectionManager} the single selection manager */
-      __manager__P_59_0: null,
+      __manager__P_65_0: null,
       /*
       ---------------------------------------------------------------------------
         PUBLIC API
@@ -82,7 +82,7 @@
           return null;
         }
         if (item instanceof qx.ui.core.Widget) {
-          this.__getManager__P_59_1().setSelected(item);
+          this.__getManager__P_65_1().setSelected(item);
           return null;
         } else {
           return new TypeError("Given argument is not null or a {qx.ui.core.Widget}.");
@@ -94,13 +94,13 @@
        * @returns {null|qx.ui.core.Widget} The currently selected widget or null if there is none.
        */
       getValue() {
-        return this.__getManager__P_59_1().getSelected() || null;
+        return this.__getManager__P_65_1().getSelected() || null;
       },
       /**
        * resetValue implements part of the {@link qx.ui.form.IField} interface.
        */
       resetValue() {
-        this.__getManager__P_59_1().resetSelected();
+        this.__getManager__P_65_1().resetSelected();
       },
       /**
        * Returns an array of currently selected items.
@@ -111,7 +111,7 @@
        * @return {qx.ui.core.Widget[]} List of items.
        */
       getSelection() {
-        var selected = this.__getManager__P_59_1().getSelected();
+        var selected = this.__getManager__P_65_1().getSelected();
         if (selected) {
           return [selected];
         } else {
@@ -131,7 +131,7 @@
             this.resetSelection();
             break;
           case 1:
-            this.__getManager__P_59_1().setSelected(items[0]);
+            this.__getManager__P_65_1().setSelected(items[0]);
             break;
           default:
             throw new Error("Could only select one item, but the selection array contains " + items.length + " items!");
@@ -141,7 +141,7 @@
        * Clears the whole selection at once.
        */
       resetSelection() {
-        this.__getManager__P_59_1().resetSelected();
+        this.__getManager__P_65_1().resetSelected();
       },
       /**
        * Detects whether the given item is currently selected.
@@ -151,7 +151,7 @@
        * @throws {Error} if one of the items is not a child element.
        */
       isSelected(item) {
-        return this.__getManager__P_59_1().isSelected(item);
+        return this.__getManager__P_65_1().isSelected(item);
       },
       /**
        * Whether the selection is empty.
@@ -159,7 +159,7 @@
        * @return {Boolean} Whether the selection is empty.
        */
       isSelectionEmpty() {
-        return this.__getManager__P_59_1().isSelectionEmpty();
+        return this.__getManager__P_65_1().isSelectionEmpty();
       },
       /**
        * Returns all elements which are selectable.
@@ -169,7 +169,7 @@
        * @return {qx.ui.core.Widget[]} The contained items.
        */
       getSelectables(all) {
-        return this.__getManager__P_59_1().getSelectables(all);
+        return this.__getManager__P_65_1().getSelectables(all);
       },
       /*
       ---------------------------------------------------------------------------
@@ -197,10 +197,10 @@
        *
        * @return {qx.ui.core.SingleSelectionManager} Single selection manager.
        */
-      __getManager__P_59_1() {
-        if (this.__manager__P_59_0 == null) {
+      __getManager__P_65_1() {
+        if (this.__manager__P_65_0 == null) {
           var that = this;
-          this.__manager__P_59_0 = new qx.ui.core.SingleSelectionManager({
+          this.__manager__P_65_0 = new qx.ui.core.SingleSelectionManager({
             getItems() {
               return that._getItems();
             },
@@ -212,10 +212,10 @@
               }
             }
           });
-          this.__manager__P_59_0.addListener("changeSelected", this._onChangeSelected, this);
+          this.__manager__P_65_0.addListener("changeSelected", this._onChangeSelected, this);
         }
-        this.__manager__P_59_0.setAllowEmptySelection(this._isAllowEmptySelection());
-        return this.__manager__P_59_0;
+        this.__manager__P_65_0.setAllowEmptySelection(this._isAllowEmptySelection());
+        return this.__manager__P_65_0;
       }
     },
     /*
@@ -225,10 +225,10 @@
     */
 
     destruct() {
-      this._disposeObjects("__manager__P_59_0");
+      this._disposeObjects("__manager__P_65_0");
     }
   });
   qx.ui.core.MSingleSelectionHandling.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MSingleSelectionHandling.js.map?dt=1769806688506
+//# sourceMappingURL=MSingleSelectionHandling.js.map?dt=1791841650621

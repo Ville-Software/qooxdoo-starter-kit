@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471337486,
-  "lastModifiedIso": "2026-01-03T20:15:37.486Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/ui/mobile/form/MState.js",
+  "lastModified": 1739993516111,
+  "lastModifiedIso": "2025-02-19T19:31:56.111Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/ui/mobile/form/MState.js",
   "type": "mixin",
   "location": {
     "start": {

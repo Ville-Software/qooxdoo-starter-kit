@@ -161,12 +161,12 @@
 
     members: {
       // special handling for opera
-      __enter__P_158_0: false,
-      __onInputTimeoutId__P_158_1: null,
+      __enter__P_152_0: false,
+      __onInputTimeoutId__P_152_1: null,
       // stores the former set value for opera and IE
-      __oldValue__P_158_2: null,
+      __oldValue__P_152_2: null,
       // stores the former set value for IE
-      __oldInputValue__P_158_3: null,
+      __oldInputValue__P_152_3: null,
       /*
       ---------------------------------------------------------------------------
         EVENT HANDLER INTERFACE
@@ -187,7 +187,7 @@
       // interface implementation
       registerEvent(target, type, capture) {
         if (qx.core.Environment.get("engine.name") == "mshtml" && (qx.core.Environment.get("engine.version") < 9 || qx.core.Environment.get("engine.version") >= 9 && qx.core.Environment.get("browser.documentmode") < 9)) {
-          if (!target.__inputHandlerAttached__P_158_4) {
+          if (!target.__inputHandlerAttached__P_152_4) {
             var tag = target.tagName.toLowerCase();
             var elementType = target.type;
             if (elementType === "text" || elementType === "password" || tag === "textarea" || elementType === "checkbox" || elementType === "radio") {
@@ -200,11 +200,11 @@
               this._onKeyPressWrapped = qx.lang.Function.listener(this._onKeyPress, this, target);
               qx.bom.Event.addNativeListener(target, "keypress", this._onKeyPressWrapped);
             }
-            target.__inputHandlerAttached__P_158_4 = true;
+            target.__inputHandlerAttached__P_152_4 = true;
           }
         } else {
           if (type === "input") {
-            this.__registerInputListener__P_158_5(target);
+            this.__registerInputListener__P_152_5(target);
           } else if (type === "change") {
             if (target.type === "radio" || target.type === "checkbox") {
               qx.bom.Event.addNativeListener(target, "change", this._onChangeCheckedWrapper);
@@ -222,7 +222,7 @@
           }
         }
       },
-      __registerInputListener__P_158_5: qx.core.Environment.select("engine.name", {
+      __registerInputListener__P_152_5: qx.core.Environment.select("engine.name", {
         mshtml(target) {
           if (qx.core.Environment.get("engine.version") >= 9 && qx.core.Environment.get("browser.documentmode") >= 9) {
             qx.bom.Event.addNativeListener(target, "input", this._onInputWrapper);
@@ -259,7 +259,7 @@
       // interface implementation
       unregisterEvent(target, type) {
         if (qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("engine.version") < 9 && qx.core.Environment.get("browser.documentmode") < 9) {
-          if (target.__inputHandlerAttached__P_158_4) {
+          if (target.__inputHandlerAttached__P_152_4) {
             var tag = target.tagName.toLowerCase();
             var elementType = target.type;
             if (elementType === "text" || elementType === "password" || tag === "textarea" || elementType === "checkbox" || elementType === "radio") {
@@ -272,14 +272,14 @@
               qx.bom.Event.removeNativeListener(target, "keypress", this._onKeyPressWrapped);
             }
             try {
-              delete target.__inputHandlerAttached__P_158_4;
+              delete target.__inputHandlerAttached__P_152_4;
             } catch (ex) {
-              target.__inputHandlerAttached__P_158_4 = null;
+              target.__inputHandlerAttached__P_152_4 = null;
             }
           }
         } else {
           if (type === "input") {
-            this.__unregisterInputListener__P_158_6(target);
+            this.__unregisterInputListener__P_152_6(target);
           } else if (type === "change") {
             if (target.type === "radio" || target.type === "checkbox") {
               qx.bom.Event.removeNativeListener(target, "change", this._onChangeCheckedWrapper);
@@ -294,7 +294,7 @@
           }
         }
       },
-      __unregisterInputListener__P_158_6: qx.core.Environment.select("engine.name", {
+      __unregisterInputListener__P_152_6: qx.core.Environment.select("engine.name", {
         mshtml(target) {
           if (qx.core.Environment.get("engine.version") >= 9 && qx.core.Environment.get("browser.documentmode") >= 9) {
             qx.bom.Event.removeNativeListener(target, "input", this._onInputWrapper);
@@ -342,16 +342,16 @@
       _onKeyPress: qx.core.Environment.select("engine.name", {
         mshtml(e, target) {
           if (e.keyCode === 13) {
-            if (target.value !== this.__oldValue__P_158_2) {
-              this.__oldValue__P_158_2 = target.value;
+            if (target.value !== this.__oldValue__P_152_2) {
+              this.__oldValue__P_152_2 = target.value;
               qx.event.Registration.fireEvent(target, "change", qx.event.type.Data, [target.value]);
             }
           }
         },
         opera(e, target) {
           if (e.keyCode === 13) {
-            if (target.value !== this.__oldValue__P_158_2) {
-              this.__oldValue__P_158_2 = target.value;
+            if (target.value !== this.__oldValue__P_152_2) {
+              this.__oldValue__P_152_2 = target.value;
               qx.event.Registration.fireEvent(target, "change", qx.event.type.Data, [target.value]);
             }
           }
@@ -378,8 +378,8 @@
       _inputFix: qx.core.Environment.select("engine.name", {
         mshtml(e, target) {
           if (e.keyCode === 46 || e.keyCode === 8) {
-            if (target.value !== this.__oldInputValue__P_158_3) {
-              this.__oldInputValue__P_158_3 = target.value;
+            if (target.value !== this.__oldInputValue__P_152_3) {
+              this.__oldInputValue__P_152_3 = target.value;
               qx.event.Registration.fireEvent(target, "input", qx.event.type.Data, [target.value]);
             }
           }
@@ -402,7 +402,7 @@
         opera(e) {
           // enter is pressed
           if (e.keyCode === 13) {
-            this.__enter__P_158_0 = true;
+            this.__enter__P_152_0 = true;
           }
         },
         default: null
@@ -418,7 +418,7 @@
         opera(e) {
           // enter is pressed
           if (e.keyCode === 13) {
-            this.__enter__P_158_0 = false;
+            this.__enter__P_152_0 = false;
           }
         },
         default: null
@@ -439,11 +439,11 @@
         var target = qx.bom.Event.getTarget(e);
         var tag = target.tagName.toLowerCase();
         // ignore native input event when triggered by return in input element
-        if (!this.__enter__P_158_0 || tag !== "input") {
+        if (!this.__enter__P_152_0 || tag !== "input") {
           // opera lower 10.6 needs a special treatment for input events because
           // they are also fired on blur
           if (qx.core.Environment.get("engine.name") == "opera" && qx.core.Environment.get("browser.version") < 10.6) {
-            this.__onInputTimeoutId__P_158_1 = window.setTimeout(function () {
+            this.__onInputTimeoutId__P_152_1 = window.setTimeout(function () {
               qx.event.Registration.fireEvent(target, "input", qx.event.type.Data, [target.value]);
             }, 0);
           } else {
@@ -524,4 +524,4 @@
   qx.event.handler.Input.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Input.js.map?dt=1769806692726
+//# sourceMappingURL=Input.js.map?dt=1791841652155

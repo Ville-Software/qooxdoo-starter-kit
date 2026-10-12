@@ -20,10 +20,10 @@
         "require": true
       },
       "qx.lang.Function": {},
-      "qx.bom.client.Engine": {
+      "qx.bom.client.Event": {
         "require": true
       },
-      "qx.bom.client.Event": {
+      "qx.bom.client.Engine": {
         "require": true
       },
       "qx.bom.Event": {},
@@ -43,13 +43,13 @@
           "load": true,
           "className": "qx.bom.client.Device"
         },
-        "engine.name": {
-          "className": "qx.bom.client.Engine"
-        },
         "event.mspointer": {
           "className": "qx.bom.client.Event"
         },
         "engine.version": {
+          "className": "qx.bom.client.Engine"
+        },
+        "engine.name": {
           "className": "qx.bom.client.Engine"
         },
         "browser.documentmode": {
@@ -122,23 +122,23 @@
      * @param emitter {qx.event.Emitter} Event emitter object
      */
     construct(target, emitter) {
-      this.__target__P_201_0 = target;
-      this.__emitter__P_201_1 = emitter;
+      this.__target__P_202_0 = target;
+      this.__emitter__P_202_1 = emitter;
       this._initTouchObserver();
-      this.__pointers__P_201_2 = [];
-      this.__touchStartPosition__P_201_3 = {};
+      this.__pointers__P_202_2 = [];
+      this.__touchStartPosition__P_202_3 = {};
     },
     members: {
-      __target__P_201_0: null,
-      __emitter__P_201_1: null,
-      __onTouchEventWrapper__P_201_4: null,
-      __originalTarget__P_201_5: null,
-      __touchStartPosition__P_201_3: null,
-      __startTime__P_201_6: null,
-      __beginScalingDistance__P_201_7: null,
-      __beginRotation__P_201_8: null,
-      __pointers__P_201_2: null,
-      __touchEventNames__P_201_9: null,
+      __target__P_202_0: null,
+      __emitter__P_202_1: null,
+      __onTouchEventWrapper__P_202_4: null,
+      __originalTarget__P_202_5: null,
+      __touchStartPosition__P_202_3: null,
+      __startTime__P_202_6: null,
+      __beginScalingDistance__P_202_7: null,
+      __beginRotation__P_202_8: null,
+      __pointers__P_202_2: null,
+      __touchEventNames__P_202_9: null,
       /*
       ---------------------------------------------------------------------------
         OBSERVER INIT
@@ -149,23 +149,20 @@
        * Initializes the native touch event listeners.
        */
       _initTouchObserver() {
-        this.__onTouchEventWrapper__P_201_4 = qx.lang.Function.listener(this._onTouchEvent, this);
-        this.__touchEventNames__P_201_9 = ["touchstart", "touchmove", "touchend", "touchcancel"];
-
-        // Ensure the workaround applies to IE only as intended
-        // See: https://github.com/qooxdoo/qooxdoo/issues/10774
-        if (qx.core.Environment.get("engine.name") == "mshtml" && qx.core.Environment.get("event.mspointer")) {
+        this.__onTouchEventWrapper__P_202_4 = qx.lang.Function.listener(this._onTouchEvent, this);
+        this.__touchEventNames__P_202_9 = ["touchstart", "touchmove", "touchend", "touchcancel"];
+        if (qx.core.Environment.get("event.mspointer")) {
           var engineVersion = parseInt(qx.core.Environment.get("engine.version"), 10);
           if (engineVersion == 10) {
             // IE 10
-            this.__touchEventNames__P_201_9 = ["MSPointerDown", "MSPointerMove", "MSPointerUp", "MSPointerCancel"];
+            this.__touchEventNames__P_202_9 = ["MSPointerDown", "MSPointerMove", "MSPointerUp", "MSPointerCancel"];
           } else {
             // IE 11+
-            this.__touchEventNames__P_201_9 = ["pointerdown", "pointermove", "pointerup", "pointercancel"];
+            this.__touchEventNames__P_202_9 = ["pointerdown", "pointermove", "pointerup", "pointercancel"];
           }
         }
-        for (var i = 0; i < this.__touchEventNames__P_201_9.length; i++) {
-          qx.bom.Event.addNativeListener(this.__target__P_201_0, this.__touchEventNames__P_201_9[i], this.__onTouchEventWrapper__P_201_4);
+        for (var i = 0; i < this.__touchEventNames__P_202_9.length; i++) {
+          qx.bom.Event.addNativeListener(this.__target__P_202_0, this.__touchEventNames__P_202_9[i], this.__onTouchEventWrapper__P_202_4);
         }
       },
       /*
@@ -178,8 +175,8 @@
        * Disconnects the native touch event listeners.
        */
       _stopTouchObserver() {
-        for (var i = 0; i < this.__touchEventNames__P_201_9.length; i++) {
-          qx.bom.Event.removeNativeListener(this.__target__P_201_0, this.__touchEventNames__P_201_9[i], this.__onTouchEventWrapper__P_201_4);
+        for (var i = 0; i < this.__touchEventNames__P_202_9.length; i++) {
+          qx.bom.Event.removeNativeListener(this.__target__P_202_0, this.__touchEventNames__P_202_9[i], this.__onTouchEventWrapper__P_202_4);
         }
       },
       /*
@@ -235,8 +232,8 @@
        * @return {Map} a map containing deltaX as <code>x</code>, deltaY as <code>y</code>, the direction of the movement as <code>axis</code> and the touch identifier as <code>identifier</code>.
        */
       _calcSingleTouchDelta(touch) {
-        if (this.__touchStartPosition__P_201_3.hasOwnProperty(touch.identifier)) {
-          var touchStartPosition = this.__touchStartPosition__P_201_3[touch.identifier];
+        if (this.__touchStartPosition__P_202_3.hasOwnProperty(touch.identifier)) {
+          var touchStartPosition = this.__touchStartPosition__P_202_3[touch.identifier];
           var deltaX = Math.floor(touch.clientX - touchStartPosition[0]);
           var deltaY = Math.floor(touch.clientY - touchStartPosition[1]);
           var axis = "x";
@@ -275,37 +272,37 @@
         }
         domEvent.delta = [];
         if (type == "touchstart") {
-          this.__originalTarget__P_201_5 = this._getTarget(domEvent);
+          this.__originalTarget__P_202_5 = this._getTarget(domEvent);
           if (domEvent.touches && domEvent.touches.length > 1) {
-            this.__beginScalingDistance__P_201_7 = this._getScalingDistance(domEvent.touches[0], domEvent.touches[1]);
-            this.__beginRotation__P_201_8 = this._getRotationAngle(domEvent.touches[0], domEvent.touches[1]);
+            this.__beginScalingDistance__P_202_7 = this._getScalingDistance(domEvent.touches[0], domEvent.touches[1]);
+            this.__beginRotation__P_202_8 = this._getRotationAngle(domEvent.touches[0], domEvent.touches[1]);
           }
           for (var i = 0; i < domEvent.changedTouches.length; i++) {
             var touch = domEvent.changedTouches[i];
-            this.__touchStartPosition__P_201_3[touch.identifier] = [touch.clientX, touch.clientY];
+            this.__touchStartPosition__P_202_3[touch.identifier] = [touch.clientX, touch.clientY];
           }
         }
         if (type == "touchmove") {
           // Polyfill for scale
           if (typeof domEvent.scale == "undefined" && domEvent.targetTouches.length > 1) {
             var currentScalingDistance = this._getScalingDistance(domEvent.targetTouches[0], domEvent.targetTouches[1]);
-            domEvent.scale = currentScalingDistance / this.__beginScalingDistance__P_201_7;
+            domEvent.scale = currentScalingDistance / this.__beginScalingDistance__P_202_7;
           }
           // Polyfill for rotation
           if ((typeof domEvent.rotation == "undefined" || qx.core.Environment.get("event.mspointer")) && domEvent.targetTouches.length > 1) {
             var currentRotation = this._getRotationAngle(domEvent.targetTouches[0], domEvent.targetTouches[1]);
-            domEvent._rotation = currentRotation - this.__beginRotation__P_201_8;
+            domEvent._rotation = currentRotation - this.__beginRotation__P_202_8;
           }
           domEvent.delta = this._calcTouchesDelta(domEvent.targetTouches);
         }
-        this._fireEvent(domEvent, type, this.__originalTarget__P_201_5);
+        this._fireEvent(domEvent, type, this.__originalTarget__P_202_5);
         if (qx.core.Environment.get("event.mspointer")) {
           if (type == "touchend" || type == "touchcancel") {
-            delete this.__pointers__P_201_2[domEvent.pointerId];
+            delete this.__pointers__P_202_2[domEvent.pointerId];
           }
         }
         if ((type == "touchend" || type == "touchcancel") && domEvent.changedTouches[0]) {
-          delete this.__touchStartPosition__P_201_3[domEvent.changedTouches[0].identifier];
+          delete this.__touchStartPosition__P_202_3[domEvent.changedTouches[0].identifier];
         }
       },
       /**
@@ -318,12 +315,12 @@
       _detectTouchesByPointer(domEvent, type) {
         var touches = [];
         if (type == "touchstart") {
-          this.__pointers__P_201_2[domEvent.pointerId] = domEvent;
+          this.__pointers__P_202_2[domEvent.pointerId] = domEvent;
         } else if (type == "touchmove") {
-          this.__pointers__P_201_2[domEvent.pointerId] = domEvent;
+          this.__pointers__P_202_2[domEvent.pointerId] = domEvent;
         }
-        for (var pointerId in this.__pointers__P_201_2) {
-          var pointer = this.__pointers__P_201_2[pointerId];
+        for (var pointerId in this.__pointers__P_202_2) {
+          var pointer = this.__pointers__P_202_2[pointerId];
           touches.push(pointer);
         }
         return touches;
@@ -367,7 +364,7 @@
           // for which the fix was intended
           // See: https://github.com/qooxdoo/qooxdoo/issues/9481
           //
-          var targetForIE = this.__evaluateTarget__P_201_10(domEvent);
+          var targetForIE = this.__evaluateTarget__P_202_10(domEvent);
           if (targetForIE) {
             target = targetForIE;
           }
@@ -381,7 +378,7 @@
        * @param domEvent {Event} DOM event
        * @return {Element|null} Event target
        */
-      __evaluateTarget__P_201_10(domEvent) {
+      __evaluateTarget__P_202_10(domEvent) {
         var clientX = null;
         var clientY = null;
         if (domEvent && domEvent.touches && domEvent.touches.length !== 0) {
@@ -415,8 +412,8 @@
           target = this._getTarget(domEvent);
         }
         var type = type || domEvent.type;
-        if (target && target.nodeType && this.__emitter__P_201_1) {
-          this.__emitter__P_201_1.emit(type, domEvent);
+        if (target && target.nodeType && this.__emitter__P_202_1) {
+          this.__emitter__P_202_1.emit(type, domEvent);
         }
       },
       /**
@@ -424,11 +421,11 @@
        */
       dispose() {
         this._stopTouchObserver();
-        this.__originalTarget__P_201_5 = this.__target__P_201_0 = this.__touchEventNames__P_201_9 = this.__pointers__P_201_2 = this.__emitter__P_201_1 = this.__beginScalingDistance__P_201_7 = this.__beginRotation__P_201_8 = null;
+        this.__originalTarget__P_202_5 = this.__target__P_202_0 = this.__touchEventNames__P_202_9 = this.__pointers__P_202_2 = this.__emitter__P_202_1 = this.__beginScalingDistance__P_202_7 = this.__beginRotation__P_202_8 = null;
       }
     }
   });
   qx.event.handler.TouchCore.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=TouchCore.js.map?dt=1769806694408
+//# sourceMappingURL=TouchCore.js.map?dt=1791841652748

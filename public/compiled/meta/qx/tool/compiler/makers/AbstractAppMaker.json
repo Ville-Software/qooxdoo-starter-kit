@@ -1,8 +1,8 @@
 {
   "version": 0.3,
-  "lastModified": 1767471334937,
-  "lastModifiedIso": "2026-01-03T20:15:34.937Z",
-  "classFilename": "../../../node_modules/@qooxdoo/framework/source/class/qx/tool/compiler/makers/AbstractAppMaker.js",
+  "lastModified": 1739993515155,
+  "lastModifiedIso": "2025-02-19T19:31:55.155Z",
+  "classFilename": "../../../../../../../usr/local/lib/node_modules/@qooxdoo/framework/source/class/qx/tool/compiler/makers/AbstractAppMaker.js",
   "type": "class",
   "location": {
     "start": {

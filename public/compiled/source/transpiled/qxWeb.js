@@ -61,7 +61,7 @@
     extend: qx.type.BaseArray,
     statics: {
       // internal storage for all initializers
-      __init__P_209_0: [],
+      __init__P_171_0: [],
       // internal reference to the used qx namespace
       $$qx: qx,
       /**
@@ -96,8 +96,8 @@
           clazz = qx.Bootstrap.getByName(arg[0].getAttribute("data-qx-class")) || clazz;
         }
         var col = qx.lang.Array.cast(clean, clazz);
-        for (var i = 0; i < qxWeb.__init__P_209_0.length; i++) {
-          qxWeb.__init__P_209_0[i].call(col);
+        for (var i = 0; i < qxWeb.__init__P_171_0.length; i++) {
+          qxWeb.__init__P_171_0[i].call(col);
         }
         return col;
       },
@@ -184,7 +184,7 @@
        * @param init {Function} The initialization method for a module.
        */
       $attachInit(init) {
-        this.__init__P_209_0.push(init);
+        this.__init__P_171_0.push(init);
       },
       /**
        * Define a new class using the qooxdoo class system.
@@ -461,4 +461,4 @@
   qxWeb.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=qxWeb.js.map?dt=1769806694771
+//# sourceMappingURL=qxWeb.js.map?dt=1791841652382

@@ -5,20 +5,23 @@
         "usage": "dynamic",
         "require": true
       },
-      "ville.ui.layout.Flex": {
+      "qx.ui.container.Composite": {
         "construct": true,
         "require": true
       },
       "qxapp.pages.MPage": {
         "require": true
       },
+      "qx.ui.layout.Canvas": {
+        "construct": true
+      },
       "qx.lang.String": {
         "construct": true
       },
-      "qx.core.Init": {
+      "ville.ui.navigation.Anchor": {
         "construct": true
       },
-      "ville.ui.form.Anchor": {
+      "qx.core.Init": {
         "construct": true
       }
     }
@@ -29,10 +32,10 @@
    *
    */
   qx.Class.define("qxapp.pages.auth.Register", {
-    extend: ville.ui.layout.Flex,
+    extend: qx.ui.container.Composite,
     include: qxapp.pages.MPage,
     construct() {
-      ville.ui.layout.Flex.constructor.call(this);
+      qx.ui.container.Composite.constructor.call(this, new qx.ui.layout.Canvas());
       this.setComponentName("auth.Register");
       const pagenameroot = "register";
       const pageurl = `/${pagenameroot}`;
@@ -44,18 +47,18 @@
       });
 
       // Add to routing
-      var routing = qx.core.Init.getApplication().getRouting();
+      // var routing = qx.core.Init.getApplication().getRouting();
       this.setPageUrl(pageurl);
-      var login = new ville.ui.form.Anchor("Log in");
+      var login = new ville.ui.navigation.Anchor("Log in");
       login.setHref("/login");
       login.addListener("click", () => {
         qx.core.Init.getApplication().LoadStackPart("auth.Login", this);
       }, this);
-      this.setAttribute("html", pagenameroot);
+      this.getContentElement().setAttribute("html", pagenameroot);
       this.add(login);
     }
   });
   qxapp.pages.auth.Register.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Register.js.map?dt=1769806685542
+//# sourceMappingURL=Register.js.map?dt=1791841649259

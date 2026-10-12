@@ -14,9 +14,6 @@
     "init",
     "apply",
     "themeable",
-    "excludeInlineStyles",
-    "clearAllInlineStyles",
-    "removeCssClasses",
     "members",
     "_applyCssUtilityClass",
     "value",
@@ -25,15 +22,6 @@
     "getContentElement",
     "removeClass",
     "addClass",
-    "_applyExcludeInlineStyles",
-    "elem",
-    "style",
-    "removeStyle",
-    "_applyClearAllInlineStyles",
-    "elemstyles",
-    "getAllStyles",
-    "_applyRemoveCssClasses",
-    "qxcssclass",
     "ville",
     "cssuc",
     "MCssUtilityClass"
@@ -42,8 +30,8 @@
     "/Users/sqville/Herd/qooxdoo-starter-kit/resources/qxapp/source/class/ville/cssuc/MCssUtilityClass.js"
   ],
   "sourcesContent": [
-    "qx.Mixin.define(\"ville.cssuc.MCssUtilityClass\",\n{      \n  properties :\n  {\n    cssUtilityClass: {\n      check: \"String\",\n      nullable: true,\n      init: null,\n      apply: \"_applyCssUtilityClass\",\n      themeable: true\n    },\n\n    excludeInlineStyles: {\n      check: \"Array\",\n      nullable: true,\n      init: null,\n      apply: \"_applyExcludeInlineStyles\",\n      themeable: true\n    },\n\n    clearAllInlineStyles: {\n      check: \"Boolean\",\n      init: false,\n      apply: \"_applyClearAllInlineStyles\",\n      themeable: true\n    },\n\n    removeCssClasses: {\n      check: \"Array\",\n      nullable: true,\n      init: null,\n      apply: \"_applyRemoveCssClasses\",\n      themeable: true\n    }\n  },\n\n  members :\n  {\n    // property apply\n    _applyCssUtilityClass(value, old) {\n      var content = this.getContentElement();\n      if (old) {\n        content.removeClass(old);\n      }\n      if (value) {\n        content.addClass(value);\n      }\n    },\n\n    // property apply\n    _applyExcludeInlineStyles(value, old) {\n      var elem = this.getContentElement();\n      for (const style of value) {\n        elem.removeStyle(style, true);\n      }\n    },\n\n    // property apply\n    _applyClearAllInlineStyles(value, old) {\n      if (value) {\n        var elem = this.getContentElement();\n        var elemstyles = elem.getAllStyles();\n        for (const style in elemstyles) {\n          elem.removeStyle(style, true);\n        }\n      }\n    },\n    \n    // property apply\n    _applyRemoveCssClasses(value, old) {\n      var elem = this.getContentElement();\n      for (const qxcssclass of value) {\n        elem.removeClass(qxcssclass, true);\n      }\n    }\n    \n  }\n});"
+    "qx.Mixin.define(\"ville.cssuc.MCssUtilityClass\",\n{\n  properties :\n  {\n    cssUtilityClass: {\n      check: \"String\",\n      nullable: true,\n      init: null,\n      apply: \"_applyCssUtilityClass\",\n      themeable: true\n    }\n\n  },\n\n  members :\n  {\n    // property apply\n    _applyCssUtilityClass(value, old) {\n      var content = this.getContentElement();\n      if (old) {\n        content.removeClass(old);\n      }\n      if (value) {\n        content.addClass(value);\n      }\n    }\n\n  }\n});\n"
   ],
-  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAC9C;IACEC,UAAU,EACV;MACEC,eAAe,EAAE;QACfC,KAAK,EAAE,QAAQ;QACfC,QAAQ,EAAE,IAAI;QACdC,IAAI,EAAE,IAAI;QACVC,KAAK,EAAE,uBAAuB;QAC9BC,SAAS,EAAE;MACb,CAAC;MAEDC,mBAAmB,EAAE;QACnBL,KAAK,EAAE,OAAO;QACdC,QAAQ,EAAE,IAAI;QACdC,IAAI,EAAE,IAAI;QACVC,KAAK,EAAE,2BAA2B;QAClCC,SAAS,EAAE;MACb,CAAC;MAEDE,oBAAoB,EAAE;QACpBN,KAAK,EAAE,SAAS;QAChBE,IAAI,EAAE,KAAK;QACXC,KAAK,EAAE,4BAA4B;QACnCC,SAAS,EAAE;MACb,CAAC;MAEDG,gBAAgB,EAAE;QAChBP,KAAK,EAAE,OAAO;QACdC,QAAQ,EAAE,IAAI;QACdC,IAAI,EAAE,IAAI;QACVC,KAAK,EAAE,wBAAwB;QAC/BC,SAAS,EAAE;MACb;IACF,CAAC;IAEDI,OAAO,EACP;MACE;MACAC,qBAAqBA,CAACC,KAAK,EAAEC,GAAG,EAAE;QAChC,IAAIC,OAAO,GAAG,IAAI,CAACC,iBAAiB,CAAC,CAAC;QACtC,IAAIF,GAAG,EAAE;UACPC,OAAO,CAACE,WAAW,CAACH,GAAG,CAAC;QAC1B;QACA,IAAID,KAAK,EAAE;UACTE,OAAO,CAACG,QAAQ,CAACL,KAAK,CAAC;QACzB;MACF,CAAC;MAED;MACAM,yBAAyBA,CAACN,KAAK,EAAEC,GAAG,EAAE;QACpC,IAAIM,IAAI,GAAG,IAAI,CAACJ,iBAAiB,CAAC,CAAC;QACnC,KAAK,MAAMK,KAAK,IAAIR,KAAK,EAAE;UACzBO,IAAI,CAACE,WAAW,CAACD,KAAK,EAAE,IAAI,CAAC;QAC/B;MACF,CAAC;MAED;MACAE,0BAA0BA,CAACV,KAAK,EAAEC,GAAG,EAAE;QACrC,IAAID,KAAK,EAAE;UACT,IAAIO,IAAI,GAAG,IAAI,CAACJ,iBAAiB,CAAC,CAAC;UACnC,IAAIQ,UAAU,GAAGJ,IAAI,CAACK,YAAY,CAAC,CAAC;UACpC,KAAK,MAAMJ,KAAK,IAAIG,UAAU,EAAE;YAC9BJ,IAAI,CAACE,WAAW,CAACD,KAAK,EAAE,IAAI,CAAC;UAC/B;QACF;MACF,CAAC;MAED;MACAK,sBAAsBA,CAACb,KAAK,EAAEC,GAAG,EAAE;QACjC,IAAIM,IAAI,GAAG,IAAI,CAACJ,iBAAiB,CAAC,CAAC;QACnC,KAAK,MAAMW,UAAU,IAAId,KAAK,EAAE;UAC9BO,IAAI,CAACH,WAAW,CAACU,UAAU,EAAE,IAAI,CAAC;QACpC;MACF;IAEF;EACF,CAAC,CAAC;EA7EFC,KAAK,CAACC,KAAK,CAACC,gBAAgB,CAAChC,aAAa,GAAGA,aAAa;AAAC",
+  "mappings": ";;;;;;;;;EAAAA,EAAE,CAACC,SAAS,CAACC,oBAAoB,CAACC,aAAa,CAAC;EAAhDH,EAAE,CAACI,KAAK,CAACC,MAAM,CAAC,8BAA8B,EAC9C;IACEC,UAAU,EACV;MACEC,eAAe,EAAE;QACfC,KAAK,EAAE,QAAQ;QACfC,QAAQ,EAAE,IAAI;QACdC,IAAI,EAAE,IAAI;QACVC,KAAK,EAAE,uBAAuB;QAC9BC,SAAS,EAAE;MACb;IAEF,CAAC;IAEDC,OAAO,EACP;MACE;MACAC,qBAAqBA,CAACC,KAAK,EAAEC,GAAG,EAAE;QAChC,IAAIC,OAAO,GAAG,IAAI,CAACC,iBAAiB,CAAC,CAAC;QACtC,IAAIF,GAAG,EAAE;UACPC,OAAO,CAACE,WAAW,CAACH,GAAG,CAAC;QAC1B;QACA,IAAID,KAAK,EAAE;UACTE,OAAO,CAACG,QAAQ,CAACL,KAAK,CAAC;QACzB;MACF;IAEF;EACF,CAAC,CAAC;EA5BFM,KAAK,CAACC,KAAK,CAACC,gBAAgB,CAACpB,aAAa,GAAGA,aAAa;AAAC",
   "ignoreList": []
 }

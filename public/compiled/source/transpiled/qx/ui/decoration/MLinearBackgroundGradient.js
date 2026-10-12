@@ -161,19 +161,19 @@
         if (!this.getStartColor() || !this.getEndColor()) {
           return;
         }
-        var styleImpl = this.__styleLinearBackgroundGradientAccordingToSpec__P_216_0;
+        var styleImpl = this.__styleLinearBackgroundGradientAccordingToSpec__P_187_0;
         if (qx.core.Environment.get("css.gradient.legacywebkit")) {
-          styleImpl = this.__styleLinearBackgroundGradientForLegacyWebkit__P_216_1;
+          styleImpl = this.__styleLinearBackgroundGradientForLegacyWebkit__P_187_1;
         } else if (!qx.core.Environment.get("css.gradient.linear") && qx.core.Environment.get("css.borderradius")) {
-          styleImpl = this.__styleLinearBackgroundGradientWithCanvas__P_216_2;
+          styleImpl = this.__styleLinearBackgroundGradientWithCanvas__P_187_2;
         } else if (!qx.core.Environment.get("css.gradient.linear")) {
-          styleImpl = this.__styleLinearBackgroundGradientWithMSFilter__P_216_3;
+          styleImpl = this.__styleLinearBackgroundGradientWithMSFilter__P_187_3;
         }
         var gradientProperties = ["startColor", "endColor", "colorPositionUnit", "orientation", "startColorPosition", "endColorPosition"];
         (function (startColors, endColors, units, orientations, startColorPositions, endColorPositions) {
           for (var i = 0; i < startColors.length; i++) {
-            var startColor = this.__getColor__P_216_4(startColors[i]);
-            var endColor = this.__getColor__P_216_4(endColors[i]);
+            var startColor = this.__getColor__P_187_4(startColors[i]);
+            var endColor = this.__getColor__P_187_4(endColors[i]);
             var unit = units[i];
             var orientation = orientations[i];
             var startColorPosition = startColorPositions[i];
@@ -210,7 +210,7 @@
        *
        * @return {Boolean} Whether this implementation supports multiple gradients atop each other (true).
        */
-      __styleLinearBackgroundGradientForLegacyWebkit__P_216_1(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
+      __styleLinearBackgroundGradientForLegacyWebkit__P_187_1(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
         // webkit uses px values if non are given
         unit = unit === "px" ? "" : unit;
         if (orientation == "horizontal") {
@@ -240,10 +240,10 @@
        *
        * @return {Boolean} Whether this implementation supports multiple gradients atop each other (true).
        */
-      __styleLinearBackgroundGradientWithCanvas__P_216_2(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
-        const me = qx.ui.decoration.MLinearBackgroundGradient.__styleLinearBackgroundGradientWithCanvas__P_216_2;
-        if (!me.__canvas__P_216_5) {
-          me.__canvas__P_216_5 = document.createElement("canvas");
+      __styleLinearBackgroundGradientWithCanvas__P_187_2(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
+        const me = qx.ui.decoration.MLinearBackgroundGradient.__styleLinearBackgroundGradientWithCanvas__P_187_2;
+        if (!me.__canvas__P_187_5) {
+          me.__canvas__P_187_5 = document.createElement("canvas");
         }
         var isVertical = orientation == "vertical";
         var height = isVertical ? 200 : 1;
@@ -264,9 +264,9 @@
             width = Math.max(width, (endColorPosition - startColorPosition) * 2);
           }
         }
-        me.__canvas__P_216_5.width = width;
-        me.__canvas__P_216_5.height = height;
-        var ctx = me.__canvas__P_216_5.getContext("2d");
+        me.__canvas__P_187_5.width = width;
+        me.__canvas__P_187_5.height = height;
+        var ctx = me.__canvas__P_187_5.getContext("2d");
         if (isVertical) {
           var lingrad = ctx.createLinearGradient(0, 0, 0, height);
         } else {
@@ -293,7 +293,7 @@
         } else {
           size = isVertical ? height + "px 100%" : "100% " + width + "px";
         }
-        backgroundStyle.push("url(" + me.__canvas__P_216_5.toDataURL() + ") " + size);
+        backgroundStyle.push("url(" + me.__canvas__P_187_5.toDataURL() + ") " + size);
         return true;
       },
       /**
@@ -312,7 +312,7 @@
        *
        * @return {Boolean} Whether this implementation supports multiple gradients atop each other (false).
        */
-      __styleLinearBackgroundGradientWithMSFilter__P_216_3(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
+      __styleLinearBackgroundGradientWithMSFilter__P_187_3(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
         var type = orientation == "horizontal" ? 1 : 0;
 
         // convert rgb, hex3 and named colors to hex6
@@ -360,7 +360,7 @@
        *
        * @return {Boolean} Whether this implementation supports multiple gradients atop each other (true).
        */
-      __styleLinearBackgroundGradientAccordingToSpec__P_216_0(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
+      __styleLinearBackgroundGradientAccordingToSpec__P_187_0(startColor, endColor, unit, orientation, startColorPosition, endColorPosition, styles, backgroundStyle) {
         // WebKit, Opera and Gecko interpret 0deg as "to right"
         var deg = orientation == "horizontal" ? 0 : 270;
         var start = startColor + " " + startColorPosition + unit;
@@ -379,7 +379,7 @@
        * @param color {String} The color name
        * @return {Map} The resolved color
        */
-      __getColor__P_216_4(color) {
+      __getColor__P_187_4(color) {
         return qx.core.Environment.get("qx.theme") ? qx.theme.manager.Color.getInstance().resolve(color) : color;
       },
       // property apply
@@ -395,4 +395,4 @@
   qx.ui.decoration.MLinearBackgroundGradient.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=MLinearBackgroundGradient.js.map?dt=1769806695008
+//# sourceMappingURL=MLinearBackgroundGradient.js.map?dt=1791841652541

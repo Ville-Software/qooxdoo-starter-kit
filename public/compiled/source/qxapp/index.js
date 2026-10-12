@@ -59,7 +59,7 @@ if (!qx.$$environment)
 var envinfo = {
   "qx.application": "qxapp.Application",
   "qx.revision": "",
-  "qx.theme": "ville.cssuc.theme.blankslate.Theme",
+  "qx.theme": "ville.cssuc.theme.middleman.Theme",
   "qx.libraryInfoMap": {
     "qx": {
       "name": "qooxdoo framework",
@@ -140,7 +140,7 @@ var envinfo = {
           "email": "dietrich.streifert@visionet.de"
         }
       ],
-      "version": "7.9.2",
+      "version": "7.8.0",
       "sourceViewUri": "https://github.com/qooxdoo/qooxdoo/blob//framework/source/class/#L"
     },
     "qxapp": {
@@ -187,15 +187,15 @@ var envinfo = {
   "qx.promise.warnings": true,
   "qx.promise.longStackTraces": true,
   "qx.compiler": true,
-  "qx.compiler.version": "7.9.2",
-  "ville.cssuc": true,
-  "qx.version": "7.9.2",
+  "qx.compiler.version": "7.8.0",
+  "qx.version": "7.8.0",
   "qx.compiler.targetType": "source",
   "qx.compiler.outputDir": "../../public/compiled/source/",
   "qx.target.privateArtifacts": false,
   "qx.headless": false,
   "qx.compiler.applicationName": "qxapp",
-  "qx.compiler.applicationType": "browser"
+  "qx.compiler.applicationType": "browser",
+  "inertia.rootView": "app"
 };
 for (var k in envinfo)
   qx.$$environment[k] = envinfo[k];
@@ -292,30 +292,31 @@ qx.$$loader = {
     "39",
     "40",
     "41",
-    "42",
-    "43",
-    "44"
+    "42"
   ],
   "Welcome": [
-    "45"
+    "43"
   ],
   "Dashboard": [
-    "46"
+    "44"
   ],
-  "appshell": [
-    "47"
+  "app.AppShell": [
+    "45"
   ],
   "auth.Login": [
-    "48"
+    "46"
   ],
   "auth.Register": [
-    "49"
+    "47"
   ],
   "auth.ForgotPassword": [
-    "50"
+    "48"
   ],
-  "settings": [
-    "51"
+  "auth.ConfirmPassword": [
+    "49"
+  ],
+  "app.SettingsView": [
+    "50"
   ]
 },
   packages : {
@@ -333,10 +334,7 @@ qx.$$loader = {
   },
   "2": {
     "uris": [
-      "../transpiled/ville/ui/root/Application.js",
-      "../transpiled/ville/cssuc/MControl.js",
-      "../transpiled/ville/cssuc/MCssUtilityClass.js",
-      "../transpiled/ville/cssuc/patch/MLabel.js"
+      "../transpiled/qxapp/Application.js"
     ]
   },
   "3": {
@@ -346,8 +344,7 @@ qx.$$loader = {
   },
   "4": {
     "uris": [
-      "../transpiled/ville/ui/application/Standalone.js",
-      "../transpiled/qxapp/Application.js"
+      "../transpiled/qxWeb.js"
     ]
   },
   "5": {
@@ -357,7 +354,7 @@ qx.$$loader = {
   },
   "6": {
     "uris": [
-      "../transpiled/qxWeb.js"
+      "../transpiled/ville/cssuc/MCssUtilityClass.js"
     ]
   },
   "7": {
@@ -367,7 +364,7 @@ qx.$$loader = {
   },
   "8": {
     "uris": [
-      "../transpiled/ville/cssuc/patch/MAbstractField.js"
+      "../transpiled/qxapp/Routing.js"
     ]
   },
   "9": {
@@ -377,8 +374,7 @@ qx.$$loader = {
   },
   "10": {
     "uris": [
-      "../transpiled/ville/ui/core/MWidget.js",
-      "../transpiled/ville/ui/core/Widget.js"
+      "../transpiled/ville/ui/basic/Label.js"
     ]
   },
   "11": {
@@ -388,7 +384,8 @@ qx.$$loader = {
   },
   "12": {
     "uris": [
-      "../transpiled/ville/ui/basic/Element.js"
+      "../transpiled/ville/ui/form/UnstyledToggleButton.js",
+      "../transpiled/ville/ui/navigation/NavLink.js"
     ]
   },
   "13": {
@@ -398,9 +395,7 @@ qx.$$loader = {
   },
   "14": {
     "uris": [
-      "../transpiled/ville/ui/layout/Stack.js",
-      "../transpiled/qxapp/Routing.js",
-      "../transpiled/ville/ui/layout/Container.js"
+      "../transpiled/ville/ui/menu/Menu.js"
     ]
   },
   "15": {
@@ -410,8 +405,7 @@ qx.$$loader = {
   },
   "16": {
     "uris": [
-      "../transpiled/ville/ui/core/Box.js",
-      "../transpiled/ville/ui/layout/HGroup.js"
+      "../transpiled/ville/ui/menu/NavLink.js"
     ]
   },
   "17": {
@@ -421,9 +415,7 @@ qx.$$loader = {
   },
   "18": {
     "uris": [
-      "../transpiled/ville/ui/form/UnstyledToggleButton.js",
-      "../transpiled/ville/ui/form/NavLink.js",
-      "../transpiled/ville/ui/menu/Menu.js"
+      "../transpiled/ville/ui/menu/Button.js"
     ]
   },
   "19": {
@@ -433,7 +425,7 @@ qx.$$loader = {
   },
   "20": {
     "uris": [
-      "../transpiled/ville/ui/menu/NavLink.js"
+      "../transpiled/ville/ui/form/MenuButton.js"
     ]
   },
   "21": {
@@ -443,7 +435,7 @@ qx.$$loader = {
   },
   "22": {
     "uris": [
-      "../transpiled/ville/ui/menu/Button.js"
+      "../transpiled/qxapp/pages/MPage.js"
     ]
   },
   "23": {
@@ -453,7 +445,7 @@ qx.$$loader = {
   },
   "24": {
     "uris": [
-      "../transpiled/ville/ui/form/MenuButton.js"
+      "../transpiled/ville/ui/navigation/Anchor.js"
     ]
   },
   "25": {
@@ -463,8 +455,7 @@ qx.$$loader = {
   },
   "26": {
     "uris": [
-      "../transpiled/ville/ui/layout/VStack.js",
-      "../transpiled/qxapp/app/SettingsView.js"
+      "../transpiled/ville/ui/form/TextField.js"
     ]
   },
   "27": {
@@ -474,10 +465,10 @@ qx.$$loader = {
   },
   "28": {
     "uris": [
-      "../transpiled/ville/ui/basic/Label.js",
-      "../transpiled/ville/ui/core/InnerWrapper.js",
-      "../transpiled/ville/ui/typography/Title.js",
-      "../transpiled/ville/ui/typography/Text.js"
+      "../transpiled/ville/ui/form/PasswordField.js",
+      "../transpiled/ville/ui/icon/tabler/Abstract.js",
+      "../transpiled/ville/ui/icon/tabler/IconCheck.js",
+      "../transpiled/ville/ui/icon/tabler/IconIndeterminate.js"
     ]
   },
   "29": {
@@ -487,10 +478,8 @@ qx.$$loader = {
   },
   "30": {
     "uris": [
-      "../transpiled/ville/ui/layout/Flex.js",
-      "../transpiled/qxapp/pages/MPage.js",
-      "../transpiled/ville/ui/form/Anchor.js",
-      "../transpiled/ville/ui/layout/Center.js"
+      "../transpiled/ville/ui/form/CheckBox.js",
+      "../transpiled/ville/ui/form/Button.js"
     ]
   },
   "31": {
@@ -500,7 +489,8 @@ qx.$$loader = {
   },
   "32": {
     "uris": [
-      "../transpiled/ville/ui/form/TextField.js"
+      "../transpiled/ville/ui/form/renderer/AbstractRenderer.js",
+      "../transpiled/qxapp/components/form/renderer/LoginForm.js"
     ]
   },
   "33": {
@@ -510,10 +500,9 @@ qx.$$loader = {
   },
   "34": {
     "uris": [
-      "../transpiled/ville/ui/form/PasswordField.js",
-      "../transpiled/ville/ui/icon/Abstract.js",
-      "../transpiled/ville/ui/icon/IconCheck.js",
-      "../transpiled/ville/ui/icon/IconIndeterminate.js"
+      "../transpiled/ville/ui/core/InnerWrapper.js",
+      "../transpiled/ville/ui/core/BaseWidget.js",
+      "../transpiled/ville/ui/form/TextFieldWrapper.js"
     ]
   },
   "35": {
@@ -523,9 +512,11 @@ qx.$$loader = {
   },
   "36": {
     "uris": [
-      "../transpiled/ville/ui/form/CheckBox.js",
-      "../transpiled/ville/ui/form/UnstyledButton.js",
-      "../transpiled/ville/ui/form/Button.js"
+      "../transpiled/ville/ui/icon/phosphor/Abstract.js",
+      "../transpiled/ville/ui/icon/phosphor/Eye.js",
+      "../transpiled/ville/ui/icon/phosphor/EyeSlash.js",
+      "../transpiled/ville/ui/form/ToggleActionIcon.js",
+      "../transpiled/ville/ui/form/PasswordFieldWrapper.js"
     ]
   },
   "37": {
@@ -535,8 +526,7 @@ qx.$$loader = {
   },
   "38": {
     "uris": [
-      "../transpiled/ville/ui/form/renderer/AbstractRenderer.js",
-      "../transpiled/qxapp/components/form/renderer/LoginForm.js"
+      "../transpiled/ville/cssuc/theme/middleman/Color.js"
     ]
   },
   "39": {
@@ -546,13 +536,8 @@ qx.$$loader = {
   },
   "40": {
     "uris": [
-      "../transpiled/ville/ui/form/Label.js",
-      "../transpiled/ville/ui/core/BaseWidget.js",
-      "../transpiled/ville/ui/form/TextFieldWrapper.js",
-      "../transpiled/ville/ui/icon/IconEye.js",
-      "../transpiled/ville/ui/icon/IconEyeOff.js",
-      "../transpiled/ville/ui/form/ToggleActionIcon.js",
-      "../transpiled/ville/ui/form/PasswordWrapper.js"
+      "../transpiled/ville/cssuc/theme/middleman/Decoration.js",
+      "../transpiled/ville/cssuc/theme/middleman/Font.js"
     ]
   },
   "41": {
@@ -562,61 +547,53 @@ qx.$$loader = {
   },
   "42": {
     "uris": [
-      "../transpiled/ville/ui/form/InputSection.js",
-      "../transpiled/ville/ui/tabview/Page.js"
+      "../transpiled/ville/cssuc/theme/middleman/Appearance.js",
+      "../transpiled/ville/cssuc/theme/middleman/Theme.js",
+      "../transpiled/ville/cssuc/theme/middleman/Image.js"
     ]
   },
   "43": {
     "uris": [
-      "package-43.js"
+      "../transpiled/qxapp/pages/Welcome.js"
     ]
   },
   "44": {
     "uris": [
-      "../transpiled/ville/ui/tabview/TabButton.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Color.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Decoration.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Font.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Icon.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Appearance.js",
-      "../transpiled/ville/cssuc/theme/blankslate/Theme.js"
+      "../transpiled/qxapp/pages/Dashboard.js"
     ]
   },
   "45": {
     "uris": [
-      "../transpiled/qxapp/pages/Welcome.js"
+      "../transpiled/qxapp/pages/app/AppShell.js"
     ]
   },
   "46": {
     "uris": [
-      "../transpiled/qxapp/pages/Dashboard.js"
+      "../transpiled/qxapp/pages/auth/Login.js"
     ]
   },
   "47": {
     "uris": [
-      "../transpiled/qxapp/app/AppShell.js"
+      "../transpiled/qxapp/pages/auth/Register.js"
     ]
   },
   "48": {
     "uris": [
-      "../transpiled/qxapp/pages/auth/Login.js"
+      "../transpiled/qxapp/pages/auth/ForgotPassword.js"
     ]
   },
   "49": {
     "uris": [
-      "../transpiled/qxapp/pages/auth/Register.js"
+      "../transpiled/qxapp/pages/auth/ConfirmPassword.js"
     ]
   },
   "50": {
     "uris": [
-      "../transpiled/qxapp/pages/auth/ForgotPassword.js"
-    ]
-  },
-  "51": {
-    "uris": [
+      "../transpiled/qxapp/pages/app/SettingsView.js",
       "../transpiled/qxapp/pages/settings/Appearance.js",
       "../transpiled/qxapp/pages/settings/Password.js",
-      "../transpiled/qxapp/pages/settings/Profile.js"
+      "../transpiled/qxapp/pages/settings/Profile.js",
+      "../transpiled/qxapp/pages/settings/TwoFactor.js"
     ]
   }
 },
@@ -625,27 +602,23 @@ qx.$$loader = {
   "../resource/mantine/core/styles/baseline.css",
   "../resource/mantine/core/styles/default-css-variables.css",
   "../resource/mantine/core/styles/global.css",
-  "../resource/mantine/core/styles/Container.css",
-  "../resource/mantine/core/styles/Group.css",
+  "../resource/qxapp/mantine-style-classes.css",
+  "../resource/mantine/core/styles/ScrollArea.css",
   "../resource/mantine/core/styles/UnstyledButton.css",
   "../resource/mantine/core/styles/NavLink.css",
-  "../resource/mantine/core/styles/Popover.css",
   "../resource/mantine/core/styles/Menu.css",
   "../resource/mantine/core/styles/Button.css",
-  "../resource/mantine/core/styles/Stack.css",
-  "../resource/mantine/core/styles/InlineInput.css",
-  "../resource/mantine/core/styles/Title.css",
-  "../resource/mantine/core/styles/Text.css",
-  "../resource/mantine/core/styles/Flex.css",
   "../resource/mantine/core/styles/Anchor.css",
-  "../resource/mantine/core/styles/Center.css",
   "../resource/mantine/core/styles/Input.css",
   "../resource/mantine/core/styles/PasswordInput.css",
   "../resource/mantine/core/styles/Checkbox.css",
+  "../resource/mantine/core/styles/InlineInput.css",
   "../resource/mantine/core/styles/ActionIcon.css",
   "../resource/qxapp/welcome-qxvui-01.css",
+  "../resource/mantine/core/styles/Popover.css",
   "../resource/mantine/core/styles/AppShell.css",
-  "../resource/qxapp/appshell-qxvui-inline-01.css"
+  "../resource/qxapp/appshell-qxvui-inline-01.css",
+  "../resource/mantine/core/styles/Tabs.css"
 ],
   boot : "boot",
   closureParts : {},
@@ -1175,6 +1148,12 @@ qx.$$packageData['42'] = {
   "translations": {}
 };
 
+qx.$$packageData['43'] = {
+  "locales": {},
+  "resources": {},
+  "translations": {}
+};
+
 qx.$$packageData['44'] = {
   "locales": {},
   "resources": {},
@@ -1212,12 +1191,6 @@ qx.$$packageData['49'] = {
 };
 
 qx.$$packageData['50'] = {
-  "locales": {},
-  "resources": {},
-  "translations": {}
-};
-
-qx.$$packageData['51'] = {
   "locales": {},
   "resources": {},
   "translations": {}

@@ -1,7 +1,7 @@
 {
   "version": 0.3,
-  "lastModified": 1769800423361,
-  "lastModifiedIso": "2026-01-30T19:13:43.361Z",
+  "lastModified": 1791823606889,
+  "lastModifiedIso": "2026-10-12T16:46:46.889Z",
   "classFilename": "../../../resources/qxapp/source/class/qxapp/pages/settings/Profile.js",
   "type": "class",
   "location": {
@@ -11,9 +11,9 @@
       "index": 27
     },
     "end": {
-      "line": 28,
+      "line": 47,
       "column": 3,
-      "index": 519
+      "index": 1400
     }
   },
   "className": "qxapp.pages.settings.Profile",
@@ -31,7 +31,7 @@
       }
     ]
   },
-  "superClass": "ville.ui.tabview.Page",
+  "superClass": "qx.ui.tabview.Page",
   "mixins": [
     "qxapp.pages.MPage"
   ],
@@ -42,12 +42,12 @@
       "start": {
         "line": 11,
         "column": 2,
-        "index": 146
+        "index": 143
       },
       "end": {
-        "line": 26,
+        "line": 45,
         "column": 3,
-        "index": 514
+        "index": 1395
       }
     }
   },
@@ -86,7 +86,7 @@
       ],
       "mixin": "qxapp.pages.MPage"
     },
-    "componentName": {
+    "pageName": {
       "location": {
         "start": {
           "line": 12,
@@ -96,7 +96,39 @@
         "end": {
           "line": 15,
           "column": 5,
-          "index": 285
+          "index": 276
+        }
+      },
+      "json": {
+        "check": "String"
+      },
+      "jsdoc": {
+        "raw": [
+          "* Page's name for the browser title "
+        ],
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Page's name for the browser title</p>"
+          }
+        ]
+      },
+      "appearsIn": [
+        "qxapp.pages.MPage"
+      ],
+      "mixin": "qxapp.pages.MPage"
+    },
+    "componentName": {
+      "location": {
+        "start": {
+          "line": 18,
+          "column": 4,
+          "index": 328
+        },
+        "end": {
+          "line": 21,
+          "column": 5,
+          "index": 394
         }
       },
       "json": {

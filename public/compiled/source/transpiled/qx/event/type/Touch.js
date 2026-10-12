@@ -125,7 +125,7 @@
        * @return {Boolean} Is multi-touch
        */
       isMultiTouch() {
-        return this.__getEventSpecificTouches__P_202_0().length > 1;
+        return this.__getEventSpecificTouches__P_203_0().length > 1;
       },
       /**
        * Returns the distance between two fingers since the start of the event.
@@ -174,7 +174,7 @@
        * @return {Integer} The horizontal position of the touch in the document.
        */
       getDocumentLeft(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).pageX;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).pageX;
       },
       /**
        * Get the vertical position at which the event occurred relative to the
@@ -185,7 +185,7 @@
        * @return {Integer} The vertical position of the touch in the document.
        */
       getDocumentTop(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).pageY;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).pageY;
       },
       /**
        * Get the horizontal coordinate at which the event occurred relative to
@@ -195,7 +195,7 @@
        * @return {Integer} The horizontal position of the touch
        */
       getScreenLeft(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).screenX;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).screenX;
       },
       /**
        * Get the vertical coordinate at which the event occurred relative to
@@ -205,7 +205,7 @@
        * @return {Integer} The vertical position of the touch
        */
       getScreenTop(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).screenY;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).screenY;
       },
       /**
        * Get the the horizontal coordinate at which the event occurred relative
@@ -215,7 +215,7 @@
        * @return {Integer} The horizontal position of the touch
        */
       getViewportLeft(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).clientX;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).clientX;
       },
       /**
        * Get the vertical coordinate at which the event occurred relative
@@ -225,7 +225,7 @@
        * @return {Integer} The vertical position of the touch
        */
       getViewportTop(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).clientY;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).clientY;
       },
       /**
        * Returns the unique identifier for a certain touch object.
@@ -234,7 +234,7 @@
        * @return {Integer} Unique identifier of the touch object
        */
       getIdentifier(touchIndex) {
-        return this.__getEventSpecificTouch__P_202_1(touchIndex).identifier;
+        return this.__getEventSpecificTouch__P_203_1(touchIndex).identifier;
       },
       /**
        * Returns an event specific touch on the target element. This function is
@@ -245,9 +245,9 @@
        *     retrieve
        * @return {Object} A native Touch object
        */
-      __getEventSpecificTouch__P_202_1(touchIndex) {
+      __getEventSpecificTouch__P_203_1(touchIndex) {
         touchIndex = touchIndex == null ? 0 : touchIndex;
-        return this.__getEventSpecificTouches__P_202_0()[touchIndex];
+        return this.__getEventSpecificTouches__P_203_0()[touchIndex];
       },
       /**
        * Returns the event specific touches on the target element. This function
@@ -256,7 +256,7 @@
        *
        * @return {Object[]} Array of native Touch objects
        */
-      __getEventSpecificTouches__P_202_0() {
+      __getEventSpecificTouches__P_203_0() {
         var touches = this._isTouchEnd() ? this.getChangedTargetTouches() : this.getTargetTouches();
         return touches;
       },
@@ -276,4 +276,4 @@
   qx.event.type.Touch.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Touch.js.map?dt=1769806694430
+//# sourceMappingURL=Touch.js.map?dt=1791841652755

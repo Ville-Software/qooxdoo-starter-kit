@@ -38,8 +38,8 @@
     extend: qx.core.Object,
     type: "singleton",
     members: {
-      __registeredObjects__P_73_0: null,
-      __registeredIdHashes__P_73_1: null,
+      __registeredObjects__P_83_0: null,
+      __registeredIdHashes__P_83_1: null,
       /*
        * @Override
        */
@@ -58,8 +58,8 @@
             return object;
           }
         }
-        if (this.__registeredObjects__P_73_0) {
-          var obj = this.__registeredObjects__P_73_0[id];
+        if (this.__registeredObjects__P_83_0) {
+          var obj = this.__registeredObjects__P_83_0[id];
           if (obj !== undefined) {
             return obj;
           }
@@ -87,7 +87,7 @@
        * @return {String} full path to the object
        */
       getAbsoluteIdOf(obj, suppressWarnings) {
-        if (this.__registeredIdHashes__P_73_1 && this.__registeredIdHashes__P_73_1[obj.toHashCode()]) {
+        if (this.__registeredIdHashes__P_83_1 && this.__registeredIdHashes__P_83_1[obj.toHashCode()]) {
           return obj.getQxObjectId();
         }
         var segs = [];
@@ -108,7 +108,7 @@
             if (owner === application) {
               ownerId = "application";
             } else {
-              ownerId = this.__registeredIdHashes__P_73_1 && this.__registeredIdHashes__P_73_1[owner.toHashCode()] || null;
+              ownerId = this.__registeredIdHashes__P_83_1 && this.__registeredIdHashes__P_83_1[owner.toHashCode()] || null;
             }
 
             // When we have found the ID of a top level object, add it to the path and stop
@@ -137,15 +137,15 @@
        * @param id {String?} the ID to register the object under, otherwise the object's own Object Id is used
        */
       register(obj, id) {
-        if (!this.__registeredObjects__P_73_0) {
-          this.__registeredObjects__P_73_0 = {};
-          this.__registeredIdHashes__P_73_1 = {};
+        if (!this.__registeredObjects__P_83_0) {
+          this.__registeredObjects__P_83_0 = {};
+          this.__registeredIdHashes__P_83_1 = {};
         }
         if (!id) {
           id = obj.getQxObjectId();
         }
-        this.__registeredObjects__P_73_0[id] = obj;
-        this.__registeredIdHashes__P_73_1[obj.toHashCode()] = id;
+        this.__registeredObjects__P_83_0[id] = obj;
+        this.__registeredIdHashes__P_83_1[obj.toHashCode()] = id;
         obj._cascadeQxObjectIdChanges();
       },
       /**
@@ -155,7 +155,7 @@
        * @return {Boolean} whether there was an object to unregister
        */
       unregister(data) {
-        if (!this.__registeredObjects__P_73_0) {
+        if (!this.__registeredObjects__P_83_0) {
           return false;
         }
         var id;
@@ -163,15 +163,15 @@
           id = data;
         } else {
           var hash = data.toHashCode();
-          id = this.__registeredIdHashes__P_73_1[hash];
+          id = this.__registeredIdHashes__P_83_1[hash];
           if (!id) {
             return false;
           }
         }
-        var obj = this.__registeredObjects__P_73_0[id];
+        var obj = this.__registeredObjects__P_83_0[id];
         if (obj) {
-          delete this.__registeredObjects__P_73_0[id];
-          delete this.__registeredIdHashes__P_73_1[obj.toHashCode()];
+          delete this.__registeredObjects__P_83_0[id];
+          delete this.__registeredIdHashes__P_83_1[obj.toHashCode()];
           obj._cascadeQxObjectIdChanges();
           return true;
         }
@@ -183,7 +183,7 @@
        * @return {Object}
        */
       getRegisteredObjects() {
-        return this.__registeredObjects__P_73_0;
+        return this.__registeredObjects__P_83_0;
       }
     },
     statics: {
@@ -211,4 +211,4 @@
   qx.core.Id.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Id.js.map?dt=1769806689098
+//# sourceMappingURL=Id.js.map?dt=1791841651128

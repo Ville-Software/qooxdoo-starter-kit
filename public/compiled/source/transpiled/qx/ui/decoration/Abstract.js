@@ -43,7 +43,7 @@
     implement: [qx.ui.decoration.IDecorator],
     type: "abstract",
     members: {
-      __insets__P_214_0: null,
+      __insets__P_185_0: null,
       /**
        * Abstract method. Should return a map containing the default insets of
        * the decorator. This could look like this:
@@ -72,14 +72,14 @@
        * Resets the insets.
        */
       _resetInsets() {
-        this.__insets__P_214_0 = null;
+        this.__insets__P_185_0 = null;
       },
       // interface implementation
       getInsets() {
-        if (!this.__insets__P_214_0) {
-          this.__insets__P_214_0 = this._getDefaultInsets();
+        if (!this.__insets__P_185_0) {
+          this.__insets__P_185_0 = this._getDefaultInsets();
         }
-        return this.__insets__P_214_0;
+        return this.__insets__P_185_0;
       }
     },
     /*
@@ -89,10 +89,10 @@
      */
 
     destruct() {
-      this.__insets__P_214_0 = null;
+      this.__insets__P_185_0 = null;
     }
   });
   qx.ui.decoration.Abstract.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Abstract.js.map?dt=1769806694899
+//# sourceMappingURL=Abstract.js.map?dt=1791841652502

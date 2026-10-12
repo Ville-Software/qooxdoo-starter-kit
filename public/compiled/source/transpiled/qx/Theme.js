@@ -95,12 +95,12 @@
         if (!config) {
           var config = {};
         }
-        config.include = this.__normalizeArray__P_29_0(config.include);
-        config.patch = this.__normalizeArray__P_29_0(config.patch);
+        config.include = this.__normalizeArray__P_28_0(config.include);
+        config.patch = this.__normalizeArray__P_28_0(config.patch);
 
         // Validate incoming data
         {
-          this.__validateConfig__P_29_1(name, config);
+          this.__validateConfig__P_28_1(name, config);
         }
 
         // Create alias
@@ -121,8 +121,8 @@
         theme.basename = qx.Bootstrap.createNamespace(name, theme);
 
         // Convert theme entry from Object to Function (for prototype inheritance)
-        this.__convert__P_29_2(theme, config);
-        this.__initializeAliases__P_29_3(theme, config);
+        this.__convert__P_28_2(theme, config);
+        this.__initializeAliases__P_28_3(theme, config);
 
         // Store class reference in global class registry
         this.$$registry[name] = theme;
@@ -149,7 +149,7 @@
        * @return {Array} Either an array that has the original object as its
        *   single item, or the original array itself
        */
-      __normalizeArray__P_29_0(objectOrArray) {
+      __normalizeArray__P_28_0(objectOrArray) {
         if (!objectOrArray) {
           return [];
         }
@@ -165,7 +165,7 @@
        * @param theme {Map} The theme
        * @param config {Map} config structure
        */
-      __initializeAliases__P_29_3(theme, config) {
+      __initializeAliases__P_28_3(theme, config) {
         var aliases = config.aliases || {};
         if (config.extend && config.extend.aliases) {
           qx.Bootstrap.objectMergeWith(aliases, config.extend.aliases, false);
@@ -228,8 +228,8 @@
        * @param config {Map} The map from where to extract the key
        * @return {String} the key which was found
        */
-      __extractType__P_29_4(config) {
-        for (var i = 0, keys = this.__inheritableKeys__P_29_5, l = keys.length; i < l; i++) {
+      __extractType__P_28_4(config) {
+        for (var i = 0, keys = this.__inheritableKeys__P_28_5, l = keys.length; i < l; i++) {
           if (config[keys[i]]) {
             return keys[i];
           }
@@ -241,8 +241,8 @@
        * @param theme {Theme} newly created theme object
        * @param config {Map} incoming theme configuration
        */
-      __convert__P_29_2(theme, config) {
-        var type = this.__extractType__P_29_4(config);
+      __convert__P_28_2(theme, config) {
+        var type = this.__extractType__P_28_4(config);
 
         // Use theme key from extended theme if own one is not available
         if (config.extend && !type) {
@@ -287,9 +287,9 @@
       /** @type {Map} Internal theme registry */
       $$registry: {},
       /** @type {Array} Keys which support inheritance */
-      __inheritableKeys__P_29_5: ["colors", "borders", "decorations", "fonts", "icons", "widgets", "appearances", "meta"],
+      __inheritableKeys__P_28_5: ["colors", "borders", "decorations", "fonts", "icons", "widgets", "appearances", "meta"],
       /** @type {Map} allowed keys in theme definition */
-      __allowedKeys__P_29_6: qx.core.Environment.select("qx.debug", {
+      __allowedKeys__P_28_6: qx.core.Environment.select("qx.debug", {
         true: {
           title: "string",
           // String
@@ -324,7 +324,7 @@
         default: null
       }),
       /** @type {Map} allowed keys inside a meta theme block */
-      __metaKeys__P_29_7: qx.core.Environment.select("qx.debug", {
+      __metaKeys__P_28_7: qx.core.Environment.select("qx.debug", {
         true: {
           color: "object",
           border: "object",
@@ -344,9 +344,9 @@
        * @param config {Map} Configuration map
        * @throws {Error} if the given config is not valid (e.g. wrong key or wrong key value)
        */
-      __validateConfig__P_29_1: qx.core.Environment.select("qx.debug", {
+      __validateConfig__P_28_1: qx.core.Environment.select("qx.debug", {
         true(name, config) {
-          var allowed = this.__allowedKeys__P_29_6;
+          var allowed = this.__allowedKeys__P_28_6;
           for (var key in config) {
             if (allowed[key] === undefined) {
               throw new Error('The configuration key "' + key + '" in theme "' + name + '" is not allowed!');
@@ -385,10 +385,10 @@
             var value;
             for (var key in config.meta) {
               value = config.meta[key];
-              if (this.__metaKeys__P_29_7[key] === undefined) {
+              if (this.__metaKeys__P_28_7[key] === undefined) {
                 throw new Error('The key "' + key + '" is not allowed inside a meta theme block.');
               }
-              if (typeof value !== this.__metaKeys__P_29_7[key]) {
+              if (typeof value !== this.__metaKeys__P_28_7[key]) {
                 throw new Error('The type of the key "' + key + '" inside the meta block is wrong.');
               }
               if (!(typeof value === "object" && value !== null && value.$$type === "Theme")) {
@@ -431,9 +431,9 @@
        * @param mixinTheme {Theme} The theme to be included.
        */
       patch(theme, mixinTheme) {
-        this.__checkForInvalidTheme__P_29_8(mixinTheme);
-        var type = this.__extractType__P_29_4(mixinTheme);
-        if (type !== this.__extractType__P_29_4(theme)) {
+        this.__checkForInvalidTheme__P_28_8(mixinTheme);
+        var type = this.__extractType__P_28_4(mixinTheme);
+        if (type !== this.__extractType__P_28_4(theme)) {
           throw new Error("The mixins '" + theme.name + "' are not compatible '" + mixinTheme.name + "'!");
         }
         var source = mixinTheme[type];
@@ -452,7 +452,7 @@
        * @param mixinTheme {Theme} The theme to be included.
        */
       include(theme, mixinTheme) {
-        this.__checkForInvalidTheme__P_29_8(mixinTheme);
+        this.__checkForInvalidTheme__P_28_8(mixinTheme);
         var type = mixinTheme.type;
         if (type !== theme.type) {
           throw new Error("The mixins '" + theme.name + "' are not compatible '" + mixinTheme.name + "'!");
@@ -473,7 +473,7 @@
        * @param mixinTheme {qx.Theme?null} theme to check
        * @throws {Error} if the theme is not valid
        */
-      __checkForInvalidTheme__P_29_8(mixinTheme) {
+      __checkForInvalidTheme__P_28_8(mixinTheme) {
         if (typeof mixinTheme === "undefined" || mixinTheme == null) {
           var errorObj = new Error("Mixin theme is not a valid theme!");
           {
@@ -488,4 +488,4 @@
   qx.Theme.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Theme.js.map?dt=1769806686750
+//# sourceMappingURL=Theme.js.map?dt=1791841649937

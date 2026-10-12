@@ -5,14 +5,35 @@
 qx.Class.define("ville.ui.form.TextField", {
     extend: qx.ui.form.TextField,
 
-    include: ville.ui.core.MWidget,
+    construct(value, variant) {
+        super(value);
 
-    construct() {
-        super();
+        this.getContentElement().removeClass("qx-abstract-field");
 
-        this.setExcludeBoundsFromDom(true);
-        this.setClearAllInlineStyles(true);
-        this.setRemoveCssClasses(["qx-abstract-field", "qx-placeholder-color"]);
-        this.setCssUtilityClass("m_8fb7ebe7 mantine-Input-input mantine-TextInput-input");
+        if (variant) {
+            this.setVariant(variant);
+        } else {
+            this.initVariant();
+        }
+
+    },
+
+    properties: {
+        variant: {
+            init: "default",
+            check: ["default", "filled", "light", "outline", "subtle", "transparent", "white"],
+            apply: "_applyVariant",
+            themeable: true,
+            event: "changeVariant"
+        }
+    },
+
+    members: {
+        // property apply
+        _applyVariant(value, old) {
+            if (value) {
+                this.getContentElement().setAttribute("data-variant", value);
+            }
+        }
     }
   });
